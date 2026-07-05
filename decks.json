@@ -238,8 +238,70 @@
         "might": 5
       }
     ],
-    "runes": [],
-    "battlefields": []
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Conservatory",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+        "code": "SFD-215",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ]
   },
   {
     "label": "bsweitz - Hartford 2nd",
@@ -480,8 +542,70 @@
         "might": 4
       }
     ],
-    "runes": [],
-    "battlefields": []
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Seat of Power",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-217.webp",
+        "code": "SFD-217",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "The Arena's Greatest",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-290.webp",
+        "code": "OGN-290",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ]
   },
   {
     "label": "Dhawally - Vancouver Top 4",
@@ -734,8 +858,70 @@
         "might": 5
       }
     ],
-    "runes": [],
-    "battlefields": []
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Rockfall Path",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+        "code": "SFD-216",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ]
   },
   {
     "label": "Dhawally - Utrecht Top 4",
@@ -976,8 +1162,70 @@
         "might": 4
       }
     ],
-    "runes": [],
-    "battlefields": []
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Rockfall Path",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+        "code": "SFD-216",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ]
   },
   {
     "label": "linsanity - Hartford Top 4",
@@ -1218,8 +1466,70 @@
         "might": 4
       }
     ],
-    "runes": [],
-    "battlefields": []
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Rockfall Path",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+        "code": "SFD-216",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ]
   },
   {
     "label": "nice boy - Sydney Top 4",
@@ -1472,8 +1782,70 @@
         "might": 5
       }
     ],
-    "runes": [],
-    "battlefields": []
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Conservatory",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+        "code": "SFD-215",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ]
   },
   {
     "label": "CTG Alanzq - Sydney Top 8",
@@ -1702,7 +2074,69 @@
         "might": 5
       }
     ],
-    "runes": [],
-    "battlefields": []
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Startipped Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-288.webp",
+        "code": "OGN-288",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ]
   }
 ]

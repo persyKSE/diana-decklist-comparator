@@ -100,58 +100,70 @@ def fetch_page(url):
     return resp.text
 
 
+def slice_between(text, start_kw, end_kws):
+    """Text after the first start_kw, cut at the earliest of end_kws."""
+    if start_kw not in text:
+        return ""
+    section = text.split(start_kw, 1)[1]
+    cut = len(section)
+    for kw in end_kws:
+        pos = section.find(kw)
+        if pos != -1:
+            cut = min(cut, pos)
+    return section[:cut]
+
+
 def parse_decklist(html):
     """
-    Extract main deck card name/count pairs from a Mobalytics deck page.
+    Extract card name/count pairs from a Mobalytics deck page.
 
-    Mobalytics renders each card entry as "<count> <icon> <Card Name>"
-    with entries separated only by whitespace (no reliable delimiter),
-    all inside one block of text for the whole Main Deck section. So a
-    naive "digit followed by words" regex over-matches and swallows
-    every subsequent card into one giant name.
+    The page text lays the decklist out as:
 
-    The fix: since every entry starts with a 1-3 digit count, split the
-    whole section on "count boundaries" — positions where a small
-    integer appears — and treat the text between one count and the next
-    as "icon-alt-text (ignored) + card name". Card names are Title Case
-    and may contain a comma (e.g. "Vex, Cheerless"); this pattern holds
-    across all Riftbound card names seen so far.
+        Legend <name> Runes 6 Mind Rune 6 Chaos Rune
+        Battlefields Abandoned Hall (205) Targon's Peak (289) ...
+        Main Deck 1 Diana, Lunari 3 Ravenbloom Student ...
+        Sideboard ...
+
+    Entries are separated only by whitespace (no reliable delimiter), so
+    a naive "digit followed by words" regex over-matches and swallows
+    every subsequent card into one giant name. Instead, each section is
+    sliced by its heading and split on "count boundaries" — positions
+    where a small integer appears — treating the text between one count
+    and the next as the card name. Main-deck counts are 1-3; rune counts
+    go up to 12. Battlefields have no counts at all, just names followed
+    by a collector number in parens, one copy each.
     """
     soup = BeautifulSoup(html, "html.parser")
-    full_text = soup.get_text(separator=" ")
+    full_text = re.sub(r"\s+", " ", soup.get_text(separator=" "))
 
     if "Main Deck" not in full_text:
         return {}
 
-    section = full_text.split("Main Deck", 1)[1]
-    if "Sideboard" in section:
-        section = section.split("Sideboard", 1)[0]
+    def parse_counted(section, count_re):
+        entry_re = re.compile(
+            r"(?<!\d)(" + count_re + r")\s+(.+?)(?=(?:(?<!\d)" + count_re + r"\s+)|$)"
+        )
+        out = {}
+        for m in entry_re.finditer(section):
+            name = m.group(2).strip()
+            if 3 <= len(name) <= 60:
+                out[name] = out.get(name, 0) + int(m.group(1))
+        return out
 
-    # Split into tokens on count boundaries: a standalone 1-2 digit number.
-    # Each match below captures (count, everything up to the next count).
-    entry_re = re.compile(r"(?<!\d)([1-3])\s+(.+?)(?=(?:(?<!\d)[1-3]\s+)|$)", re.DOTALL)
+    cards = parse_counted(
+        slice_between(full_text, "Main Deck", ["Sideboard", "Chosen Champion", "Explore more"]),
+        r"[1-3]",
+    )
+    runes = parse_counted(
+        slice_between(full_text, "Runes", ["Battlefields", "Main Deck"]),
+        r"\d{1,2}",
+    )
 
-    cards = {}
-    runes = {}
     battlefields = {}
-    
-    for m in entry_re.finditer(section):
-        count = int(m.group(1))
-        raw_name = m.group(2).strip()
-        # Card name is the last comma-containing-or-not title-case phrase
-        # before the next count; strip trailing/leading whitespace and
-        # collapse multiple spaces left over from removed icon alt text.
-        name = re.sub(r"\s+", " ", raw_name).strip()
-        
-        if len(name) < 3 or len(name) > 60:
-            continue
-            
-        if "Rune" in name:
-            runes[name] = runes.get(name, 0) + count
-        elif name in ("Abandoned Hall", "Targon's Peak", "Ravenbloom Conservatory", "Rockfall Path", "Seat of Power"): # Basic battlefield check
-            battlefields[name] = battlefields.get(name, 0) + count
-        else:
-            cards[name] = cards.get(name, 0) + count
+    bf_re = re.compile(r"([A-Z][A-Za-z',\- ]+?)\s*\(\d+\)")
+    for m in bf_re.finditer(slice_between(full_text, "Battlefields", ["Main Deck"])):
+        name = m.group(1).strip()
+        battlefields[name] = battlefields.get(name, 0) + 1
 
     return {"cards": cards, "runes": runes, "battlefields": battlefields}
 
@@ -211,6 +223,13 @@ def main():
                 print(f"  Unknown card (not in catalogue): {name}")
             elif card["image_url"]:
                 download_image(card["image_url"], db.local_image_path(name))
+
+        for section, expected_type in (("runes", "Rune"), ("battlefields", "Battlefield")):
+            for name in parsed[section]:
+                card = db.lookup_card(conn, name)
+                if not card or card["type"] != expected_type:
+                    print(f"  Suspect {expected_type.lower()} entry "
+                          f"(catalogue type: {card['type'] if card else 'not found'}): {name}")
 
         db.upsert_deck(conn, label, placement, event, weight, url, {
             "main": parsed["cards"],
