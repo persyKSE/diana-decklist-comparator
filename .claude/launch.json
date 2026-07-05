@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-c",
+        "import os; os.chdir('/private/tmp/claude-501/-Users-kristoffedwards-Downloads-diana-decklist-comparator/1ba0cf34-365f-45bf-8060-907d6eafdaaf/scratchpad/site'); from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler; ThreadingHTTPServer(('127.0.0.1', 8377), SimpleHTTPRequestHandler).serve_forever()"
+      ],
+      "port": 8377
+    }
+  ]
+}
