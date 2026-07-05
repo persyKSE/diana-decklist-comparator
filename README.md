@@ -1,98 +1,87 @@
 # Diana decklist comparator
 
-Fetches real Riftbound Diana, Scorn of the Moon tournament decklists,
-compares them, and shows a shared "core" plus a swap-distance ranking —
-all with card images where available.
+A database of winning Riftbound *Diana, Scorn of the Moon* tournament
+decklists, with a static site that compares them: shared core, swap
+distances, card inclusion rates, deck diffs, and a weighted prototype
+deck builder.
+
+## Architecture
+
+- **`riftbound.db`** (SQLite) — source of truth. Tables: `cards` (the
+  full 1100+ card Riftbound catalogue with cost/type/color/might/rarity),
+  `events`, `decks`, `deck_cards`.
+- **`import_cards.py`** — imports/refreshes the card catalogue from the
+  dotgg API (the same source that hosts the card images).
+- **`fetch_decks.py`** — scrapes the decklists in `decks_config.json`
+  from Mobalytics, stores them in the DB, downloads card images to
+  `cache/images/`, and exports `decks.json`.
+- **`db.py`** — schema + helpers; also a small CLI
+  (`migrate` / `export` / `stats`).
+- **`decks.json`** — export for the viewer, enriched with per-card
+  cost/type/color from the catalogue.
+- **`index.html`** — the static site. Reads `decks.json`; no build step.
 
 ## Setup (one-time)
 
-Needs Python 3 (already on macOS) and two packages:
+Needs Python 3 and two packages:
 
     pip3 install cloudscraper beautifulsoup4
 
 ## Usage
 
-1. Run the scraper to fetch the latest decklists:
+    python3 import_cards.py   # once, and occasionally for new sets
+    python3 fetch_decks.py    # scrape decks -> DB -> decks.json
 
-       python3 fetch_decks.py
+Then serve the folder and open the site:
 
-   This fetches the 5 tournament results listed in `DECK_URLS` at the
-   top of `fetch_decks.py`, parses each decklist, downloads any card
-   images it can resolve, and writes `decks.json`.
+    python3 -m http.server 8000
+    # -> http://localhost:8000/
 
-2. Open `viewer.html` in your browser (double-click it, or drag it into
-   Chrome/Safari). It reads `decks.json` and shows:
-   - the shared core (cards common to every deck loaded)
-   - a "closest to the field" ranking (average card swaps to convert
-     into every other deck — lower means more representative of the
-     shared archetype)
-   - a swap-distance matrix between every pair of decks
+The site shows:
+
+- **Prototype deck** — a weighted consensus 40, built
+  highest-score-first (deck weight × copies, summed across decks).
+  Locked (green) = in every deck; flex (amber) = contested slot. Click
+  to add/remove flex cards.
+- **Card inclusion table** — every card seen in the field: inclusion
+  rate, cost, type, average copies, and the copy-count split (e.g.
+  "x3 in 5 decks, x2 in 2 decks").
+- **Deck diff** — git-style comparison of any two lists.
+- **Swap-distance analysis** — pairwise distance matrix plus a
+  "closest to the field" ranking.
 
 ## Adding more decks
 
-Add a new entry to `DECK_URLS` in `fetch_decks.py`:
+    python3 fetch_decks.py \
+      --add-url "https://mobalytics.gg/riftbound/decks/..." \
+      --label "Player - Event 1st" --placement "1st" \
+      --event "Some Regional Qualifier" --weight 3.0
 
-    "Label - Event Placement": (
-        "https://mobalytics.gg/riftbound/decks/...",
-        "Top 8", "Some Regional Qualifier"
-    ),
+or edit `decks_config.json` directly and re-run `fetch_decks.py`.
+Suggested weights: 1st = 3.0, 2nd = 2.0, Top 4 = 1.5, Top 8 = 1.0.
 
-Then re-run `python3 fetch_decks.py`.
+## Hosting (GitHub Pages + weekly auto-update)
 
-## Card images
+Two workflows ship in `.github/workflows/`:
 
-Images are resolved via `card_codes.py`, a small hand-verified lookup of
-card name -> set code (e.g. "Ravenbloom Student" -> "OGN-103"), which
-maps to `https://static.dotgg.gg/riftbound/cards/{code}.webp`.
+- `pages.yml` — deploys the repo to GitHub Pages on every push to
+  `main` (and after each data update).
+- `update-data.yml` — every Monday (and on demand from the Actions
+  tab) re-scrapes the configured decks, refreshes the card catalogue,
+  and commits any changes.
 
-This list only covers cards already looked up. Cards without an entry
-show a plain "no image" placeholder instead of breaking anything. To
-add a card's image:
-
-1. Find its code — search "riftbound.gg cards <card name>" and the
-   card's page URL will contain it, e.g. `unl-080-hwei-brooding-painter`
-   means the code is `UNL-080`.
-2. Add a line to `CARD_CODES` in `card_codes.py`:
-
-       "Hwei, Brooding Painter": "UNL-080",
-
-3. Delete `decks.json` and re-run `fetch_decks.py` to pick up the new
-   image.
+One-time setup after pushing the repo to GitHub: in the repo settings
+under **Pages**, set **Source** to **GitHub Actions**.
 
 ## Known limitations
 
-- Only pulls from Mobalytics deck pages for now (URL pattern is
-  hand-collected, not auto-discovered — there's no public API and the
-  full tournament results list is behind JavaScript pagination that a
-  simple script can't crawl).
-- Card image lookup is manual/best-effort, not automatic, for the same
-  reason.
-- If Mobalytics changes their page layout, the parser in
-  `parse_decklist()` may need adjusting — it currently works by finding
-  the text between "Main Deck" and "Sideboard" and splitting on
-  1-3 digit count boundaries.
-
-## Prototype deck builder (weighted)
-
-viewer.html now builds a "prototype" 40-card Diana deck from the source
-lists, not just a comparison:
-
-- Each deck is weighted by placement (1st = 3.0, 2nd = 2.0, Top 4 = 1.5,
-  Top 8 = 1.0). Adjust the weights in the DECK_URLS tuples in
-  fetch_decks.py.
-- Every card gets a weighted score = sum of (deck weight x copies run)
-  across all decks. Cards are added highest-score-first, at their most
-  common copy count, until the deck hits exactly 40 main-deck cards.
-- Cards in EVERY deck are tagged "locked" (green); cards in only some are
-  "flex" (amber) — these are the real deck-building decisions.
-- Runes/battlefields are summarised separately (they aren't part of the
-  40-card weighting).
-
-Caveats: this is a consensus/aggregate build — a strong netdeck baseline,
-not a proven-optimal list. It weighs card frequency, not synergy or
-matchup targeting. "Chosen champion" cards (e.g. Diana, Lunari) sometimes
-sit outside the maindeck text on the source page and so score lower than
-their true near-universal inclusion.
-
-To improve the signal, add more tournament results to DECK_URLS and
-re-run.
+- Deck URLs are hand-collected in `decks_config.json` — Mobalytics has
+  no public API and its tournament-results listing is behind JS
+  pagination. Auto-discovery is the next milestone.
+- If Mobalytics changes their page layout, `parse_decklist()` in
+  `fetch_decks.py` may need adjusting — it works by taking the text
+  between "Main Deck" and "Sideboard" and splitting on 1–3 digit count
+  boundaries.
+- The prototype deck is a consensus/aggregate build — a strong netdeck
+  baseline, not a proven-optimal list. It weighs card frequency, not
+  synergy or matchup targeting.
