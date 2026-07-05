@@ -194,7 +194,11 @@ def export_decks_json(conn, path=DECKS_JSON):
             "runes": sections["rune"],
             "battlefields": sections["battlefield"],
         })
-    Path(path).write_text(json.dumps(decks_out, indent=2))
+    payload = json.dumps(decks_out, indent=2)
+    Path(path).write_text(payload)
+    # decks.js mirrors decks.json so index.html also works from file://
+    # (double-clicked in Finder), where browsers block fetch().
+    Path(path).with_suffix(".js").write_text("window.DECKS = " + payload + ";\n")
     return len(decks_out)
 
 

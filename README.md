@@ -36,10 +36,18 @@ Needs Python 3 and two packages:
     python3 import_cards.py   # once, and occasionally for new sets
     python3 fetch_decks.py    # scrape decks -> DB -> decks.json
 
-Then serve the folder and open the site:
+Then open the site — either directly (works offline, no server needed):
+
+    open index.html        # or double-click it in Finder
+
+or served, if you prefer a localhost URL:
 
     python3 -m http.server 8000
     # -> http://localhost:8000/
+
+(The scraper exports both `decks.json` and `decks.js`; the page loads
+`decks.js` so it also works from `file://`, where browsers block
+`fetch`.)
 
 The site shows:
 

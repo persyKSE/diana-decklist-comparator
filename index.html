@@ -63,6 +63,7 @@
 
 <div id="content"></div>
 
+<script src="decks.js"></script>
 <script>
 let globalDecks = [];
 let rankedCards = [];
@@ -736,13 +737,18 @@ function render() {
 
 async function load() {
   const el = document.getElementById('content');
-  try {
-    const res = await fetch('decks.json');
-    if (!res.ok) throw new Error();
-    globalDecks = await res.json();
-  } catch (e) {
-    el.innerHTML = '<div class="empty">No decks.json found. Run <code>python3 fetch_decks.py</code>, then serve this folder with <code>python3 -m http.server 8000</code> and open <code>http://localhost:8000/</code>.</div>';
-    return;
+  if (window.DECKS) {
+    // decks.js loaded — works from file:// too (double-clicked index.html)
+    globalDecks = window.DECKS;
+  } else {
+    try {
+      const res = await fetch('decks.json');
+      if (!res.ok) throw new Error();
+      globalDecks = await res.json();
+    } catch (e) {
+      el.innerHTML = '<div class="empty">No deck data found. Run <code>python3 fetch_decks.py</code>, then reopen this page.</div>';
+      return;
+    }
   }
   if (!globalDecks || globalDecks.length === 0) {
     el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages. Check the terminal output.</div>';
