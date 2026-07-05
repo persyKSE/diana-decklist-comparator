@@ -25,6 +25,7 @@ import sys
 import time
 import argparse
 import os
+from datetime import datetime
 from pathlib import Path
 
 try:
@@ -165,7 +166,16 @@ def parse_decklist(html):
         name = m.group(1).strip()
         battlefields[name] = battlefields.get(name, 0) + 1
 
-    return {"cards": cards, "runes": runes, "battlefields": battlefields}
+    # "Updated on Jun 17, 2026" — best available proxy for the event date
+    date = None
+    m = re.search(r"Updated on ([A-Z][a-z]{2} \d{1,2}, \d{4})", full_text)
+    if m:
+        try:
+            date = datetime.strptime(m.group(1), "%b %d, %Y").date().isoformat()
+        except ValueError:
+            pass
+
+    return {"cards": cards, "runes": runes, "battlefields": battlefields, "date": date}
 
 
 def download_image(url, dest_path):
@@ -235,7 +245,7 @@ def main():
             "main": parsed["cards"],
             "rune": parsed["runes"],
             "battlefield": parsed["battlefields"],
-        })
+        }, event_date=parsed.get("date"))
         fetched += 1
         print(f"  Parsed {len(parsed['cards'])} unique cards")
         time.sleep(1)

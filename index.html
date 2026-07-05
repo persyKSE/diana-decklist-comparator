@@ -45,6 +45,15 @@
   .diff-add { background: #e6f4e6; color: #1b5e20; }
   .diff-del { background: #fdeaea; color: #b71c1c; }
   .diff-line img { width: 22px; height: 31px; object-fit: cover; border-radius: 2px; }
+  .pkg-box { background: #fff; border: 1px solid #e5e3dd; border-radius: 10px; padding: 10px 14px; margin-bottom: 8px; font-size: 13px; }
+  .pkg-chip { display: inline-flex; align-items: center; gap: 5px; background: #f0efe9; border-radius: 6px; padding: 3px 8px 3px 3px; margin: 2px 4px 2px 0; font-size: 13px; }
+  .pkg-chip img { width: 22px; height: 31px; object-fit: cover; border-radius: 2px; }
+  .legend-chip { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; margin-right: 12px; color: #444; }
+  .legend-swatch { display: inline-block; width: 14px; height: 4px; border-radius: 2px; }
+  svg.viz { background: #fff; border: 1px solid #e5e3dd; border-radius: 10px; width: 100%; height: auto; }
+  svg.viz text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  #coachInput { width: 100%; box-sizing: border-box; min-height: 130px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: #fff; resize: vertical; }
+  .coach-warn { background: #fff3cd; border: 1px solid #ffe08a; border-radius: 8px; padding: 8px 12px; font-size: 13px; margin: 8px 0; }
 </style>
 </head>
 <body>
@@ -61,6 +70,19 @@ let currentProto = [];
 let imageMap = {};
 let cardMeta = {};   // name -> {cost, type, color} from the card catalogue
 let diffA = 0, diffB = 1;   // selected decks in the diff view
+let coachText = '';         // pasted decklist in the coach view
+let nameLookup = {};        // normalized name -> canonical name
+let nonMainNames = new Set(); // rune/battlefield names (excluded from main-deck math)
+
+const PALETTE = ['#2e7d32', '#1565c0', '#e08a00', '#8e24aa', '#d32f2f', '#00838f', '#6d4c41', '#c2185b'];
+
+function normName(s) {
+  return s.replace(/’/g, "'").toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function escHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
 
 function weightedAverage(counts, weights) {
     let sum = 0, wSum = 0;
@@ -80,6 +102,13 @@ function processDecks(decks) {
     if (c.image && !imageMap[c.name]) imageMap[c.name] = c.image;
     if (!cardMeta[c.name]) cardMeta[c.name] = { cost: c.cost, type: c.type, color: c.color || [] };
   }));
+  decks.forEach(d => {
+    d.cards.forEach(c => nameLookup[normName(c.name)] = c.name);
+    (d.runes || []).concat(d.battlefields || []).forEach(c => {
+      nameLookup[normName(c.name)] = c.name;
+      nonMainNames.add(c.name);
+    });
+  });
 
   // Per-card stats across decks
   const stats = {};
@@ -230,9 +259,223 @@ function renderDiff(deckA, deckB) {
   return html;
 }
 
+function deckDistance(listA, listB) {
+  const a = {}, b = {};
+  (listA || []).forEach(c => a[c.name] = c.count);
+  (listB || []).forEach(c => b[c.name] = c.count);
+  let d = 0;
+  new Set([...Object.keys(a), ...Object.keys(b)]).forEach(n => d += Math.abs((a[n] || 0) - (b[n] || 0)));
+  return d / 2;
+}
+
+// Agglomerative clustering (average linkage) over the swap-distance matrix.
+function buildDendrogram(dist) {
+  let nodes = dist.map((_, i) => ({ leaf: i, members: [i], height: 0 }));
+  while (nodes.length > 1) {
+    let bi = 0, bj = 1, best = Infinity;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        let s = 0, c = 0;
+        nodes[i].members.forEach(a => nodes[j].members.forEach(b => { s += dist[a][b]; c++; }));
+        if (s / c < best) { best = s / c; bi = i; bj = j; }
+      }
+    }
+    const merged = { children: [nodes[bi], nodes[bj]], members: nodes[bi].members.concat(nodes[bj].members), height: best };
+    nodes = nodes.filter((_, k) => k !== bi && k !== bj);
+    nodes.push(merged);
+  }
+  return nodes[0];
+}
+
+// Cut the tree at the largest gap between merge heights -> sub-archetype groups.
+function cutClusters(root) {
+  const heights = [];
+  (function walk(n) { if (n.children) { heights.push(n.height); n.children.forEach(walk); } })(root);
+  heights.sort((a, b) => a - b);
+  let threshold = Infinity, bestGap = 1.0; // require a gap > 1 swap to call it a split
+  for (let i = 0; i < heights.length - 1; i++) {
+    const gap = heights[i + 1] - heights[i];
+    if (gap > bestGap) { bestGap = gap; threshold = (heights[i] + heights[i + 1]) / 2; }
+  }
+  const groups = [];
+  (function collect(n) {
+    if (!n.children || n.height < threshold) { groups.push(n.members); return; }
+    n.children.forEach(collect);
+  })(root);
+  return groups;
+}
+
+function renderDendrogramSVG(root, labels, clusterOf) {
+  const rowH = 30, plotW = 380, labelW = 250, padT = 12;
+  const H = labels.length * rowH + padT * 2, W = plotW + labelW + 20;
+  const maxH = Math.max(root.height, 1);
+  const leafOrder = [];
+  (function order(n) { if (n.children) n.children.forEach(order); else leafOrder.push(n.leaf); })(root);
+  const leafY = {};
+  leafOrder.forEach((leaf, idx) => leafY[leaf] = padT + idx * rowH + rowH / 2);
+  const xOf = h => 10 + plotW * (1 - h / maxH);
+  let parts = [];
+  function place(n) {
+    if (!n.children) return { x: xOf(0), y: leafY[n.leaf] };
+    const pts = n.children.map(place);
+    const x = xOf(n.height);
+    const ys = pts.map(p => p.y);
+    pts.forEach(p => parts.push('<line x1="' + p.x + '" y1="' + p.y + '" x2="' + x + '" y2="' + p.y + '" stroke="#999" stroke-width="1.5"/>'));
+    parts.push('<line x1="' + x + '" y1="' + Math.min(...ys) + '" x2="' + x + '" y2="' + Math.max(...ys) + '" stroke="#999" stroke-width="1.5"/>');
+    const y = ys.reduce((a, b) => a + b, 0) / ys.length;
+    parts.push('<text x="' + (x - 3) + '" y="' + (Math.min(...ys) - 3) + '" font-size="10" fill="#aaa" text-anchor="end">' + n.height.toFixed(1) + '</text>');
+    return { x, y };
+  }
+  place(root);
+  leafOrder.forEach(leaf => {
+    const color = PALETTE[clusterOf[leaf] % PALETTE.length];
+    parts.push('<circle cx="' + xOf(0) + '" cy="' + leafY[leaf] + '" r="3.5" fill="' + color + '"/>');
+    parts.push('<text x="' + (xOf(0) + 10) + '" y="' + (leafY[leaf] + 4) + '" font-size="12" fill="' + color + '">' + escHtml(labels[leaf]) + '</text>');
+  });
+  return '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+}
+
+// Flex-card packages: cards that travel together (high Jaccard overlap of the
+// decks that run them), found via union-find over strong pairs.
+function findPackages(N) {
+  const flex = rankedCards.filter(c => c.decksIn >= 2 && c.decksIn < N);
+  const deckSet = {};
+  flex.forEach(c => {
+    deckSet[c.name] = new Set();
+    globalDecks.forEach((d, i) => { if (d.cards.some(x => x.name === c.name)) deckSet[c.name].add(i); });
+  });
+  const parent = {};
+  const find = x => parent[x] === x ? x : (parent[x] = find(parent[x]));
+  flex.forEach(c => parent[c.name] = c.name);
+  const together = {};
+  for (let i = 0; i < flex.length; i++) {
+    for (let j = i + 1; j < flex.length; j++) {
+      const A = deckSet[flex[i].name], B = deckSet[flex[j].name];
+      const inter = [...A].filter(x => B.has(x)).length;
+      const jac = inter / (A.size + B.size - inter);
+      if (jac >= 0.75) {
+        parent[find(flex[i].name)] = find(flex[j].name);
+        together[flex[i].name + '|' + flex[j].name] = inter;
+      }
+    }
+  }
+  const groups = {};
+  flex.forEach(c => { const r = find(c.name); (groups[r] = groups[r] || []).push(c.name); });
+  const packages = Object.values(groups).filter(g => g.length >= 2).map(g => {
+    const sets = g.map(n => deckSet[n]);
+    const inAll = [...sets[0]].filter(i => sets.every(s => s.has(i))).length;
+    return { cards: g, decks: inAll };
+  }).sort((a, b) => b.cards.length - a.cards.length);
+  // either/or pairs: both reasonably played, never in the same deck
+  const eitherOr = [];
+  for (let i = 0; i < flex.length; i++) {
+    for (let j = i + 1; j < flex.length; j++) {
+      const A = deckSet[flex[i].name], B = deckSet[flex[j].name];
+      if (A.size >= 2 && B.size >= 2 && ![...A].some(x => B.has(x)) && A.size + B.size >= N)
+        eitherOr.push({ a: flex[i].name, na: A.size, b: flex[j].name, nb: B.size });
+    }
+  }
+  return { packages, eitherOr: eitherOr.slice(0, 6) };
+}
+
+function analyzeCoach() {
+  coachText = document.getElementById('coachInput').value;
+  render();
+}
+
+// Parse a pasted decklist: "3 Gust", "3x Gust", or "Gust x3", one per line.
+function parseDeckText(text) {
+  const counts = {}, unknown = [], nonMain = [];
+  text.split(/\r?\n/).forEach(line => {
+    line = line.trim();
+    if (!line || line.startsWith('#') || line.startsWith('//')) return;
+    let count = 1, name = line;
+    let m = line.match(/^(\d{1,2})\s*[xX]?\s+(.+)$/);
+    if (m) { count = parseInt(m[1], 10); name = m[2]; }
+    else if ((m = line.match(/^(.+?)\s*[xX]\s*(\d{1,2})$/))) { name = m[1]; count = parseInt(m[2], 10); }
+    name = name.trim();
+    const canon = nameLookup[normName(name)];
+    if (canon && nonMainNames.has(canon)) { nonMain.push(canon); return; }
+    if (canon) name = canon;
+    else unknown.push(name);
+    counts[name] = (counts[name] || 0) + count;
+  });
+  return { counts, unknown, nonMain };
+}
+
+function renderCoach(N) {
+  const { counts, unknown, nonMain } = parseDeckText(coachText);
+  const myList = Object.entries(counts).map(([name, count]) => ({ name, count }));
+  const total = myList.reduce((a, c) => a + c.count, 0);
+  if (total === 0) return '<div class="coach-warn">Nothing parsed — paste one card per line, like "3 Gust" or "Gust x3".</div>';
+  let html = '';
+  if (unknown.length) {
+    html += '<div class="coach-warn">Not seen in any winning deck (typo, or genuinely spicy): ' + unknown.map(escHtml).join(', ') + '</div>';
+  }
+  if (nonMain.length) {
+    html += '<div class="coach-warn">Ignored runes/battlefields (main deck only): ' + nonMain.map(escHtml).join(', ') + '</div>';
+  }
+
+  const ranked = globalDecks.map((d, i) => ({ label: d.label, dist: deckDistance(myList, d.cards) }))
+                            .sort((a, b) => a.dist - b.dist);
+  const missingCore = rankedCards.filter(c => c.decksIn === N && !counts[c.name]);
+  html += '<div class="summary-box"><strong>' + total + ' main-deck cards.</strong> Closest winning deck: <strong>' +
+    escHtml(ranked[0].label) + '</strong> (' + ranked[0].dist + ' swaps away). ' +
+    (missingCore.length ? 'Missing <strong>' + missingCore.length + '</strong> core card' + (missingCore.length > 1 ? 's' : '') + ' that every winning deck runs.'
+                        : 'Every core card is in your list.') + '</div>';
+
+  html += '<div class="col2"><div>';
+  html += '<div style="font-size:13px;font-weight:600;color:#555;margin:6px 0 4px;">Distance to each winning deck</div>';
+  ranked.forEach(r => {
+    html += '<div class="rank-row"><span>' + escHtml(r.label) + '</span><span>' + r.dist + ' swaps</span></div>';
+  });
+  html += '</div><div>';
+  if (missingCore.length) {
+    html += '<div style="font-size:13px;font-weight:600;color:#555;margin:6px 0 4px;">Missing core cards</div>';
+    missingCore.forEach(c => {
+      html += '<div class="card-row locked">' + cardImg(c.name) + '<span class="card-name">' + escHtml(c.name) +
+        '</span><span class="card-meta">every deck runs x' + c.copies + '</span></div>';
+    });
+  }
+  html += '</div></div>';
+
+  const protoList = currentProto.map(c => ({ name: c.name, count: c.copies }));
+  const diff = diffSection(myList, protoList);
+  if (diff.removed.length || diff.added.length) {
+    html += '<div style="font-size:13px;font-weight:600;color:#555;margin:14px 0 4px;">Toward the consensus prototype</div>';
+    html += '<p class="sub">Not gospel — the prototype is the weighted field average. Treat red as "justify keeping this" and green as "justify not playing this".</p>';
+    diff.removed.forEach(c => {
+      const s = rankedCards.find(r => r.name === c.name);
+      const why = s ? 'in ' + s.decksIn + '/' + N + ' winning decks' : 'in no winning deck';
+      html += '<div class="diff-line diff-del">' + cardImg(c.name) + '<span>&minus;' + c.n + ' ' + escHtml(c.name) + '</span><span style="margin-left:auto;font-size:11px;opacity:0.7;">' + why + '</span></div>';
+    });
+    diff.added.forEach(c => {
+      const s = rankedCards.find(r => r.name === c.name);
+      const why = s ? 'in ' + s.decksIn + '/' + N + ' winning decks' : '';
+      html += '<div class="diff-line diff-add">' + cardImg(c.name) + '<span>+' + c.n + ' ' + escHtml(c.name) + '</span><span style="margin-left:auto;font-size:11px;opacity:0.7;">' + why + '</span></div>';
+    });
+  } else {
+    html += '<div class="summary-box">Your list already matches the consensus prototype exactly.</div>';
+  }
+  return html;
+}
+
 function render() {
   const N = globalDecks.length;
   let html = '';
+
+  // Pairwise swap distances, used by clustering, the matrix, and the ranking.
+  const distances = Array(N).fill(0).map(() => Array(N).fill(0));
+  const avgDistances = Array(N).fill(0);
+  for (let i = 0; i < N; i++) {
+    let totalDist = 0;
+    for (let j = 0; j < N; j++) {
+      if (i === j) continue;
+      distances[i][j] = deckDistance(globalDecks[i].cards, globalDecks[j].cards);
+      totalDist += distances[i][j];
+    }
+    avgDistances[i] = totalDist / (N - 1);
+  }
 
   const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
 
@@ -296,6 +539,134 @@ function render() {
   });
   html += '</table></div>';
 
+  // ---- Card packages ----
+  const { packages, eitherOr } = findPackages(N);
+  html += '<h2>Card packages</h2>';
+  html += '<p class="sub">Flex cards that travel together across the winning lists — the real deck-building choice is usually between packages, not single cards.</p>';
+  if (packages.length === 0) {
+    html += '<div class="pkg-box">No strong packages detected yet — add more decks to sharpen the signal.</div>';
+  }
+  packages.forEach(p => {
+    html += '<div class="pkg-box">' +
+      p.cards.map(n => '<span class="pkg-chip">' + cardImg(n) + escHtml(n) + '</span>').join('') +
+      '<span style="color:#888; margin-left:6px;">together in ' + p.decks + '/' + N + ' decks</span></div>';
+  });
+  if (eitherOr.length) {
+    html += '<div class="pkg-box"><strong>Either/or slots</strong> (both played, never together):<br>' +
+      eitherOr.map(p => escHtml(p.a) + ' (' + p.na + ' decks) vs ' + escHtml(p.b) + ' (' + p.nb + ' decks)').join('<br>') + '</div>';
+  }
+
+  // ---- Energy curve ----
+  html += '<h2>Energy curve</h2>';
+  html += '<p class="sub">Main-deck cards per energy cost. Thin lines are individual decks; the bold line is the placement-weighted field average. Winners can disagree on card names while agreeing on curve shape.</p>';
+  const maxCost = 8;
+  const curves = globalDecks.map(d => {
+    const h = Array(maxCost + 1).fill(0);
+    d.cards.forEach(c => {
+      const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? Math.min(cardMeta[c.name].cost, maxCost) : null;
+      if (cost !== null) h[cost] += c.count;
+    });
+    return h;
+  });
+  const totalW = globalDecks.reduce((a, d) => a + (d.weight || 1), 0);
+  const avgCurve = Array(maxCost + 1).fill(0);
+  globalDecks.forEach((d, i) => curves[i].forEach((v, c) => avgCurve[c] += v * (d.weight || 1) / totalW));
+  const costMax = Math.max(...curves.flat(), ...avgCurve);
+  {
+    const W = 660, H = 220, mL = 34, mB = 26, mT = 12, mR = 12;
+    const pw = W - mL - mR, ph = H - mT - mB;
+    const x = c => mL + c / maxCost * pw;
+    const y = v => mT + ph - v / costMax * ph;
+    let parts = [];
+    for (let v = 0; v <= costMax; v += Math.max(1, Math.ceil(costMax / 4))) {
+      parts.push('<line x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '" stroke="#eee"/>');
+      parts.push('<text x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" fill="#888" text-anchor="end">' + v + '</text>');
+    }
+    for (let c = 0; c <= maxCost; c++) {
+      parts.push('<text x="' + x(c) + '" y="' + (H - 8) + '" font-size="11" fill="#555" text-anchor="middle">' + (c === maxCost ? c + '+' : c) + '</text>');
+    }
+    curves.forEach((h, i) => {
+      const pts = h.map((v, c) => x(c) + ',' + y(v)).join(' ');
+      parts.push('<polyline points="' + pts + '" fill="none" stroke="' + PALETTE[i % PALETTE.length] + '" stroke-width="1.5" opacity="0.5"/>');
+    });
+    parts.push('<polyline points="' + avgCurve.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke="#1a1a1a" stroke-width="3"/>');
+    html += '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+    html += '<div style="margin:6px 0 0;">' + globalDecks.map((d, i) =>
+      '<span class="legend-chip"><span class="legend-swatch" style="background:' + PALETTE[i % PALETTE.length] + '"></span>#' + (i + 1) + ' ' + escHtml(d.label) + '</span>').join('') + '</div>';
+  }
+  // Type ratios
+  html += '<div style="overflow-x:auto;"><table class="incl"><tr><th>Deck</th><th class="num">Units</th><th class="num">Spells</th><th class="num">Gear</th><th class="num">Avg cost</th></tr>';
+  globalDecks.forEach(d => {
+    const t = { Unit: 0, Spell: 0, Gear: 0 };
+    let costSum = 0, costN = 0;
+    d.cards.forEach(c => {
+      const m = cardMeta[c.name] || {};
+      if (t[m.type] !== undefined) t[m.type] += c.count;
+      if (m.cost != null) { costSum += m.cost * c.count; costN += c.count; }
+    });
+    html += '<tr><td>' + escHtml(d.label) + '</td><td class="num">' + t.Unit + '</td><td class="num">' + t.Spell +
+      '</td><td class="num">' + t.Gear + '</td><td class="num">' + (costN ? (costSum / costN).toFixed(2) : '—') + '</td></tr>';
+  });
+  html += '</table></div>';
+
+  // ---- Sub-archetype clustering ----
+  html += '<h2>Sub-archetype clustering</h2>';
+  html += '<p class="sub">Hierarchical clustering of the swap-distance matrix (average linkage). Decks that merge early are near-copies; a late merge marks a genuine split in how the archetype is built. Numbers on the tree are the swap distances at each merge.</p>';
+  const root = buildDendrogram(distances);
+  const groups = cutClusters(root);
+  const clusterOf = {};
+  groups.forEach((g, gi) => g.forEach(i => clusterOf[i] = gi));
+  if (groups.length > 1) {
+    html += '<div class="summary-box"><strong>' + groups.length + ' sub-archetypes detected:</strong> ' +
+      groups.map((g, gi) => '<span style="color:' + PALETTE[gi % PALETTE.length] + '">' +
+        g.map(i => escHtml(globalDecks[i].label)).join(', ') + '</span>').join(' &nbsp;|&nbsp; ') +
+      '. Averaging across a split can build a deck nobody would play — check which branch your list belongs to.</div>';
+  } else {
+    html += '<div class="summary-box">One coherent archetype — no meaningful split in how the field builds this deck.</div>';
+  }
+  html += renderDendrogramSVG(root, globalDecks.map(d => d.label), clusterOf);
+
+  // ---- Inclusion timeline ----
+  html += '<h2>Card inclusion over time</h2>';
+  html += '<p class="sub">Inclusion rate of the top contested cards by event date — rising and falling stock across the season. Sparse for now; every added event sharpens it.</p>';
+  {
+    const byDate = {};
+    globalDecks.forEach((d, i) => { if (d.event_date) (byDate[d.event_date] = byDate[d.event_date] || []).push(i); });
+    const dates = Object.keys(byDate).sort();
+    if (dates.length < 2) {
+      html += '<div class="summary-box">Not enough distinct event dates yet — the timeline needs decks from at least two events.</div>';
+    } else {
+      const topFlex = rankedCards.filter(c => c.decksIn < N).slice(0, 8);
+      const t0 = new Date(dates[0]).getTime(), t1 = new Date(dates[dates.length - 1]).getTime();
+      const W = 660, H = 240, mL = 40, mB = 30, mT = 12, mR = 16;
+      const pw = W - mL - mR, ph = H - mT - mB;
+      const x = ds => mL + (new Date(ds).getTime() - t0) / (t1 - t0) * pw;
+      const y = pct => mT + ph - pct / 100 * ph;
+      let parts = [];
+      [0, 50, 100].forEach(v => {
+        parts.push('<line x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '" stroke="#eee"/>');
+        parts.push('<text x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" fill="#888" text-anchor="end">' + v + '%</text>');
+      });
+      dates.forEach(ds => {
+        const label = new Date(ds).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+        parts.push('<text x="' + x(ds) + '" y="' + (H - 10) + '" font-size="11" fill="#555" text-anchor="middle">' + label + '</text>');
+      });
+      topFlex.forEach((c, ci) => {
+        const color = PALETTE[ci % PALETTE.length];
+        const pts = dates.map(ds => {
+          const idxs = byDate[ds];
+          const pct = 100 * idxs.filter(i => globalDecks[i].cards.some(x => x.name === c.name)).length / idxs.length;
+          return { x: x(ds), y: y(pct) };
+        });
+        parts.push('<polyline points="' + pts.map(p => p.x + ',' + p.y).join(' ') + '" fill="none" stroke="' + color + '" stroke-width="2" opacity="0.8"/>');
+        pts.forEach(p => parts.push('<circle cx="' + p.x + '" cy="' + p.y + '" r="3" fill="' + color + '"/>'));
+      });
+      html += '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+      html += '<div style="margin:6px 0 0;">' + topFlex.map((c, ci) =>
+        '<span class="legend-chip"><span class="legend-swatch" style="background:' + PALETTE[ci % PALETTE.length] + '"></span>' + escHtml(c.name) + '</span>').join('') + '</div>';
+    }
+  }
+
   // ---- Deck diff ----
   html += '<h2>Deck diff</h2>';
   html += '<p class="sub">Git-style comparison of any two lists: red cards leave deck A, green cards come in for deck B.</p>';
@@ -309,36 +680,6 @@ function render() {
   // ---- Swap Distance Matrix & Ranking ----
   html += '<h2>Swap-Distance Analysis</h2>';
   html += '<p class="sub">"Swap distance" is the number of cards you need to change to turn one deck into another. Lower average distance means the deck is closer to the consensus archetype.</p>';
-
-  // Calculate swap distances
-  const distances = Array(N).fill(0).map(() => Array(N).fill(0));
-  const avgDistances = Array(N).fill(0);
-  
-  for (let i = 0; i < N; i++) {
-      let totalDist = 0;
-      for (let j = 0; j < N; j++) {
-          if (i === j) continue;
-          
-          let dist = 0;
-          const cardsI = {};
-          const cardsJ = {};
-          globalDecks[i].cards.forEach(c => cardsI[c.name] = c.count);
-          globalDecks[j].cards.forEach(c => cardsJ[c.name] = c.count);
-          
-          const allCards = new Set([...Object.keys(cardsI), ...Object.keys(cardsJ)]);
-          allCards.forEach(name => {
-              const countI = cardsI[name] || 0;
-              const countJ = cardsJ[name] || 0;
-              dist += Math.abs(countI - countJ);
-          });
-          
-          // distance is sum of absolute differences divided by 2 (since every +1 is a -1 elsewhere)
-          const swapDist = dist / 2;
-          distances[i][j] = swapDist;
-          totalDist += swapDist;
-      }
-      avgDistances[i] = totalDist / (N - 1);
-  }
 
   // Closest to field ranking
   const rankedDecks = globalDecks.map((d, i) => ({ label: d.label, avgDist: avgDistances[i] }))
@@ -375,6 +716,13 @@ function render() {
       html += '</tr>';
   });
   html += '</table></div>';
+
+  // ---- Coach: rate my deck ----
+  html += '<h2>Rate my deck</h2>';
+  html += '<p class="sub">Paste your main deck (one card per line: "3 Gust", "3x Gust", or "Gust x3") to see how far you are from each winning list, which core cards you\'re missing, and the swaps that would move you toward the consensus build.</p>';
+  html += '<textarea id="coachInput" placeholder="3 Gust&#10;3 Stacked Deck&#10;2 Moonfall&#10;...">' + escHtml(coachText) + '</textarea><br>';
+  html += '<button onclick="analyzeCoach()">Analyze my deck</button>';
+  if (coachText.trim()) html += renderCoach(N);
 
   // ---- Source decks ----
   html += '<h2>Source decks (' + N + ')</h2>';

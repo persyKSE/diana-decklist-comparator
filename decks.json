@@ -4,7 +4,7 @@
     "player": "Alanzq",
     "placement": "1st",
     "event": "Vancouver Regional Qualifier",
-    "event_date": null,
+    "event_date": "2026-06-04",
     "weight": 3.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-1st-alanzq",
     "cards": [
@@ -308,7 +308,7 @@
     "player": "bsweitz",
     "placement": "2nd",
     "event": "Hartford Regional Qualifier",
-    "event_date": null,
+    "event_date": "2026-06-29",
     "weight": 2.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-2nd-bsweitz",
     "cards": [
@@ -612,7 +612,7 @@
     "player": "Dhawally",
     "placement": "Top 4",
     "event": "Vancouver Regional Qualifier",
-    "event_date": null,
+    "event_date": "2026-06-04",
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-top-4-dhawally",
     "cards": [
@@ -928,7 +928,7 @@
     "player": "Dhawally",
     "placement": "Top 4",
     "event": "Utrecht Regional Qualifier",
-    "event_date": null,
+    "event_date": "2026-06-17",
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-utrecht-regional-qualifier-top-4-dhawally",
     "cards": [
@@ -1232,7 +1232,7 @@
     "player": "linsanity",
     "placement": "Top 4",
     "event": "Hartford Regional Qualifier",
-    "event_date": null,
+    "event_date": "2026-06-29",
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-4-linsanity",
     "cards": [
@@ -1536,7 +1536,7 @@
     "player": "nice boy",
     "placement": "Top 4",
     "event": "Sydney Regional Qualifier",
-    "event_date": null,
+    "event_date": "2026-05-19",
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-4-nice-boy",
     "cards": [
@@ -1852,7 +1852,7 @@
     "player": "CTG Alanzq",
     "placement": "Top 8",
     "event": "Sydney Regional Qualifier",
-    "event_date": null,
+    "event_date": "2026-05-19",
     "weight": 1.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-8-ctg-alanzq",
     "cards": [

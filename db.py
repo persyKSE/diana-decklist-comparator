@@ -101,22 +101,26 @@ def lookup_card(conn, name):
 
 
 def upsert_event(conn, name, date=None, region=None):
+    # Decks from the same event can carry different page dates; keep the earliest.
     conn.execute(
         "INSERT INTO events (name, date, region) VALUES (?, ?, ?) "
         "ON CONFLICT(name) DO UPDATE SET "
-        "date = COALESCE(excluded.date, events.date), "
+        "date = CASE WHEN events.date IS NULL THEN excluded.date "
+        "            WHEN excluded.date IS NULL THEN events.date "
+        "            WHEN excluded.date < events.date THEN excluded.date "
+        "            ELSE events.date END, "
         "region = COALESCE(excluded.region, events.region)",
         (name, date, region),
     )
     return conn.execute("SELECT id FROM events WHERE name = ?", (name,)).fetchone()[0]
 
 
-def upsert_deck(conn, label, placement, event_name, weight, url, sections):
+def upsert_deck(conn, label, placement, event_name, weight, url, sections, event_date=None):
     """Insert or replace a deck and its cards.
 
     sections: dict like {"main": {name: count}, "rune": {...}, "battlefield": {...}}
     """
-    event_id = upsert_event(conn, event_name)
+    event_id = upsert_event(conn, event_name, date=event_date)
     player = label.split(" - ")[0].strip() if " - " in label else None
     conn.execute(
         "INSERT INTO decks (label, player, placement, weight, event_id, url) "
