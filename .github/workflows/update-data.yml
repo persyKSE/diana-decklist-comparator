@@ -26,7 +26,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          if git diff --cached --quiet; then
+          # riftbound.db's bytes churn on every scrape (fetch timestamps,
+          # page layout) — only treat it as a change if decks.json, images,
+          # or config changed too.
+          if git diff --cached --quiet -- ':(exclude)riftbound.db'; then
             echo "No data changes this week."
           else
             git commit -m "Weekly data update ($(date -u +%F))"
