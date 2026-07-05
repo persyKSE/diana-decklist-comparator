@@ -36,7 +36,12 @@ Needs Python 3 and two packages:
     python3 import_cards.py   # once, and occasionally for new sets
     python3 fetch_decks.py    # scrape decks -> DB -> decks.json
 
-Then open the site — either directly (works offline, no server needed):
+Then open the site — as a native app window (needs `pip3 install pywebview`):
+
+    python3 app.py             # open the app
+    python3 app.py --fetch     # re-scrape latest decks first, then open
+
+or directly in a browser (works offline, no server needed):
 
     open index.html        # or double-click it in Finder
 
