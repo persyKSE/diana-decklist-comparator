@@ -1,0 +1,749 @@
+[
+  {
+    "label": "Alanzq - Vancouver 1st",
+    "placement": "1st",
+    "event": "Vancouver Regional Qualifier",
+    "weight": 3.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-1st-alanzq",
+    "cards": [
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp"
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp"
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp"
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp"
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp"
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp"
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp"
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp"
+      },
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp"
+      },
+      {
+        "name": "Gust",
+        "count": 3,
+        "image": "cache/images/Gust.webp"
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp"
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp"
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp"
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp"
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp"
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp"
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp"
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp"
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp"
+      }
+    ],
+    "runes": [],
+    "battlefields": []
+  },
+  {
+    "label": "bsweitz - Hartford 2nd",
+    "placement": "2nd",
+    "event": "Hartford Regional Qualifier",
+    "weight": 2.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-2nd-bsweitz",
+    "cards": [
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp"
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp"
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp"
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 3,
+        "image": "cache/images/Traveling_Merchant.webp"
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp"
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 1,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp"
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 3,
+        "image": "cache/images/Vex_Apathetic.webp"
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 2,
+        "image": "cache/images/Hwei_Brooding_Painter.webp"
+      },
+      {
+        "name": "Sprite Fountain",
+        "count": 3,
+        "image": "cache/images/Sprite_Fountain.webp"
+      },
+      {
+        "name": "Acceptable Losses",
+        "count": 1,
+        "image": "cache/images/Acceptable_Losses.webp"
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp"
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp"
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp"
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp"
+      },
+      {
+        "name": "Rebuke",
+        "count": 1,
+        "image": "cache/images/Rebuke.webp"
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp"
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp"
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp"
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp"
+      }
+    ],
+    "runes": [],
+    "battlefields": []
+  },
+  {
+    "label": "Dhawally - Vancouver Top 4",
+    "placement": "Top 4",
+    "event": "Vancouver Regional Qualifier",
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-top-4-dhawally",
+    "cards": [
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp"
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp"
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp"
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 1,
+        "image": "cache/images/Traveling_Merchant.webp"
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp"
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp"
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp"
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp"
+      },
+      {
+        "name": "Frigid Jewel",
+        "count": 3,
+        "image": "cache/images/Frigid_Jewel.webp"
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp"
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp"
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp"
+      },
+      {
+        "name": "Flash",
+        "count": 2,
+        "image": "cache/images/Flash.webp"
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp"
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp"
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp"
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp"
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp"
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp"
+      },
+      {
+        "name": "Consult the Past",
+        "count": 1,
+        "image": "cache/images/Consult_the_Past.webp"
+      }
+    ],
+    "runes": [],
+    "battlefields": []
+  },
+  {
+    "label": "Dhawally - Utrecht Top 4",
+    "placement": "Top 4",
+    "event": "Utrecht Regional Qualifier",
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-utrecht-regional-qualifier-top-4-dhawally",
+    "cards": [
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp"
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp"
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp"
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp"
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 1,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp"
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp"
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp"
+      },
+      {
+        "name": "Sprite Fountain",
+        "count": 1,
+        "image": "cache/images/Sprite_Fountain.webp"
+      },
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp"
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp"
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp"
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp"
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp"
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp"
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp"
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp"
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp"
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp"
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp"
+      }
+    ],
+    "runes": [],
+    "battlefields": []
+  },
+  {
+    "label": "linsanity - Hartford Top 4",
+    "placement": "Top 4",
+    "event": "Hartford Regional Qualifier",
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-4-linsanity",
+    "cards": [
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp"
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp"
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp"
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp"
+      },
+      {
+        "name": "Eager Apprentice",
+        "count": 1,
+        "image": "cache/images/Eager_Apprentice.webp"
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp"
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 1,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp"
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 3,
+        "image": "cache/images/Vex_Apathetic.webp"
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp"
+      },
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp"
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp"
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp"
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp"
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp"
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp"
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp"
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp"
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp"
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp"
+      }
+    ],
+    "runes": [],
+    "battlefields": []
+  },
+  {
+    "label": "nice boy - Sydney Top 4",
+    "placement": "Top 4",
+    "event": "Sydney Regional Qualifier",
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-4-nice-boy",
+    "cards": [
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp"
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp"
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp"
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp"
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 1,
+        "image": "cache/images/Vex_Apathetic.webp"
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp"
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp"
+      },
+      {
+        "name": "Mindsplitter",
+        "count": 1,
+        "image": "cache/images/Mindsplitter.webp"
+      },
+      {
+        "name": "Frigid Jewel",
+        "count": 3,
+        "image": "cache/images/Frigid_Jewel.webp"
+      },
+      {
+        "name": "Last Rites",
+        "count": 1,
+        "image": "cache/images/Last_Rites.webp"
+      },
+      {
+        "name": "Gust",
+        "count": 3,
+        "image": "cache/images/Gust.webp"
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp"
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp"
+      },
+      {
+        "name": "Flash",
+        "count": 2,
+        "image": "cache/images/Flash.webp"
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 1,
+        "image": "cache/images/Hard_Bargain.webp"
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp"
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp"
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp"
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp"
+      },
+      {
+        "name": "Fading Memories",
+        "count": 1,
+        "image": "cache/images/Fading_Memories.webp"
+      }
+    ],
+    "runes": [],
+    "battlefields": []
+  },
+  {
+    "label": "CTG Alanzq - Sydney Top 8",
+    "placement": "Top 8",
+    "event": "Sydney Regional Qualifier",
+    "weight": 1.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-8-ctg-alanzq",
+    "cards": [
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp"
+      },
+      {
+        "name": "Plundering Poro",
+        "count": 1,
+        "image": "cache/images/Plundering_Poro.webp"
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp"
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp"
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 3,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp"
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 3,
+        "image": "cache/images/Vex_Apathetic.webp"
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp"
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 2,
+        "image": "cache/images/Vex_Cheerless.webp"
+      },
+      {
+        "name": "Thousand-Tailed Watcher",
+        "count": 1,
+        "image": "cache/images/Thousand_Tailed_Watcher.webp"
+      },
+      {
+        "name": "Existential Dread",
+        "count": 1,
+        "image": "cache/images/Existential_Dread.webp"
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp"
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp"
+      },
+      {
+        "name": "Abandon",
+        "count": 2,
+        "image": "cache/images/Abandon.webp"
+      },
+      {
+        "name": "Flash",
+        "count": 3,
+        "image": "cache/images/Flash.webp"
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp"
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp"
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp"
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp"
+      }
+    ],
+    "runes": [],
+    "battlefields": []
+  }
+]

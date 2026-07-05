@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Diana deck builder & comparator</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 960px; margin: 0 auto; padding: 24px; background: #f7f6f3; color: #1a1a1a; }
+  h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+  h2 { font-size: 17px; font-weight: 600; margin: 28px 0 6px; }
+  p.sub { color: #666; font-size: 13px; margin: 0 0 16px; }
+  .empty { background: #fff3cd; border: 1px solid #ffe08a; border-radius: 8px; padding: 16px; font-size: 14px; }
+  .card-row { display: flex; align-items: center; gap: 10px; padding: 5px 0; border-bottom: 1px solid #e5e3dd; font-size: 14px; }
+  .card-row img { width: 30px; height: 42px; object-fit: cover; border-radius: 3px; background: #ddd; flex-shrink: 0; }
+  .card-row .noimg { width: 30px; height: 42px; border-radius: 3px; background: #e0ded7; flex-shrink: 0; }
+  .card-name { flex: 1; }
+  .card-meta { color: #888; font-size: 12px; }
+  .count-badge { color: #333; font-size: 13px; font-weight: 600; min-width: 26px; text-align: right; }
+  .locked { border-left: 3px solid #2e7d32; padding-left: 8px; }
+  .flex { border-left: 3px solid #e08a00; padding-left: 8px; }
+  .interactive-flex { cursor: pointer; transition: background 0.2s; }
+  .interactive-flex:hover { background: #fff3cd; }
+  .interactive-remove { cursor: pointer; color: #d32f2f; font-weight: bold; padding: 0 5px; }
+  table { border-collapse: collapse; width: 100%; font-size: 12px; margin-top: 6px; }
+  td { padding: 6px; text-align: center; }
+  td.label { text-align: left; white-space: nowrap; color: #555; }
+  .rank-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #e5e3dd; font-size: 14px; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 10px; margin-left: 6px; }
+  .pill-lock { background: #e3f2e4; color: #2e7d32; }
+  .pill-flex { background: #fdf1d6; color: #a5670a; }
+  .summary-box { background: #fff; border: 1px solid #e5e3dd; border-radius: 10px; padding: 14px 18px; margin-bottom: 8px; font-size: 14px; }
+  .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 700px) { .col2 { grid-template-columns: 1fr; } }
+  button { padding: 8px 16px; background: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; margin-bottom: 10px;}
+  button:hover { background: #1b5e20; }
+  .action-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<h1>Diana, Scorn of the Moon — deck builder & comparator</h1>
+<p class="sub">Builds a weighted "prototype" deck from top tournament finishes, then compares the source lists.</p>
+
+<div id="content"></div>
+
+<script>
+let globalDecks = [];
+let rankedCards = [];
+let currentProto = [];
+let imageMap = {};
+
+function weightedAverage(counts, weights) {
+    let sum = 0, wSum = 0;
+    for (let i = 0; i < counts.length; i++) {
+        sum += counts[i] * weights[i];
+        wSum += weights[i];
+    }
+    return Math.round(sum / wSum) || 1;
+}
+
+function processDecks(decks) {
+  const N = decks.length;
+  const totalWeight = decks.reduce((a, d) => a + (d.weight || 1), 0);
+
+  // Image lookup
+  decks.forEach(d => d.cards.forEach(c => { if (c.image && !imageMap[c.name]) imageMap[c.name] = c.image; }));
+
+  // Per-card stats across decks
+  const stats = {};
+  decks.forEach(d => {
+    const w = d.weight || 1;
+    d.cards.forEach(c => {
+      if (!stats[c.name]) stats[c.name] = { decksIn: 0, weightedScore: 0, counts: [], weights: [] };
+      const s = stats[c.name];
+      s.decksIn += 1;
+      s.weightedScore += w * c.count;
+      s.counts.push(c.count);
+      s.weights.push(w);
+    });
+  });
+
+  rankedCards = Object.entries(stats)
+    .map(([name, s]) => ({ name, score: s.weightedScore, decksIn: s.decksIn, copies: weightedAverage(s.counts, s.weights) }))
+    .sort((a, b) => b.score - a.score || b.decksIn - a.decksIn);
+
+  buildInitialProto(N);
+  render();
+}
+
+function buildInitialProto(N) {
+  currentProto = [];
+  let total = 0;
+  for (const c of rankedCards) {
+    if (total >= 40) break;
+    let copies = Math.min(c.copies, 3);
+    if (total + copies > 40) copies = 40 - total;
+    if (copies <= 0) continue;
+    currentProto.push({ ...c, copies, locked: c.decksIn === N });
+    total += copies;
+  }
+}
+
+function removeCard(name) {
+    const idx = currentProto.findIndex(c => c.name === name);
+    if (idx > -1) {
+        currentProto.splice(idx, 1);
+        render();
+    }
+}
+
+function addCard(name) {
+    if (currentProto.find(c => c.name === name)) return; // already in deck
+    const cardData = rankedCards.find(c => c.name === name);
+    if (!cardData) return;
+
+    let copies = cardData.copies;
+    let currentTotal = currentProto.reduce((acc, c) => acc + c.copies, 0);
+    
+    // Remove lowest scoring cards if needed
+    while (currentTotal + copies > 40 && currentProto.length > 0) {
+        let lowestIdx = -1;
+        let lowestScore = Infinity;
+        for (let i = 0; i < currentProto.length; i++) {
+            if (!currentProto[i].locked && currentProto[i].score < lowestScore) {
+                lowestScore = currentProto[i].score;
+                lowestIdx = i;
+            }
+        }
+        if (lowestIdx > -1) {
+            currentTotal -= currentProto[lowestIdx].copies;
+            currentProto.splice(lowestIdx, 1);
+        } else {
+            // Remove a locked card if absolutely necessary
+            currentTotal -= currentProto[currentProto.length - 1].copies;
+            currentProto.pop();
+        }
+    }
+    
+    if (currentTotal + copies > 40) copies = 40 - currentTotal;
+    if (copies > 0) {
+        currentProto.push({ ...cardData, copies, locked: false });
+        currentProto.sort((a, b) => b.score - a.score);
+    }
+    render();
+}
+
+function copyDecklist() {
+    let text = "Prototype Decklist:\n\n";
+    currentProto.forEach(c => {
+        text += `${c.copies}x ${c.name}\n`;
+    });
+    
+    text += "\nNote: Export format is plaintext. A dynamic base64 deck code requires the proprietary Riftbound encoding schema which is unavailable.";
+    
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Decklist copied to clipboard!");
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
+function cardImg(name) {
+    const img = imageMap[name];
+    return img ? '<img src="' + img + '" alt="">' : '<div class="noimg"></div>';
+}
+
+function render() {
+  const N = globalDecks.length;
+  let html = '';
+
+  const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
+
+  html += '<div class="action-bar">';
+  html += `<h2>Prototype deck (${totalCards}/40 main cards)</h2>`;
+  html += '<button onclick="copyDecklist()">Copy Text Decklist</button>';
+  html += '</div>';
+  html += '<p class="sub">Click a flex card to remove it. Cards ranked by weighted score (weighted average copies). <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot.</p>';
+  
+  currentProto.forEach(c => {
+    const cls = c.locked ? 'locked' : 'flex';
+    const tag = c.locked ? '<span class="pill pill-lock">locked</span>' : '<span class="pill pill-flex">flex ' + c.decksIn + '/' + N + '</span>';
+    const removeBtn = c.locked ? '' : `<span class="interactive-remove" onclick="removeCard('${c.name.replace(/'/g, "\\'")}')" title="Remove">&times;</span>`;
+    
+    html += '<div class="card-row ' + cls + '">' + cardImg(c.name) +
+      '<span class="card-name">' + c.name + tag + '</span>' +
+      '<span class="card-meta">score ' + c.score.toFixed(1) + '</span>' +
+      '<span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
+  });
+
+  let runeCounts = {};
+  let bfCounts = {};
+  globalDecks.forEach(d => {
+      if(d.runes) d.runes.forEach(r => { runeCounts[r.name] = (runeCounts[r.name] || 0) + 1; });
+      if(d.battlefields) d.battlefields.forEach(b => { bfCounts[b.name] = (bfCounts[b.name] || 0) + 1; });
+  });
+
+  const sortedRunes = Object.entries(runeCounts).sort((a,b)=>b[1]-a[1]).map(e => e[0]).slice(0,2);
+  const sortedBfs = Object.entries(bfCounts).sort((a,b)=>b[1]-a[1]).map(e => e[0]).slice(0,3);
+
+  html += '<h2>Runes & battlefields</h2>';
+  html += '<div class="summary-box">Most common runes: <strong>' + (sortedRunes.join(", ") || "N/A") + '</strong>. Battlefields: <strong>' + (sortedBfs.join(", ") || "N/A") + '</strong>.</div>';
+
+  const currentProtoNames = new Set(currentProto.map(c => c.name));
+  const flexCards = rankedCards.filter(c => c.decksIn < N && c.decksIn >= 1 && !currentProtoNames.has(c.name));
+  
+  html += '<h2>Alternative Flex Cards (' + flexCards.length + ')</h2>';
+  html += '<p class="sub">Click to add to the prototype (will automatically remove the lowest scoring flex card to make room).</p>';
+  flexCards.slice(0, 20).forEach(c => {
+    html += `<div class="card-row flex interactive-flex" onclick="addCard('${c.name.replace(/'/g, "\\'")}')">` + cardImg(c.name) +
+      '<span class="card-name">' + c.name + '</span>' +
+      '<span class="card-meta">in ' + c.decksIn + '/' + N + ' decks · score ' + c.score.toFixed(1) + '</span><span class="count-badge">+</span></div>';
+  });
+
+  // ---- Swap Distance Matrix & Ranking ----
+  html += '<h2>Swap-Distance Analysis</h2>';
+  html += '<p class="sub">"Swap distance" is the number of cards you need to change to turn one deck into another. Lower average distance means the deck is closer to the consensus archetype.</p>';
+
+  // Calculate swap distances
+  const distances = Array(N).fill(0).map(() => Array(N).fill(0));
+  const avgDistances = Array(N).fill(0);
+  
+  for (let i = 0; i < N; i++) {
+      let totalDist = 0;
+      for (let j = 0; j < N; j++) {
+          if (i === j) continue;
+          
+          let dist = 0;
+          const cardsI = {};
+          const cardsJ = {};
+          globalDecks[i].cards.forEach(c => cardsI[c.name] = c.count);
+          globalDecks[j].cards.forEach(c => cardsJ[c.name] = c.count);
+          
+          const allCards = new Set([...Object.keys(cardsI), ...Object.keys(cardsJ)]);
+          allCards.forEach(name => {
+              const countI = cardsI[name] || 0;
+              const countJ = cardsJ[name] || 0;
+              dist += Math.abs(countI - countJ);
+          });
+          
+          // distance is sum of absolute differences divided by 2 (since every +1 is a -1 elsewhere)
+          const swapDist = dist / 2;
+          distances[i][j] = swapDist;
+          totalDist += swapDist;
+      }
+      avgDistances[i] = totalDist / (N - 1);
+  }
+
+  // Closest to field ranking
+  const rankedDecks = globalDecks.map((d, i) => ({ label: d.label, avgDist: avgDistances[i] }))
+                                 .sort((a, b) => a.avgDist - b.avgDist);
+  
+  html += '<div class="summary-box"><strong>Closest to the field (most representative):</strong><ol style="margin: 8px 0 0 20px; padding: 0;">';
+  rankedDecks.forEach(d => {
+      html += `<li>${d.label} (avg ${d.avgDist.toFixed(1)} swaps)</li>`;
+  });
+  html += '</ol></div>';
+
+  // Matrix table
+  html += '<div style="overflow-x:auto;"><table>';
+  html += '<tr><td class="label" style="font-weight:bold; border-bottom: 2px solid #ddd;">Deck</td>';
+  globalDecks.forEach((d, i) => {
+      html += `<td style="font-weight:bold; border-bottom: 2px solid #ddd;" title="${d.label}">#${i+1}</td>`;
+  });
+  html += '</tr>';
+  
+  globalDecks.forEach((d, i) => {
+      html += `<tr><td class="label"><strong>#${i+1}</strong> ${d.label}</td>`;
+      for (let j = 0; j < N; j++) {
+          if (i === j) {
+              html += `<td style="color:#aaa;">-</td>`;
+          } else {
+              // Color scale based on distance: green (close) to red (far)
+              const dVal = distances[i][j];
+              let color = '#333';
+              if (dVal <= 3) color = '#2e7d32'; // very close
+              else if (dVal >= 10) color = '#d32f2f'; // very far
+              html += `<td style="color:${color}; font-weight:${dVal <= 3 ? 'bold' : 'normal'}">${dVal}</td>`;
+          }
+      }
+      html += '</tr>';
+  });
+  html += '</table></div>';
+
+  // ---- Source decks ----
+  html += '<h2>Source decks (' + N + ')</h2>';
+  globalDecks.forEach((d, i) => {
+    const cardTotal = d.cards.reduce((a, c) => a + c.count, 0);
+    html += '<div style="font-size:14px;padding:3px 0;"><strong>#' + (i+1) + ' ' + d.label + '</strong> — ' + d.placement + ', ' + d.event + ' · weight ' + (d.weight || 1) + ' · ' + cardTotal + ' cards</div>';
+  });
+
+  document.getElementById('content').innerHTML = html;
+}
+
+async function load() {
+  const el = document.getElementById('content');
+  try {
+    const res = await fetch('decks.json');
+    if (!res.ok) throw new Error();
+    globalDecks = await res.json();
+  } catch (e) {
+    el.innerHTML = '<div class="empty">No decks.json found. Run <code>python3 fetch_decks.py</code>, then serve this folder with <code>python3 -m http.server 8000</code> and open <code>http://localhost:8000/viewer.html</code>.</div>';
+    return;
+  }
+  if (!globalDecks || globalDecks.length === 0) {
+    el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages. Check the terminal output.</div>';
+    return;
+  }
+  processDecks(globalDecks);
+}
+
+load();
+</script>
+</body>
+</html>
