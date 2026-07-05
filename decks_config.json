@@ -40,5 +40,41 @@
         "Top 8",
         "Sydney Regional Qualifier",
         1.0
+    ],
+    "asc evansrhim - Hartford Top 8": [
+        "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-8-asc-evansrhim",
+        "Top 8",
+        "Hartford Regional Qualifier",
+        1.0
+    ],
+    "xuejie buai wole - Changsha Top 4": [
+        "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-top-4-xuejie-buai-wole",
+        "Top 4",
+        "S3 Regional Open Changsha",
+        1.5
+    ],
+    "banma chaowan cc - Changsha 2nd": [
+        "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-2nd-banma-chaowan-cc",
+        "2nd",
+        "S3 Regional Open Changsha",
+        2.0
+    ],
+    "gambit ye - Tianjin Top 8": [
+        "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-top-8-gambit-ye",
+        "Top 8",
+        "S3 Regional Open Tianjin",
+        1.0
+    ],
+    "grey youchai - Tianjin 2nd": [
+        "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-2nd-grey-youchai",
+        "2nd",
+        "S3 Regional Open Tianjin",
+        2.0
+    ],
+    "fangzhuzhiren - Xian 2nd": [
+        "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-xian-2nd-fangzhuzhiren",
+        "2nd",
+        "S3 Regional Open Xian",
+        2.0
     ]
 }

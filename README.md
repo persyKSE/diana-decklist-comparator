@@ -12,9 +12,13 @@ deck builder.
   `events`, `decks`, `deck_cards`.
 - **`import_cards.py`** — imports/refreshes the card catalogue from the
   dotgg API (the same source that hosts the card images).
-- **`fetch_decks.py`** — scrapes the decklists in `decks_config.json`
-  from Mobalytics, stores them in the DB, downloads card images to
-  `cache/images/`, and exports `decks.json`.
+- **`fetch_decks.py`** — auto-discovers new Diana tournament decklists
+  from the Mobalytics sitemap (slug pattern
+  `diana-scorn-of-the-moon-<event>-<placement>-<player>`; placement
+  determines the weight), merges them into `decks_config.json`, scrapes
+  every configured deck, stores them in the DB, downloads card images
+  to `cache/images/`, and exports `decks.json`. Pass `--no-discover`
+  to skip the sitemap step.
 - **`db.py`** — schema + helpers; also a small CLI
   (`migrate` / `export` / `stats`).
 - **`decks.json`** — export for the viewer, enriched with per-card
@@ -52,13 +56,18 @@ The site shows:
 
 ## Adding more decks
 
+New tournament results are picked up automatically from the sitemap on
+every run (including the weekly Actions run). To add a deck manually
+(e.g. one that isn't on Mobalytics' sitemap):
+
     python3 fetch_decks.py \
       --add-url "https://mobalytics.gg/riftbound/decks/..." \
       --label "Player - Event 1st" --placement "1st" \
       --event "Some Regional Qualifier" --weight 3.0
 
 or edit `decks_config.json` directly and re-run `fetch_decks.py`.
-Suggested weights: 1st = 3.0, 2nd = 2.0, Top 4 = 1.5, Top 8 = 1.0.
+Weights: 1st = 3.0, 2nd = 2.0, Top 4 = 1.5, Top 8 = 1.0 (auto-assigned
+for discovered decks; tweak in the config afterwards if you like).
 
 ## Hosting (GitHub Pages + weekly auto-update)
 
@@ -75,9 +84,9 @@ under **Pages**, set **Source** to **GitHub Actions**.
 
 ## Known limitations
 
-- Deck URLs are hand-collected in `decks_config.json` — Mobalytics has
-  no public API and its tournament-results listing is behind JS
-  pagination. Auto-discovery is the next milestone.
+- Discovery only sees decks in the Mobalytics sitemap under the
+  `diana-scorn-of-the-moon-*` slug; results published elsewhere (or
+  under a different archetype slug) still need `--add-url`.
 - If Mobalytics changes their page layout, `parse_decklist()` in
   `fetch_decks.py` may need adjusting — it works by taking the text
   between "Main Deck" and "Sideboard" and splitting on 1–3 digit count

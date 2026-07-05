@@ -81,6 +81,53 @@ DEFAULT_DECK_URLS = {
     ),
 }
 
+SITEMAP_URL = "https://mobalytics.gg/riftbound/sitemap.xml"
+ARCHETYPE_PREFIX = "diana-scorn-of-the-moon-"
+PLACEMENT_WEIGHTS = {"1st": 3.0, "2nd": 2.0, "3rd": 1.75,
+                     "top-4": 1.5, "top-8": 1.0, "top-16": 0.75}
+EVENT_NOISE = {"s3", "regional", "qualifier", "open"}  # dropped from short labels
+
+
+def discover_decks(config):
+    """Find new tournament decklists for the archetype via the sitemap.
+
+    Tournament deck slugs look like
+    diana-scorn-of-the-moon-<event>-<placement>-<player>; entries without
+    a placement token are user brews and are skipped. Returns the number
+    of decks added to config.
+    """
+    existing_urls = {v[0] for v in config.values()}
+    try:
+        xml = fetch_page(SITEMAP_URL)
+    except Exception as e:
+        print(f"Deck discovery failed ({e}); continuing with configured decks")
+        return 0
+
+    added = 0
+    for url in re.findall(r"<loc>(https://mobalytics\.gg/riftbound/decks/[^<]+)</loc>", xml):
+        slug = url.rsplit("/", 1)[1]
+        if not slug.startswith(ARCHETYPE_PREFIX) or url in existing_urls:
+            continue
+        rest = slug[len(ARCHETYPE_PREFIX):]
+        m = re.search(r"(?:^|-)(1st|2nd|3rd|top-4|top-8|top-16)(?:-|$)", rest)
+        if not m:
+            continue
+        placement_slug = m.group(1)
+        placement = ("Top " + placement_slug.split("-")[1]) if placement_slug.startswith("top-") else placement_slug
+        event_words = [w for w in rest[:m.start()].split("-") if w]
+        event = " ".join(w.upper() if w == "s3" else w.capitalize() for w in event_words)
+        short_event = " ".join(w.capitalize() for w in event_words if w not in EVENT_NOISE) or event
+        player = rest[m.end():].replace("-", " ").strip()
+
+        label = f"{player} - {short_event} {placement}"
+        if label in config:
+            label = f"{label} ({slug[-6:]})"
+        config[label] = [url, placement, event, PLACEMENT_WEIGHTS.get(placement_slug, 1.0)]
+        print(f"Discovered: {label}")
+        added += 1
+    return added
+
+
 def load_config():
     if CONFIG_FILE.exists():
         with open(CONFIG_FILE, "r") as f:
@@ -197,6 +244,8 @@ def main():
     parser.add_argument("--placement", help="Placement (e.g. '1st', 'Top 4')", default="Unknown")
     parser.add_argument("--event", help="Event name", default="Unknown Event")
     parser.add_argument("--weight", type=float, help="Deck weight", default=1.0)
+    parser.add_argument("--no-discover", action="store_true",
+                        help="Skip sitemap discovery of new tournament decks")
     args = parser.parse_args()
 
     deck_config = load_config()
@@ -205,6 +254,10 @@ def main():
         deck_config[args.label] = [args.add_url, args.placement, args.event, args.weight]
         save_config(deck_config)
         print(f"Added {args.label} to config.")
+
+    if not args.no_discover:
+        if discover_decks(deck_config):
+            save_config(deck_config)
 
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
     conn = db.connect()
