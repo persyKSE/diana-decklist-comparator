@@ -3,19 +3,20 @@
 fetch_decks.py
 
 Fetches Riftbound Diana decklists from Mobalytics deck pages, parses each
-into card name/count, resolves card images where known, and writes
-everything to decks.json for viewer.html to display.
+into card name/count, and stores them in riftbound.db (see db.py). Card
+images and metadata come from the cards table (populate it first with
+import_cards.py). Finally exports decks.json for index.html to display.
 
 Usage:
+    python3 import_cards.py   # once, and occasionally for new sets
     python3 fetch_decks.py
 
-Ships with five real tournament results already in DECK_URLS below
-(Vancouver 1st, Hartford 2nd, two Top 4s, one Top 8) from the June 2026
-NA/OCE regional circuit. Add more URLs to DECK_URLS as new results come
-in, then re-run the script.
+Ships with real tournament results in decks_config.json (Vancouver 1st,
+Hartford 2nd, Top 4s, one Top 8) from the June 2026 regional circuit.
+Add more with --add-url or by editing decks_config.json, then re-run.
 
-Requires: requests, beautifulsoup4
-    pip3 install requests beautifulsoup4
+Requires: cloudscraper, beautifulsoup4
+    pip3 install cloudscraper beautifulsoup4
 """
 
 import json
@@ -33,7 +34,7 @@ except ImportError:
     print("Missing dependencies. Run: pip3 install cloudscraper beautifulsoup4")
     sys.exit(1)
 
-from card_codes import get_image_url
+import db
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -167,23 +168,6 @@ def download_image(url, dest_path):
         pass
     return False
 
-def prompt_for_card_code(name):
-    print(f"Image code not found for '{name}'.")
-    if not sys.stdout.isatty():
-        return None
-    code = input(f"Enter set code for '{name}' (e.g., UNL-080) or press Enter to skip: ").strip()
-    if code:
-        card_codes_path = Path(__file__).parent / "card_codes.py"
-        content = card_codes_path.read_text()
-        new_entry = f'    "{name}": "{code}",\n'
-        if "CARD_CODES = {" in content:
-            content = content.replace("CARD_CODES = {", f"CARD_CODES = {{\n{new_entry}")
-            card_codes_path.write_text(content)
-            print(f"Added {name} -> {code} to card_codes.py")
-            return f"https://static.dotgg.gg/riftbound/cards/{code}.webp"
-    return None
-
-
 def main():
     parser = argparse.ArgumentParser(description="Fetch Riftbound decklists.")
     parser.add_argument("--add-url", help="Add a new deck URL to config and fetch")
@@ -201,8 +185,12 @@ def main():
         print(f"Added {args.label} to config.")
 
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
-    decks_out = []
+    conn = db.connect()
+    if conn.execute("SELECT COUNT(*) FROM cards").fetchone()[0] == 0:
+        print("Card catalogue is empty — run python3 import_cards.py first "
+              "(images and cost/type data come from it).")
 
+    fetched = 0
     for label, data in deck_config.items():
         url, placement, event, weight = data
         print(f"Fetching {label} ...")
@@ -217,40 +205,27 @@ def main():
             print(f"  Warning: no cards parsed for {label}, check page structure")
             continue
 
-        card_entries = []
-        for name, count in parsed["cards"].items():
-            img_url = get_image_url(name)
-            if not img_url:
-                img_url = prompt_for_card_code(name)
-                
-            local_img = None
-            if img_url:
-                filename = re.sub(r"[^a-zA-Z0-9]+", "_", name).strip("_") + ".webp"
-                dest = IMAGE_DIR / filename
-                if download_image(img_url, dest):
-                    local_img = f"cache/images/{filename}"
-            card_entries.append({
-                "name": name,
-                "count": count,
-                "image": local_img
-            })
+        for name in parsed["cards"]:
+            card = db.lookup_card(conn, name)
+            if not card:
+                print(f"  Unknown card (not in catalogue): {name}")
+            elif card["image_url"]:
+                download_image(card["image_url"], db.local_image_path(name))
 
-        decks_out.append({
-            "label": label,
-            "placement": placement,
-            "event": event,
-            "weight": weight,
-            "url": url,
-            "cards": card_entries,
-            "runes": [{"name": n, "count": c} for n, c in parsed["runes"].items()],
-            "battlefields": [{"name": n, "count": c} for n, c in parsed["battlefields"].items()]
+        db.upsert_deck(conn, label, placement, event, weight, url, {
+            "main": parsed["cards"],
+            "rune": parsed["runes"],
+            "battlefield": parsed["battlefields"],
         })
-        print(f"  Parsed {len(card_entries)} unique cards")
+        fetched += 1
+        print(f"  Parsed {len(parsed['cards'])} unique cards")
         time.sleep(1)
 
-    OUTPUT_FILE.write_text(json.dumps(decks_out, indent=2))
-    print(f"\nWrote {len(decks_out)} decks to {OUTPUT_FILE}")
-    print("Open viewer.html in a browser to see the comparison.")
+    conn.commit()
+    total = db.export_decks_json(conn)
+    conn.close()
+    print(f"\nStored {fetched} fetched decks; exported {total} decks to {OUTPUT_FILE}")
+    print("Open index.html (via a local server or GitHub Pages) to see the comparison.")
 
 
 if __name__ == "__main__":
