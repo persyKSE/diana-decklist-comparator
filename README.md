@@ -54,18 +54,32 @@ or served, if you prefer a localhost URL:
 `decks.js` so it also works from `file://`, where browsers block
 `fetch`.)
 
-The site shows:
+The site is a single-page app with a sidebar and four views (Build,
+Analyze, Compare, Decks), a dark "moonlight" theme, and card hover
+previews. A **global filter bar** (region / sub-archetype / placement /
+date range) recomputes every view from the chosen subset, so you can
+ask e.g. "what does the majority build's curve look like without the
+off-meta variant?" or "did the CN circuit build differently?".
 
-- **Prototype deck** — a weighted consensus 40, built
-  highest-score-first (deck weight × copies, summed across decks).
-  Locked (green) = in every deck; flex (amber) = contested slot. Click
-  to add/remove flex cards.
-- **Card inclusion table** — every card seen in the field: inclusion
-  rate, cost, type, average copies, and the copy-count split (e.g.
-  "x3 in 5 decks, x2 in 2 decks").
-- **Deck diff** — git-style comparison of any two lists.
-- **Swap-distance analysis** — pairwise distance matrix plus a
-  "closest to the field" ranking.
+- **Build** — a weighted consensus 40 (deck weight × copies, summed),
+  locked vs. flex slots, runes/battlefields, and a **coach**: paste
+  your list to get distance to each winning deck, missing core cards,
+  and one-click "apply" swaps toward the consensus. Your list is saved
+  in the browser and re-analyzed as you type.
+- **Analyze** — card inclusion table, card packages, energy curves and
+  a sub-archetype dendrogram, and an inclusion timeline. Charts have
+  hover tooltips and legend/leaf highlighting.
+- **Compare** — git-style diff of any two lists and a swap-distance
+  matrix with a "closest to the field" ranking.
+- **Decks** — every source list; click one for its full decklist in a
+  modal (grouped by cost, with an in-modal compare-diff).
+
+### Install as an app (PWA)
+
+The hosted site ships a web-app manifest and a service worker, so it can
+be installed to your desktop or phone home screen and works offline
+(the app shell and card images are cached). In Chrome/Edge, use the
+install icon in the address bar; on iOS Safari, "Add to Home Screen".
 
 ## Adding more decks
 

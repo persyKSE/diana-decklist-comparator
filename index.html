@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Diana Deck Lab</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d1220">
+<link rel="icon" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
 <style>
   :root {
     --bg:#0d1220; --bg2:#0a0e19;
@@ -38,7 +42,6 @@
 
   .app { display: flex; min-height: 100vh; max-width: 1200px; margin: 0 auto; }
 
-  /* ---- Sidebar ---- */
   .sidebar {
     width: 214px; flex-shrink: 0; position: sticky; top: 0; align-self: flex-start;
     height: 100vh; padding: 22px 14px; display: flex; flex-direction: column; gap: 4px;
@@ -60,7 +63,7 @@
   .theme-btn:hover { background: var(--panel2); }
 
   main { flex: 1; min-width: 0; padding: 26px 32px 80px; }
-  .view-head { margin: 0 0 20px; }
+  .view-head { margin: 0 0 16px; }
   .view-head h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; }
   .view-head p { color: var(--muted); font-size: 13.5px; margin: 0; }
 
@@ -69,11 +72,21 @@
   p.sub { color: var(--muted); font-size: 13px; margin: 0 0 14px; line-height: 1.5; }
   .empty { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; font-size: 14px; }
 
+  .filterbar { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 18px; display: flex; flex-direction: column; gap: 8px; }
+  .fgroup { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .fgroup .flabel { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); width: 78px; flex-shrink: 0; font-weight: 600; }
+  .chip { font-size: 12px; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); background: var(--bg2); color: var(--muted); cursor: pointer; user-select: none; transition: all 0.12s; }
+  .chip:hover { color: var(--text); border-color: var(--accent); }
+  .chip.on { background: var(--accent); color: #0b0f1a; border-color: var(--accent); font-weight: 600; }
+  body.light .chip.on { color: #fff; }
+  .fdate select { padding: 4px 8px; font-size: 12px; }
+  .fbar-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px solid var(--border); padding-top: 8px; font-size: 12px; color: var(--muted); }
+  .fbar-foot button { background: transparent; color: var(--accent); border: 1px solid var(--border); padding: 4px 10px; font-size: 12px; }
+
   .card-row { display: flex; align-items: center; gap: 11px; padding: 6px 4px; border-radius: 8px; font-size: 14px; transition: background 0.12s; }
   .card-row + .card-row { border-top: 1px solid var(--border); }
   .cimg { width: 34px; height: 47px; object-fit: cover; object-position: top; border-radius: 4px; background: var(--panel2); flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
   .noimg { width: 34px; height: 47px; border-radius: 4px; background: var(--panel2); border: 1px dashed var(--border); flex-shrink: 0; }
-  [data-card] { cursor: default; }
   img.cimg[data-card], .card-name[data-card] { cursor: help; }
   .card-name { flex: 1; }
   .card-meta { color: var(--muted); font-size: 12px; }
@@ -97,6 +110,7 @@
   button { padding: 8px 15px; background: var(--accent); color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer; font-size: 13.5px; font-weight: 600; }
   body.light button { color: #fff; }
   button:hover { filter: brightness(1.08); }
+  button.mini { padding: 2px 9px; font-size: 11px; border-radius: 6px; margin-left: auto; }
   .action-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
   .action-bar h2 { margin: 0; }
 
@@ -114,6 +128,7 @@
   .matrix td { padding: 7px; text-align: center; }
   .matrix td.label { text-align: left; white-space: nowrap; color: var(--muted); }
   .matrix thead td { font-weight: bold; border-bottom: 1px solid var(--border); color: var(--muted); }
+  .matrix td[data-tip] { cursor: help; }
 
   .diff-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
   select { padding: 7px 10px; font-size: 13px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--text); }
@@ -140,6 +155,9 @@
   svg.viz .avg { stroke: var(--text); }
   svg.viz .leaf { cursor: pointer; }
   svg.viz .leaf:hover { text-decoration: underline; }
+  svg.viz .series { transition: opacity 0.12s; }
+  svg.viz .pt[data-tip] { cursor: help; }
+  svg.viz.focus .series:not(.on) { opacity: 0.1; }
 
   .deck-link { cursor: pointer; border-bottom: 1px dotted var(--muted); }
   .deck-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
@@ -151,16 +169,17 @@
   .deck-tile .dt-sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
   .deck-tile .dt-open { color: var(--muted); font-size: 18px; }
 
+  .coach-tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 10px 0; }
   #coachInput { width: 100%; min-height: 140px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; padding: 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); resize: vertical; }
+  #coachAdd { padding: 7px 10px; font-size: 13px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--text); min-width: 200px; }
   .coach-warn { background: rgba(227,169,78,0.12); border: 1px solid var(--flex); border-radius: 8px; padding: 8px 12px; font-size: 13px; margin: 8px 0; }
 
-  /* ---- Hover card preview ---- */
   #cardPreview { position: fixed; z-index: 100000; pointer-events: none; opacity: 0; transform: scale(0.96); transition: opacity 0.1s; }
   #cardPreview.show { opacity: 1; transform: scale(1); }
   #cardPreview img { width: 200px; border-radius: 12px; box-shadow: 0 14px 44px rgba(0,0,0,0.6); display: block; background: var(--panel2); }
-  #cardPreview .pv-name { display: none; }
+  #vizTip { position: fixed; z-index: 100000; pointer-events: none; background: var(--panel2); color: var(--text); border: 1px solid var(--border); padding: 6px 10px; border-radius: 8px; font-size: 12px; max-width: 280px; box-shadow: var(--shadow); opacity: 0; transition: opacity 0.1s; }
+  #vizTip.show { opacity: 1; }
 
-  /* ---- Modal ---- */
   #modal { position: fixed; inset: 0; z-index: 9999; display: none; align-items: flex-start; justify-content: center; background: rgba(4,7,14,0.66); backdrop-filter: blur(3px); padding: 40px 16px; overflow-y: auto; }
   #modal.show { display: flex; }
   .modal { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); width: 100%; max-width: 640px; padding: 20px 22px; }
@@ -183,14 +202,16 @@
 
   @media (max-width: 800px) {
     .app { flex-direction: column; }
-    .sidebar { width: auto; height: auto; position: sticky; top: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 12px; border-right: none; border-bottom: 1px solid var(--border); background: var(--bg); z-index: 60; }
-    .brand { padding: 0 8px 0 4px; }
-    nav { flex-direction: row; gap: 2px; }
-    nav a { padding: 8px 10px; }
+    .sidebar { width: auto; height: auto; position: sticky; top: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 6px; padding: 10px 12px; border-right: none; border-bottom: 1px solid var(--border); background: var(--bg); z-index: 60; }
+    .brand { padding: 0 8px 0 4px; font-size: 15px; flex: 1 1 auto; }
+    nav { flex-direction: row; flex-wrap: wrap; gap: 4px; flex: 1 1 100%; order: 3; }
+    nav a { padding: 7px 12px; flex: 1 1 auto; justify-content: center; }
     nav a.active { box-shadow: inset 0 -3px 0 var(--accent); }
-    .side-foot { margin: 0 0 0 auto; flex-direction: row; align-items: center; padding: 0; }
+    .side-foot { margin: 0; flex-direction: row; align-items: center; padding: 0; }
     #deckCount { display: none; }
-    main { padding: 18px 16px 60px; }
+    main { padding: 16px 14px 60px; }
+    .fgroup .flabel { width: 100%; }
+    .diff-controls select { max-width: 100%; }
   }
 </style>
 </head>
@@ -213,94 +234,85 @@
   <main id="content"></main>
 </div>
 
-<div id="cardPreview"><img src="" alt=""><span class="pv-name"></span></div>
+<div id="cardPreview"><img src="" alt=""></div>
+<div id="vizTip"></div>
 <div id="modal"><div class="modal"></div></div>
 <div id="toast"></div>
+<datalist id="cardNames"></datalist>
 
 <script src="decks.js"></script>
 <script>
-let globalDecks = [];
-let rankedCards = [];
+let allDecks = [];      // full set (tagged with _region / _cluster / _clusterName)
+let globalDecks = [];   // active (filtered) set — every view reads this
+let rankedCards = [];    // per-card stats over the active set
 let currentProto = [];
 let imageMap = {};
-let cardMeta = {};   // name -> {cost, type, color} from the card catalogue
-let diffA = 0, diffB = 1;   // selected decks in the diff view
-let coachText = '';         // pasted decklist in the coach view
-let nameLookup = {};        // normalized name -> canonical name
-let nonMainNames = new Set(); // rune/battlefield names (excluded from main-deck math)
+let cardMeta = {};       // name -> {cost, type, color} from the card catalogue
+let diffA = 0, diffB = 1;
+let coachText = '';
+let nameLookup = {};
+let nonMainNames = new Set();
 let currentView = 'build';
+let clusterOptions = [];  // {gi, name, n} over the full set
+let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '' };
+let coachTimer = null;
 
 const PALETTE = ['#7aa2e8', '#54c08a', '#e3a94e', '#b978e0', '#e07070', '#4fc4d6', '#c98a5a', '#e06bb0'];
+const REGION_ORDER = ['NA', 'EU', 'OCE', 'CN', 'Other'];
 
 const VIEWS = {
-  build:   { title: 'Build', desc: 'A weighted consensus deck from top tournament finishes, the flex slots that are still live, and a coach to rate your own list.', render: renderBuild },
-  analyze: { title: 'Analyze', desc: 'What the winning field agrees and disagrees on: inclusion rates, card packages, curves, sub-archetypes, and shifts over time.', render: renderAnalyze },
+  build:   { title: 'Build', desc: 'A weighted consensus deck from the filtered finishes, the flex slots that are still live, and a coach to rate your own list.', render: renderBuild },
+  analyze: { title: 'Analyze', desc: 'What the filtered field agrees and disagrees on: inclusion rates, card packages, curves, sub-archetypes, and shifts over time.', render: renderAnalyze },
   compare: { title: 'Compare', desc: 'Diff any two lists card-for-card, and see which decks sit closest to the consensus.', render: renderCompare },
-  decks:   { title: 'Decks', desc: 'Every source decklist. Click any deck to open its full list.', render: renderDecks },
+  decks:   { title: 'Decks', desc: 'Every source decklist in the filtered set. Click a deck to open its full list.', render: renderDecks },
 };
 
-function normName(s) {
-  return s.replace(/’/g, "'").toLowerCase().replace(/[^a-z0-9]+/g, '');
-}
-function escHtml(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-function attr(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
+function normName(s) { return s.replace(/’/g, "'").toLowerCase().replace(/[^a-z0-9]+/g, ''); }
+function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function attr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function shortName(n) { return n.split(',')[0].trim(); }
 
 function weightedAverage(counts, weights) {
     let sum = 0, wSum = 0;
-    for (let i = 0; i < counts.length; i++) {
-        sum += counts[i] * weights[i];
-        wSum += weights[i];
-    }
+    for (let i = 0; i < counts.length; i++) { sum += counts[i] * weights[i]; wSum += weights[i]; }
     return Math.round(sum / wSum) || 1;
 }
 
-function processDecks(decks) {
-  const N = decks.length;
-
-  // Image + metadata lookup (cost/type/color come from the card catalogue via decks.json)
-  decks.forEach(d => d.cards.forEach(c => {
-    if (c.image && !imageMap[c.name]) imageMap[c.name] = c.image;
-    if (!cardMeta[c.name]) cardMeta[c.name] = { cost: c.cost, type: c.type, color: c.color || [] };
-  }));
+function indexCards(decks) {
   decks.forEach(d => {
-    d.cards.forEach(c => nameLookup[normName(c.name)] = c.name);
+    d.cards.forEach(c => {
+      if (c.image && !imageMap[c.name]) imageMap[c.name] = c.image;
+      if (!cardMeta[c.name]) cardMeta[c.name] = { cost: c.cost, type: c.type, color: c.color || [] };
+      nameLookup[normName(c.name)] = c.name;
+    });
     (d.runes || []).concat(d.battlefields || []).forEach(c => {
       if (c.image && !imageMap[c.name]) imageMap[c.name] = c.image;
       nameLookup[normName(c.name)] = c.name;
       nonMainNames.add(c.name);
     });
   });
+  const names = [...new Set(decks.flatMap(d => d.cards.map(c => c.name)))].sort();
+  document.getElementById('cardNames').innerHTML = names.map(n => '<option value="' + attr(n) + '">').join('');
+}
 
-  // Per-card stats across decks
+function computeStats(decks) {
   const stats = {};
   decks.forEach(d => {
     const w = d.weight || 1;
     d.cards.forEach(c => {
       if (!stats[c.name]) stats[c.name] = { decksIn: 0, weightedScore: 0, counts: [], weights: [], dist: {} };
       const s = stats[c.name];
-      s.decksIn += 1;
-      s.weightedScore += w * c.count;
-      s.counts.push(c.count);
-      s.weights.push(w);
+      s.decksIn += 1; s.weightedScore += w * c.count;
+      s.counts.push(c.count); s.weights.push(w);
       s.dist[c.count] = (s.dist[c.count] || 0) + 1;
     });
   });
-
-  rankedCards = Object.entries(stats)
-    .map(([name, s]) => ({
-      name, score: s.weightedScore, decksIn: s.decksIn,
-      copies: weightedAverage(s.counts, s.weights),
-      avgCopies: s.counts.reduce((a, b) => a + b, 0) / s.counts.length,
-      dist: s.dist
-    }))
-    .sort((a, b) => b.score - a.score || b.decksIn - a.decksIn);
-
-  buildInitialProto(N);
-  router();
+  return Object.entries(stats).map(([name, s]) => ({
+    name, score: s.weightedScore, decksIn: s.decksIn,
+    copies: weightedAverage(s.counts, s.weights),
+    avgCopies: s.counts.reduce((a, b) => a + b, 0) / s.counts.length,
+    dist: s.dist
+  })).sort((a, b) => b.score - a.score || b.decksIn - a.decksIn);
 }
 
 function buildInitialProto(N) {
@@ -318,49 +330,30 @@ function buildInitialProto(N) {
 
 function removeCard(name) {
     const idx = currentProto.findIndex(c => c.name === name);
-    if (idx > -1) {
-        currentProto.splice(idx, 1);
-        render();
-    }
+    if (idx > -1) { currentProto.splice(idx, 1); render(); }
 }
 
 function addCard(name) {
-    if (currentProto.find(c => c.name === name)) return; // already in deck
+    if (currentProto.find(c => c.name === name)) return;
     const cardData = rankedCards.find(c => c.name === name);
     if (!cardData) return;
-
     let copies = cardData.copies;
     let currentTotal = currentProto.reduce((acc, c) => acc + c.copies, 0);
-
-    // Remove lowest scoring cards if needed
     while (currentTotal + copies > 40 && currentProto.length > 0) {
-        let lowestIdx = -1;
-        let lowestScore = Infinity;
+        let lowestIdx = -1, lowestScore = Infinity;
         for (let i = 0; i < currentProto.length; i++) {
-            if (!currentProto[i].locked && currentProto[i].score < lowestScore) {
-                lowestScore = currentProto[i].score;
-                lowestIdx = i;
-            }
+            if (!currentProto[i].locked && currentProto[i].score < lowestScore) { lowestScore = currentProto[i].score; lowestIdx = i; }
         }
-        if (lowestIdx > -1) {
-            currentTotal -= currentProto[lowestIdx].copies;
-            currentProto.splice(lowestIdx, 1);
-        } else {
-            currentTotal -= currentProto[currentProto.length - 1].copies;
-            currentProto.pop();
-        }
+        if (lowestIdx > -1) { currentTotal -= currentProto[lowestIdx].copies; currentProto.splice(lowestIdx, 1); }
+        else { currentTotal -= currentProto[currentProto.length - 1].copies; currentProto.pop(); }
     }
-
     if (currentTotal + copies > 40) copies = 40 - currentTotal;
-    if (copies > 0) {
-        currentProto.push({ ...cardData, copies, locked: false });
-        currentProto.sort((a, b) => b.score - a.score);
-    }
+    if (copies > 0) { currentProto.push({ ...cardData, copies, locked: false }); currentProto.sort((a, b) => b.score - a.score); }
     render();
 }
 
 function copyDecklist() {
-    let text = currentProto.map(c => `${c.copies}x ${c.name}`).join('\n');
+    const text = currentProto.map(c => `${c.copies}x ${c.name}`).join('\n');
     navigator.clipboard.writeText(text).then(() => toast('Prototype decklist copied')).catch(() => {});
 }
 
@@ -371,10 +364,7 @@ function cardImg(name, cls) {
       ? '<img class="' + c + '" data-card="' + attr(name) + '" src="' + attr(img) + '" alt="">'
       : '<div class="noimg" data-card="' + attr(name) + '"></div>';
 }
-
-function deckRef(i, text) {
-  return '<span class="deck-link" data-deck="' + i + '">' + escHtml(text) + '</span>';
-}
+function deckRef(i, text) { return '<span class="deck-link" data-deck="' + i + '">' + escHtml(text) + '</span>'; }
 
 function setDiff() {
   diffA = parseInt(document.getElementById('diffA').value, 10);
@@ -410,12 +400,8 @@ function renderDiff(deckA, deckB) {
   sections.forEach(([title, diff]) => {
     if (!diff.removed.length && !diff.added.length) return;
     html += '<div class="cost-head">' + title + '</div>';
-    diff.removed.forEach(c => {
-      html += '<div class="diff-line diff-del" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>&minus;' + c.n + ' ' + escHtml(c.name) + '</span></div>';
-    });
-    diff.added.forEach(c => {
-      html += '<div class="diff-line diff-add" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>+' + c.n + ' ' + escHtml(c.name) + '</span></div>';
-    });
+    diff.removed.forEach(c => { html += '<div class="diff-line diff-del" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>&minus;' + c.n + ' ' + escHtml(c.name) + '</span></div>'; });
+    diff.added.forEach(c => { html += '<div class="diff-line diff-add" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>+' + c.n + ' ' + escHtml(c.name) + '</span></div>'; });
   });
   return html;
 }
@@ -429,17 +415,24 @@ function deckDistance(listA, listB) {
   return d / 2;
 }
 
-// Agglomerative clustering (average linkage) over the swap-distance matrix.
+function distanceMatrix(decks) {
+  const N = decks.length;
+  const m = Array(N).fill(0).map(() => Array(N).fill(0));
+  for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
+    const d = deckDistance(decks[i].cards, decks[j].cards);
+    m[i][j] = d; m[j][i] = d;
+  }
+  return m;
+}
+
 function buildDendrogram(dist) {
   let nodes = dist.map((_, i) => ({ leaf: i, members: [i], height: 0 }));
   while (nodes.length > 1) {
     let bi = 0, bj = 1, best = Infinity;
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        let s = 0, c = 0;
-        nodes[i].members.forEach(a => nodes[j].members.forEach(b => { s += dist[a][b]; c++; }));
-        if (s / c < best) { best = s / c; bi = i; bj = j; }
-      }
+    for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+      let s = 0, c = 0;
+      nodes[i].members.forEach(a => nodes[j].members.forEach(b => { s += dist[a][b]; c++; }));
+      if (s / c < best) { best = s / c; bi = i; bj = j; }
     }
     const merged = { children: [nodes[bi], nodes[bj]], members: nodes[bi].members.concat(nodes[bj].members), height: best };
     nodes = nodes.filter((_, k) => k !== bi && k !== bj);
@@ -448,12 +441,11 @@ function buildDendrogram(dist) {
   return nodes[0];
 }
 
-// Cut the tree at the largest gap between merge heights -> sub-archetype groups.
 function cutClusters(root) {
   const heights = [];
   (function walk(n) { if (n.children) { heights.push(n.height); n.children.forEach(walk); } })(root);
   heights.sort((a, b) => a - b);
-  let threshold = Infinity, bestGap = 1.0; // require a gap > 1 swap to call it a split
+  let threshold = Infinity, bestGap = 1.0;
   for (let i = 0; i < heights.length - 1; i++) {
     const gap = heights[i + 1] - heights[i];
     if (gap > bestGap) { bestGap = gap; threshold = (heights[i] + heights[i + 1]) / 2; }
@@ -483,21 +475,18 @@ function renderDendrogramSVG(root, labels, clusterOf) {
     const ys = pts.map(p => p.y);
     pts.forEach(p => parts.push('<line class="branch" x1="' + p.x + '" y1="' + p.y + '" x2="' + x + '" y2="' + p.y + '"/>'));
     parts.push('<line class="branch" x1="' + x + '" y1="' + Math.min(...ys) + '" x2="' + x + '" y2="' + Math.max(...ys) + '"/>');
-    const y = ys.reduce((a, b) => a + b, 0) / ys.length;
     parts.push('<text class="axis" x="' + (x - 3) + '" y="' + (Math.min(...ys) - 3) + '" font-size="10" text-anchor="end">' + n.height.toFixed(1) + '</text>');
-    return { x, y };
+    return { x, y: ys.reduce((a, b) => a + b, 0) / ys.length };
   }
   place(root);
   leafOrder.forEach(leaf => {
     const color = PALETTE[clusterOf[leaf] % PALETTE.length];
     parts.push('<circle cx="' + xOf(0) + '" cy="' + leafY[leaf] + '" r="3.5" fill="' + color + '"/>');
-    parts.push('<text class="leaf" data-deck="' + leaf + '" x="' + (xOf(0) + 10) + '" y="' + (leafY[leaf] + 4) + '" font-size="12" fill="' + color + '">' + escHtml(labels[leaf]) + '</text>');
+    parts.push('<text class="leaf" data-deck="' + leaf + '" data-hl="#curveSvg|' + leaf + '" x="' + (xOf(0) + 10) + '" y="' + (leafY[leaf] + 4) + '" font-size="12" fill="' + color + '">' + escHtml(labels[leaf]) + '</text>');
   });
   return '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
 }
 
-// Flex-card packages: cards that travel together (high Jaccard overlap of the
-// decks that run them), found via union-find over strong pairs.
 function findPackages(N) {
   const flex = rankedCards.filter(c => c.decksIn >= 2 && c.decksIn < N);
   const deckSet = {};
@@ -508,17 +497,11 @@ function findPackages(N) {
   const parent = {};
   const find = x => parent[x] === x ? x : (parent[x] = find(parent[x]));
   flex.forEach(c => parent[c.name] = c.name);
-  const together = {};
-  for (let i = 0; i < flex.length; i++) {
-    for (let j = i + 1; j < flex.length; j++) {
-      const A = deckSet[flex[i].name], B = deckSet[flex[j].name];
-      const inter = [...A].filter(x => B.has(x)).length;
-      const jac = inter / (A.size + B.size - inter);
-      if (jac >= 0.75) {
-        parent[find(flex[i].name)] = find(flex[j].name);
-        together[flex[i].name + '|' + flex[j].name] = inter;
-      }
-    }
+  for (let i = 0; i < flex.length; i++) for (let j = i + 1; j < flex.length; j++) {
+    const A = deckSet[flex[i].name], B = deckSet[flex[j].name];
+    const inter = [...A].filter(x => B.has(x)).length;
+    const jac = inter / (A.size + B.size - inter);
+    if (jac >= 0.75) parent[find(flex[i].name)] = find(flex[j].name);
   }
   const groups = {};
   flex.forEach(c => { const r = find(c.name); (groups[r] = groups[r] || []).push(c.name); });
@@ -527,39 +510,75 @@ function findPackages(N) {
     const inAll = [...sets[0]].filter(i => sets.every(s => s.has(i))).length;
     return { cards: g, decks: inAll };
   }).sort((a, b) => b.cards.length - a.cards.length);
-  // either/or pairs: both reasonably played, never in the same deck
   const eitherOr = [];
-  for (let i = 0; i < flex.length; i++) {
-    for (let j = i + 1; j < flex.length; j++) {
-      const A = deckSet[flex[i].name], B = deckSet[flex[j].name];
-      if (A.size >= 2 && B.size >= 2 && ![...A].some(x => B.has(x)) && A.size + B.size >= N)
-        eitherOr.push({ a: flex[i].name, na: A.size, b: flex[j].name, nb: B.size });
-    }
+  for (let i = 0; i < flex.length; i++) for (let j = i + 1; j < flex.length; j++) {
+    const A = deckSet[flex[i].name], B = deckSet[flex[j].name];
+    if (A.size >= 2 && B.size >= 2 && ![...A].some(x => B.has(x)) && A.size + B.size >= N)
+      eitherOr.push({ a: flex[i].name, na: A.size, b: flex[j].name, nb: B.size });
   }
   return { packages, eitherOr: eitherOr.slice(0, 6) };
 }
 
-function analyzeCoach() {
-  coachText = document.getElementById('coachInput').value;
-  const out = document.getElementById('coachResults');
-  if (out) out.innerHTML = coachText.trim() ? renderCoach(globalDecks.length) : '';
+/* ---------------- Coach ---------------- */
+function saveCoach() { try { localStorage.setItem('ddl-coach', coachText); } catch (e) {} }
+
+function coachInputChanged() {
+  const ta = document.getElementById('coachInput');
+  coachText = ta.value; saveCoach();
+  clearTimeout(coachTimer);
+  coachTimer = setTimeout(() => {
+    const out = document.getElementById('coachResults');
+    if (out) out.innerHTML = coachText.trim() ? renderCoach(globalDecks.length) : '';
+  }, 350);
 }
 
-// Parse a pasted decklist: "3 Gust", "3x Gust", or "Gust x3", one per line.
+function setCoach(text) {
+  coachText = text; saveCoach();
+  const ta = document.getElementById('coachInput'); if (ta) ta.value = text;
+  const out = document.getElementById('coachResults'); if (out) out.innerHTML = text.trim() ? renderCoach(globalDecks.length) : '';
+}
+
+function coachAddCard() {
+  const inp = document.getElementById('coachAdd');
+  const canon = nameLookup[normName(inp.value)];
+  if (!canon) { toast('Unknown card: ' + inp.value); return; }
+  const rc = rankedCards.find(c => c.name === canon);
+  const copies = rc ? Math.min(rc.copies, 3) : 3;
+  const { counts } = parseDeckText(coachText);
+  counts[canon] = copies;
+  setCoach(normalizeCoach(counts));
+  inp.value = '';
+}
+
+function applyCoachSwap(name, delta) {
+  const { counts } = parseDeckText(coachText);
+  counts[name] = (counts[name] || 0) + delta;
+  if (counts[name] <= 0) delete counts[name];
+  setCoach(normalizeCoach(counts));
+  toast((delta > 0 ? 'Added ' : 'Cut ') + Math.abs(delta) + ' ' + name);
+}
+
+function normalizeCoach(counts) {
+  return Object.entries(counts)
+    .sort((a, b) => {
+      const ra = rankedCards.find(c => c.name === a[0]), rb = rankedCards.find(c => c.name === b[0]);
+      return (rb ? rb.score : 0) - (ra ? ra.score : 0) || a[0].localeCompare(b[0]);
+    })
+    .map(([name, n]) => n + ' ' + name).join('\n');
+}
+
 function parseDeckText(text) {
   const counts = {}, unknown = [], nonMain = [];
   text.split(/\r?\n/).forEach(line => {
     line = line.trim();
     if (!line || line.startsWith('#') || line.startsWith('//')) return;
-    let count = 1, name = line;
-    let m = line.match(/^(\d{1,2})\s*[xX]?\s+(.+)$/);
-    if (m) { count = parseInt(m[1], 10); name = m[2]; }
+    let count = 1, name = line, m;
+    if ((m = line.match(/^(\d{1,2})\s*[xX]?\s+(.+)$/))) { count = parseInt(m[1], 10); name = m[2]; }
     else if ((m = line.match(/^(.+?)\s*[xX]\s*(\d{1,2})$/))) { name = m[1]; count = parseInt(m[2], 10); }
     name = name.trim();
     const canon = nameLookup[normName(name)];
     if (canon && nonMainNames.has(canon)) { nonMain.push(canon); return; }
-    if (canon) name = canon;
-    else unknown.push(name);
+    if (canon) name = canon; else unknown.push(name);
     counts[name] = (counts[name] || 0) + count;
   });
   return { counts, unknown, nonMain };
@@ -571,32 +590,23 @@ function renderCoach(N) {
   const total = myList.reduce((a, c) => a + c.count, 0);
   if (total === 0) return '<div class="coach-warn">Nothing parsed — paste one card per line, like "3 Gust" or "Gust x3".</div>';
   let html = '';
-  if (unknown.length) {
-    html += '<div class="coach-warn">Not seen in any winning deck (typo, or genuinely spicy): ' + unknown.map(escHtml).join(', ') + '</div>';
-  }
-  if (nonMain.length) {
-    html += '<div class="coach-warn">Ignored runes/battlefields (main deck only): ' + nonMain.map(escHtml).join(', ') + '</div>';
-  }
+  if (unknown.length) html += '<div class="coach-warn">Not seen in any winning deck (typo, or genuinely spicy): ' + unknown.map(escHtml).join(', ') + '</div>';
+  if (nonMain.length) html += '<div class="coach-warn">Ignored runes/battlefields (main deck only): ' + nonMain.map(escHtml).join(', ') + '</div>';
 
-  const ranked = globalDecks.map((d, i) => ({ i, label: d.label, dist: deckDistance(myList, d.cards) }))
-                            .sort((a, b) => a.dist - b.dist);
+  const ranked = globalDecks.map((d, i) => ({ i, label: d.label, dist: deckDistance(myList, d.cards) })).sort((a, b) => a.dist - b.dist);
   const missingCore = rankedCards.filter(c => c.decksIn === N && !counts[c.name]);
   html += '<div class="summary-box"><strong>' + total + ' main-deck cards.</strong> Closest winning deck: <strong>' +
     escHtml(ranked[0].label) + '</strong> (' + ranked[0].dist + ' swaps away). ' +
-    (missingCore.length ? 'Missing <strong>' + missingCore.length + '</strong> core card' + (missingCore.length > 1 ? 's' : '') + ' that every winning deck runs.'
-                        : 'Every core card is in your list.') + '</div>';
+    (missingCore.length ? 'Missing <strong>' + missingCore.length + '</strong> core card' + (missingCore.length > 1 ? 's' : '') + ' that every winning deck runs.' : 'Every core card is in your list.') + '</div>';
 
-  html += '<div class="col2"><div>';
-  html += '<div class="cost-head">Distance to each winning deck</div>';
-  ranked.forEach(r => {
-    html += '<div class="card-row"><span class="card-name">' + deckRef(r.i, r.label) + '</span><span class="card-meta">' + r.dist + ' swaps</span></div>';
-  });
+  html += '<div class="col2"><div><div class="cost-head">Distance to each winning deck</div>';
+  ranked.forEach(r => { html += '<div class="card-row"><span class="card-name">' + deckRef(r.i, r.label) + '</span><span class="card-meta">' + r.dist + ' swaps</span></div>'; });
   html += '</div><div>';
   if (missingCore.length) {
     html += '<div class="cost-head">Missing core cards</div>';
     missingCore.forEach(c => {
       html += '<div class="card-row locked" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span class="card-name">' + escHtml(c.name) +
-        '</span><span class="card-meta">every deck runs x' + c.copies + '</span></div>';
+        '</span><span class="card-meta">runs x' + c.copies + '</span><button class="mini" data-apply="' + attr(c.name) + '" data-delta="' + c.copies + '">add</button></div>';
     });
   }
   html += '</div></div>';
@@ -605,16 +615,16 @@ function renderCoach(N) {
   const diff = diffSection(myList, protoList);
   if (diff.removed.length || diff.added.length) {
     html += '<div class="cost-head">Toward the consensus prototype</div>';
-    html += '<p class="sub">Not gospel — the prototype is the weighted field average. Treat red as "justify keeping this" and green as "justify not playing this".</p>';
+    html += '<p class="sub">Not gospel — the prototype is the weighted field average. Click apply to edit your list in place.</p>';
     diff.removed.forEach(c => {
       const s = rankedCards.find(r => r.name === c.name);
       const why = s ? 'in ' + s.decksIn + '/' + N + ' winning decks' : 'in no winning deck';
-      html += '<div class="diff-line diff-del" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>&minus;' + c.n + ' ' + escHtml(c.name) + '</span><span style="margin-left:auto;font-size:11px;opacity:0.7;">' + why + '</span></div>';
+      html += '<div class="diff-line diff-del" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>&minus;' + c.n + ' ' + escHtml(c.name) + '</span><span style="font-size:11px;opacity:0.7;">' + why + '</span><button class="mini" data-apply="' + attr(c.name) + '" data-delta="-' + c.n + '">cut</button></div>';
     });
     diff.added.forEach(c => {
       const s = rankedCards.find(r => r.name === c.name);
       const why = s ? 'in ' + s.decksIn + '/' + N + ' winning decks' : '';
-      html += '<div class="diff-line diff-add" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>+' + c.n + ' ' + escHtml(c.name) + '</span><span style="margin-left:auto;font-size:11px;opacity:0.7;">' + why + '</span></div>';
+      html += '<div class="diff-line diff-add" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>+' + c.n + ' ' + escHtml(c.name) + '</span><span style="font-size:11px;opacity:0.7;">' + why + '</span><button class="mini" data-apply="' + attr(c.name) + '" data-delta="' + c.n + '">add</button></div>';
     });
   } else {
     html += '<div class="summary-box">Your list already matches the consensus prototype exactly.</div>';
@@ -622,44 +632,121 @@ function renderCoach(N) {
   return html;
 }
 
-/* ---------- Shared context ---------- */
+/* ---------------- Filtering ---------------- */
+function regionOf(event) {
+  const e = (event || '').toLowerCase();
+  if (/vancouver|hartford|atlanta|dallas|chicago|toronto|montreal|seattle|boston/.test(e)) return 'NA';
+  if (/utrecht|london|paris|berlin|madrid|milan|lyon|amsterdam/.test(e)) return 'EU';
+  if (/sydney|melbourne|auckland|brisbane|perth/.test(e)) return 'OCE';
+  if (/changsha|tianjin|xian|shanghai|beijing|chengdu|guangzhou|wuhan|s3 regional open/.test(e)) return 'CN';
+  return 'Other';
+}
+
+function computeFullClusters() {
+  const N = allDecks.length;
+  allDecks.forEach(d => { d._region = regionOf(d.event); });
+  if (N < 2) { allDecks.forEach(d => { d._cluster = 0; d._clusterName = 'All'; }); clusterOptions = []; return; }
+  const dist = distanceMatrix(allDecks);
+  const groups = cutClusters(buildDendrogram(dist));
+  const biggest = groups.reduce((a, b) => b.length > a.length ? b : a, groups[0]);
+  clusterOptions = [];
+  groups.forEach((g, gi) => {
+    const name = clusterSignature(g, gi, g === biggest);
+    g.forEach(i => { allDecks[i]._cluster = gi; allDecks[i]._clusterName = name; });
+    clusterOptions.push({ gi, name, n: g.length });
+  });
+}
+
+// Name a cluster by the card most over-represented inside it vs. outside.
+function clusterSignature(group, gi, isBiggest) {
+  const inSet = new Set(group);
+  const cardNames = [...new Set(allDecks.flatMap(d => d.cards.map(c => c.name)))];
+  let best = null, bestLift = 0.34;
+  cardNames.forEach(name => {
+    let inN = 0, outN = 0;
+    allDecks.forEach((d, i) => {
+      const has = d.cards.some(c => c.name === name);
+      if (inSet.has(i)) { if (has) inN++; } else if (has) outN++;
+    });
+    const inFrac = inN / group.length;
+    const outFrac = (allDecks.length - group.length) ? outN / (allDecks.length - group.length) : 0;
+    if (inFrac >= 0.6 && inFrac - outFrac > bestLift) { bestLift = inFrac - outFrac; best = name; }
+  });
+  if (best) return shortName(best) + ' build';
+  return isBiggest ? 'Core build' : 'Variant ' + (gi + 1);
+}
+
+function deckPasses(d) {
+  if (filters.region.size && !filters.region.has(d._region)) return false;
+  if (filters.cluster.size && !filters.cluster.has(d._cluster)) return false;
+  if (filters.placement.size && !filters.placement.has(d.placement)) return false;
+  if (filters.from && (!d.event_date || d.event_date < filters.from)) return false;
+  if (filters.to && (!d.event_date || d.event_date > filters.to)) return false;
+  return true;
+}
+
+function toggleFilter(key, val) {
+  const s = filters[key];
+  if (s.has(val)) s.delete(val); else s.add(val);
+  applyFilters();
+}
+function setDateFilter(which, val) { filters[which] = val; applyFilters(); }
+function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '' }; applyFilters(); }
+
+function applyFilters() {
+  globalDecks = allDecks.filter(deckPasses);
+  rankedCards = computeStats(globalDecks);
+  buildInitialProto(globalDecks.length);
+  if (diffA >= globalDecks.length) diffA = 0;
+  if (diffB >= globalDecks.length) diffB = Math.min(1, Math.max(0, globalDecks.length - 1));
+  render();
+}
+
+function renderFilterBar() {
+  const regions = REGION_ORDER.filter(r => allDecks.some(d => d._region === r));
+  const placements = [...new Set(allDecks.map(d => d.placement))];
+  const dates = [...new Set(allDecks.map(d => d.event_date).filter(Boolean))].sort();
+  const chip = (key, val, label) => '<span class="chip' + (filters[key].has(val) ? ' on' : '') + '" onclick="toggleFilter(\'' + key + '\',' + (typeof val === 'number' ? val : "'" + String(val).replace(/'/g, "\\'") + "'") + ')">' + escHtml(label) + '</span>';
+  let html = '<div class="filterbar">';
+  html += '<div class="fgroup"><span class="flabel">Region</span>' + regions.map(r => chip('region', r, r)).join('') + '</div>';
+  if (clusterOptions.length > 1)
+    html += '<div class="fgroup"><span class="flabel">Sub-archetype</span>' + clusterOptions.map(c => chip('cluster', c.gi, c.name + ' (' + c.n + ')')).join('') + '</div>';
+  html += '<div class="fgroup"><span class="flabel">Placement</span>' + placements.map(p => chip('placement', p, p)).join('') + '</div>';
+  if (dates.length > 1) {
+    const opt = (sel) => '<option value=""' + (sel === '' ? ' selected' : '') + '>Any</option>' + dates.map(d => '<option value="' + d + '"' + (sel === d ? ' selected' : '') + '>' + d + '</option>').join('');
+    html += '<div class="fgroup fdate"><span class="flabel">Dates</span>From <select onchange="setDateFilter(\'from\',this.value)">' + opt(filters.from) + '</select> to <select onchange="setDateFilter(\'to\',this.value)">' + opt(filters.to) + '</select></div>';
+  }
+  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to;
+  html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + allDecks.length + ' decks</span>' +
+    (anyOn ? '<button onclick="clearFilters()">Reset filters</button>' : '') + '</div>';
+  html += '</div>';
+  return html;
+}
+
+/* ---------------- Shared context ---------------- */
 function computeContext() {
   const N = globalDecks.length;
-  const distances = Array(N).fill(0).map(() => Array(N).fill(0));
-  const avgDistances = Array(N).fill(0);
-  for (let i = 0; i < N; i++) {
-    let totalDist = 0;
-    for (let j = 0; j < N; j++) {
-      if (i === j) continue;
-      distances[i][j] = deckDistance(globalDecks[i].cards, globalDecks[j].cards);
-      totalDist += distances[i][j];
-    }
-    avgDistances[i] = totalDist / (N - 1);
-  }
+  if (N < 2) return { N, distances: [], avgDistances: [] };
+  const distances = distanceMatrix(globalDecks);
+  const avgDistances = distances.map(row => row.reduce((a, b) => a + b, 0) / (N - 1));
   return { N, distances, avgDistances };
 }
 
-/* ---------- BUILD view ---------- */
+/* ---------------- BUILD ---------------- */
 function renderBuild(ctx) {
   const N = ctx.N;
   let html = '';
   const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
-
-  html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards)</h2>';
-  html += '<button onclick="copyDecklist()">Copy decklist</button></div>';
+  html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards)</h2><button onclick="copyDecklist()">Copy decklist</button></div>';
   html += '<p class="sub">Click a flex card to remove it. Cards ranked by weighted score. <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot. Hover any card for a preview.</p>';
-
   currentProto.forEach(c => {
     const cls = c.locked ? 'locked' : 'flex';
     const tag = c.locked ? '<span class="pill pill-lock">locked</span>' : '<span class="pill pill-flex">flex ' + c.decksIn + '/' + N + '</span>';
     const removeBtn = c.locked ? '' : '<span class="interactive-remove" onclick="removeCard(\'' + c.name.replace(/'/g, "\\'") + '\')" title="Remove">&times;</span>';
     html += '<div class="card-row ' + cls + '" data-card="' + attr(c.name) + '">' + cardImg(c.name) +
-      '<span class="card-name">' + escHtml(c.name) + tag + '</span>' +
-      '<span class="card-meta">score ' + c.score.toFixed(1) + '</span>' +
-      '<span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
+      '<span class="card-name">' + escHtml(c.name) + tag + '</span><span class="card-meta">score ' + c.score.toFixed(1) + '</span><span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
   });
 
-  // Runes & battlefields
   let runeCounts = {}, bfCounts = {};
   globalDecks.forEach(d => {
     if (d.runes) d.runes.forEach(r => { runeCounts[r.name] = (runeCounts[r.name] || 0) + 1; });
@@ -667,201 +754,149 @@ function renderBuild(ctx) {
   });
   const sortedRunes = Object.entries(runeCounts).sort((a, b) => b[1] - a[1]).map(e => e[0]).slice(0, 2);
   const sortedBfs = Object.entries(bfCounts).sort((a, b) => b[1] - a[1]).map(e => e[0]).slice(0, 3);
-  html += '<h2>Runes &amp; battlefields</h2>';
-  html += '<div class="summary-box">Most common runes: <strong>' + (sortedRunes.join(", ") || "N/A") + '</strong>. Battlefields: <strong>' + (sortedBfs.join(", ") || "N/A") + '</strong>.</div>';
+  html += '<h2>Runes &amp; battlefields</h2><div class="summary-box">Most common runes: <strong>' + (sortedRunes.join(", ") || "N/A") + '</strong>. Battlefields: <strong>' + (sortedBfs.join(", ") || "N/A") + '</strong>.</div>';
 
-  // Alternative flex cards
-  const currentProtoNames = new Set(currentProto.map(c => c.name));
-  const flexCards = rankedCards.filter(c => c.decksIn < N && c.decksIn >= 1 && !currentProtoNames.has(c.name));
-  html += '<h2>Alternative flex cards (' + flexCards.length + ')</h2>';
-  html += '<p class="sub">Click to add to the prototype (auto-removes the lowest-scoring flex card to make room).</p>';
+  const protoNames = new Set(currentProto.map(c => c.name));
+  const flexCards = rankedCards.filter(c => c.decksIn < N && c.decksIn >= 1 && !protoNames.has(c.name));
+  html += '<h2>Alternative flex cards (' + flexCards.length + ')</h2><p class="sub">Click to add to the prototype (auto-removes the lowest-scoring flex card to make room).</p>';
   flexCards.slice(0, 20).forEach(c => {
     html += '<div class="card-row flex interactive-flex" data-card="' + attr(c.name) + '" onclick="addCard(\'' + c.name.replace(/'/g, "\\'") + '\')">' + cardImg(c.name) +
-      '<span class="card-name">' + escHtml(c.name) + '</span>' +
-      '<span class="card-meta">in ' + c.decksIn + '/' + N + ' decks · score ' + c.score.toFixed(1) + '</span><span class="count-badge">+</span></div>';
+      '<span class="card-name">' + escHtml(c.name) + '</span><span class="card-meta">in ' + c.decksIn + '/' + N + ' decks · score ' + c.score.toFixed(1) + '</span><span class="count-badge">+</span></div>';
   });
 
-  // Coach
-  html += '<h2>Rate my deck</h2>';
-  html += '<p class="sub">Paste your main deck (one card per line: "3 Gust", "3x Gust", or "Gust x3") to see how far you are from each winning list, which core cards you\'re missing, and the swaps toward the consensus build.</p>';
-  html += '<textarea id="coachInput" placeholder="3 Gust&#10;3 Stacked Deck&#10;2 Moonfall&#10;...">' + escHtml(coachText) + '</textarea><br>';
-  html += '<div style="margin-top:10px;"><button onclick="analyzeCoach()">Analyze my deck</button></div>';
+  html += '<h2>Rate my deck</h2><p class="sub">Paste your main deck (one card per line: "3 Gust", "3x Gust", or "Gust x3"). Analysis updates as you type — your list is saved in this browser.</p>';
+  html += '<textarea id="coachInput" oninput="coachInputChanged()" placeholder="3 Gust&#10;3 Stacked Deck&#10;2 Moonfall&#10;...">' + escHtml(coachText) + '</textarea>';
+  html += '<div class="coach-tools"><input id="coachAdd" list="cardNames" placeholder="add a card by name…" onkeydown="if(event.key===\'Enter\')coachAddCard()"><button onclick="coachAddCard()">Add</button></div>';
   html += '<div id="coachResults">' + (coachText.trim() ? renderCoach(N) : '') + '</div>';
   return html;
 }
 
-/* ---------- ANALYZE view ---------- */
+/* ---------------- ANALYZE ---------------- */
 function renderAnalyze(ctx) {
   const N = ctx.N;
   let html = '';
 
-  // Card inclusion table
-  html += '<h2>Card inclusion across winning decks</h2>';
-  html += '<p class="sub">Every card seen in the field: how many decks run it, at what counts. A card at 100% with a split copy count is a different decision than a true flex slot.</p>';
+  html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the field: how many decks run it, at what counts. A card at 100% with a split copy count is a different decision than a true flex slot.</p>';
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th></tr></thead><tbody>';
-  const byInclusion = [...rankedCards].sort((a, b) => b.decksIn - a.decksIn || b.score - a.score);
-  byInclusion.forEach(c => {
+  [...rankedCards].sort((a, b) => b.decksIn - a.decksIn || b.score - a.score).forEach(c => {
     const meta = cardMeta[c.name] || {};
     const pct = Math.round(100 * c.decksIn / N);
-    const distBadges = Object.entries(c.dist).sort((a, b) => b[0] - a[0])
-      .map(([copies, nDecks]) => '<span class="dist-badge">x' + copies + ' in ' + nDecks + (nDecks > 1 ? ' decks' : ' deck') + '</span>').join('');
-    html += '<tr data-card="' + attr(c.name) + '"><td>' + cardImg(c.name) + escHtml(c.name) + '</td>' +
-      '<td>' + (meta.cost != null ? meta.cost : '—') + '</td>' +
-      '<td>' + (meta.type || '—') + '</td>' +
-      '<td><span class="incl-bar" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + c.decksIn + '/' + N + ' (' + pct + '%)</td>' +
-      '<td class="num">' + c.avgCopies.toFixed(1) + '</td>' +
-      '<td>' + distBadges + '</td></tr>';
+    const distBadges = Object.entries(c.dist).sort((a, b) => b[0] - a[0]).map(([copies, nD]) => '<span class="dist-badge">x' + copies + ' in ' + nD + (nD > 1 ? ' decks' : ' deck') + '</span>').join('');
+    html += '<tr data-card="' + attr(c.name) + '"><td>' + cardImg(c.name) + escHtml(c.name) + '</td><td>' + (meta.cost != null ? meta.cost : '—') + '</td><td>' + (meta.type || '—') +
+      '</td><td><span class="incl-bar" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + c.decksIn + '/' + N + ' (' + pct + '%)</td><td class="num">' + c.avgCopies.toFixed(1) + '</td><td>' + distBadges + '</td></tr>';
   });
   html += '</tbody></table></div>';
 
-  // Card packages
   const { packages, eitherOr } = findPackages(N);
-  html += '<h2>Card packages</h2>';
-  html += '<p class="sub">Flex cards that travel together across the winning lists — the real deck-building choice is usually between packages, not single cards.</p>';
-  if (packages.length === 0) {
-    html += '<div class="pkg-box">No strong packages detected yet — add more decks to sharpen the signal.</div>';
-  }
+  html += '<h2>Card packages</h2><p class="sub">Flex cards that travel together across the winning lists — the real deck-building choice is usually between packages, not single cards.</p>';
+  if (!packages.length) html += '<div class="pkg-box">No strong packages detected yet — add more decks (or loosen the filters) to sharpen the signal.</div>';
   packages.forEach(p => {
-    html += '<div class="pkg-box">' +
-      p.cards.map(n => '<span class="pkg-chip" data-card="' + attr(n) + '">' + cardImg(n) + escHtml(n) + '</span>').join('') +
-      '<span style="color:var(--muted); margin-left:6px;">together in ' + p.decks + '/' + N + ' decks</span></div>';
+    html += '<div class="pkg-box">' + p.cards.map(n => '<span class="pkg-chip" data-card="' + attr(n) + '">' + cardImg(n) + escHtml(n) + '</span>').join('') + '<span style="color:var(--muted); margin-left:6px;">together in ' + p.decks + '/' + N + ' decks</span></div>';
   });
-  if (eitherOr.length) {
-    html += '<div class="pkg-box"><strong>Either/or slots</strong> (both played, never together):<br>' +
-      eitherOr.map(p => escHtml(p.a) + ' (' + p.na + ' decks) vs ' + escHtml(p.b) + ' (' + p.nb + ' decks)').join('<br>') + '</div>';
-  }
+  if (eitherOr.length) html += '<div class="pkg-box"><strong>Either/or slots</strong> (both played, never together):<br>' + eitherOr.map(p => escHtml(p.a) + ' (' + p.na + ') vs ' + escHtml(p.b) + ' (' + p.nb + ')').join('<br>') + '</div>';
 
   // Energy curve
-  html += '<h2>Energy curve</h2>';
-  html += '<p class="sub">Main-deck cards per energy cost. Thin lines are individual decks; the bold line is the placement-weighted field average. Winners can disagree on card names while agreeing on curve shape.</p>';
+  html += '<h2>Energy curve</h2><p class="sub">Main-deck cards per energy cost. Thin lines are individual decks (hover a point for the value, or a legend entry to isolate); the bold line is the placement-weighted field average.</p>';
   const maxCost = 8;
   const curves = globalDecks.map(d => {
     const h = Array(maxCost + 1).fill(0);
-    d.cards.forEach(c => {
-      const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? Math.min(cardMeta[c.name].cost, maxCost) : null;
-      if (cost !== null) h[cost] += c.count;
-    });
+    d.cards.forEach(c => { const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? Math.min(cardMeta[c.name].cost, maxCost) : null; if (cost !== null) h[cost] += c.count; });
     return h;
   });
   const totalW = globalDecks.reduce((a, d) => a + (d.weight || 1), 0);
   const avgCurve = Array(maxCost + 1).fill(0);
   globalDecks.forEach((d, i) => curves[i].forEach((v, c) => avgCurve[c] += v * (d.weight || 1) / totalW));
-  const costMax = Math.max(...curves.flat(), ...avgCurve);
+  const costMax = Math.max(1, ...curves.flat(), ...avgCurve);
   {
     const W = 660, H = 220, mL = 34, mB = 26, mT = 12, mR = 12;
     const pw = W - mL - mR, ph = H - mT - mB;
-    const x = c => mL + c / maxCost * pw;
-    const y = v => mT + ph - v / costMax * ph;
+    const x = c => mL + c / maxCost * pw, y = v => mT + ph - v / costMax * ph;
     let parts = [];
     for (let v = 0; v <= costMax; v += Math.max(1, Math.ceil(costMax / 4))) {
       parts.push('<line class="grid" x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '"/>');
       parts.push('<text class="axis" x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" text-anchor="end">' + v + '</text>');
     }
-    for (let c = 0; c <= maxCost; c++) {
-      parts.push('<text class="axis" x="' + x(c) + '" y="' + (H - 8) + '" font-size="11" text-anchor="middle">' + (c === maxCost ? c + '+' : c) + '</text>');
-    }
+    for (let c = 0; c <= maxCost; c++) parts.push('<text class="axis" x="' + x(c) + '" y="' + (H - 8) + '" font-size="11" text-anchor="middle">' + (c === maxCost ? c + '+' : c) + '</text>');
     curves.forEach((h, i) => {
-      const pts = h.map((v, c) => x(c) + ',' + y(v)).join(' ');
-      parts.push('<polyline points="' + pts + '" fill="none" stroke="' + PALETTE[i % PALETTE.length] + '" stroke-width="1.5" opacity="0.5"/>');
+      parts.push('<polyline class="series" data-series="' + i + '" points="' + h.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke="' + PALETTE[i % PALETTE.length] + '" stroke-width="1.5" opacity="0.5"/>');
+      h.forEach((v, c) => parts.push('<circle class="series pt" data-series="' + i + '" data-tip="' + attr(globalDecks[i].label + ' — cost ' + (c === maxCost ? c + '+' : c) + ': ' + v + ' cards') + '" cx="' + x(c) + '" cy="' + y(v) + '" r="3" fill="' + PALETTE[i % PALETTE.length] + '" opacity="0.6"/>'));
     });
     parts.push('<polyline class="avg" points="' + avgCurve.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke-width="3"/>');
-    html += '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
-    html += '<div class="legend">' + globalDecks.map((d, i) =>
-      '<span class="legend-chip" data-deck="' + i + '"><span class="legend-swatch" style="background:' + PALETTE[i % PALETTE.length] + '"></span>#' + (i + 1) + ' ' + escHtml(d.label) + '</span>').join('') + '</div>';
+    html += '<svg id="curveSvg" class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+    html += '<div class="legend">' + globalDecks.map((d, i) => '<span class="legend-chip" data-deck="' + i + '" data-hl="#curveSvg|' + i + '"><span class="legend-swatch" style="background:' + PALETTE[i % PALETTE.length] + '"></span>#' + (i + 1) + ' ' + escHtml(d.label) + '</span>').join('') + '</div>';
   }
   // Type ratios
   html += '<div class="panel-wrap" style="margin-top:12px;"><table class="incl"><thead><tr><th>Deck</th><th class="num">Units</th><th class="num">Spells</th><th class="num">Gear</th><th class="num">Avg cost</th></tr></thead><tbody>';
   globalDecks.forEach((d, i) => {
-    const t = { Unit: 0, Spell: 0, Gear: 0 };
-    let costSum = 0, costN = 0;
-    d.cards.forEach(c => {
-      const m = cardMeta[c.name] || {};
-      if (t[m.type] !== undefined) t[m.type] += c.count;
-      if (m.cost != null) { costSum += m.cost * c.count; costN += c.count; }
-    });
-    html += '<tr><td>' + deckRef(i, d.label) + '</td><td class="num">' + t.Unit + '</td><td class="num">' + t.Spell +
-      '</td><td class="num">' + t.Gear + '</td><td class="num">' + (costN ? (costSum / costN).toFixed(2) : '—') + '</td></tr>';
+    const t = { Unit: 0, Spell: 0, Gear: 0 }; let costSum = 0, costN = 0;
+    d.cards.forEach(c => { const m = cardMeta[c.name] || {}; if (t[m.type] !== undefined) t[m.type] += c.count; if (m.cost != null) { costSum += m.cost * c.count; costN += c.count; } });
+    html += '<tr><td>' + deckRef(i, d.label) + '</td><td class="num">' + t.Unit + '</td><td class="num">' + t.Spell + '</td><td class="num">' + t.Gear + '</td><td class="num">' + (costN ? (costSum / costN).toFixed(2) : '—') + '</td></tr>';
   });
   html += '</tbody></table></div>';
 
-  // Sub-archetype clustering
-  html += '<h2>Sub-archetype clustering</h2>';
-  html += '<p class="sub">Hierarchical clustering of the swap-distance matrix (average linkage). Decks that merge early are near-copies; a late merge marks a genuine split in how the archetype is built. Numbers on the tree are the swap distances at each merge. Click a deck name to open its list.</p>';
-  const root = buildDendrogram(ctx.distances);
-  const groups = cutClusters(root);
-  const clusterOf = {};
-  groups.forEach((g, gi) => g.forEach(i => clusterOf[i] = gi));
-  if (groups.length > 1) {
-    html += '<div class="summary-box"><strong>' + groups.length + ' sub-archetypes detected:</strong> ' +
-      groups.map((g, gi) => '<span style="color:' + PALETTE[gi % PALETTE.length] + '">' +
-        g.map(i => deckRef(i, globalDecks[i].label)).join(', ') + '</span>').join(' &nbsp;|&nbsp; ') +
-      '. Averaging across a split can build a deck nobody would play — check which branch your list belongs to.</div>';
-  } else {
-    html += '<div class="summary-box">One coherent archetype — no meaningful split in how the field builds this deck.</div>';
+  // Clustering
+  html += '<h2>Sub-archetype clustering</h2><p class="sub">Hierarchical clustering of the swap-distance matrix (average linkage). A late merge marks a genuine split in how the archetype is built. Hover a deck name to isolate its curve above; click it to open its list.</p>';
+  if (N < 2) { html += '<div class="summary-box">Need at least two decks in the filter to cluster.</div>'; }
+  else {
+    const root = buildDendrogram(ctx.distances);
+    const groups = cutClusters(root);
+    const clusterOf = {};
+    groups.forEach((g, gi) => g.forEach(i => clusterOf[i] = gi));
+    if (groups.length > 1) {
+      html += '<div class="summary-box"><strong>' + groups.length + ' sub-archetypes in this set:</strong> ' +
+        groups.map((g, gi) => '<span style="color:' + PALETTE[gi % PALETTE.length] + '">' + g.map(i => deckRef(i, globalDecks[i].label)).join(', ') + '</span>').join(' &nbsp;|&nbsp; ') + '.</div>';
+    } else html += '<div class="summary-box">One coherent archetype — no meaningful split in this set.</div>';
+    html += renderDendrogramSVG(root, globalDecks.map(d => d.label), clusterOf);
   }
-  html += renderDendrogramSVG(root, globalDecks.map(d => d.label), clusterOf);
 
-  // Inclusion timeline
-  html += '<h2>Card inclusion over time</h2>';
-  html += '<p class="sub">Inclusion rate of the top contested cards by event date — rising and falling stock across the season. Sparse for now; every added event sharpens it.</p>';
+  // Timeline
+  html += '<h2>Card inclusion over time</h2><p class="sub">Inclusion rate of the top contested cards by event date. Hover a point to see which decks ran it.</p>';
   {
     const byDate = {};
     globalDecks.forEach((d, i) => { if (d.event_date) (byDate[d.event_date] = byDate[d.event_date] || []).push(i); });
     const dates = Object.keys(byDate).sort();
-    if (dates.length < 2) {
-      html += '<div class="summary-box">Not enough distinct event dates yet — the timeline needs decks from at least two events.</div>';
-    } else {
+    if (dates.length < 2) html += '<div class="summary-box">Not enough distinct event dates in this set — the timeline needs at least two.</div>';
+    else {
       const topFlex = rankedCards.filter(c => c.decksIn < N).slice(0, 8);
       const t0 = new Date(dates[0]).getTime(), t1 = new Date(dates[dates.length - 1]).getTime();
       const W = 660, H = 240, mL = 40, mB = 30, mT = 12, mR = 16;
       const pw = W - mL - mR, ph = H - mT - mB;
-      const x = ds => mL + (new Date(ds).getTime() - t0) / (t1 - t0) * pw;
-      const y = pct => mT + ph - pct / 100 * ph;
+      const x = ds => mL + (t1 === t0 ? pw / 2 : (new Date(ds).getTime() - t0) / (t1 - t0) * pw), y = pct => mT + ph - pct / 100 * ph;
       let parts = [];
-      [0, 50, 100].forEach(v => {
-        parts.push('<line class="grid" x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '"/>');
-        parts.push('<text class="axis" x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" text-anchor="end">' + v + '%</text>');
-      });
-      dates.forEach(ds => {
-        const label = new Date(ds).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-        parts.push('<text class="axis" x="' + x(ds) + '" y="' + (H - 10) + '" font-size="11" text-anchor="middle">' + label + '</text>');
-      });
+      [0, 50, 100].forEach(v => { parts.push('<line class="grid" x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '"/>'); parts.push('<text class="axis" x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" text-anchor="end">' + v + '%</text>'); });
+      dates.forEach(ds => parts.push('<text class="axis" x="' + x(ds) + '" y="' + (H - 10) + '" font-size="11" text-anchor="middle">' + new Date(ds).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) + '</text>'));
       topFlex.forEach((c, ci) => {
         const color = PALETTE[ci % PALETTE.length];
         const pts = dates.map(ds => {
           const idxs = byDate[ds];
-          const pct = 100 * idxs.filter(i => globalDecks[i].cards.some(x => x.name === c.name)).length / idxs.length;
-          return { x: x(ds), y: y(pct) };
+          const runners = idxs.filter(i => globalDecks[i].cards.some(x => x.name === c.name));
+          const pct = Math.round(100 * runners.length / idxs.length);
+          return { x: x(ds), y: y(pct), pct, ds, runners: runners.map(i => globalDecks[i].label) };
         });
-        parts.push('<polyline points="' + pts.map(p => p.x + ',' + p.y).join(' ') + '" fill="none" stroke="' + color + '" stroke-width="2" opacity="0.85"/>');
-        pts.forEach(p => parts.push('<circle cx="' + p.x + '" cy="' + p.y + '" r="3" fill="' + color + '"/>'));
+        parts.push('<polyline class="series" data-series="' + ci + '" points="' + pts.map(p => p.x + ',' + p.y).join(' ') + '" fill="none" stroke="' + color + '" stroke-width="2" opacity="0.85"/>');
+        pts.forEach(p => parts.push('<circle class="series pt" data-series="' + ci + '" data-tip="' + attr(c.name + ' — ' + p.ds + ': ' + p.pct + '% (' + (p.runners.join(', ') || 'none') + ')') + '" cx="' + p.x + '" cy="' + p.y + '" r="3.5" fill="' + color + '"/>'));
       });
-      html += '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
-      html += '<div class="legend">' + topFlex.map((c, ci) =>
-        '<span class="legend-chip" data-card="' + attr(c.name) + '"><span class="legend-swatch" style="background:' + PALETTE[ci % PALETTE.length] + '"></span>' + escHtml(c.name) + '</span>').join('') + '</div>';
+      html += '<svg id="timeSvg" class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+      html += '<div class="legend">' + topFlex.map((c, ci) => '<span class="legend-chip" data-card="' + attr(c.name) + '" data-hl="#timeSvg|' + ci + '"><span class="legend-swatch" style="background:' + PALETTE[ci % PALETTE.length] + '"></span>' + escHtml(c.name) + '</span>').join('') + '</div>';
     }
   }
   return html;
 }
 
-/* ---------- COMPARE view ---------- */
+/* ---------------- COMPARE ---------------- */
 function renderCompare(ctx) {
-  const N = ctx.N, distances = ctx.distances, avgDistances = ctx.avgDistances;
-  let html = '';
-
-  html += '<h2>Deck diff</h2>';
-  html += '<p class="sub">Git-style comparison of any two lists: red cards leave deck A, green cards come in for deck B.</p>';
+  const N = ctx.N;
+  if (N < 2) return '<div class="summary-box">Need at least two decks in the filter to compare. <span class="deck-link" onclick="clearFilters()">Reset filters</span>.</div>';
+  const distances = ctx.distances, avgDistances = ctx.avgDistances;
+  let html = '<h2>Deck diff</h2><p class="sub">Git-style comparison of any two lists: red cards leave deck A, green cards come in for deck B.</p>';
   html += '<div class="diff-controls"><select id="diffA" onchange="setDiff()">';
   globalDecks.forEach((d, i) => { html += '<option value="' + i + '"' + (i === diffA ? ' selected' : '') + '>' + attr(d.label) + '</option>'; });
   html += '</select><span style="color:var(--muted)">vs</span><select id="diffB" onchange="setDiff()">';
   globalDecks.forEach((d, i) => { html += '<option value="' + i + '"' + (i === diffB ? ' selected' : '') + '>' + attr(d.label) + '</option>'; });
-  html += '</select></div>';
-  html += renderDiff(globalDecks[diffA], globalDecks[diffB]);
+  html += '</select></div>' + renderDiff(globalDecks[diffA], globalDecks[diffB]);
 
-  html += '<h2>Swap-distance analysis</h2>';
-  html += '<p class="sub">"Swap distance" is the number of cards you need to change to turn one deck into another. Lower average distance means the deck is closer to the consensus archetype.</p>';
-  const rankedDecks = globalDecks.map((d, i) => ({ i, label: d.label, avgDist: avgDistances[i] }))
-                                 .sort((a, b) => a.avgDist - b.avgDist);
+  html += '<h2>Swap-distance analysis</h2><p class="sub">"Swap distance" is the number of cards you need to change to turn one deck into another. Lower average means closer to the consensus. Hover a matrix cell for the pair.</p>';
+  const rankedDecks = globalDecks.map((d, i) => ({ i, label: d.label, avgDist: avgDistances[i] })).sort((a, b) => a.avgDist - b.avgDist);
   html += '<div class="summary-box"><strong>Closest to the field (most representative):</strong><ol style="margin:8px 0 0 20px; padding:0;">';
   rankedDecks.forEach(d => { html += '<li>' + deckRef(d.i, d.label) + ' (avg ' + d.avgDist.toFixed(1) + ' swaps)</li>'; });
   html += '</ol></div>';
@@ -876,9 +911,8 @@ function renderCompare(ctx) {
       else {
         const dVal = distances[i][j];
         let color = 'var(--text)';
-        if (dVal <= 3) color = 'var(--lock)';
-        else if (dVal >= 10) color = 'var(--danger)';
-        html += '<td style="color:' + color + '; font-weight:' + (dVal <= 3 ? 'bold' : 'normal') + '">' + dVal + '</td>';
+        if (dVal <= 3) color = 'var(--lock)'; else if (dVal >= 10) color = 'var(--danger)';
+        html += '<td data-tip="' + attr(globalDecks[i].label + ' vs ' + globalDecks[j].label + ': ' + dVal + ' swaps') + '" style="color:' + color + '; font-weight:' + (dVal <= 3 ? 'bold' : 'normal') + '">' + dVal + '</td>';
       }
     }
     html += '</tr>';
@@ -887,132 +921,118 @@ function renderCompare(ctx) {
   return html;
 }
 
-/* ---------- DECKS view ---------- */
+/* ---------------- DECKS ---------------- */
 function renderDecks(ctx) {
-  let html = '<h2>Source decks (' + ctx.N + ')</h2>';
-  html += '<p class="sub">Every tournament list feeding the analysis. Click a deck to open its full decklist.</p>';
+  let html = '<h2>Source decks (' + ctx.N + ')</h2><p class="sub">Every tournament list in the filtered set. Click a deck to open its full decklist.</p>';
   globalDecks.forEach((d, i) => {
     const cardTotal = d.cards.reduce((a, c) => a + c.count, 0);
-    html += '<div class="deck-tile" data-deck="' + i + '"><div class="dt-main">' +
-      '<div class="dt-title"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.label) + '</div>' +
-      '<div class="dt-sub">' + escHtml(d.event || '') + (d.event_date ? ' · ' + d.event_date : '') + ' · weight ' + (d.weight || 1) + ' · ' + cardTotal + ' cards</div>' +
-      '</div><div class="dt-open">›</div></div>';
+    html += '<div class="deck-tile" data-deck="' + i + '"><div class="dt-main"><div class="dt-title"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.label) + '</div>' +
+      '<div class="dt-sub">' + escHtml(d.event || '') + (d._region ? ' · ' + d._region : '') + (d.event_date ? ' · ' + d.event_date : '') + ' · ' + (d._clusterName || '') + ' · ' + cardTotal + ' cards</div></div><div class="dt-open">›</div></div>';
   });
   return html;
 }
 
-/* ---------- Modal ---------- */
+/* ---------------- Modal ---------------- */
 function openDeckModal(i) {
   const d = globalDecks[i];
+  if (!d) return;
   const buckets = {};
-  d.cards.forEach(c => {
-    const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? cardMeta[c.name].cost : '?';
-    (buckets[cost] = buckets[cost] || []).push(c);
-  });
+  d.cards.forEach(c => { const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? cardMeta[c.name].cost : '?'; (buckets[cost] = buckets[cost] || []).push(c); });
   const costKeys = Object.keys(buckets).sort((a, b) => (a === '?' ? 99 : +a) - (b === '?' ? 99 : +b));
   let body = '';
   costKeys.forEach(k => {
     body += '<div class="cost-group"><div class="cost-head">' + (k === '?' ? 'Other' : 'Cost ' + k) + '</div>';
-    buckets[k].sort((a, b) => a.name.localeCompare(b.name)).forEach(c => {
-      body += '<span class="mcard" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>' + escHtml(c.name) + '</span><span class="mcard-c">x' + c.count + '</span></span>';
-    });
+    buckets[k].sort((a, b) => a.name.localeCompare(b.name)).forEach(c => { body += '<span class="mcard" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>' + escHtml(c.name) + '</span><span class="mcard-c">x' + c.count + '</span></span>'; });
     body += '</div>';
   });
   let extra = '';
-  if (d.runes && d.runes.length) {
-    extra += '<div class="cost-head">Runes</div>' + d.runes.map(r => '<span class="pkg-chip" data-card="' + attr(r.name) + '">' + cardImg(r.name) + escHtml(r.name) + ' x' + r.count + '</span>').join('');
-  }
-  if (d.battlefields && d.battlefields.length) {
-    extra += '<div class="cost-head">Battlefields</div>' + d.battlefields.map(b => '<span class="pkg-chip" data-card="' + attr(b.name) + '">' + cardImg(b.name) + escHtml(b.name) + '</span>').join('');
-  }
+  if (d.runes && d.runes.length) extra += '<div class="cost-head">Runes</div>' + d.runes.map(r => '<span class="pkg-chip" data-card="' + attr(r.name) + '">' + cardImg(r.name) + escHtml(r.name) + ' x' + r.count + '</span>').join('');
+  if (d.battlefields && d.battlefields.length) extra += '<div class="cost-head">Battlefields</div>' + d.battlefields.map(b => '<span class="pkg-chip" data-card="' + attr(b.name) + '">' + cardImg(b.name) + escHtml(b.name) + '</span>').join('');
   const total = d.cards.reduce((a, c) => a + c.count, 0);
   let opts = '<option value="proto">Prototype (consensus)</option>';
   globalDecks.forEach((o, j) => { if (j !== i) opts += '<option value="' + j + '">' + attr(o.label) + '</option>'; });
-
   const inner =
     '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
-      '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') + '</div></div>' +
-      '<button class="icon-btn" onclick="closeModal()">✕</button></div>' +
-    '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button>' +
-      '<span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
-    '<div id="modalDiffOut"></div>' +
-    '<div class="modal-cards">' + body + extra + '</div>';
+      '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
+    '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
+    '<div id="modalDiffOut"></div><div class="modal-cards">' + body + extra + '</div>';
   const modal = document.getElementById('modal');
   modal.querySelector('.modal').innerHTML = inner;
   modal.classList.add('show');
 }
-
 function modalDiff(i) {
   const sel = document.getElementById('modalCmp').value;
   const out = document.getElementById('modalDiffOut');
   if (sel === '') { out.innerHTML = ''; return; }
   const d = globalDecks[i];
-  let other;
-  if (sel === 'proto') other = { cards: currentProto.map(c => ({ name: c.name, count: c.copies })), runes: [], battlefields: [], label: 'Prototype' };
-  else other = globalDecks[+sel];
+  const other = sel === 'proto' ? { cards: currentProto.map(c => ({ name: c.name, count: c.copies })), runes: [], battlefields: [], label: 'Prototype' } : globalDecks[+sel];
   out.innerHTML = '<div class="modal-diff">' + renderDiff(d, other) + '</div>';
 }
-
-function copyDeck(i) {
-  const d = globalDecks[i];
-  const text = d.cards.map(c => c.count + 'x ' + c.name).join('\n');
-  navigator.clipboard.writeText(text).then(() => toast('Copied ' + d.label)).catch(() => {});
-}
-
+function copyDeck(i) { const d = globalDecks[i]; navigator.clipboard.writeText(d.cards.map(c => c.count + 'x ' + c.name).join('\n')).then(() => toast('Copied ' + d.label)).catch(() => {}); }
 function closeModal() { document.getElementById('modal').classList.remove('show'); }
+function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 1800); }
 
-function toast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 1800);
-}
-
-/* ---------- Router / theme ---------- */
+/* ---------------- Render / router ---------------- */
 function render() {
-  if (!globalDecks.length) return;
-  // preserve any typed-but-unanalyzed coach text across re-renders
-  const ci = document.getElementById('coachInput');
-  if (ci) coachText = ci.value;
-  const ctx = computeContext();
+  if (!allDecks.length) return;
+  const ci = document.getElementById('coachInput'); if (ci) coachText = ci.value;
   const view = VIEWS[currentView] || VIEWS.build;
-  document.getElementById('content').innerHTML =
-    '<div class="view-head"><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(view.desc) + '</p></div>' + view.render(ctx);
+  let html = '<div class="view-head"><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(view.desc) + '</p></div>';
+  html += renderFilterBar();
+  if (!globalDecks.length) html += '<div class="empty">No decks match the current filters. <span class="deck-link" onclick="clearFilters()">Reset filters</span>.</div>';
+  else html += view.render(computeContext());
+  document.getElementById('content').innerHTML = html;
   document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.view === currentView));
-  document.getElementById('deckCount').textContent = globalDecks.length + ' decks loaded';
+  document.getElementById('deckCount').textContent = allDecks.length + ' decks loaded';
 }
-
 function router() {
   const v = (location.hash || '#build').slice(1);
   currentView = VIEWS[v] ? v : 'build';
   render();
 }
-
 function toggleTheme() {
   const light = document.body.classList.toggle('light');
   try { localStorage.setItem('ddl-theme', light ? 'light' : 'dark'); } catch (e) {}
+  document.querySelector('meta[name=theme-color]').setAttribute('content', light ? '#f7f6f3' : '#0d1220');
 }
 
-/* ---------- Global delegation: hover preview + deck clicks + modal ---------- */
+/* ---------------- Global delegation ---------------- */
 document.addEventListener('mouseover', e => {
   const pv = document.getElementById('cardPreview');
-  const el = e.target.closest('[data-card]');
-  if (el) {
-    const img = imageMap[el.getAttribute('data-card')];
-    if (img) { pv.querySelector('img').src = img; pv.classList.add('show'); return; }
-  }
-  pv.classList.remove('show');
+  const cardEl = e.target.closest('[data-card]');
+  if (cardEl) { const img = imageMap[cardEl.getAttribute('data-card')]; if (img) { pv.querySelector('img').src = img; pv.classList.add('show'); } else pv.classList.remove('show'); }
+  else pv.classList.remove('show');
+
+  const tip = document.getElementById('vizTip');
+  const tEl = e.target.closest('[data-tip]');
+  if (tEl) { tip.textContent = tEl.getAttribute('data-tip'); tip.classList.add('show'); } else tip.classList.remove('show');
+
+  const hl = e.target.closest('[data-hl]');
+  if (hl) { const [sel, idx] = hl.getAttribute('data-hl').split('|'); const svg = document.querySelector(sel); if (svg) { svg.classList.add('focus'); svg.querySelectorAll('[data-series="' + idx + '"]').forEach(el => el.classList.add('on')); } }
+});
+document.addEventListener('mouseout', e => {
+  const hl = e.target.closest('[data-hl]');
+  if (hl) { const [sel] = hl.getAttribute('data-hl').split('|'); const svg = document.querySelector(sel); if (svg) { svg.classList.remove('focus'); svg.querySelectorAll('.on').forEach(el => el.classList.remove('on')); } }
 });
 document.addEventListener('mousemove', e => {
   const pv = document.getElementById('cardPreview');
-  if (!pv.classList.contains('show')) return;
-  const w = 200, h = 280;
-  let x = e.clientX + 18, y = e.clientY + 18;
-  if (x + w > window.innerWidth) x = e.clientX - w - 18;
-  if (y + h > window.innerHeight) y = window.innerHeight - h - 10;
-  if (y < 10) y = 10;
-  pv.style.left = x + 'px'; pv.style.top = y + 'px';
+  if (pv.classList.contains('show')) {
+    const w = 200, h = 280; let x = e.clientX + 18, y = e.clientY + 18;
+    if (x + w > window.innerWidth) x = e.clientX - w - 18;
+    if (y + h > window.innerHeight) y = window.innerHeight - h - 10;
+    if (y < 10) y = 10;
+    pv.style.left = x + 'px'; pv.style.top = y + 'px';
+  }
+  const tip = document.getElementById('vizTip');
+  if (tip.classList.contains('show')) {
+    let x = e.clientX + 14, y = e.clientY + 14;
+    if (x + tip.offsetWidth > window.innerWidth) x = e.clientX - tip.offsetWidth - 14;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
 });
 document.addEventListener('click', e => {
+  const ap = e.target.closest('[data-apply]');
+  if (ap) { applyCoachSwap(ap.getAttribute('data-apply'), parseInt(ap.getAttribute('data-delta'), 10)); return; }
   const dl = e.target.closest('[data-deck]');
   if (dl) { openDeckModal(parseInt(dl.getAttribute('data-deck'), 10)); return; }
   if (e.target.id === 'modal') closeModal();
@@ -1020,29 +1040,29 @@ document.addEventListener('click', e => {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 window.addEventListener('hashchange', router);
 
-/* ---------- Load ---------- */
+/* ---------------- Load ---------------- */
 async function load() {
-  try { if (localStorage.getItem('ddl-theme') === 'light') document.body.classList.add('light'); } catch (e) {}
+  try {
+    if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f7f6f3'); }
+    coachText = localStorage.getItem('ddl-coach') || '';
+  } catch (e) {}
   const el = document.getElementById('content');
-  if (window.DECKS) {
-    globalDecks = window.DECKS;
-  } else {
-    try {
-      const res = await fetch('decks.json');
-      if (!res.ok) throw new Error();
-      globalDecks = await res.json();
-    } catch (e) {
-      el.innerHTML = '<div class="empty">No deck data found. Run <code>python3 fetch_decks.py</code>, then reopen this page.</div>';
-      return;
-    }
+  if (window.DECKS) allDecks = window.DECKS;
+  else {
+    try { const res = await fetch('decks.json'); if (!res.ok) throw new Error(); allDecks = await res.json(); }
+    catch (e) { el.innerHTML = '<div class="empty">No deck data found. Run <code>python3 fetch_decks.py</code>, then reopen this page.</div>'; return; }
   }
-  if (!globalDecks || globalDecks.length === 0) {
-    el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages. Check the terminal output.</div>';
-    return;
-  }
-  processDecks(globalDecks);
+  if (!allDecks || allDecks.length === 0) { el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages.</div>'; return; }
+  indexCards(allDecks);
+  computeFullClusters();
+  const v = (location.hash || '#build').slice(1);
+  currentView = VIEWS[v] ? v : 'build';
+  applyFilters();
 }
 
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
 load();
 </script>
 </body>
