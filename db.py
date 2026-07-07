@@ -7,11 +7,13 @@ SQLite layer for the Diana decklist database (riftbound.db).
 Tables:
     cards       full Riftbound card catalogue (populated by import_cards.py)
     events      tournaments (name, date, region)
-    decks       one row per tournament decklist
-    deck_cards  card name/count per deck, split by section (main/rune/battlefield)
+    decks       one row per tournament decklist (all archetypes)
+    deck_cards  card name/count per deck, by section (main/rune/battlefield/side)
 
-The DB is the source of truth; decks.json is exported from it for the
-static viewer (index.html).
+The DB is the source of truth. Exports for the static viewer:
+    decks.json / decks.js   Diana decks only, fully enriched
+    meta.json / meta.js     whole-field context: per-event archetype counts
+                            and cross-archetype card baselines
 
 CLI:
     python3 db.py migrate   one-time import of a legacy decks.json
@@ -27,7 +29,10 @@ from pathlib import Path
 
 DB_FILE = Path(__file__).parent / "riftbound.db"
 DECKS_JSON = Path(__file__).parent / "decks.json"
+META_JSON = Path(__file__).parent / "meta.json"
 IMAGE_DIR = Path(__file__).parent / "cache" / "images"
+
+DIANA_ARCHETYPE = "diana-scorn-of-the-moon"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS cards (
@@ -62,6 +67,7 @@ CREATE TABLE IF NOT EXISTS decks (
     weight    REAL DEFAULT 1.0,
     event_id  INTEGER REFERENCES events(id),
     url       TEXT UNIQUE,
+    archetype TEXT DEFAULT 'diana-scorn-of-the-moon',
     fetched_at TEXT DEFAULT (datetime('now'))
 );
 
@@ -70,7 +76,7 @@ CREATE TABLE IF NOT EXISTS deck_cards (
     card_name TEXT NOT NULL,
     count     INTEGER NOT NULL,
     section   TEXT NOT NULL DEFAULT 'main'
-              CHECK (section IN ('main', 'rune', 'battlefield')),
+              CHECK (section IN ('main', 'rune', 'battlefield', 'side')),
     PRIMARY KEY (deck_id, card_name, section)
 );
 """
@@ -82,10 +88,39 @@ def normalize_name(name):
     return re.sub(r"[^a-z0-9]+", "", name)
 
 
+def migrate_schema(conn):
+    """Bring a pre-existing DB up to the current schema."""
+    cols = [r[1] for r in conn.execute("PRAGMA table_info(decks)")]
+    if cols and "archetype" not in cols:
+        conn.execute("ALTER TABLE decks ADD COLUMN archetype TEXT "
+                     f"DEFAULT '{DIANA_ARCHETYPE}'")
+    # deck_cards' section CHECK can't be altered in place; rebuild if it
+    # predates the 'side' section.
+    row = conn.execute(
+        "SELECT sql FROM sqlite_master WHERE type='table' AND name='deck_cards'"
+    ).fetchone()
+    if row and "'side'" not in row[0]:
+        conn.executescript("""
+            ALTER TABLE deck_cards RENAME TO deck_cards_old;
+            CREATE TABLE deck_cards (
+                deck_id   INTEGER NOT NULL REFERENCES decks(id) ON DELETE CASCADE,
+                card_name TEXT NOT NULL,
+                count     INTEGER NOT NULL,
+                section   TEXT NOT NULL DEFAULT 'main'
+                          CHECK (section IN ('main', 'rune', 'battlefield', 'side')),
+                PRIMARY KEY (deck_id, card_name, section)
+            );
+            INSERT INTO deck_cards SELECT * FROM deck_cards_old;
+            DROP TABLE deck_cards_old;
+        """)
+    conn.commit()
+
+
 def connect():
     conn = sqlite3.connect(DB_FILE)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
+    migrate_schema(conn)
     conn.executescript(SCHEMA)
     return conn
 
@@ -115,21 +150,23 @@ def upsert_event(conn, name, date=None, region=None):
     return conn.execute("SELECT id FROM events WHERE name = ?", (name,)).fetchone()[0]
 
 
-def upsert_deck(conn, label, placement, event_name, weight, url, sections, event_date=None):
+def upsert_deck(conn, label, placement, event_name, weight, url, sections,
+                event_date=None, archetype=DIANA_ARCHETYPE):
     """Insert or replace a deck and its cards.
 
-    sections: dict like {"main": {name: count}, "rune": {...}, "battlefield": {...}}
+    sections: dict of section name -> {card name: count}, where section is
+    one of main / rune / battlefield / side.
     """
     event_id = upsert_event(conn, event_name, date=event_date)
     player = label.split(" - ")[0].strip() if " - " in label else None
     conn.execute(
-        "INSERT INTO decks (label, player, placement, weight, event_id, url) "
-        "VALUES (?, ?, ?, ?, ?, ?) "
+        "INSERT INTO decks (label, player, placement, weight, event_id, url, archetype) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?) "
         "ON CONFLICT(label) DO UPDATE SET player = excluded.player, "
         "placement = excluded.placement, weight = excluded.weight, "
         "event_id = excluded.event_id, url = excluded.url, "
-        "fetched_at = datetime('now')",
-        (label, player, placement, weight, event_id, url),
+        "archetype = excluded.archetype, fetched_at = datetime('now')",
+        (label, player, placement, weight, event_id, url, archetype),
     )
     deck_id = conn.execute("SELECT id FROM decks WHERE label = ?", (label,)).fetchone()[0]
     conn.execute("DELETE FROM deck_cards WHERE deck_id = ?", (deck_id,))
@@ -167,14 +204,15 @@ def card_json(conn, name, count):
 
 
 def export_decks_json(conn, path=DECKS_JSON):
-    """Write decks.json for the static viewer."""
+    """Write decks.json (Diana decks, enriched) for the static viewer."""
     decks_out = []
     deck_rows = conn.execute(
         "SELECT d.*, e.name AS event_name, e.date AS event_date "
-        "FROM decks d LEFT JOIN events e ON e.id = d.event_id ORDER BY d.id"
+        "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
+        "WHERE d.archetype = ? ORDER BY d.id", (DIANA_ARCHETYPE,)
     ).fetchall()
     for d in deck_rows:
-        sections = {"main": [], "rune": [], "battlefield": []}
+        sections = {"main": [], "rune": [], "battlefield": [], "side": []}
         for row in conn.execute(
             "SELECT card_name, count, section FROM deck_cards WHERE deck_id = ? "
             "ORDER BY section, card_name", (d["id"],)
@@ -193,6 +231,7 @@ def export_decks_json(conn, path=DECKS_JSON):
             "cards": sections["main"],
             "runes": sections["rune"],
             "battlefields": sections["battlefield"],
+            "sideboard": sections["side"],
         })
     payload = json.dumps(decks_out, indent=2)
     Path(path).write_text(payload)
@@ -200,6 +239,56 @@ def export_decks_json(conn, path=DECKS_JSON):
     # (double-clicked in Finder), where browsers block fetch().
     Path(path).with_suffix(".js").write_text("window.DECKS = " + payload + ";\n")
     return len(decks_out)
+
+
+def export_meta_json(conn, path=META_JSON):
+    """Write meta.json/meta.js: whole-field context for the viewer.
+
+    events: per event, deck counts by archetype (meta share of top cuts).
+    cardBase: for every card in a Diana main deck, how much of the
+    NON-Diana field mains it — separates format staples from Diana choices.
+    """
+    events = []
+    for e in conn.execute("SELECT id, name, date FROM events ORDER BY date, name"):
+        counts = {}
+        for row in conn.execute(
+            "SELECT archetype, COUNT(*) AS n FROM decks WHERE event_id = ? "
+            "GROUP BY archetype", (e["id"],)
+        ):
+            counts[row["archetype"]] = row["n"]
+        if counts:
+            events.append({"name": e["name"], "date": e["date"], "counts": counts})
+
+    other_total = conn.execute(
+        "SELECT COUNT(*) FROM decks WHERE archetype != ?", (DIANA_ARCHETYPE,)
+    ).fetchone()[0]
+    card_base = {}
+    for row in conn.execute(
+        "SELECT dc.card_name, COUNT(DISTINCT dc.deck_id) AS n "
+        "FROM deck_cards dc JOIN decks d ON d.id = dc.deck_id "
+        "WHERE dc.section = 'main' AND d.archetype != ? "
+        "AND dc.card_name IN (SELECT DISTINCT card_name FROM deck_cards dc2 "
+        "  JOIN decks d2 ON d2.id = dc2.deck_id "
+        "  WHERE dc2.section IN ('main','side') AND d2.archetype = ?) "
+        "GROUP BY dc.card_name", (DIANA_ARCHETYPE, DIANA_ARCHETYPE)
+    ):
+        card_base[row["card_name"]] = row["n"]
+
+    archetype_totals = {}
+    for row in conn.execute("SELECT archetype, COUNT(*) AS n FROM decks GROUP BY archetype"):
+        archetype_totals[row["archetype"]] = row["n"]
+
+    meta = {
+        "diana": DIANA_ARCHETYPE,
+        "otherDecks": other_total,
+        "archetypes": archetype_totals,
+        "events": events,
+        "cardBase": card_base,
+    }
+    payload = json.dumps(meta, indent=1)
+    Path(path).write_text(payload)
+    Path(path).with_suffix(".js").write_text("window.META = " + payload + ";\n")
+    return len(events)
 
 
 def migrate_from_json(conn, path=DECKS_JSON):
@@ -225,8 +314,9 @@ def main():
         print(f"Migrated {n} decks from decks.json into {DB_FILE.name}")
     elif cmd == "export":
         n = export_decks_json(conn)
+        m = export_meta_json(conn)
         conn.commit()
-        print(f"Exported {n} decks to {DECKS_JSON.name}")
+        print(f"Exported {n} Diana decks to {DECKS_JSON.name}; meta for {m} events to {META_JSON.name}")
     elif cmd == "stats":
         for table in ("cards", "events", "decks", "deck_cards"):
             n = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]

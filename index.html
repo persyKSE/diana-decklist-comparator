@@ -241,6 +241,7 @@
 <datalist id="cardNames"></datalist>
 
 <script src="decks.js"></script>
+<script src="meta.js"></script>
 <script>
 let allDecks = [];      // full set (tagged with _region / _cluster / _clusterName)
 let globalDecks = [];   // active (filtered) set — every view reads this
@@ -256,6 +257,7 @@ let currentView = 'build';
 let clusterOptions = [];  // {gi, name, n} over the full set
 let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '' };
 let coachTimer = null;
+let packagesCache = null;   // findPackages over the active set, shared by views
 
 const PALETTE = ['#7aa2e8', '#54c08a', '#e3a94e', '#b978e0', '#e07070', '#4fc4d6', '#c98a5a', '#e06bb0'];
 const REGION_ORDER = ['NA', 'EU', 'OCE', 'CN', 'Other'];
@@ -280,7 +282,7 @@ function weightedAverage(counts, weights) {
 
 function indexCards(decks) {
   decks.forEach(d => {
-    d.cards.forEach(c => {
+    d.cards.concat(d.sideboard || []).forEach(c => {
       if (c.image && !imageMap[c.name]) imageMap[c.name] = c.image;
       if (!cardMeta[c.name]) cardMeta[c.name] = { cost: c.cost, type: c.type, color: c.color || [] };
       nameLookup[normName(c.name)] = c.name;
@@ -291,7 +293,7 @@ function indexCards(decks) {
       nonMainNames.add(c.name);
     });
   });
-  const names = [...new Set(decks.flatMap(d => d.cards.map(c => c.name)))].sort();
+  const names = [...new Set(decks.flatMap(d => d.cards.concat(d.sideboard || []).map(c => c.name)))].sort();
   document.getElementById('cardNames').innerHTML = names.map(n => '<option value="' + attr(n) + '">').join('');
 }
 
@@ -315,17 +317,60 @@ function computeStats(decks) {
   })).sort((a, b) => b.score - a.score || b.decksIn - a.decksIn);
 }
 
+const MAX_COST_BUCKET = 8;
+function costBucket(name) {
+  const m = cardMeta[name];
+  return m && m.cost != null ? Math.min(m.cost, MAX_COST_BUCKET) : 2;
+}
+
+// Placement-weighted average curve of a deck set — the builder's target shape.
+function targetCurveOf(decks) {
+  const target = Array(MAX_COST_BUCKET + 1).fill(0);
+  const totalW = decks.reduce((a, d) => a + (d.weight || 1), 0) || 1;
+  decks.forEach(d => d.cards.forEach(c => { target[costBucket(c.name)] += (d.weight || 1) * c.count / totalW; }));
+  return target;
+}
+
+function packageOf(name) {
+  if (!packagesCache) return null;
+  return packagesCache.packages.find(p => p.cards.includes(name)) || null;
+}
+
+// Curve-aware greedy fill: locked cards first at consensus copies, then flex
+// cards by score with a penalty for overfilling a cost bucket beyond the
+// field's average curve (+1 tolerance).
 function buildInitialProto(N) {
   currentProto = [];
+  if (!N) return;
+  const target = targetCurveOf(globalDecks);
+  const curveNow = Array(MAX_COST_BUCKET + 1).fill(0);
   let total = 0;
-  for (const c of rankedCards) {
-    if (total >= 40) break;
-    let copies = Math.min(c.copies, 3);
-    if (total + copies > 40) copies = 40 - total;
-    if (copies <= 0) continue;
-    currentProto.push({ ...c, copies, locked: c.decksIn === N });
+  const push = (c, copies, locked) => {
+    currentProto.push({ ...c, copies, locked });
     total += copies;
+    curveNow[costBucket(c.name)] += copies;
+  };
+  rankedCards.filter(c => c.decksIn === N).forEach(c => {
+    if (total >= 40) return;
+    const copies = Math.min(c.copies, 3, 40 - total);
+    if (copies > 0) push(c, copies, true);
+  });
+  const remaining = rankedCards.filter(c => c.decksIn < N);
+  while (total < 40 && remaining.length) {
+    let bestIdx = -1, bestAdj = -Infinity;
+    remaining.forEach((c, idx) => {
+      const copies = Math.min(c.copies, 3, 40 - total);
+      if (copies <= 0) return;
+      const b = costBucket(c.name);
+      const overfill = Math.max(0, curveNow[b] + copies - (target[b] + 1));
+      const adj = c.score - 6 * overfill;
+      if (adj > bestAdj) { bestAdj = adj; bestIdx = idx; }
+    });
+    if (bestIdx < 0) break;
+    const c = remaining.splice(bestIdx, 1)[0];
+    push(c, Math.min(c.copies, 3, 40 - total), false);
   }
+  currentProto.sort((a, b) => b.score - a.score);
 }
 
 function removeCard(name) {
@@ -391,6 +436,7 @@ function renderDiff(deckA, deckB) {
   let html = '';
   const sections = [
     ['Main deck', diffSection(deckA.cards, deckB.cards)],
+    ['Sideboard', diffSection(deckA.sideboard, deckB.sideboard)],
     ['Runes', diffSection(deckA.runes, deckB.runes)],
     ['Battlefields', diffSection(deckA.battlefields, deckB.battlefields)],
   ];
@@ -632,6 +678,122 @@ function renderCoach(N) {
   return html;
 }
 
+/* ---------------- Optimizer ---------------- */
+// Score a candidate 40: similarity to the winning lists (placement-weighted),
+// curve fit against the field average, and package integrity. No win/match
+// data exists yet, so this optimizes toward evidenced consensus, not results.
+const OPT_W = { curve: 0.35, pkg: 0.8 };
+
+function optScore(counts) {
+  const list = Object.entries(counts).map(([name, count]) => ({ name, count }));
+  let sim = 0, wSum = 0;
+  globalDecks.forEach(d => { const w = d.weight || 1; sim += w * deckDistance(list, d.cards); wSum += w; });
+  sim = -sim / (wSum || 1);
+  const target = targetCurveOf(globalDecks);
+  const cur = Array(MAX_COST_BUCKET + 1).fill(0);
+  list.forEach(c => cur[costBucket(c.name)] += c.count);
+  let curve = 0;
+  for (let i = 0; i <= MAX_COST_BUCKET; i++) curve -= Math.abs(cur[i] - target[i]);
+  let pkg = 0;
+  packagesCache.packages.forEach(p => {
+    const present = p.cards.filter(n => counts[n]).length;
+    if (present > 0 && present < p.cards.length) pkg -= (p.cards.length - present);
+  });
+  return sim + OPT_W.curve * curve + OPT_W.pkg * pkg;
+}
+
+function avgDistTo(counts) {
+  const list = Object.entries(counts).map(([name, count]) => ({ name, count }));
+  return globalDecks.reduce((a, d) => a + deckDistance(list, d.cards), 0) / (globalDecks.length || 1);
+}
+
+function optimizeList(startCounts) {
+  const counts = {};
+  Object.entries(startCounts).forEach(([n, c]) => { if (c > 0) counts[n] = Math.min(c, 3); });
+  const pool = rankedCards.map(c => c.name);
+  const scoreOfName = n => { const r = rankedCards.find(c => c.name === n); return r ? r.score : -1; };
+  const size = () => Object.values(counts).reduce((a, b) => a + b, 0);
+  const moves = [];
+
+  // Balance to exactly 40 first, logging what changed.
+  while (size() < 40) {
+    const add = pool.filter(n => (counts[n] || 0) < 3).sort((a, b) => scoreOfName(b) - scoreOfName(a))[0];
+    if (!add) break;
+    counts[add] = (counts[add] || 0) + 1;
+    moves.push({ kind: 'balance', add });
+  }
+  while (size() > 40) {
+    const cut = Object.keys(counts).sort((a, b) => scoreOfName(a) - scoreOfName(b))[0];
+    counts[cut]--; if (!counts[cut]) delete counts[cut];
+    moves.push({ kind: 'balance', cut });
+  }
+
+  for (let iter = 0; iter < 25; iter++) {
+    const base = optScore(counts);
+    let best = null, bestGain = 0.05;
+    for (const cut of Object.keys(counts)) {
+      counts[cut]--; const emptied = counts[cut] === 0; if (emptied) delete counts[cut];
+      for (const add of pool) {
+        if (add === cut || (counts[add] || 0) >= 3) continue;
+        counts[add] = (counts[add] || 0) + 1;
+        const gain = optScore(counts) - base;
+        counts[add]--; if (!counts[add]) delete counts[add];
+        if (gain > bestGain) { bestGain = gain; best = { cut, add }; }
+      }
+      if (emptied) counts[cut] = 1; else counts[cut]++;
+    }
+    if (!best) break;
+    counts[best.cut]--; if (!counts[best.cut]) delete counts[best.cut];
+    counts[best.add] = (counts[best.add] || 0) + 1;
+    moves.push({ kind: 'swap', ...best, gain: bestGain });
+  }
+  return { counts, moves };
+}
+
+function swapEvidence(name, adding) {
+  const s = rankedCards.find(c => c.name === name);
+  const N = globalDecks.length;
+  let ev = s ? 'in ' + s.decksIn + '/' + N + ' winning decks (score ' + s.score.toFixed(1) + ')' : 'in no winning deck';
+  const pkg = packageOf(name);
+  if (pkg) ev += (adding ? '; completes' : '; breaks') + ' package with ' + pkg.cards.filter(n => n !== name).map(shortName).join(', ');
+  if (window.META && META.otherDecks) {
+    const base = META.cardBase[name] || 0;
+    const pct = Math.round(100 * base / META.otherDecks);
+    if (pct >= 25) ev += '; format staple (' + pct + '% of the non-Diana field)';
+  }
+  return ev;
+}
+
+function runOptimizer() {
+  const { counts } = parseDeckText(coachText);
+  const start = Object.keys(counts).length ? counts
+    : Object.fromEntries(currentProto.map(c => [c.name, c.copies]));
+  const startedFrom = Object.keys(counts).length ? 'your list' : 'the prototype';
+  const before = avgDistTo(start);
+  const { counts: optimized, moves } = optimizeList(start);
+  const after = avgDistTo(optimized);
+  const out = document.getElementById('optResults');
+  let html = '<div class="summary-box"><strong>Optimized from ' + startedFrom + '.</strong> Average distance to the winning lists: ' +
+    before.toFixed(1) + ' → <strong>' + after.toFixed(1) + '</strong> swaps. Scored on similarity to winners, curve fit, and package integrity — <em>consensus</em>-optimal; no win/match data exists yet to optimize on results.</div>';
+  if (!moves.length) {
+    html += '<div class="summary-box">No improving swap found — this list already sits at a local optimum of the field consensus.</div>';
+  } else {
+    moves.forEach(m => {
+      if (m.kind === 'balance') {
+        html += '<div class="diff-line ' + (m.add ? 'diff-add' : 'diff-del') + '" data-card="' + attr(m.add || m.cut) + '">' +
+          cardImg(m.add || m.cut) + '<span>' + (m.add ? '+1 ' : '&minus;1 ') + escHtml(m.add || m.cut) + '</span><span style="font-size:11px;opacity:0.7;">balancing to 40 cards</span></div>';
+      } else {
+        html += '<div class="diff-line diff-del" data-card="' + attr(m.cut) + '">' + cardImg(m.cut) + '<span>&minus;1 ' + escHtml(m.cut) + '</span><span style="font-size:11px;opacity:0.7;">' + escHtml(swapEvidence(m.cut, false)) + '</span></div>';
+        html += '<div class="diff-line diff-add" data-card="' + attr(m.add) + '">' + cardImg(m.add) + '<span>+1 ' + escHtml(m.add) + '</span><span style="font-size:11px;opacity:0.7;">' + escHtml(swapEvidence(m.add, true)) + '</span></div>';
+      }
+    });
+    html += '<div style="margin-top:10px;"><button id="optApply">Apply optimized list to my deck</button></div>';
+  }
+  out.innerHTML = html;
+  const btn = document.getElementById('optApply');
+  if (btn) btn.onclick = () => { setCoach(normalizeCoach(optimized)); toast('Optimized list applied'); };
+}
+
 /* ---------------- Filtering ---------------- */
 function regionOf(event) {
   const e = (event || '').toLowerCase();
@@ -696,6 +858,7 @@ function clearFilters() { filters = { region: new Set(), cluster: new Set(), pla
 function applyFilters() {
   globalDecks = allDecks.filter(deckPasses);
   rankedCards = computeStats(globalDecks);
+  packagesCache = findPackages(globalDecks.length);
   buildInitialProto(globalDecks.length);
   if (diffA >= globalDecks.length) diffA = 0;
   if (diffB >= globalDecks.length) diffB = Math.min(1, Math.max(0, globalDecks.length - 1));
@@ -738,13 +901,21 @@ function renderBuild(ctx) {
   let html = '';
   const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
   html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards)</h2><button onclick="copyDecklist()">Copy decklist</button></div>';
-  html += '<p class="sub">Click a flex card to remove it. Cards ranked by weighted score. <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot. Hover any card for a preview.</p>';
+  html += '<p class="sub">Curve-aware consensus build: locked cards first, then flex slots by score with a penalty for overfilling a cost bucket beyond the field\'s average curve. <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot. Hover a row for its reasoning.</p>';
+  if (clusterOptions.length > 1 && !filters.cluster.size) {
+    html += '<div class="summary-box">⚠️ This field splits into <strong>' + clusterOptions.length + ' sub-archetypes</strong> — an averaged build can end up as a deck nobody plays. Build for one: ' +
+      clusterOptions.map(c => '<span class="chip" onclick="toggleFilter(\'cluster\',' + c.gi + ')">' + escHtml(c.name) + ' (' + c.n + ')</span>').join(' ') + '</div>';
+  }
   currentProto.forEach(c => {
     const cls = c.locked ? 'locked' : 'flex';
     const tag = c.locked ? '<span class="pill pill-lock">locked</span>' : '<span class="pill pill-flex">flex ' + c.decksIn + '/' + N + '</span>';
     const removeBtn = c.locked ? '' : '<span class="interactive-remove" onclick="removeCard(\'' + c.name.replace(/'/g, "\\'") + '\')" title="Remove">&times;</span>';
-    html += '<div class="card-row ' + cls + '" data-card="' + attr(c.name) + '">' + cardImg(c.name) +
-      '<span class="card-name">' + escHtml(c.name) + tag + '</span><span class="card-meta">score ' + c.score.toFixed(1) + '</span><span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
+    const pkg = packageOf(c.name);
+    const pkgNote = pkg ? ' · pkg: ' + pkg.cards.filter(n => n !== c.name).map(shortName).join(', ') : '';
+    const why = 'In ' + c.decksIn + '/' + N + ' decks, avg ' + c.avgCopies.toFixed(1) + ' copies, weighted score ' + c.score.toFixed(1) +
+      (pkg ? '. Travels with ' + pkg.cards.filter(n => n !== c.name).join(', ') + ' (' + pkg.decks + '/' + N + ' decks run the package together).' : '.');
+    html += '<div class="card-row ' + cls + '" data-card="' + attr(c.name) + '" title="' + attr(why) + '">' + cardImg(c.name) +
+      '<span class="card-name">' + escHtml(c.name) + tag + '</span><span class="card-meta">score ' + c.score.toFixed(1) + escHtml(pkgNote) + '</span><span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
   });
 
   let runeCounts = {}, bfCounts = {};
@@ -766,28 +937,90 @@ function renderBuild(ctx) {
 
   html += '<h2>Rate my deck</h2><p class="sub">Paste your main deck (one card per line: "3 Gust", "3x Gust", or "Gust x3"). Analysis updates as you type — your list is saved in this browser.</p>';
   html += '<textarea id="coachInput" oninput="coachInputChanged()" placeholder="3 Gust&#10;3 Stacked Deck&#10;2 Moonfall&#10;...">' + escHtml(coachText) + '</textarea>';
-  html += '<div class="coach-tools"><input id="coachAdd" list="cardNames" placeholder="add a card by name…" onkeydown="if(event.key===\'Enter\')coachAddCard()"><button onclick="coachAddCard()">Add</button></div>';
+  html += '<div class="coach-tools"><input id="coachAdd" list="cardNames" placeholder="add a card by name…" onkeydown="if(event.key===\'Enter\')coachAddCard()"><button onclick="coachAddCard()">Add</button>' +
+          '<button onclick="runOptimizer()" title="Hill-climbs single-card swaps, scoring similarity to winners, curve fit, and package integrity">⚡ Optimize</button></div>';
+  html += '<p class="sub">Optimize hill-climbs card-for-card swaps from your list (or the prototype if empty) toward the evidenced consensus of the filtered winning decks.</p>';
+  html += '<div id="optResults"></div>';
   html += '<div id="coachResults">' + (coachText.trim() ? renderCoach(N) : '') + '</div>';
   return html;
 }
 
 /* ---------------- ANALYZE ---------------- */
+function fieldBadge(name) {
+  if (!window.META || !META.otherDecks) return '—';
+  const pct = Math.round(100 * (META.cardBase[name] || 0) / META.otherDecks);
+  if (pct >= 25) return '<span class="dist-badge" style="color:var(--accent)" title="Played across the wider field — a format staple, not a Diana choice">' + pct + '% · staple</span>';
+  if (pct <= 5) return '<span class="dist-badge" style="color:var(--flex)" title="Barely played outside Diana — an archetype-defining choice">' + pct + '% · Diana tech</span>';
+  return '<span class="dist-badge">' + pct + '%</span>';
+}
+
+function prettyArchetype(slug) {
+  return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
 function renderAnalyze(ctx) {
   const N = ctx.N;
   let html = '';
 
-  html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the field: how many decks run it, at what counts. A card at 100% with a split copy count is a different decision than a true flex slot.</p>';
-  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th></tr></thead><tbody>';
+  // ---- Meta context (whole scraped field, unaffected by filters) ----
+  if (window.META && META.otherDecks > 0) {
+    const totalAll = META.otherDecks + (META.archetypes[META.diana] || 0);
+    html += '<h2>Meta context</h2><p class="sub">The whole scraped top-cut field (' + totalAll + ' decks, all archetypes) — how big a slice Diana is, per event and overall. This section ignores the filters above.</p>';
+    const topArch = Object.entries(META.archetypes).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    const maxN = topArch[0][1];
+    html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th>Top-cut decks</th></tr></thead><tbody>';
+    topArch.forEach(([arch, n]) => {
+      const isDiana = arch === META.diana;
+      html += '<tr' + (isDiana ? ' style="font-weight:700"' : '') + '><td>' + escHtml(prettyArchetype(arch)) + (isDiana ? ' ★' : '') + '</td>' +
+        '<td><span class="incl-bar" style="width:' + Math.round(140 * n / maxN) + 'px;' + (isDiana ? '' : 'background:var(--muted);opacity:0.55;') + '"></span>' + n + ' (' + Math.round(100 * n / totalAll) + '%)</td></tr>';
+    });
+    html += '</tbody></table></div>';
+    const evRows = META.events.filter(e => Object.values(e.counts).reduce((a, b) => a + b, 0) >= 3);
+    if (evRows.length) {
+      html += '<div class="panel-wrap" style="margin-top:12px;"><table class="incl"><thead><tr><th>Event</th><th>Date</th><th>Diana share of top cut</th></tr></thead><tbody>';
+      evRows.forEach(e => {
+        const total = Object.values(e.counts).reduce((a, b) => a + b, 0);
+        const dn = e.counts[META.diana] || 0;
+        html += '<tr><td>' + escHtml(e.name) + '</td><td>' + (e.date || '—') + '</td>' +
+          '<td><span class="incl-bar" style="width:' + Math.round(120 * dn / total) + 'px"></span>' + dn + '/' + total + ' (' + Math.round(100 * dn / total) + '%)</td></tr>';
+      });
+      html += '</tbody></table></div>';
+    }
+  }
+
+  html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the Diana field: how many decks run it, at what counts. The Field column is the card\'s play rate across all other archetypes — high means format staple, low means Diana-specific tech.</p>';
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th><th>Field</th></tr></thead><tbody>';
   [...rankedCards].sort((a, b) => b.decksIn - a.decksIn || b.score - a.score).forEach(c => {
     const meta = cardMeta[c.name] || {};
     const pct = Math.round(100 * c.decksIn / N);
     const distBadges = Object.entries(c.dist).sort((a, b) => b[0] - a[0]).map(([copies, nD]) => '<span class="dist-badge">x' + copies + ' in ' + nD + (nD > 1 ? ' decks' : ' deck') + '</span>').join('');
     html += '<tr data-card="' + attr(c.name) + '"><td>' + cardImg(c.name) + escHtml(c.name) + '</td><td>' + (meta.cost != null ? meta.cost : '—') + '</td><td>' + (meta.type || '—') +
-      '</td><td><span class="incl-bar" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + c.decksIn + '/' + N + ' (' + pct + '%)</td><td class="num">' + c.avgCopies.toFixed(1) + '</td><td>' + distBadges + '</td></tr>';
+      '</td><td><span class="incl-bar" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + c.decksIn + '/' + N + ' (' + pct + '%)</td><td class="num">' + c.avgCopies.toFixed(1) + '</td><td>' + distBadges + '</td><td>' + fieldBadge(c.name) + '</td></tr>';
   });
   html += '</tbody></table></div>';
 
-  const { packages, eitherOr } = findPackages(N);
+  // ---- Sideboard patterns ----
+  const sideDecks = globalDecks.filter(d => d.sideboard && d.sideboard.length);
+  if (sideDecks.length) {
+    const sideStats = {};
+    sideDecks.forEach(d => d.sideboard.forEach(c => {
+      if (!sideStats[c.name]) sideStats[c.name] = { decksIn: 0, total: 0 };
+      sideStats[c.name].decksIn += 1; sideStats[c.name].total += c.count;
+    }));
+    const mainNames = new Set(rankedCards.map(c => c.name));
+    const rows = Object.entries(sideStats).sort((a, b) => b[1].decksIn - a[1].decksIn).slice(0, 14);
+    html += '<h2>Sideboard patterns</h2><p class="sub">What the winning decks board (' + sideDecks.length + ' decks with sideboards). "Swing card" = also main-decked by part of the field — a flex slot living between main and side.</p>';
+    html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>In sideboards</th><th class="num">Avg copies</th><th></th></tr></thead><tbody>';
+    rows.forEach(([name, s]) => {
+      const swing = mainNames.has(name) ? '<span class="dist-badge" style="color:var(--flex)">swing card</span>' : '';
+      html += '<tr data-card="' + attr(name) + '"><td>' + cardImg(name) + escHtml(name) + '</td>' +
+        '<td><span class="incl-bar" style="width:' + Math.round(100 * s.decksIn / sideDecks.length * 0.6) + 'px"></span>' + s.decksIn + '/' + sideDecks.length + '</td>' +
+        '<td class="num">' + (s.total / s.decksIn).toFixed(1) + '</td><td>' + swing + '</td></tr>';
+    });
+    html += '</tbody></table></div>';
+  }
+
+  const { packages, eitherOr } = packagesCache;
   html += '<h2>Card packages</h2><p class="sub">Flex cards that travel together across the winning lists — the real deck-building choice is usually between packages, not single cards.</p>';
   if (!packages.length) html += '<div class="pkg-box">No strong packages detected yet — add more decks (or loosen the filters) to sharpen the signal.</div>';
   packages.forEach(p => {
@@ -946,6 +1179,7 @@ function openDeckModal(i) {
     body += '</div>';
   });
   let extra = '';
+  if (d.sideboard && d.sideboard.length) extra += '<div class="cost-head">Sideboard</div>' + d.sideboard.map(s => '<span class="mcard" data-card="' + attr(s.name) + '">' + cardImg(s.name) + '<span>' + escHtml(s.name) + '</span><span class="mcard-c">x' + s.count + '</span></span>').join('');
   if (d.runes && d.runes.length) extra += '<div class="cost-head">Runes</div>' + d.runes.map(r => '<span class="pkg-chip" data-card="' + attr(r.name) + '">' + cardImg(r.name) + escHtml(r.name) + ' x' + r.count + '</span>').join('');
   if (d.battlefields && d.battlefields.length) extra += '<div class="cost-head">Battlefields</div>' + d.battlefields.map(b => '<span class="pkg-chip" data-card="' + attr(b.name) + '">' + cardImg(b.name) + escHtml(b.name) + '</span>').join('');
   const total = d.cards.reduce((a, c) => a + c.count, 0);

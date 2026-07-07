@@ -1,0 +1,217 @@
+window.META = {
+ "diana": "diana-scorn-of-the-moon",
+ "otherDecks": 88,
+ "archetypes": {
+  "annie-dark-child": 5,
+  "azir-emperor-of-the-sands": 4,
+  "darius-hand-of-noxus": 1,
+  "diana-scorn-of-the-moon": 13,
+  "draven-glorious-executioner": 12,
+  "ezreal-prodigal-explorer": 7,
+  "irelia-blade-dancer": 20,
+  "jax-grandmaster-at-arms": 1,
+  "kai-sa-daughter-of-the-void": 2,
+  "kaisa-daughter-of-the-void": 1,
+  "leblanc-deceiver": 2,
+  "lux-lady-of-luminosity": 1,
+  "master-yi-wuju-bladesman": 12,
+  "master-yi-wuju-master": 1,
+  "miss-fortune-bounty-hunter": 1,
+  "poppy-keeper-of-the-hammer": 1,
+  "pyke-bloodharbor-ripper": 2,
+  "reksai-void-burrower": 3,
+  "rengar-pridestalker": 1,
+  "sett-the-boss": 2,
+  "sivir-battle-mistress": 4,
+  "teemo-swift-scout": 1,
+  "vex-gloomist": 2,
+  "viktor-herald-of-the-arcane": 2
+ },
+ "events": [
+  {
+   "name": "Atlanta Regional Qualifier",
+   "date": "2026-05-19",
+   "counts": {
+    "annie-dark-child": 1,
+    "draven-glorious-executioner": 3,
+    "ezreal-prodigal-explorer": 1,
+    "irelia-blade-dancer": 1,
+    "kaisa-daughter-of-the-void": 1,
+    "sett-the-boss": 1
+   }
+  },
+  {
+   "name": "Bologna Regional Qualifier",
+   "date": "2026-05-19",
+   "counts": {
+    "draven-glorious-executioner": 3,
+    "ezreal-prodigal-explorer": 2,
+    "irelia-blade-dancer": 1,
+    "miss-fortune-bounty-hunter": 1,
+    "viktor-herald-of-the-arcane": 1
+   }
+  },
+  {
+   "name": "Houston Regional Qualifier",
+   "date": "2026-05-19",
+   "counts": {
+    "annie-dark-child": 1,
+    "kai-sa-daughter-of-the-void": 2,
+    "master-yi-wuju-bladesman": 2
+   }
+  },
+  {
+   "name": "Lille Regional Qualifier",
+   "date": "2026-05-19",
+   "counts": {
+    "annie-dark-child": 1,
+    "azir-emperor-of-the-sands": 1,
+    "draven-glorious-executioner": 1,
+    "irelia-blade-dancer": 3,
+    "master-yi-wuju-bladesman": 2
+   }
+  },
+  {
+   "name": "Sydney Regional Qualifier",
+   "date": "2026-05-19",
+   "counts": {
+    "diana-scorn-of-the-moon": 2,
+    "irelia-blade-dancer": 2,
+    "leblanc-deceiver": 1,
+    "sivir-battle-mistress": 1,
+    "teemo-swift-scout": 1,
+    "vex-gloomist": 1
+   }
+  },
+  {
+   "name": "Vegas Regional Qualifier",
+   "date": "2026-05-19",
+   "counts": {
+    "draven-glorious-executioner": 5,
+    "ezreal-prodigal-explorer": 1,
+    "irelia-blade-dancer": 1,
+    "jax-grandmaster-at-arms": 1
+   }
+  },
+  {
+   "name": "S3 Regional Open Suzhou",
+   "date": "2026-05-23",
+   "counts": {
+    "ezreal-prodigal-explorer": 2,
+    "irelia-blade-dancer": 2,
+    "master-yi-wuju-bladesman": 1,
+    "poppy-keeper-of-the-hammer": 1,
+    "sivir-battle-mistress": 2
+   }
+  },
+  {
+   "name": "S3 Regional Open Xian",
+   "date": "2026-06-04",
+   "counts": {
+    "azir-emperor-of-the-sands": 1,
+    "diana-scorn-of-the-moon": 1,
+    "irelia-blade-dancer": 4,
+    "leblanc-deceiver": 1,
+    "vex-gloomist": 1
+   }
+  },
+  {
+   "name": "Vancouver Regional Qualifier",
+   "date": "2026-06-04",
+   "counts": {
+    "azir-emperor-of-the-sands": 1,
+    "diana-scorn-of-the-moon": 2,
+    "irelia-blade-dancer": 2,
+    "master-yi-wuju-bladesman": 1,
+    "rengar-pridestalker": 1,
+    "sivir-battle-mistress": 1
+   }
+  },
+  {
+   "name": "S3 Regional Open Tianjin",
+   "date": "2026-06-10",
+   "counts": {
+    "diana-scorn-of-the-moon": 2,
+    "irelia-blade-dancer": 2,
+    "master-yi-wuju-bladesman": 1,
+    "pyke-bloodharbor-ripper": 1,
+    "reksai-void-burrower": 2
+   }
+  },
+  {
+   "name": "Utrecht Regional Qualifier",
+   "date": "2026-06-17",
+   "counts": {
+    "annie-dark-child": 1,
+    "azir-emperor-of-the-sands": 1,
+    "darius-hand-of-noxus": 1,
+    "diana-scorn-of-the-moon": 1,
+    "master-yi-wuju-bladesman": 1,
+    "reksai-void-burrower": 1,
+    "sett-the-boss": 1,
+    "viktor-herald-of-the-arcane": 1
+   }
+  },
+  {
+   "name": "Hartford Regional Qualifier",
+   "date": "2026-06-29",
+   "counts": {
+    "annie-dark-child": 1,
+    "diana-scorn-of-the-moon": 3,
+    "ezreal-prodigal-explorer": 1,
+    "lux-lady-of-luminosity": 1,
+    "master-yi-wuju-bladesman": 1,
+    "pyke-bloodharbor-ripper": 1
+   }
+  },
+  {
+   "name": "S3 Regional Open Changsha",
+   "date": "2026-06-29",
+   "counts": {
+    "diana-scorn-of-the-moon": 2,
+    "irelia-blade-dancer": 2,
+    "master-yi-wuju-bladesman": 3,
+    "master-yi-wuju-master": 1
+   }
+  }
+ ],
+ "cardBase": {
+  "Abandon": 4,
+  "Acceptable Losses": 2,
+  "Baron Nashor": 2,
+  "Consult the Past": 1,
+  "Downwell": 1,
+  "Eclipse": 3,
+  "Edge of Night": 9,
+  "Existential Dread": 2,
+  "Fading Memories": 1,
+  "Fizz, Trickster": 22,
+  "Flash": 17,
+  "Gust": 23,
+  "Hard Bargain": 27,
+  "Invert Timelines": 1,
+  "Kha'Zix, Mutating Horror": 3,
+  "Last Rites": 10,
+  "Mindsplitter": 18,
+  "Plundering Poro": 3,
+  "Ravenbloom Student": 6,
+  "Rebuke": 26,
+  "Retreat": 6,
+  "Ride the Wind": 31,
+  "Singularity": 6,
+  "Smoke Screen": 6,
+  "Sprite Fountain": 4,
+  "Stacked Deck": 42,
+  "Star-Crossed": 22,
+  "Stupefy": 13,
+  "Switcheroo": 7,
+  "Thousand-Tailed Watcher": 13,
+  "Tideturner": 29,
+  "Time Warp": 5,
+  "Traveling Merchant": 13,
+  "Turn to Dust": 2,
+  "Vex, Apathetic": 13,
+  "Vex, Cheerless": 4,
+  "Wages of Pain": 9
+ }
+};

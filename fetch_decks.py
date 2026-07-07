@@ -88,44 +88,119 @@ PLACEMENT_WEIGHTS = {"1st": 3.0, "2nd": 2.0, "3rd": 1.75,
 EVENT_NOISE = {"s3", "regional", "qualifier", "open"}  # dropped from short labels
 
 
-def discover_decks(config):
-    """Find new tournament decklists for the archetype via the sitemap.
+# Event portion of a tournament slug: "<city>-regional-qualifier" or
+# "s3-regional-open-<city>", sitting between the archetype and the placement.
+EVENT_SLUG_RE = re.compile(r"((?:[a-z]+-regional-qualifier)|(?:s3-regional-open-[a-z]+))$")
+PLACEMENT_SLUG_RE = re.compile(r"(?:^|-)(1st|2nd|3rd|top-4|top-8|top-16)(?:-|$)")
 
-    Tournament deck slugs look like
-    diana-scorn-of-the-moon-<event>-<placement>-<player>; entries without
-    a placement token are user brews and are skipped. Returns the number
-    of decks added to config.
+
+def parse_deck_slug(slug):
+    """Split a tournament deck slug into archetype/event/placement/player.
+
+    Slugs look like <archetype>-<event>-<placement>-<player>. Returns None
+    for slugs without a placement token (user brews) or without a
+    recognizable event pattern.
     """
-    existing_urls = {v[0] for v in config.values()}
+    m = PLACEMENT_SLUG_RE.search(slug)
+    if not m:
+        return None
+    placement_slug = m.group(1)
+    prefix = slug[:m.start()]
+    player = slug[m.end():].replace("-", " ").strip()
+    em = EVENT_SLUG_RE.search(prefix)
+    if not em:
+        return None
+    event_slug = em.group(1)
+    archetype = prefix[:em.start()].rstrip("-")
+    if not archetype:
+        return None
+    event_words = event_slug.split("-")
+    event = " ".join(w.upper() if w == "s3" else w.capitalize() for w in event_words)
+    short_event = " ".join(w.capitalize() for w in event_words if w not in EVENT_NOISE) or event
+    placement = ("Top " + placement_slug.split("-")[1]) if placement_slug.startswith("top-") else placement_slug
+    return {
+        "archetype": archetype,
+        "event": event,
+        "short_event": short_event,
+        "placement": placement,
+        "weight": PLACEMENT_WEIGHTS.get(placement_slug, 1.0),
+        "player": player,
+    }
+
+
+def discover_decks(config):
+    """Scan the sitemap for tournament decklists of every archetype.
+
+    Diana decks are merged into decks_config.json (returned count drives a
+    config save); every other archetype's deck is returned in a list for
+    the meta fetch pass. Slugs without a placement token are user brews
+    and are skipped.
+    """
     try:
         xml = fetch_page(SITEMAP_URL)
     except Exception as e:
         print(f"Deck discovery failed ({e}); continuing with configured decks")
-        return 0
+        return 0, []
 
-    added = 0
+    existing_urls = {v[0] for v in config.values()}
+    added, meta_decks = 0, []
     for url in re.findall(r"<loc>(https://mobalytics\.gg/riftbound/decks/[^<]+)</loc>", xml):
         slug = url.rsplit("/", 1)[1]
-        if not slug.startswith(ARCHETYPE_PREFIX) or url in existing_urls:
+        info = parse_deck_slug(slug)
+        if not info:
             continue
-        rest = slug[len(ARCHETYPE_PREFIX):]
-        m = re.search(r"(?:^|-)(1st|2nd|3rd|top-4|top-8|top-16)(?:-|$)", rest)
-        if not m:
-            continue
-        placement_slug = m.group(1)
-        placement = ("Top " + placement_slug.split("-")[1]) if placement_slug.startswith("top-") else placement_slug
-        event_words = [w for w in rest[:m.start()].split("-") if w]
-        event = " ".join(w.upper() if w == "s3" else w.capitalize() for w in event_words)
-        short_event = " ".join(w.capitalize() for w in event_words if w not in EVENT_NOISE) or event
-        player = rest[m.end():].replace("-", " ").strip()
+        if info["archetype"] == db.DIANA_ARCHETYPE:
+            if url in existing_urls:
+                continue
+            label = f"{info['player']} - {info['short_event']} {info['placement']}"
+            if label in config:
+                label = f"{label} ({slug[-6:]})"
+            config[label] = [url, info["placement"], info["event"], info["weight"]]
+            print(f"Discovered: {label}")
+            added += 1
+        else:
+            meta_decks.append({**info, "url": url, "slug": slug})
+    return added, meta_decks
 
-        label = f"{player} - {short_event} {placement}"
-        if label in config:
-            label = f"{label} ({slug[-6:]})"
-        config[label] = [url, placement, event, PLACEMENT_WEIGHTS.get(placement_slug, 1.0)]
-        print(f"Discovered: {label}")
-        added += 1
-    return added
+
+def fetch_meta_decks(conn, meta_decks):
+    """Fetch non-Diana tournament decks not yet in the DB (meta context).
+
+    Card images are not downloaded for these — only names/counts matter
+    for meta share and cross-archetype baselines.
+    """
+    known = {r[0] for r in conn.execute("SELECT url FROM decks WHERE url IS NOT NULL")}
+    todo = [m for m in meta_decks if m["url"] not in known]
+    if not todo:
+        return 0
+    print(f"Fetching {len(todo)} new meta decks (other archetypes) ...")
+    fetched = 0
+    for m in todo:
+        try:
+            html = fetch_page(m["url"])
+        except Exception as e:
+            print(f"  Failed {m['slug']}: {e}")
+            continue
+        parsed = parse_decklist(html)
+        if not parsed or not parsed.get("cards"):
+            print(f"  No cards parsed for {m['slug']}")
+            continue
+        arch = parsed.get("legend") or m["archetype"].replace("-", " ").title()
+        label = f"{m['player']} - {m['short_event']} {m['placement']} ({arch})"
+        db.upsert_deck(conn, label, m["placement"], m["event"], m["weight"], m["url"], {
+            "main": parsed["cards"],
+            "rune": parsed["runes"],
+            "battlefield": parsed["battlefields"],
+            "side": parsed["sideboard"],
+        }, event_date=parsed.get("date"), archetype=m["archetype"])
+        fetched += 1
+        if fetched % 25 == 0:
+            conn.commit()
+            print(f"  ... {fetched}/{len(todo)}")
+        time.sleep(0.5)
+    conn.commit()
+    print(f"  Stored {fetched} meta decks")
+    return fetched
 
 
 def load_config():
@@ -202,6 +277,10 @@ def parse_decklist(html):
         slice_between(full_text, "Main Deck", ["Sideboard", "Chosen Champion", "Explore more"]),
         r"[1-3]",
     )
+    sideboard = parse_counted(
+        slice_between(full_text, "Sideboard", ["Chosen Champion", "Explore more"]),
+        r"[1-3]",
+    )
     runes = parse_counted(
         slice_between(full_text, "Runes", ["Battlefields", "Main Deck"]),
         r"\d{1,2}",
@@ -213,6 +292,11 @@ def parse_decklist(html):
         name = m.group(1).strip()
         battlefields[name] = battlefields.get(name, 0) + 1
 
+    # "Legend <name>" between the decklist header and the runes section
+    legend = slice_between(full_text, "Decklist Legend", ["Runes"]).strip() or None
+    if legend and len(legend) > 60:
+        legend = None
+
     # "Updated on Jun 17, 2026" — best available proxy for the event date
     date = None
     m = re.search(r"Updated on ([A-Z][a-z]{2} \d{1,2}, \d{4})", full_text)
@@ -222,7 +306,8 @@ def parse_decklist(html):
         except ValueError:
             pass
 
-    return {"cards": cards, "runes": runes, "battlefields": battlefields, "date": date}
+    return {"cards": cards, "sideboard": sideboard, "runes": runes,
+            "battlefields": battlefields, "legend": legend, "date": date}
 
 
 def download_image(url, dest_path):
@@ -255,8 +340,10 @@ def main():
         save_config(deck_config)
         print(f"Added {args.label} to config.")
 
+    meta_decks = []
     if not args.no_discover:
-        if discover_decks(deck_config):
+        added, meta_decks = discover_decks(deck_config)
+        if added:
             save_config(deck_config)
 
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
@@ -280,7 +367,7 @@ def main():
             print(f"  Warning: no cards parsed for {label}, check page structure")
             continue
 
-        for name in parsed["cards"]:
+        for name in list(parsed["cards"]) + list(parsed["sideboard"]):
             card = db.lookup_card(conn, name)
             if not card:
                 print(f"  Unknown card (not in catalogue): {name}")
@@ -298,15 +385,20 @@ def main():
             "main": parsed["cards"],
             "rune": parsed["runes"],
             "battlefield": parsed["battlefields"],
+            "side": parsed["sideboard"],
         }, event_date=parsed.get("date"))
         fetched += 1
-        print(f"  Parsed {len(parsed['cards'])} unique cards")
+        print(f"  Parsed {len(parsed['cards'])} main + {sum(parsed['sideboard'].values())} side cards")
         time.sleep(1)
 
     conn.commit()
+    meta_fetched = fetch_meta_decks(conn, meta_decks) if meta_decks else 0
     total = db.export_decks_json(conn)
+    events = db.export_meta_json(conn)
+    conn.commit()
     conn.close()
-    print(f"\nStored {fetched} fetched decks; exported {total} decks to {OUTPUT_FILE}")
+    print(f"\nStored {fetched} Diana + {meta_fetched} new meta decks; "
+          f"exported {total} Diana decks and meta for {events} events")
     print("Open index.html (via a local server or GitHub Pages) to see the comparison.")
 
 
