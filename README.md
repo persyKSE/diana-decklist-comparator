@@ -71,8 +71,11 @@ off-meta variant?" or "did the CN circuit build differently?".
   hover tooltips and legend/leaf highlighting.
 - **Compare** — git-style diff of any two lists and a swap-distance
   matrix with a "closest to the field" ranking.
-- **Decks** — every source list; click one for its full decklist in a
-  modal (grouped by cost, with an in-modal compare-diff).
+- **Decks** — every source list; click one for a visual decklist modal
+  (card-art stacks per cost column, with an in-modal compare-diff).
+- **Card details** — click any card image or inclusion-table row for
+  its rules text, cost/domain/might, copy-count splits, field-wide play
+  rate, package membership, and every deck running it.
 
 ### Install as an app (PWA)
 

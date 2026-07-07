@@ -395,6 +395,7 @@ def main():
     meta_fetched = fetch_meta_decks(conn, meta_decks) if meta_decks else 0
     total = db.export_decks_json(conn)
     events = db.export_meta_json(conn)
+    db.export_cards_json(conn)
     conn.commit()
     conn.close()
     print(f"\nStored {fetched} Diana + {meta_fetched} new meta decks; "

@@ -48,7 +48,8 @@ CREATE TABLE IF NOT EXISTS cards (
     rarity    TEXT,
     set_name  TEXT,
     promo     INTEGER DEFAULT 0,
-    image_url TEXT
+    image_url TEXT,
+    effect    TEXT                -- rules text, plain
 );
 CREATE INDEX IF NOT EXISTS idx_cards_norm ON cards(norm_name);
 
@@ -94,6 +95,9 @@ def migrate_schema(conn):
     if cols and "archetype" not in cols:
         conn.execute("ALTER TABLE decks ADD COLUMN archetype TEXT "
                      f"DEFAULT '{DIANA_ARCHETYPE}'")
+    card_cols = [r[1] for r in conn.execute("PRAGMA table_info(cards)")]
+    if card_cols and "effect" not in card_cols:
+        conn.execute("ALTER TABLE cards ADD COLUMN effect TEXT")
     # deck_cards' section CHECK can't be altered in place; rebuild if it
     # predates the 'side' section.
     row = conn.execute(
@@ -291,6 +295,35 @@ def export_meta_json(conn, path=META_JSON):
     return len(events)
 
 
+def export_cards_json(conn, path=None):
+    """Write cards.json/cards.js: full details for every card that appears
+    in any Diana deck section — powers the viewer's card-detail modal."""
+    path = path or (Path(__file__).parent / "cards.json")
+    out = {}
+    for row in conn.execute(
+        "SELECT DISTINCT card_name FROM deck_cards dc JOIN decks d ON d.id = dc.deck_id "
+        "WHERE d.archetype = ?", (DIANA_ARCHETYPE,)
+    ):
+        name = row["card_name"]
+        card = lookup_card(conn, name)
+        if not card:
+            continue
+        out[name] = {
+            "code": card["code"],
+            "cost": card["cost"],
+            "type": card["type"],
+            "color": json.loads(card["color"]) if card["color"] else [],
+            "might": card["might"],
+            "rarity": card["rarity"],
+            "tags": json.loads(card["tags"]) if card["tags"] else [],
+            "effect": card["effect"],
+        }
+    payload = json.dumps(out, indent=1)
+    Path(path).write_text(payload)
+    Path(path).with_suffix(".js").write_text("window.CARDS = " + payload + ";\n")
+    return len(out)
+
+
 def migrate_from_json(conn, path=DECKS_JSON):
     """One-time import of a legacy decks.json produced by the old scraper."""
     decks = json.loads(Path(path).read_text())
@@ -315,8 +348,9 @@ def main():
     elif cmd == "export":
         n = export_decks_json(conn)
         m = export_meta_json(conn)
+        k = export_cards_json(conn)
         conn.commit()
-        print(f"Exported {n} Diana decks to {DECKS_JSON.name}; meta for {m} events to {META_JSON.name}")
+        print(f"Exported {n} Diana decks, meta for {m} events, {k} card details")
     elif cmd == "stats":
         for table in ("cards", "events", "decks", "deck_cards"):
             n = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]

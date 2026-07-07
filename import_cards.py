@@ -36,6 +36,16 @@ def to_int(value):
         return None
 
 
+def clean_effect(html):
+    """Rules text arrives with HTML markup; keep it as readable plain text."""
+    if not html:
+        return None
+    import re
+    text = re.sub(r"<br\s*/?>", "\n", html)
+    text = re.sub(r"<[^>]+>", "", text)
+    return text.strip() or None
+
+
 def fetch_catalogue():
     scraper = cloudscraper.create_scraper()
     resp = scraper.get(API_URL, headers=HEADERS, timeout=30)
@@ -52,15 +62,15 @@ def main():
     for card in fetch_catalogue():
         conn.execute(
             "INSERT INTO cards (code, name, norm_name, color, cost, type, "
-            "supertype, might, tags, rarity, set_name, promo, image_url) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
+            "supertype, might, tags, rarity, set_name, promo, image_url, effect) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
             "ON CONFLICT(code) DO UPDATE SET name = excluded.name, "
             "norm_name = excluded.norm_name, color = excluded.color, "
             "cost = excluded.cost, type = excluded.type, "
             "supertype = excluded.supertype, might = excluded.might, "
             "tags = excluded.tags, rarity = excluded.rarity, "
             "set_name = excluded.set_name, promo = excluded.promo, "
-            "image_url = excluded.image_url",
+            "image_url = excluded.image_url, effect = excluded.effect",
             (
                 card["id"],
                 card["name"],
@@ -75,6 +85,7 @@ def main():
                 card["set_name"] or None,
                 1 if card["promo"] else 0,
                 card["image"] or None,
+                clean_effect(card["effect"]),
             ),
         )
         count += 1

@@ -200,6 +200,31 @@
   #toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--panel2); color: var(--text); border: 1px solid var(--border); padding: 10px 18px; border-radius: 10px; font-size: 13px; box-shadow: var(--shadow); z-index: 100001; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
   #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+  /* ---- Card-art UI ---- */
+  .view-head { position: relative; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); padding: 18px 22px; overflow: hidden; }
+  .view-head .hero-art { position: absolute; right: -14px; top: -46px; width: 215px; opacity: 0.33; pointer-events: none;
+    -webkit-mask-image: linear-gradient(to left, black 25%, transparent 85%); mask-image: linear-gradient(to left, black 25%, transparent 85%); }
+  .view-head h1, .view-head p { position: relative; }
+  .gem { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--border); font-size: 11px; font-weight: 800; margin-right: 3px; vertical-align: middle; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 3px; vertical-align: middle; box-shadow: 0 0 4px rgba(0,0,0,0.4); }
+  .might { font-size: 11px; font-weight: 700; color: var(--muted); margin-left: 2px; }
+  img.cimg, .stack img.scard { cursor: pointer; }
+
+  .stacks { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; padding: 4px 0; }
+  .stack-col { display: flex; flex-direction: column; }
+  .sc-head { font-size: 11px; font-weight: 700; color: var(--muted); text-align: center; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .scwrap { position: relative; margin-top: -104px; }
+  .scwrap:first-of-type { margin-top: 0; }
+  .scwrap img.scard { width: 94px; border-radius: 6px; display: block; box-shadow: 0 -3px 10px rgba(0,0,0,0.55); background: var(--panel2); }
+  .scwrap .sc-count { position: absolute; top: 3px; right: 3px; background: rgba(10,14,25,0.85); color: var(--text); font-size: 11px; font-weight: 800; border-radius: 6px; padding: 1px 5px; border: 1px solid var(--border); }
+
+  .cardmodal-body { display: flex; gap: 16px; }
+  .cardmodal-body .cm-img { width: 190px; flex-shrink: 0; }
+  .cardmodal-body .cm-img img { width: 100%; border-radius: 10px; display: block; }
+  .cardmodal-body .cm-info { flex: 1; min-width: 0; font-size: 13.5px; }
+  .cm-effect { background: var(--panel2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; white-space: pre-wrap; line-height: 1.5; margin: 10px 0; font-size: 13px; }
+  @media (max-width: 560px) { .cardmodal-body { flex-direction: column; } .cardmodal-body .cm-img { width: 150px; } }
+
   @media (max-width: 800px) {
     .app { flex-direction: column; }
     .sidebar { width: auto; height: auto; position: sticky; top: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 6px; padding: 10px 12px; border-right: none; border-bottom: 1px solid var(--border); background: var(--bg); z-index: 60; }
@@ -242,6 +267,7 @@
 
 <script src="decks.js"></script>
 <script src="meta.js"></script>
+<script src="cards.js"></script>
 <script>
 let allDecks = [];      // full set (tagged with _region / _cluster / _clusterName)
 let globalDecks = [];   // active (filtered) set — every view reads this
@@ -261,6 +287,20 @@ let packagesCache = null;   // findPackages over the active set, shared by views
 
 const PALETTE = ['#7aa2e8', '#54c08a', '#e3a94e', '#b978e0', '#e07070', '#4fc4d6', '#c98a5a', '#e06bb0'];
 const REGION_ORDER = ['NA', 'EU', 'OCE', 'CN', 'Other'];
+const DOMAIN_COLORS = { Fury: '#e05252', Calm: '#54c08a', Mind: '#5a8fe0', Body: '#c9803a', Chaos: '#b978e0', Order: '#e3c95a', Colorless: '#8b96b2' };
+
+function gemsFor(name) {
+  const m = cardMeta[name];
+  if (!m) return '';
+  let html = '';
+  if (m.cost != null) html += '<span class="gem" title="Energy cost">' + m.cost + '</span>';
+  (m.color || []).forEach(dom => {
+    html += '<span class="dot" style="background:' + (DOMAIN_COLORS[dom] || DOMAIN_COLORS.Colorless) + '" title="' + attr(dom) + '"></span>';
+  });
+  const might = window.CARDS && CARDS[name] ? CARDS[name].might : null;
+  if (might != null) html += '<span class="might" title="Might">⚔' + might + '</span>';
+  return html;
+}
 
 const VIEWS = {
   build:   { title: 'Build', desc: 'A weighted consensus deck from the filtered finishes, the flex slots that are still live, and a coach to rate your own list.', render: renderBuild },
@@ -915,7 +955,7 @@ function renderBuild(ctx) {
     const why = 'In ' + c.decksIn + '/' + N + ' decks, avg ' + c.avgCopies.toFixed(1) + ' copies, weighted score ' + c.score.toFixed(1) +
       (pkg ? '. Travels with ' + pkg.cards.filter(n => n !== c.name).join(', ') + ' (' + pkg.decks + '/' + N + ' decks run the package together).' : '.');
     html += '<div class="card-row ' + cls + '" data-card="' + attr(c.name) + '" title="' + attr(why) + '">' + cardImg(c.name) +
-      '<span class="card-name">' + escHtml(c.name) + tag + '</span><span class="card-meta">score ' + c.score.toFixed(1) + escHtml(pkgNote) + '</span><span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
+      '<span class="card-name">' + gemsFor(c.name) + ' ' + escHtml(c.name) + tag + '</span><span class="card-meta">score ' + c.score.toFixed(1) + escHtml(pkgNote) + '</span><span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
   });
 
   let runeCounts = {}, bfCounts = {};
@@ -932,7 +972,7 @@ function renderBuild(ctx) {
   html += '<h2>Alternative flex cards (' + flexCards.length + ')</h2><p class="sub">Click to add to the prototype (auto-removes the lowest-scoring flex card to make room).</p>';
   flexCards.slice(0, 20).forEach(c => {
     html += '<div class="card-row flex interactive-flex" data-card="' + attr(c.name) + '" onclick="addCard(\'' + c.name.replace(/'/g, "\\'") + '\')">' + cardImg(c.name) +
-      '<span class="card-name">' + escHtml(c.name) + '</span><span class="card-meta">in ' + c.decksIn + '/' + N + ' decks · score ' + c.score.toFixed(1) + '</span><span class="count-badge">+</span></div>';
+      '<span class="card-name">' + gemsFor(c.name) + ' ' + escHtml(c.name) + '</span><span class="card-meta">in ' + c.decksIn + '/' + N + ' decks · score ' + c.score.toFixed(1) + '</span><span class="count-badge">+</span></div>';
   });
 
   html += '<h2>Rate my deck</h2><p class="sub">Paste your main deck (one card per line: "3 Gust", "3x Gust", or "Gust x3"). Analysis updates as you type — your list is saved in this browser.</p>';
@@ -989,12 +1029,12 @@ function renderAnalyze(ctx) {
   }
 
   html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the Diana field: how many decks run it, at what counts. The Field column is the card\'s play rate across all other archetypes — high means format staple, low means Diana-specific tech.</p>';
-  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th><th>Field</th></tr></thead><tbody>';
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost/Domain</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th><th>Field</th></tr></thead><tbody>';
   [...rankedCards].sort((a, b) => b.decksIn - a.decksIn || b.score - a.score).forEach(c => {
     const meta = cardMeta[c.name] || {};
     const pct = Math.round(100 * c.decksIn / N);
     const distBadges = Object.entries(c.dist).sort((a, b) => b[0] - a[0]).map(([copies, nD]) => '<span class="dist-badge">x' + copies + ' in ' + nD + (nD > 1 ? ' decks' : ' deck') + '</span>').join('');
-    html += '<tr data-card="' + attr(c.name) + '"><td>' + cardImg(c.name) + escHtml(c.name) + '</td><td>' + (meta.cost != null ? meta.cost : '—') + '</td><td>' + (meta.type || '—') +
+    html += '<tr data-card="' + attr(c.name) + '" data-cardopen="' + attr(c.name) + '" style="cursor:pointer;"><td>' + cardImg(c.name) + escHtml(c.name) + '</td><td>' + gemsFor(c.name) + '</td><td>' + (meta.type || '—') +
       '</td><td><span class="incl-bar" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + c.decksIn + '/' + N + ' (' + pct + '%)</td><td class="num">' + c.avgCopies.toFixed(1) + '</td><td>' + distBadges + '</td><td>' + fieldBadge(c.name) + '</td></tr>';
   });
   html += '</tbody></table></div>';
@@ -1013,7 +1053,7 @@ function renderAnalyze(ctx) {
     html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>In sideboards</th><th class="num">Avg copies</th><th></th></tr></thead><tbody>';
     rows.forEach(([name, s]) => {
       const swing = mainNames.has(name) ? '<span class="dist-badge" style="color:var(--flex)">swing card</span>' : '';
-      html += '<tr data-card="' + attr(name) + '"><td>' + cardImg(name) + escHtml(name) + '</td>' +
+      html += '<tr data-card="' + attr(name) + '" data-cardopen="' + attr(name) + '" style="cursor:pointer;"><td>' + cardImg(name) + escHtml(name) + '</td>' +
         '<td><span class="incl-bar" style="width:' + Math.round(100 * s.decksIn / sideDecks.length * 0.6) + 'px"></span>' + s.decksIn + '/' + sideDecks.length + '</td>' +
         '<td class="num">' + (s.total / s.decksIn).toFixed(1) + '</td><td>' + swing + '</td></tr>';
     });
@@ -1172,12 +1212,20 @@ function openDeckModal(i) {
   const buckets = {};
   d.cards.forEach(c => { const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? cardMeta[c.name].cost : '?'; (buckets[cost] = buckets[cost] || []).push(c); });
   const costKeys = Object.keys(buckets).sort((a, b) => (a === '?' ? 99 : +a) - (b === '?' ? 99 : +b));
-  let body = '';
+  // Visual deck view: overlapping card-image stacks per cost column.
+  let body = '<div class="stacks">';
   costKeys.forEach(k => {
-    body += '<div class="cost-group"><div class="cost-head">' + (k === '?' ? 'Other' : 'Cost ' + k) + '</div>';
-    buckets[k].sort((a, b) => a.name.localeCompare(b.name)).forEach(c => { body += '<span class="mcard" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>' + escHtml(c.name) + '</span><span class="mcard-c">x' + c.count + '</span></span>'; });
-    body += '</div>';
+    body += '<div class="stack-col"><div class="sc-head">' + (k === '?' ? 'Other' : 'Cost ' + k) + '</div><div class="stack">';
+    buckets[k].sort((a, b) => a.name.localeCompare(b.name)).forEach(c => {
+      const img = imageMap[c.name];
+      body += '<div class="scwrap" data-card="' + attr(c.name) + '">' +
+        (img ? '<img class="scard" data-card="' + attr(c.name) + '" src="' + attr(img) + '" alt="' + attr(c.name) + '">'
+             : '<div class="noimg" data-card="' + attr(c.name) + '" style="width:94px;height:131px;"></div>') +
+        (c.count > 1 ? '<span class="sc-count">x' + c.count + '</span>' : '') + '</div>';
+    });
+    body += '</div></div>';
   });
+  body += '</div>';
   let extra = '';
   if (d.sideboard && d.sideboard.length) extra += '<div class="cost-head">Sideboard</div>' + d.sideboard.map(s => '<span class="mcard" data-card="' + attr(s.name) + '">' + cardImg(s.name) + '<span>' + escHtml(s.name) + '</span><span class="mcard-c">x' + s.count + '</span></span>').join('');
   if (d.runes && d.runes.length) extra += '<div class="cost-head">Runes</div>' + d.runes.map(r => '<span class="pkg-chip" data-card="' + attr(r.name) + '">' + cardImg(r.name) + escHtml(r.name) + ' x' + r.count + '</span>').join('');
@@ -1194,6 +1242,53 @@ function openDeckModal(i) {
   modal.querySelector('.modal').innerHTML = inner;
   modal.classList.add('show');
 }
+function openCardModal(name) {
+  const details = (window.CARDS && CARDS[name]) || {};
+  const meta = cardMeta[name] || {};
+  const N = globalDecks.length;
+  const stat = rankedCards.find(c => c.name === name);
+  const img = imageMap[name];
+
+  let info = '<div style="color:var(--muted); font-size:12.5px; margin-bottom:8px;">' +
+    escHtml([details.type || meta.type, details.rarity, details.code].filter(Boolean).join(' · ')) + '</div>';
+  info += '<div>' + gemsFor(name) + (details.tags && details.tags.length ? ' <span class="card-meta">' + escHtml(details.tags.join(', ')) + '</span>' : '') + '</div>';
+  if (details.effect) {
+    info += '<div class="cm-effect">' + escHtml(details.effect).replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆') + '</div>';
+  }
+
+  // Diana-field stats
+  if (stat) {
+    const distBadges = Object.entries(stat.dist).sort((a, b) => b[0] - a[0]).map(([copies, nD]) => '<span class="dist-badge">x' + copies + ' in ' + nD + '</span>').join(' ');
+    info += '<div class="cost-head">In the Diana field</div><div>Main-decked by <strong>' + stat.decksIn + '/' + N + '</strong> (' +
+      Math.round(100 * stat.decksIn / N) + '%), avg ' + stat.avgCopies.toFixed(1) + ' copies. ' + distBadges + '</div>';
+  } else {
+    info += '<div class="cost-head">In the Diana field</div><div>Not main-decked in the current filtered set.</div>';
+  }
+  const sideIn = globalDecks.filter(d => (d.sideboard || []).some(c => c.name === name)).length;
+  if (sideIn) info += '<div style="margin-top:4px;">Sideboarded by ' + sideIn + '/' + N + ' decks.</div>';
+  if (window.META && META.otherDecks) {
+    const pct = Math.round(100 * (META.cardBase[name] || 0) / META.otherDecks);
+    info += '<div style="margin-top:4px;">Played in ' + pct + '% of the non-Diana field' + (pct >= 25 ? ' — a format staple.' : pct <= 5 ? ' — Diana-specific tech.' : '.') + '</div>';
+  }
+  const pkg = packageOf(name);
+  if (pkg) info += '<div style="margin-top:4px;">Travels with ' + pkg.cards.filter(n => n !== name).map(escHtml).join(', ') + ' (package in ' + pkg.decks + '/' + N + ' decks).</div>';
+
+  const runners = globalDecks.map((d, i) => ({ i, d, c: d.cards.find(c => c.name === name) })).filter(x => x.c);
+  if (runners.length) {
+    info += '<div class="cost-head">Decks running it</div>';
+    runners.forEach(x => { info += '<div class="card-row"><span class="card-name">' + deckRef(x.i, x.d.label) + '</span><span class="card-meta">x' + x.c.count + '</span></div>'; });
+  }
+
+  const inner =
+    '<div class="modal-head"><div><div class="modal-title">' + escHtml(name) + '</div></div>' +
+    '<button class="icon-btn" onclick="closeModal()">✕</button></div>' +
+    '<div class="cardmodal-body"><div class="cm-img">' + (img ? '<img src="' + attr(img) + '" alt="">' : '<div class="noimg" style="width:100%;height:260px;"></div>') + '</div>' +
+    '<div class="cm-info">' + info + '</div></div>';
+  const modal = document.getElementById('modal');
+  modal.querySelector('.modal').innerHTML = inner;
+  modal.classList.add('show');
+}
+
 function modalDiff(i) {
   const sel = document.getElementById('modalCmp').value;
   const out = document.getElementById('modalDiffOut');
@@ -1211,7 +1306,7 @@ function render() {
   if (!allDecks.length) return;
   const ci = document.getElementById('coachInput'); if (ci) coachText = ci.value;
   const view = VIEWS[currentView] || VIEWS.build;
-  let html = '<div class="view-head"><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(view.desc) + '</p></div>';
+  let html = '<div class="view-head"><img class="hero-art" src="cache/images/Diana_Lunari.webp" alt=""><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(view.desc) + '</p></div>';
   html += renderFilterBar();
   if (!globalDecks.length) html += '<div class="empty">No decks match the current filters. <span class="deck-link" onclick="clearFilters()">Reset filters</span>.</div>';
   else html += view.render(computeContext());
@@ -1267,6 +1362,15 @@ document.addEventListener('mousemove', e => {
 document.addEventListener('click', e => {
   const ap = e.target.closest('[data-apply]');
   if (ap) { applyCoachSwap(ap.getAttribute('data-apply'), parseInt(ap.getAttribute('data-delta'), 10)); return; }
+  // Clicking a card image opens the card detail modal — except in rows whose
+  // whole surface already adds/removes cards.
+  if ((e.target.classList.contains('cimg') || e.target.classList.contains('scard') || e.target.classList.contains('noimg')) &&
+      !e.target.closest('.interactive-flex')) {
+    const n = e.target.getAttribute('data-card');
+    if (n) { openCardModal(n); return; }
+  }
+  const co = e.target.closest('[data-cardopen]');
+  if (co) { openCardModal(co.getAttribute('data-cardopen')); return; }
   const dl = e.target.closest('[data-deck]');
   if (dl) { openDeckModal(parseInt(dl.getAttribute('data-deck'), 10)); return; }
   if (e.target.id === 'modal') closeModal();
