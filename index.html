@@ -318,7 +318,7 @@ let nameLookup = {};
 let nonMainNames = new Set();
 let currentView = 'build';
 let clusterOptions = [];  // {gi, name, n} over the full set
-let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false };
+let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false };
 let coachTimer = null;
 let packagesCache = null;   // findPackages over the active set, shared by views
 let paletteIndex = 0;       // highlighted row in the command palette
@@ -390,7 +390,7 @@ function indexCards(decks) {
 function computeStats(decks) {
   const stats = {};
   decks.forEach(d => {
-    const w = d.weight || 1;
+    const w = effWeight(d);
     d.cards.forEach(c => {
       if (!stats[c.name]) stats[c.name] = { decksIn: 0, weightedScore: 0, counts: [], weights: [], dist: {} };
       const s = stats[c.name];
@@ -416,8 +416,8 @@ function costBucket(name) {
 // Placement-weighted average curve of a deck set — the builder's target shape.
 function targetCurveOf(decks) {
   const target = Array(MAX_COST_BUCKET + 1).fill(0);
-  const totalW = decks.reduce((a, d) => a + (d.weight || 1), 0) || 1;
-  decks.forEach(d => d.cards.forEach(c => { target[costBucket(c.name)] += (d.weight || 1) * c.count / totalW; }));
+  const totalW = decks.reduce((a, d) => a + effWeight(d), 0) || 1;
+  decks.forEach(d => d.cards.forEach(c => { target[costBucket(c.name)] += effWeight(d) * c.count / totalW; }));
   return target;
 }
 
@@ -441,9 +441,9 @@ function priceTag(list) {
 // Consensus runes / battlefields / sideboard over the active set — the
 // parts of a registrable deck that the 40-card prototype alone omits.
 function consensusExtras(N) {
-  const totalW = globalDecks.reduce((a, d) => a + (d.weight || 1), 0) || 1;
+  const totalW = globalDecks.reduce((a, d) => a + effWeight(d), 0) || 1;
   const runeAvg = {};
-  globalDecks.forEach(d => (d.runes || []).forEach(r => { runeAvg[r.name] = (runeAvg[r.name] || 0) + (d.weight || 1) * r.count / totalW; }));
+  globalDecks.forEach(d => (d.runes || []).forEach(r => { runeAvg[r.name] = (runeAvg[r.name] || 0) + effWeight(d) * r.count / totalW; }));
   const runes = Object.entries(runeAvg).map(([name, avg]) => ({ name, avg, count: Math.round(avg) }))
     .sort((a, b) => b.avg - a.avg);
   // nudge rounding so the split still sums to 12
@@ -467,8 +467,8 @@ function consensusExtras(N) {
   globalDecks.forEach(d => (d.sideboard || []).forEach(c => {
     if (!sideStats[c.name]) sideStats[c.name] = { score: 0, decksIn: 0, counts: [], weights: [] };
     const s = sideStats[c.name];
-    s.score += (d.weight || 1) * c.count; s.decksIn += 1;
-    s.counts.push(c.count); s.weights.push(d.weight || 1);
+    s.score += effWeight(d) * c.count; s.decksIn += 1;
+    s.counts.push(c.count); s.weights.push(effWeight(d));
   }));
   const side = [];
   let total = 0;
@@ -910,7 +910,7 @@ const OPT_W = { curve: 0.35, pkg: 0.8 };
 function optScore(counts) {
   const list = Object.entries(counts).map(([name, count]) => ({ name, count }));
   let sim = 0, wSum = 0;
-  globalDecks.forEach(d => { const w = d.weight || 1; sim += w * deckDistance(list, d.cards); wSum += w; });
+  globalDecks.forEach(d => { const w = effWeight(d); sim += w * deckDistance(list, d.cards); wSum += w; });
   sim = -sim / (wSum || 1);
   const target = targetCurveOf(globalDecks);
   const cur = Array(MAX_COST_BUCKET + 1).fill(0);
@@ -997,7 +997,7 @@ function runOptimizer() {
   const after = avgDistTo(optimized);
   const out = document.getElementById('optResults');
   let html = '<div class="summary-box"><strong>Optimized from ' + startedFrom + '.</strong> Average distance to the winning lists: ' +
-    before.toFixed(1) + ' → <strong>' + after.toFixed(1) + '</strong> swaps. Scored on similarity to winners, curve fit, and package integrity — <em>consensus</em>-optimal; no win/match data exists yet to optimize on results.</div>';
+    before.toFixed(1) + ' → <strong>' + after.toFixed(1) + '</strong> swaps. Scored on similarity to winners, curve fit, and package integrity — <em>consensus</em>-optimal. Events publish conversion rates per archetype (see Analyze), but no per-list match records, so no optimizer can score an individual decklist on results.</div>';
   if (!moves.length) {
     html += '<div class="summary-box">No improving swap found — this list already sits at a local optimum of the field consensus.</div>';
   } else {
@@ -1077,7 +1077,23 @@ function toggleFilter(key, val) {
 }
 function setDateFilter(which, val) { filters[which] = val; applyFilters(); }
 function toggleDedupe() { filters.dedupe = !filters.dedupe; applyFilters(); }
-function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false }; applyFilters(); }
+function toggleFieldWeight() { filters.fieldWeight = !filters.fieldWeight; applyFilters(); }
+function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false }; applyFilters(); }
+
+// A result from a 1900-player event is stronger evidence than the same
+// result from a 1100-player one. Scale placement weight by sqrt of field
+// size relative to the median (sqrt keeps big events from dominating).
+function medianAttendance() {
+  const a = allDecks.map(d => d.attendance).filter(Boolean).sort((x, y) => x - y);
+  return a.length ? a[Math.floor(a.length / 2)] : 0;
+}
+function effWeight(d) {
+  const base = d.weight || 1;
+  if (!filters.fieldWeight) return base;
+  const med = medianAttendance();
+  if (!med || !d.attendance) return base;
+  return base * Math.sqrt(d.attendance / med);
+}
 
 // Keep one list per player (best placement) — removes near-duplicate
 // double-counting toward the "consensus" when a player brought two lists.
@@ -1117,10 +1133,13 @@ function renderFilterBar() {
     html += '<div class="fgroup fdate"><span class="flabel">Dates</span>From <select onchange="setDateFilter(\'from\',this.value)">' + opt(filters.from) + '</select> to <select onchange="setDateFilter(\'to\',this.value)">' + opt(filters.to) + '</select></div>';
   }
   const dupPlayers = allDecks.length - dedupeByPlayer(allDecks).length;
+  const haveAttendance = allDecks.some(d => d.attendance);
   html += '<div class="fgroup"><span class="flabel">Sample</span>' +
     '<span class="chip' + (filters.dedupe ? ' on' : '') + '" onclick="toggleDedupe()" title="Keep one list per player (best placement) so a player who brought two near-identical lists doesn\'t double-count toward the consensus">one list per player' +
-    (dupPlayers ? ' (−' + dupPlayers + ')' : '') + '</span></div>';
-  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe;
+    (dupPlayers ? ' (−' + dupPlayers + ')' : '') + '</span>' +
+    (haveAttendance ? '<span class="chip' + (filters.fieldWeight ? ' on' : '') + '" onclick="toggleFieldWeight()" title="Scale each deck&#39;s weight by the square root of (field size ÷ median field size), so a result from a 1900-player event counts for more than the same result from a 1100-player one">weight by field size</span>' : '') +
+    '</div>';
+  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe || filters.fieldWeight;
   const small = globalDecks.length < 20
     ? '<span style="color:var(--flex)"> · small sample — inclusion %s are noisy; see the ± intervals in Analyze</span>' : '';
   html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + allDecks.length + ' decks' + small + '</span>' +
@@ -1269,6 +1288,58 @@ function renderAnalyze(ctx) {
     }
   }
 
+  // ---- Deck performance: the only published results data ----
+  if (window.META && META.performance && META.performance.fieldDay1) {
+    const P = META.performance;
+    const diana = P.archetypes.find(a => a.slug === P.dianaLegendSlug);
+    const fieldPct = 100 * P.fieldConversion;
+    html += '<h2>Deck performance (Day 1 → Day 2)</h2>';
+    html += '<p class="sub">Events publish no per-player match records, but they do publish how many decks of each archetype started Day 1 and how many survived into Day 2. That <strong>conversion rate</strong> is a real performance measure across <strong>' + P.fieldDay1.toLocaleString() + '</strong> recorded decks — far more data than the ' + allDecks.length + ' top-cut lists everything else here is built on. It is archetype-level, so it cannot rank individual Diana lists.</p>';
+    if (diana) {
+      const idx = diana.conversion / P.fieldConversion;
+      const rank = P.archetypes.indexOf(diana) + 1;
+      html += '<div class="summary-box"><strong>Diana converts ' + (100 * diana.conversion).toFixed(1) + '%</strong> of its Day 1 decks into Day 2 (' + diana.day2 + '/' + diana.day1 + '), against a field average of ' + fieldPct.toFixed(1) + '%. ' +
+        'That is <strong>' + idx.toFixed(2) + '×</strong> the field — <strong>' + rank + (rank === 1 ? 'st' : rank === 2 ? 'nd' : rank === 3 ? 'rd' : 'th') + ' best</strong> of ' + P.archetypes.length + ' archetypes. The deck is genuinely strong, not just popular.</div>';
+    }
+    // Diana conversion per event, over time
+    const evs = META.events.filter(e => e.dianaDay1 && e.day1);
+    if (evs.length >= 2) {
+      const W = 660, H = 200, mL = 40, mB = 30, mT = 12, mR = 16;
+      const pw = W - mL - mR, ph = H - mT - mB;
+      const ymax = Math.max(...evs.map(e => 100 * e.dianaDay2 / e.dianaDay1), fieldPct) * 1.25;
+      const x = i => mL + (evs.length === 1 ? pw / 2 : i / (evs.length - 1) * pw);
+      const y = v => mT + ph - v / ymax * ph;
+      let p = [];
+      [0, 10, 20, 30].filter(v => v <= ymax).forEach(v => {
+        p.push('<line class="grid" x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '"/>');
+        p.push('<text class="axis" x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" text-anchor="end">' + v + '%</text>');
+      });
+      p.push('<polyline points="' + evs.map((e, i) => x(i) + ',' + y(100 * e.day2 / e.day1)).join(' ') + '" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="4 3"/>');
+      const dpts = evs.map((e, i) => ({ x: x(i), y: y(100 * e.dianaDay2 / e.dianaDay1), e }));
+      p.push('<polyline points="' + dpts.map(q => q.x + ',' + q.y).join(' ') + '" fill="none" stroke="var(--accent)" stroke-width="3"/>');
+      dpts.forEach(q => p.push('<circle class="pt" data-tip="' + attr(q.e.name + ': Diana ' + q.e.dianaDay2 + '/' + q.e.dianaDay1 + ' = ' + (100 * q.e.dianaDay2 / q.e.dianaDay1).toFixed(1) + '% vs field ' + (100 * q.e.day2 / q.e.day1).toFixed(1) + '%' + (q.e.attendance ? ' · ' + q.e.attendance + ' players' : '')) + '" cx="' + q.x + '" cy="' + q.y + '" r="4" fill="var(--accent)"/>'));
+      evs.forEach((e, i) => p.push('<text class="axis" x="' + x(i) + '" y="' + (H - 10) + '" font-size="10" text-anchor="middle">' + escHtml(e.name.split(' ')[0]) + '</text>'));
+      html += '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + p.join('') + '</svg>';
+      html += '<div class="legend"><span class="legend-chip"><span class="legend-swatch" style="background:var(--accent)"></span>Diana conversion</span>' +
+        '<span class="legend-chip"><span class="legend-swatch" style="background:var(--muted)"></span>Whole-field average</span></div>';
+    }
+    // Archetype leaderboard — who you actually have to beat
+    const top = P.archetypes.slice(0, 8), bottom = P.archetypes.slice(-3);
+    html += '<h2>What you have to beat</h2><p class="sub">Archetypes ranked by conversion rate (min. 20 Day 1 decks). The ones above Diana are the decks that most often survive to Day 2 — target your sideboard at these, not at whatever is merely popular.</p>';
+    html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Day 1</th><th class="num">Day 2</th><th>Conversion</th><th class="num">vs field</th></tr></thead><tbody>';
+    const maxConv = P.archetypes[0].conversion;
+    [...top, null, ...bottom].forEach(a => {
+      if (!a) { html += '<tr><td colspan="5" style="text-align:center;color:var(--muted)">… ' + (P.archetypes.length - top.length - bottom.length) + ' more …</td></tr>'; return; }
+      const isD = a.slug === P.dianaLegendSlug;
+      const idx = a.conversion / P.fieldConversion;
+      html += '<tr' + (isD ? ' style="font-weight:700"' : '') + '><td>' + escHtml(a.legend) + (isD ? ' ★' : '') + '</td>' +
+        '<td class="num">' + a.day1 + '</td><td class="num">' + a.day2 + '</td>' +
+        '<td><span class="incl-bar" style="width:' + Math.round(120 * a.conversion / maxConv) + 'px;' + (isD ? '' : 'background:var(--muted);opacity:0.55;') + '"></span>' + (100 * a.conversion).toFixed(1) + '%</td>' +
+        '<td class="num" style="color:' + (idx >= 1 ? 'var(--lock)' : 'var(--danger)') + '">' + idx.toFixed(2) + '×</td></tr>';
+    });
+    html += '</tbody></table></div>';
+  }
+
   html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the Diana field: how many decks run it, at what counts. The small grey range under each percentage is the <strong>Wilson 95% interval</strong> — on ' + N + ' decks, 12/13 really means "somewhere around 65–99%", so don\'t over-read a single point estimate. The Field column is the card\'s play rate across all other archetypes — high means format staple, low means Diana-specific tech.</p>';
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost/Domain</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th><th>Field</th></tr></thead><tbody>';
   [...rankedCards].sort((a, b) => b.decksIn - a.decksIn || b.score - a.score).forEach(c => {
@@ -1348,9 +1419,9 @@ function renderAnalyze(ctx) {
     d.cards.forEach(c => { const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? Math.min(cardMeta[c.name].cost, maxCost) : null; if (cost !== null) h[cost] += c.count; });
     return h;
   });
-  const totalW = globalDecks.reduce((a, d) => a + (d.weight || 1), 0);
+  const totalW = globalDecks.reduce((a, d) => a + effWeight(d), 0);
   const avgCurve = Array(maxCost + 1).fill(0);
-  globalDecks.forEach((d, i) => curves[i].forEach((v, c) => avgCurve[c] += v * (d.weight || 1) / totalW));
+  globalDecks.forEach((d, i) => curves[i].forEach((v, c) => avgCurve[c] += v * effWeight(d) / totalW));
   const costMax = Math.max(1, ...curves.flat(), ...avgCurve);
   {
     const W = 660, H = 220, mL = 34, mB = 26, mT = 12, mR = 12;

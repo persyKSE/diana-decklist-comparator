@@ -21,6 +21,8 @@ jobs:
         run: python import_cards.py
       - name: Fetch decklists
         run: python fetch_decks.py
+      - name: Fetch tournament results (field size + day1/day2 conversion)
+        run: python fetch_tournaments.py
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"

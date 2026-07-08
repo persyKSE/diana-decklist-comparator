@@ -4,7 +4,8 @@ window.DECKS = [
     "player": "Alanzq",
     "placement": "1st",
     "event": "Vancouver Regional Qualifier",
-    "event_date": "2026-06-04",
+    "event_date": "2026-05-29",
+    "attendance": 1800,
     "weight": 3.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-1st-alanzq",
     "cards": [
@@ -383,7 +384,8 @@ window.DECKS = [
     "player": "bsweitz",
     "placement": "2nd",
     "event": "Hartford Regional Qualifier",
-    "event_date": "2026-06-29",
+    "event_date": "2026-06-19",
+    "attendance": 1900,
     "weight": 2.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-2nd-bsweitz",
     "cards": [
@@ -774,7 +776,8 @@ window.DECKS = [
     "player": "Dhawally",
     "placement": "Top 4",
     "event": "Vancouver Regional Qualifier",
-    "event_date": "2026-06-04",
+    "event_date": "2026-05-29",
+    "attendance": 1800,
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-top-4-dhawally",
     "cards": [
@@ -1153,7 +1156,8 @@ window.DECKS = [
     "player": "Dhawally",
     "placement": "Top 4",
     "event": "Utrecht Regional Qualifier",
-    "event_date": "2026-06-17",
+    "event_date": "2026-06-12",
+    "attendance": 1900,
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-utrecht-regional-qualifier-top-4-dhawally",
     "cards": [
@@ -1519,7 +1523,8 @@ window.DECKS = [
     "player": "linsanity",
     "placement": "Top 4",
     "event": "Hartford Regional Qualifier",
-    "event_date": "2026-06-29",
+    "event_date": "2026-06-19",
+    "attendance": 1900,
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-4-linsanity",
     "cards": [
@@ -1897,7 +1902,8 @@ window.DECKS = [
     "player": "nice boy",
     "placement": "Top 4",
     "event": "Sydney Regional Qualifier",
-    "event_date": "2026-05-19",
+    "event_date": "2026-05-15",
+    "attendance": 1400,
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-4-nice-boy",
     "cards": [
@@ -2312,7 +2318,8 @@ window.DECKS = [
     "player": "CTG Alanzq",
     "placement": "Top 8",
     "event": "Sydney Regional Qualifier",
-    "event_date": "2026-05-19",
+    "event_date": "2026-05-15",
+    "attendance": 1400,
     "weight": 1.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-8-ctg-alanzq",
     "cards": [
@@ -2654,7 +2661,8 @@ window.DECKS = [
     "player": "asc evansrhim",
     "placement": "Top 8",
     "event": "Hartford Regional Qualifier",
-    "event_date": "2026-06-29",
+    "event_date": "2026-06-19",
+    "attendance": 1900,
     "weight": 1.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-8-asc-evansrhim",
     "cards": [
@@ -3033,6 +3041,7 @@ window.DECKS = [
     "placement": "Top 4",
     "event": "S3 Regional Open Changsha",
     "event_date": "2026-06-29",
+    "attendance": null,
     "weight": 1.5,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-top-4-xuejie-buai-wole",
     "cards": [
@@ -3459,6 +3468,7 @@ window.DECKS = [
     "placement": "2nd",
     "event": "S3 Regional Open Changsha",
     "event_date": "2026-06-29",
+    "attendance": null,
     "weight": 2.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-2nd-banma-chaowan-cc",
     "cards": [
@@ -3850,6 +3860,7 @@ window.DECKS = [
     "placement": "Top 8",
     "event": "S3 Regional Open Tianjin",
     "event_date": "2026-06-10",
+    "attendance": null,
     "weight": 1.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-top-8-gambit-ye",
     "cards": [
@@ -4229,6 +4240,7 @@ window.DECKS = [
     "placement": "2nd",
     "event": "S3 Regional Open Tianjin",
     "event_date": "2026-06-10",
+    "attendance": null,
     "weight": 2.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-2nd-grey-youchai",
     "cards": [
@@ -4608,6 +4620,7 @@ window.DECKS = [
     "placement": "2nd",
     "event": "S3 Regional Open Xian",
     "event_date": "2026-06-04",
+    "attendance": null,
     "weight": 2.0,
     "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-xian-2nd-fangzhuzhiren",
     "cards": [

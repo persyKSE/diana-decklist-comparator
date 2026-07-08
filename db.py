@@ -55,10 +55,24 @@ CREATE TABLE IF NOT EXISTS cards (
 CREATE INDEX IF NOT EXISTS idx_cards_norm ON cards(norm_name);
 
 CREATE TABLE IF NOT EXISTS events (
-    id     INTEGER PRIMARY KEY,
-    name   TEXT NOT NULL UNIQUE,
-    date   TEXT,                  -- ISO date, nullable until known
-    region TEXT
+    id         INTEGER PRIMARY KEY,
+    name       TEXT NOT NULL UNIQUE,
+    date       TEXT,              -- ISO date, nullable until known
+    region     TEXT,
+    slug       TEXT,              -- mobalytics tournament slug
+    attendance INTEGER,           -- field size, from the tournament page
+    day1_decks INTEGER,           -- total decks recorded on day 1
+    day2_decks INTEGER            -- total that converted to day 2
+);
+
+-- Per-archetype day1/day2 counts: the only published performance data.
+CREATE TABLE IF NOT EXISTS event_performance (
+    event_id  INTEGER NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+    legend    TEXT NOT NULL,      -- as printed, e.g. "Scorn of the Moon"
+    slug      TEXT NOT NULL,      -- normalized, e.g. "scorn-of-the-moon"
+    day1      INTEGER NOT NULL,
+    day2      INTEGER NOT NULL,
+    PRIMARY KEY (event_id, legend)
 );
 
 CREATE TABLE IF NOT EXISTS decks (
@@ -101,6 +115,11 @@ def migrate_schema(conn):
         conn.execute("ALTER TABLE cards ADD COLUMN effect TEXT")
     if card_cols and "price" not in card_cols:
         conn.execute("ALTER TABLE cards ADD COLUMN price REAL")
+    ev_cols = [r[1] for r in conn.execute("PRAGMA table_info(events)")]
+    for col, decl in (("slug", "TEXT"), ("attendance", "INTEGER"),
+                      ("day1_decks", "INTEGER"), ("day2_decks", "INTEGER")):
+        if ev_cols and col not in ev_cols:
+            conn.execute(f"ALTER TABLE events ADD COLUMN {col} {decl}")
     # deck_cards' section CHECK can't be altered in place; rebuild if it
     # predates the 'side' section.
     row = conn.execute(
@@ -155,6 +174,49 @@ def upsert_event(conn, name, date=None, region=None):
         (name, date, region),
     )
     return conn.execute("SELECT id FROM events WHERE name = ?", (name,)).fetchone()[0]
+
+
+def slugify(name):
+    return re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
+
+
+def name_from_slug(slug):
+    return " ".join(w.upper() if re.fullmatch(r"s\d", w) else w.capitalize()
+                    for w in slug.split("-"))
+
+
+def upsert_tournament(conn, slug, attendance, date, day1, day2, rows):
+    """Attach field size + the day1/day2 conversion table to an event.
+
+    Events already exist for anything we have decklists from (their names
+    were derived from deck slugs, so slugify(name) round-trips back to the
+    tournament slug). Tournaments we hold no decklists for are still worth
+    storing for meta context, so create those events too.
+    """
+    row = conn.execute(
+        "SELECT id FROM events WHERE slug = ? OR lower(replace(name,' ','-')) = ?",
+        (slug, slug),
+    ).fetchone()
+    if row:
+        event_id = row[0]
+    else:
+        conn.execute("INSERT OR IGNORE INTO events (name) VALUES (?)", (name_from_slug(slug),))
+        event_id = conn.execute("SELECT id FROM events WHERE name = ?", (name_from_slug(slug),)).fetchone()[0]
+
+    conn.execute(
+        "UPDATE events SET slug = ?, attendance = COALESCE(?, attendance), "
+        "day1_decks = ?, day2_decks = ?, "
+        "date = CASE WHEN ? IS NOT NULL THEN ? ELSE date END WHERE id = ?",
+        (slug, attendance, day1, day2, date, date, event_id),
+    )
+    conn.execute("DELETE FROM event_performance WHERE event_id = ?", (event_id,))
+    for r in rows:
+        conn.execute(
+            "INSERT INTO event_performance (event_id, legend, slug, day1, day2) "
+            "VALUES (?, ?, ?, ?, ?)",
+            (event_id, r["legend"], r["slug"], r["day1"], r["day2"]),
+        )
+    return event_id
 
 
 def upsert_deck(conn, label, placement, event_name, weight, url, sections,
@@ -214,7 +276,8 @@ def export_decks_json(conn, path=DECKS_JSON):
     """Write decks.json (Diana decks, enriched) for the static viewer."""
     decks_out = []
     deck_rows = conn.execute(
-        "SELECT d.*, e.name AS event_name, e.date AS event_date "
+        "SELECT d.*, e.name AS event_name, e.date AS event_date, "
+        "e.attendance AS attendance "
         "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
         "WHERE d.archetype = ? ORDER BY d.id", (DIANA_ARCHETYPE,)
     ).fetchall()
@@ -233,6 +296,7 @@ def export_decks_json(conn, path=DECKS_JSON):
             "placement": d["placement"],
             "event": d["event_name"],
             "event_date": d["event_date"],
+            "attendance": d["attendance"],
             "weight": d["weight"],
             "url": d["url"],
             "cards": sections["main"],
@@ -255,16 +319,59 @@ def export_meta_json(conn, path=META_JSON):
     cardBase: for every card in a Diana main deck, how much of the
     NON-Diana field mains it — separates format staples from Diana choices.
     """
+    # Diana's legend name as it appears in the conversion tables.
+    DIANA_LEGEND_SLUG = "scorn-of-the-moon"
+
     events = []
-    for e in conn.execute("SELECT id, name, date FROM events ORDER BY date, name"):
+    for e in conn.execute(
+        "SELECT id, name, date, attendance, day1_decks, day2_decks FROM events ORDER BY date, name"
+    ):
         counts = {}
         for row in conn.execute(
             "SELECT archetype, COUNT(*) AS n FROM decks WHERE event_id = ? "
             "GROUP BY archetype", (e["id"],)
         ):
             counts[row["archetype"]] = row["n"]
-        if counts:
-            events.append({"name": e["name"], "date": e["date"], "counts": counts})
+        perf = conn.execute(
+            "SELECT day1, day2 FROM event_performance WHERE event_id = ? AND slug = ?",
+            (e["id"], DIANA_LEGEND_SLUG),
+        ).fetchone()
+        entry = {"name": e["name"], "date": e["date"], "counts": counts}
+        if e["attendance"]:
+            entry["attendance"] = e["attendance"]
+        if e["day1_decks"]:
+            entry["day1"] = e["day1_decks"]
+            entry["day2"] = e["day2_decks"]
+        if perf:
+            entry["dianaDay1"] = perf["day1"]
+            entry["dianaDay2"] = perf["day2"]
+        if counts or perf:
+            events.append(entry)
+
+    # Aggregate archetype performance across every event that published a
+    # conversion table: who actually beat the field, and by how much.
+    perf_rows = []
+    for row in conn.execute(
+        "SELECT legend, slug, SUM(day1) AS d1, SUM(day2) AS d2, COUNT(*) AS events "
+        "FROM event_performance GROUP BY slug HAVING d1 >= 20 ORDER BY d2 * 1.0 / d1 DESC"
+    ):
+        perf_rows.append({
+            "legend": re.sub(r"\s*-\s*Starter$", "", row["legend"]),
+            "slug": row["slug"],
+            "day1": row["d1"], "day2": row["d2"],
+            "conversion": row["d2"] / row["d1"],
+            "events": row["events"],
+        })
+    field = conn.execute(
+        "SELECT SUM(day1) AS d1, SUM(day2) AS d2 FROM event_performance"
+    ).fetchone()
+    performance = {
+        "dianaLegendSlug": DIANA_LEGEND_SLUG,
+        "fieldDay1": field["d1"] or 0,
+        "fieldDay2": field["d2"] or 0,
+        "fieldConversion": (field["d2"] / field["d1"]) if field["d1"] else 0,
+        "archetypes": perf_rows,
+    }
 
     other_total = conn.execute(
         "SELECT COUNT(*) FROM decks WHERE archetype != ?", (DIANA_ARCHETYPE,)
@@ -291,6 +398,7 @@ def export_meta_json(conn, path=META_JSON):
         "archetypes": archetype_totals,
         "events": events,
         "cardBase": card_base,
+        "performance": performance,
     }
     payload = json.dumps(meta, indent=1)
     Path(path).write_text(payload)

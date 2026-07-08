@@ -82,6 +82,25 @@ off-meta variant?" or "did the CN circuit build differently?".
   copy a share link (the list is encoded in the URL), and export any
   deck (yours, the prototype, or a winner's) as a shareable PNG.
 
+### Results data (what exists, and what doesn't)
+
+`fetch_tournaments.py` scrapes each event's tournament page for the only
+results data the format publishes: **field size** and the **Day 1 → Day 2
+conversion table** (how many decks of each archetype started, and how many
+survived to Day 2). Across 9 events that's **13,798 recorded decks** —
+far more evidence than the handful of top-cut decklists. Diana converts
+**23.1%** vs the field's **16.3%** (1.42×, 4th of 40 archetypes).
+
+What is *not* published anywhere: per-player match records, standings, or
+round results. So conversion is archetype-level only — it proves the deck
+is strong, but it cannot rank one Diana list against another, and no
+optimizer can score an individual decklist on results. That's why the
+optimizer remains explicitly consensus-driven.
+
+Field size does unlock one thing: the **weight by field size** filter
+scales each deck's placement weight by √(attendance ÷ median), so a 1st
+at a 1900-player event outweighs a 1st at an 1100-player one.
+
 ### On reading the numbers
 
 Inclusion percentages come from a small sample, so the Analyze table
