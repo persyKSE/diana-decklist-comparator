@@ -114,6 +114,9 @@
 
   button { padding: 8px 15px; background: var(--accent); color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer; font-size: 13.5px; font-weight: 600; }
   body.light button { color: #fff; }
+  /* Panel-coloured buttons keep body text — the rule above is for accent fills
+     only, and out-specifies a bare .class selector. */
+  body.light .theme-btn, body.light .icon-btn, body.light button.ghost { color: var(--text); }
   button:hover { filter: brightness(1.08); }
   button.mini { padding: 2px 9px; font-size: 11px; border-radius: 6px; margin-left: auto; }
   .action-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
@@ -260,6 +263,39 @@
   .cm-effect { background: var(--panel2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; white-space: pre-wrap; line-height: 1.5; margin: 10px 0; font-size: 13px; }
   @media (max-width: 560px) { .cardmodal-body { flex-direction: column; } .cardmodal-body .cm-img { width: 150px; } }
 
+  /* ---- What-changed banner + timeline ---- */
+  .newsbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 16px; font-size: 13.5px; }
+  .news-tag { font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: var(--accent); }
+  .newsbar a { margin-left: auto; font-size: 12.5px; white-space: nowrap; }
+
+  .timeline { position: relative; margin: 6px 0 4px; padding-left: 18px; }
+  .timeline::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 1px; background: var(--border); }
+  .tl-item { position: relative; margin-bottom: 16px; }
+  .tl-dot { position: absolute; left: -18px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+  .tl-body { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 11px 14px; }
+  .tl-head { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
+  .tl-date { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .tl-facts { color: var(--muted); font-size: 12px; margin: 3px 0 8px; line-height: 1.5; }
+  .tl-note { font-size: 13px; margin-bottom: 6px; }
+
+  /* ---- Draw simulator ---- */
+  .hand { display: flex; gap: 10px; flex-wrap: wrap; padding: 6px 0; }
+  .handcard { width: 96px; border-radius: 7px; overflow: hidden; cursor: pointer; transition: transform 0.12s, box-shadow 0.12s, opacity 0.12s; box-shadow: 0 4px 14px rgba(0,0,0,0.4); background: var(--panel2); }
+  .handcard img { width: 100%; display: block; }
+  .handcard:hover { transform: translateY(-6px); }
+  .handcard.aside { opacity: 0.42; transform: translateY(8px) scale(0.95); box-shadow: inset 0 0 0 2px var(--danger); }
+  button.ghost { background: var(--panel2); color: var(--text); border: 1px solid var(--border); }
+  input[type=range] { accent-color: var(--accent); }
+
+  /* ---- Meta view ---- */
+  .crumb { font-size: 13px; color: var(--muted); }
+  #sideInput { width: 100%; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; padding: 11px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); resize: vertical; }
+  .cimg.tiny { width: 20px; height: 28px; margin-right: 6px; vertical-align: middle; }
+  details.howto { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; margin-top: 14px; font-size: 13px; }
+  details.howto summary { cursor: pointer; color: var(--muted); font-weight: 600; }
+  details.howto p { line-height: 1.6; color: var(--muted); }
+  details.howto[open] summary { margin-bottom: 6px; color: var(--text); }
+
   @media (max-width: 800px) {
     .app { flex-direction: column; }
     .sidebar { width: auto; height: auto; position: sticky; top: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 6px; padding: 10px 12px; border-right: none; border-bottom: 1px solid var(--border); background: var(--bg); z-index: 60; }
@@ -283,6 +319,7 @@
     <nav id="nav">
       <a href="#build" data-view="build"><span class="nico">🌗</span> Build</a>
       <a href="#analyze" data-view="analyze"><span class="nico">🔮</span> Analyze</a>
+      <a href="#meta" data-view="meta"><span class="nico">🗺️</span> Meta</a>
       <a href="#compare" data-view="compare"><span class="nico">⚖️</span> Compare</a>
       <a href="#decks" data-view="decks"><span class="nico">🃏</span> Decks</a>
     </nav>
@@ -311,6 +348,7 @@
 <script src="decks.js"></script>
 <script src="meta.js"></script>
 <script src="cards.js"></script>
+<script src="field.js"></script>
 <script>
 let allDecks = [];      // full set (tagged with _region / _cluster / _clusterName)
 let globalDecks = [];   // active (filtered) set — every view reads this
@@ -328,6 +366,15 @@ let filters = { region: new Set(), cluster: new Set(), placement: new Set(), fro
 let coachTimer = null;
 let packagesCache = null;   // findPackages over the active set, shared by views
 let paletteIndex = 0;       // highlighted row in the command palette
+let metaArch = null;        // archetype slug currently open in the Meta view
+let sideText = '';          // the user's sideboard, for tech coverage
+let sideTimer = null;
+let simTurn = 3;            // draw simulator: which turn to compute odds for
+let sim = null;             // { lib: [names], hand: [names], aside: Set, mulled: bool }
+
+// Riftbound: 40-card main deck, opening hand of 4, mulligan up to 2 (set aside,
+// draw replacements, recycle to the bottom — no reshuffle), then draw 1 per turn.
+const HAND_SIZE = 4, MULLIGAN_MAX = 2, DECK_SIZE = 40;
 
 const PLACEMENT_RANK = { '1st': 0, '2nd': 1, '3rd': 2, 'Top 4': 3, 'Top 8': 4, 'Top 16': 5 };
 
@@ -353,14 +400,20 @@ function gemsFor(name) {
   (m.color || []).forEach(dom => {
     html += '<span class="dot" style="background:' + (DOMAIN_COLORS[dom] || DOMAIN_COLORS.Colorless) + '" title="' + attr(dom) + '"></span>';
   });
-  const might = window.CARDS && CARDS[name] ? CARDS[name].might : null;
-  if (might != null) html += '<span class="might" title="Might">⚔' + might + '</span>';
+  if (m.might != null) html += '<span class="might" title="Might">⚔' + m.might + '</span>';
   return html;
+}
+
+// Card details, from whichever catalogue has them: cards.js covers the Diana
+// pool in full, field.js covers every card any scraped deck plays.
+function cardInfo(name) {
+  return (window.CARDS && CARDS[name]) || (window.FIELD && FIELD.cards[name]) || null;
 }
 
 const VIEWS = {
   build:   { title: 'Build', desc: 'A weighted consensus deck from the filtered finishes, the flex slots that are still live, and a coach to rate your own list.', render: renderBuild },
   analyze: { title: 'Analyze', desc: 'What the filtered field agrees and disagrees on: inclusion rates, card packages, curves, sub-archetypes, and shifts over time.', render: renderAnalyze },
+  meta:    { title: 'Meta', desc: 'Every archetype in the scraped field — what they play, how often they convert, and how well your sideboard answers them. Reads the whole field, so the Build/Analyze filters do not apply here.', render: renderMeta },
   compare: { title: 'Compare', desc: 'Diff any two lists card-for-card, and see which decks sit closest to the consensus.', render: renderCompare },
   decks:   { title: 'Decks', desc: 'Every source decklist in the filtered set. Click a deck to open its full list.', render: renderDecks },
 };
@@ -380,7 +433,7 @@ function indexCards(decks) {
   decks.forEach(d => {
     d.cards.concat(d.sideboard || []).forEach(c => {
       if (c.image && !imageMap[c.name]) imageMap[c.name] = c.image;
-      if (!cardMeta[c.name]) cardMeta[c.name] = { cost: c.cost, type: c.type, color: c.color || [] };
+      if (!cardMeta[c.name]) cardMeta[c.name] = { cost: c.cost, type: c.type, color: c.color || [], might: c.might };
       nameLookup[normName(c.name)] = c.name;
     });
     (d.runes || []).concat(d.battlefields || []).forEach(c => {
@@ -389,6 +442,15 @@ function indexCards(decks) {
       nonMainNames.add(c.name);
     });
   });
+  // Every card the wider field plays, so the Meta view can render opposing
+  // lists. Deliberately NOT added to nameLookup: the coach's "not seen in any
+  // winning Diana deck" warning depends on that staying Diana-only.
+  if (window.FIELD) {
+    Object.entries(FIELD.cards).forEach(([name, c]) => {
+      if (c.image && !imageMap[name]) imageMap[name] = c.image;
+      if (!cardMeta[name]) cardMeta[name] = { cost: c.cost, type: c.type, color: c.color || [], might: c.might };
+    });
+  }
   const names = [...new Set(decks.flatMap(d => d.cards.concat(d.sideboard || []).map(c => c.name)))].sort();
   document.getElementById('cardNames').innerHTML = names.map(n => '<option value="' + attr(n) + '">').join('');
 }
@@ -491,28 +553,29 @@ function consensusExtras(N) {
 
 // Curve-aware greedy fill: locked cards first at consensus copies, then flex
 // cards by score with a penalty for overfilling a cost bucket beyond the
-// field's average curve (+1 tolerance).
-function buildInitialProto(N) {
-  currentProto = [];
-  if (!N) return;
-  const target = targetCurveOf(globalDecks);
+// field's average curve (+1 tolerance). Pure, so the changelog can replay it
+// over any historical slice of the field.
+function computeProto(decks, ranked) {
+  const proto = [], N = decks.length;
+  if (!N) return proto;
+  const target = targetCurveOf(decks);
   const curveNow = Array(MAX_COST_BUCKET + 1).fill(0);
   let total = 0;
   const push = (c, copies, locked) => {
-    currentProto.push({ ...c, copies, locked });
+    proto.push({ ...c, copies, locked });
     total += copies;
     curveNow[costBucket(c.name)] += copies;
   };
-  rankedCards.filter(c => c.decksIn === N).forEach(c => {
-    if (total >= 40) return;
-    const copies = Math.min(c.copies, 3, 40 - total);
+  ranked.filter(c => c.decksIn === N).forEach(c => {
+    if (total >= DECK_SIZE) return;
+    const copies = Math.min(c.copies, 3, DECK_SIZE - total);
     if (copies > 0) push(c, copies, true);
   });
-  const remaining = rankedCards.filter(c => c.decksIn < N);
-  while (total < 40 && remaining.length) {
+  const remaining = ranked.filter(c => c.decksIn < N);
+  while (total < DECK_SIZE && remaining.length) {
     let bestIdx = -1, bestAdj = -Infinity;
     remaining.forEach((c, idx) => {
-      const copies = Math.min(c.copies, 3, 40 - total);
+      const copies = Math.min(c.copies, 3, DECK_SIZE - total);
       if (copies <= 0) return;
       const b = costBucket(c.name);
       const overfill = Math.max(0, curveNow[b] + copies - (target[b] + 1));
@@ -521,10 +584,12 @@ function buildInitialProto(N) {
     });
     if (bestIdx < 0) break;
     const c = remaining.splice(bestIdx, 1)[0];
-    push(c, Math.min(c.copies, 3, 40 - total), false);
+    push(c, Math.min(c.copies, 3, DECK_SIZE - total), false);
   }
-  currentProto.sort((a, b) => b.score - a.score);
+  return proto.sort((a, b) => b.score - a.score);
 }
+
+function buildInitialProto() { currentProto = computeProto(globalDecks, rankedCards); }
 
 function removeCard(name) {
     const idx = currentProto.findIndex(c => c.name === name);
@@ -732,6 +797,8 @@ function coachInputChanged() {
   coachTimer = setTimeout(() => {
     const out = document.getElementById('coachResults');
     if (out) out.innerHTML = coachText.trim() ? renderCoach(globalDecks.length) : '';
+    const simEl = document.getElementById('simTable');   // draw odds follow the list you're editing
+    if (simEl) simEl.innerHTML = simTableHTML();
   }, 350);
 }
 
@@ -1023,6 +1090,179 @@ function runOptimizer() {
   if (btn) btn.onclick = () => { setCoach(normalizeCoach(optimized)); toast('Optimized list applied'); };
 }
 
+/* ---------------- Draw simulator ----------------
+   Consistency is the one axis the consensus data can't speak to: whether a
+   given 40 actually delivers its cards on time. That's pure hypergeometric
+   maths on the list you're holding, so it needs no tournament data at all. */
+
+const _lnFactCache = [0, 0];
+function lnFact(n) {
+  for (let i = _lnFactCache.length; i <= n; i++) _lnFactCache[i] = _lnFactCache[i - 1] + Math.log(i);
+  return _lnFactCache[n];
+}
+function lnC(n, k) { return (k < 0 || k > n) ? -Infinity : lnFact(n) - lnFact(k) - lnFact(n - k); }
+
+// P(at least `k` of the `K` copies among `draws` cards off a `deck`-card deck).
+function hyperAtLeast(k, K, deck, draws) {
+  if (k <= 0) return 1;
+  if (K < k || draws < k || deck <= 0) return 0;
+  let p = 0;
+  for (let i = k; i <= Math.min(K, draws); i++) p += Math.exp(lnC(K, i) + lnC(deck - K, draws - i) - lnC(deck, draws));
+  return Math.max(0, Math.min(1, p));
+}
+
+// Cards seen off the main deck by the start of your turn T: the opening 4 plus
+// one per draw step. The mulligan replaces cards rather than adding them, so it
+// doesn't change this count — only the odds below.
+function cardsSeenByTurn(t, deck) { return Math.min(deck, HAND_SIZE + t); }
+
+// A Riftbound mulligan sets aside up to 2 and draws replacements without
+// reshuffling, so a miss on the opening 4 gets two more looks at a 36-card
+// deck that still holds every copy. That makes it strictly better than the
+// plain opening-hand number, and it's exactly computable.
+function openingWithMulligan(K, deck) {
+  const hit = hyperAtLeast(1, K, deck, HAND_SIZE);
+  return hit + (1 - hit) * hyperAtLeast(1, K, deck - HAND_SIZE, MULLIGAN_MAX);
+}
+
+// Never round a near-certainty up to a flat 100% (or a real chance down to 0%).
+function pct(p) {
+  const v = 100 * p;
+  if (v >= 99.5 && p < 1) return '>99%';
+  if (v > 0 && v < 0.5) return '<1%';
+  return v.toFixed(0) + '%';
+}
+function pctColor(p) { return p >= 0.8 ? 'var(--lock)' : p >= 0.5 ? 'var(--flex)' : 'var(--danger)'; }
+
+// The list the simulator and coverage sections reason about: whatever you're
+// actually working on, falling back to the consensus prototype.
+function activeList() {
+  const { counts } = parseDeckText(coachText);
+  const total = Object.values(counts).reduce((a, b) => a + b, 0);
+  if (total >= 20) return { list: Object.entries(counts).map(([name, count]) => ({ name, count })), source: 'your list' };
+  return { list: currentProto.map(c => ({ name: c.name, count: c.copies })), source: 'the consensus prototype' };
+}
+
+function setSimTurn(t) {
+  simTurn = Math.max(1, Math.min(10, t));
+  const out = document.getElementById('simTable');
+  if (out) out.innerHTML = simTableHTML();
+  const lbl = document.getElementById('simTurnLabel');
+  if (lbl) lbl.textContent = simTurn;
+}
+
+function simTableHTML() {
+  const { list } = activeList();
+  const deck = list.reduce((a, c) => a + c.count, 0) || DECK_SIZE;
+  const seen = cardsSeenByTurn(simTurn, deck);
+  let html = '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th class="num">Copies</th>' +
+    '<th class="num">Opening 4</th><th class="num">After mulligan</th><th class="num">≥1 by turn ' + simTurn + '</th><th class="num">≥2 by turn ' + simTurn + '</th></tr></thead><tbody>';
+  // Neutral bars, not a red/amber/green scale: a 1-of at 18% is not "bad", it
+  // is a 1-of. The reader compares rows, not each row to a target.
+  const bar = p => '<span class="incl-bar" style="width:' + Math.max(1, Math.round(46 * p)) + 'px;opacity:0.55;"></span>';
+  [...list].sort((a, b) => (costBucket(a.name) - costBucket(b.name)) || a.name.localeCompare(b.name)).forEach(c => {
+    const open = hyperAtLeast(1, c.count, deck, HAND_SIZE);
+    const mull = openingWithMulligan(c.count, deck);
+    const byT = hyperAtLeast(1, c.count, deck, seen);
+    const twoT = hyperAtLeast(2, c.count, deck, seen);
+    html += '<tr data-card="' + attr(c.name) + '" data-cardopen="' + attr(c.name) + '" style="cursor:pointer;"><td>' + cardImg(c.name) + escHtml(c.name) + '</td>' +
+      '<td class="num">' + c.count + '</td>' +
+      '<td class="num">' + pct(open) + '</td>' +
+      '<td class="num">' + pct(mull) + '</td>' +
+      '<td class="num">' + bar(byT) + ' ' + pct(byT) + '</td>' +
+      '<td class="num" style="color:var(--muted)">' + pct(twoT) + '</td></tr>';
+  });
+  html += '</tbody></table></div>';
+  return html;
+}
+
+/* ---- Goldfish: deal a real hand off the list ---- */
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+function newHand() {
+  const { list } = activeList();
+  const lib = [];
+  list.forEach(c => { for (let i = 0; i < c.count; i++) lib.push(c.name); });
+  shuffle(lib);
+  sim = { lib, hand: lib.splice(0, Math.min(HAND_SIZE, lib.length)), aside: new Set(), mulled: false };
+  renderSimHand();
+}
+function toggleAside(i) {
+  if (!sim || sim.mulled) return;
+  if (sim.aside.has(i)) sim.aside.delete(i);
+  else if (sim.aside.size < MULLIGAN_MAX) sim.aside.add(i);
+  else { toast('You may set aside at most ' + MULLIGAN_MAX + ' cards'); return; }
+  renderSimHand();
+}
+function doMulligan() {
+  if (!sim || sim.mulled || !sim.aside.size) { toast('Click up to 2 cards to set aside first'); return; }
+  const kept = sim.hand.filter((_, i) => !sim.aside.has(i));
+  const bottomed = sim.hand.filter((_, i) => sim.aside.has(i));
+  const drawn = sim.lib.splice(0, bottomed.length);
+  sim.lib.push(...bottomed);   // recycled to the bottom, no reshuffle
+  sim.hand = kept.concat(drawn);
+  sim.aside = new Set();
+  sim.mulled = true;
+  renderSimHand();
+}
+function drawOne() {
+  if (!sim) { newHand(); return; }
+  if (!sim.lib.length) { toast('Main deck is empty'); return; }
+  sim.hand.push(sim.lib.shift());
+  sim.mulled = true;   // past the mulligan window
+  renderSimHand();
+}
+function renderSimHand() {
+  const el = document.getElementById('simHand');
+  if (!el) return;
+  if (!sim) { el.innerHTML = '<p class="sub">Deal a hand to goldfish your opener.</p>'; return; }
+  const turn = Math.max(0, sim.hand.length - HAND_SIZE);
+  let html = '<div class="hand">';
+  sim.hand.forEach((n, i) => {
+    const img = imageMap[n];
+    html += '<div class="handcard' + (sim.aside.has(i) ? ' aside' : '') + '" data-card="' + attr(n) + '" onclick="toggleAside(' + i + ')" title="' + attr(n) + (sim.mulled ? '' : ' — click to set aside for the mulligan') + '">' +
+      (img ? '<img src="' + attr(img) + '" alt="' + attr(n) + '">' : '<div class="noimg" style="width:100%;height:100%;"></div>') + '</div>';
+  });
+  html += '</div>';
+  const costs = sim.hand.map(n => (cardMeta[n] || {}).cost).filter(c => c != null);
+  const cheapest = costs.length ? Math.min(...costs) : null;
+  html += '<p class="sub" style="margin-top:8px;">' +
+    (sim.mulled ? 'After ' + (turn ? turn + ' draw step' + (turn === 1 ? '' : 's') : 'the mulligan') + ': ' : 'Opening hand: ') +
+    sim.hand.length + ' cards' + (cheapest != null ? ', cheapest costs ' + cheapest : '') +
+    (sim.mulled ? '' : ' · click up to ' + MULLIGAN_MAX + ' cards to set aside, then Mulligan') + '.</p>';
+  el.innerHTML = html;
+}
+
+function renderConsistency() {
+  const { list, source } = activeList();
+  const deck = list.reduce((a, c) => a + c.count, 0);
+  if (!deck) return '';
+  let html = '<h2>Consistency</h2>';
+  html += '<p class="sub">Exact draw odds for <strong>' + escHtml(source) + '</strong> (' + deck + ' cards). Riftbound opens on ' + HAND_SIZE +
+    ' cards, lets you set aside up to ' + MULLIGAN_MAX + ' for replacements without reshuffling, then draws 1 per turn — so by turn ' +
+    'T you have seen ' + HAND_SIZE + '+T cards. This is the only section here that needs no tournament data: it is hypergeometric ' +
+    'probability over the list itself.' + (deck !== DECK_SIZE ? ' <span style="color:var(--flex)">Your list is ' + deck + ' cards, not ' + DECK_SIZE + ' — the odds below use ' + deck + '.</span>' : '') + '</p>';
+
+  // Headline: can you actually do something early?
+  const early = list.filter(c => costBucket(c.name) <= 2).reduce((a, c) => a + c.count, 0);
+  const lateBombs = list.filter(c => costBucket(c.name) >= 6).reduce((a, c) => a + c.count, 0);
+  const pEarly = openingWithMulligan(early, deck);
+  const pFlood = 1 - hyperAtLeast(1, deck - lateBombs, deck, HAND_SIZE);   // opener that is all 6+ drops
+  html += '<div class="summary-box">' +
+    '<strong>' + pct(pEarly) + '</strong> of openers (mulligan included) hold at least one card costing 2 or less — you run <strong>' + early + '</strong> of them. ' +
+    (lateBombs ? 'Chance of an opening 4 made entirely of 6+ drops: <strong>' + (100 * pFlood).toFixed(1) + '%</strong>.' : 'Nothing in this list costs 6 or more.') +
+    '</div>';
+
+  html += '<div class="coach-tools"><label style="font-size:13px;color:var(--muted)">Odds by turn <strong id="simTurnLabel" style="color:var(--text)">' + simTurn + '</strong></label>' +
+    '<input type="range" min="1" max="10" value="' + simTurn + '" oninput="setSimTurn(+this.value)" style="flex:1;max-width:240px;">' +
+    '<button onclick="newHand()">🃏 Deal a hand</button><button onclick="doMulligan()" class="ghost">Mulligan</button><button onclick="drawOne()" class="ghost">Draw</button></div>';
+  html += '<div id="simHand"></div>';
+  html += '<div id="simTable">' + simTableHTML() + '</div>';
+  return html;
+}
+
 /* ---------------- Filtering ---------------- */
 function regionOf(event) {
   const e = (event || '').toLowerCase();
@@ -1114,11 +1354,12 @@ function dedupeByPlayer(decks) {
 }
 
 function applyFilters() {
+  changelogCache = null;   // field-size weighting feeds the replayed prototypes
   globalDecks = allDecks.filter(deckPasses);
   if (filters.dedupe) globalDecks = dedupeByPlayer(globalDecks);
   rankedCards = computeStats(globalDecks);
   packagesCache = findPackages(globalDecks.length);
-  buildInitialProto(globalDecks.length);
+  buildInitialProto();
   if (diffA >= globalDecks.length) diffA = 0;
   if (diffB >= globalDecks.length) diffB = Math.min(1, Math.max(0, globalDecks.length - 1));
   render();
@@ -1156,6 +1397,434 @@ function renderFilterBar() {
   return html;
 }
 
+/* ---------------- What changed ----------------
+   The scraper reruns weekly, but a diff of raw JSON tells you nothing. What a
+   deckbuilder wants is: since the last event, what moved in the consensus? So
+   replay the prototype build over each event date and diff consecutive states.
+   Deliberately reads allDecks, not globalDecks — history shouldn't move when
+   you tick a filter. */
+
+let changelogCache = null;
+
+function buildChangelog() {
+  if (changelogCache) return changelogCache;
+  const dated = allDecks.filter(d => d.event_date);
+  const dates = [...new Set(dated.map(d => d.event_date))].sort();
+  const entries = [];
+  dates.forEach(date => {
+    const upto = dated.filter(d => d.event_date <= date);
+    const before = dated.filter(d => d.event_date < date);
+    const arrived = dated.filter(d => d.event_date === date);
+    const protoAfter = computeProto(upto, computeStats(upto)).map(c => ({ name: c.name, count: c.copies }));
+    const protoBefore = before.length ? computeProto(before, computeStats(before)).map(c => ({ name: c.name, count: c.copies })) : [];
+    const diff = before.length ? diffSection(protoBefore, protoAfter) : { removed: [], added: [] };
+
+    const eventNames = [...new Set(arrived.map(d => d.event).filter(Boolean))];
+    const ev = (window.META && META.events || []).find(e => eventNames.includes(e.name));
+    const clusters = {};
+    arrived.forEach(d => { clusters[d._clusterName || 'Unclassified'] = (clusters[d._clusterName || 'Unclassified'] || 0) + 1; });
+
+    entries.push({
+      date, arrived, eventNames, diff, ev, clusters,
+      first: !before.length,
+      swaps: diff.removed.reduce((a, c) => a + c.n, 0),
+      decksTotal: upto.length,
+    });
+  });
+  changelogCache = entries.reverse();   // newest first
+  return changelogCache;
+}
+
+// One-line "here's what moved" for the Build view banner.
+function changelogHeadline() {
+  const entries = buildChangelog();
+  const latest = entries.find(e => !e.first);
+  if (!latest) return null;
+  const bits = [];
+  latest.diff.added.slice(0, 2).forEach(c => bits.push('+' + c.n + ' ' + shortName(c.name)));
+  latest.diff.removed.slice(0, 2).forEach(c => bits.push('−' + c.n + ' ' + shortName(c.name)));
+  const what = bits.length ? bits.join(', ') : 'the consensus list held firm';
+  return { date: latest.date, event: latest.eventNames[0] || latest.date, what, n: latest.arrived.length };
+}
+
+function renderChangelog() {
+  const entries = buildChangelog();
+  if (!entries.length) return '<div class="summary-box">No event dates on the current decks — nothing to replay.</div>';
+  let html = '<h2>What changed</h2>';
+  html += '<p class="sub">The consensus prototype rebuilt after each event, diffed against the one before it. This is how the deck has actually moved as results came in — not a diff of the raw data. Reads every deck, so the filters above don\'t apply.</p>';
+  html += '<div class="timeline">';
+  entries.forEach(e => {
+    const evName = e.eventNames.join(', ') || e.date;
+    let body = '';
+    if (e.first) {
+      body += '<div class="tl-note">First event in the database — the consensus starts here.</div>';
+    } else if (!e.diff.added.length && !e.diff.removed.length) {
+      body += '<div class="tl-note">No change to the consensus 40. The new lists agreed with everything already known.</div>';
+    } else {
+      body += '<div class="tl-note"><strong>' + e.swaps + ' card' + (e.swaps === 1 ? '' : 's') + '</strong> changed in the consensus 40.</div>';
+      e.diff.removed.forEach(c => body += '<div class="diff-line diff-del" data-card="' + attr(c.name) + '" data-cardopen="' + attr(c.name) + '">' + cardImg(c.name) + '<span>&minus;' + c.n + ' ' + escHtml(c.name) + '</span></div>');
+      e.diff.added.forEach(c => body += '<div class="diff-line diff-add" data-card="' + attr(c.name) + '" data-cardopen="' + attr(c.name) + '">' + cardImg(c.name) + '<span>+' + c.n + ' ' + escHtml(c.name) + '</span></div>');
+    }
+
+    const facts = [];
+    facts.push(e.arrived.length + ' Diana list' + (e.arrived.length === 1 ? '' : 's') + ' added (' +
+      e.arrived.map(d => d.placement).filter(Boolean).join(', ') + ') · ' + e.decksTotal + ' total');
+    const clusterBits = Object.entries(e.clusters).map(([n, c]) => c + '× ' + n);
+    if (clusterBits.length) facts.push(clusterBits.join(', '));
+    if (e.ev) {
+      const total = Object.values(e.ev.counts || {}).reduce((a, b) => a + b, 0);
+      const dn = (e.ev.counts || {})[META.diana] || 0;
+      if (total) facts.push('Diana was ' + dn + '/' + total + ' (' + Math.round(100 * dn / total) + '%) of the top cut');
+      if (e.ev.dianaDay1 && e.ev.day1) {
+        const dc = 100 * e.ev.dianaDay2 / e.ev.dianaDay1, fc = 100 * e.ev.day2 / e.ev.day1;
+        facts.push('converted ' + dc.toFixed(1) + '% into Day 2 vs field ' + fc.toFixed(1) + '% (' + (dc / fc).toFixed(2) + '×)');
+      }
+      if (e.ev.attendance) facts.push(e.ev.attendance.toLocaleString() + ' players');
+    }
+
+    html += '<div class="tl-item"><div class="tl-dot"></div>' +
+      '<div class="tl-body"><div class="tl-head"><strong>' + escHtml(evName) + '</strong><span class="tl-date">' + e.date + '</span></div>' +
+      '<div class="tl-facts">' + escHtml(facts.join(' · ')) + '</div>' + body + '</div></div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+/* ---------------- The wider field (field.js) ---------------- */
+function fieldReady() { return !!(window.FIELD && FIELD.archetypes); }
+
+// Field decks are stored compactly ({name: count}); reshape one into the same
+// shape decks.js uses so the deck modal and diff code can render it unchanged.
+function fieldDeck(slug, j) {
+  const d = FIELD.archetypes[slug].decks[j];
+  const conv = o => Object.entries(o || {}).map(([name, count]) => ({ name, count })).sort((a, b) => a.name.localeCompare(b.name));
+  return {
+    label: d.label, player: d.player, placement: d.placement, event: d.event, event_date: d.date, url: d.url,
+    cards: conv(d.main), sideboard: conv(d.side), runes: conv(d.runes),
+    battlefields: (d.battlefields || []).map(name => ({ name, count: 1 })),
+  };
+}
+
+function archConversion(slug) {
+  const P = window.META && META.performance;
+  const a = FIELD.archetypes[slug];
+  if (!P || !P.fieldConversion || !a.legend) return null;
+  const row = P.archetypes.find(x => x.slug === a.legend);
+  if (!row) return null;
+  return { ...row, index: row.conversion / P.fieldConversion, fieldConversion: P.fieldConversion };
+}
+
+// Weighted consensus over an archetype's own lists (no placement weights exist
+// for the scraped field, so every list counts once).
+function archStats(slug) {
+  const decks = FIELD.archetypes[slug].decks.map(d => ({
+    cards: Object.entries(d.main).map(([name, count]) => ({ name, count })), weight: 1,
+  }));
+  return { decks, ranked: computeStats(decks) };
+}
+
+// How an archetype's board actually looks — the inputs the coverage heuristic
+// needs to say what a tech card is answering. Per-deck averages.
+function archProfile(slug) {
+  const decks = FIELD.archetypes[slug].decks;
+  const n = decks.length || 1;
+  let units = 0, spells = 0, gear = 0, costSum = 0, costN = 0;
+  const mightCounts = {};    // might -> unit copies (summed over their lists)
+  const bucket = {};         // "type|might" -> copies, the things you must answer
+  decks.forEach(d => Object.entries(d.main).forEach(([name, c]) => {
+    const m = FIELD.cards[name] || {};
+    if (m.type === 'Unit') { units += c; if (m.might != null) mightCounts[m.might] = (mightCounts[m.might] || 0) + c; }
+    else if (m.type === 'Spell') spells += c;
+    else if (m.type === 'Gear') gear += c;
+    if (m.cost != null) { costSum += m.cost * c; costN += c; }
+    const key = (m.type || 'Other') + '|' + (m.might == null ? '' : m.might);
+    bucket[key] = (bucket[key] || 0) + c;
+  }));
+  const knownUnits = Object.values(mightCounts).reduce((a, b) => a + b, 0);
+  const threats = Object.entries(bucket).map(([k, copies]) => {
+    const [type, might] = k.split('|');
+    return { type, might: might === '' ? null : +might, copies: copies / n };
+  });
+  return {
+    n: decks.length, units: units / n, spells: spells / n, gear: gear / n,
+    avgCost: costN ? costSum / costN : 0, mightCounts, knownUnits, threats,
+    mainCopies: threats.reduce((a, t) => a + t.copies, 0),
+    // Fraction of their unit copies that a "deals/kills up to M might" answer hits.
+    unitFracAtMost(M) {
+      if (!knownUnits) return 0;
+      let hit = 0;
+      Object.entries(mightCounts).forEach(([might, c]) => { if (+might <= M) hit += c; });
+      return hit / knownUnits;
+    },
+  };
+}
+
+/* ---------------- Tech coverage ----------------
+   No match data exists, so nothing here can tell you a card "wins" a matchup.
+   What the data CAN support: a card's rules text says what it answers, and the
+   opposing lists say what there is to answer. Cross the two and you get
+   coverage — an explicit, inspectable heuristic, not a win rate. */
+
+// Rules-text classifiers. `size` extracts the might/damage a card can handle,
+// which is what turns "removal" into "removal that kills 71% of their units".
+const TECH_RULES = [
+  { tag: 'counter', label: 'counter', rx: /counter a spell|opponents can'?t play cards/i },
+  { tag: 'sweep', label: 'sweeper', rx: /to all (enemy )?units|deal \d+ to all|return all units|each player kills one of their units/i,
+    size: e => (e.match(/deal (\d+) to all/i) || e.match(/return all units with (\d+)/i) || [])[1] },
+  { tag: 'gearHate', label: 'gear hate', rx: /kill a gear|kills one of their gear|give a gear \[temporary\]|or a gear \[temporary\]/i },
+  { tag: 'killSmall', label: 'conditional removal', rx: /(kill|return|deal \d+ to)[\s\S]{0,90}?(\d+) :rb_might: or less/i,
+    size: e => (e.match(/(\d+) :rb_might: or less/i) || [])[1] },
+  { tag: 'kill', label: 'hard removal', rx: /\bkill (a|an|target|one) (unit|enemy unit)/i },
+  { tag: 'damage', label: 'damage', rx: /deal (\d+) to (a|an|each|up to|enemy)/i, size: e => (e.match(/deal (\d+) to/i) || [])[1] },
+  // "-N Might, to a minimum of 1" can never kill; without the floor it can.
+  { tag: 'shrink', label: 'shrink', rx: /-(\d+) :rb_might: this turn(?![\s\S]{0,40}minimum)/i, size: e => (e.match(/-(\d+) :rb_might:/) || [])[1] },
+  { tag: 'shrinkSoft', label: 'combat trick', rx: /-(\d+) :rb_might: this turn[\s\S]{0,40}minimum/i },
+  { tag: 'bounce', label: 'bounce', rx: /return (a|an|another|all|up to|target)[\s\S]{0,70}owner/i },
+  { tag: 'handAttack', label: 'hand attack', rx: /they discard|each player discards|opponent[\s\S]{0,60}discard that card/i },
+  { tag: 'stun', label: 'stun', rx: /\[stun\]/i },
+];
+
+function techTags(name) {
+  const info = cardInfo(name);
+  const e = (info && info.effect) || '';
+  if (!e) return [];
+  let tags = TECH_RULES.filter(r => r.rx.test(e)).map(r => ({ tag: r.tag, label: r.label, size: r.size ? +r.size(e) || null : null }));
+  const has = t => tags.some(x => x.tag === t);
+  // A conditional kill is not also hard removal; a sweeper subsumes its own
+  // single-target damage clause; a mass bounce reads as a sweeper.
+  if (has('killSmall')) tags = tags.filter(t => t.tag !== 'kill' && t.tag !== 'damage');
+  if (has('sweep')) tags = tags.filter(t => t.tag !== 'damage' && t.tag !== 'bounce');
+  if (has('shrink')) tags = tags.filter(t => t.tag !== 'shrinkSoft');
+  return tags;
+}
+
+// How well does one card answer one thing the opponent plays? 1 = a clean
+// answer, 0 = no interaction. Partial answers (bounce, stun, a combat trick
+// that can never kill) are discounted rather than counted or ignored.
+function handleQuality(tags, threat) {
+  let q = 0;
+  const at = (v) => { if (v > q) q = v; };
+  tags.forEach(t => {
+    const size = t.size;
+    if (threat.type === 'Unit') {
+      const m = threat.might;
+      switch (t.tag) {
+        case 'kill':       at(1); break;
+        case 'damage':     if (size != null && m != null && m <= size) at(1); break;
+        case 'killSmall':  if (size != null && m != null && m <= size) at(1); break;
+        case 'shrink':     if (size != null && m != null && m <= size) at(1); break;
+        case 'sweep':      at(size != null && m != null && m <= size ? 1 : 0.6); break;   // sizeless sweeps are mass bounce
+        case 'bounce':     at(0.6); break;
+        case 'stun':       at(0.35); break;
+        case 'shrinkSoft': at(0.25); break;
+      }
+    } else if (threat.type === 'Gear') {
+      if (t.tag === 'gearHate') at(1);
+      else if (t.tag === 'sweep' && size == null) at(0.6);   // Downwell bounces gear too
+    } else if (threat.type === 'Spell') {
+      if (t.tag === 'counter') at(1);
+    }
+  });
+  return q;
+}
+
+// Coverage of one archetype: the share of their main deck, copy by copy, that
+// you hold an answer to. No free calibration constants — every number is
+// "how many of their 40 cards can this list interact with".
+function coverageOf(list, p) {
+  const answers = list.map(c => ({ name: c.name, count: c.count, tags: techTags(c.name) }));
+  let covered = 0;
+  p.threats.forEach(t => {
+    let q = 0;
+    answers.forEach(a => { const x = handleQuality(a.tags, t); if (x > q) q = x; });
+    covered += t.copies * q;
+  });
+  const total = p.mainCopies || 1;
+
+  // Which single card pulls the most weight, and how many relevant copies you hold.
+  // `solo` stays in card-copies until the winner is picked — comparing a raw
+  // copy count against an already-normalised fraction silently elects the last
+  // card in the list.
+  let best = { name: null, solo: 0, tag: null }, depth = 0;
+  answers.forEach(a => {
+    let solo = 0;
+    p.threats.forEach(t => solo += t.copies * handleQuality(a.tags, t));
+    if (solo > 0) depth += a.count;
+    if (solo > best.solo) best = { name: a.name, solo, tag: dominantTag(a.tags, p) };
+  });
+  return { coverage: covered / total, ...best, solo: best.solo / total, depth };
+}
+
+// The tag that explains most of a card's contribution — for the "why" string.
+function dominantTag(tags, p) {
+  let best = null, bestVal = -1;
+  tags.forEach(t => {
+    let v = 0;
+    p.threats.forEach(th => v += th.copies * handleQuality([t], th));
+    if (v > bestVal) { bestVal = v; best = t; }
+  });
+  return best;
+}
+
+// Marginal coverage a card would add to this list — what a suggestion is worth.
+function marginalGain(name, list, p, baseline) {
+  return coverageOf(list.concat([{ name, count: 1 }]), p).coverage - baseline;
+}
+
+function answerWhy(name, tag, p) {
+  if (!tag) return 'no interaction in its rules text';
+  const size = tag.size;
+  const n = x => Math.round(x);
+  switch (tag.tag) {
+    case 'counter':    return 'counters spells — they run ' + n(p.spells) + ' in their 40';
+    case 'kill':       return 'unconditional removal — answers any of their ' + n(p.units) + ' units';
+    case 'damage':     return 'deals ' + size + ', killing ' + pct(p.unitFracAtMost(size)) + ' of their unit copies';
+    case 'killSmall':  return 'answers ' + size + ' might or less — ' + pct(p.unitFracAtMost(size)) + ' of their units';
+    case 'shrink':     return '−' + size + ' might kills ' + pct(p.unitFracAtMost(size)) + ' of their units';
+    case 'sweep':      return 'sweeper — they run ' + n(p.units) + ' units in their 40';
+    case 'gearHate':   return 'gear removal — they run ' + n(p.gear) + ' gear in their 40';
+    case 'bounce':     return 'bounce — tempo, not a permanent answer';
+    case 'shrinkSoft': return 'combat trick — blunts, never kills';
+    case 'handAttack': return 'hand attack — strips one card';
+    case 'stun':       return 'stun — buys a turn';
+    default:           return '';
+  }
+}
+
+// Threat weight: how much of the field it is, scaled by how well it converts.
+// A rare deck that wins is worth teching against; a popular deck that folds
+// on Day 1 is not.
+function threatWeights() {
+  const slugs = Object.keys(FIELD.archetypes).filter(s => s !== FIELD.diana);
+  const total = slugs.reduce((a, s) => a + FIELD.archetypes[s].decks.length, 0) || 1;
+  return slugs.map(slug => {
+    const n = FIELD.archetypes[slug].decks.length;
+    const conv = archConversion(slug);
+    const share = n / total;
+    return { slug, n, share, conv, weight: share * (conv ? conv.index : 1) };
+  }).sort((a, b) => b.weight - a.weight);
+}
+
+function currentSideboard() {
+  const parsed = parseDeckText(sideText);
+  const list = Object.entries(parsed.counts).map(([name, count]) => ({ name, count }));
+  if (list.length) return { list, source: 'your sideboard', mine: true };
+  const ex = consensusExtras(globalDecks.length);
+  return { list: ex.side.map(c => ({ name: c.name, count: c.copies })), source: 'the consensus sideboard', mine: false };
+}
+
+function sideChanged() {
+  sideText = document.getElementById('sideInput').value;
+  try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+  clearTimeout(sideTimer);
+  sideTimer = setTimeout(() => { const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML(); }, 350);
+}
+function addToSideboard(name) {
+  // With an empty box we are scoring the consensus sideboard, so "add" has to
+  // mean "add to that" — otherwise the first click silently swaps 8 cards for 1
+  // and coverage falls.
+  const { list } = currentSideboard();
+  const counts = {};
+  list.forEach(c => counts[c.name] = c.count);
+  counts[name] = (counts[name] || 0) + 1;
+  sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n');
+  try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+  const ta = document.getElementById('sideInput'); if (ta) ta.value = sideText;
+  const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML();
+  toast('Added ' + name + ' to your sideboard');
+}
+
+function coverageHTML() {
+  const { list, source, mine } = currentSideboard();
+  const weights = threatWeights();
+  if (!list.length) return '<div class="summary-box">No sideboard to score.</div>';
+
+  const rows = weights.map(w => {
+    const p = archProfile(w.slug);
+    return { ...w, p, cov: coverageOf(list, p) };
+  });
+  const wSum = rows.reduce((a, r) => a + r.weight, 0) || 1;
+  const overall = rows.reduce((a, r) => a + r.weight * r.cov.coverage, 0) / wSum;
+  const gaps = [...rows].filter(r => r.cov.coverage < 0.5).slice(0, 5);
+
+  const sideNames = new Set(list.map(c => c.name));
+  const pool = Object.keys((window.CARDS) || {}).filter(n => !sideNames.has(n) && techTags(n).length);
+  const nCards = list.reduce((a, c) => a + c.count, 0);
+
+  let html = '<div class="summary-box"><strong>' + (mine ? 'Your' : 'The consensus') + ' ' + nCards + '-card sideboard holds <em>some</em> answer to ' +
+    pct(overall) + ' of what the field plays.</strong> ' +
+    'For a card drawn at random from an opponent\'s main deck, that is the chance your rules text addresses it — averaged across archetypes weighted by ' +
+    'how much of the top-cut field each one is <em>and</em> how well it converts into Day 2, so a rare deck that wins counts for more than a popular deck that folds.<br><br>' +
+    '<strong>This is breadth, not sufficiency.</strong> It asks whether you hold <em>any</em> answer to each of their cards — never whether you hold <em>enough</em> of them, ' +
+    'drew one in time, or could afford to cast it. A single counterspell "covers" all ' + Math.round(rows[0].p.spells) + ' spells ' + escHtml(FIELD.archetypes[rows[0].slug].name) +
+    ' runs. Read the <em>Answers</em> column for how many relevant cards you actually have, ' +
+    'and the Consistency section on the Build view for whether you will see them. It is not, and cannot be, a win rate: no per-match data is published for these events.</div>';
+
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th class="num">Conv.</th>' +
+    '<th>Their 40</th><th>Your best answer</th><th>Breadth</th><th class="num">Answers</th></tr></thead><tbody>';
+  rows.slice(0, 12).forEach(r => {
+    const a = FIELD.archetypes[r.slug];
+    const board = r.p.units.toFixed(1) + ' units / ' + r.p.spells.toFixed(1) + ' spells / ' + r.p.gear.toFixed(1) + ' gear · avg cost ' + r.p.avgCost.toFixed(2);
+    const ans = r.cov.name
+      ? cardImg(r.cov.name, 'tiny') + '<span data-card="' + attr(r.cov.name) + '">' + escHtml(shortName(r.cov.name)) + '</span>' +
+        '<span class="ci">' + escHtml(answerWhy(r.cov.name, r.cov.tag, r.p)) + '</span>'
+      : '<span style="color:var(--danger)">nothing</span>';
+    const c = r.cov.coverage;
+    html += '<tr><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' + escHtml(a.name) + '</span></td>' +
+      '<td class="num">' + pct(r.share) + '</td>' +
+      '<td class="num" style="color:' + (r.conv && r.conv.index >= 1 ? 'var(--lock)' : 'var(--muted)') + '">' + (r.conv ? r.conv.index.toFixed(2) + '×' : '—') + '</td>' +
+      '<td style="color:var(--muted);font-size:12px;">' + escHtml(board) + '</td>' +
+      '<td>' + ans + '</td>' +
+      '<td title="' + attr((c * r.p.mainCopies).toFixed(0) + ' of their ' + r.p.mainCopies.toFixed(0) + ' main-deck cards, quality-weighted') + '">' +
+      '<span class="incl-bar" style="width:' + Math.round(90 * c) + 'px;background:' + pctColor(c) + '"></span>' + pct(c) + '</td>' +
+      '<td class="num" title="' + attr('Cards in this sideboard that interact with them at all. Breadth says you hold an answer; this says how many.') + '" ' +
+      'style="color:' + (r.cov.depth >= 3 ? 'var(--muted)' : 'var(--flex)') + '">' + r.cov.depth + '</td></tr>';
+  });
+  html += '</tbody></table></div>';
+
+  if (gaps.length) {
+    html += '<h2>Coverage gaps</h2><p class="sub">The decks you are least equipped for, worst-weighted first. Each suggestion shows the coverage it would <em>add</em> against that archetype, and comes only from cards some winning Diana list has already played, main or side — nothing invented.</p>';
+    gaps.forEach(r => {
+      const a = FIELD.archetypes[r.slug];
+      const best = pool.map(n => ({ n, gain: marginalGain(n, list, r.p, r.cov.coverage) }))
+        .filter(x => x.gain > 0.02).sort((x, y) => y.gain - x.gain).slice(0, 3);
+      html += '<div class="pkg-box"><strong>' + escHtml(a.name) + '</strong> — answers to ' + pct(r.cov.coverage) + ' of their 40 (' +
+        r.cov.depth + ' relevant card' + (r.cov.depth === 1 ? '' : 's') + '), ' +
+        pct(r.share) + ' of the field' + (r.conv ? ' at ' + r.conv.index.toFixed(2) + '× conversion' : '') + '.<br>' +
+        '<span style="color:var(--muted);font-size:12.5px;">' + escHtml(r.cov.name
+          ? 'Best you have is ' + r.cov.name + ' — ' + answerWhy(r.cov.name, r.cov.tag, r.p) + '.'
+          : 'Nothing in this sideboard interacts with them at all.') + '</span><br>';
+      if (!best.length) html += '<span style="color:var(--muted);font-size:12.5px;">No card in the Diana pool would add meaningful coverage.</span>';
+      best.forEach(x => {
+        const t = dominantTag(techTags(x.n), r.p);
+        html += '<span class="pkg-chip" title="' + attr(answerWhy(x.n, t, r.p)) + '">' + cardImg(x.n) +
+          '<span data-card="' + attr(x.n) + '">' + escHtml(x.n) + '</span>' +
+          '<span style="color:var(--lock);font-size:11px;">+' + pct(x.gain) + '</span>' +
+          '<button class="mini" style="margin-left:4px" onclick="addToSideboard(\'' + x.n.replace(/'/g, "\\'") + '\')">+</button></span>';
+      });
+      html += '</div>';
+    });
+  } else {
+    html += '<div class="summary-box">Every archetype in the field sits at 50% coverage or better with this sideboard.</div>';
+  }
+
+  html += '<details class="howto"><summary>How coverage is computed</summary>' +
+    '<p>Each card\'s printed rules text is matched against a small set of patterns — counter a spell, unconditional kill, deal <em>N</em>, ' +
+    'kill/return up to <em>N</em> Might, −<em>N</em> Might (a floor of "to a minimum of 1 Might" means it can never kill, so it scores as a combat trick), ' +
+    'sweeper, bounce, gear removal, stun. Where a size is printed it is extracted, because size is what decides whether an answer lines up.</p>' +
+    '<p>Then, for every card copy in the opposing archetype\'s averaged main deck, we ask whether anything in your sideboard handles <em>that specific card</em>: ' +
+    'a unit of 4 Might needs something that deals 4, kills outright, or shrinks it by 4; a Gear needs gear removal; a Spell needs a counter. ' +
+    'Clean answers count 1, bounce 0.6, stun 0.35, a non-lethal combat trick 0.25. Coverage is the quality-weighted share of their 40 cards you can touch.</p>' +
+    '<p>There are no tuning constants beyond those four discounts: the denominator is literally their decklist. The headline number is the per-archetype breadths ' +
+    'averaged with weights of field share × Day 1→Day 2 conversion index.</p>' +
+    '<p><strong>The metric saturates by design.</strong> Because it asks "do you hold <em>any</em> answer to this card", one counterspell covers every spell they run and one ' +
+    'six-damage spell covers nearly every unit. A sideboard with one of each type will score very high on breadth while being far too thin to actually play — which is why the ' +
+    '<em>Answers</em> column reports how many relevant cards you hold, and why it is worth reading the two together. Breadth is good at finding holes; it is bad at telling you that you have none.</p>' +
+    '<p><strong>What this is not:</strong> a win rate. It cannot see sequencing, board state, tempo, or whether you drew the card. It answers one narrow, checkable ' +
+    'question — do you own a card whose text addresses what they play? — and nothing else. Per-match results are not published for any of these events.</p></details>';
+  return html;
+}
+
 /* ---------------- Shared context ---------------- */
 function computeContext() {
   const N = globalDecks.length;
@@ -1169,6 +1838,10 @@ function computeContext() {
 function renderBuild(ctx) {
   const N = ctx.N;
   let html = '';
+  const head = changelogHeadline();
+  if (head) html += '<div class="newsbar"><span class="news-tag">Latest</span>' +
+    '<span><strong>' + escHtml(head.event) + '</strong> (' + head.date + ') added ' + head.n + ' list' + (head.n === 1 ? '' : 's') + ': ' + escHtml(head.what) + '.</span>' +
+    '<a class="deck-link" href="#analyze">See what changed →</a></div>';
   const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
   const protoPrice = priceTag(currentProto.map(c => ({ name: c.name, count: c.copies })));
   html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards' + (protoPrice ? ' · ' + protoPrice : '') + ')</h2>' +
@@ -1250,6 +1923,7 @@ function renderBuild(ctx) {
   html += renderWorkspace();
   html += '<div id="optResults"></div>';
   html += '<div id="coachResults">' + (coachText.trim() ? renderCoach(N) : '') + '</div>';
+  html += renderConsistency();
   return html;
 }
 
@@ -1268,7 +1942,7 @@ function prettyArchetype(slug) {
 
 function renderAnalyze(ctx) {
   const N = ctx.N;
-  let html = '';
+  let html = renderChangelog();
 
   // ---- Meta context (whole scraped field, unaffected by filters) ----
   if (window.META && META.otherDecks > 0) {
@@ -1537,6 +2211,190 @@ function renderAnalyze(ctx) {
   return html;
 }
 
+/* ---------------- META ---------------- */
+function openArch(slug) {
+  metaArch = slug;
+  if (currentView !== 'meta') { location.hash = '#meta'; return; }   // hashchange re-renders
+  render();
+  window.scrollTo(0, 0);
+}
+function closeArch() { metaArch = null; render(); }
+
+// Share of the top cut in the most recent events vs the earlier ones.
+function archTrend(slug) {
+  const evs = (window.META && META.events || []).filter(e => Object.values(e.counts || {}).reduce((a, b) => a + b, 0) >= 3);
+  if (evs.length < 4) return null;
+  const cut = evs.length - 3;
+  const share = arr => {
+    let n = 0, t = 0;
+    arr.forEach(e => { n += (e.counts[slug] || 0); t += Object.values(e.counts).reduce((a, b) => a + b, 0); });
+    return t ? n / t : 0;
+  };
+  const early = share(evs.slice(0, cut)), late = share(evs.slice(cut));
+  return { early, late, delta: late - early };
+}
+
+// Small standalone curve chart, used by the archetype detail panels.
+function curveSVG(curve, color, maxCost) {
+  const W = 640, H = 170, mL = 32, mB = 24, mT = 10, mR = 10;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const mx = Math.max(1, ...curve);
+  const x = c => mL + c / maxCost * pw, y = v => mT + ph - v / mx * ph;
+  const parts = [];
+  for (let v = 0; v <= mx; v += Math.max(1, Math.ceil(mx / 4))) {
+    parts.push('<line class="grid" x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '"/>');
+    parts.push('<text class="axis" x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" text-anchor="end">' + v + '</text>');
+  }
+  for (let c = 0; c <= maxCost; c++) parts.push('<text class="axis" x="' + x(c) + '" y="' + (H - 7) + '" font-size="10" text-anchor="middle">' + (c === maxCost ? c + '+' : c) + '</text>');
+  const pts = curve.map((v, c) => x(c) + ',' + y(v)).join(' ');
+  parts.push('<polygon points="' + x(0) + ',' + y(0) + ' ' + pts + ' ' + x(maxCost) + ',' + y(0) + '" fill="' + color + '" opacity="0.16"/>');
+  parts.push('<polyline points="' + pts + '" fill="none" stroke="' + color + '" stroke-width="2.5"/>');
+  curve.forEach((v, c) => parts.push('<circle class="pt" data-tip="' + attr('Cost ' + (c === maxCost ? c + '+' : c) + ': ' + v.toFixed(1) + ' cards on average') + '" cx="' + x(c) + '" cy="' + y(v) + '" r="3" fill="' + color + '"/>'));
+  return '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+}
+
+function renderMeta() {
+  if (!fieldReady()) return '<div class="empty">No field data. Run <code>python3 fetch_decks.py</code> (or <code>python3 db.py export</code>) to generate <code>field.js</code>, then reload.</div>';
+  return metaArch && FIELD.archetypes[metaArch] ? renderArchDetail(metaArch) : renderArchList();
+}
+
+function renderArchList() {
+  const weights = threatWeights();
+  const dianaN = FIELD.archetypes[FIELD.diana] ? FIELD.archetypes[FIELD.diana].decks.length : 0;
+  const totalAll = Object.values(FIELD.archetypes).reduce((a, x) => a + x.decks.length, 0);
+  const maxW = weights.length ? weights[0].weight : 1;
+
+  let html = '<h2>The field</h2><p class="sub">Every archetype scraped from the same top cuts as the Diana lists — ' + totalAll +
+    ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Click an archetype to see what it plays.</p>';
+
+  const dConv = archConversion(FIELD.diana);
+  if (dConv) html += '<div class="summary-box">You are <strong>Diana</strong>: ' + dianaN + ' top-cut lists here, converting <strong>' +
+    (100 * dConv.conversion).toFixed(1) + '%</strong> into Day 2 — <strong>' + dConv.index.toFixed(2) + '×</strong> the field average. The table below is everyone else.</div>';
+
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Top-cut decks</th><th class="num">Field share</th>' +
+    '<th class="num">Conversion</th><th class="num">vs field</th><th>Trend</th><th>Threat</th></tr></thead><tbody>';
+  weights.forEach(w => {
+    const a = FIELD.archetypes[w.slug];
+    const t = archTrend(w.slug);
+    const trend = !t ? '<span style="color:var(--muted)">—</span>'
+      : Math.abs(t.delta) < 0.01 ? '<span style="color:var(--muted)">flat</span>'
+      : t.delta > 0 ? '<span style="color:var(--lock)">▲ ' + pct(t.early) + ' → ' + pct(t.late) + '</span>'
+                    : '<span style="color:var(--danger)">▼ ' + pct(t.early) + ' → ' + pct(t.late) + '</span>';
+    html += '<tr style="cursor:pointer" onclick="openArch(\'' + w.slug + '\')">' +
+      '<td><strong>' + escHtml(a.name) + '</strong></td>' +
+      '<td class="num">' + w.n + '</td><td class="num">' + pct(w.share) + '</td>' +
+      '<td class="num">' + (w.conv ? (100 * w.conv.conversion).toFixed(1) + '%' : '—') + '</td>' +
+      '<td class="num" style="color:' + (w.conv && w.conv.index >= 1 ? 'var(--lock)' : 'var(--muted)') + '">' + (w.conv ? w.conv.index.toFixed(2) + '×' : '—') + '</td>' +
+      '<td style="font-size:12px;">' + trend + '</td>' +
+      '<td><span class="incl-bar" style="width:' + Math.round(110 * w.weight / maxW) + 'px"></span></td></tr>';
+  });
+  html += '</tbody></table></div>';
+  html += '<p class="sub">Conversion is archetype-level across ' + ((window.META && META.performance && META.performance.fieldDay1) || 0).toLocaleString() +
+    ' recorded decks; a dash means that legend never cleared the 20-deck minimum. Trend compares the last three events to everything before them and needs at least four events.</p>';
+
+  html += '<h2>Sideboard coverage</h2>';
+  html += '<p class="sub">What your sideboard answers, archetype by archetype. Leave the box empty to score the consensus sideboard from the Build view. One card per line, like the deck coach.</p>';
+  html += '<textarea id="sideInput" oninput="sideChanged()" placeholder="2 Turn to Dust&#10;2 Singularity&#10;..." style="min-height:90px">' + escHtml(sideText) + '</textarea>';
+  html += '<div id="coverOut">' + coverageHTML() + '</div>';
+  return html;
+}
+
+function renderArchDetail(slug) {
+  const a = FIELD.archetypes[slug];
+  const { decks, ranked } = archStats(slug);
+  const N = decks.length;
+  const p = archProfile(slug);
+  const conv = archConversion(slug);
+  const isDiana = slug === FIELD.diana;
+
+  let html = '<div class="crumb"><span class="deck-link" onclick="closeArch()">← All archetypes</span></div>';
+  html += '<h2 style="margin-top:8px;">' + escHtml(a.name) + (isDiana ? ' ★' : '') + '</h2>';
+
+  const facts = [N + ' top-cut list' + (N === 1 ? '' : 's')];
+  if (conv) facts.push((100 * conv.conversion).toFixed(1) + '% Day 1→Day 2 (' + conv.index.toFixed(2) + '× the field, ' + conv.day1.toLocaleString() + ' decks recorded)');
+  facts.push(p.units.toFixed(1) + ' units / ' + p.spells.toFixed(1) + ' spells / ' + p.gear.toFixed(1) + ' gear per deck');
+  facts.push('avg cost ' + p.avgCost.toFixed(2));
+  html += '<div class="summary-box">' + escHtml(facts.join(' · ')) + '</div>';
+
+  // What answers them — the mirror of the coverage table, for one archetype.
+  if (!isDiana) {
+    const { list, source } = currentSideboard();
+    const cov = coverageOf(list, p);
+    html += '<div class="summary-box">Against them, ' + escHtml(source) + ' holds some answer to <strong style="color:' + pctColor(cov.coverage) + '">' + pct(cov.coverage) + '</strong> of their 40, ' +
+      'across <strong>' + cov.depth + '</strong> relevant card' + (cov.depth === 1 ? '' : 's') + '. ' +
+      (cov.name ? 'The best is <strong>' + escHtml(cov.name) + '</strong> — ' + escHtml(answerWhy(cov.name, cov.tag, p)) + '.' : 'Nothing in it interacts with them.') +
+      ' <span style="color:var(--muted)">Breadth from rules text vs their board, not a win rate — see the Meta index for how.</span></div>';
+  }
+
+  // Unit sizes: the single most actionable thing about an opposing deck.
+  const mights = Object.entries(p.mightCounts).map(([m, c]) => [+m, c]).sort((x, y) => x[0] - y[0]);
+  if (mights.length) {
+    const maxC = Math.max(...mights.map(m => m[1]));
+    html += '<h2>Unit sizes</h2><p class="sub">Every unit copy across their ' + N + ' list' + (N === 1 ? '' : 's') + ', by Might. This is what your removal has to line up against — a card that deals 3 answers everything left of the 4.</p>';
+    html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Might</th><th>Unit copies</th><th class="num">Cumulative</th></tr></thead><tbody>';
+    let cum = 0;
+    mights.forEach(([m, c]) => {
+      cum += c;
+      html += '<tr><td>⚔' + m + '</td><td><span class="incl-bar" style="width:' + Math.round(140 * c / maxC) + 'px"></span>' + c + '</td>' +
+        '<td class="num" title="An answer sized ' + m + ' hits this much of their unit count">' + pct(cum / p.knownUnits) + '</td></tr>';
+    });
+    html += '</tbody></table></div>';
+  }
+
+  html += '<h2>Consensus list</h2><p class="sub">Weighted like the Build view but over their own ' + N + ' list' + (N === 1 ? '' : 's') + ' — no placement weighting exists for the scraped field, so each list counts once.</p>';
+  const proto = computeProto(decks, ranked);
+  html += '<div class="col2"><div>';
+  proto.forEach(c => {
+    const pctIn = Math.round(100 * c.decksIn / N);
+    html += '<div class="card-row ' + (c.locked ? 'locked' : 'flex') + '" data-card="' + attr(c.name) + '" data-cardopen="' + attr(c.name) + '" style="cursor:pointer">' + cardImg(c.name) +
+      '<span class="card-name">' + gemsFor(c.name) + ' ' + escHtml(c.name) + '</span><span class="card-meta">' + pctIn + '%</span><span class="count-badge">x' + c.copies + '</span></div>';
+  });
+  html += '</div><div>';
+  const bfFreq = {}, runeFreq = {};
+  a.decks.forEach(d => {
+    (d.battlefields || []).forEach(b => bfFreq[b] = (bfFreq[b] || 0) + 1);
+    Object.entries(d.runes || {}).forEach(([n, c]) => runeFreq[n] = (runeFreq[n] || 0) + c / a.decks.length);
+  });
+  const runes = Object.entries(runeFreq).sort((x, y) => y[1] - x[1]);
+  if (runes.length) {
+    html += '<div class="cost-head">Rune split (avg of 12)</div>';
+    runes.forEach(([n, avg]) => html += '<div class="card-row" data-card="' + attr(n) + '">' + cardImg(n) + '<span class="card-name">' + escHtml(n) + '</span><span class="count-badge">' + avg.toFixed(1) + '</span></div>');
+  }
+  const bfs = Object.entries(bfFreq).sort((x, y) => y[1] - x[1]).slice(0, 6);
+  if (bfs.length) {
+    html += '<div class="cost-head">Battlefields</div>';
+    bfs.forEach(([n, c]) => html += '<div class="card-row" data-card="' + attr(n) + '">' + cardImg(n) + '<span class="card-name">' + escHtml(n) + '</span><span class="card-meta">' + c + '/' + N + '</span></div>');
+  }
+  html += '</div></div>';
+
+  const maxCost = MAX_COST_BUCKET;
+  html += '<h2>Energy curve</h2>';
+  html += curveSVG(targetCurveOf(decks), PALETTE[Math.abs(hashStr(slug)) % PALETTE.length], maxCost);
+
+  html += '<h2>Staples</h2><p class="sub">Inclusion across their lists, with Wilson 95% intervals — the same caveat as everywhere else: ' + N + ' decks is a small sample.</p>';
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost/Domain</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th></tr></thead><tbody>';
+  [...ranked].sort((x, y) => y.decksIn - x.decksIn || y.score - x.score).slice(0, 25).forEach(c => {
+    const info = cardInfo(c.name) || {};
+    const [lo, hi] = wilson(c.decksIn, N);
+    html += '<tr data-card="' + attr(c.name) + '" data-cardopen="' + attr(c.name) + '" style="cursor:pointer;"><td>' + cardImg(c.name) + escHtml(c.name) + '</td>' +
+      '<td>' + gemsFor(c.name) + '</td><td>' + (info.type || '—') + '</td>' +
+      '<td><span class="incl-bar" style="width:' + Math.round(60 * c.decksIn / N) + 'px"></span>' + c.decksIn + '/' + N + ' (' + Math.round(100 * c.decksIn / N) + '%)' +
+      '<span class="ci">' + lo.toFixed(0) + '–' + hi.toFixed(0) + '%</span></td>' +
+      '<td class="num">' + c.avgCopies.toFixed(1) + '</td></tr>';
+  });
+  html += '</tbody></table></div>';
+
+  html += '<h2>Their lists (' + N + ')</h2>';
+  a.decks.forEach((d, j) => {
+    html += '<div class="deck-tile" onclick="openFieldDeckModal(\'' + slug + '\',' + j + ')"><div class="dt-main">' +
+      '<div class="dt-title"><span class="badge">' + attr(d.placement || '—') + '</span> ' + escHtml(d.label) + '</div>' +
+      '<div class="dt-sub">' + escHtml([d.event, d.date].filter(Boolean).join(' · ')) + '</div></div><div class="dt-open">›</div></div>';
+  });
+  return html;
+}
+
+function hashStr(s) { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return h; }
+
 /* ---------------- COMPARE ---------------- */
 function renderCompare(ctx) {
   const N = ctx.N;
@@ -1587,13 +2445,11 @@ function renderDecks(ctx) {
 }
 
 /* ---------------- Modal ---------------- */
-function openDeckModal(i) {
-  const d = globalDecks[i];
-  if (!d) return;
+// Visual deck view: overlapping card-image stacks per cost column.
+function deckStacksHTML(d) {
   const buckets = {};
   d.cards.forEach(c => { const cost = cardMeta[c.name] && cardMeta[c.name].cost != null ? cardMeta[c.name].cost : '?'; (buckets[cost] = buckets[cost] || []).push(c); });
   const costKeys = Object.keys(buckets).sort((a, b) => (a === '?' ? 99 : +a) - (b === '?' ? 99 : +b));
-  // Visual deck view: overlapping card-image stacks per cost column.
   let body = '<div class="stacks">';
   costKeys.forEach(k => {
     body += '<div class="stack-col"><div class="sc-head">' + (k === '?' ? 'Other' : 'Cost ' + k) + '</div><div class="stack">';
@@ -1606,27 +2462,64 @@ function openDeckModal(i) {
     });
     body += '</div></div>';
   });
-  body += '</div>';
+  return body + '</div>';
+}
+function deckExtrasHTML(d) {
   let extra = '';
   if (d.sideboard && d.sideboard.length) extra += '<div class="cost-head">Sideboard</div>' + d.sideboard.map(s => '<span class="mcard" data-card="' + attr(s.name) + '">' + cardImg(s.name) + '<span>' + escHtml(s.name) + '</span><span class="mcard-c">x' + s.count + '</span></span>').join('');
   if (d.runes && d.runes.length) extra += '<div class="cost-head">Runes</div>' + d.runes.map(r => '<span class="pkg-chip" data-card="' + attr(r.name) + '">' + cardImg(r.name) + escHtml(r.name) + ' x' + r.count + '</span>').join('');
   if (d.battlefields && d.battlefields.length) extra += '<div class="cost-head">Battlefields</div>' + d.battlefields.map(b => '<span class="pkg-chip" data-card="' + attr(b.name) + '">' + cardImg(b.name) + escHtml(b.name) + '</span>').join('');
+  return extra;
+}
+function showModal(inner) {
+  const modal = document.getElementById('modal');
+  modal.querySelector('.modal').innerHTML = inner;
+  modal.classList.add('show');
+}
+
+function openDeckModal(i) {
+  const d = globalDecks[i];
+  if (!d) return;
   const total = d.cards.reduce((a, c) => a + c.count, 0);
   let opts = '<option value="proto">Prototype (consensus)</option>';
   globalDecks.forEach((o, j) => { if (j !== i) opts += '<option value="' + j + '">' + attr(o.label) + '</option>'; });
-  const inner =
+  showModal(
     '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
       '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') +
       (priceTag(d.cards) ? ' · ' + priceTag(d.cards) : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
     '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><button onclick="exportDeckImageFor(' + i + ')">🖼 Save image</button>' +
       '<span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
-    '<div id="modalDiffOut"></div><div class="modal-cards">' + body + extra + '</div>';
-  const modal = document.getElementById('modal');
-  modal.querySelector('.modal').innerHTML = inner;
-  modal.classList.add('show');
+    '<div id="modalDiffOut"></div><div class="modal-cards">' + deckStacksHTML(d) + deckExtrasHTML(d) + '</div>');
+}
+
+// Same modal for a deck from the wider field, diffable against its own
+// archetype's other lists.
+function openFieldDeckModal(slug, j) {
+  const d = fieldDeck(slug, j);
+  const total = d.cards.reduce((a, c) => a + c.count, 0);
+  let opts = '';
+  FIELD.archetypes[slug].decks.forEach((o, k) => { if (k !== j) opts += '<option value="' + k + '">' + attr(o.label) + '</option>'; });
+  showModal(
+    '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
+      '<div class="modal-sub"><span class="badge">' + attr(d.placement || '—') + '</span> ' + escHtml(FIELD.archetypes[slug].name) + ' · ' +
+      escHtml(d.event || '') + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') + '</div></div>' +
+      '<button class="icon-btn" onclick="closeModal()">✕</button></div>' +
+    '<div class="modal-actions"><button onclick="copyFieldDeck(\'' + slug + '\',' + j + ')">Copy list</button>' +
+      (opts ? '<span class="cmp">Compare with <select id="modalCmp" onchange="fieldModalDiff(\'' + slug + '\',' + j + ')"><option value="">—</option>' + opts + '</select></span>' : '') +
+    '</div><div id="modalDiffOut"></div><div class="modal-cards">' + deckStacksHTML(d) + deckExtrasHTML(d) + '</div>');
+}
+function fieldModalDiff(slug, j) {
+  const sel = document.getElementById('modalCmp').value;
+  const out = document.getElementById('modalDiffOut');
+  if (sel === '') { out.innerHTML = ''; return; }
+  out.innerHTML = '<div class="modal-diff">' + renderDiff(fieldDeck(slug, j), fieldDeck(slug, +sel)) + '</div>';
+}
+function copyFieldDeck(slug, j) {
+  const d = fieldDeck(slug, j);
+  navigator.clipboard.writeText(d.cards.map(c => c.count + 'x ' + c.name).join('\n')).then(() => toast('Copied ' + d.label)).catch(() => {});
 }
 function openCardModal(name) {
-  const details = (window.CARDS && CARDS[name]) || {};
+  const details = cardInfo(name) || {};
   const meta = cardMeta[name] || {};
   const N = globalDecks.length;
   const stat = rankedCards.find(c => c.name === name);
@@ -1656,6 +2549,22 @@ function openCardModal(name) {
   }
   const pkg = packageOf(name);
   if (pkg) info += '<div style="margin-top:4px;">Travels with ' + pkg.cards.filter(n => n !== name).map(escHtml).join(', ') + ' (package in ' + pkg.decks + '/' + N + ' decks).</div>';
+
+  // Which archetypes play it, and what its rules text says it answers.
+  if (fieldReady()) {
+    const plays = Object.entries(FIELD.archetypes)
+      .map(([slug, a]) => ({ slug, a, n: a.decks.filter(d => d.main[name] || d.side[name]).length }))
+      .filter(x => x.n).sort((x, y) => y.n - x.n);
+    if (plays.length > 1) {
+      info += '<div class="cost-head">Across the field</div><div>' + plays.slice(0, 6).map(x =>
+        '<span class="pkg-chip"><span class="deck-link" onclick="closeModal();openArch(\'' + x.slug + '\')">' + escHtml(x.a.name) + '</span>' +
+        '<span style="color:var(--muted);font-size:11px;">' + x.n + '/' + x.a.decks.length + '</span></span>').join('') + '</div>';
+    }
+    const tags = techTags(name);
+    if (tags.length) info += '<div style="margin-top:6px;color:var(--muted);font-size:12.5px;">Reads as ' +
+      tags.map(t => '<span class="dist-badge">' + escHtml(t.label) + (t.size != null ? ' ' + t.size : '') + '</span>').join(' ') +
+      ' — see Sideboard coverage in the Meta view.</div>';
+  }
 
   // Placement lean: do the decks running it finish better or worse?
   if (stat && stat.decksIn >= 2 && stat.decksIn <= N - 2) {
@@ -1856,11 +2765,19 @@ function exportMyDeckImage() {
 function render() {
   if (!allDecks.length) return;
   const ci = document.getElementById('coachInput'); if (ci) coachText = ci.value;
+  const si = document.getElementById('sideInput'); if (si) sideText = si.value;
   const view = VIEWS[currentView] || VIEWS.build;
   let html = '<div class="view-head"><img class="hero-art" src="cache/images/Diana_Lunari.webp" alt=""><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(view.desc) + '</p></div>';
-  html += renderFilterBar();
-  if (!globalDecks.length) html += '<div class="empty">No decks match the current filters. <span class="deck-link" onclick="clearFilters()">Reset filters</span>.</div>';
-  else html += view.render(computeContext());
+  // The Meta view reads the whole scraped field, not the Diana subset, so the
+  // filter bar would only mislead — the one thing it touches is the fallback
+  // consensus sideboard, and that is labelled where it is used.
+  if (currentView !== 'meta') {
+    html += renderFilterBar();
+    if (!globalDecks.length) html += '<div class="empty">No decks match the current filters. <span class="deck-link" onclick="clearFilters()">Reset filters</span>.</div>';
+    else html += view.render(computeContext());
+  } else {
+    html += view.render(computeContext());
+  }
   document.getElementById('content').innerHTML = html;
   document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.view === currentView));
   document.getElementById('deckCount').textContent = allDecks.length + ' decks loaded';
@@ -1976,6 +2893,7 @@ async function load() {
   try {
     if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f7f6f3'); }
     coachText = localStorage.getItem('ddl-coach') || '';
+    sideText = localStorage.getItem('ddl-side') || '';
   } catch (e) {}
   const el = document.getElementById('content');
   if (window.DECKS) allDecks = window.DECKS;

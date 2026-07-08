@@ -14,6 +14,8 @@ The DB is the source of truth. Exports for the static viewer:
     decks.json / decks.js   Diana decks only, fully enriched
     meta.json / meta.js     whole-field context: per-event archetype counts
                             and cross-archetype card baselines
+    field.json / field.js   every archetype's decklists + a card index, so the
+                            viewer can explore the whole meta, not just Diana
 
 CLI:
     python3 db.py migrate   one-time import of a legacy decks.json
@@ -31,6 +33,7 @@ from pathlib import Path
 DB_FILE = Path(__file__).parent / "riftbound.db"
 DECKS_JSON = Path(__file__).parent / "decks.json"
 META_JSON = Path(__file__).parent / "meta.json"
+FIELD_JSON = Path(__file__).parent / "field.json"
 IMAGE_DIR = Path(__file__).parent / "cache" / "images"
 
 DIANA_ARCHETYPE = "diana-scorn-of-the-moon"
@@ -414,6 +417,107 @@ def export_meta_json(conn, path=META_JSON):
     return len(events)
 
 
+def legend_slug_for(archetype, legend_slugs):
+    """Archetype slugs are '<champion>-<legend>' ("irelia-blade-dancer") while the
+    conversion tables key on the legend alone ("blade-dancer"). Match by suffix,
+    longest first so 'wuju-master' never swallows 'wuju-bladesman'."""
+    for slug in sorted(legend_slugs, key=len, reverse=True):
+        if archetype == slug or archetype.endswith("-" + slug):
+            return slug
+    return None
+
+
+def pretty_archetype(archetype, legend_slug, legend_name):
+    """'irelia-blade-dancer' -> 'Irelia, Blade Dancer' using the printed legend
+    name when we have one, else a plain title-casing of the slug."""
+    champion = archetype[: -(len(legend_slug) + 1)] if legend_slug and archetype.endswith("-" + legend_slug) else ""
+    title = lambda s: " ".join(w.capitalize() for w in s.split("-") if w)
+    if champion and legend_name:
+        return f"{title(champion)}, {legend_name}"
+    return title(archetype)
+
+
+def export_field_json(conn, path=FIELD_JSON):
+    """Write field.json/field.js: every archetype's tournament decklists plus a
+    card index covering them.
+
+    decks.json is Diana-only and meta.json is counts-only, so neither lets the
+    viewer show what an opposing archetype actually plays. This does: it powers
+    the Meta view (browse any archetype's consensus list) and the sideboard
+    coverage heuristic (which needs the opponents' unit sizes, gear counts and
+    spell density to know what a tech card is answering).
+    """
+    legend_rows = {
+        r["slug"]: re.sub(r"\s*-\s*Starter$", "", r["legend"])
+        for r in conn.execute("SELECT DISTINCT slug, legend FROM event_performance")
+    }
+
+    archetypes = {}
+    for d in conn.execute(
+        "SELECT d.id, d.label, d.player, d.placement, d.archetype, d.url, "
+        "e.name AS event_name, e.date AS event_date "
+        "FROM decks d LEFT JOIN events e ON e.id = d.event_id ORDER BY d.id"
+    ):
+        arch = d["archetype"]
+        if arch not in archetypes:
+            slug = legend_slug_for(arch, legend_rows.keys())
+            archetypes[arch] = {
+                "name": pretty_archetype(arch, slug, legend_rows.get(slug)),
+                "legend": slug,
+                "decks": [],
+            }
+        sections = {"main": {}, "side": {}, "rune": {}, "battlefield": {}}
+        for row in conn.execute(
+            "SELECT card_name, count, section FROM deck_cards WHERE deck_id = ?", (d["id"],)
+        ):
+            sections[row["section"]][row["card_name"]] = row["count"]
+        archetypes[arch]["decks"].append({
+            "label": d["label"],
+            "player": d["player"],
+            "placement": d["placement"],
+            "event": d["event_name"],
+            "date": d["event_date"],
+            "url": d["url"],
+            "main": sections["main"],
+            "side": sections["side"],
+            "runes": sections["rune"],
+            "battlefields": sorted(sections["battlefield"]),
+        })
+
+    # One card index for every name any deck plays, so the viewer can render
+    # opposing lists (cost gems, might, art) without a second lookup table.
+    cards = {}
+    for row in conn.execute("SELECT DISTINCT card_name FROM deck_cards"):
+        name = row["card_name"]
+        card = lookup_card(conn, name)
+        if not card:
+            continue
+        local = local_image_path(name)
+        cards[name] = {
+            "cost": card["cost"],
+            "type": card["type"],
+            "might": card["might"],
+            "color": json.loads(card["color"]) if card["color"] else [],
+            "tags": json.loads(card["tags"]) if card["tags"] else [],
+            "effect": card["effect"],
+            "image": f"cache/images/{local.name}" if local.exists() else card["image_url"],
+            "price": card["price"],
+        }
+
+    # Deliberately no "generated" stamp: meta.json already carries one, and a
+    # timestamp here would make field.json churn on every scrape, defeating the
+    # weekly workflow's "did the data actually change?" check.
+    field = {
+        "diana": DIANA_ARCHETYPE,
+        "archetypes": archetypes,
+        "cards": cards,
+    }
+    payload = json.dumps(field, indent=1)
+    Path(path).write_text(payload)
+    Path(path).with_suffix(".js").write_text("window.FIELD = " + payload + ";\n")
+    return len(archetypes), len(cards)
+
+
 def export_cards_json(conn, path=None):
     """Write cards.json/cards.js: full details for every card that appears
     in any Diana deck section — powers the viewer's card-detail modal."""
@@ -469,8 +573,10 @@ def main():
         n = export_decks_json(conn)
         m = export_meta_json(conn)
         k = export_cards_json(conn)
+        a, c = export_field_json(conn)
         conn.commit()
-        print(f"Exported {n} Diana decks, meta for {m} events, {k} card details")
+        print(f"Exported {n} Diana decks, meta for {m} events, {k} card details, "
+              f"{a} archetypes / {c} cards to field.json")
     elif cmd == "stats":
         for table in ("cards", "events", "decks", "deck_cards"):
             n = conn.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]

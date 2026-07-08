@@ -396,10 +396,12 @@ def main():
     total = db.export_decks_json(conn)
     events = db.export_meta_json(conn)
     db.export_cards_json(conn)
+    archetypes, _ = db.export_field_json(conn)
     conn.commit()
     conn.close()
     print(f"\nStored {fetched} Diana + {meta_fetched} new meta decks; "
-          f"exported {total} Diana decks and meta for {events} events")
+          f"exported {total} Diana decks, meta for {events} events, "
+          f"{archetypes} archetypes to field.json")
     print("Open index.html (via a local server or GitHub Pages) to see the comparison.")
 
 

@@ -136,6 +136,9 @@ def main():
         time.sleep(0.6)
     conn.commit()
     n = db.export_meta_json(conn)
+    # field.json maps each archetype to its legend via the conversion tables, so
+    # it has to be rewritten after those tables land — not just by fetch_decks.py.
+    db.export_field_json(conn)
     conn.commit()
     conn.close()
     print(f"\nStored {total_rows} legend-performance rows; meta exported for {n} events")

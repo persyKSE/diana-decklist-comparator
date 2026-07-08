@@ -23,6 +23,11 @@ deck builder.
   (`migrate` / `export` / `stats`).
 - **`decks.json`** — export for the viewer, enriched with per-card
   cost/type/color from the catalogue.
+- **`field.json`** — every archetype's decklists (not just Diana's) plus a
+  card index covering them. Powers the Meta view and the sideboard
+  coverage heuristic, which needs the *opponents'* unit sizes, gear counts
+  and spell density. Carries no timestamp, so it only changes when the
+  data does.
 - **`index.html`** — the static site. Reads `decks.json`; no build step.
 
 ## Setup (one-time)
@@ -54,21 +59,30 @@ or served, if you prefer a localhost URL:
 `decks.js` so it also works from `file://`, where browsers block
 `fetch`.)
 
-The site is a single-page app with a sidebar and four views (Build,
-Analyze, Compare, Decks), a dark "moonlight" theme, and card hover
+The site is a single-page app with a sidebar and five views (Build,
+Analyze, Meta, Compare, Decks), a dark "moonlight" theme, and card hover
 previews. A **global filter bar** (region / sub-archetype / placement /
 date range) recomputes every view from the chosen subset, so you can
 ask e.g. "what does the majority build's curve look like without the
-off-meta variant?" or "did the CN circuit build differently?".
+off-meta variant?" or "did the CN circuit build differently?". (The Meta
+view reads the whole field, so the filters don't apply there.)
 
 - **Build** — a weighted consensus 40 (deck weight × copies, summed),
   locked vs. flex slots, runes/battlefields, and a **coach**: paste
   your list to get distance to each winning deck, missing core cards,
   and one-click "apply" swaps toward the consensus. Your list is saved
-  in the browser and re-analyzed as you type.
-- **Analyze** — card inclusion table, card packages, energy curves and
-  a sub-archetype dendrogram, and an inclusion timeline. Charts have
-  hover tooltips and legend/leaf highlighting.
+  in the browser and re-analyzed as you type. A **Consistency** section
+  gives exact draw odds for whatever list you're holding (see below),
+  and a banner summarises what the last event changed.
+- **Analyze** — a **What changed** timeline (the consensus prototype
+  rebuilt after each event and diffed against the one before it), card
+  inclusion table, card packages, energy curves and a sub-archetype
+  dendrogram, and an inclusion timeline. Charts have hover tooltips and
+  legend/leaf highlighting.
+- **Meta** — every archetype in the scraped field ranked by *threat*
+  (field share × Day 1→Day 2 conversion index), with a trend arrow.
+  Click one for its consensus list, curve, staples, unit-size histogram
+  and source decklists. Below that, **sideboard coverage** (see below).
 - **Compare** — git-style diff of any two lists and a swap-distance
   matrix with a "closest to the field" ranking.
 - **Decks** — every source list; click one for a visual decklist modal
@@ -100,6 +114,46 @@ optimizer remains explicitly consensus-driven.
 Field size does unlock one thing: the **weight by field size** filter
 scales each deck's placement weight by √(attendance ÷ median), so a 1st
 at a 1900-player event outweighs a 1st at an 1100-player one.
+
+### Consistency (Build view)
+
+The one axis the tournament data can't speak to is whether a given 40
+actually *delivers* its cards. That is pure hypergeometric probability
+over the list itself, so it needs no results data at all. Riftbound deals
+an opening hand of **4**, lets you set aside up to **2** for replacements
+without reshuffling, then draws **1 per turn** — so by turn T you have
+seen 4+T cards. The table gives, per card: odds in the opening 4, odds
+after a mulligan (exactly computed — a miss gets two more looks at a
+36-card deck that still holds every copy), and odds of ≥1 and ≥2 by turn
+T. "Deal a hand" goldfishes a real opener you can mulligan and draw from.
+
+### Sideboard coverage (Meta view)
+
+Each card's printed rules text is matched against a small set of patterns
+— counter a spell, unconditional kill, deal *N*, kill/return up to *N*
+Might, −*N* Might (a "to a minimum of 1 Might" floor means it can never
+kill, so it scores as a combat trick), sweeper, bounce, gear removal,
+stun. Where a size is printed it is extracted. Then, for every card copy
+in an opposing archetype's averaged main deck, we ask whether anything in
+your sideboard handles *that specific card*: a 4-Might unit needs
+something that deals 4, kills outright, or shrinks it by 4; a Gear needs
+gear removal; a Spell needs a counter. Clean answers count 1, bounce 0.6,
+stun 0.35, a non-lethal combat trick 0.25.
+
+The result is **breadth**: the quality-weighted share of their 40 that you
+hold *any* answer to. The denominator is literally their decklist, so
+there are no tuning constants beyond those four discounts.
+
+**It saturates by design.** One counterspell "covers" every spell they
+run; one six-damage spell covers nearly every unit. A sideboard with one
+of each type scores very high on breadth while being far too thin to
+play — which is why the table also reports the **Answers** count (how
+many relevant cards you actually hold) and why the two must be read
+together. Breadth is good at finding holes; it is bad at telling you that
+you have none. It is not a win rate and cannot be: no per-match data
+exists. Right now it says the consensus sideboard covers **52%** of the
+weighted field, and that its biggest hole is having **no counterspell**
+against a field whose best decks are spell-heavy.
 
 ### On reading the numbers
 
@@ -159,3 +213,11 @@ under **Pages**, set **Source** to **GitHub Actions**.
 - The prototype deck is a consensus/aggregate build — a strong netdeck
   baseline, not a proven-optimal list. It weighs card frequency, not
   synergy or matchup targeting.
+- Sideboard coverage classifies cards by regex over their rules text. Cards
+  whose interaction is implicit, conditional in a way the pattern misses, or
+  phrased unusually will read as "no interaction". The tags shown in each
+  card's detail modal make the classification inspectable — if one looks
+  wrong, `TECH_RULES` in `index.html` is where to fix it.
+- The Meta view's per-archetype consensus counts every scraped list once;
+  unlike the Diana lists, field decks carry no placement weighting. Several
+  archetypes have only 1–2 lists, so their "consensus" is just that list.
