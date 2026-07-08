@@ -36,6 +36,14 @@ def to_int(value):
         return None
 
 
+def to_float(value):
+    try:
+        f = float(value)
+        return f if f > 0 else None
+    except (TypeError, ValueError):
+        return None
+
+
 def clean_effect(html):
     """Rules text arrives with HTML markup; keep it as readable plain text."""
     if not html:
@@ -62,15 +70,16 @@ def main():
     for card in fetch_catalogue():
         conn.execute(
             "INSERT INTO cards (code, name, norm_name, color, cost, type, "
-            "supertype, might, tags, rarity, set_name, promo, image_url, effect) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
+            "supertype, might, tags, rarity, set_name, promo, image_url, effect, price) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) "
             "ON CONFLICT(code) DO UPDATE SET name = excluded.name, "
             "norm_name = excluded.norm_name, color = excluded.color, "
             "cost = excluded.cost, type = excluded.type, "
             "supertype = excluded.supertype, might = excluded.might, "
             "tags = excluded.tags, rarity = excluded.rarity, "
             "set_name = excluded.set_name, promo = excluded.promo, "
-            "image_url = excluded.image_url, effect = excluded.effect",
+            "image_url = excluded.image_url, effect = excluded.effect, "
+            "price = excluded.price",
             (
                 card["id"],
                 card["name"],
@@ -86,6 +95,7 @@ def main():
                 1 if card["promo"] else 0,
                 card["image"] or None,
                 clean_effect(card["effect"]),
+                to_float(card.get("price")),
             ),
         )
         count += 1

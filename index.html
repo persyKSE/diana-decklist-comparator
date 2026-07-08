@@ -426,6 +426,63 @@ function packageOf(name) {
   return packagesCache.packages.find(p => p.cards.includes(name)) || null;
 }
 
+function priceOf(name) { return (window.CARDS && CARDS[name] && CARDS[name].price) || 0; }
+function listPrice(list) {
+  let sum = 0, unpriced = 0;
+  list.forEach(c => { const p = priceOf(c.name); if (p) sum += p * c.count; else unpriced += c.count; });
+  return { sum, unpriced };
+}
+function priceTag(list) {
+  const { sum, unpriced } = listPrice(list);
+  if (!sum) return '';
+  return '~$' + sum.toFixed(0) + (unpriced ? ' <span title="' + unpriced + ' cards have no listed market price">+' + unpriced + ' unpriced</span>' : '');
+}
+
+// Consensus runes / battlefields / sideboard over the active set — the
+// parts of a registrable deck that the 40-card prototype alone omits.
+function consensusExtras(N) {
+  const totalW = globalDecks.reduce((a, d) => a + (d.weight || 1), 0) || 1;
+  const runeAvg = {};
+  globalDecks.forEach(d => (d.runes || []).forEach(r => { runeAvg[r.name] = (runeAvg[r.name] || 0) + (d.weight || 1) * r.count / totalW; }));
+  const runes = Object.entries(runeAvg).map(([name, avg]) => ({ name, avg, count: Math.round(avg) }))
+    .sort((a, b) => b.avg - a.avg);
+  // nudge rounding so the split still sums to 12
+  let sum = runes.reduce((a, r) => a + r.count, 0);
+  while (sum > 12) { const r = [...runes].sort((a, b) => (b.count - b.avg) - (a.count - a.avg))[0]; if (!r || r.count <= 0) break; r.count--; sum--; }
+  while (sum < 12 && runes.length) { const r = [...runes].sort((a, b) => (a.count - a.avg) - (b.count - b.avg))[0]; r.count++; sum++; }
+
+  const splitFreq = {};
+  globalDecks.forEach(d => {
+    if (!d.runes || !d.runes.length) return;
+    const sig = [...d.runes].sort((a, b) => b.count - a.count).map(r => r.count + ' ' + shortName(r.name).replace(' Rune', '')).join(' / ');
+    splitFreq[sig] = (splitFreq[sig] || 0) + 1;
+  });
+
+  const bfFreq = {};
+  globalDecks.forEach(d => (d.battlefields || []).forEach(b => { bfFreq[b.name] = (bfFreq[b.name] || 0) + 1; }));
+  const bfs = Object.entries(bfFreq).map(([name, n]) => ({ name, n })).sort((a, b) => b.n - a.n);
+
+  // weighted consensus sideboard, filled to 8
+  const sideStats = {};
+  globalDecks.forEach(d => (d.sideboard || []).forEach(c => {
+    if (!sideStats[c.name]) sideStats[c.name] = { score: 0, decksIn: 0, counts: [], weights: [] };
+    const s = sideStats[c.name];
+    s.score += (d.weight || 1) * c.count; s.decksIn += 1;
+    s.counts.push(c.count); s.weights.push(d.weight || 1);
+  }));
+  const side = [];
+  let total = 0;
+  Object.entries(sideStats).map(([name, s]) => ({ name, ...s, copies: weightedAverage(s.counts, s.weights) }))
+    .sort((a, b) => b.score - a.score)
+    .forEach(c => {
+      if (total >= 8) return;
+      const copies = Math.min(c.copies, 8 - total);
+      if (copies > 0) { side.push({ ...c, copies }); total += copies; }
+    });
+
+  return { runes, splits: Object.entries(splitFreq).sort((a, b) => b[1] - a[1]), bfs, side };
+}
+
 // Curve-aware greedy fill: locked cards first at consensus copies, then flex
 // cards by score with a penalty for overfilling a cost bucket beyond the
 // field's average curve (+1 tolerance).
@@ -488,8 +545,12 @@ function addCard(name) {
 }
 
 function copyDecklist() {
-    const text = currentProto.map(c => `${c.copies}x ${c.name}`).join('\n');
-    navigator.clipboard.writeText(text).then(() => toast('Prototype decklist copied')).catch(() => {});
+    let text = currentProto.map(c => `${c.copies}x ${c.name}`).join('\n');
+    const ex = consensusExtras(globalDecks.length);
+    if (ex.runes.length) text += '\n\nRunes:\n' + ex.runes.filter(r => r.count > 0).map(r => r.count + 'x ' + r.name).join('\n');
+    if (ex.bfs.length) text += '\n\nBattlefields:\n' + ex.bfs.slice(0, 3).map(b => '1x ' + b.name).join('\n');
+    if (ex.side.length) text += '\n\nSideboard:\n' + ex.side.map(c => c.copies + 'x ' + c.name).join('\n');
+    navigator.clipboard.writeText(text).then(() => toast('Full deck copied (main + runes + battlefields + sideboard)')).catch(() => {});
 }
 
 function cardImg(name, cls) {
@@ -1082,8 +1143,9 @@ function renderBuild(ctx) {
   const N = ctx.N;
   let html = '';
   const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
-  html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards)</h2>' +
-    '<span><button onclick="copyDecklist()">Copy decklist</button> <button onclick="exportProtoImage()" title="Save a shareable PNG of this list">🖼 Save image</button></span></div>';
+  const protoPrice = priceTag(currentProto.map(c => ({ name: c.name, count: c.copies })));
+  html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards' + (protoPrice ? ' · ' + protoPrice : '') + ')</h2>' +
+    '<span><button onclick="copyDecklist()" title="Copies the full registrable deck: main, runes, battlefields, sideboard">Copy full deck</button> <button onclick="exportProtoImage()" title="Save a shareable PNG of this list">🖼 Save image</button></span></div>';
   html += '<p class="sub">Curve-aware consensus build: locked cards first, then flex slots by score with a penalty for overfilling a cost bucket beyond the field\'s average curve. <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot. Hover a row for its reasoning.</p>';
   if (clusterOptions.length > 1 && !filters.cluster.size) {
     html += '<div class="summary-box">⚠️ This field splits into <strong>' + clusterOptions.length + ' sub-archetypes</strong> — an averaged build can end up as a deck nobody plays. Build for one: ' +
@@ -1101,14 +1163,49 @@ function renderBuild(ctx) {
       '<span class="card-name">' + gemsFor(c.name) + ' ' + escHtml(c.name) + tag + '</span><span class="card-meta">score ' + c.score.toFixed(1) + escHtml(pkgNote) + '</span><span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
   });
 
-  let runeCounts = {}, bfCounts = {};
-  globalDecks.forEach(d => {
-    if (d.runes) d.runes.forEach(r => { runeCounts[r.name] = (runeCounts[r.name] || 0) + 1; });
-    if (d.battlefields) d.battlefields.forEach(b => { bfCounts[b.name] = (bfCounts[b.name] || 0) + 1; });
-  });
-  const sortedRunes = Object.entries(runeCounts).sort((a, b) => b[1] - a[1]).map(e => e[0]).slice(0, 2);
-  const sortedBfs = Object.entries(bfCounts).sort((a, b) => b[1] - a[1]).map(e => e[0]).slice(0, 3);
-  html += '<h2>Runes &amp; battlefields</h2><div class="summary-box">Most common runes: <strong>' + (sortedRunes.join(", ") || "N/A") + '</strong>. Battlefields: <strong>' + (sortedBfs.join(", ") || "N/A") + '</strong>.</div>';
+  // Curve fit: how the prototype's shape tracks the field's average curve.
+  {
+    const target = targetCurveOf(globalDecks);
+    const mine = Array(MAX_COST_BUCKET + 1).fill(0);
+    currentProto.forEach(c => mine[costBucket(c.name)] += c.copies);
+    const fit = mine.reduce((a, v, i) => a + Math.abs(v - target[i]), 0);
+    const W = 340, H = 90, mL = 8, mB = 14, mT = 8, mR = 8;
+    const pw = W - mL - mR, ph = H - mT - mB;
+    const mx = Math.max(1, ...mine, ...target);
+    const x = c => mL + c / MAX_COST_BUCKET * pw, y = v => mT + ph - v / mx * ph;
+    let p = ['<polyline points="' + target.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.7"/>'];
+    p.push('<polyline points="' + mine.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke="var(--accent)" stroke-width="2.5"/>');
+    for (let c = 0; c <= MAX_COST_BUCKET; c += 2) p.push('<text class="axis" x="' + x(c) + '" y="' + (H - 3) + '" font-size="9" text-anchor="middle">' + c + '</text>');
+    html += '<div class="summary-box" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">' +
+      '<svg class="viz" style="width:340px;border:none;background:transparent;" viewBox="0 0 ' + W + ' ' + H + '">' + p.join('') + '</svg>' +
+      '<div style="font-size:13px;"><strong>Curve fit: ' + fit.toFixed(1) + '</strong> total card-slots off the field\'s average shape (dashed).<br><span style="color:var(--muted)">Solid line is this prototype — it updates as you add and remove flex cards.</span></div></div>';
+  }
+
+  // Consensus runes, battlefields, sideboard — the rest of a registrable deck.
+  const extras = consensusExtras(N);
+  html += '<h2>Runes, battlefields &amp; sideboard</h2><p class="sub">The parts of the deck the 40 main cards don\'t cover, from the same weighted consensus. All included in "Copy full deck".</p>';
+  html += '<div class="col2"><div>';
+  if (extras.runes.length) {
+    html += '<div class="cost-head">Rune split (12)</div>';
+    extras.runes.forEach(r => {
+      html += '<div class="card-row" data-card="' + attr(r.name) + '">' + cardImg(r.name) + '<span class="card-name">' + escHtml(r.name) + '</span><span class="card-meta">avg ' + r.avg.toFixed(1) + '</span><span class="count-badge">x' + r.count + '</span></div>';
+    });
+    if (extras.splits.length) html += '<p class="sub" style="margin-top:6px;">Splits seen: ' + extras.splits.map(([sig, n]) => sig + ' (' + n + ')').join(' · ') + '</p>';
+  }
+  if (extras.bfs.length) {
+    html += '<div class="cost-head">Battlefields (pick 3)</div>';
+    extras.bfs.forEach((b, i) => {
+      html += '<div class="card-row' + (i < 3 ? ' locked' : '') + '" data-card="' + attr(b.name) + '">' + cardImg(b.name) + '<span class="card-name">' + escHtml(b.name) + (i < 3 ? '<span class="pill pill-lock">pick</span>' : '') + '</span><span class="card-meta">in ' + b.n + '/' + N + ' decks</span></div>';
+    });
+  }
+  html += '</div><div>';
+  if (extras.side.length) {
+    html += '<div class="cost-head">Consensus sideboard (' + extras.side.reduce((a, c) => a + c.copies, 0) + '/8)</div>';
+    extras.side.forEach(c => {
+      html += '<div class="card-row" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span class="card-name">' + escHtml(c.name) + '</span><span class="card-meta">in ' + c.decksIn + '/' + N + ' sideboards</span><span class="count-badge">x' + c.copies + '</span></div>';
+    });
+  }
+  html += '</div></div>';
 
   const protoNames = new Set(currentProto.map(c => c.name));
   const flexCards = rankedCards.filter(c => c.decksIn < N && c.decksIn >= 1 && !protoNames.has(c.name));
@@ -1185,6 +1282,34 @@ function renderAnalyze(ctx) {
       '<span class="ci">' + lo.toFixed(0) + '–' + hi.toFixed(0) + '%</span></td><td class="num">' + c.avgCopies.toFixed(1) + '</td><td>' + distBadges + '</td><td>' + fieldBadge(c.name) + '</td></tr>';
   });
   html += '</tbody></table></div>';
+
+  // ---- Podium vs rest ----
+  {
+    const podium = globalDecks.filter(d => ['1st', '2nd'].includes(d.placement));
+    const rest = globalDecks.filter(d => !['1st', '2nd'].includes(d.placement));
+    if (podium.length >= 3 && rest.length >= 3) {
+      const names = [...new Set(globalDecks.flatMap(d => d.cards.map(c => c.name)))];
+      const rows = names.map(name => {
+        const inPod = podium.filter(d => d.cards.some(c => c.name === name)).length;
+        const inRest = rest.filter(d => d.cards.some(c => c.name === name)).length;
+        return { name, inPod, inRest, pPod: inPod / podium.length, pRest: inRest / rest.length, delta: inPod / podium.length - inRest / rest.length };
+      }).filter(r => r.inPod + r.inRest >= 2 && Math.abs(r.delta) >= 0.2)
+        .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta)).slice(0, 10);
+      if (rows.length) {
+        html += '<h2>Podium vs rest</h2><p class="sub">No win data is published for these events, but placement <em>within</em> the top cut is a usable signal: cards that finals lists (' + podium.length + ' decks at 1st/2nd) run at different rates than the rest of the top cut (' + rest.length + ' decks). Tiny samples — read as hints, not conclusions.</p>';
+        html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Finals lists</th><th>Rest of top cut</th><th>Lean</th></tr></thead><tbody>';
+        rows.forEach(r => {
+          const lean = r.delta > 0
+            ? '<span class="dist-badge" style="color:var(--lock)">podium +' + Math.round(r.delta * 100) + '%</span>'
+            : '<span class="dist-badge" style="color:var(--danger)">field ' + Math.round(r.delta * 100) + '%</span>';
+          html += '<tr data-card="' + attr(r.name) + '" data-cardopen="' + attr(r.name) + '" style="cursor:pointer;"><td>' + cardImg(r.name) + escHtml(r.name) + '</td>' +
+            '<td>' + r.inPod + '/' + podium.length + ' (' + Math.round(r.pPod * 100) + '%)</td>' +
+            '<td>' + r.inRest + '/' + rest.length + ' (' + Math.round(r.pRest * 100) + '%)</td><td>' + lean + '</td></tr>';
+        });
+        html += '</tbody></table></div>';
+      }
+    }
+  }
 
   // ---- Sideboard patterns ----
   const sideDecks = globalDecks.filter(d => d.sideboard && d.sideboard.length);
@@ -1412,7 +1537,8 @@ function openDeckModal(i) {
   globalDecks.forEach((o, j) => { if (j !== i) opts += '<option value="' + j + '">' + attr(o.label) + '</option>'; });
   const inner =
     '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
-      '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
+      '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') +
+      (priceTag(d.cards) ? ' · ' + priceTag(d.cards) : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
     '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><button onclick="exportDeckImageFor(' + i + ')">🖼 Save image</button>' +
       '<span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
     '<div id="modalDiffOut"></div><div class="modal-cards">' + body + extra + '</div>';
@@ -1451,6 +1577,19 @@ function openCardModal(name) {
   }
   const pkg = packageOf(name);
   if (pkg) info += '<div style="margin-top:4px;">Travels with ' + pkg.cards.filter(n => n !== name).map(escHtml).join(', ') + ' (package in ' + pkg.decks + '/' + N + ' decks).</div>';
+
+  // Placement lean: do the decks running it finish better or worse?
+  if (stat && stat.decksIn >= 2 && stat.decksIn <= N - 2) {
+    const rank = d => PLACEMENT_RANK[d.placement] != null ? PLACEMENT_RANK[d.placement] : 6;
+    const withIt = globalDecks.filter(d => d.cards.some(c => c.name === name));
+    const without = globalDecks.filter(d => !d.cards.some(c => c.name === name));
+    const avgW = withIt.reduce((a, d) => a + rank(d), 0) / withIt.length;
+    const avgO = without.reduce((a, d) => a + rank(d), 0) / without.length;
+    const verdict = avgW < avgO - 0.4 ? 'finish better' : avgW > avgO + 0.4 ? 'finish worse' : 'finish about the same';
+    info += '<div style="margin-top:4px;">Decks running it <strong>' + verdict + '</strong> on average (rank ' + avgW.toFixed(1) + ' vs ' + avgO.toFixed(1) + '; 0=1st … 4=Top 8). <span style="color:var(--muted)">Tiny sample — a hint, not a verdict.</span></div>';
+  }
+  const price = priceOf(name);
+  if (price) info += '<div style="margin-top:4px;">Market price ~$' + price.toFixed(2) + '.</div>';
 
   const runners = globalDecks.map((d, i) => ({ i, d, c: d.cards.find(c => c.name === name) })).filter(x => x.c);
   if (runners.length) {

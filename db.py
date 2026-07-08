@@ -49,7 +49,8 @@ CREATE TABLE IF NOT EXISTS cards (
     set_name  TEXT,
     promo     INTEGER DEFAULT 0,
     image_url TEXT,
-    effect    TEXT                -- rules text, plain
+    effect    TEXT,               -- rules text, plain
+    price     REAL                -- market price, USD
 );
 CREATE INDEX IF NOT EXISTS idx_cards_norm ON cards(norm_name);
 
@@ -98,6 +99,8 @@ def migrate_schema(conn):
     card_cols = [r[1] for r in conn.execute("PRAGMA table_info(cards)")]
     if card_cols and "effect" not in card_cols:
         conn.execute("ALTER TABLE cards ADD COLUMN effect TEXT")
+    if card_cols and "price" not in card_cols:
+        conn.execute("ALTER TABLE cards ADD COLUMN price REAL")
     # deck_cards' section CHECK can't be altered in place; rebuild if it
     # predates the 'side' section.
     row = conn.execute(
@@ -317,6 +320,7 @@ def export_cards_json(conn, path=None):
             "rarity": card["rarity"],
             "tags": json.loads(card["tags"]) if card["tags"] else [],
             "effect": card["effect"],
+            "price": card["price"],
         }
     payload = json.dumps(out, indent=1)
     Path(path).write_text(payload)
