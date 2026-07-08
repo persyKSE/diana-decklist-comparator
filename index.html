@@ -124,6 +124,7 @@
   table.incl .cimg { width: 26px; height: 36px; vertical-align: middle; margin-right: 8px; }
   .incl-bar { display: inline-block; height: 8px; background: var(--accent); border-radius: 4px; vertical-align: middle; margin-right: 8px; min-width: 2px; }
   .dist-badge { display: inline-block; font-size: 11px; background: var(--panel2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; margin-right: 4px; white-space: nowrap; }
+  .ci { display: block; font-size: 10.5px; color: var(--muted); margin-top: 1px; font-variant-numeric: tabular-nums; }
 
   .matrix td { padding: 7px; text-align: center; }
   .matrix td.label { text-align: left; white-space: nowrap; color: var(--muted); }
@@ -158,6 +159,22 @@
   svg.viz .series { transition: opacity 0.12s; }
   svg.viz .pt[data-tip] { cursor: help; }
   svg.viz.focus .series:not(.on) { opacity: 0.1; }
+  svg.viz .avg-area { fill: var(--text); opacity: 0.07; }
+
+  /* Charts fade in and lines draw on when a filter re-renders them. */
+  @keyframes vizFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @keyframes drawOn { from { stroke-dashoffset: 1200; } to { stroke-dashoffset: 0; } }
+  svg.viz { animation: vizFade 0.22s ease-out; }
+  svg.viz polyline { stroke-dasharray: 1200; animation: drawOn 0.7s ease-out forwards; }
+  @media (prefers-reduced-motion: reduce) {
+    svg.viz, svg.viz polyline { animation: none; stroke-dasharray: none; }
+  }
+
+  .smalls { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .small-card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; }
+  .small-card svg.viz { border: none; background: transparent; }
+  .sm-title { font-size: 12.5px; font-weight: 700; margin-bottom: 2px; }
+  .sm-foot { font-size: 11px; color: var(--muted); text-align: right; }
 
   .deck-link { cursor: pointer; border-bottom: 1px dotted var(--muted); }
   .deck-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
@@ -171,7 +188,7 @@
 
   .coach-tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 10px 0; }
   #coachInput { width: 100%; min-height: 140px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; padding: 12px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); resize: vertical; }
-  #coachAdd { padding: 7px 10px; font-size: 13px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--text); min-width: 200px; }
+  #coachAdd, #saveName { padding: 7px 10px; font-size: 13px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--text); min-width: 200px; }
   .coach-warn { background: rgba(227,169,78,0.12); border: 1px solid var(--flex); border-radius: 8px; padding: 8px 12px; font-size: 13px; margin: 8px 0; }
 
   #cardPreview { position: fixed; z-index: 100000; pointer-events: none; opacity: 0; transform: scale(0.96); transition: opacity 0.1s; }
@@ -218,6 +235,19 @@
   .scwrap img.scard { width: 94px; border-radius: 6px; display: block; box-shadow: 0 -3px 10px rgba(0,0,0,0.55); background: var(--panel2); }
   .scwrap .sc-count { position: absolute; top: 3px; right: 3px; background: rgba(10,14,25,0.85); color: var(--text); font-size: 11px; font-weight: 800; border-radius: 6px; padding: 1px 5px; border: 1px solid var(--border); }
 
+  /* ---- Command palette ---- */
+  #palette { position: fixed; inset: 0; z-index: 100002; display: none; justify-content: center; align-items: flex-start; padding-top: 12vh; background: rgba(4,7,14,0.6); backdrop-filter: blur(3px); }
+  #palette.show { display: flex; }
+  .pal-box { width: 100%; max-width: 560px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  #palInput { width: 100%; border: none; border-bottom: 1px solid var(--border); background: transparent; color: var(--text); font-size: 15px; padding: 14px 16px; outline: none; }
+  #palList { max-height: 52vh; overflow-y: auto; }
+  .pal-row { display: flex; align-items: center; gap: 10px; padding: 8px 14px; cursor: pointer; font-size: 13.5px; }
+  .pal-row.sel { background: var(--panel2); box-shadow: inset 3px 0 0 var(--accent); }
+  .pal-row img { width: 24px; height: 33px; object-fit: cover; object-position: top; border-radius: 3px; }
+  .pal-kind { margin-left: auto; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pal-empty { padding: 16px; color: var(--muted); font-size: 13px; }
+  .kbd { font-size: 11px; border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; color: var(--muted); background: var(--bg2); }
+
   .cardmodal-body { display: flex; gap: 16px; }
   .cardmodal-body .cm-img { width: 190px; flex-shrink: 0; }
   .cardmodal-body .cm-img img { width: 100%; border-radius: 10px; display: block; }
@@ -253,6 +283,7 @@
     </nav>
     <div class="side-foot">
       <div id="deckCount"></div>
+      <button class="theme-btn" onclick="openPalette()" title="Search cards, decks and players">🔎 Search <span class="kbd">⌘K</span></button>
       <button class="theme-btn" onclick="toggleTheme()">◐ Theme</button>
     </div>
   </aside>
@@ -262,6 +293,12 @@
 <div id="cardPreview"><img src="" alt=""></div>
 <div id="vizTip"></div>
 <div id="modal"><div class="modal"></div></div>
+<div id="palette">
+  <div class="pal-box">
+    <input id="palInput" placeholder="Search cards, decks, players…  (Esc to close)" autocomplete="off">
+    <div id="palList"></div>
+  </div>
+</div>
 <div id="toast"></div>
 <datalist id="cardNames"></datalist>
 
@@ -281,9 +318,22 @@ let nameLookup = {};
 let nonMainNames = new Set();
 let currentView = 'build';
 let clusterOptions = [];  // {gi, name, n} over the full set
-let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '' };
+let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false };
 let coachTimer = null;
 let packagesCache = null;   // findPackages over the active set, shared by views
+let paletteIndex = 0;       // highlighted row in the command palette
+
+const PLACEMENT_RANK = { '1st': 0, '2nd': 1, '3rd': 2, 'Top 4': 3, 'Top 8': 4, 'Top 16': 5 };
+
+// Wilson score 95% interval for k successes in n trials → [lo, hi] as percents.
+function wilson(k, n) {
+  if (!n) return [0, 0];
+  const z = 1.96, p = k / n, z2 = z * z;
+  const denom = 1 + z2 / n;
+  const centre = p + z2 / (2 * n);
+  const margin = z * Math.sqrt(p * (1 - p) / n + z2 / (4 * n * n));
+  return [Math.max(0, (centre - margin) / denom) * 100, Math.min(1, (centre + margin) / denom) * 100];
+}
 
 const PALETTE = ['#7aa2e8', '#54c08a', '#e3a94e', '#b978e0', '#e07070', '#4fc4d6', '#c98a5a', '#e06bb0'];
 const REGION_ORDER = ['NA', 'EU', 'OCE', 'CN', 'Other'];
@@ -624,6 +674,78 @@ function setCoach(text) {
   const out = document.getElementById('coachResults'); if (out) out.innerHTML = text.trim() ? renderCoach(globalDecks.length) : '';
 }
 
+/* ---- Saved-deck workspace ---- */
+function loadSaves() { try { return JSON.parse(localStorage.getItem('ddl-saves') || '{}'); } catch (e) { return {}; } }
+function writeSaves(o) { try { localStorage.setItem('ddl-saves', JSON.stringify(o)); } catch (e) {} }
+
+function saveCurrentDeck() {
+  const inp = document.getElementById('saveName');
+  const name = (inp.value || '').trim();
+  if (!name) { toast('Name your deck first'); return; }
+  if (!coachText.trim()) { toast('Nothing to save — your list is empty'); return; }
+  const saves = loadSaves();
+  const existed = name in saves;
+  saves[name] = coachText;
+  writeSaves(saves);
+  inp.value = '';
+  toast((existed ? 'Updated ' : 'Saved ') + name);
+  render();
+}
+function loadSavedDeck(name) { const s = loadSaves(); if (s[name] != null) { setCoach(s[name]); toast('Loaded ' + name); render(); } }
+function deleteSavedDeck(name) { const s = loadSaves(); delete s[name]; writeSaves(s); toast('Deleted ' + name); render(); }
+
+function compareSavedDeck(name) {
+  const s = loadSaves();
+  if (s[name] == null) return;
+  const mine = Object.entries(parseDeckText(coachText).counts).map(([n, c]) => ({ name: n, count: c }));
+  const theirs = Object.entries(parseDeckText(s[name]).counts).map(([n, c]) => ({ name: n, count: c }));
+  const diff = diffSection(theirs, mine);   // theirs -> mine
+  const out = document.getElementById('saveDiff');
+  const swaps = diff.removed.reduce((a, c) => a + c.n, 0);
+  let html = '<div class="summary-box"><strong>' + swaps + ' change' + (swaps === 1 ? '' : 's') + '</strong> from <strong>' + escHtml(name) + '</strong> to your current list.</div>';
+  if (!diff.removed.length && !diff.added.length) html = '<div class="summary-box">Identical to <strong>' + escHtml(name) + '</strong>.</div>';
+  diff.removed.forEach(c => { html += '<div class="diff-line diff-del" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>&minus;' + c.n + ' ' + escHtml(c.name) + '</span></div>'; });
+  diff.added.forEach(c => { html += '<div class="diff-line diff-add" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span>+' + c.n + ' ' + escHtml(c.name) + '</span></div>'; });
+  out.innerHTML = html;
+}
+
+function encodeDeck(text) { return btoa(unescape(encodeURIComponent(text))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
+function decodeDeck(s) {
+  try {
+    let b = s.replace(/-/g, '+').replace(/_/g, '/');
+    while (b.length % 4) b += '=';
+    return decodeURIComponent(escape(atob(b)));
+  } catch (e) { return null; }
+}
+
+function shareDeckLink() {
+  if (!coachText.trim()) { toast('Nothing to share — your list is empty'); return; }
+  const url = location.origin + location.pathname + '?d=' + encodeDeck(coachText) + location.hash;
+  navigator.clipboard.writeText(url).then(() => toast('Share link copied')).catch(() => toast('Copy failed'));
+}
+
+function renderWorkspace() {
+  const saves = loadSaves();
+  const names = Object.keys(saves).sort();
+  let html = '<div class="coach-tools"><input id="saveName" placeholder="name this list…" onkeydown="if(event.key===\'Enter\')saveCurrentDeck()">' +
+    '<button onclick="saveCurrentDeck()">Save</button>' +
+    '<button onclick="shareDeckLink()" title="Copies a URL with your list encoded in it">🔗 Share link</button>' +
+    '<button onclick="exportMyDeckImage()" title="Save a shareable PNG of your list">🖼 Save image</button></div>';
+  if (names.length) {
+    html += '<div class="cost-head">Saved lists</div>';
+    names.forEach(n => {
+      const cards = Object.values(parseDeckText(saves[n]).counts).reduce((a, b) => a + b, 0);
+      const esc = attr(n);
+      html += '<div class="card-row"><span class="card-name">' + escHtml(n) + '</span><span class="card-meta">' + cards + ' cards</span>' +
+        '<button class="mini" onclick="loadSavedDeck(\'' + esc.replace(/'/g, "\\'") + '\')">load</button>' +
+        '<button class="mini" style="margin-left:6px" onclick="compareSavedDeck(\'' + esc.replace(/'/g, "\\'") + '\')">diff</button>' +
+        '<button class="mini" style="margin-left:6px;background:var(--danger)" onclick="deleteSavedDeck(\'' + esc.replace(/'/g, "\\'") + '\')">×</button></div>';
+    });
+    html += '<div id="saveDiff"></div>';
+  }
+  return html;
+}
+
 function coachAddCard() {
   const inp = document.getElementById('coachAdd');
   const canon = nameLookup[normName(inp.value)];
@@ -893,10 +1015,24 @@ function toggleFilter(key, val) {
   applyFilters();
 }
 function setDateFilter(which, val) { filters[which] = val; applyFilters(); }
-function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '' }; applyFilters(); }
+function toggleDedupe() { filters.dedupe = !filters.dedupe; applyFilters(); }
+function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false }; applyFilters(); }
+
+// Keep one list per player (best placement) — removes near-duplicate
+// double-counting toward the "consensus" when a player brought two lists.
+function dedupeByPlayer(decks) {
+  const best = {};
+  decks.forEach(d => {
+    const key = (d.player || d.label).toLowerCase();
+    const rank = PLACEMENT_RANK[d.placement] != null ? PLACEMENT_RANK[d.placement] : 9;
+    if (!best[key] || rank < best[key].rank) best[key] = { d, rank };
+  });
+  return decks.filter(d => best[(d.player || d.label).toLowerCase()].d === d);
+}
 
 function applyFilters() {
   globalDecks = allDecks.filter(deckPasses);
+  if (filters.dedupe) globalDecks = dedupeByPlayer(globalDecks);
   rankedCards = computeStats(globalDecks);
   packagesCache = findPackages(globalDecks.length);
   buildInitialProto(globalDecks.length);
@@ -919,8 +1055,14 @@ function renderFilterBar() {
     const opt = (sel) => '<option value=""' + (sel === '' ? ' selected' : '') + '>Any</option>' + dates.map(d => '<option value="' + d + '"' + (sel === d ? ' selected' : '') + '>' + d + '</option>').join('');
     html += '<div class="fgroup fdate"><span class="flabel">Dates</span>From <select onchange="setDateFilter(\'from\',this.value)">' + opt(filters.from) + '</select> to <select onchange="setDateFilter(\'to\',this.value)">' + opt(filters.to) + '</select></div>';
   }
-  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to;
-  html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + allDecks.length + ' decks</span>' +
+  const dupPlayers = allDecks.length - dedupeByPlayer(allDecks).length;
+  html += '<div class="fgroup"><span class="flabel">Sample</span>' +
+    '<span class="chip' + (filters.dedupe ? ' on' : '') + '" onclick="toggleDedupe()" title="Keep one list per player (best placement) so a player who brought two near-identical lists doesn\'t double-count toward the consensus">one list per player' +
+    (dupPlayers ? ' (−' + dupPlayers + ')' : '') + '</span></div>';
+  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe;
+  const small = globalDecks.length < 20
+    ? '<span style="color:var(--flex)"> · small sample — inclusion %s are noisy; see the ± intervals in Analyze</span>' : '';
+  html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + allDecks.length + ' decks' + small + '</span>' +
     (anyOn ? '<button onclick="clearFilters()">Reset filters</button>' : '') + '</div>';
   html += '</div>';
   return html;
@@ -940,7 +1082,8 @@ function renderBuild(ctx) {
   const N = ctx.N;
   let html = '';
   const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
-  html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards)</h2><button onclick="copyDecklist()">Copy decklist</button></div>';
+  html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards)</h2>' +
+    '<span><button onclick="copyDecklist()">Copy decklist</button> <button onclick="exportProtoImage()" title="Save a shareable PNG of this list">🖼 Save image</button></span></div>';
   html += '<p class="sub">Curve-aware consensus build: locked cards first, then flex slots by score with a penalty for overfilling a cost bucket beyond the field\'s average curve. <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot. Hover a row for its reasoning.</p>';
   if (clusterOptions.length > 1 && !filters.cluster.size) {
     html += '<div class="summary-box">⚠️ This field splits into <strong>' + clusterOptions.length + ' sub-archetypes</strong> — an averaged build can end up as a deck nobody plays. Build for one: ' +
@@ -980,6 +1123,7 @@ function renderBuild(ctx) {
   html += '<div class="coach-tools"><input id="coachAdd" list="cardNames" placeholder="add a card by name…" onkeydown="if(event.key===\'Enter\')coachAddCard()"><button onclick="coachAddCard()">Add</button>' +
           '<button onclick="runOptimizer()" title="Hill-climbs single-card swaps, scoring similarity to winners, curve fit, and package integrity">⚡ Optimize</button></div>';
   html += '<p class="sub">Optimize hill-climbs card-for-card swaps from your list (or the prototype if empty) toward the evidenced consensus of the filtered winning decks.</p>';
+  html += renderWorkspace();
   html += '<div id="optResults"></div>';
   html += '<div id="coachResults">' + (coachText.trim() ? renderCoach(N) : '') + '</div>';
   return html;
@@ -1028,14 +1172,17 @@ function renderAnalyze(ctx) {
     }
   }
 
-  html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the Diana field: how many decks run it, at what counts. The Field column is the card\'s play rate across all other archetypes — high means format staple, low means Diana-specific tech.</p>';
+  html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the Diana field: how many decks run it, at what counts. The small grey range under each percentage is the <strong>Wilson 95% interval</strong> — on ' + N + ' decks, 12/13 really means "somewhere around 65–99%", so don\'t over-read a single point estimate. The Field column is the card\'s play rate across all other archetypes — high means format staple, low means Diana-specific tech.</p>';
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost/Domain</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th><th>Field</th></tr></thead><tbody>';
   [...rankedCards].sort((a, b) => b.decksIn - a.decksIn || b.score - a.score).forEach(c => {
     const meta = cardMeta[c.name] || {};
     const pct = Math.round(100 * c.decksIn / N);
     const distBadges = Object.entries(c.dist).sort((a, b) => b[0] - a[0]).map(([copies, nD]) => '<span class="dist-badge">x' + copies + ' in ' + nD + (nD > 1 ? ' decks' : ' deck') + '</span>').join('');
+    const [lo, hi] = wilson(c.decksIn, N);
+    const ciTip = 'Wilson 95% interval on ' + c.decksIn + '/' + N + ': ' + lo.toFixed(0) + '–' + hi.toFixed(0) + '%. With this few decks the point estimate is noisy.';
     html += '<tr data-card="' + attr(c.name) + '" data-cardopen="' + attr(c.name) + '" style="cursor:pointer;"><td>' + cardImg(c.name) + escHtml(c.name) + '</td><td>' + gemsFor(c.name) + '</td><td>' + (meta.type || '—') +
-      '</td><td><span class="incl-bar" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + c.decksIn + '/' + N + ' (' + pct + '%)</td><td class="num">' + c.avgCopies.toFixed(1) + '</td><td>' + distBadges + '</td><td>' + fieldBadge(c.name) + '</td></tr>';
+      '</td><td title="' + attr(ciTip) + '"><span class="incl-bar" style="width:' + Math.round(pct * 0.6) + 'px"></span>' + c.decksIn + '/' + N + ' (' + pct + '%)' +
+      '<span class="ci">' + lo.toFixed(0) + '–' + hi.toFixed(0) + '%</span></td><td class="num">' + c.avgCopies.toFixed(1) + '</td><td>' + distBadges + '</td><td>' + fieldBadge(c.name) + '</td></tr>';
   });
   html += '</tbody></table></div>';
 
@@ -1094,9 +1241,39 @@ function renderAnalyze(ctx) {
       parts.push('<polyline class="series" data-series="' + i + '" points="' + h.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke="' + PALETTE[i % PALETTE.length] + '" stroke-width="1.5" opacity="0.5"/>');
       h.forEach((v, c) => parts.push('<circle class="series pt" data-series="' + i + '" data-tip="' + attr(globalDecks[i].label + ' — cost ' + (c === maxCost ? c + '+' : c) + ': ' + v + ' cards') + '" cx="' + x(c) + '" cy="' + y(v) + '" r="3" fill="' + PALETTE[i % PALETTE.length] + '" opacity="0.6"/>'));
     });
-    parts.push('<polyline class="avg" points="' + avgCurve.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke-width="3"/>');
+    // Area fill under the weighted field average, then the line on top.
+    const areaPts = avgCurve.map((v, c) => x(c) + ',' + y(v)).join(' ');
+    parts.push('<polygon class="avg-area" points="' + x(0) + ',' + y(0) + ' ' + areaPts + ' ' + x(maxCost) + ',' + y(0) + '"/>');
+    parts.push('<polyline class="avg" points="' + areaPts + '" fill="none" stroke-width="3"/>');
     html += '<svg id="curveSvg" class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
     html += '<div class="legend">' + globalDecks.map((d, i) => '<span class="legend-chip" data-deck="' + i + '" data-hl="#curveSvg|' + i + '"><span class="legend-swatch" style="background:' + PALETTE[i % PALETTE.length] + '"></span>#' + (i + 1) + ' ' + escHtml(d.label) + '</span>').join('') + '</div>';
+  }
+
+  // ---- Small multiples: one curve per sub-archetype ----
+  if (clusterOptions.length > 1 && !filters.cluster.size) {
+    html += '<h2>Curves by sub-archetype</h2><p class="sub">The same data split by cluster instead of stacked into one chart — where the builds actually diverge in shape. Each panel is that cluster\'s placement-weighted average, with the whole-field average behind it in grey.</p>';
+    html += '<div class="smalls">';
+    clusterOptions.forEach(co => {
+      const sub = globalDecks.filter(d => d._cluster === co.gi);
+      if (!sub.length) return;
+      const c2 = targetCurveOf(sub);
+      const localMax = Math.max(1, ...c2, ...avgCurve);
+      const W2 = 240, H2 = 130, mL2 = 22, mB2 = 18, mT2 = 8, mR2 = 8;
+      const pw2 = W2 - mL2 - mR2, ph2 = H2 - mT2 - mB2;
+      const x2 = c => mL2 + c / maxCost * pw2, y2 = v => mT2 + ph2 - v / localMax * ph2;
+      let p2 = ['<line class="grid" x1="' + mL2 + '" y1="' + y2(0) + '" x2="' + (W2 - mR2) + '" y2="' + y2(0) + '"/>'];
+      p2.push('<polyline points="' + avgCurve.map((v, c) => x2(c) + ',' + y2(v)).join(' ') + '" fill="none" stroke="var(--muted)" stroke-width="1.5" opacity="0.45" stroke-dasharray="3 3"/>');
+      const pts2 = c2.map((v, c) => x2(c) + ',' + y2(v)).join(' ');
+      p2.push('<polygon points="' + x2(0) + ',' + y2(0) + ' ' + pts2 + ' ' + x2(maxCost) + ',' + y2(0) + '" fill="' + PALETTE[co.gi % PALETTE.length] + '" opacity="0.16"/>');
+      p2.push('<polyline points="' + pts2 + '" fill="none" stroke="' + PALETTE[co.gi % PALETTE.length] + '" stroke-width="2.5"/>');
+      c2.forEach((v, c) => p2.push('<circle class="pt" data-tip="' + attr(co.name + ' — cost ' + (c === maxCost ? c + '+' : c) + ': ' + v.toFixed(1) + ' cards avg') + '" cx="' + x2(c) + '" cy="' + y2(v) + '" r="2.6" fill="' + PALETTE[co.gi % PALETTE.length] + '"/>'));
+      for (let c = 0; c <= maxCost; c += 2) p2.push('<text class="axis" x="' + x2(c) + '" y="' + (H2 - 5) + '" font-size="9" text-anchor="middle">' + c + '</text>');
+      const avgCost = c2.reduce((a, v, c) => a + v * c, 0) / (c2.reduce((a, v) => a + v, 0) || 1);
+      html += '<div class="small-card"><div class="sm-title" style="color:' + PALETTE[co.gi % PALETTE.length] + '">' + escHtml(co.name) + ' · ' + sub.length + ' deck' + (sub.length === 1 ? '' : 's') + '</div>' +
+        '<svg class="viz" viewBox="0 0 ' + W2 + ' ' + H2 + '" xmlns="http://www.w3.org/2000/svg">' + p2.join('') + '</svg>' +
+        '<div class="sm-foot">avg cost ' + avgCost.toFixed(2) + '</div></div>';
+    });
+    html += '</div>';
   }
   // Type ratios
   html += '<div class="panel-wrap" style="margin-top:12px;"><table class="incl"><thead><tr><th>Deck</th><th class="num">Units</th><th class="num">Spells</th><th class="num">Gear</th><th class="num">Avg cost</th></tr></thead><tbody>';
@@ -1236,7 +1413,8 @@ function openDeckModal(i) {
   const inner =
     '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
       '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
-    '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
+    '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><button onclick="exportDeckImageFor(' + i + ')">🖼 Save image</button>' +
+      '<span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
     '<div id="modalDiffOut"></div><div class="modal-cards">' + body + extra + '</div>';
   const modal = document.getElementById('modal');
   modal.querySelector('.modal').innerHTML = inner;
@@ -1259,8 +1437,9 @@ function openCardModal(name) {
   // Diana-field stats
   if (stat) {
     const distBadges = Object.entries(stat.dist).sort((a, b) => b[0] - a[0]).map(([copies, nD]) => '<span class="dist-badge">x' + copies + ' in ' + nD + '</span>').join(' ');
+    const [lo, hi] = wilson(stat.decksIn, N);
     info += '<div class="cost-head">In the Diana field</div><div>Main-decked by <strong>' + stat.decksIn + '/' + N + '</strong> (' +
-      Math.round(100 * stat.decksIn / N) + '%), avg ' + stat.avgCopies.toFixed(1) + ' copies. ' + distBadges + '</div>';
+      Math.round(100 * stat.decksIn / N) + '%, <span title="Wilson 95% interval">95% CI ' + lo.toFixed(0) + '–' + hi.toFixed(0) + '%</span>), avg ' + stat.avgCopies.toFixed(1) + ' copies. ' + distBadges + '</div>';
   } else {
     info += '<div class="cost-head">In the Diana field</div><div>Not main-decked in the current filtered set.</div>';
   }
@@ -1299,7 +1478,161 @@ function modalDiff(i) {
 }
 function copyDeck(i) { const d = globalDecks[i]; navigator.clipboard.writeText(d.cards.map(c => c.count + 'x ' + c.name).join('\n')).then(() => toast('Copied ' + d.label)).catch(() => {}); }
 function closeModal() { document.getElementById('modal').classList.remove('show'); }
+
+/* ---------------- Command palette ---------------- */
+function paletteItems() {
+  const items = [];
+  Object.keys(cardMeta).sort().forEach(n => items.push({ kind: 'card', name: n, label: n }));
+  globalDecks.forEach((d, i) => items.push({ kind: 'deck', idx: i, label: d.label, extra: (d.player || '') + ' ' + (d.event || '') }));
+  return items;
+}
+
+// Subsequence match, so "khaz" and "kzmh" both find Kha'Zix, Mutating Horror.
+function fuzzyScore(hay, needle) {
+  if (!needle) return 0;
+  const h = hay.toLowerCase(), q = needle.toLowerCase();
+  const direct = h.indexOf(q);
+  if (direct === 0) return 1000;
+  if (direct > 0) return 500 - direct;
+  let hi = 0, score = 0;
+  for (const ch of q) {
+    const found = h.indexOf(ch, hi);
+    if (found === -1) return -1;
+    score += (found === hi ? 3 : 1);
+    hi = found + 1;
+  }
+  return score;
+}
+
+function renderPalette() {
+  const q = document.getElementById('palInput').value.trim();
+  const scored = paletteItems()
+    .map(it => ({ it, s: Math.max(fuzzyScore(it.label, q), it.extra ? fuzzyScore(it.extra, q) - 200 : -1) }))
+    .filter(x => q ? x.s > 0 : true)
+    .sort((a, b) => b.s - a.s)
+    .slice(0, 40);
+  if (paletteIndex >= scored.length) paletteIndex = Math.max(0, scored.length - 1);
+  const list = document.getElementById('palList');
+  if (!scored.length) { list.innerHTML = '<div class="pal-empty">No matches.</div>'; return; }
+  list.innerHTML = scored.map((x, i) => {
+    const it = x.it;
+    const thumb = it.kind === 'card' && imageMap[it.name] ? '<img src="' + attr(imageMap[it.name]) + '" alt="">' : '';
+    return '<div class="pal-row' + (i === paletteIndex ? ' sel' : '') + '" data-pal="' + i + '">' + thumb +
+      '<span>' + escHtml(it.label) + '</span><span class="pal-kind">' + it.kind + '</span></div>';
+  }).join('');
+  list.querySelectorAll('.pal-row').forEach(r => {
+    r.onclick = () => { paletteIndex = +r.getAttribute('data-pal'); choosePalette(scored); };
+  });
+  const sel = list.querySelector('.pal-row.sel');
+  if (sel) sel.scrollIntoView({ block: 'nearest' });
+  list._scored = scored;
+}
+
+function choosePalette(scored) {
+  const x = scored[paletteIndex];
+  if (!x) return;
+  closePalette();
+  if (x.it.kind === 'card') openCardModal(x.it.name); else openDeckModal(x.it.idx);
+}
+
+function openPalette() {
+  paletteIndex = 0;
+  const p = document.getElementById('palette');
+  p.classList.add('show');
+  const inp = document.getElementById('palInput');
+  inp.value = ''; renderPalette(); inp.focus();
+}
+function closePalette() { document.getElementById('palette').classList.remove('show'); }
 function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 1800); }
+
+/* ---------------- Shareable deck image ---------------- */
+// Only same-origin images can be drawn without tainting the canvas, so
+// cross-origin (dotgg-hosted) art is skipped and the row renders text-only.
+function localImage(name) {
+  const src = imageMap[name];
+  return src && !/^https?:\/\//i.test(src) ? src : null;
+}
+function loadImg(src) {
+  return new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+}
+
+async function exportDeckImage(title, list, subtitle) {
+  if (!list.length) { toast('Nothing to export'); return; }
+  toast('Rendering image…');
+  const sorted = [...list].sort((a, b) => (costBucket(a.name) - costBucket(b.name)) || a.name.localeCompare(b.name));
+  const imgs = {};
+  await Promise.all(sorted.map(async c => { const s = localImage(c.name); if (s) imgs[c.name] = await loadImg(s); }));
+
+  const COLS = 2, ROW_H = 62, PAD = 34, W = 900;
+  const rows = Math.ceil(sorted.length / COLS);
+  const HEAD = 120, FOOT = 46;
+  const H = HEAD + rows * ROW_H + FOOT;
+  const cv = document.createElement('canvas');
+  cv.width = W; cv.height = H;
+  const g = cv.getContext('2d');
+
+  const grad = g.createLinearGradient(0, 0, W, H);
+  grad.addColorStop(0, '#151d30'); grad.addColorStop(1, '#0b1019');
+  g.fillStyle = grad; g.fillRect(0, 0, W, H);
+  g.fillStyle = 'rgba(122,162,232,0.10)'; g.beginPath(); g.arc(W - 90, -30, 190, 0, 7); g.fill();
+
+  g.fillStyle = '#e9edf7'; g.font = '700 30px -apple-system, "Segoe UI", sans-serif';
+  g.fillText(title, PAD, 54);
+  g.fillStyle = '#8b96b2'; g.font = '400 15px -apple-system, "Segoe UI", sans-serif';
+  g.fillText(subtitle, PAD, 82);
+
+  const total = sorted.reduce((a, c) => a + c.count, 0);
+  g.fillStyle = '#7aa2e8'; g.font = '700 15px -apple-system, "Segoe UI", sans-serif';
+  g.textAlign = 'right'; g.fillText(total + ' cards', W - PAD, 54); g.textAlign = 'left';
+
+  const colW = (W - PAD * 2) / COLS;
+  sorted.forEach((c, i) => {
+    const col = Math.floor(i / rows), row = i % rows;
+    const x = PAD + col * colW, y = HEAD + row * ROW_H;
+    g.fillStyle = row % 2 ? 'rgba(255,255,255,0.02)' : 'transparent';
+    g.fillRect(x - 6, y - 12, colW - 10, ROW_H - 6);
+    const im = imgs[c.name];
+    if (im) { g.save(); g.beginPath(); g.rect(x, y - 8, 36, 46); g.clip(); g.drawImage(im, x, y - 10, 36, 50); g.restore(); }
+    g.fillStyle = '#e9edf7'; g.font = '600 17px -apple-system, "Segoe UI", sans-serif';
+    g.fillText(c.count + '×', x + 46, y + 20);
+    g.font = '400 16px -apple-system, "Segoe UI", sans-serif';
+    let nm = c.name;
+    while (g.measureText(nm).width > colW - 130 && nm.length > 4) nm = nm.slice(0, -2);
+    if (nm !== c.name) nm += '…';
+    g.fillText(nm, x + 82, y + 20);
+    const cost = cardMeta[c.name] && cardMeta[c.name].cost;
+    if (cost != null) {
+      g.fillStyle = '#8b96b2'; g.font = '600 13px -apple-system, "Segoe UI", sans-serif';
+      g.textAlign = 'right'; g.fillText('◆' + cost, x + colW - 24, y + 20); g.textAlign = 'left';
+    }
+  });
+
+  g.fillStyle = '#8b96b2'; g.font = '400 13px -apple-system, "Segoe UI", sans-serif';
+  g.fillText('🌙 Diana Deck Lab · persykse.github.io/diana-decklist-comparator', PAD, H - 18);
+
+  cv.toBlob(blob => {
+    if (!blob) { toast('Image export failed'); return; }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = title.replace(/[^a-z0-9]+/gi, '_').replace(/^_|_$/g, '') + '.png';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    toast('Saved ' + a.download);
+  }, 'image/png');
+}
+
+function exportProtoImage() {
+  const sub = 'Consensus build · ' + globalDecks.length + ' winning lists' + (filters.cluster.size ? ' · filtered' : '');
+  exportDeckImage('Diana prototype', currentProto.map(c => ({ name: c.name, count: c.copies })), sub);
+}
+function exportDeckImageFor(i) {
+  const d = globalDecks[i];
+  exportDeckImage(d.label, d.cards.map(c => ({ name: c.name, count: c.count })), [d.placement, d.event, d.event_date].filter(Boolean).join(' · '));
+}
+function exportMyDeckImage() {
+  const { counts } = parseDeckText(coachText);
+  exportDeckImage('My Diana deck', Object.entries(counts).map(([name, count]) => ({ name, count })), new Date().toISOString().slice(0, 10));
+}
 
 /* ---------------- Render / router ---------------- */
 function render() {
@@ -1375,7 +1708,22 @@ document.addEventListener('click', e => {
   if (dl) { openDeckModal(parseInt(dl.getAttribute('data-deck'), 10)); return; }
   if (e.target.id === 'modal') closeModal();
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => {
+  const palOpen = document.getElementById('palette').classList.contains('show');
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); palOpen ? closePalette() : openPalette(); return; }
+  if (palOpen) {
+    const list = document.getElementById('palList');
+    const scored = list._scored || [];
+    if (e.key === 'Escape') { e.preventDefault(); closePalette(); }
+    else if (e.key === 'ArrowDown') { e.preventDefault(); paletteIndex = Math.min(paletteIndex + 1, scored.length - 1); renderPalette(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); paletteIndex = Math.max(paletteIndex - 1, 0); renderPalette(); }
+    else if (e.key === 'Enter') { e.preventDefault(); choosePalette(scored); }
+    return;
+  }
+  if (e.key === 'Escape') closeModal();
+});
+document.getElementById('palInput').addEventListener('input', () => { paletteIndex = 0; renderPalette(); });
+document.getElementById('palette').addEventListener('click', e => { if (e.target.id === 'palette') closePalette(); });
 window.addEventListener('hashchange', router);
 
 /* ---------------- Load ---------------- */
@@ -1393,6 +1741,12 @@ async function load() {
   if (!allDecks || allDecks.length === 0) { el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages.</div>'; return; }
   indexCards(allDecks);
   computeFullClusters();
+  // A shared list (?d=…) overrides whatever was last in this browser.
+  const shared = new URLSearchParams(location.search).get('d');
+  if (shared) {
+    const text = decodeDeck(shared);
+    if (text) { coachText = text; saveCoach(); toast('Loaded a shared decklist'); }
+  }
   const v = (location.hash || '#build').slice(1);
   currentView = VIEWS[v] ? v : 'build';
   applyFilters();

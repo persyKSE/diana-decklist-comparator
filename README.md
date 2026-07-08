@@ -76,6 +76,22 @@ off-meta variant?" or "did the CN circuit build differently?".
 - **Card details** — click any card image or inclusion-table row for
   its rules text, cost/domain/might, copy-count splits, field-wide play
   rate, package membership, and every deck running it.
+- **Command palette** — ⌘K / Ctrl-K fuzzy-searches every card, deck and
+  player; Enter opens its detail modal.
+- **Deck workspace** — save named versions of your list, diff any two,
+  copy a share link (the list is encoded in the URL), and export any
+  deck (yours, the prototype, or a winner's) as a shareable PNG.
+
+### On reading the numbers
+
+Inclusion percentages come from a small sample, so the Analyze table
+shows a **Wilson 95% interval** under each one — on 13 decks, "12/13"
+honestly means *somewhere around 67–99%*. A player who brought two
+near-identical lists also double-counts toward the "consensus", so the
+filter bar has a **one list per player** toggle (keeps their best
+placement). And with no win/match data published for these events,
+placement is only a proxy for deck strength: the optimizer therefore
+optimizes toward *evidenced consensus*, not toward results.
 
 ### Install as an app (PWA)
 
