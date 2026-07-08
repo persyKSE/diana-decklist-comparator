@@ -1,5 +1,5 @@
 /* Diana Deck Lab service worker — offline app shell + card-image cache. */
-const VERSION = 'ddl-v6';
+const VERSION = 'ddl-v7';
 const SHELL = ['./', './index.html', './decks.js', './meta.js', './cards.js', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', e => {

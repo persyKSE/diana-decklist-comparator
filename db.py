@@ -25,6 +25,7 @@ import json
 import re
 import sqlite3
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 DB_FILE = Path(__file__).parent / "riftbound.db"
@@ -392,8 +393,15 @@ def export_meta_json(conn, path=META_JSON):
     for row in conn.execute("SELECT archetype, COUNT(*) AS n FROM decks GROUP BY archetype"):
         archetype_totals[row["archetype"]] = row["n"]
 
+    # Regenerated on every scrape, but the weekly workflow only commits when
+    # some other file actually changed — so this reads as "data last changed",
+    # not "scraper last ran".
+    latest_event = conn.execute("SELECT MAX(date) FROM events WHERE date IS NOT NULL").fetchone()[0]
+
     meta = {
         "diana": DIANA_ARCHETYPE,
+        "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "latestEvent": latest_event,
         "otherDecks": other_total,
         "archetypes": archetype_totals,
         "events": events,

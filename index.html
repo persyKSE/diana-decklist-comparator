@@ -59,6 +59,11 @@
   nav a:hover { background: var(--panel); color: var(--text); }
   nav a.active { background: var(--panel2); color: var(--text); box-shadow: inset 3px 0 0 var(--accent); }
   .side-foot { margin-top: auto; padding: 12px 8px 0; font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 10px; }
+  #lastUpdated { line-height: 1.5; cursor: help; }
+  .fbar-updated { display: none; }   /* sidebar shows it on desktop */
+  @media (max-width: 800px) { .fbar-updated { display: inline; } }
+  #lastUpdated .dot-live { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--lock); margin-right: 5px; vertical-align: middle; }
+  #lastUpdated .dot-stale { background: var(--flex); }
   .theme-btn { background: var(--panel); color: var(--text); border: 1px solid var(--border); padding: 7px 10px; border-radius: 8px; cursor: pointer; font-size: 12px; margin: 0; }
   .theme-btn:hover { background: var(--panel2); }
 
@@ -262,8 +267,8 @@
     nav { flex-direction: row; flex-wrap: wrap; gap: 4px; flex: 1 1 100%; order: 3; }
     nav a { padding: 7px 12px; flex: 1 1 auto; justify-content: center; }
     nav a.active { box-shadow: inset 0 -3px 0 var(--accent); }
-    .side-foot { margin: 0; flex-direction: row; align-items: center; padding: 0; }
-    #deckCount { display: none; }
+    .side-foot { margin: 0; flex-direction: row; align-items: center; gap: 8px; padding: 0; }
+    #deckCount, #lastUpdated { display: none; }
     main { padding: 16px 14px 60px; }
     .fgroup .flabel { width: 100%; }
     .diff-controls select { max-width: 100%; }
@@ -283,6 +288,7 @@
     </nav>
     <div class="side-foot">
       <div id="deckCount"></div>
+      <div id="lastUpdated"></div>
       <button class="theme-btn" onclick="openPalette()" title="Search cards, decks and players">🔎 Search <span class="kbd">⌘K</span></button>
       <button class="theme-btn" onclick="toggleTheme()">◐ Theme</button>
     </div>
@@ -1142,7 +1148,9 @@ function renderFilterBar() {
   const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe || filters.fieldWeight;
   const small = globalDecks.length < 20
     ? '<span style="color:var(--flex)"> · small sample — inclusion %s are noisy; see the ± intervals in Analyze</span>' : '';
-  html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + allDecks.length + ' decks' + small + '</span>' +
+  const upd = (window.META && META.generated)
+    ? '<span class="fbar-updated"> · data updated ' + escHtml(relativeTime(META.generated)) + '</span>' : '';
+  html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + allDecks.length + ' decks' + small + upd + '</span>' +
     (anyOn ? '<button onclick="clearFilters()">Reset filters</button>' : '') + '</div>';
   html += '</div>';
   return html;
@@ -1856,7 +1864,34 @@ function render() {
   document.getElementById('content').innerHTML = html;
   document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.view === currentView));
   document.getElementById('deckCount').textContent = allDecks.length + ' decks loaded';
+  renderLastUpdated();
 }
+function relativeTime(iso) {
+  const days = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
+  if (days < 0) return 'just now';
+  if (days === 0) return 'today';
+  if (days === 1) return 'yesterday';
+  if (days < 14) return days + ' days ago';
+  if (days < 60) return Math.floor(days / 7) + ' weeks ago';
+  return Math.floor(days / 30) + ' months ago';
+}
+
+// The scraper reruns weekly but the workflow only commits when the data
+// actually changed, so this stamp means "data last changed", not "last run".
+function renderLastUpdated() {
+  const el = document.getElementById('lastUpdated');
+  if (!el) return;
+  const gen = window.META && META.generated;
+  if (!gen) { el.textContent = ''; return; }
+  const days = Math.floor((Date.now() - new Date(gen).getTime()) / 86400000);
+  const stale = days > 14;
+  const when = new Date(gen).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
+  const through = META.latestEvent ? ', newest event ' + META.latestEvent : '';
+  el.innerHTML = '<span class="dot-live' + (stale ? ' dot-stale' : '') + '"></span>Data updated ' + escHtml(relativeTime(gen));
+  el.title = 'Deck data last changed ' + when + through +
+    '. The scraper reruns weekly; this stamp only moves when the data itself changes.';
+}
+
 function router() {
   const v = (location.hash || '#build').slice(1);
   currentView = VIEWS[v] ? v : 'build';
