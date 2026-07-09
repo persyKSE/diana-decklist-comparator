@@ -5,35 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Diana Deck Lab</title>
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#0d1220">
+<meta name="theme-color" content="#0a0d14">
 <link rel="icon" href="icon.svg">
 <link rel="apple-touch-icon" href="icon.svg">
 <style>
+  /* Design language borrowed from Riftbound itself: near-black navy fields,
+     hextech-gold chrome for structure, arcane blue reserved for data and
+     interaction, serif display type, and angular cut corners over pill shapes. */
   :root {
-    --bg:#0d1220; --bg2:#0a0e19;
-    --panel:#151d30; --panel2:#1b2540;
-    --border:#2a3552;
-    --text:#e9edf7; --muted:#8b96b2;
+    --bg:#0a0d14; --bg2:#06090f;
+    --panel:#10141d; --panel2:#161c28;
+    --border:#242b3a;
+    --gold:#c8aa6e; --gold-hi:#e8d5a6; --gold-dim:#5c4d30;
+    --text:#ece7dc; --muted:#8b94a6;
     --accent:#7aa2e8; --glow:#9db8f0;
     --lock:#54c08a; --flex:#e3a94e; --danger:#e07070;
-    --shadow:0 10px 40px rgba(0,0,0,0.5);
-    --radius:12px;
+    --shadow:0 10px 40px rgba(0,0,0,0.55);
+    --radius:5px;
+    --serif: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
   }
   body.light {
-    --bg:#f7f6f3; --bg2:#efeee9;
-    --panel:#ffffff; --panel2:#faf9f6;
-    --border:#e5e3dd;
-    --text:#1a1a1a; --muted:#6a6a6a;
-    --accent:#2e7d32; --glow:#2e7d32;
+    --bg:#f5f2ea; --bg2:#ebe7db;
+    --panel:#fdfbf5; --panel2:#f3eee1;
+    --border:#d9d1bd;
+    --gold:#8a6d3b; --gold-hi:#6e5426; --gold-dim:#c3b48c;
+    --text:#221d14; --muted:#6e6857;
+    --accent:#3f6bb5; --glow:#3f6bb5;
     --lock:#2e7d32; --flex:#a5670a; --danger:#b71c1c;
-    --shadow:0 6px 20px rgba(0,0,0,0.1);
+    --shadow:0 6px 20px rgba(60,48,20,0.12);
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background:
-      radial-gradient(1100px 600px at 85% -8%, rgba(122,162,232,0.12), transparent 60%),
+      radial-gradient(950px 520px at 88% -6%, rgba(122,162,232,0.10), transparent 60%),
+      radial-gradient(720px 420px at -8% -4%, rgba(200,170,110,0.07), transparent 55%),
       var(--bg);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
@@ -47,46 +54,52 @@
     height: 100vh; padding: 22px 14px; display: flex; flex-direction: column; gap: 4px;
     border-right: 1px solid var(--border);
   }
-  .brand { font-size: 16px; font-weight: 700; letter-spacing: 0.2px; padding: 4px 8px 16px; display: flex; align-items: center; gap: 8px; }
-  .brand .moon { font-size: 18px; filter: drop-shadow(0 0 6px var(--glow)); }
+  .brand { font-family: var(--serif); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.4px; white-space: nowrap; color: var(--gold-hi); padding: 4px 6px 16px; display: flex; align-items: center; gap: 8px; }
+  .brand svg { width: 19px; height: 19px; flex-shrink: 0; fill: var(--gold); filter: drop-shadow(0 0 5px rgba(200,170,110,0.45)); }
   nav { display: flex; flex-direction: column; gap: 3px; }
   nav a {
-    display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 9px;
-    font-size: 14px; font-weight: 500; color: var(--muted); cursor: pointer;
+    display: flex; align-items: center; gap: 11px; padding: 9px 12px; border-radius: 3px;
+    font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.3px;
+    color: var(--muted); cursor: pointer;
     transition: background 0.15s, color 0.15s;
   }
-  nav a .nico { width: 18px; text-align: center; }
+  nav a .nico { width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; }
+  nav a .nico svg { width: 17px; height: 17px; }
   nav a:hover { background: var(--panel); color: var(--text); }
-  nav a.active { background: var(--panel2); color: var(--text); box-shadow: inset 3px 0 0 var(--accent); }
+  nav a.active { background: var(--panel2); color: var(--gold-hi); box-shadow: inset 2px 0 0 var(--gold); }
   .side-foot { margin-top: auto; padding: 12px 8px 0; font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 10px; }
   #lastUpdated { line-height: 1.5; cursor: help; }
   .fbar-updated { display: none; }   /* sidebar shows it on desktop */
   @media (max-width: 800px) { .fbar-updated { display: inline; } }
   #lastUpdated .dot-live { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--lock); margin-right: 5px; vertical-align: middle; }
   #lastUpdated .dot-stale { background: var(--flex); }
-  .theme-btn { background: var(--panel); color: var(--text); border: 1px solid var(--border); padding: 7px 10px; border-radius: 8px; cursor: pointer; font-size: 12px; margin: 0; }
-  .theme-btn:hover { background: var(--panel2); }
+  .theme-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 7px 10px; border-radius: 3px; cursor: pointer; font-size: 12px; margin: 0; font-weight: 500; }
+  .theme-btn:hover { background: var(--panel); color: var(--text); border-color: var(--gold-dim); }
+  .theme-btn svg { width: 13px; height: 13px; vertical-align: -2px; margin-right: 3px; }
 
   main { flex: 1; min-width: 0; padding: 26px 32px 80px; }
   .view-head { margin: 0 0 16px; }
-  .view-head h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; }
+  .view-head h1 { font-family: var(--serif); font-size: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 2.5px; color: var(--gold-hi); margin: 0 0 5px; }
   .view-head p { color: var(--muted); font-size: 13.5px; margin: 0; }
 
-  h2 { font-size: 16px; font-weight: 650; margin: 30px 0 6px; letter-spacing: 0.2px; }
+  h2 { font-family: var(--serif); font-size: 16.5px; font-weight: 600; letter-spacing: 0.6px; color: var(--gold); margin: 30px 0 6px; padding-bottom: 7px;
+    background: linear-gradient(90deg, var(--gold-dim), transparent 70%) left bottom / 100% 1px no-repeat; }
   h2:first-of-type { margin-top: 6px; }
+  .action-bar h2 { background: none; padding-bottom: 0; }
   p.sub { color: var(--muted); font-size: 13px; margin: 0 0 14px; line-height: 1.5; }
   .empty { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; font-size: 14px; }
 
   .filterbar { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 18px; display: flex; flex-direction: column; gap: 8px; }
   .fgroup { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .fgroup .flabel { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); width: 78px; flex-shrink: 0; font-weight: 600; }
-  .chip { font-size: 12px; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); background: var(--bg2); color: var(--muted); cursor: pointer; user-select: none; transition: all 0.12s; }
-  .chip:hover { color: var(--text); border-color: var(--accent); }
-  .chip.on { background: var(--accent); color: #0b0f1a; border-color: var(--accent); font-weight: 600; }
+  .fgroup .flabel { font-size: 10.5px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); width: 82px; flex-shrink: 0; font-weight: 600; }
+  .chip { font-size: 12px; padding: 4px 11px; border-radius: 3px; border: 1px solid var(--border); background: var(--bg2); color: var(--muted); cursor: pointer; user-select: none; transition: all 0.12s; white-space: nowrap; display: inline-block; }
+  .chip:hover { color: var(--text); border-color: var(--gold); }
+  .chip.on { background: var(--gold); color: #14100a; border-color: var(--gold); font-weight: 600;
+    clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px); }
   body.light .chip.on { color: #fff; }
   .fdate select { padding: 4px 8px; font-size: 12px; }
   .fbar-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px solid var(--border); padding-top: 8px; font-size: 12px; color: var(--muted); }
-  .fbar-foot button { background: transparent; color: var(--accent); border: 1px solid var(--border); padding: 4px 10px; font-size: 12px; }
+  .fbar-foot button { background: transparent; color: var(--gold); border: 1px solid var(--border); padding: 4px 10px; font-size: 12px; clip-path: none; }
 
   .card-row { display: flex; align-items: center; gap: 11px; padding: 6px 4px; border-radius: 8px; font-size: 14px; transition: background 0.12s; }
   .card-row + .card-row { border-top: 1px solid var(--border); }
@@ -102,35 +115,39 @@
   .interactive-flex:hover { background: var(--panel); }
   .interactive-remove { cursor: pointer; color: var(--danger); font-weight: bold; padding: 0 6px; }
 
-  .pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; font-weight: 600; }
-  .pill-lock { background: rgba(84,192,138,0.16); color: var(--lock); }
-  .pill-flex { background: rgba(227,169,78,0.16); color: var(--flex); }
-  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: var(--accent); color: #0b0f1a; margin-right: 4px; }
-  body.light .badge { color: #fff; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 3px; margin-left: 8px; font-weight: 600; }
+  .pill-lock { background: rgba(84,192,138,0.14); color: var(--lock); box-shadow: inset 0 0 0 1px rgba(84,192,138,0.3); }
+  .pill-flex { background: rgba(227,169,78,0.14); color: var(--flex); box-shadow: inset 0 0 0 1px rgba(227,169,78,0.3); }
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 3px; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: #14100a; margin-right: 4px; }
+  body.light .badge { background: var(--gold); color: #fff; }
 
   .summary-box { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; margin-bottom: 10px; font-size: 14px; line-height: 1.55; }
   .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media (max-width: 760px) { .col2 { grid-template-columns: 1fr; } }
 
-  button { padding: 8px 15px; background: var(--accent); color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer; font-size: 13.5px; font-weight: 600; }
-  body.light button { color: #fff; }
-  /* Panel-coloured buttons keep body text — the rule above is for accent fills
-     only, and out-specifies a bare .class selector. */
+  /* Primary buttons: hextech-gold plate with cut corners, dark engraved text. */
+  button { padding: 8px 15px; background: linear-gradient(180deg, #d9c088, #b2905a); color: #191307; border: none; border-radius: 0; cursor: pointer; font-size: 13px; font-weight: 650;
+    clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px); }
+  button:hover { filter: brightness(1.09); }
+  button:focus-visible { outline: 2px solid var(--glow); outline-offset: 1px; }
+  /* Quiet buttons opt back out of the gold plate. */
+  .theme-btn, .icon-btn, button.ghost, .fbar-foot button { background: transparent; clip-path: none; }
   body.light .theme-btn, body.light .icon-btn, body.light button.ghost { color: var(--text); }
-  button:hover { filter: brightness(1.08); }
-  button.mini { padding: 2px 9px; font-size: 11px; border-radius: 6px; margin-left: auto; }
+  /* Semantic fills (win/loss/danger) need readable text in the light theme. */
+  body.light button[style*="--danger"] { color: #fff; }
+  button.mini { padding: 2px 9px; font-size: 11px; clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px); margin-left: auto; }
   .action-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
   .action-bar h2 { margin: 0; }
 
   table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 6px; }
   .panel-wrap { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 4px 10px; overflow-x: auto; }
-  table.incl th { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); color: var(--muted); font-weight: 600; font-size: 12px; }
+  table.incl th { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--gold-dim); color: var(--muted); font-weight: 600; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.8px; }
   table.incl td { text-align: left; padding: 6px; border-bottom: 1px solid var(--border); font-size: 13px; }
   table.incl tr:last-child td { border-bottom: none; }
   table.incl tbody tr:hover { background: var(--panel2); }
   table.incl td.num, table.incl th.num { text-align: right; }
   table.incl .cimg { width: 26px; height: 36px; vertical-align: middle; margin-right: 8px; }
-  .incl-bar { display: inline-block; height: 8px; background: var(--accent); border-radius: 4px; vertical-align: middle; margin-right: 8px; min-width: 2px; }
+  .incl-bar { display: inline-block; height: 8px; background: linear-gradient(90deg, var(--gold), var(--gold-dim)); border-radius: 1px; vertical-align: middle; margin-right: 8px; min-width: 2px; }
   .dist-badge { display: inline-block; font-size: 11px; background: var(--panel2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; margin-right: 4px; white-space: nowrap; }
   .ci { display: block; font-size: 10.5px; color: var(--muted); margin-top: 1px; font-variant-numeric: tabular-nums; }
 
@@ -188,7 +205,7 @@
   .deck-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
   .deck-tile { display: flex; align-items: center; gap: 12px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 8px; cursor: pointer; transition: transform 0.1s, border-color 0.15s; }
-  .deck-tile:hover { border-color: var(--accent); transform: translateX(2px); }
+  .deck-tile:hover { border-color: var(--gold); transform: translateX(2px); }
   .deck-tile .dt-main { flex: 1; min-width: 0; }
   .deck-tile .dt-title { font-weight: 600; font-size: 14px; }
   .deck-tile .dt-sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
@@ -207,17 +224,18 @@
 
   #modal { position: fixed; inset: 0; z-index: 9999; display: none; align-items: flex-start; justify-content: center; background: rgba(4,7,14,0.66); backdrop-filter: blur(3px); padding: 40px 16px; overflow-y: auto; }
   #modal.show { display: flex; }
-  .modal { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); width: 100%; max-width: 640px; padding: 20px 22px; }
+  .modal { background: var(--panel); border: 1px solid var(--border); border-top: 2px solid var(--gold); border-radius: 6px; box-shadow: var(--shadow); width: 100%; max-width: 640px; padding: 20px 22px; }
   .modal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
-  .modal-title { font-size: 18px; font-weight: 700; }
+  .modal-title { font-family: var(--serif); font-size: 18px; font-weight: 600; letter-spacing: 0.5px; color: var(--gold-hi); }
   .modal-sub { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
-  .icon-btn { background: var(--panel2); color: var(--text); border: 1px solid var(--border); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 14px; padding: 0; flex-shrink: 0; }
+  .icon-btn { background: var(--panel2); color: var(--text); border: 1px solid var(--border); width: 30px; height: 30px; border-radius: 3px; cursor: pointer; font-size: 14px; padding: 0; flex-shrink: 0; }
+  .icon-btn:hover { border-color: var(--gold); }
   .modal-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
   .modal-actions .cmp { font-size: 13px; color: var(--muted); }
   .modal-diff { margin-bottom: 14px; }
   .modal-cards { max-height: 52vh; overflow-y: auto; padding-right: 4px; }
   .cost-group { margin-bottom: 10px; }
-  .cost-head { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 10px 0 6px; }
+  .cost-head { font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1.1px; margin: 10px 0 6px; }
   .mcard { display: inline-flex; align-items: center; gap: 8px; background: var(--panel2); border: 1px solid var(--border); border-radius: 9px; padding: 5px 10px 5px 5px; margin: 0 6px 6px 0; font-size: 13px; }
   .mcard .cimg { width: 26px; height: 36px; }
   .mcard-c { font-weight: 700; color: var(--muted); }
@@ -226,10 +244,14 @@
   #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
   /* ---- Card-art UI ---- */
-  .view-head { position: relative; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); padding: 18px 22px; overflow: hidden; }
-  .view-head .hero-art { position: absolute; right: -14px; top: -46px; width: 215px; opacity: 0.33; pointer-events: none;
+  .view-head { position: relative; border: 1px solid var(--border); border-radius: var(--radius); background: linear-gradient(180deg, var(--panel2), var(--panel)); padding: 18px 22px 18px 26px; overflow: hidden; }
+  .view-head .hero-art { position: absolute; right: -14px; top: -46px; width: 215px; opacity: 0.38; pointer-events: none;
     -webkit-mask-image: linear-gradient(to left, black 25%, transparent 85%); mask-image: linear-gradient(to left, black 25%, transparent 85%); }
   .view-head h1, .view-head p { position: relative; }
+  /* Hextech corner brackets, like the game client's panel framing. */
+  .view-head::before, .view-head::after { content: ""; position: absolute; width: 22px; height: 22px; pointer-events: none; opacity: 0.85; }
+  .view-head::before { top: 5px; left: 5px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); }
+  .view-head::after { bottom: 5px; right: 5px; border-bottom: 2px solid var(--gold); border-right: 2px solid var(--gold); }
   .gem { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--border); font-size: 11px; font-weight: 800; margin-right: 3px; vertical-align: middle; }
   .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 3px; vertical-align: middle; box-shadow: 0 0 4px rgba(0,0,0,0.4); }
   .might { font-size: 11px; font-weight: 700; color: var(--muted); margin-left: 2px; }
@@ -246,11 +268,11 @@
   /* ---- Command palette ---- */
   #palette { position: fixed; inset: 0; z-index: 100002; display: none; justify-content: center; align-items: flex-start; padding-top: 12vh; background: rgba(4,7,14,0.6); backdrop-filter: blur(3px); }
   #palette.show { display: flex; }
-  .pal-box { width: 100%; max-width: 560px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .pal-box { width: 100%; max-width: 560px; background: var(--panel); border: 1px solid var(--border); border-top: 2px solid var(--gold); border-radius: 6px; box-shadow: var(--shadow); overflow: hidden; }
   #palInput { width: 100%; border: none; border-bottom: 1px solid var(--border); background: transparent; color: var(--text); font-size: 15px; padding: 14px 16px; outline: none; }
   #palList { max-height: 52vh; overflow-y: auto; }
   .pal-row { display: flex; align-items: center; gap: 10px; padding: 8px 14px; cursor: pointer; font-size: 13.5px; }
-  .pal-row.sel { background: var(--panel2); box-shadow: inset 3px 0 0 var(--accent); }
+  .pal-row.sel { background: var(--panel2); box-shadow: inset 2px 0 0 var(--gold); }
   .pal-row img { width: 24px; height: 33px; object-fit: cover; object-position: top; border-radius: 3px; }
   .pal-kind { margin-left: auto; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
   .pal-empty { padding: 16px; color: var(--muted); font-size: 13px; }
@@ -264,14 +286,14 @@
   @media (max-width: 560px) { .cardmodal-body { flex-direction: column; } .cardmodal-body .cm-img { width: 150px; } }
 
   /* ---- What-changed banner + timeline ---- */
-  .newsbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 16px; font-size: 13.5px; }
-  .news-tag { font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: var(--accent); }
+  .newsbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: var(--radius); padding: 10px 14px; margin-bottom: 16px; font-size: 13.5px; }
+  .news-tag { font-size: 10.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
   .newsbar a { margin-left: auto; font-size: 12.5px; white-space: nowrap; }
 
   .timeline { position: relative; margin: 6px 0 4px; padding-left: 18px; }
   .timeline::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 1px; background: var(--border); }
   .tl-item { position: relative; margin-bottom: 16px; }
-  .tl-dot { position: absolute; left: -18px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+  .tl-dot { position: absolute; left: -19px; top: 5px; width: 9px; height: 9px; background: var(--gold); transform: rotate(45deg); box-shadow: 0 0 0 3px var(--bg); }
   .tl-body { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 11px 14px; }
   .tl-head { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
   .tl-date { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
@@ -285,7 +307,8 @@
   .handcard:hover { transform: translateY(-6px); }
   .handcard.aside { opacity: 0.42; transform: translateY(8px) scale(0.95); box-shadow: inset 0 0 0 2px var(--danger); }
   button.ghost { background: var(--panel2); color: var(--text); border: 1px solid var(--border); }
-  input[type=range] { accent-color: var(--accent); }
+  button.ghost:hover { border-color: var(--gold-dim); }
+  input[type=range] { accent-color: var(--gold); }
 
   /* ---- Match log ---- */
   .logform { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; }
@@ -310,7 +333,7 @@
     .brand { padding: 0 8px 0 4px; font-size: 15px; flex: 1 1 auto; }
     nav { flex-direction: row; flex-wrap: wrap; gap: 4px; flex: 1 1 100%; order: 3; }
     nav a { padding: 7px 12px; flex: 1 1 auto; justify-content: center; }
-    nav a.active { box-shadow: inset 0 -3px 0 var(--accent); }
+    nav a.active { box-shadow: inset 0 -2px 0 var(--gold); }
     .side-foot { margin: 0; flex-direction: row; align-items: center; gap: 8px; padding: 0; }
     #deckCount, #lastUpdated { display: none; }
     main { padding: 16px 14px 60px; }
@@ -323,20 +346,20 @@
 
 <div class="app">
   <aside class="sidebar">
-    <div class="brand"><span class="moon">🌙</span> Diana Deck Lab</div>
+    <div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Diana Deck Lab</div>
     <nav id="nav">
-      <a href="#build" data-view="build"><span class="nico">🌗</span> Build</a>
-      <a href="#analyze" data-view="analyze"><span class="nico">🔮</span> Analyze</a>
-      <a href="#meta" data-view="meta"><span class="nico">🗺️</span> Meta</a>
-      <a href="#log" data-view="log"><span class="nico">📓</span> Log</a>
-      <a href="#compare" data-view="compare"><span class="nico">⚖️</span> Compare</a>
-      <a href="#decks" data-view="decks"><span class="nico">🃏</span> Decks</a>
+      <a href="#build" data-view="build"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 20.2 7.25 V16.75 L12 21.5 3.8 16.75 V7.25 Z"/><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/></svg></span> Build</a>
+      <a href="#analyze" data-view="analyze"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5 H20.5"/><path d="M4.5 15.5 9.5 9.5 13 12.5 19.5 4.5"/></svg></span> Analyze</a>
+      <a href="#meta" data-view="meta"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12 H20.5"/><path d="M12 3.5 c4.4 4.7 4.4 12.3 0 17 c-4.4 -4.7 -4.4 -12.3 0 -17 Z"/></svg></span> Meta</a>
+      <a href="#log" data-view="log"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5 C10 3.8 6.8 3.6 4 4.6 V19 c2.8 -1 6 -0.8 8 0.9 c2 -1.7 5.2 -1.9 8 -0.9 V4.6 C17.2 3.6 14 3.8 12 5.5 Z"/><path d="M12 5.5 V19.9"/></svg></span> Log</a>
+      <a href="#compare" data-view="compare"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 7 H20.5 M17 3.5 20.5 7 17 10.5"/><path d="M17.5 17 H3.5 M7 13.5 3.5 17 7 20.5"/></svg></span> Compare</a>
+      <a href="#decks" data-view="decks"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="4" y="7" width="10.5" height="14" rx="1.5"/><path d="M8.5 4.5 h9 a1.5 1.5 0 0 1 1.5 1.5 v12"/></svg></span> Decks</a>
     </nav>
     <div class="side-foot">
       <div id="deckCount"></div>
       <div id="lastUpdated"></div>
-      <button class="theme-btn" onclick="openPalette()" title="Search cards, decks and players">🔎 Search <span class="kbd">⌘K</span></button>
-      <button class="theme-btn" onclick="toggleTheme()">◐ Theme</button>
+      <button class="theme-btn" onclick="openPalette()" title="Search cards, decks and players"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M15.8 15.8 21 21"/></svg> Search <span class="kbd">⌘K</span></button>
+      <button class="theme-btn" onclick="toggleTheme()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5 a8.5 8.5 0 0 0 0 17 Z" fill="currentColor" stroke="none"/></svg> Theme</button>
     </div>
   </aside>
   <main id="content"></main>
@@ -880,8 +903,8 @@ function renderWorkspace() {
   const names = Object.keys(saves).sort();
   let html = '<div class="coach-tools"><input id="saveName" placeholder="name this list…" onkeydown="if(event.key===\'Enter\')saveCurrentDeck()">' +
     '<button onclick="saveCurrentDeck()">Save</button>' +
-    '<button onclick="shareDeckLink()" title="Copies a URL with your list encoded in it">🔗 Share link</button>' +
-    '<button onclick="exportMyDeckImage()" title="Save a shareable PNG of your list">🖼 Save image</button></div>';
+    '<button onclick="shareDeckLink()" title="Copies a URL with your list encoded in it">Share link</button>' +
+    '<button onclick="exportMyDeckImage()" title="Save a shareable PNG of your list">Export PNG</button></div>';
   if (names.length) {
     html += '<div class="cost-head">Saved lists</div>';
     names.forEach(n => {
@@ -1274,7 +1297,7 @@ function renderConsistency() {
 
   html += '<div class="coach-tools"><label style="font-size:13px;color:var(--muted)">Odds by turn <strong id="simTurnLabel" style="color:var(--text)">' + simTurn + '</strong></label>' +
     '<input type="range" min="1" max="10" value="' + simTurn + '" oninput="setSimTurn(+this.value)" style="flex:1;max-width:240px;">' +
-    '<button onclick="newHand()">🃏 Deal a hand</button><button onclick="doMulligan()" class="ghost">Mulligan</button><button onclick="drawOne()" class="ghost">Draw</button></div>';
+    '<button onclick="newHand()">Deal a hand</button><button onclick="doMulligan()" class="ghost">Mulligan</button><button onclick="drawOne()" class="ghost">Draw</button></div>';
   html += '<div id="simHand"></div>';
   html += '<div id="simTable">' + simTableHTML() + '</div>';
   return html;
@@ -2037,10 +2060,10 @@ function renderBuild(ctx) {
   const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
   const protoPrice = priceTag(currentProto.map(c => ({ name: c.name, count: c.copies })));
   html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards' + (protoPrice ? ' · ' + protoPrice : '') + ')</h2>' +
-    '<span><button onclick="copyDecklist()" title="Copies the full registrable deck: main, runes, battlefields, sideboard">Copy full deck</button> <button onclick="exportProtoImage()" title="Save a shareable PNG of this list">🖼 Save image</button></span></div>';
+    '<span><button onclick="copyDecklist()" title="Copies the full registrable deck: main, runes, battlefields, sideboard">Copy full deck</button> <button onclick="exportProtoImage()" title="Save a shareable PNG of this list">Export PNG</button></span></div>';
   html += '<p class="sub">Curve-aware consensus build: locked cards first, then flex slots by score with a penalty for overfilling a cost bucket beyond the field\'s average curve. <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot. Hover a row for its reasoning.</p>';
   if (clusterOptions.length > 1 && !filters.cluster.size) {
-    html += '<div class="summary-box">⚠️ This field splits into <strong>' + clusterOptions.length + ' sub-archetypes</strong> — an averaged build can end up as a deck nobody plays. Build for one: ' +
+    html += '<div class="summary-box">This field splits into <strong>' + clusterOptions.length + ' sub-archetypes</strong> — an averaged build can end up as a deck nobody plays. Build for one: ' +
       clusterOptions.map(c => '<span class="chip" onclick="toggleFilter(\'cluster\',' + c.gi + ')">' + escHtml(c.name) + ' (' + c.n + ')</span>').join(' ') + '</div>';
   }
   currentProto.forEach(c => {
@@ -2112,7 +2135,7 @@ function renderBuild(ctx) {
   html += '<h2>Rate my deck</h2><p class="sub">Paste your main deck (one card per line: "3 Gust", "3x Gust", or "Gust x3"). Analysis updates as you type — your list is saved in this browser.</p>';
   html += '<textarea id="coachInput" oninput="coachInputChanged()" placeholder="3 Gust&#10;3 Stacked Deck&#10;2 Moonfall&#10;...">' + escHtml(coachText) + '</textarea>';
   html += '<div class="coach-tools"><input id="coachAdd" list="cardNames" placeholder="add a card by name…" onkeydown="if(event.key===\'Enter\')coachAddCard()"><button onclick="coachAddCard()">Add</button>' +
-          '<button onclick="runOptimizer()" title="Hill-climbs single-card swaps, scoring similarity to winners, curve fit, and package integrity">⚡ Optimize</button></div>';
+          '<button onclick="runOptimizer()" title="Hill-climbs single-card swaps, scoring similarity to winners, curve fit, and package integrity">Optimize</button></div>';
   html += '<p class="sub">Optimize hill-climbs card-for-card swaps from your list (or the prototype if empty) toward the evidenced consensus of the filtered winning decks.</p>';
   html += renderWorkspace();
   html += '<div id="optResults"></div>';
@@ -2914,7 +2937,7 @@ function openDeckModal(i) {
     '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
       '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') +
       (priceTag(d.cards) ? ' · ' + priceTag(d.cards) : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
-    '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><button onclick="exportDeckImageFor(' + i + ')">🖼 Save image</button>' +
+    '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><button onclick="exportDeckImageFor(' + i + ')">Export PNG</button>' +
       '<span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
     '<div id="modalDiffOut"></div><div class="modal-cards">' + deckStacksHTML(d) + deckExtrasHTML(d) + '</div>');
 }
@@ -3126,17 +3149,19 @@ async function exportDeckImage(title, list, subtitle) {
   const g = cv.getContext('2d');
 
   const grad = g.createLinearGradient(0, 0, W, H);
-  grad.addColorStop(0, '#151d30'); grad.addColorStop(1, '#0b1019');
+  grad.addColorStop(0, '#10141d'); grad.addColorStop(1, '#06090f');
   g.fillStyle = grad; g.fillRect(0, 0, W, H);
-  g.fillStyle = 'rgba(122,162,232,0.10)'; g.beginPath(); g.arc(W - 90, -30, 190, 0, 7); g.fill();
+  g.fillStyle = 'rgba(200,170,110,0.08)'; g.beginPath(); g.arc(W - 90, -30, 190, 0, 7); g.fill();
+  g.strokeStyle = 'rgba(200,170,110,0.45)'; g.lineWidth = 1.5;
+  g.strokeRect(9, 9, W - 18, H - 18);
 
-  g.fillStyle = '#e9edf7'; g.font = '700 30px -apple-system, "Segoe UI", sans-serif';
-  g.fillText(title, PAD, 54);
-  g.fillStyle = '#8b96b2'; g.font = '400 15px -apple-system, "Segoe UI", sans-serif';
+  g.fillStyle = '#e8d5a6'; g.font = '600 27px Palatino, Georgia, serif';
+  g.fillText(title.toUpperCase(), PAD, 54);
+  g.fillStyle = '#8b94a6'; g.font = '400 15px -apple-system, "Segoe UI", sans-serif';
   g.fillText(subtitle, PAD, 82);
 
   const total = sorted.reduce((a, c) => a + c.count, 0);
-  g.fillStyle = '#7aa2e8'; g.font = '700 15px -apple-system, "Segoe UI", sans-serif';
+  g.fillStyle = '#c8aa6e'; g.font = '700 15px -apple-system, "Segoe UI", sans-serif';
   g.textAlign = 'right'; g.fillText(total + ' cards', W - PAD, 54); g.textAlign = 'left';
 
   const colW = (W - PAD * 2) / COLS;
@@ -3147,7 +3172,7 @@ async function exportDeckImage(title, list, subtitle) {
     g.fillRect(x - 6, y - 12, colW - 10, ROW_H - 6);
     const im = imgs[c.name];
     if (im) { g.save(); g.beginPath(); g.rect(x, y - 8, 36, 46); g.clip(); g.drawImage(im, x, y - 10, 36, 50); g.restore(); }
-    g.fillStyle = '#e9edf7'; g.font = '600 17px -apple-system, "Segoe UI", sans-serif';
+    g.fillStyle = '#ece7dc'; g.font = '600 17px -apple-system, "Segoe UI", sans-serif';
     g.fillText(c.count + '×', x + 46, y + 20);
     g.font = '400 16px -apple-system, "Segoe UI", sans-serif';
     let nm = c.name;
@@ -3161,8 +3186,8 @@ async function exportDeckImage(title, list, subtitle) {
     }
   });
 
-  g.fillStyle = '#8b96b2'; g.font = '400 13px -apple-system, "Segoe UI", sans-serif';
-  g.fillText('🌙 Diana Deck Lab · persykse.github.io/diana-decklist-comparator', PAD, H - 18);
+  g.fillStyle = '#c8aa6e'; g.font = '600 12px Palatino, Georgia, serif';
+  g.fillText('DIANA DECK LAB · persykse.github.io/diana-decklist-comparator', PAD, H - 18);
 
   cv.toBlob(blob => {
     if (!blob) { toast('Image export failed'); return; }
@@ -3244,7 +3269,7 @@ function router() {
 function toggleTheme() {
   const light = document.body.classList.toggle('light');
   try { localStorage.setItem('ddl-theme', light ? 'light' : 'dark'); } catch (e) {}
-  document.querySelector('meta[name=theme-color]').setAttribute('content', light ? '#f7f6f3' : '#0d1220');
+  document.querySelector('meta[name=theme-color]').setAttribute('content', light ? '#f5f2ea' : '#0a0d14');
 }
 
 /* ---------------- Global delegation ---------------- */
@@ -3318,7 +3343,7 @@ window.addEventListener('hashchange', router);
 /* ---------------- Load ---------------- */
 async function load() {
   try {
-    if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f7f6f3'); }
+    if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f5f2ea'); }
     coachText = localStorage.getItem('ddl-coach') || '';
     sideText = localStorage.getItem('ddl-side') || '';
     const fm = JSON.parse(localStorage.getItem('ddl-fieldmodel') || 'null');

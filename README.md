@@ -60,8 +60,9 @@ or served, if you prefer a localhost URL:
 `fetch`.)
 
 The site is a single-page app with a sidebar and six views (Build,
-Analyze, Meta, Log, Compare, Decks), a dark "moonlight" theme, and card
-hover previews. A **global filter bar** (region / sub-archetype /
+Analyze, Meta, Log, Compare, Decks), a hextech-styled theme drawn from
+Riftbound's own visual language — near-black navy with gold chrome and a
+parchment light mode — and card hover previews. A **global filter bar** (region / sub-archetype /
 placement / date range) recomputes every view from the chosen subset, so
 you can ask e.g. "what does the majority build's curve look like without
 the off-meta variant?" or "did the CN circuit build differently?". (The
@@ -191,7 +192,7 @@ play — which is why the table also reports the **Answers** count (how
 many relevant cards you actually hold) and why the two must be read
 together. Breadth is good at finding holes; it is bad at telling you that
 you have none. It is not a win rate and cannot be: no per-match data
-exists. Right now it says the consensus sideboard covers **52%** of the
+exists. Right now it says the consensus sideboard covers **~51%** of the
 weighted field, and that its biggest hole is having **no counterspell**
 against a field whose best decks are spell-heavy.
 
