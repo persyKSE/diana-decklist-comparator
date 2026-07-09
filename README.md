@@ -59,21 +59,23 @@ or served, if you prefer a localhost URL:
 `decks.js` so it also works from `file://`, where browsers block
 `fetch`.)
 
-The site is a single-page app with a sidebar and five views (Build,
-Analyze, Meta, Compare, Decks), a dark "moonlight" theme, and card hover
-previews. A **global filter bar** (region / sub-archetype / placement /
-date range) recomputes every view from the chosen subset, so you can
-ask e.g. "what does the majority build's curve look like without the
-off-meta variant?" or "did the CN circuit build differently?". (The Meta
-view reads the whole field, so the filters don't apply there.)
+The site is a single-page app with a sidebar and six views (Build,
+Analyze, Meta, Log, Compare, Decks), a dark "moonlight" theme, and card
+hover previews. A **global filter bar** (region / sub-archetype /
+placement / date range) recomputes every view from the chosen subset, so
+you can ask e.g. "what does the majority build's curve look like without
+the off-meta variant?" or "did the CN circuit build differently?". (The
+Meta and Log views read the whole field / your own data, so the filters
+don't apply there.)
 
 - **Build** — a weighted consensus 40 (deck weight × copies, summed),
   locked vs. flex slots, runes/battlefields, and a **coach**: paste
   your list to get distance to each winning deck, missing core cards,
   and one-click "apply" swaps toward the consensus. Your list is saved
   in the browser and re-analyzed as you type. A **Consistency** section
-  gives exact draw odds for whatever list you're holding (see below),
-  and a banner summarises what the last event changed.
+  gives exact draw odds for whatever list you're holding (see below), a
+  **Rune math** panel computes the optimal 12-rune split for your list
+  (see below), and a banner summarises what the last event changed.
 - **Analyze** — a **What changed** timeline (the consensus prototype
   rebuilt after each event and diffed against the one before it), card
   inclusion table, card packages, energy curves and a sub-archetype
@@ -81,8 +83,20 @@ view reads the whole field, so the filters don't apply there.)
   legend/leaf highlighting.
 - **Meta** — every archetype in the scraped field ranked by *threat*
   (field share × Day 1→Day 2 conversion index), with a trend arrow.
-  Click one for its consensus list, curve, staples, unit-size histogram
-  and source decklists. Below that, **sideboard coverage** (see below).
+  A **field model** bar reweights everything for the field you're
+  actually prepping for: *recent form* (exponential decay, 28-day
+  half-life) and/or a single region — the recent-form field looks very
+  different from the all-time average. Click an archetype for its
+  consensus list, curve, staples, unit-size histogram and source
+  decklists. Below that, **sideboard coverage** and **mirror prep**
+  (see below).
+- **Log** — a personal match log, one tap per game (opponent archetype,
+  W/L, play/draw, mulligans, notes). Per-matchup records with Wilson
+  intervals, ordered by threat rank, with a "drill this" flag on losing
+  records against top threats. Stored locally, export/import as JSON
+  (merges by game id). No event publishes per-match data, so after
+  enough games this is the only matchup table for your list anywhere —
+  and your record appears beside each archetype in the coverage table.
 - **Compare** — git-style diff of any two lists and a swap-distance
   matrix with a "closest to the field" ranking.
 - **Decks** — every source list; click one for a visual decklist modal
@@ -126,6 +140,32 @@ seen 4+T cards. The table gives, per card: odds in the opening 4, odds
 after a mulligan (exactly computed — a miss gets two more looks at a
 36-card deck that still holds every copy), and odds of ≥1 and ≥2 by turn
 T. "Deal a hand" goldfishes a real opener you can mulligan and draw from.
+
+### Rune math (Build view)
+
+The rune deck is exactly 12 cards and you channel 2 per turn, so "do I
+have the colours for this card on curve?" is the same hypergeometric
+maths as the draw odds, pointed at the rune deck. The panel derives your
+list's colour demand from each card's printed domains (a dual-domain
+card needs one rune of each, computed exactly by inclusion–exclusion),
+scores **every possible 12-rune split** by expected on-curve colour
+misses per game, and recommends the minimum — with the field's consensus
+split marked on the same curve for comparison. On the current consensus
+list it confirms the field's 7 Chaos / 5 Mind is optimal; the panel earns
+its keep when *your* list shifts the demand. Assumes on-curve play going
+first and one rune per printed domain; read it as relative evidence
+between splits.
+
+### Mirror prep (Meta view)
+
+The better the consensus gets, the more other Diana players converge on
+the same 40 — so the mirror is the most predictable matchup in the room.
+This section runs the coverage engine against the Diana field itself:
+the mirror's threat rank and share under the active field model, what its
+board looks like, the cheapest removal size that answers 80%+ of mirror
+units, and the best mirror tech you're not holding (ranked by marginal
+breadth added, drawn only from cards winning Diana lists already play).
+The mirror also appears as a row in the coverage table.
 
 ### Sideboard coverage (Meta view)
 

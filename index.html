@@ -287,6 +287,14 @@
   button.ghost { background: var(--panel2); color: var(--text); border: 1px solid var(--border); }
   input[type=range] { accent-color: var(--accent); }
 
+  /* ---- Match log ---- */
+  .logform { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; }
+  .logform select, .logform input { padding: 7px 10px; font-size: 13px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); }
+  .logform input { flex: 1; min-width: 160px; }
+  button.winbtn { background: var(--lock); color: #0b0f1a; }
+  button.lossbtn { background: var(--danger); color: #0b0f1a; }
+  body.light button.winbtn, body.light button.lossbtn { color: #fff; }
+
   /* ---- Meta view ---- */
   .crumb { font-size: 13px; color: var(--muted); }
   #sideInput { width: 100%; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 13px; padding: 11px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); resize: vertical; }
@@ -320,6 +328,7 @@
       <a href="#build" data-view="build"><span class="nico">🌗</span> Build</a>
       <a href="#analyze" data-view="analyze"><span class="nico">🔮</span> Analyze</a>
       <a href="#meta" data-view="meta"><span class="nico">🗺️</span> Meta</a>
+      <a href="#log" data-view="log"><span class="nico">📓</span> Log</a>
       <a href="#compare" data-view="compare"><span class="nico">⚖️</span> Compare</a>
       <a href="#decks" data-view="decks"><span class="nico">🃏</span> Decks</a>
     </nav>
@@ -371,6 +380,11 @@ let sideText = '';          // the user's sideboard, for tech coverage
 let sideTimer = null;
 let simTurn = 3;            // draw simulator: which turn to compute odds for
 let sim = null;             // { lib: [names], hand: [names], aside: Set, mulled: bool }
+let fieldModel = { recency: false, region: null };   // how the expected field is weighted (persisted 'ddl-fieldmodel')
+
+// Half-life for the recency-weighted field model: a list from 4 weeks ago
+// counts half as much as one from the latest event.
+const FIELD_HALF_LIFE_DAYS = 28;
 
 // Riftbound: 40-card main deck, opening hand of 4, mulligan up to 2 (set aside,
 // draw replacements, recycle to the bottom — no reshuffle), then draw 1 per turn.
@@ -414,6 +428,7 @@ const VIEWS = {
   build:   { title: 'Build', desc: 'A weighted consensus deck from the filtered finishes, the flex slots that are still live, and a coach to rate your own list.', render: renderBuild },
   analyze: { title: 'Analyze', desc: 'What the filtered field agrees and disagrees on: inclusion rates, card packages, curves, sub-archetypes, and shifts over time.', render: renderAnalyze },
   meta:    { title: 'Meta', desc: 'Every archetype in the scraped field — what they play, how often they convert, and how well your sideboard answers them. Reads the whole field, so the Build/Analyze filters do not apply here.', render: renderMeta },
+  log:     { title: 'Match log', desc: 'Your own results, one tap per game. No event publishes per-match data — after enough logged games this page holds the only matchup table for your list in existence.', render: renderLog },
   compare: { title: 'Compare', desc: 'Diff any two lists card-for-card, and see which decks sit closest to the consensus.', render: renderCompare },
   decks:   { title: 'Decks', desc: 'Every source decklist in the filtered set. Click a deck to open its full list.', render: renderDecks },
 };
@@ -799,6 +814,8 @@ function coachInputChanged() {
     if (out) out.innerHTML = coachText.trim() ? renderCoach(globalDecks.length) : '';
     const simEl = document.getElementById('simTable');   // draw odds follow the list you're editing
     if (simEl) simEl.innerHTML = simTableHTML();
+    const rm = document.getElementById('runeMath');      // so does the rune math
+    if (rm) rm.outerHTML = runeMathHTML();
   }, 350);
 }
 
@@ -1263,13 +1280,128 @@ function renderConsistency() {
   return html;
 }
 
+/* ---------------- Rune split optimizer ----------------
+   The rune deck is exactly 12 cards and you channel 2 per turn (3 on turn one
+   going second), so "do I have the runes for this card on curve?" is the same
+   hypergeometric maths as the draw simulator — computable, not folklore. The
+   field's 7/5 split is a data point; this says whether it's actually right
+   for the list you're holding. */
+
+function runeColorsOf(name) {
+  return ((cardMeta[name] || {}).color || []).filter(c => c && c !== 'Colorless');
+}
+
+// P(this card's rune requirement is NOT met by its on-curve turn) for a given
+// split. Single-colour needs r of that colour among the first m channelled;
+// multi-colour (≥1 of each) is inclusion–exclusion over the demanded colours —
+// exact, since P(zero of a colour set) = C(12−Σs, m)/C(12, m).
+function runeMissProb(split, card) {
+  const m = Math.min(12, 2 * card.turn);
+  const cols = Object.keys(card.req);
+  if (cols.length === 1) {
+    return 1 - hyperAtLeast(card.req[cols[0]], split[cols[0]] || 0, 12, m);
+  }
+  let p = 0;
+  for (let mask = 0; mask < (1 << cols.length); mask++) {
+    let bits = 0, excluded = 0;
+    for (let i = 0; i < cols.length; i++) if (mask & (1 << i)) { bits++; excluded += split[cols[i]] || 0; }
+    p += (bits % 2 ? -1 : 1) * Math.exp(lnC(12 - excluded, m) - lnC(12, m));
+  }
+  return 1 - Math.max(0, Math.min(1, p));
+}
+
+function runeMathHTML() {
+  const { list, source } = activeList();
+  const perCard = [];
+  const colorCopies = {};
+  let colorless = 0;
+  list.forEach(c => {
+    const cols = runeColorsOf(c.name);
+    if (!cols.length) { colorless += c.count; return; }
+    const req = {};
+    cols.forEach(x => req[x] = (req[x] || 0) + 1);
+    const cost = (cardMeta[c.name] || {}).cost;
+    perCard.push({ name: c.name, copies: c.count, turn: Math.max(1, Math.min(cost == null ? 2 : cost, 8)), req });
+    Object.keys(req).forEach(x => colorCopies[x] = (colorCopies[x] || 0) + c.count);
+  });
+  const colors = Object.keys(colorCopies).sort((a, b) => colorCopies[b] - colorCopies[a]);
+  if (!colors.length || colors.length > 4) return '<div id="runeMath"></div>';
+
+  // Every way to split 12 runes across the demanded colours.
+  const splits = [];
+  (function go(i, left, acc) {
+    if (i === colors.length - 1) { splits.push({ ...acc, [colors[i]]: left }); return; }
+    for (let k = 0; k <= left; k++) go(i + 1, left - k, { ...acc, [colors[i]]: k });
+  })(0, 12, {});
+  const evOf = split => perCard.reduce((a, c) => a + c.copies * runeMissProb(split, c), 0);
+  const scored = splits.map(s => ({ s, ev: evOf(s) })).sort((a, b) => a.ev - b.ev);
+  const best = scored[0];
+
+  // The field's split, for comparison.
+  const cons = Object.fromEntries(colors.map(c => [c, 0]));
+  consensusExtras(globalDecks.length).runes.forEach(r => {
+    const col = shortName(r.name).replace(' Rune', '');
+    if (r.count > 0 && col in cons) cons[col] += r.count;
+  });
+  const consTotal = Object.values(cons).reduce((a, b) => a + b, 0);
+  const consEv = consTotal === 12 ? evOf(cons) : null;
+  const splitStr = s => colors.map(c => (s[c] || 0) + ' ' + c).join(' / ');
+  const sameAsCons = consEv != null && colors.every(c => (best.s[c] || 0) === cons[c]);
+
+  let html = '<div id="runeMath"><h2>Rune math</h2>';
+  html += '<p class="sub">Which 12-rune split actually supports <strong>' + escHtml(source) + '</strong>? You channel 2 runes per turn from a 12-rune deck, so "do I have the colours for this card on curve?" is exact hypergeometric probability — the same engine as the draw odds above, pointed at the rune deck.</p>';
+
+  html += '<div class="summary-box">Demand: ' + colors.map(c => '<strong>' + colorCopies[c] + '</strong> copies want ' + c).join(', ') +
+    (colorless ? ', ' + colorless + ' are colourless' : '') + '. ' +
+    (sameAsCons
+      ? 'Best split: <strong>' + splitStr(best.s) + '</strong> (' + best.ev.toFixed(2) + ' expected on-curve colour misses per game) — <strong>the field\'s split is already optimal</strong> for this list.'
+      : 'Best split: <strong>' + splitStr(best.s) + '</strong> — ' + best.ev.toFixed(2) + ' expected on-curve colour misses per game' +
+        (consEv != null ? ', vs <strong>' + consEv.toFixed(2) + '</strong> for the field\'s ' + splitStr(cons) + '.' : '.')) + '</div>';
+
+  // For two colours, the whole trade-off fits in one curve.
+  if (colors.length === 2) {
+    const [A, B] = colors;
+    const pts = [];
+    for (let k = 0; k <= 12; k++) pts.push({ k, ev: evOf({ [A]: k, [B]: 12 - k }) });
+    const W = 520, H = 150, mL = 36, mB = 30, mT = 10, mR = 12;
+    const pw = W - mL - mR, ph = H - mT - mB;
+    const evMax = Math.max(...pts.map(p => p.ev), 0.01);
+    const x = k => mL + k / 12 * pw, y = v => mT + ph - v / evMax * ph;
+    let parts = [];
+    [0, evMax / 2, evMax].forEach(v => {
+      parts.push('<line class="grid" x1="' + mL + '" y1="' + y(v) + '" x2="' + (W - mR) + '" y2="' + y(v) + '"/>');
+      parts.push('<text class="axis" x="' + (mL - 5) + '" y="' + (y(v) + 4) + '" font-size="9" text-anchor="end">' + v.toFixed(1) + '</text>');
+    });
+    parts.push('<polyline points="' + pts.map(p => x(p.k) + ',' + y(p.ev)).join(' ') + '" fill="none" stroke="var(--accent)" stroke-width="2.5"/>');
+    pts.forEach(p => parts.push('<circle class="pt" data-tip="' + attr(p.k + ' ' + A + ' / ' + (12 - p.k) + ' ' + B + ': ' + p.ev.toFixed(2) + ' expected misses') + '" cx="' + x(p.k) + '" cy="' + y(p.ev) + '" r="3.4" fill="' +
+      (p.k === best.s[A] ? 'var(--lock)' : consEv != null && p.k === cons[A] ? 'var(--flex)' : 'var(--accent)') + '"/>'));
+    for (let k = 0; k <= 12; k += 2) parts.push('<text class="axis" x="' + x(k) + '" y="' + (H - 12) + '" font-size="9" text-anchor="middle">' + k + '</text>');
+    parts.push('<text class="axis" x="' + (W / 2) + '" y="' + (H - 1) + '" font-size="9" text-anchor="middle">' + A + ' runes (of 12) — green = optimal' + (consEv != null ? ', amber = field' : '') + '</text>');
+    html += '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + parts.join('') + '</svg>';
+  }
+
+  // Key colour odds under the recommended split.
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Colour (' + splitStr(best.s) + ')</th>' +
+    '<th class="num">≥1 by turn 1</th><th class="num">≥1 by turn 2</th><th class="num">≥2 by turn 2</th><th class="num">≥2 by turn 3</th></tr></thead><tbody>';
+  colors.forEach(c => {
+    const s = best.s[c] || 0;
+    html += '<tr><td>' + escHtml(c) + ' (' + s + ' runes)</td>' +
+      [[1, 2], [1, 4], [2, 4], [2, 6]].map(([k, m]) =>
+        '<td class="num">' + pct(hyperAtLeast(k, s, 12, m)) + '</td>').join('') + '</tr>';
+  });
+  html += '</tbody></table></div>';
+
+  html += '<p class="sub">Assumes on-curve play going first (2 runes/turn; going second channels a 3rd on turn one, so these are the pessimistic numbers), one rune of each printed domain per card, and one demanding card per turn. It ignores rune-spending abilities and multi-spell turns — read it as relative evidence between splits, which is exactly the decision it is for.</p></div>';
+  return html;
+}
+
 /* ---------------- Filtering ---------------- */
 function regionOf(event) {
   const e = (event || '').toLowerCase();
-  if (/vancouver|hartford|atlanta|dallas|chicago|toronto|montreal|seattle|boston/.test(e)) return 'NA';
-  if (/utrecht|london|paris|berlin|madrid|milan|lyon|amsterdam/.test(e)) return 'EU';
+  if (/vancouver|hartford|atlanta|dallas|chicago|toronto|montreal|seattle|boston|vegas|houston/.test(e)) return 'NA';
+  if (/utrecht|london|paris|berlin|madrid|milan|lyon|amsterdam|lille|bologna/.test(e)) return 'EU';
   if (/sydney|melbourne|auckland|brisbane|perth/.test(e)) return 'OCE';
-  if (/changsha|tianjin|xian|shanghai|beijing|chengdu|guangzhou|wuhan|s3 regional open/.test(e)) return 'CN';
+  if (/changsha|tianjin|xian|shanghai|beijing|chengdu|guangzhou|wuhan|suzhou|s3 regional open/.test(e)) return 'CN';
   return 'Other';
 }
 
@@ -1691,18 +1823,70 @@ function answerWhy(name, tag, p) {
   }
 }
 
-// Threat weight: how much of the field it is, scaled by how well it converts.
-// A rare deck that wins is worth teching against; a popular deck that folds
-// on Day 1 is not.
-function threatWeights() {
-  const slugs = Object.keys(FIELD.archetypes).filter(s => s !== FIELD.diana);
-  const total = slugs.reduce((a, s) => a + FIELD.archetypes[s].decks.length, 0) || 1;
-  return slugs.map(slug => {
-    const n = FIELD.archetypes[slug].decks.length;
-    const conv = archConversion(slug);
-    const share = n / total;
-    return { slug, n, share, conv, weight: share * (conv ? conv.index : 1) };
-  }).sort((a, b) => b.weight - a.weight);
+/* ---- Field model: which field are you prepping for? ----
+   You don't play against the historical average — you play against next
+   week's field, maybe in one region. The model reweights every field deck by
+   recency (exponential decay) and/or region, and everything downstream
+   (threat, coverage, mirror prep) reads it. */
+
+let _fieldLatest = null;
+function fieldLatestDate() {
+  if (_fieldLatest == null) {
+    let max = 0;
+    Object.values(FIELD.archetypes).forEach(a => a.decks.forEach(d => {
+      if (d.date) max = Math.max(max, new Date(d.date).getTime());
+    }));
+    _fieldLatest = max || Date.now();
+  }
+  return _fieldLatest;
+}
+
+function fieldDeckWeight(d) {
+  if (fieldModel.region && regionOf(d.event) !== fieldModel.region) return 0;
+  if (!fieldModel.recency) return 1;
+  // Undated lists can't prove they're recent; treat them as very old.
+  const age = d.date ? Math.max(0, (fieldLatestDate() - new Date(d.date).getTime()) / 86400000) : 120;
+  return Math.pow(0.5, age / FIELD_HALF_LIFE_DAYS);
+}
+
+function setFieldRecency(on) { fieldModel.recency = on; saveFieldModel(); render(); }
+function setFieldRegion(r) { fieldModel.region = fieldModel.region === r ? null : r; saveFieldModel(); render(); }
+function saveFieldModel() { try { localStorage.setItem('ddl-fieldmodel', JSON.stringify(fieldModel)); } catch (e) {} }
+
+function fieldModelLabel() {
+  const bits = [];
+  if (fieldModel.recency) bits.push('recent form (half-life ' + FIELD_HALF_LIFE_DAYS + ' days)');
+  if (fieldModel.region) bits.push(fieldModel.region + ' events only');
+  return bits.join(', ');
+}
+
+// Threat weight: how much of the expected field it is, scaled by how well it
+// converts. A rare deck that wins is worth teching against; a popular deck
+// that folds on Day 1 is not. Shares are of the WHOLE field (mirror included)
+// under the active field model.
+function threatWeights(opts) {
+  const includeMirror = opts && opts.includeMirror;
+  const slugs = Object.keys(FIELD.archetypes);
+  const wOf = {};
+  let totalW = 0, rawN = 0, effN = 0;
+  slugs.forEach(slug => {
+    const w = FIELD.archetypes[slug].decks.reduce((a, d) => a + fieldDeckWeight(d), 0);
+    wOf[slug] = w; totalW += w;
+    rawN += FIELD.archetypes[slug].decks.length; effN += w;
+  });
+  const rows = slugs
+    .filter(s => includeMirror || s !== FIELD.diana)
+    .map(slug => {
+      const conv = archConversion(slug);
+      const share = totalW ? wOf[slug] / totalW : 0;
+      return {
+        slug, n: FIELD.archetypes[slug].decks.length, effN: wOf[slug], share, conv,
+        weight: share * (conv ? conv.index : 1), mirror: slug === FIELD.diana,
+      };
+    })
+    .filter(r => r.effN > 0)
+    .sort((a, b) => b.weight - a.weight);
+  return { rows, rawN, effN, modelOn: !!(fieldModel.recency || fieldModel.region) };
 }
 
 function currentSideboard() {
@@ -1736,10 +1920,10 @@ function addToSideboard(name) {
 
 function coverageHTML() {
   const { list, source, mine } = currentSideboard();
-  const weights = threatWeights();
+  const tw = threatWeights({ includeMirror: true });
   if (!list.length) return '<div class="summary-box">No sideboard to score.</div>';
 
-  const rows = weights.map(w => {
+  const rows = tw.rows.map(w => {
     const p = archProfile(w.slug);
     return { ...w, p, cov: coverageOf(list, p) };
   });
@@ -1750,19 +1934,23 @@ function coverageHTML() {
   const sideNames = new Set(list.map(c => c.name));
   const pool = Object.keys((window.CARDS) || {}).filter(n => !sideNames.has(n) && techTags(n).length);
   const nCards = list.reduce((a, c) => a + c.count, 0);
+  const haveLog = loadMatches().length > 0;
 
   let html = '<div class="summary-box"><strong>' + (mine ? 'Your' : 'The consensus') + ' ' + nCards + '-card sideboard holds <em>some</em> answer to ' +
     pct(overall) + ' of what the field plays.</strong> ' +
     'For a card drawn at random from an opponent\'s main deck, that is the chance your rules text addresses it — averaged across archetypes weighted by ' +
-    'how much of the top-cut field each one is <em>and</em> how well it converts into Day 2, so a rare deck that wins counts for more than a popular deck that folds.<br><br>' +
+    'how much of the top-cut field each one is <em>and</em> how well it converts into Day 2, so a rare deck that wins counts for more than a popular deck that folds. ' +
+    (tw.modelOn ? '<strong>Field model: ' + escHtml(fieldModelLabel()) + '</strong> — effective sample ' + tw.effN.toFixed(1) + ' of ' + tw.rawN + ' lists. ' : '') +
+    'The mirror is in the table too: other Diana players are part of your expected field.<br><br>' +
     '<strong>This is breadth, not sufficiency.</strong> It asks whether you hold <em>any</em> answer to each of their cards — never whether you hold <em>enough</em> of them, ' +
     'drew one in time, or could afford to cast it. A single counterspell "covers" all ' + Math.round(rows[0].p.spells) + ' spells ' + escHtml(FIELD.archetypes[rows[0].slug].name) +
     ' runs. Read the <em>Answers</em> column for how many relevant cards you actually have, ' +
     'and the Consistency section on the Build view for whether you will see them. It is not, and cannot be, a win rate: no per-match data is published for these events.</div>';
 
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th class="num">Conv.</th>' +
-    '<th>Their 40</th><th>Your best answer</th><th>Breadth</th><th class="num">Answers</th></tr></thead><tbody>';
-  rows.slice(0, 12).forEach(r => {
+    '<th>Their 40</th><th>Your best answer</th><th>Breadth</th><th class="num">Answers</th>' +
+    (haveLog ? '<th class="num" title="Your logged record vs this archetype (Log view)">You</th>' : '') + '</tr></thead><tbody>';
+  rows.slice(0, 13).forEach(r => {
     const a = FIELD.archetypes[r.slug];
     const board = r.p.units.toFixed(1) + ' units / ' + r.p.spells.toFixed(1) + ' spells / ' + r.p.gear.toFixed(1) + ' gear · avg cost ' + r.p.avgCost.toFixed(2);
     const ans = r.cov.name
@@ -1770,7 +1958,9 @@ function coverageHTML() {
         '<span class="ci">' + escHtml(answerWhy(r.cov.name, r.cov.tag, r.p)) + '</span>'
       : '<span style="color:var(--danger)">nothing</span>';
     const c = r.cov.coverage;
-    html += '<tr><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' + escHtml(a.name) + '</span></td>' +
+    const rec = haveLog ? matchRecord(r.slug) : null;
+    html += '<tr' + (r.mirror ? ' style="font-weight:600"' : '') + '><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' +
+      escHtml(r.mirror ? 'Diana — the mirror ★' : a.name) + '</span></td>' +
       '<td class="num">' + pct(r.share) + '</td>' +
       '<td class="num" style="color:' + (r.conv && r.conv.index >= 1 ? 'var(--lock)' : 'var(--muted)') + '">' + (r.conv ? r.conv.index.toFixed(2) + '×' : '—') + '</td>' +
       '<td style="color:var(--muted);font-size:12px;">' + escHtml(board) + '</td>' +
@@ -1778,7 +1968,9 @@ function coverageHTML() {
       '<td title="' + attr((c * r.p.mainCopies).toFixed(0) + ' of their ' + r.p.mainCopies.toFixed(0) + ' main-deck cards, quality-weighted') + '">' +
       '<span class="incl-bar" style="width:' + Math.round(90 * c) + 'px;background:' + pctColor(c) + '"></span>' + pct(c) + '</td>' +
       '<td class="num" title="' + attr('Cards in this sideboard that interact with them at all. Breadth says you hold an answer; this says how many.') + '" ' +
-      'style="color:' + (r.cov.depth >= 3 ? 'var(--muted)' : 'var(--flex)') + '">' + r.cov.depth + '</td></tr>';
+      'style="color:' + (r.cov.depth >= 3 ? 'var(--muted)' : 'var(--flex)') + '">' + r.cov.depth + '</td>' +
+      (haveLog ? '<td class="num" style="color:' + (rec.n ? (rec.w / rec.n >= 0.5 ? 'var(--lock)' : 'var(--danger)') : 'var(--muted)') + '">' +
+        (rec.n ? rec.w + '–' + rec.l : '—') + '</td>' : '') + '</tr>';
   });
   html += '</tbody></table></div>';
 
@@ -1906,6 +2098,8 @@ function renderBuild(ctx) {
     });
   }
   html += '</div></div>';
+
+  html += runeMathHTML();
 
   const protoNames = new Set(currentProto.map(c => c.name));
   const flexCards = rankedCards.filter(c => c.decksIn < N && c.decksIn >= 1 && !protoNames.has(c.name));
@@ -2211,6 +2405,162 @@ function renderAnalyze(ctx) {
   return html;
 }
 
+/* ---------------- Match log ----------------
+   The permanent ceiling on everything else here is that no per-match results
+   exist anywhere. So manufacture your own: one tap per game, stored locally,
+   exportable. After ~50 games this is the only matchup table for your list in
+   existence — data no opponent has. */
+
+function loadMatches() { try { return JSON.parse(localStorage.getItem('ddl-matches') || '[]'); } catch (e) { return []; } }
+function writeMatches(m) { try { localStorage.setItem('ddl-matches', JSON.stringify(m)); } catch (e) {} }
+
+function matchRecord(slug) {
+  const games = loadMatches().filter(x => x.arch === slug);
+  const w = games.filter(x => x.result === 'W').length;
+  return { n: games.length, w, l: games.length - w };
+}
+
+function logMatch(result) {
+  const arch = document.getElementById('logArch').value;
+  if (!arch) { toast('Pick the opponent\'s archetype first'); return; }
+  const m = loadMatches();
+  m.push({
+    id: Date.now() + '-' + Math.random().toString(36).slice(2, 7),
+    date: new Date().toISOString().slice(0, 10),
+    arch, result,
+    play: document.getElementById('logPlay').value || null,
+    mull: document.getElementById('logMull').value === '' ? null : +document.getElementById('logMull').value,
+    deck: document.getElementById('logDeck').value || null,
+    notes: (document.getElementById('logNotes').value || '').trim() || null,
+  });
+  writeMatches(m);
+  toast((result === 'W' ? 'Win' : 'Loss') + ' vs ' + (FIELD.archetypes[arch] ? FIELD.archetypes[arch].name : arch) + ' logged');
+  render();
+}
+
+function logDelete(id) {
+  writeMatches(loadMatches().filter(x => x.id !== id));
+  render();
+}
+
+function exportMatches() {
+  const blob = new Blob([JSON.stringify(loadMatches(), null, 1)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'diana-match-log-' + new Date().toISOString().slice(0, 10) + '.json';
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  toast('Match log exported');
+}
+
+function importMatches(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const incoming = JSON.parse(reader.result);
+      if (!Array.isArray(incoming)) throw new Error();
+      const have = new Set(loadMatches().map(x => x.id));
+      const fresh = incoming.filter(x => x && x.id && x.arch && x.result && !have.has(x.id));
+      writeMatches(loadMatches().concat(fresh));
+      toast('Imported ' + fresh.length + ' game' + (fresh.length === 1 ? '' : 's') + (incoming.length - fresh.length ? ' (' + (incoming.length - fresh.length) + ' already known)' : ''));
+      render();
+    } catch (e) { toast('Not a valid match-log file'); }
+  };
+  reader.readAsText(file);
+}
+
+function renderLog() {
+  const matches = loadMatches();
+  const haveField = fieldReady();
+  const archName = slug => (haveField && FIELD.archetypes[slug]) ? FIELD.archetypes[slug].name : slug;
+
+  // Quick-add: one tap per game.
+  const archOpts = haveField
+    ? threatWeights({ includeMirror: true }).rows.map(r =>
+        '<option value="' + attr(r.slug) + '">' + attr(r.mirror ? 'Diana (mirror)' : FIELD.archetypes[r.slug].name) + '</option>').join('')
+    : '';
+  const saveOpts = Object.keys(loadSaves()).sort().map(n => '<option value="' + attr(n) + '">' + attr(n) + '</option>').join('');
+  let html = '<h2>Log a game</h2>';
+  html += '<div class="logform">' +
+    '<select id="logArch"><option value="">opponent…</option>' + archOpts + '</select>' +
+    '<select id="logPlay"><option value="">play/draw?</option><option value="play">on the play</option><option value="draw">on the draw</option></select>' +
+    '<select id="logMull"><option value="">mulligan?</option><option value="0">kept 4</option><option value="1">set aside 1</option><option value="2">set aside 2</option></select>' +
+    '<select id="logDeck"><option value="">list: current</option>' + saveOpts + '</select>' +
+    '<input id="logNotes" placeholder="notes (what decided it?)">' +
+    '<button class="winbtn" onclick="logMatch(\'W\')">Won</button>' +
+    '<button class="lossbtn" onclick="logMatch(\'L\')">Lost</button></div>';
+
+  if (!matches.length) {
+    html += '<div class="summary-box">No games logged yet. Every other number on this site is inferred from decklists because <strong>no event publishes match results</strong> — ' +
+      'this page is where you fix that for yourself. Log practice and tournament games with one tap; at ~10 games per matchup the intervals start meaning something, ' +
+      'and the Meta view\'s coverage table grows a <strong>You</strong> column showing your record next to each archetype\'s threat.</div>';
+    return html;
+  }
+
+  // Overall + recent form.
+  const w = matches.filter(x => x.result === 'W').length;
+  const [lo, hi] = wilson(w, matches.length);
+  const weekAgo = new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+  const recent = matches.filter(x => x.date >= weekAgo);
+  html += '<div class="summary-box"><strong>' + w + '–' + (matches.length - w) + '</strong> overall (' +
+    Math.round(100 * w / matches.length) + '%, 95% CI ' + lo.toFixed(0) + '–' + hi.toFixed(0) + '%) across ' + matches.length + ' games · ' +
+    recent.length + ' this week.</div>';
+
+  // Per-archetype table, ordered by threat so practice priorities jump out.
+  const bySlug = {};
+  matches.forEach(x => (bySlug[x.arch] = bySlug[x.arch] || []).push(x));
+  const threatRank = {};
+  if (haveField) threatWeights({ includeMirror: true }).rows.forEach((r, i) => threatRank[r.slug] = { rank: i + 1, weight: r.weight });
+  const rows = Object.entries(bySlug).map(([slug, games]) => {
+    const gw = games.filter(x => x.result === 'W').length;
+    const onPlay = games.filter(x => x.play === 'play');
+    const onDraw = games.filter(x => x.play === 'draw');
+    return {
+      slug, n: games.length, w: gw, wr: gw / games.length,
+      ci: wilson(gw, games.length),
+      playStr: onPlay.length ? onPlay.filter(x => x.result === 'W').length + '–' + onPlay.filter(x => x.result === 'L').length : '—',
+      drawStr: onDraw.length ? onDraw.filter(x => x.result === 'W').length + '–' + onDraw.filter(x => x.result === 'L').length : '—',
+      threat: threatRank[slug] || null,
+    };
+  }).sort((a, b) => (a.threat && b.threat) ? a.threat.rank - b.threat.rank : b.n - a.n);
+
+  html += '<h2>By matchup</h2><p class="sub">Ordered by the archetype\'s threat rank in the expected field, so the top rows are the matchups that matter most. "Drill this" = losing record against a top-8 threat with 4+ games — the highest-value practice you can schedule.</p>';
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Opponent</th><th class="num">Threat #</th><th class="num">Games</th><th>Record</th>' +
+    '<th class="num">On play</th><th class="num">On draw</th><th></th></tr></thead><tbody>';
+  rows.forEach(r => {
+    const drill = r.threat && r.threat.rank <= 8 && r.n >= 4 && r.wr < 0.5;
+    const strong = r.n >= 4 && r.ci[0] > 50;
+    html += '<tr><td>' + (haveField && FIELD.archetypes[r.slug]
+        ? '<span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' + escHtml(archName(r.slug)) + '</span>' : escHtml(r.slug)) + '</td>' +
+      '<td class="num">' + (r.threat ? '#' + r.threat.rank : '—') + '</td>' +
+      '<td class="num">' + r.n + '</td>' +
+      '<td><span class="incl-bar" style="width:' + Math.round(60 * r.wr) + 'px;background:' + (r.wr >= 0.5 ? 'var(--lock)' : 'var(--danger)') + '"></span>' +
+      r.w + '–' + (r.n - r.w) + '<span class="ci">' + r.ci[0].toFixed(0) + '–' + r.ci[1].toFixed(0) + '%</span></td>' +
+      '<td class="num">' + r.playStr + '</td><td class="num">' + r.drawStr + '</td>' +
+      '<td>' + (drill ? '<span class="dist-badge" style="color:var(--danger)">drill this</span>'
+              : strong ? '<span class="dist-badge" style="color:var(--lock)">solid</span>' : '') + '</td></tr>';
+  });
+  html += '</tbody></table></div>';
+  html += '<p class="sub">Intervals are Wilson 95% — at 5 games a 3–2 honestly means "somewhere between 23% and 88%", so log more before believing a number.</p>';
+
+  // Recent games.
+  html += '<div class="action-bar"><h2>Games (' + matches.length + ')</h2>' +
+    '<span><button class="mini" onclick="exportMatches()">Export</button> ' +
+    '<label class="mini theme-btn" style="cursor:pointer;display:inline-block;">Import<input type="file" accept=".json" style="display:none" onchange="importMatches(this)"></label></span></div>';
+  [...matches].reverse().slice(0, 30).forEach(x => {
+    html += '<div class="card-row"><span class="count-badge" style="min-width:20px;color:' + (x.result === 'W' ? 'var(--lock)' : 'var(--danger)') + '">' + x.result + '</span>' +
+      '<span class="card-name">' + escHtml(archName(x.arch)) +
+      '<span class="card-meta"> · ' + x.date + (x.play ? ' · ' + x.play : '') + (x.mull != null ? ' · mull ' + x.mull : '') + (x.deck ? ' · ' + escHtml(x.deck) : '') + '</span>' +
+      (x.notes ? '<div class="card-meta">' + escHtml(x.notes) + '</div>' : '') + '</span>' +
+      '<button class="mini" style="background:var(--danger)" onclick="logDelete(\'' + x.id + '\')">×</button></div>';
+  });
+  if (matches.length > 30) html += '<p class="sub">Showing the latest 30 — export holds everything.</p>';
+  html += '<p class="sub">Stored in this browser (localStorage). Export regularly if you care about it; import merges by game id, so phone and laptop logs combine cleanly.</p>';
+  return html;
+}
+
 /* ---------------- META ---------------- */
 function openArch(slug) {
   metaArch = slug;
@@ -2258,18 +2608,40 @@ function renderMeta() {
   return metaArch && FIELD.archetypes[metaArch] ? renderArchDetail(metaArch) : renderArchList();
 }
 
+function renderFieldModelBar() {
+  const regions = [...new Set(Object.values(FIELD.archetypes).flatMap(a => a.decks.map(d => regionOf(d.event))))]
+    .filter(r => r !== 'Other').sort();
+  const chip = (on, label, fn, title) => '<span class="chip' + (on ? ' on' : '') + '" onclick="' + fn + '" title="' + attr(title || '') + '">' + escHtml(label) + '</span>';
+  let html = '<div class="filterbar"><div class="fgroup"><span class="flabel">Prep for</span>' +
+    chip(!fieldModel.recency, 'all time', 'setFieldRecency(false)', 'Every scraped list counts equally') +
+    chip(fieldModel.recency, 'recent form', 'setFieldRecency(true)', 'Exponential decay: a list from ' + FIELD_HALF_LIFE_DAYS + ' days before the latest event counts half') +
+    '<span style="width:12px"></span>' +
+    regions.map(r => chip(fieldModel.region === r, r, "setFieldRegion('" + r + "')", 'Only decks from ' + r + ' events')).join('') +
+    '</div>';
+  const tw = threatWeights({ includeMirror: true });
+  html += '<div class="fbar-foot"><span>' +
+    (tw.modelOn
+      ? 'Field model: <strong>' + escHtml(fieldModelLabel()) + '</strong> · effective sample ' + tw.effN.toFixed(1) + ' of ' + tw.rawN + ' lists' +
+        (tw.effN < 25 ? ' <span style="color:var(--flex)">· thin slice — shares are noisy</span>' : '')
+      : 'All ' + tw.rawN + ' scraped lists, unweighted — turn on <strong>recent form</strong> or a region to prep for a specific field') +
+    '</span></div></div>';
+  return html;
+}
+
 function renderArchList() {
-  const weights = threatWeights();
+  const tw = threatWeights();
+  const weights = tw.rows;
   const dianaN = FIELD.archetypes[FIELD.diana] ? FIELD.archetypes[FIELD.diana].decks.length : 0;
   const totalAll = Object.values(FIELD.archetypes).reduce((a, x) => a + x.decks.length, 0);
   const maxW = weights.length ? weights[0].weight : 1;
 
-  let html = '<h2>The field</h2><p class="sub">Every archetype scraped from the same top cuts as the Diana lists — ' + totalAll +
-    ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Click an archetype to see what it plays.</p>';
+  let html = renderFieldModelBar();
+  html += '<h2>The field</h2><p class="sub">Every archetype scraped from the same top cuts as the Diana lists — ' + totalAll +
+    ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Shares are of the whole field (Diana included) under the model above. Click an archetype to see what it plays.</p>';
 
   const dConv = archConversion(FIELD.diana);
   if (dConv) html += '<div class="summary-box">You are <strong>Diana</strong>: ' + dianaN + ' top-cut lists here, converting <strong>' +
-    (100 * dConv.conversion).toFixed(1) + '%</strong> into Day 2 — <strong>' + dConv.index.toFixed(2) + '×</strong> the field average. The table below is everyone else.</div>';
+    (100 * dConv.conversion).toFixed(1) + '%</strong> into Day 2 — <strong>' + dConv.index.toFixed(2) + '×</strong> the field average. The table below is everyone else; the mirror gets its own section below.</div>';
 
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Top-cut decks</th><th class="num">Field share</th>' +
     '<th class="num">Conversion</th><th class="num">vs field</th><th>Trend</th><th>Threat</th></tr></thead><tbody>';
@@ -2282,7 +2654,8 @@ function renderArchList() {
                     : '<span style="color:var(--danger)">▼ ' + pct(t.early) + ' → ' + pct(t.late) + '</span>';
     html += '<tr style="cursor:pointer" onclick="openArch(\'' + w.slug + '\')">' +
       '<td><strong>' + escHtml(a.name) + '</strong></td>' +
-      '<td class="num">' + w.n + '</td><td class="num">' + pct(w.share) + '</td>' +
+      '<td class="num">' + w.n + (fieldModel.recency ? ' <span class="ci" style="display:inline">(eff ' + w.effN.toFixed(1) + ')</span>' : '') + '</td>' +
+      '<td class="num">' + pct(w.share) + '</td>' +
       '<td class="num">' + (w.conv ? (100 * w.conv.conversion).toFixed(1) + '%' : '—') + '</td>' +
       '<td class="num" style="color:' + (w.conv && w.conv.index >= 1 ? 'var(--lock)' : 'var(--muted)') + '">' + (w.conv ? w.conv.index.toFixed(2) + '×' : '—') + '</td>' +
       '<td style="font-size:12px;">' + trend + '</td>' +
@@ -2290,12 +2663,64 @@ function renderArchList() {
   });
   html += '</tbody></table></div>';
   html += '<p class="sub">Conversion is archetype-level across ' + ((window.META && META.performance && META.performance.fieldDay1) || 0).toLocaleString() +
-    ' recorded decks; a dash means that legend never cleared the 20-deck minimum. Trend compares the last three events to everything before them and needs at least four events.</p>';
+    ' recorded decks; a dash means that legend never cleared the 20-deck minimum. Trend compares the last three events to everything before them (unweighted) and needs at least four events.</p>';
 
   html += '<h2>Sideboard coverage</h2>';
-  html += '<p class="sub">What your sideboard answers, archetype by archetype. Leave the box empty to score the consensus sideboard from the Build view. One card per line, like the deck coach.</p>';
+  html += '<p class="sub">What your sideboard answers, archetype by archetype, weighted by the field model above. Leave the box empty to score the consensus sideboard from the Build view. One card per line, like the deck coach.</p>';
   html += '<textarea id="sideInput" oninput="sideChanged()" placeholder="2 Turn to Dust&#10;2 Singularity&#10;..." style="min-height:90px">' + escHtml(sideText) + '</textarea>';
   html += '<div id="coverOut">' + coverageHTML() + '</div>';
+  html += renderMirrorPrep();
+  return html;
+}
+
+/* ---- Mirror prep ----
+   The better the consensus gets, the more other Diana players converge on it —
+   which makes the mirror the most predictable matchup in the tournament. Prep
+   against the consensus build itself. */
+function renderMirrorPrep() {
+  if (!FIELD.archetypes[FIELD.diana]) return '';
+  const p = archProfile(FIELD.diana);
+  const tw = threatWeights({ includeMirror: true });
+  const row = tw.rows.find(r => r.mirror);
+  const { list, source } = currentSideboard();
+  const cov = coverageOf(list, p);
+
+  let html = '<h2>Mirror prep</h2>';
+  html += '<p class="sub">Everyone netdecking the same results converges on the same 40 — so the mirror is the matchup you can prepare for with the most certainty. This section runs the coverage engine against the Diana field itself.</p>';
+
+  const rank = row ? tw.rows.indexOf(row) + 1 : null;
+  html += '<div class="summary-box">The mirror is <strong>' + (row ? pct(row.share) : '—') + '</strong> of the expected field' +
+    (row && row.conv ? ' at <strong>' + row.conv.index.toFixed(2) + '×</strong> conversion' : '') +
+    (rank ? ' — threat rank <strong>#' + rank + '</strong> of ' + tw.rows.length : '') +
+    '. Their board: ' + p.units.toFixed(1) + ' units / ' + p.spells.toFixed(1) + ' spells / ' + p.gear.toFixed(1) + ' gear per deck. ' +
+    'Against it, ' + escHtml(source) + ' holds answers to <strong style="color:' + pctColor(cov.coverage) + '">' + pct(cov.coverage) + '</strong> of the 40' +
+    (cov.name ? ' — best is <strong>' + escHtml(cov.name) + '</strong> (' + escHtml(answerWhy(cov.name, cov.tag, p)) + ')' : '') + '.</div>';
+
+  // What removal size actually lines up in the mirror.
+  const sizes = [2, 3, 4, 5, 6].map(s => ({ s, f: p.unitFracAtMost(s) }));
+  const enough = sizes.find(x => x.f >= 0.8);
+  html += '<p class="sub">Removal sizing: ' + sizes.map(x => '≤' + x.s + ' hits ' + pct(x.f)).join(' · ') +
+    (enough ? ' — <strong>deal ' + enough.s + '</strong> is the cheapest size that answers 80%+ of mirror units.' : '.') + '</p>';
+
+  // Best mirror tech from the Diana pool, by marginal breadth added.
+  const sideNames = new Set(list.map(c => c.name));
+  const pool = Object.keys(window.CARDS || {}).filter(n => !sideNames.has(n) && techTags(n).length);
+  const sugg = pool.map(n => ({ n, gain: marginalGain(n, list, p, cov.coverage) }))
+    .filter(x => x.gain > 0.02).sort((a, b) => b.gain - a.gain).slice(0, 5);
+  if (sugg.length) {
+    html += '<div class="pkg-box"><strong>Best mirror tech you are not holding</strong> (marginal breadth added, from cards winning Diana lists already play):<br>';
+    sugg.forEach(x => {
+      const t = dominantTag(techTags(x.n), p);
+      html += '<span class="pkg-chip" title="' + attr(answerWhy(x.n, t, p)) + '">' + cardImg(x.n) +
+        '<span data-card="' + attr(x.n) + '">' + escHtml(x.n) + '</span>' +
+        '<span style="color:var(--lock);font-size:11px;">+' + pct(x.gain) + '</span>' +
+        '<button class="mini" style="margin-left:4px" onclick="addToSideboard(\'' + x.n.replace(/'/g, "\\'") + '\')">+</button></span>';
+    });
+    html += '</div>';
+  } else {
+    html += '<div class="summary-box">Nothing in the Diana pool would add meaningful breadth against the mirror beyond what this sideboard already holds.</div>';
+  }
+  html += '<p class="sub"><span class="deck-link" onclick="openArch(\'' + FIELD.diana + '\')">Open the full Diana field page →</span></p>';
   return html;
 }
 
@@ -2314,6 +2739,8 @@ function renderArchDetail(slug) {
   if (conv) facts.push((100 * conv.conversion).toFixed(1) + '% Day 1→Day 2 (' + conv.index.toFixed(2) + '× the field, ' + conv.day1.toLocaleString() + ' decks recorded)');
   facts.push(p.units.toFixed(1) + ' units / ' + p.spells.toFixed(1) + ' spells / ' + p.gear.toFixed(1) + ' gear per deck');
   facts.push('avg cost ' + p.avgCost.toFixed(2));
+  const rec = matchRecord(slug);
+  if (rec.n) facts.push('your logged record: ' + rec.w + '–' + rec.l);
   html += '<div class="summary-box">' + escHtml(facts.join(' · ')) + '</div>';
 
   // What answers them — the mirror of the coverage table, for one archetype.
@@ -2768,10 +3195,10 @@ function render() {
   const si = document.getElementById('sideInput'); if (si) sideText = si.value;
   const view = VIEWS[currentView] || VIEWS.build;
   let html = '<div class="view-head"><img class="hero-art" src="cache/images/Diana_Lunari.webp" alt=""><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(view.desc) + '</p></div>';
-  // The Meta view reads the whole scraped field, not the Diana subset, so the
-  // filter bar would only mislead — the one thing it touches is the fallback
-  // consensus sideboard, and that is labelled where it is used.
-  if (currentView !== 'meta') {
+  // Meta reads the whole scraped field and Log is personal data, so the Diana
+  // filter bar would only mislead on either — the one thing it touches is the
+  // fallback consensus sideboard, and that is labelled where it is used.
+  if (currentView !== 'meta' && currentView !== 'log') {
     html += renderFilterBar();
     if (!globalDecks.length) html += '<div class="empty">No decks match the current filters. <span class="deck-link" onclick="clearFilters()">Reset filters</span>.</div>';
     else html += view.render(computeContext());
@@ -2894,6 +3321,8 @@ async function load() {
     if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f7f6f3'); }
     coachText = localStorage.getItem('ddl-coach') || '';
     sideText = localStorage.getItem('ddl-side') || '';
+    const fm = JSON.parse(localStorage.getItem('ddl-fieldmodel') || 'null');
+    if (fm && typeof fm === 'object') fieldModel = { recency: !!fm.recency, region: fm.region || null };
   } catch (e) {}
   const el = document.getElementById('content');
   if (window.DECKS) allDecks = window.DECKS;
