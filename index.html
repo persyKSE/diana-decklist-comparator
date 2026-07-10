@@ -47,7 +47,7 @@
   }
   a { color: inherit; text-decoration: none; }
 
-  .app { display: flex; min-height: 100vh; max-width: 1200px; margin: 0 auto; }
+  .app { display: flex; min-height: 100vh; max-width: 1320px; margin: 0 auto; }
 
   .sidebar {
     width: 214px; flex-shrink: 0; position: sticky; top: 0; align-self: flex-start;
@@ -317,6 +317,95 @@
   button.winbtn { background: var(--lock); color: #0b0f1a; }
   button.lossbtn { background: var(--danger); color: #0b0f1a; }
   body.light button.winbtn, body.light button.lossbtn { color: #fff; }
+
+  /* ---- Deck builder (Summoner's-Base-style three-pane) ---- */
+  .builder { display: grid; grid-template-columns: 236px minmax(0,1fr) 260px; gap: 14px; align-items: start; margin-bottom: 20px; }
+  .bpane { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); }
+  .bpane.center { background: transparent; border: none; }
+  .bcol { position: sticky; top: 14px; }
+
+  /* left: preview + management */
+  .bprev { padding: 12px; }
+  .bprev-img { width: 100%; aspect-ratio: 3/4.2; border-radius: 6px; background: var(--bg2) center/cover no-repeat; border: 1px solid var(--border); box-shadow: var(--shadow); display: block; }
+  .bprev-empty { display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; text-align: center; padding: 20px; }
+  .bprev-name { font-family: var(--serif); font-size: 15px; color: var(--gold-hi); margin: 10px 0 3px; }
+  .bprev-meta { font-size: 11.5px; color: var(--muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .bprev-eff { font-size: 12px; line-height: 1.5; color: var(--text); margin-top: 8px; background: var(--panel2); border: 1px solid var(--border); border-radius: 5px; padding: 8px 10px; max-height: 168px; overflow-y: auto; }
+  .bmanage { border-top: 1px solid var(--border); padding: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .bmanage button, .bmanage select { grid-column: span 1; width: 100%; margin: 0; font-size: 11.5px; padding: 7px 8px; }
+  .bmanage .full { grid-column: span 2; }
+  .bmanage select { background: var(--bg2); color: var(--text); border: 1px solid var(--border); border-radius: 3px; clip-path: none; }
+
+  /* center: deck */
+  .bhead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .bhead .btitle { font-family: var(--serif); font-size: 15px; color: var(--gold); letter-spacing: 0.5px; }
+  .bhead .bcount { font-variant-numeric: tabular-nums; font-weight: 700; }
+  .bvalid { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; padding: 2px 8px; border-radius: 3px; }
+  .bvalid.ok { color: var(--lock); background: rgba(84,192,138,0.14); box-shadow: inset 0 0 0 1px rgba(84,192,138,0.3); }
+  .bvalid.bad { color: var(--flex); background: rgba(227,169,78,0.14); box-shadow: inset 0 0 0 1px rgba(227,169,78,0.3); }
+  .bhead .bctl { margin-left: auto; display: flex; gap: 6px; }
+  .bhead .bctl button, .bhead .bctl select { font-size: 11.5px; padding: 5px 9px; margin: 0; }
+
+  .bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 8px; }
+  .bslot { position: relative; border-radius: 6px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35); transition: transform 0.1s, box-shadow 0.1s; user-select: none; }
+  .bslot:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.5); z-index: 2; }
+  .bslot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .bslot .bnoimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--muted); padding: 4px; text-align: center; }
+  .bslot .bqty { position: absolute; right: 3px; bottom: 3px; background: rgba(8,11,18,0.9); color: var(--gold-hi); font-size: 12px; font-weight: 800; border-radius: 4px; padding: 1px 6px; border: 1px solid var(--gold-dim); font-variant-numeric: tabular-nums; }
+  .bslot .bcost { position: absolute; left: 3px; top: 3px; min-width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; background: rgba(8,11,18,0.85); color: var(--text); font-size: 11px; font-weight: 800; border-radius: 50%; border: 1px solid var(--border); }
+  .bslot.maxed { outline: 1px solid var(--gold); outline-offset: -1px; }
+  .bempty-note { color: var(--muted); font-size: 13px; padding: 20px; text-align: center; border: 1px dashed var(--border); border-radius: var(--radius); }
+
+  .bzones { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; margin-top: 16px; align-items: start; }
+  @media (max-width: 1080px) { .bzones { grid-template-columns: 1fr; } }
+  .bzone-h { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 6px; display: flex; gap: 8px; align-items: baseline; }
+  .bzone-h .z-count { color: var(--muted); font-weight: 600; letter-spacing: 0; }
+  .blegend img { width: 128px; border-radius: 6px; display: block; box-shadow: var(--shadow); }
+  .brunes { display: flex; align-items: center; gap: 6px; }
+  .brune { position: relative; width: 74px; cursor: pointer; text-align: center; border-radius: 6px; overflow: hidden; box-shadow: var(--shadow); }
+  .brune img { width: 100%; display: block; }
+  .brune .rq { position: absolute; inset: auto 0 0 0; background: rgba(8,11,18,0.85); color: var(--gold-hi); font-weight: 800; font-size: 14px; padding: 2px 0; }
+  .brune-sep { font-size: 20px; font-weight: 800; color: var(--muted); }
+  .bbf { display: flex; gap: 8px; flex-wrap: wrap; }
+  .bbf .bslot { width: 92px; aspect-ratio: 3/2.05; }
+  .bbf .bslot img { object-position: center; }
+  .bbf .bslot.off { opacity: 0.32; filter: grayscale(0.6); }
+
+  /* right: search */
+  .bsearch { padding: 12px; }
+  .bsearch .bs-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gold); margin: 8px 0 3px; font-weight: 600; }
+  .bsearch .bs-label:first-child { margin-top: 0; }
+  .bsearch input, .bsearch select { width: 100%; padding: 6px 8px; font-size: 12.5px; border-radius: 3px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); }
+  .bs-range { display: flex; align-items: center; gap: 5px; }
+  .bs-range input { width: 100%; }
+  .bs-range span { color: var(--muted); font-size: 11px; }
+  .bs-actions { display: flex; gap: 6px; margin-top: 10px; }
+  .bs-actions button { flex: 1; margin: 0; font-size: 12px; padding: 7px; }
+  .bs-reset { background: var(--panel2) !important; color: var(--text) !important; clip-path: none !important; border: 1px solid var(--border); }
+  .bs-count { font-size: 11px; color: var(--muted); text-align: center; margin: 10px 0 6px; display: flex; align-items: center; justify-content: space-between; }
+  .bs-count button { background: transparent; color: var(--gold); border: 1px solid var(--border); padding: 1px 8px; font-size: 13px; margin: 0; clip-path: none; }
+  .bs-count button:disabled { opacity: 0.3; cursor: default; }
+  .bresults { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .bresult { position: relative; border-radius: 5px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+  .bresult:hover { outline: 2px solid var(--gold); outline-offset: -2px; }
+  .bresult img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .bresult .bnoimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--muted); padding: 3px; text-align: center; }
+  .bresult .rin { position: absolute; right: 2px; top: 2px; background: var(--gold); color: #14100a; font-size: 10px; font-weight: 800; border-radius: 3px; padding: 0 4px; }
+  .bresult-empty { grid-column: 1/-1; color: var(--muted); font-size: 12px; text-align: center; padding: 18px; }
+
+  .bhint { font-size: 11.5px; color: var(--muted); margin: 4px 0 0; }
+  kbd.k { font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 1px 5px; color: var(--text); background: var(--bg2); }
+  .shortcuts { font-size: 13px; line-height: 1.6; }
+  .shortcuts h3 { font-family: var(--serif); color: var(--gold); font-size: 14px; margin: 14px 0 6px; }
+  .shortcuts li { margin: 4px 0; }
+
+  @media (max-width: 980px) {
+    .builder { grid-template-columns: 1fr; }
+    .bcol { position: static; }
+    .bpane.left { order: 2; } .bpane.center { order: 1; } .bpane.right { order: 3; }
+    .bresults { grid-template-columns: repeat(4, 1fr); }
+  }
 
   /* ---- Meta view ---- */
   .crumb { font-size: 13px; color: var(--muted); }
@@ -845,6 +934,9 @@ function coachInputChanged() {
 function setCoach(text) {
   coachText = text; saveCoach();
   const ta = document.getElementById('coachInput'); if (ta) ta.value = text;
+  // The builder grid renders this same list, so keep it in sync when the
+  // optimizer or a coach "apply" button rewrites the deck.
+  if (document.getElementById('deckBuilder')) { refreshBuilder(); return; }
   const out = document.getElementById('coachResults'); if (out) out.innerHTML = text.trim() ? renderCoach(globalDecks.length) : '';
 }
 
@@ -2050,6 +2142,317 @@ function computeContext() {
 }
 
 /* ---------------- BUILD ---------------- */
+/* ---------------- Deck builder ----------------
+   A hands-on, Summoner's-Base-style builder. It edits the SAME "your deck"
+   list every analysis on this page already reads (coachText = main, sideText =
+   sideboard), so building live-drives the consistency odds, rune math, coverage
+   and coach feedback below. */
+let builderPoolCache = null;
+let builderRunes = null;     // {Chaos:7, Mind:5, …}, persisted 'ddl-runes'
+let builderBf = null;        // chosen battlefield names, persisted 'ddl-bf'
+let builderPreview = null;   // card name shown large in the left pane
+let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: 'cost', page: 0 };
+const BUILDER_PAGE = 18;
+const DOMAINS = ['Fury', 'Calm', 'Mind', 'Body', 'Chaos', 'Order'];
+
+function saveRunes() { try { localStorage.setItem('ddl-runes', JSON.stringify(builderRunes)); } catch (e) {} }
+function saveBf() { try { localStorage.setItem('ddl-bf', JSON.stringify(builderBf)); } catch (e) {} }
+
+// Runes/battlefields aren't part of coachText, so seed them from the consensus
+// the first time (or if a saved value is unusable).
+function ensureBuilderDefaults() {
+  const ex = consensusExtras(globalDecks.length);
+  if (!builderRunes || Object.values(builderRunes).reduce((a, b) => a + b, 0) !== 12) {
+    builderRunes = {};
+    ex.runes.forEach(r => { const d = shortName(r.name).replace(' Rune', ''); if (r.count > 0) builderRunes[d] = r.count; });
+    if (!Object.keys(builderRunes).length) builderRunes = { Chaos: 7, Mind: 5 };
+  }
+  if (!Array.isArray(builderBf)) builderBf = ex.bfs.slice(0, 3).map(b => b.name);
+}
+
+function builderPool() {
+  if (builderPoolCache) return builderPoolCache;
+  const names = new Set([...Object.keys(window.CARDS || {}), ...(window.FIELD ? Object.keys(FIELD.cards) : [])]);
+  const out = [];
+  names.forEach(name => {
+    const info = cardInfo(name) || {};
+    if (!['Unit', 'Spell', 'Gear'].includes(info.type)) return;   // runes/battlefields have their own zones
+    out.push({ name, cost: info.cost, type: info.type, color: info.color || [], might: info.might, effect: info.effect || '', img: imageMap[name] || null });
+  });
+  builderPoolCache = out;
+  return out;
+}
+
+function bMain() { return parseDeckText(coachText).counts; }
+function bSide() { return parseDeckText(sideText).counts; }
+function bTotal(counts) { return Object.values(counts).reduce((a, b) => a + b, 0); }
+function writeMain(counts) { coachText = normalizeCoach(counts); saveCoach(); }
+function writeSide(counts) { sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n'); try { localStorage.setItem('ddl-side', sideText); } catch (e) {} }
+
+function bAdd(name, sec) {
+  const counts = sec === 'side' ? bSide() : bMain();
+  if ((counts[name] || 0) >= 3) { toast(shortName(name) + ' is already at 3 copies'); return; }
+  if (sec !== 'side' && bTotal(bMain()) >= 40) { toast('Main deck is full (40)'); return; }
+  if (sec === 'side' && bTotal(bSide()) >= 8) { toast('Sideboard is full (8)'); return; }
+  counts[name] = (counts[name] || 0) + 1;
+  sec === 'side' ? writeSide(counts) : writeMain(counts);
+  refreshBuilder();
+}
+function bRemove(name, sec) {
+  const counts = sec === 'side' ? bSide() : bMain();
+  if (!counts[name]) return;
+  if (--counts[name] <= 0) delete counts[name];
+  sec === 'side' ? writeSide(counts) : writeMain(counts);
+  refreshBuilder();
+}
+function bMove(name, from) {
+  const src = from === 'side' ? bSide() : bMain();
+  const dst = from === 'side' ? bMain() : bSide();
+  if (!src[name]) return;
+  if (from === 'side' && bTotal(bMain()) >= 40) { toast('Main deck is full (40)'); return; }
+  if (from === 'main' && bTotal(bSide()) >= 8) { toast('Sideboard is full (8)'); return; }
+  if (--src[name] <= 0) delete src[name];
+  dst[name] = (dst[name] || 0) + 1;
+  if (from === 'side') { writeSide(src); writeMain(dst); } else { writeMain(src); writeSide(dst); }
+  refreshBuilder();
+}
+function bRuneXfer(into) {   // pull 1 from the other domain into `into`
+  const other = Object.keys(builderRunes).find(k => k !== into && builderRunes[k] > 0);
+  if (!other) return;
+  builderRunes[other]--; builderRunes[into] = (builderRunes[into] || 0) + 1;
+  saveRunes(); refreshBuilder();
+}
+function bRuneOut(from) {    // push 1 from `from` into the other domain
+  const other = Object.keys(builderRunes).find(k => k !== from);
+  if (!other || (builderRunes[from] || 0) <= 0) return;
+  builderRunes[from]--; builderRunes[other]++;
+  saveRunes(); refreshBuilder();
+}
+function bToggleBf(name) {
+  const i = builderBf.indexOf(name);
+  if (i >= 0) builderBf.splice(i, 1);
+  else if (builderBf.length >= 3) { toast('Pick at most 3 battlefields'); return; }
+  else builderBf.push(name);
+  saveBf(); refreshBuilder();
+}
+function bLoadConsensus() {
+  const ex = consensusExtras(globalDecks.length);
+  writeMain(Object.fromEntries(currentProto.map(c => [c.name, c.copies])));
+  writeSide(Object.fromEntries(ex.side.map(c => [c.name, c.copies])));
+  builderRunes = {}; ex.runes.forEach(r => { if (r.count > 0) builderRunes[shortName(r.name).replace(' Rune', '')] = r.count; });
+  builderBf = ex.bfs.slice(0, 3).map(b => b.name);
+  saveRunes(); saveBf();
+  toast('Loaded the consensus build into the builder');
+  refreshBuilder();
+}
+function bClear() {
+  if (!coachText.trim() && !sideText.trim()) return;
+  coachText = ''; sideText = ''; saveCoach();
+  try { localStorage.setItem('ddl-side', ''); } catch (e) {}
+  toast('Deck cleared');
+  refreshBuilder();
+}
+function bSetSort(v) { builderSearch.sort = v; renderBuilderResults(); }
+
+/* search */
+function builderFiltered() {
+  const s = builderSearch, q = x => (x || '').toLowerCase();
+  const list = builderPool().filter(c => {
+    if (s.name && !q(c.name).includes(q(s.name))) return false;
+    if (s.text && !q(c.effect).includes(q(s.text))) return false;
+    if (s.type && c.type !== s.type) return false;
+    if (s.color && !(c.color || []).includes(s.color)) return false;
+    if (s.emin !== '' && (c.cost == null || c.cost < +s.emin)) return false;
+    if (s.emax !== '' && (c.cost == null || c.cost > +s.emax)) return false;
+    if (s.mmin !== '' && (c.might == null || c.might < +s.mmin)) return false;
+    if (s.mmax !== '' && (c.might == null || c.might > +s.mmax)) return false;
+    return true;
+  });
+  const k = s.sort;
+  list.sort((a, b) => k === 'name' ? a.name.localeCompare(b.name)
+    : k === 'might' ? ((b.might ?? -1) - (a.might ?? -1)) || a.name.localeCompare(b.name)
+    : ((a.cost ?? 99) - (b.cost ?? 99)) || a.name.localeCompare(b.name));
+  return list;
+}
+function bReadSearch() {
+  const g = id => { const el = document.getElementById(id); return el ? el.value : ''; };
+  builderSearch.name = g('bsName'); builderSearch.text = g('bsText');
+  builderSearch.type = g('bsType'); builderSearch.color = g('bsColor');
+  builderSearch.emin = g('bsEmin'); builderSearch.emax = g('bsEmax');
+  builderSearch.mmin = g('bsMmin'); builderSearch.mmax = g('bsMmax');
+  builderSearch.page = 0;
+  renderBuilderResults();
+}
+function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: builderSearch.sort, page: 0 }; refreshBuilder(); }
+function bPage(delta) {
+  const total = builderFiltered().length, pages = Math.max(1, Math.ceil(total / BUILDER_PAGE));
+  builderSearch.page = Math.max(0, Math.min(pages - 1, builderSearch.page + delta));
+  renderBuilderResults();
+}
+
+/* HTML */
+function bTile(name, count, sec) {
+  const img = imageMap[name], cost = (cardMeta[name] || {}).cost;
+  return '<div class="bslot' + (count >= 3 ? ' maxed' : '') + '" data-bname="' + attr(name) + '" data-bsec="' + sec + '" ' +
+    'title="' + attr(name + ' — click +1, right-click −1, shift-click → ' + (sec === 'side' ? 'main' : 'sideboard')) + '">' +
+    (img ? '<img src="' + attr(img) + '" loading="lazy" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') +
+    (cost != null ? '<span class="bcost">' + cost + '</span>' : '') +
+    '<span class="bqty">' + count + '</span></div>';
+}
+function bSortedEntries(counts) {
+  return Object.entries(counts).sort((a, b) => ((cardMeta[a[0]] || {}).cost ?? 99) - ((cardMeta[b[0]] || {}).cost ?? 99) || a[0].localeCompare(b[0]));
+}
+function bPreviewHTML() {
+  const name = builderPreview;
+  if (!name || !cardInfo(name)) return '<div class="bprev-img bprev-empty">Hover any card to preview it here.</div>';
+  const info = cardInfo(name), img = imageMap[name];
+  let h = img ? '<img class="bprev-img" src="' + attr(img) + '" alt="">' : '<div class="bprev-img bprev-empty">' + escHtml(name) + '</div>';
+  h += '<div class="bprev-name">' + escHtml(name) + '</div>';
+  h += '<div class="bprev-meta">' + gemsFor(name) + '<span>' + escHtml([info.type, info.rarity].filter(Boolean).join(' · ')) + '</span></div>';
+  if (info.effect) h += '<div class="bprev-eff">' + escHtml(info.effect).replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆') + '</div>';
+  return h;
+}
+function renderBuilderResults() {
+  const wrap = document.getElementById('bResults'); if (!wrap) return;
+  const list = builderFiltered();
+  const pages = Math.max(1, Math.ceil(list.length / BUILDER_PAGE));
+  if (builderSearch.page >= pages) builderSearch.page = pages - 1;
+  const main = bMain(), side = bSide();
+  const slice = list.slice(builderSearch.page * BUILDER_PAGE, (builderSearch.page + 1) * BUILDER_PAGE);
+  let h = slice.map(c => {
+    const inDeck = (main[c.name] || 0) + (side[c.name] || 0);
+    return '<div class="bresult" data-bname="' + attr(c.name) + '" data-bsec="result" ' +
+      'title="' + attr(c.name + ' — click → main, right-click → sideboard') + '">' +
+      (c.img ? '<img src="' + attr(c.img) + '" loading="lazy" alt="">' : '<div class="bnoimg">' + escHtml(c.name) + '</div>') +
+      (inDeck ? '<span class="rin">' + inDeck + '</span>' : '') + '</div>';
+  }).join('');
+  if (!slice.length) h = '<div class="bresult-empty">No cards match those filters.</div>';
+  wrap.innerHTML = h;
+  const cnt = document.getElementById('bResCount');
+  if (cnt) cnt.innerHTML = '<button ' + (builderSearch.page <= 0 ? 'disabled' : '') + ' onclick="bPage(-1)">‹</button>' +
+    '<span>' + list.length + ' cards · page ' + (builderSearch.page + 1) + '/' + pages + '</span>' +
+    '<button ' + (builderSearch.page >= pages - 1 ? 'disabled' : '') + ' onclick="bPage(1)">›</button>';
+}
+function builderSearchHTML() {
+  const s = builderSearch;
+  const opt = (v, cur, label) => '<option value="' + attr(v) + '"' + (v === cur ? ' selected' : '') + '>' + escHtml(label || v || 'All') + '</option>';
+  return '<div class="bsearch">' +
+    '<div class="bs-label">Card name</div><input id="bsName" value="' + attr(s.name) + '" placeholder="Search by name…" oninput="bReadSearch()">' +
+    '<div class="bs-label">Card text</div><input id="bsText" value="' + attr(s.text) + '" placeholder="Search in rules text…" oninput="bReadSearch()">' +
+    '<div class="bs-label">Type</div><select id="bsType" onchange="bReadSearch()">' + ['', 'Unit', 'Spell', 'Gear'].map(t => opt(t, s.type, t || 'All types')).join('') + '</select>' +
+    '<div class="bs-label">Domain</div><select id="bsColor" onchange="bReadSearch()">' + ['', ...DOMAINS, 'Colorless'].map(t => opt(t, s.color, t || 'All domains')).join('') + '</select>' +
+    '<div class="bs-label">Energy</div><div class="bs-range"><input id="bsEmin" type="number" min="0" max="12" value="' + attr(s.emin) + '" placeholder="min" oninput="bReadSearch()"><span>to</span><input id="bsEmax" type="number" min="0" max="12" value="' + attr(s.emax) + '" placeholder="max" oninput="bReadSearch()"></div>' +
+    '<div class="bs-label">Might</div><div class="bs-range"><input id="bsMmin" type="number" min="0" max="12" value="' + attr(s.mmin) + '" placeholder="min" oninput="bReadSearch()"><span>to</span><input id="bsMmax" type="number" min="0" max="12" value="' + attr(s.mmax) + '" placeholder="max" oninput="bReadSearch()"></div>' +
+    '<div class="bs-actions"><button class="bs-reset" onclick="bResetSearch()">Reset</button></div>' +
+    '<div class="bs-count" id="bResCount"></div>' +
+    '<div class="bresults" id="bResults"></div>' +
+    '<p class="bhint">Click a card to add it to the main deck; right-click to send it to the sideboard. Scroll here to page.</p>' +
+    '</div>';
+}
+function builderHTML(N) {
+  ensureBuilderDefaults();
+  const main = bMain(), side = bSide();
+  const mainTotal = bTotal(main), sideTotal = bTotal(side);
+  const valid = mainTotal === 40 && sideTotal <= 8;
+  const runeTotal = Object.values(builderRunes).reduce((a, b) => a + b, 0);
+  const price = priceTag(Object.entries(main).map(([name, count]) => ({ name, count })));
+
+  // LEFT — preview + deck management
+  let left = '<div class="bpane left bcol"><div class="bprev" id="bPreview">' + bPreviewHTML() + '</div>' +
+    '<div class="bmanage">' +
+    '<button onclick="bLoadConsensus()" class="full" title="Fill the builder with the current weighted-consensus 40, runes, battlefields and sideboard">Load consensus build</button>' +
+    '<button onclick="copyDecklist()" title="Copy the full registrable deck">Copy deck</button>' +
+    '<button onclick="exportMyDeckImage()" title="Save a shareable PNG">Export PNG</button>' +
+    '<button onclick="shareDeckLink()" title="Copy a URL with your list encoded">Share link</button>' +
+    '<button onclick="bImport()" title="Paste a decklist to import">Import list</button>' +
+    '<button class="ghost" onclick="bHelp()">Shortcuts</button>' +
+    '<button class="ghost" onclick="bClear()" title="Empty the main deck and sideboard">Clear</button>' +
+    '</div></div>';
+
+  // CENTER — the deck itself
+  let center = '<div class="bpane center">';
+  center += '<div class="bhead"><span class="btitle">Main Deck</span> <span class="bcount">' + mainTotal + '/40</span>' +
+    '<span class="bvalid ' + (valid ? 'ok' : 'bad') + '">' + (valid ? '✓ Valid' : mainTotal + '/40') + '</span>' +
+    (price ? '<span class="card-meta">' + price + '</span>' : '') +
+    '<span class="bctl"><select onchange="bSetSort(this.value)" title="Sort the search results"><option value="cost"' + (builderSearch.sort === 'cost' ? ' selected' : '') + '>Sort: energy</option><option value="name"' + (builderSearch.sort === 'name' ? ' selected' : '') + '>Sort: name</option><option value="might"' + (builderSearch.sort === 'might' ? ' selected' : '') + '>Sort: might</option></select>' +
+    '<button class="ghost" onclick="bHelp()">?</button></span></div>';
+  center += mainTotal
+    ? '<div class="bgrid">' + bSortedEntries(main).map(([n, c]) => bTile(n, c, 'main')).join('') + '</div>'
+    : '<div class="bempty-note">Your main deck is empty. Search on the right to add cards, or <span class="deck-link" onclick="bLoadConsensus()">load the consensus build</span> to start from the field average.</div>';
+
+  // zones: legend / runes+battlefields
+  center += '<div class="bzones">';
+  center += '<div class="bzone"><div class="bzone-h">Legend</div><div class="blegend"><img src="cache/images/Diana_Lunari.webp" alt="Diana, Scorn of the Moon" title="Diana, Scorn of the Moon"></div></div>';
+  center += '<div class="bzone"><div class="bzone-h">Runes <span class="z-count">' + runeTotal + '/12</span></div><div class="brunes">';
+  const rd = Object.keys(builderRunes);
+  rd.forEach((d, i) => {
+    const rn = d + ' Rune', img = imageMap[rn];
+    center += '<div class="brune" data-rune="' + attr(d) + '" title="' + attr(d + ' — click +1 (from the other), right-click −1') + '">' +
+      (img ? '<img src="' + attr(img) + '" alt="">' : '<div class="bnoimg" style="height:100px">' + escHtml(d) + '</div>') +
+      '<span class="rq">' + builderRunes[d] + '</span></div>';
+    if (i < rd.length - 1) center += '<span class="brune-sep">/</span>';
+  });
+  center += '</div>';
+  const ex = consensusExtras(globalDecks.length);
+  const bfOpts = [...new Set([...builderBf, ...ex.bfs.map(b => b.name)])];
+  center += '<div class="bzone-h" style="margin-top:12px">Battlefields <span class="z-count">' + builderBf.length + '/3</span></div><div class="bbf">';
+  bfOpts.slice(0, 6).forEach(name => {
+    const on = builderBf.includes(name), img = imageMap[name];
+    center += '<div class="bslot' + (on ? '' : ' off') + '" data-bf="' + attr(name) + '" title="' + attr(name + (on ? ' — click to remove' : ' — click to add')) + '">' +
+      (img ? '<img src="' + attr(img) + '" loading="lazy" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') + '</div>';
+  });
+  center += '</div></div></div>';   // close .bbf, the rune .bzone, and .bzones
+
+  // sideboard
+  center += '<div class="bzone-h" style="margin-top:16px">Side Deck <span class="z-count">' + sideTotal + '/8</span></div>';
+  center += sideTotal
+    ? '<div class="bgrid">' + bSortedEntries(side).map(([n, c]) => bTile(n, c, 'side')).join('') + '</div>'
+    : '<div class="bempty-note">No sideboard cards. Right-click a search result to add one, or shift-click a main-deck card to move it here.</div>';
+  center += '</div>';
+
+  // RIGHT — search
+  const right = '<div class="bpane right bcol">' + builderSearchHTML() + '</div>';
+  return '<div class="builder">' + left + center + right + '</div>';
+}
+function refreshBuilder() {
+  const el = document.getElementById('deckBuilder');
+  if (!el) { render(); return; }
+  el.innerHTML = builderHTML(globalDecks.length);
+  renderBuilderResults();
+  // live-drive the analysis that reads the same list
+  const cr = document.getElementById('coachResults'); if (cr) cr.innerHTML = coachText.trim() ? renderCoach(globalDecks.length) : '';
+  const sm = document.getElementById('simTable'); if (sm) sm.innerHTML = simTableHTML();
+  const rm = document.getElementById('runeMath'); if (rm) rm.outerHTML = runeMathHTML();
+}
+function bImport() {
+  showModal('<div class="modal-head"><div class="modal-title">Import a decklist</div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
+    '<p class="sub">One card per line — "3 Gust", "3x Gust" or "Gust x3". This replaces your current main deck.</p>' +
+    '<textarea id="bImportText" style="width:100%;min-height:180px;font-family:ui-monospace,Menlo,monospace;font-size:13px;padding:11px;border:1px solid var(--border);border-radius:8px;background:var(--panel2);color:var(--text);">' + escHtml(coachText) + '</textarea>' +
+    '<div style="margin-top:12px;display:flex;gap:8px;"><button onclick="bImportApply()">Import</button><button class="ghost" onclick="closeModal()">Cancel</button></div>');
+}
+function bImportApply() {
+  const t = document.getElementById('bImportText');
+  if (t) { coachText = t.value; saveCoach(); }
+  closeModal(); render();
+}
+function bHelp() {
+  showModal('<div class="modal-head"><div class="modal-title">Builder shortcuts</div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
+    '<div class="shortcuts"><h3>Deck cards</h3><ul>' +
+    '<li><kbd class="k">Click</kbd> — add one copy (up to 3)</li>' +
+    '<li><kbd class="k">Right-click</kbd> — remove one copy</li>' +
+    '<li><kbd class="k">Shift</kbd> + <kbd class="k">Click</kbd> — move between main deck and sideboard</li>' +
+    '<li><kbd class="k">Hover</kbd> — preview the card on the left</li></ul>' +
+    '<h3>Search results</h3><ul>' +
+    '<li><kbd class="k">Click</kbd> — add to the main deck</li>' +
+    '<li><kbd class="k">Right-click</kbd> — add to the sideboard</li>' +
+    '<li><kbd class="k">Scroll</kbd> over the grid — previous / next page</li></ul>' +
+    '<h3>Runes</h3><ul>' +
+    '<li><kbd class="k">Click</kbd> a rune — pull one count from the other domain into it</li>' +
+    '<li><kbd class="k">Right-click</kbd> a rune — push one count out to the other domain</li></ul>' +
+    '<h3>Battlefields</h3><ul><li><kbd class="k">Click</kbd> — toggle it in or out (pick up to 3)</li></ul>' +
+    '<p class="sub" style="margin-top:12px">Everything you build here feeds the Consistency odds, Rune math and coach feedback below, and the Sideboard coverage on the Meta view.</p></div>');
+}
+
 function renderBuild(ctx) {
   const N = ctx.N;
   let html = '';
@@ -2057,89 +2460,22 @@ function renderBuild(ctx) {
   if (head) html += '<div class="newsbar"><span class="news-tag">Latest</span>' +
     '<span><strong>' + escHtml(head.event) + '</strong> (' + head.date + ') added ' + head.n + ' list' + (head.n === 1 ? '' : 's') + ': ' + escHtml(head.what) + '.</span>' +
     '<a class="deck-link" href="#analyze">See what changed →</a></div>';
-  const totalCards = currentProto.reduce((acc, c) => acc + c.copies, 0);
-  const protoPrice = priceTag(currentProto.map(c => ({ name: c.name, count: c.copies })));
-  html += '<div class="action-bar"><h2>Prototype deck (' + totalCards + '/40 main cards' + (protoPrice ? ' · ' + protoPrice : '') + ')</h2>' +
-    '<span><button onclick="copyDecklist()" title="Copies the full registrable deck: main, runes, battlefields, sideboard">Copy full deck</button> <button onclick="exportProtoImage()" title="Save a shareable PNG of this list">Export PNG</button></span></div>';
-  html += '<p class="sub">Curve-aware consensus build: locked cards first, then flex slots by score with a penalty for overfilling a cost bucket beyond the field\'s average curve. <span class="pill pill-lock">locked</span> = in every deck; <span class="pill pill-flex">flex</span> = contested slot. Hover a row for its reasoning.</p>';
+  // The interactive deck builder is the hero. It edits coachText (main) and
+  // sideText (side), so every analysis below reflects what you build.
+  html += '<div id="deckBuilder">' + builderHTML(N) + '</div>';
+
   if (clusterOptions.length > 1 && !filters.cluster.size) {
-    html += '<div class="summary-box">This field splits into <strong>' + clusterOptions.length + ' sub-archetypes</strong> — an averaged build can end up as a deck nobody plays. Build for one: ' +
+    html += '<div class="summary-box" style="margin-top:16px">This field splits into <strong>' + clusterOptions.length + ' sub-archetypes</strong> — an averaged consensus can end up as a deck nobody plays. Build for one: ' +
       clusterOptions.map(c => '<span class="chip" onclick="toggleFilter(\'cluster\',' + c.gi + ')">' + escHtml(c.name) + ' (' + c.n + ')</span>').join(' ') + '</div>';
   }
-  currentProto.forEach(c => {
-    const cls = c.locked ? 'locked' : 'flex';
-    const tag = c.locked ? '<span class="pill pill-lock">locked</span>' : '<span class="pill pill-flex">flex ' + c.decksIn + '/' + N + '</span>';
-    const removeBtn = c.locked ? '' : '<span class="interactive-remove" onclick="removeCard(\'' + c.name.replace(/'/g, "\\'") + '\')" title="Remove">&times;</span>';
-    const pkg = packageOf(c.name);
-    const pkgNote = pkg ? ' · pkg: ' + pkg.cards.filter(n => n !== c.name).map(shortName).join(', ') : '';
-    const why = 'In ' + c.decksIn + '/' + N + ' decks, avg ' + c.avgCopies.toFixed(1) + ' copies, weighted score ' + c.score.toFixed(1) +
-      (pkg ? '. Travels with ' + pkg.cards.filter(n => n !== c.name).join(', ') + ' (' + pkg.decks + '/' + N + ' decks run the package together).' : '.');
-    html += '<div class="card-row ' + cls + '" data-card="' + attr(c.name) + '" title="' + attr(why) + '">' + cardImg(c.name) +
-      '<span class="card-name">' + gemsFor(c.name) + ' ' + escHtml(c.name) + tag + '</span><span class="card-meta">score ' + c.score.toFixed(1) + escHtml(pkgNote) + '</span><span class="count-badge">x' + c.copies + '</span>' + removeBtn + '</div>';
-  });
 
-  // Curve fit: how the prototype's shape tracks the field's average curve.
-  {
-    const target = targetCurveOf(globalDecks);
-    const mine = Array(MAX_COST_BUCKET + 1).fill(0);
-    currentProto.forEach(c => mine[costBucket(c.name)] += c.copies);
-    const fit = mine.reduce((a, v, i) => a + Math.abs(v - target[i]), 0);
-    const W = 340, H = 90, mL = 8, mB = 14, mT = 8, mR = 8;
-    const pw = W - mL - mR, ph = H - mT - mB;
-    const mx = Math.max(1, ...mine, ...target);
-    const x = c => mL + c / MAX_COST_BUCKET * pw, y = v => mT + ph - v / mx * ph;
-    let p = ['<polyline points="' + target.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.7"/>'];
-    p.push('<polyline points="' + mine.map((v, c) => x(c) + ',' + y(v)).join(' ') + '" fill="none" stroke="var(--accent)" stroke-width="2.5"/>');
-    for (let c = 0; c <= MAX_COST_BUCKET; c += 2) p.push('<text class="axis" x="' + x(c) + '" y="' + (H - 3) + '" font-size="9" text-anchor="middle">' + c + '</text>');
-    html += '<div class="summary-box" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">' +
-      '<svg class="viz" style="width:340px;border:none;background:transparent;" viewBox="0 0 ' + W + ' ' + H + '">' + p.join('') + '</svg>' +
-      '<div style="font-size:13px;"><strong>Curve fit: ' + fit.toFixed(1) + '</strong> total card-slots off the field\'s average shape (dashed).<br><span style="color:var(--muted)">Solid line is this prototype — it updates as you add and remove flex cards.</span></div></div>';
-  }
-
-  // Consensus runes, battlefields, sideboard — the rest of a registrable deck.
-  const extras = consensusExtras(N);
-  html += '<h2>Runes, battlefields &amp; sideboard</h2><p class="sub">The parts of the deck the 40 main cards don\'t cover, from the same weighted consensus. All included in "Copy full deck".</p>';
-  html += '<div class="col2"><div>';
-  if (extras.runes.length) {
-    html += '<div class="cost-head">Rune split (12)</div>';
-    extras.runes.forEach(r => {
-      html += '<div class="card-row" data-card="' + attr(r.name) + '">' + cardImg(r.name) + '<span class="card-name">' + escHtml(r.name) + '</span><span class="card-meta">avg ' + r.avg.toFixed(1) + '</span><span class="count-badge">x' + r.count + '</span></div>';
-    });
-    if (extras.splits.length) html += '<p class="sub" style="margin-top:6px;">Splits seen: ' + extras.splits.map(([sig, n]) => sig + ' (' + n + ')').join(' · ') + '</p>';
-  }
-  if (extras.bfs.length) {
-    html += '<div class="cost-head">Battlefields (pick 3)</div>';
-    extras.bfs.forEach((b, i) => {
-      html += '<div class="card-row' + (i < 3 ? ' locked' : '') + '" data-card="' + attr(b.name) + '">' + cardImg(b.name) + '<span class="card-name">' + escHtml(b.name) + (i < 3 ? '<span class="pill pill-lock">pick</span>' : '') + '</span><span class="card-meta">in ' + b.n + '/' + N + ' decks</span></div>';
-    });
-  }
-  html += '</div><div>';
-  if (extras.side.length) {
-    html += '<div class="cost-head">Consensus sideboard (' + extras.side.reduce((a, c) => a + c.copies, 0) + '/8)</div>';
-    extras.side.forEach(c => {
-      html += '<div class="card-row" data-card="' + attr(c.name) + '">' + cardImg(c.name) + '<span class="card-name">' + escHtml(c.name) + '</span><span class="card-meta">in ' + c.decksIn + '/' + N + ' sideboards</span><span class="count-badge">x' + c.copies + '</span></div>';
-    });
-  }
-  html += '</div></div>';
-
-  html += runeMathHTML();
-
-  const protoNames = new Set(currentProto.map(c => c.name));
-  const flexCards = rankedCards.filter(c => c.decksIn < N && c.decksIn >= 1 && !protoNames.has(c.name));
-  html += '<h2>Alternative flex cards (' + flexCards.length + ')</h2><p class="sub">Click to add to the prototype (auto-removes the lowest-scoring flex card to make room).</p>';
-  flexCards.slice(0, 20).forEach(c => {
-    html += '<div class="card-row flex interactive-flex" data-card="' + attr(c.name) + '" onclick="addCard(\'' + c.name.replace(/'/g, "\\'") + '\')">' + cardImg(c.name) +
-      '<span class="card-name">' + gemsFor(c.name) + ' ' + escHtml(c.name) + '</span><span class="card-meta">in ' + c.decksIn + '/' + N + ' decks · score ' + c.score.toFixed(1) + '</span><span class="count-badge">+</span></div>';
-  });
-
-  html += '<h2>Rate my deck</h2><p class="sub">Paste your main deck (one card per line: "3 Gust", "3x Gust", or "Gust x3"). Analysis updates as you type — your list is saved in this browser.</p>';
-  html += '<textarea id="coachInput" oninput="coachInputChanged()" placeholder="3 Gust&#10;3 Stacked Deck&#10;2 Moonfall&#10;...">' + escHtml(coachText) + '</textarea>';
-  html += '<div class="coach-tools"><input id="coachAdd" list="cardNames" placeholder="add a card by name…" onkeydown="if(event.key===\'Enter\')coachAddCard()"><button onclick="coachAddCard()">Add</button>' +
-          '<button onclick="runOptimizer()" title="Hill-climbs single-card swaps, scoring similarity to winners, curve fit, and package integrity">Optimize</button></div>';
-  html += '<p class="sub">Optimize hill-climbs card-for-card swaps from your list (or the prototype if empty) toward the evidenced consensus of the filtered winning decks.</p>';
+  // Everything below reads the same list the builder edits, live.
+  html += '<div class="coach-tools" style="margin-top:16px"><button onclick="runOptimizer()" title="Hill-climbs single-card swaps, scoring similarity to winners, curve fit, and package integrity">Optimize toward consensus</button>' +
+    '<span class="card-meta">Hill-climbs card-for-card swaps from your list (or the prototype, if empty) toward the evidenced consensus of the filtered winning decks.</span></div>';
   html += renderWorkspace();
   html += '<div id="optResults"></div>';
   html += '<div id="coachResults">' + (coachText.trim() ? renderCoach(N) : '') + '</div>';
+  html += runeMathHTML();
   html += renderConsistency();
   return html;
 }
@@ -3234,6 +3570,7 @@ function render() {
   document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.view === currentView));
   document.getElementById('deckCount').textContent = allDecks.length + ' decks loaded';
   renderLastUpdated();
+  if (document.getElementById('bResults')) renderBuilderResults();   // fill the builder's search grid
 }
 function relativeTime(iso) {
   const days = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
@@ -3285,6 +3622,14 @@ document.addEventListener('mouseover', e => {
 
   const hl = e.target.closest('[data-hl]');
   if (hl) { const [sel, idx] = hl.getAttribute('data-hl').split('|'); const svg = document.querySelector(sel); if (svg) { svg.classList.add('focus'); svg.querySelectorAll('[data-series="' + idx + '"]').forEach(el => el.classList.add('on')); } }
+
+  // Builder: hovering any card/rune/battlefield fills the large left preview.
+  const bEl = e.target.closest('[data-bname], [data-bf], [data-rune]');
+  if (bEl) {
+    const name = bEl.getAttribute('data-bname') || bEl.getAttribute('data-bf') ||
+      (bEl.getAttribute('data-rune') ? bEl.getAttribute('data-rune') + ' Rune' : null);
+    if (name && name !== builderPreview) { builderPreview = name; const p = document.getElementById('bPreview'); if (p) p.innerHTML = bPreviewHTML(); }
+  }
 });
 document.addEventListener('mouseout', e => {
   const hl = e.target.closest('[data-hl]');
@@ -3307,6 +3652,20 @@ document.addEventListener('mousemove', e => {
   }
 });
 document.addEventListener('click', e => {
+  // Builder interactions come first — a card tile is an action surface, not a link.
+  const bSlot = e.target.closest('[data-bname]');
+  if (bSlot) {
+    const name = bSlot.getAttribute('data-bname'), sec = bSlot.getAttribute('data-bsec');
+    if (sec === 'result') bAdd(name, 'main');
+    else if (e.shiftKey) bMove(name, sec);
+    else bAdd(name, sec);
+    return;
+  }
+  const bBf = e.target.closest('[data-bf]');
+  if (bBf) { bToggleBf(bBf.getAttribute('data-bf')); return; }
+  const bRune = e.target.closest('[data-rune]');
+  if (bRune) { bRuneXfer(bRune.getAttribute('data-rune')); return; }
+
   const ap = e.target.closest('[data-apply]');
   if (ap) { applyCoachSwap(ap.getAttribute('data-apply'), parseInt(ap.getAttribute('data-delta'), 10)); return; }
   // Clicking a card image opens the card detail modal — except in rows whose
@@ -3322,6 +3681,21 @@ document.addEventListener('click', e => {
   if (dl) { openDeckModal(parseInt(dl.getAttribute('data-deck'), 10)); return; }
   if (e.target.id === 'modal') closeModal();
 });
+// Right-click in the builder removes / sideboards / transfers, matching the
+// reference tool's model. Only preventDefault when we actually handle it.
+document.addEventListener('contextmenu', e => {
+  const bSlot = e.target.closest('[data-bname]');
+  if (bSlot) { e.preventDefault(); const name = bSlot.getAttribute('data-bname'), sec = bSlot.getAttribute('data-bsec'); sec === 'result' ? bAdd(name, 'side') : bRemove(name, sec); return; }
+  const bRune = e.target.closest('[data-rune]');
+  if (bRune) { e.preventDefault(); bRuneOut(bRune.getAttribute('data-rune')); return; }
+  const bBf = e.target.closest('[data-bf]');
+  if (bBf) { e.preventDefault(); bToggleBf(bBf.getAttribute('data-bf')); }
+});
+// Scroll over the search results pages through them.
+document.addEventListener('wheel', e => {
+  const grid = e.target.closest('#bResults');
+  if (grid) { e.preventDefault(); bPage(e.deltaY > 0 ? 1 : -1); }
+}, { passive: false });
 document.addEventListener('keydown', e => {
   const palOpen = document.getElementById('palette').classList.contains('show');
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); palOpen ? closePalette() : openPalette(); return; }
@@ -3346,6 +3720,8 @@ async function load() {
     if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f5f2ea'); }
     coachText = localStorage.getItem('ddl-coach') || '';
     sideText = localStorage.getItem('ddl-side') || '';
+    builderRunes = JSON.parse(localStorage.getItem('ddl-runes') || 'null');
+    builderBf = JSON.parse(localStorage.getItem('ddl-bf') || 'null');
     const fm = JSON.parse(localStorage.getItem('ddl-fieldmodel') || 'null');
     if (fm && typeof fm === 'object') fieldModel = { recency: !!fm.recency, region: fm.region || null };
   } catch (e) {}

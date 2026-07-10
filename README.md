@@ -69,14 +69,20 @@ the off-meta variant?" or "did the CN circuit build differently?". (The
 Meta and Log views read the whole field / your own data, so the filters
 don't apply there.)
 
-- **Build** — a weighted consensus 40 (deck weight × copies, summed),
-  locked vs. flex slots, runes/battlefields, and a **coach**: paste
-  your list to get distance to each winning deck, missing core cards,
-  and one-click "apply" swaps toward the consensus. Your list is saved
-  in the browser and re-analyzed as you type. A **Consistency** section
-  gives exact draw odds for whatever list you're holding (see below), a
-  **Rune math** panel computes the optimal 12-rune split for your list
-  (see below), and a banner summarises what the last event changed.
+- **Build** — a hands-on **deck builder** in three panes (card preview +
+  deck management, the deck as a grid of card art, and a card-search
+  panel), styled after summonersbase.com. Click a search result to add
+  it to the main deck, right-click to send it to the sideboard;
+  left/right-click a deck card to add/remove a copy, shift-click to move
+  it between main and sideboard; click a rune to shift the 12-rune split,
+  toggle up to three battlefields, scroll the results to page. "Load
+  consensus build" fills it from the weighted field average. The deck you
+  build IS the list every analysis below reads, so it live-drives the
+  **coach** (distance to each winning deck, missing core cards, one-click
+  swaps toward the consensus), the **Consistency** draw odds, the **Rune
+  math** optimal-split panel (all described below), and the Sideboard
+  coverage on the Meta view. Everything is saved in the browser; a banner
+  summarises what the last event changed.
 - **Analyze** — a **What changed** timeline (the consensus prototype
   rebuilt after each event and diffed against the one before it), card
   inclusion table, card packages, energy curves and a sub-archetype
