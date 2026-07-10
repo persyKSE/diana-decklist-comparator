@@ -350,6 +350,7 @@
   .bslot { position: relative; border-radius: 6px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2;
     box-shadow: 0 2px 8px rgba(0,0,0,0.35); transition: transform 0.1s, box-shadow 0.1s; user-select: none; }
   .bslot:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.5); z-index: 2; }
+  .bslot { contain: layout paint; }
   .bslot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   .bslot .bnoimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--muted); padding: 4px; text-align: center; }
   .bslot .bqty { position: absolute; right: 3px; bottom: 3px; background: rgba(8,11,18,0.9); color: var(--gold-hi); font-size: 12px; font-weight: 800; border-radius: 4px; padding: 1px 6px; border: 1px solid var(--gold-dim); font-variant-numeric: tabular-nums; }
@@ -386,8 +387,9 @@
   .bs-count { font-size: 11px; color: var(--muted); text-align: center; margin: 10px 0 6px; display: flex; align-items: center; justify-content: space-between; }
   .bs-count button { background: transparent; color: var(--gold); border: 1px solid var(--border); padding: 1px 8px; font-size: 13px; margin: 0; clip-path: none; }
   .bs-count button:disabled { opacity: 0.3; cursor: default; }
-  .bresults { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-  .bresult { position: relative; border-radius: 5px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+  .bresults { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-height: 60vh; overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; }
+  .bresult { position: relative; border-radius: 5px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    content-visibility: auto; contain-intrinsic-size: auto 112px; }
   .bresult:hover { outline: 2px solid var(--gold); outline-offset: -2px; }
   .bresult img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   .bresult .bnoimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--muted); padding: 3px; text-align: center; }
@@ -2151,8 +2153,7 @@ let builderPoolCache = null;
 let builderRunes = null;     // {Chaos:7, Mind:5, …}, persisted 'ddl-runes'
 let builderBf = null;        // chosen battlefield names, persisted 'ddl-bf'
 let builderPreview = null;   // card name shown large in the left pane
-let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: 'cost', page: 0 };
-const BUILDER_PAGE = 18;
+let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: 'cost' };
 const DOMAINS = ['Fury', 'Calm', 'Mind', 'Body', 'Chaos', 'Order'];
 
 function saveRunes() { try { localStorage.setItem('ddl-runes', JSON.stringify(builderRunes)); } catch (e) {} }
@@ -2280,15 +2281,9 @@ function bReadSearch() {
   builderSearch.type = g('bsType'); builderSearch.color = g('bsColor');
   builderSearch.emin = g('bsEmin'); builderSearch.emax = g('bsEmax');
   builderSearch.mmin = g('bsMmin'); builderSearch.mmax = g('bsMmax');
-  builderSearch.page = 0;
   renderBuilderResults();
 }
-function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: builderSearch.sort, page: 0 }; refreshBuilder(); }
-function bPage(delta) {
-  const total = builderFiltered().length, pages = Math.max(1, Math.ceil(total / BUILDER_PAGE));
-  builderSearch.page = Math.max(0, Math.min(pages - 1, builderSearch.page + delta));
-  renderBuilderResults();
-}
+function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: builderSearch.sort }; refreshBuilder(); }
 
 /* HTML */
 function bTile(name, count, sec) {
@@ -2315,23 +2310,21 @@ function bPreviewHTML() {
 function renderBuilderResults() {
   const wrap = document.getElementById('bResults'); if (!wrap) return;
   const list = builderFiltered();
-  const pages = Math.max(1, Math.ceil(list.length / BUILDER_PAGE));
-  if (builderSearch.page >= pages) builderSearch.page = pages - 1;
   const main = bMain(), side = bSide();
-  const slice = list.slice(builderSearch.page * BUILDER_PAGE, (builderSearch.page + 1) * BUILDER_PAGE);
-  let h = slice.map(c => {
+  // Render every match into a natively-scrollable box (images lazy-load, so
+  // only the visible ones cost anything) — no wheel hijack, no page state.
+  let h = list.map(c => {
     const inDeck = (main[c.name] || 0) + (side[c.name] || 0);
     return '<div class="bresult" data-bname="' + attr(c.name) + '" data-bsec="result" ' +
       'title="' + attr(c.name + ' — click → main, right-click → sideboard') + '">' +
-      (c.img ? '<img src="' + attr(c.img) + '" loading="lazy" alt="">' : '<div class="bnoimg">' + escHtml(c.name) + '</div>') +
+      (c.img ? '<img src="' + attr(c.img) + '" loading="lazy" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(c.name) + '</div>') +
       (inDeck ? '<span class="rin">' + inDeck + '</span>' : '') + '</div>';
   }).join('');
-  if (!slice.length) h = '<div class="bresult-empty">No cards match those filters.</div>';
+  if (!list.length) h = '<div class="bresult-empty">No cards match those filters.</div>';
   wrap.innerHTML = h;
+  wrap.scrollTop = 0;
   const cnt = document.getElementById('bResCount');
-  if (cnt) cnt.innerHTML = '<button ' + (builderSearch.page <= 0 ? 'disabled' : '') + ' onclick="bPage(-1)">‹</button>' +
-    '<span>' + list.length + ' cards · page ' + (builderSearch.page + 1) + '/' + pages + '</span>' +
-    '<button ' + (builderSearch.page >= pages - 1 ? 'disabled' : '') + ' onclick="bPage(1)">›</button>';
+  if (cnt) cnt.textContent = list.length + ' card' + (list.length === 1 ? '' : 's');
 }
 function builderSearchHTML() {
   const s = builderSearch;
@@ -2346,7 +2339,7 @@ function builderSearchHTML() {
     '<div class="bs-actions"><button class="bs-reset" onclick="bResetSearch()">Reset</button></div>' +
     '<div class="bs-count" id="bResCount"></div>' +
     '<div class="bresults" id="bResults"></div>' +
-    '<p class="bhint">Click a card to add it to the main deck; right-click to send it to the sideboard. Scroll here to page.</p>' +
+    '<p class="bhint">Click a card to add it to the main deck; right-click to send it to the sideboard.</p>' +
     '</div>';
 }
 function builderHTML(N) {
@@ -2445,7 +2438,7 @@ function bHelp() {
     '<h3>Search results</h3><ul>' +
     '<li><kbd class="k">Click</kbd> — add to the main deck</li>' +
     '<li><kbd class="k">Right-click</kbd> — add to the sideboard</li>' +
-    '<li><kbd class="k">Scroll</kbd> over the grid — previous / next page</li></ul>' +
+    '<li><kbd class="k">Scroll</kbd> the grid — browse every match</li></ul>' +
     '<h3>Runes</h3><ul>' +
     '<li><kbd class="k">Click</kbd> a rune — pull one count from the other domain into it</li>' +
     '<li><kbd class="k">Right-click</kbd> a rune — push one count out to the other domain</li></ul>' +
@@ -3628,9 +3621,35 @@ document.addEventListener('mouseover', e => {
   if (bEl) {
     const name = bEl.getAttribute('data-bname') || bEl.getAttribute('data-bf') ||
       (bEl.getAttribute('data-rune') ? bEl.getAttribute('data-rune') + ' Rune' : null);
-    if (name && name !== builderPreview) { builderPreview = name; const p = document.getElementById('bPreview'); if (p) p.innerHTML = bPreviewHTML(); }
+    if (name && name !== builderPreview) updateBuilderPreview(name);
   }
 });
+// Update the left preview in place (reuse the <img>, one paint per frame) so
+// dragging the cursor across the grid — or scrolling under it — never rebuilds
+// the pane or refetches art.
+let _bPrevRaf = 0;
+function updateBuilderPreview(name) {
+  builderPreview = name;
+  if (_bPrevRaf) return;
+  _bPrevRaf = requestAnimationFrame(() => {
+    _bPrevRaf = 0;
+    const p = document.getElementById('bPreview'); if (!p) return;
+    const info = cardInfo(builderPreview);
+    if (!info) { p.innerHTML = bPreviewHTML(); return; }
+    let img = p.querySelector('img.bprev-img');
+    if (!img) { p.innerHTML = bPreviewHTML(); img = p.querySelector('img.bprev-img'); if (!img) return; }
+    const src = imageMap[builderPreview];
+    if (src && img.getAttribute('src') !== src) img.setAttribute('src', src);
+    const nameEl = p.querySelector('.bprev-name'); if (nameEl) nameEl.textContent = builderPreview;
+    const metaEl = p.querySelector('.bprev-meta');
+    if (metaEl) metaEl.innerHTML = gemsFor(builderPreview) + '<span>' + escHtml([info.type, info.rarity].filter(Boolean).join(' · ')) + '</span>';
+    let effEl = p.querySelector('.bprev-eff');
+    const effHtml = info.effect ? escHtml(info.effect).replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆') : '';
+    if (effEl && !effHtml) effEl.remove();
+    else if (effHtml && !effEl) { effEl = document.createElement('div'); effEl.className = 'bprev-eff'; p.appendChild(effEl); effEl.textContent = info.effect.replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆'); }
+    else if (effEl) effEl.textContent = info.effect.replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆');
+  });
+}
 document.addEventListener('mouseout', e => {
   const hl = e.target.closest('[data-hl]');
   if (hl) { const [sel] = hl.getAttribute('data-hl').split('|'); const svg = document.querySelector(sel); if (svg) { svg.classList.remove('focus'); svg.querySelectorAll('.on').forEach(el => el.classList.remove('on')); } }
@@ -3691,11 +3710,6 @@ document.addEventListener('contextmenu', e => {
   const bBf = e.target.closest('[data-bf]');
   if (bBf) { e.preventDefault(); bToggleBf(bBf.getAttribute('data-bf')); }
 });
-// Scroll over the search results pages through them.
-document.addEventListener('wheel', e => {
-  const grid = e.target.closest('#bResults');
-  if (grid) { e.preventDefault(); bPage(e.deltaY > 0 ? 1 : -1); }
-}, { passive: false });
 document.addEventListener('keydown', e => {
   const palOpen = document.getElementById('palette').classList.contains('show');
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); palOpen ? closePalette() : openPalette(); return; }
