@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-accent: #aa3bff;
+  --color-brand-accent-bg: rgba(170, 59, 255, 0.1);
+  --color-brand-accent-border: rgba(170, 59, 255, 0.5);
+  
+  --color-surface: #ffffff;
+  --color-surface-hover: #f9fafb;
+  --color-surface-muted: #f4f3ec;
+  --color-surface-border: #e5e4e7;
+  
+  --color-content: #6b6375;
+  --color-content-heading: #08060d;
+  --color-content-muted: #9ca3af;
+  
+  --color-status-lock: #10b981;
+  --color-status-flex: #3b82f6;
+  --color-status-danger: #ef4444;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+/* Dark Mode Theme Variables */
+@custom-variant dark (&:is(.dark *));
+
+.dark {
+  --color-brand-accent: #c084fc;
+  --color-brand-accent-bg: rgba(192, 132, 252, 0.15);
+  --color-brand-accent-border: rgba(192, 132, 252, 0.5);
+
+  --color-surface: #16171d;
+  --color-surface-hover: #1f2028;
+  --color-surface-muted: #1f2028;
+  --color-surface-border: #2e303a;
+
+  --color-content: #9ca3af;
+  --color-content-heading: #f3f4f6;
+  --color-content-muted: #6b7280;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-content font-sans antialiased transition-colors duration-200;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-content-heading font-medium tracking-tight;
+  }
+}
+
+/* Base custom classes to migrate away from gradually, or keep for common elements */
+@layer components {
+  /* We will eventually remove these as we inline them, but keeping them temporarily prevents everything from breaking during the transition */
+  
+  .glass-panel {
+    @apply bg-surface/80 backdrop-blur-md border border-surface-border shadow-sm rounded-xl;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-brand-accent text-white font-medium rounded-lg shadow-md hover:opacity-90 transition-opacity focus:ring-2 focus:ring-brand-accent focus:outline-none;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-surface-muted text-content font-medium rounded-lg border border-surface-border hover:bg-surface-border transition-colors focus:ring-2 focus:ring-surface-border focus:outline-none;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 bg-surface text-content border border-surface-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-all;
+  }
+
+  .badge-neutral {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface-muted text-content border border-surface-border;
+  }
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-border rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-content-muted;
+}

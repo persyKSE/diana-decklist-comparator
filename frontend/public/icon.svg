@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- maskable-safe: key content within the central 80% -->
+  <defs>
+    <radialGradient id="bg" cx="38%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#161c28"/>
+      <stop offset="100%" stop-color="#0a0d14"/>
+    </radialGradient>
+    <linearGradient id="moon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8d5a6"/>
+      <stop offset="100%" stop-color="#b08d52"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- hextech corner brackets -->
+  <path d="M84 116 V84 H116" fill="none" stroke="#c8aa6e" stroke-width="14" opacity="0.75"/>
+  <path d="M428 396 V428 H396" fill="none" stroke="#c8aa6e" stroke-width="14" opacity="0.75"/>
+  <!-- crescent: a lit disc with an offset cut-out disc -->
+  <path d="M256 116 a140 140 0 1 0 88 249 a112 112 0 1 1 -88 -249 Z" fill="url(#moon)"/>
+</svg>
