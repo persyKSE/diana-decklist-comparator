@@ -387,9 +387,8 @@
   .bs-count { font-size: 11px; color: var(--muted); text-align: center; margin: 10px 0 6px; display: flex; align-items: center; justify-content: space-between; }
   .bs-count button { background: transparent; color: var(--gold); border: 1px solid var(--border); padding: 1px 8px; font-size: 13px; margin: 0; clip-path: none; }
   .bs-count button:disabled { opacity: 0.3; cursor: default; }
-  .bresults { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-height: 60vh; overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; }
-  .bresult { position: relative; border-radius: 5px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    content-visibility: auto; contain-intrinsic-size: auto 112px; }
+  .bresults { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .bresult { position: relative; border-radius: 5px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
   .bresult:hover { outline: 2px solid var(--gold); outline-offset: -2px; }
   .bresult img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   .bresult .bnoimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--muted); padding: 3px; text-align: center; }
@@ -2153,7 +2152,8 @@ let builderPoolCache = null;
 let builderRunes = null;     // {Chaos:7, Mind:5, …}, persisted 'ddl-runes'
 let builderBf = null;        // chosen battlefield names, persisted 'ddl-bf'
 let builderPreview = null;   // card name shown large in the left pane
-let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: 'cost' };
+let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: 'cost', page: 0 };
+const BUILDER_PAGE = 18;   // keep the DOM light: 18 card images, not 296
 const DOMAINS = ['Fury', 'Calm', 'Mind', 'Body', 'Chaos', 'Order'];
 
 function saveRunes() { try { localStorage.setItem('ddl-runes', JSON.stringify(builderRunes)); } catch (e) {} }
@@ -2281,16 +2281,22 @@ function bReadSearch() {
   builderSearch.type = g('bsType'); builderSearch.color = g('bsColor');
   builderSearch.emin = g('bsEmin'); builderSearch.emax = g('bsEmax');
   builderSearch.mmin = g('bsMmin'); builderSearch.mmax = g('bsMmax');
+  builderSearch.page = 0;
   renderBuilderResults();
 }
-function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: builderSearch.sort }; refreshBuilder(); }
+function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: builderSearch.sort, page: 0 }; refreshBuilder(); }
+function bPage(delta) {
+  const pages = Math.max(1, Math.ceil(builderFiltered().length / BUILDER_PAGE));
+  builderSearch.page = Math.max(0, Math.min(pages - 1, builderSearch.page + delta));
+  renderBuilderResults();
+}
 
 /* HTML */
 function bTile(name, count, sec) {
   const img = imageMap[name], cost = (cardMeta[name] || {}).cost;
   return '<div class="bslot' + (count >= 3 ? ' maxed' : '') + '" data-bname="' + attr(name) + '" data-bsec="' + sec + '" ' +
     'title="' + attr(name + ' — click +1, right-click −1, shift-click → ' + (sec === 'side' ? 'main' : 'sideboard')) + '">' +
-    (img ? '<img src="' + attr(img) + '" loading="lazy" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') +
+    (img ? '<img src="' + attr(img) + '" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') +
     (cost != null ? '<span class="bcost">' + cost + '</span>' : '') +
     '<span class="bqty">' + count + '</span></div>';
 }
@@ -2310,21 +2316,23 @@ function bPreviewHTML() {
 function renderBuilderResults() {
   const wrap = document.getElementById('bResults'); if (!wrap) return;
   const list = builderFiltered();
+  const pages = Math.max(1, Math.ceil(list.length / BUILDER_PAGE));
+  builderSearch.page = Math.max(0, Math.min(pages - 1, builderSearch.page));
   const main = bMain(), side = bSide();
-  // Render every match into a natively-scrollable box (images lazy-load, so
-  // only the visible ones cost anything) — no wheel hijack, no page state.
-  let h = list.map(c => {
+  const slice = list.slice(builderSearch.page * BUILDER_PAGE, (builderSearch.page + 1) * BUILDER_PAGE);
+  let h = slice.map(c => {
     const inDeck = (main[c.name] || 0) + (side[c.name] || 0);
     return '<div class="bresult" data-bname="' + attr(c.name) + '" data-bsec="result" ' +
       'title="' + attr(c.name + ' — click → main, right-click → sideboard') + '">' +
-      (c.img ? '<img src="' + attr(c.img) + '" loading="lazy" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(c.name) + '</div>') +
+      (c.img ? '<img src="' + attr(c.img) + '" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(c.name) + '</div>') +
       (inDeck ? '<span class="rin">' + inDeck + '</span>' : '') + '</div>';
   }).join('');
   if (!list.length) h = '<div class="bresult-empty">No cards match those filters.</div>';
   wrap.innerHTML = h;
-  wrap.scrollTop = 0;
   const cnt = document.getElementById('bResCount');
-  if (cnt) cnt.textContent = list.length + ' card' + (list.length === 1 ? '' : 's');
+  if (cnt) cnt.innerHTML = '<button ' + (builderSearch.page <= 0 ? 'disabled' : '') + ' onclick="bPage(-1)">‹</button>' +
+    '<span>' + list.length + ' card' + (list.length === 1 ? '' : 's') + ' · ' + (builderSearch.page + 1) + '/' + pages + '</span>' +
+    '<button ' + (builderSearch.page >= pages - 1 ? 'disabled' : '') + ' onclick="bPage(1)">›</button>';
 }
 function builderSearchHTML() {
   const s = builderSearch;
@@ -2339,7 +2347,7 @@ function builderSearchHTML() {
     '<div class="bs-actions"><button class="bs-reset" onclick="bResetSearch()">Reset</button></div>' +
     '<div class="bs-count" id="bResCount"></div>' +
     '<div class="bresults" id="bResults"></div>' +
-    '<p class="bhint">Click a card to add it to the main deck; right-click to send it to the sideboard.</p>' +
+    '<p class="bhint">Click a card to add it to the main deck; right-click to send it to the sideboard. Use ‹ › to page.</p>' +
     '</div>';
 }
 function builderHTML(N) {
@@ -2392,7 +2400,7 @@ function builderHTML(N) {
   bfOpts.slice(0, 6).forEach(name => {
     const on = builderBf.includes(name), img = imageMap[name];
     center += '<div class="bslot' + (on ? '' : ' off') + '" data-bf="' + attr(name) + '" title="' + attr(name + (on ? ' — click to remove' : ' — click to add')) + '">' +
-      (img ? '<img src="' + attr(img) + '" loading="lazy" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') + '</div>';
+      (img ? '<img src="' + attr(img) + '" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') + '</div>';
   });
   center += '</div></div></div>';   // close .bbf, the rune .bzone, and .bzones
 
@@ -2438,7 +2446,7 @@ function bHelp() {
     '<h3>Search results</h3><ul>' +
     '<li><kbd class="k">Click</kbd> — add to the main deck</li>' +
     '<li><kbd class="k">Right-click</kbd> — add to the sideboard</li>' +
-    '<li><kbd class="k">Scroll</kbd> the grid — browse every match</li></ul>' +
+    '<li><kbd class="k">‹ ›</kbd> — page through the matches</li></ul>' +
     '<h3>Runes</h3><ul>' +
     '<li><kbd class="k">Click</kbd> a rune — pull one count from the other domain into it</li>' +
     '<li><kbd class="k">Right-click</kbd> a rune — push one count out to the other domain</li></ul>' +
