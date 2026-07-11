@@ -27,19 +27,47 @@ HERE = Path(__file__).parent
 
 
 def selftest(window):
-    """Open, wait for the page to render, report, close. Used by --selftest."""
+    """Drive the page's own smoke test (window.__smoke) through WKWebView —
+    WebKit is Safari's engine, so this doubles as the Safari lap. Prints
+    SELFTEST PASS/FAIL plus the per-check breakdown. Used by --selftest."""
+    import json
     import time
-    decks = sections = 0
+
+    # Wait for the app (data + smoke hook) to be ready.
     for _ in range(40):
         time.sleep(0.5)
         try:
-            decks = window.evaluate_js("window.DECKS ? window.DECKS.length : 0") or 0
-            sections = window.evaluate_js("document.querySelectorAll('h2').length") or 0
-            if decks and sections:
+            if window.evaluate_js("window.DECKS && window.__smoke ? 1 : 0"):
                 break
         except Exception:
             pass
-    print(f"SELFTEST decks={decks} sections={sections}", flush=True)
+
+    # __smoke is async; stash its result on window and poll for it.
+    window.evaluate_js(
+        "window.__smoke().then(r => { window.__smokeResult = JSON.stringify(r); })"
+    )
+    raw = None
+    for _ in range(60):
+        time.sleep(0.5)
+        try:
+            raw = window.evaluate_js("window.__smokeResult || null")
+            if raw:
+                break
+        except Exception:
+            pass
+
+    if not raw:
+        print("SELFTEST FAIL timeout — __smoke never returned", flush=True)
+    else:
+        res = json.loads(raw)
+        failed = [k for k, ok in res.get("checks", {}).items() if not ok]
+        status = "PASS" if res.get("pass") else "FAIL"
+        detail = f"{len(res.get('checks', {}))} checks"
+        if failed:
+            detail += ", failed: " + ", ".join(failed)
+        if res.get("errors"):
+            detail += ", js errors: " + "; ".join(res["errors"][:3])
+        print(f"SELFTEST {status} ({detail})", flush=True)
     window.destroy()
 
 

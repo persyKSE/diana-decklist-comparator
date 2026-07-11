@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Diana Deck Lab</title>
+<meta name="description" content="A deck builder and meta lab for Riftbound's Diana, Scorn of the Moon: every winning tournament list distilled into a consensus build, draw odds, rune math and matchup coverage.">
+<meta property="og:title" content="Diana Deck Lab">
+<meta property="og:description" content="Build your Riftbound Diana deck against the evidence: every winning list, distilled.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://persykse.github.io/diana-decklist-comparator/cache/images/Diana_Lunari.webp">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0d14">
 <link rel="icon" href="icon.svg">
@@ -304,7 +309,6 @@
   .hand { display: flex; gap: 10px; flex-wrap: wrap; padding: 6px 0; }
   .handcard { width: 96px; border-radius: 7px; overflow: hidden; cursor: pointer; transition: transform 0.12s, box-shadow 0.12s, opacity 0.12s; box-shadow: 0 4px 14px rgba(0,0,0,0.4); background: var(--panel2); }
   .handcard img { width: 100%; display: block; }
-  .handcard:hover { transform: translateY(-6px); }
   .handcard.aside { opacity: 0.42; transform: translateY(8px) scale(0.95); box-shadow: inset 0 0 0 2px var(--danger); }
   button.ghost { background: var(--panel2); color: var(--text); border: 1px solid var(--border); }
   button.ghost:hover { border-color: var(--gold-dim); }
@@ -349,9 +353,15 @@
   .bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 8px; }
   .bslot { position: relative; border-radius: 6px; overflow: hidden; cursor: pointer; background: var(--bg2); aspect-ratio: 3/4.2;
     box-shadow: 0 2px 8px rgba(0,0,0,0.35); transition: transform 0.1s, box-shadow 0.1s; user-select: none; }
-  .bslot:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.5); z-index: 2; }
+  /* Lift-on-hover only where hover exists — on touch it just sticks. */
+  @media (hover: hover) {
+    .bslot:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.5); z-index: 2; }
+    .handcard:hover { transform: translateY(-6px); }
+  }
   .bslot { contain: layout paint; }
   .bslot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  /* Long-pressing card art on iOS should open our sheet, not the save-image callout. */
+  .bslot img, .bresult img, .brune img { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
   .bslot .bnoimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--muted); padding: 4px; text-align: center; }
   .bslot .bqty { position: absolute; right: 3px; bottom: 3px; background: rgba(8,11,18,0.9); color: var(--gold-hi); font-size: 12px; font-weight: 800; border-radius: 4px; padding: 1px 6px; border: 1px solid var(--gold-dim); font-variant-numeric: tabular-nums; }
   .bslot .bcost { position: absolute; left: 3px; top: 3px; min-width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; background: rgba(8,11,18,0.85); color: var(--text); font-size: 11px; font-weight: 800; border-radius: 50%; border: 1px solid var(--border); }
@@ -395,7 +405,26 @@
   .bresult .rin { position: absolute; right: 2px; top: 2px; background: var(--gold); color: #14100a; font-size: 10px; font-weight: 800; border-radius: 3px; padding: 0 4px; }
   .bresult-empty { grid-column: 1/-1; color: var(--muted); font-size: 12px; text-align: center; padding: 18px; }
 
+  /* Touch action sheet: right-click/shift-click don't exist on phones, so a
+     tap opens this instead. */
+  #bSheet { position: fixed; inset: 0; z-index: 100003; display: none; align-items: flex-end; justify-content: center; background: rgba(4,7,14,0.55); }
+  #bSheet.show { display: flex; }
+  .sheet { width: 100%; max-width: 480px; background: var(--panel); border: 1px solid var(--border); border-top: 2px solid var(--gold); border-radius: 12px 12px 0 0; padding: 14px 16px calc(16px + env(safe-area-inset-bottom, 0px)); box-shadow: var(--shadow); }
+  .sheet-head { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .sheet-head img { width: 62px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+  .sheet-name { font-family: var(--serif); color: var(--gold-hi); font-size: 16px; }
+  .sheet-sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .sheet-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .sheet-actions button { width: 100%; margin: 0; padding: 12px 8px; font-size: 14px; }
+  .sheet-actions button.wide { grid-column: 1 / -1; }
+
   .bhint { font-size: 11.5px; color: var(--muted); margin: 4px 0 0; }
+  #updateBar { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 100004; display: flex; align-items: center; gap: 12px;
+    background: var(--panel); border: 1px solid var(--gold-dim); border-radius: 8px; box-shadow: var(--shadow); padding: 10px 14px; font-size: 13px; }
+  #updateBar button { margin: 0; padding: 6px 12px; font-size: 12.5px; }
+
+  .starthere { border-left: 3px solid var(--gold); display: flex; flex-direction: column; gap: 6px; }
+  .st-step b { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); color: #14100a; font-size: 11px; margin-right: 5px; }
   kbd.k { font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; padding: 1px 5px; color: var(--text); background: var(--bg2); }
   .shortcuts { font-size: 13px; line-height: 1.6; }
   .shortcuts h3 { font-family: var(--serif); color: var(--gold); font-size: 14px; margin: 14px 0 6px; }
@@ -464,6 +493,7 @@
     <div id="palList"></div>
   </div>
 </div>
+<div id="bSheet"><div class="sheet"></div></div>
 <div id="toast"></div>
 <datalist id="cardNames"></datalist>
 
@@ -538,7 +568,7 @@ function cardInfo(name) {
 }
 
 const VIEWS = {
-  build:   { title: 'Build', desc: 'A weighted consensus deck from the filtered finishes, the flex slots that are still live, and a coach to rate your own list.', render: renderBuild },
+  build:   { title: 'Build', desc: 'Build your deck with the evidence beside you: this lab watches every winning Diana list and turns it into a consensus build, live draw odds, rune math and coaching.', render: renderBuild },
   analyze: { title: 'Analyze', desc: 'What the filtered field agrees and disagrees on: inclusion rates, card packages, curves, sub-archetypes, and shifts over time.', render: renderAnalyze },
   meta:    { title: 'Meta', desc: 'Every archetype in the scraped field — what they play, how often they convert, and how well your sideboard answers them. Reads the whole field, so the Build/Analyze filters do not apply here.', render: renderMeta },
   log:     { title: 'Match log', desc: 'Your own results, one tap per game. No event publishes per-match data — after enough logged games this page holds the only matchup table for your list in existence.', render: renderLog },
@@ -2154,6 +2184,9 @@ let builderBf = null;        // chosen battlefield names, persisted 'ddl-bf'
 let builderPreview = null;   // card name shown large in the left pane
 let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: 'cost', page: 0 };
 const BUILDER_PAGE = 18;   // keep the DOM light: 18 card images, not 296
+// Coarse pointer = no right-click, no shift-click, no hover: builder taps
+// open an action sheet instead. `let` so tests can force it on.
+let IS_TOUCH = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
 const DOMAINS = ['Fury', 'Calm', 'Mind', 'Body', 'Chaos', 'Order'];
 
 function saveRunes() { try { localStorage.setItem('ddl-runes', JSON.stringify(builderRunes)); } catch (e) {} }
@@ -2169,6 +2202,7 @@ function ensureBuilderDefaults() {
     if (!Object.keys(builderRunes).length) builderRunes = { Chaos: 7, Mind: 5 };
   }
   if (!Array.isArray(builderBf)) builderBf = ex.bfs.slice(0, 3).map(b => b.name);
+  else builderBf = builderBf.filter(x => typeof x === 'string').slice(0, 3);
 }
 
 function builderPool() {
@@ -2305,7 +2339,8 @@ function bSortedEntries(counts) {
 }
 function bPreviewHTML() {
   const name = builderPreview;
-  if (!name || !cardInfo(name)) return '<div class="bprev-img bprev-empty">Hover any card to preview it here.</div>';
+  if (!name || !cardInfo(name)) return '<div class="bprev-img bprev-empty">' +
+    (IS_TOUCH ? 'Tap any card for options and details.' : 'Hover any card to preview it here.') + '</div>';
   const info = cardInfo(name), img = imageMap[name];
   let h = img ? '<img class="bprev-img" src="' + attr(img) + '" alt="">' : '<div class="bprev-img bprev-empty">' + escHtml(name) + '</div>';
   h += '<div class="bprev-name">' + escHtml(name) + '</div>';
@@ -2347,7 +2382,9 @@ function builderSearchHTML() {
     '<div class="bs-actions"><button class="bs-reset" onclick="bResetSearch()">Reset</button></div>' +
     '<div class="bs-count" id="bResCount"></div>' +
     '<div class="bresults" id="bResults"></div>' +
-    '<p class="bhint">Click a card to add it to the main deck; right-click to send it to the sideboard. Use ‹ › to page.</p>' +
+    '<p class="bhint">' + (IS_TOUCH
+      ? 'Tap a card for options. Use ‹ › to page.'
+      : 'Click a card to add it to the main deck; right-click to send it to the sideboard. Use ‹ › to page.') + '</p>' +
     '</div>';
 }
 function builderHTML(N) {
@@ -2379,7 +2416,7 @@ function builderHTML(N) {
     '<button class="ghost" onclick="bHelp()">?</button></span></div>';
   center += mainTotal
     ? '<div class="bgrid">' + bSortedEntries(main).map(([n, c]) => bTile(n, c, 'main')).join('') + '</div>'
-    : '<div class="bempty-note">Your main deck is empty. Search on the right to add cards, or <span class="deck-link" onclick="bLoadConsensus()">load the consensus build</span> to start from the field average.</div>';
+    : '<div class="bempty-note">Your main deck is empty. Use the card search to add cards, or <span class="deck-link" onclick="bLoadConsensus()">load the consensus build</span> to start from the field average.</div>';
 
   // zones: legend / runes+battlefields
   center += '<div class="bzones">';
@@ -2408,7 +2445,9 @@ function builderHTML(N) {
   center += '<div class="bzone-h" style="margin-top:16px">Side Deck <span class="z-count">' + sideTotal + '/8</span></div>';
   center += sideTotal
     ? '<div class="bgrid">' + bSortedEntries(side).map(([n, c]) => bTile(n, c, 'side')).join('') + '</div>'
-    : '<div class="bempty-note">No sideboard cards. Right-click a search result to add one, or shift-click a main-deck card to move it here.</div>';
+    : '<div class="bempty-note">' + (IS_TOUCH
+        ? 'No sideboard cards. Tap a search result and choose "+1 Sideboard".'
+        : 'No sideboard cards. Right-click a search result to add one, or shift-click a main-deck card to move it here.') + '</div>';
   center += '</div>';
 
   // RIGHT — search
@@ -2420,6 +2459,9 @@ function refreshBuilder() {
   if (!el) { render(); return; }
   el.innerHTML = builderHTML(globalDecks.length);
   renderBuilderResults();
+  // The start-here banner lives outside #deckBuilder; retire it once the deck has cards.
+  const sh = document.querySelector('.starthere');
+  if (sh && bTotal(bMain()) > 0) sh.remove();
   // live-drive the analysis that reads the same list
   const cr = document.getElementById('coachResults'); if (cr) cr.innerHTML = coachText.trim() ? renderCoach(globalDecks.length) : '';
   const sm = document.getElementById('simTable'); if (sm) sm.innerHTML = simTableHTML();
@@ -2433,24 +2475,97 @@ function bImport() {
 }
 function bImportApply() {
   const t = document.getElementById('bImportText');
-  if (t) { coachText = t.value; saveCoach(); }
+  if (t) {
+    coachText = t.value; saveCoach();
+    const { counts, unknown } = parseDeckText(coachText);
+    const total = Object.values(counts).reduce((a, b) => a + b, 0);
+    toast('Imported ' + total + ' card' + (total === 1 ? '' : 's') +
+      (unknown.length ? ' — ' + unknown.length + ' unrecognized name' + (unknown.length === 1 ? '' : 's') + ' kept as written' : ''));
+  }
   closeModal(); render();
 }
+/* ---- Touch action sheet ----
+   Phones have no right-click, shift-click or hover, so on coarse pointers a
+   tap opens this sheet instead of mutating the deck directly. */
+let bSheetState = null;
+function openBSheet(kind, name, sec) {
+  bSheetState = { kind, name, sec };
+  renderBSheet();
+  document.getElementById('bSheet').classList.add('show');
+}
+function closeBSheet() { bSheetState = null; document.getElementById('bSheet').classList.remove('show'); }
+function renderBSheet() {
+  if (!bSheetState) return;
+  const { kind, name, sec } = bSheetState;
+  const info = cardInfo(name) || {};
+  const img = imageMap[name];
+  const inMain = bMain()[name] || 0, inSide = bSide()[name] || 0;
+  let sub, actions;
+  if (kind === 'rune') {
+    const other = Object.keys(builderRunes).find(k => k !== sec) || '';
+    sub = 'Split: ' + sec + ' ' + (builderRunes[sec] || 0) + ' / ' + other + ' ' + (builderRunes[other] || 0);
+    actions = '<button onclick="bSheetAct(\'runeIn\')">+1 (take from ' + escHtml(other) + ')</button>' +
+      '<button onclick="bSheetAct(\'runeOut\')">−1 (give to ' + escHtml(other) + ')</button>' +
+      '<button class="ghost wide" onclick="closeBSheet()">Done</button>';
+  } else {
+    sub = [info.type, info.cost != null ? 'cost ' + info.cost : null].filter(Boolean).join(' · ') +
+      ' — main ×' + inMain + ' · side ×' + inSide;
+    if (kind === 'result') {
+      actions = '<button onclick="bSheetAct(\'addMain\')">+1 Main deck</button>' +
+        '<button onclick="bSheetAct(\'addSide\')">+1 Sideboard</button>' +
+        '<button class="ghost" onclick="bSheetAct(\'details\')">Card details</button>' +
+        '<button class="ghost" onclick="closeBSheet()">Done</button>';
+    } else {
+      actions = '<button onclick="bSheetAct(\'plus\')">+1 copy</button>' +
+        '<button onclick="bSheetAct(\'minus\')">−1 copy</button>' +
+        '<button onclick="bSheetAct(\'move\')">Move to ' + (sec === 'side' ? 'main deck' : 'sideboard') + '</button>' +
+        '<button class="ghost" onclick="bSheetAct(\'details\')">Card details</button>' +
+        '<button class="ghost wide" onclick="closeBSheet()">Done</button>';
+    }
+  }
+  document.querySelector('#bSheet .sheet').innerHTML =
+    '<div class="sheet-head">' + (img ? '<img src="' + attr(img) + '" alt="">' : '') +
+    '<div><div class="sheet-name">' + escHtml(name) + '</div><div class="sheet-sub">' + escHtml(sub) + '</div></div></div>' +
+    '<div class="sheet-actions">' + actions + '</div>';
+}
+function bSheetAct(act) {
+  if (!bSheetState) return;
+  const { name, sec } = bSheetState;
+  if (act === 'details') { closeBSheet(); openCardModal(name); return; }
+  if (act === 'runeIn') bRuneXfer(sec);
+  else if (act === 'runeOut') bRuneOut(sec);
+  else if (act === 'addMain') bAdd(name, 'main');
+  else if (act === 'addSide') bAdd(name, 'side');
+  else if (act === 'plus') bAdd(name, sec);
+  else if (act === 'minus') bRemove(name, sec);
+  else if (act === 'move') { bMove(name, sec); closeBSheet(); return; }
+  renderBSheet();   // counts changed — keep the sheet open for repeated taps
+}
+
 function bHelp() {
+  const body = IS_TOUCH
+    ? '<div class="shortcuts"><h3>Cards</h3><ul>' +
+      '<li><kbd class="k">Tap</kbd> any card — open its options: add or remove copies, move between main deck and sideboard, or view details</li></ul>' +
+      '<h3>Search results</h3><ul>' +
+      '<li><kbd class="k">Tap</kbd> — choose main deck or sideboard</li>' +
+      '<li><kbd class="k">‹ ›</kbd> — page through the matches</li></ul>' +
+      '<h3>Runes</h3><ul><li><kbd class="k">Tap</kbd> a rune — shift the 12-rune split either way</li></ul>' +
+      '<h3>Battlefields</h3><ul><li><kbd class="k">Tap</kbd> — toggle it in or out (pick up to 3)</li></ul>'
+    : '<div class="shortcuts"><h3>Deck cards</h3><ul>' +
+      '<li><kbd class="k">Click</kbd> — add one copy (up to 3)</li>' +
+      '<li><kbd class="k">Right-click</kbd> — remove one copy</li>' +
+      '<li><kbd class="k">Shift</kbd> + <kbd class="k">Click</kbd> — move between main deck and sideboard</li>' +
+      '<li><kbd class="k">Hover</kbd> — preview the card on the left</li></ul>' +
+      '<h3>Search results</h3><ul>' +
+      '<li><kbd class="k">Click</kbd> — add to the main deck</li>' +
+      '<li><kbd class="k">Right-click</kbd> — add to the sideboard</li>' +
+      '<li><kbd class="k">‹ ›</kbd> — page through the matches</li></ul>' +
+      '<h3>Runes</h3><ul>' +
+      '<li><kbd class="k">Click</kbd> a rune — pull one count from the other domain into it</li>' +
+      '<li><kbd class="k">Right-click</kbd> a rune — push one count out to the other domain</li></ul>' +
+      '<h3>Battlefields</h3><ul><li><kbd class="k">Click</kbd> — toggle it in or out (pick up to 3)</li></ul>';
   showModal('<div class="modal-head"><div class="modal-title">Builder shortcuts</div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
-    '<div class="shortcuts"><h3>Deck cards</h3><ul>' +
-    '<li><kbd class="k">Click</kbd> — add one copy (up to 3)</li>' +
-    '<li><kbd class="k">Right-click</kbd> — remove one copy</li>' +
-    '<li><kbd class="k">Shift</kbd> + <kbd class="k">Click</kbd> — move between main deck and sideboard</li>' +
-    '<li><kbd class="k">Hover</kbd> — preview the card on the left</li></ul>' +
-    '<h3>Search results</h3><ul>' +
-    '<li><kbd class="k">Click</kbd> — add to the main deck</li>' +
-    '<li><kbd class="k">Right-click</kbd> — add to the sideboard</li>' +
-    '<li><kbd class="k">‹ ›</kbd> — page through the matches</li></ul>' +
-    '<h3>Runes</h3><ul>' +
-    '<li><kbd class="k">Click</kbd> a rune — pull one count from the other domain into it</li>' +
-    '<li><kbd class="k">Right-click</kbd> a rune — push one count out to the other domain</li></ul>' +
-    '<h3>Battlefields</h3><ul><li><kbd class="k">Click</kbd> — toggle it in or out (pick up to 3)</li></ul>' +
+    body +
     '<p class="sub" style="margin-top:12px">Everything you build here feeds the Consistency odds, Rune math and coach feedback below, and the Sideboard coverage on the Meta view.</p></div>');
 }
 
@@ -2461,6 +2576,15 @@ function renderBuild(ctx) {
   if (head) html += '<div class="newsbar"><span class="news-tag">Latest</span>' +
     '<span><strong>' + escHtml(head.event) + '</strong> (' + head.date + ') added ' + head.n + ' list' + (head.n === 1 ? '' : 's') + ': ' + escHtml(head.what) + '.</span>' +
     '<a class="deck-link" href="#analyze">See what changed →</a></div>';
+  // First visit (or cleared deck): a three-step on-ramp. Disappears the
+  // moment the deck has cards, so it never nags a returning user.
+  if (!bTotal(bMain())) {
+    html += '<div class="summary-box starthere"><strong>Start here.</strong> ' +
+      '<span class="st-step"><b>1</b> <button class="mini" style="margin:0" onclick="bLoadConsensus()">Load the consensus build</button> — the weighted average of every winning Diana list.</span> ' +
+      '<span class="st-step"><b>2</b> Tweak it in the builder — the draw odds, rune math and coach below update as you go.</span> ' +
+      '<span class="st-step"><b>3</b> <em>Copy deck</em> when it\'s yours.</span></div>';
+  }
+
   // The interactive deck builder is the hero. It edits coachText (main) and
   // sideText (side), so every analysis below reflects what you build.
   html += '<div id="deckBuilder">' + builderHTML(N) + '</div>';
@@ -3679,11 +3803,13 @@ document.addEventListener('mousemove', e => {
   }
 });
 document.addEventListener('click', e => {
-  // Builder interactions come first — a card tile is an action surface, not a link.
+  // Builder interactions come first — a card tile is an action surface, not a
+  // link. On touch, a tap opens the action sheet instead of mutating directly.
   const bSlot = e.target.closest('[data-bname]');
   if (bSlot) {
     const name = bSlot.getAttribute('data-bname'), sec = bSlot.getAttribute('data-bsec');
-    if (sec === 'result') bAdd(name, 'main');
+    if (IS_TOUCH) openBSheet(sec === 'result' ? 'result' : 'slot', name, sec);
+    else if (sec === 'result') bAdd(name, 'main');
     else if (e.shiftKey) bMove(name, sec);
     else bAdd(name, sec);
     return;
@@ -3691,7 +3817,11 @@ document.addEventListener('click', e => {
   const bBf = e.target.closest('[data-bf]');
   if (bBf) { bToggleBf(bBf.getAttribute('data-bf')); return; }
   const bRune = e.target.closest('[data-rune]');
-  if (bRune) { bRuneXfer(bRune.getAttribute('data-rune')); return; }
+  if (bRune) {
+    const d = bRune.getAttribute('data-rune');
+    IS_TOUCH ? openBSheet('rune', d + ' Rune', d) : bRuneXfer(d);
+    return;
+  }
 
   const ap = e.target.closest('[data-apply]');
   if (ap) { applyCoachSwap(ap.getAttribute('data-apply'), parseInt(ap.getAttribute('data-delta'), 10)); return; }
@@ -3710,11 +3840,24 @@ document.addEventListener('click', e => {
 });
 // Right-click in the builder removes / sideboards / transfers, matching the
 // reference tool's model. Only preventDefault when we actually handle it.
+// On touch, a long-press (where it fires contextmenu at all) opens the same
+// action sheet as a tap — never a surprise removal.
 document.addEventListener('contextmenu', e => {
   const bSlot = e.target.closest('[data-bname]');
-  if (bSlot) { e.preventDefault(); const name = bSlot.getAttribute('data-bname'), sec = bSlot.getAttribute('data-bsec'); sec === 'result' ? bAdd(name, 'side') : bRemove(name, sec); return; }
+  if (bSlot) {
+    e.preventDefault();
+    const name = bSlot.getAttribute('data-bname'), sec = bSlot.getAttribute('data-bsec');
+    if (IS_TOUCH) openBSheet(sec === 'result' ? 'result' : 'slot', name, sec);
+    else sec === 'result' ? bAdd(name, 'side') : bRemove(name, sec);
+    return;
+  }
   const bRune = e.target.closest('[data-rune]');
-  if (bRune) { e.preventDefault(); bRuneOut(bRune.getAttribute('data-rune')); return; }
+  if (bRune) {
+    e.preventDefault();
+    const d = bRune.getAttribute('data-rune');
+    IS_TOUCH ? openBSheet('rune', d + ' Rune', d) : bRuneOut(d);
+    return;
+  }
   const bBf = e.target.closest('[data-bf]');
   if (bBf) { e.preventDefault(); bToggleBf(bBf.getAttribute('data-bf')); }
 });
@@ -3730,10 +3873,30 @@ document.addEventListener('keydown', e => {
     else if (e.key === 'Enter') { e.preventDefault(); choosePalette(scored); }
     return;
   }
-  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') { if (bSheetState) closeBSheet(); else closeModal(); }
 });
 document.getElementById('palInput').addEventListener('input', () => { paletteIndex = 0; renderPalette(); });
 document.getElementById('palette').addEventListener('click', e => { if (e.target.id === 'palette') closePalette(); });
+document.getElementById('bSheet').addEventListener('click', e => { if (e.target.id === 'bSheet') closeBSheet(); });
+// If card art fails to load (offline, or a CDN image goes away), show a named
+// placeholder instead of the browser's broken-image glyph. Error events don't
+// bubble, so listen in the capture phase.
+document.addEventListener('error', e => {
+  const img = e.target;
+  if (!(img && img.tagName === 'IMG')) return;
+  const holder = img.closest('.bslot, .bresult');
+  if (holder) {
+    const d = document.createElement('div');
+    d.className = 'bnoimg';
+    d.textContent = holder.getAttribute('data-bname') || holder.getAttribute('data-bf') || img.alt || 'no art';
+    img.replaceWith(d);
+  } else if (img.classList.contains('cimg') || img.classList.contains('scard')) {
+    const d = document.createElement('div');
+    d.className = 'noimg';
+    const n = img.getAttribute('data-card'); if (n) d.setAttribute('data-card', n);
+    img.replaceWith(d);
+  }
+}, true);
 window.addEventListener('hashchange', router);
 
 /* ---------------- Load ---------------- */
@@ -3742,9 +3905,11 @@ async function load() {
     if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f5f2ea'); }
     coachText = localStorage.getItem('ddl-coach') || '';
     sideText = localStorage.getItem('ddl-side') || '';
-    builderRunes = JSON.parse(localStorage.getItem('ddl-runes') || 'null');
-    builderBf = JSON.parse(localStorage.getItem('ddl-bf') || 'null');
-    const fm = JSON.parse(localStorage.getItem('ddl-fieldmodel') || 'null');
+    // One corrupted key must not take the others down with it.
+    const safeJSON = k => { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } };
+    builderRunes = safeJSON('ddl-runes');
+    builderBf = safeJSON('ddl-bf');
+    const fm = safeJSON('ddl-fieldmodel');
     if (fm && typeof fm === 'object') fieldModel = { recency: !!fm.recency, region: fm.region || null };
   } catch (e) {}
   const el = document.getElementById('content');
@@ -3767,8 +3932,63 @@ async function load() {
   applyFilters();
 }
 
+/* In-page smoke test: navigates every view, exercises the builder, and checks
+   the probability engine against a hand-computed value. Engine-agnostic on
+   purpose — app.py drives it through WKWebView (Safari's engine), and any
+   browser console can run `await __smoke()`. */
+window.__smoke = async function () {
+  const out = { errors: [], checks: {} };
+  const onerr = e => out.errors.push(String((e && e.message) || e));
+  window.addEventListener('error', onerr);
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  try {
+    for (const v of ['build', 'analyze', 'meta', 'log', 'compare', 'decks']) {
+      location.hash = '#' + v; await sleep(150);
+      out.checks[v] = document.getElementById('content').innerText.length > 200;
+    }
+    location.hash = '#build'; await sleep(200);
+    out.checks.builderPanes = document.querySelectorAll('.bpane').length === 3;
+    out.checks.results = document.querySelectorAll('.bresult').length > 0;
+    const first = document.querySelector('.bresult');
+    const name = first && first.getAttribute('data-bname');
+    const before = bTotal(bMain());
+    bAdd(name, 'main');
+    out.checks.addCard = bTotal(bMain()) === before + 1;
+    bRemove(name, 'main');
+    out.checks.removeCard = bTotal(bMain()) === before;
+    const savedType = builderSearch.type;
+    builderSearch.type = 'Gear';
+    out.checks.searchFilter = builderFiltered().length > 10 && builderFiltered().every(c => c.type === 'Gear');
+    builderSearch.type = savedType;
+    out.checks.probabilityEngine = Math.abs(hyperAtLeast(1, 3, 40, 4) - 0.2773279352226734) < 1e-9;
+    out.checks.runeSum = Object.values(builderRunes).reduce((a, b) => a + b, 0) === 12;
+  } catch (e) { out.errors.push(String(e)); }
+  window.removeEventListener('error', onerr);
+  out.pass = out.errors.length === 0 && Object.values(out.checks).every(Boolean);
+  return out;
+};
+
+/* Service worker + update flow. The SW takes over immediately (skipWaiting),
+   so when a new version installs under an open tab, the page's HTML is stale
+   against the new cache — the classic "it looks broken for me". Offer a
+   one-tap reload instead of leaving the mismatch silent. */
+function showUpdateBar() {
+  if (document.getElementById('updateBar')) return;
+  const bar = document.createElement('div');
+  bar.id = 'updateBar';
+  bar.innerHTML = '<span>A new version of the site is ready.</span><button onclick="location.reload()">Reload</button>' +
+    '<button class="ghost" onclick="this.parentNode.remove()">Later</button>';
+  document.body.appendChild(bar);
+}
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      const w = reg.installing;
+      if (w) w.addEventListener('statechange', () => {
+        if (w.state === 'installed' && navigator.serviceWorker.controller) showUpdateBar();
+      });
+    });
+  }).catch(() => {}));
 }
 load();
 </script>
