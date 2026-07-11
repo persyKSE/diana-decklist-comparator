@@ -54,7 +54,8 @@ CREATE TABLE IF NOT EXISTS cards (
     promo     INTEGER DEFAULT 0,
     image_url TEXT,
     effect    TEXT,               -- rules text, plain
-    price     REAL                -- market price, USD
+    price     REAL,               -- market price, USD
+    tech_tags TEXT                -- JSON list of computed tech/sideboard tags
 );
 CREATE INDEX IF NOT EXISTS idx_cards_norm ON cards(norm_name);
 
@@ -119,6 +120,8 @@ def migrate_schema(conn):
         conn.execute("ALTER TABLE cards ADD COLUMN effect TEXT")
     if card_cols and "price" not in card_cols:
         conn.execute("ALTER TABLE cards ADD COLUMN price REAL")
+    if card_cols and "tech_tags" not in card_cols:
+        conn.execute("ALTER TABLE cards ADD COLUMN tech_tags TEXT")
     ev_cols = [r[1] for r in conn.execute("PRAGMA table_info(events)")]
     for col, decl in (("slug", "TEXT"), ("attendance", "INTEGER"),
                       ("day1_decks", "INTEGER"), ("day2_decks", "INTEGER")):
@@ -499,6 +502,7 @@ def export_field_json(conn, path=FIELD_JSON):
             "might": card["might"],
             "color": json.loads(card["color"]) if card["color"] else [],
             "tags": json.loads(card["tags"]) if card["tags"] else [],
+            "techTags": json.loads(card["tech_tags"]) if card["tech_tags"] else [],
             "effect": card["effect"],
             "image": f"cache/images/{local.name}" if local.exists() else card["image_url"],
             "price": card["price"],
@@ -539,6 +543,7 @@ def export_cards_json(conn, path=None):
             "might": card["might"],
             "rarity": card["rarity"],
             "tags": json.loads(card["tags"]) if card["tags"] else [],
+            "techTags": json.loads(card["tech_tags"]) if card["tech_tags"] else [],
             "effect": card["effect"],
             "price": card["price"],
         }

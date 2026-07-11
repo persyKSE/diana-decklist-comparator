@@ -221,93 +221,76 @@ def fetch_page(url):
     resp = scraper.get(url, headers=HEADERS, timeout=20)
     resp.raise_for_status()
     return resp.text
+class ScraperAdapter:
+    def parse_decklist(self, html):
+        raise NotImplementedError
 
+class MobalyticsScraper(ScraperAdapter):
+    def slice_between(self, text, start_kw, end_kws):
+        if start_kw not in text:
+            return ""
+        section = text.split(start_kw, 1)[1]
+        cut = len(section)
+        for kw in end_kws:
+            pos = section.find(kw)
+            if pos != -1:
+                cut = min(cut, pos)
+        return section[:cut]
 
-def slice_between(text, start_kw, end_kws):
-    """Text after the first start_kw, cut at the earliest of end_kws."""
-    if start_kw not in text:
-        return ""
-    section = text.split(start_kw, 1)[1]
-    cut = len(section)
-    for kw in end_kws:
-        pos = section.find(kw)
-        if pos != -1:
-            cut = min(cut, pos)
-    return section[:cut]
+    def parse_decklist(self, html):
+        soup = BeautifulSoup(html, "html.parser")
+        full_text = re.sub(r"\s+", " ", soup.get_text(separator=" "))
 
+        if "Main Deck" not in full_text:
+            return {}
+
+        def parse_counted(section, count_re):
+            entry_re = re.compile(
+                r"(?<!\d)(" + count_re + r")\s+(.+?)(?=(?:(?<!\d)" + count_re + r"\s+)|$)"
+            )
+            out = {}
+            for m in entry_re.finditer(section):
+                name = m.group(2).strip()
+                if 3 <= len(name) <= 60:
+                    out[name] = out.get(name, 0) + int(m.group(1))
+            return out
+
+        cards = parse_counted(
+            self.slice_between(full_text, "Main Deck", ["Sideboard", "Chosen Champion", "Explore more"]),
+            r"[1-3]",
+        )
+        sideboard = parse_counted(
+            self.slice_between(full_text, "Sideboard", ["Chosen Champion", "Explore more"]),
+            r"[1-3]",
+        )
+        runes = parse_counted(
+            self.slice_between(full_text, "Runes", ["Battlefields", "Main Deck"]),
+            r"\d{1,2}",
+        )
+
+        battlefields = {}
+        bf_re = re.compile(r"([A-Z][A-Za-z',\-\s]+?)\s*\(\d+\)")
+        for m in bf_re.finditer(self.slice_between(full_text, "Battlefields", ["Main Deck"])):
+            name = m.group(1).strip()
+            battlefields[name] = battlefields.get(name, 0) + 1
+
+        legend = self.slice_between(full_text, "Decklist Legend", ["Runes"]).strip() or None
+        if legend and len(legend) > 60:
+            legend = None
+
+        date = None
+        m = re.search(r"Updated on ([A-Z][a-z]{2} \d{1,2}, \d{4})", full_text)
+        if m:
+            try:
+                date = datetime.strptime(m.group(1), "%b %d, %Y").date().isoformat()
+            except ValueError:
+                pass
+
+        return {"cards": cards, "sideboard": sideboard, "runes": runes,
+                "battlefields": battlefields, "legend": legend, "date": date}
 
 def parse_decklist(html):
-    """
-    Extract card name/count pairs from a Mobalytics deck page.
-
-    The page text lays the decklist out as:
-
-        Legend <name> Runes 6 Mind Rune 6 Chaos Rune
-        Battlefields Abandoned Hall (205) Targon's Peak (289) ...
-        Main Deck 1 Diana, Lunari 3 Ravenbloom Student ...
-        Sideboard ...
-
-    Entries are separated only by whitespace (no reliable delimiter), so
-    a naive "digit followed by words" regex over-matches and swallows
-    every subsequent card into one giant name. Instead, each section is
-    sliced by its heading and split on "count boundaries" — positions
-    where a small integer appears — treating the text between one count
-    and the next as the card name. Main-deck counts are 1-3; rune counts
-    go up to 12. Battlefields have no counts at all, just names followed
-    by a collector number in parens, one copy each.
-    """
-    soup = BeautifulSoup(html, "html.parser")
-    full_text = re.sub(r"\s+", " ", soup.get_text(separator=" "))
-
-    if "Main Deck" not in full_text:
-        return {}
-
-    def parse_counted(section, count_re):
-        entry_re = re.compile(
-            r"(?<!\d)(" + count_re + r")\s+(.+?)(?=(?:(?<!\d)" + count_re + r"\s+)|$)"
-        )
-        out = {}
-        for m in entry_re.finditer(section):
-            name = m.group(2).strip()
-            if 3 <= len(name) <= 60:
-                out[name] = out.get(name, 0) + int(m.group(1))
-        return out
-
-    cards = parse_counted(
-        slice_between(full_text, "Main Deck", ["Sideboard", "Chosen Champion", "Explore more"]),
-        r"[1-3]",
-    )
-    sideboard = parse_counted(
-        slice_between(full_text, "Sideboard", ["Chosen Champion", "Explore more"]),
-        r"[1-3]",
-    )
-    runes = parse_counted(
-        slice_between(full_text, "Runes", ["Battlefields", "Main Deck"]),
-        r"\d{1,2}",
-    )
-
-    battlefields = {}
-    bf_re = re.compile(r"([A-Z][A-Za-z',\- ]+?)\s*\(\d+\)")
-    for m in bf_re.finditer(slice_between(full_text, "Battlefields", ["Main Deck"])):
-        name = m.group(1).strip()
-        battlefields[name] = battlefields.get(name, 0) + 1
-
-    # "Legend <name>" between the decklist header and the runes section
-    legend = slice_between(full_text, "Decklist Legend", ["Runes"]).strip() or None
-    if legend and len(legend) > 60:
-        legend = None
-
-    # "Updated on Jun 17, 2026" — best available proxy for the event date
-    date = None
-    m = re.search(r"Updated on ([A-Z][a-z]{2} \d{1,2}, \d{4})", full_text)
-    if m:
-        try:
-            date = datetime.strptime(m.group(1), "%b %d, %Y").date().isoformat()
-        except ValueError:
-            pass
-
-    return {"cards": cards, "sideboard": sideboard, "runes": runes,
-            "battlefields": battlefields, "legend": legend, "date": date}
+    return MobalyticsScraper().parse_decklist(html)
 
 
 def download_image(url, dest_path):

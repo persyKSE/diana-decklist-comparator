@@ -666,10 +666,10 @@ function priceTag(list) {
 
 // Consensus runes / battlefields / sideboard over the active set — the
 // parts of a registrable deck that the 40-card prototype alone omits.
-function consensusExtras(N) {
-  const totalW = globalDecks.reduce((a, d) => a + effWeight(d), 0) || 1;
+function consensusExtras(decks = globalDecks) {
+  const totalW = decks.reduce((a, d) => a + effWeight(d), 0) || 1;
   const runeAvg = {};
-  globalDecks.forEach(d => (d.runes || []).forEach(r => { runeAvg[r.name] = (runeAvg[r.name] || 0) + effWeight(d) * r.count / totalW; }));
+  decks.forEach(d => (d.runes || []).forEach(r => { runeAvg[r.name] = (runeAvg[r.name] || 0) + effWeight(d) * r.count / totalW; }));
   const runes = Object.entries(runeAvg).map(([name, avg]) => ({ name, avg, count: Math.round(avg) }))
     .sort((a, b) => b.avg - a.avg);
   // nudge rounding so the split still sums to 12
@@ -678,19 +678,19 @@ function consensusExtras(N) {
   while (sum < 12 && runes.length) { const r = [...runes].sort((a, b) => (a.count - a.avg) - (b.count - b.avg))[0]; r.count++; sum++; }
 
   const splitFreq = {};
-  globalDecks.forEach(d => {
+  decks.forEach(d => {
     if (!d.runes || !d.runes.length) return;
     const sig = [...d.runes].sort((a, b) => b.count - a.count).map(r => r.count + ' ' + shortName(r.name).replace(' Rune', '')).join(' / ');
     splitFreq[sig] = (splitFreq[sig] || 0) + 1;
   });
 
   const bfFreq = {};
-  globalDecks.forEach(d => (d.battlefields || []).forEach(b => { bfFreq[b.name] = (bfFreq[b.name] || 0) + 1; }));
+  decks.forEach(d => (d.battlefields || []).forEach(b => { bfFreq[b.name] = (bfFreq[b.name] || 0) + 1; }));
   const bfs = Object.entries(bfFreq).map(([name, n]) => ({ name, n })).sort((a, b) => b.n - a.n);
 
   // weighted consensus sideboard, filled to 8
   const sideStats = {};
-  globalDecks.forEach(d => (d.sideboard || []).forEach(c => {
+  decks.forEach(d => (d.sideboard || []).forEach(c => {
     if (!sideStats[c.name]) sideStats[c.name] = { score: 0, decksIn: 0, counts: [], weights: [] };
     const s = sideStats[c.name];
     s.score += effWeight(d) * c.count; s.decksIn += 1;
@@ -747,7 +747,28 @@ function computeProto(decks, ranked) {
   return proto.sort((a, b) => b.score - a.score);
 }
 
-function buildInitialProto() { currentProto = computeProto(globalDecks, rankedCards); }
+let consensusVariants = [];
+function buildInitialProto() {
+  currentProto = computeProto(globalDecks, rankedCards);
+  consensusVariants = [{ label: 'Overall consensus', proto: currentProto, decks: globalDecks, ex: consensusExtras(globalDecks) }];
+
+  // Sub-archetype variants named by the same signature-card clusters the filter
+  // chips and dendrogram use (e.g. "Fizz build"), so "load a consensus" lines up
+  // with the sub-archetypes shown everywhere else — not opaque A/B letters.
+  const byCluster = {};
+  globalDecks.forEach(d => { if (d._clusterName) (byCluster[d._clusterName] = byCluster[d._clusterName] || []).push(d); });
+  const groups = Object.entries(byCluster);
+  if (groups.length > 1) {
+    groups.sort((a, b) => b[1].length - a[1].length).forEach(([name, cDecks]) => {
+      consensusVariants.push({
+        label: name + ' · ' + cDecks.length + ' deck' + (cDecks.length === 1 ? '' : 's'),
+        proto: computeProto(cDecks, computeStats(cDecks)),
+        decks: cDecks,
+        ex: consensusExtras(cDecks)
+      });
+    });
+  }
+}
 
 function removeCard(name) {
     const idx = currentProto.findIndex(c => c.name === name);
@@ -775,7 +796,7 @@ function addCard(name) {
 
 function copyDecklist() {
     let text = currentProto.map(c => `${c.copies}x ${c.name}`).join('\n');
-    const ex = consensusExtras(globalDecks.length);
+    const ex = consensusExtras(globalDecks);
     if (ex.runes.length) text += '\n\nRunes:\n' + ex.runes.filter(r => r.count > 0).map(r => r.count + 'x ' + r.name).join('\n');
     if (ex.bfs.length) text += '\n\nBattlefields:\n' + ex.bfs.slice(0, 3).map(b => '1x ' + b.name).join('\n');
     if (ex.side.length) text += '\n\nSideboard:\n' + ex.side.map(c => c.copies + 'x ' + c.name).join('\n');
@@ -1485,7 +1506,7 @@ function runeMathHTML() {
 
   // The field's split, for comparison.
   const cons = Object.fromEntries(colors.map(c => [c, 0]));
-  consensusExtras(globalDecks.length).runes.forEach(r => {
+  consensusExtras(globalDecks).runes.forEach(r => {
     const col = shortName(r.name).replace(' Rune', '');
     if (r.count > 0 && col in cons) cons[col] += r.count;
   });
@@ -1843,37 +1864,9 @@ function archProfile(slug) {
    opposing lists say what there is to answer. Cross the two and you get
    coverage — an explicit, inspectable heuristic, not a win rate. */
 
-// Rules-text classifiers. `size` extracts the might/damage a card can handle,
-// which is what turns "removal" into "removal that kills 71% of their units".
-const TECH_RULES = [
-  { tag: 'counter', label: 'counter', rx: /counter a spell|opponents can'?t play cards/i },
-  { tag: 'sweep', label: 'sweeper', rx: /to all (enemy )?units|deal \d+ to all|return all units|each player kills one of their units/i,
-    size: e => (e.match(/deal (\d+) to all/i) || e.match(/return all units with (\d+)/i) || [])[1] },
-  { tag: 'gearHate', label: 'gear hate', rx: /kill a gear|kills one of their gear|give a gear \[temporary\]|or a gear \[temporary\]/i },
-  { tag: 'killSmall', label: 'conditional removal', rx: /(kill|return|deal \d+ to)[\s\S]{0,90}?(\d+) :rb_might: or less/i,
-    size: e => (e.match(/(\d+) :rb_might: or less/i) || [])[1] },
-  { tag: 'kill', label: 'hard removal', rx: /\bkill (a|an|target|one) (unit|enemy unit)/i },
-  { tag: 'damage', label: 'damage', rx: /deal (\d+) to (a|an|each|up to|enemy)/i, size: e => (e.match(/deal (\d+) to/i) || [])[1] },
-  // "-N Might, to a minimum of 1" can never kill; without the floor it can.
-  { tag: 'shrink', label: 'shrink', rx: /-(\d+) :rb_might: this turn(?![\s\S]{0,40}minimum)/i, size: e => (e.match(/-(\d+) :rb_might:/) || [])[1] },
-  { tag: 'shrinkSoft', label: 'combat trick', rx: /-(\d+) :rb_might: this turn[\s\S]{0,40}minimum/i },
-  { tag: 'bounce', label: 'bounce', rx: /return (a|an|another|all|up to|target)[\s\S]{0,70}owner/i },
-  { tag: 'handAttack', label: 'hand attack', rx: /they discard|each player discards|opponent[\s\S]{0,60}discard that card/i },
-  { tag: 'stun', label: 'stun', rx: /\[stun\]/i },
-];
-
 function techTags(name) {
   const info = cardInfo(name);
-  const e = (info && info.effect) || '';
-  if (!e) return [];
-  let tags = TECH_RULES.filter(r => r.rx.test(e)).map(r => ({ tag: r.tag, label: r.label, size: r.size ? +r.size(e) || null : null }));
-  const has = t => tags.some(x => x.tag === t);
-  // A conditional kill is not also hard removal; a sweeper subsumes its own
-  // single-target damage clause; a mass bounce reads as a sweeper.
-  if (has('killSmall')) tags = tags.filter(t => t.tag !== 'kill' && t.tag !== 'damage');
-  if (has('sweep')) tags = tags.filter(t => t.tag !== 'damage' && t.tag !== 'bounce');
-  if (has('shrink')) tags = tags.filter(t => t.tag !== 'shrinkSoft');
-  return tags;
+  return (info && info.techTags) || [];
 }
 
 // How well does one card answer one thing the opponent plays? 1 = a clean
@@ -2039,7 +2032,7 @@ function currentSideboard() {
   const parsed = parseDeckText(sideText);
   const list = Object.entries(parsed.counts).map(([name, count]) => ({ name, count }));
   if (list.length) return { list, source: 'your sideboard', mine: true };
-  const ex = consensusExtras(globalDecks.length);
+  const ex = consensusExtras(globalDecks);
   return { list: ex.side.map(c => ({ name: c.name, count: c.copies })), source: 'the consensus sideboard', mine: false };
 }
 
@@ -2195,7 +2188,7 @@ function saveBf() { try { localStorage.setItem('ddl-bf', JSON.stringify(builderB
 // Runes/battlefields aren't part of coachText, so seed them from the consensus
 // the first time (or if a saved value is unusable).
 function ensureBuilderDefaults() {
-  const ex = consensusExtras(globalDecks.length);
+  const ex = consensusExtras(globalDecks);
   if (!builderRunes || Object.values(builderRunes).reduce((a, b) => a + b, 0) !== 12) {
     builderRunes = {};
     ex.runes.forEach(r => { const d = shortName(r.name).replace(' Rune', ''); if (r.count > 0) builderRunes[d] = r.count; });
@@ -2233,12 +2226,138 @@ function bAdd(name, sec) {
   sec === 'side' ? writeSide(counts) : writeMain(counts);
   refreshBuilder();
 }
+
+function bAddPackage(name) {
+  const pkg = packageOf(name);
+  if (!pkg) return;
+  const counts = bMain();
+  let added = 0;
+  pkg.cards.forEach(c => {
+    if ((counts[c] || 0) < 3 && bTotal(counts) < 40) {
+      counts[c] = (counts[c] || 0) + 1;
+      added++;
+    }
+  });
+  if (added > 0) {
+    writeMain(counts);
+    toast('Added ' + added + ' package cards to main deck');
+    refreshBuilder();
+  } else {
+    toast('Package already fully included or main deck full');
+  }
+}
 function bRemove(name, sec) {
   const counts = sec === 'side' ? bSide() : bMain();
   if (!counts[name]) return;
   if (--counts[name] <= 0) delete counts[name];
   sec === 'side' ? writeSide(counts) : writeMain(counts);
   refreshBuilder();
+}
+
+// Monte-Carlo goldfish over the built deck. Models Riftbound's real economy:
+// runes ARE the energy — you channel 2 per turn from the 12-rune deck and they
+// ready each turn, so on turn T (on the play) you have min(12, 2T) energy, of
+// which each colored pip must be paid by a rune of that domain. Standardised on
+// the play (no turn-1 draw bonus) to match the Rune-math panel's baseline.
+const RUNES_PER_TURN = 2;
+function shuffleInPlace(a) { for (let j = a.length - 1; j > 0; j--) { const k = Math.floor(Math.random() * (j + 1)); [a[j], a[k]] = [a[k], a[j]]; } return a; }
+
+function simulateGoldfish(iterations = 10000) {
+  const main = Object.entries(bMain()).flatMap(([n, c]) => Array(c).fill(n));
+  if (main.length !== 40) return { error: 'Main deck must be 40 cards' };
+  const rDeck = Object.entries(builderRunes).flatMap(([n, c]) => Array(c).fill(n));   // domain names, e.g. "Chaos"
+  if (rDeck.length !== 12) return { error: 'Must have exactly 12 runes' };
+  const doms = n => ((cardInfo(n) || {}).color || []).filter(c => c && c !== 'Colorless');
+
+  let totalT4Might = 0, colorMissHands = 0, totalUnspent = 0;
+
+  for (let i = 0; i < iterations; i++) {
+    const m = shuffleInPlace([...main]);
+    const r = shuffleInPlace([...rDeck]);
+
+    // Mulligan (Riftbound: set aside up to 2, draw replacements, then recycle
+    // the set-aside to the bottom — no reshuffle). Heuristic: bottom the two
+    // priciest cards when the opener can't curve out (fewer than 2 cards ≤2).
+    let hand = m.slice(0, 7), deckIdx = 7;
+    const cheap = hand.filter(n => ((cardInfo(n) || {}).cost ?? 99) <= 2).length;
+    if (cheap < 2) {
+      const aside = hand.map((n, idx) => [idx, (cardInfo(n) || {}).cost ?? 0])
+        .filter(([, c]) => c >= 4).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([idx]) => idx);
+      if (aside.length) {
+        const set = new Set(aside);
+        const bottomed = hand.filter((_, idx) => set.has(idx));
+        hand = hand.filter((_, idx) => !set.has(idx));
+        for (let k = 0; k < bottomed.length; k++) hand.push(m[deckIdx++]);
+        m.push(...bottomed);   // recycle to the bottom, no reshuffle
+      }
+    }
+
+    let boardMight = 0, colorMissThisHand = false, t4Unspent = 0;
+    const channeled = {};   // domain -> total runes channeled so far (they ready every turn)
+    let runeIdx = 0;
+
+    for (let turn = 1; turn <= 4; turn++) {
+      hand.push(m[deckIdx++]);                                   // draw step: 1 main card
+      for (let c = 0; c < RUNES_PER_TURN && runeIdx < r.length; c++) channeled[r[runeIdx]] = (channeled[r[runeIdx++]] || 0) + 1;
+      const avail = { ...channeled };                            // readied pool for this turn
+      let energy = Object.values(avail).reduce((a, b) => a + b, 0);
+
+      let played = true;
+      const colorOKFor = hi => { const need = {}; doms(hand[hi]).forEach(d => need[d] = (need[d] || 0) + 1); return Object.keys(need).every(d => (avail[d] || 0) >= need[d]); };
+      while (played) {
+        played = false;
+        let bestIdx = -1, bestMight = -1;
+        for (let hi = 0; hi < hand.length; hi++) {
+          const info = cardInfo(hand[hi]);
+          if (!info || info.type !== 'Unit' || (info.cost || 0) > energy || !colorOKFor(hi)) continue;
+          if ((info.might || 0) > bestMight) { bestMight = info.might || 0; bestIdx = hi; }
+        }
+        if (bestIdx === -1) break;
+        // Pay the colour pips from their domains, the rest from any rune.
+        const info = cardInfo(hand[bestIdx]);
+        let toPay = info.cost || 0;
+        doms(hand[bestIdx]).forEach(d => { if (avail[d] > 0) { avail[d]--; toPay--; } });
+        for (const d of Object.keys(avail)) { while (toPay > 0 && avail[d] > 0) { avail[d]--; toPay--; } }
+        energy -= info.cost || 0;
+        boardMight += info.might || 0;
+        hand.splice(bestIdx, 1);
+        played = true;
+      }
+      // A colour miss is when energy is still left AND the only units you could
+      // otherwise afford are stranded on colour — i.e. colour cost you tempo,
+      // not just "you spent your last rune of a domain".
+      if (energy > 0) {
+        for (let hi = 0; hi < hand.length; hi++) {
+          const info = cardInfo(hand[hi]);
+          if (info && info.type === 'Unit' && (info.cost || 0) <= energy && !colorOKFor(hi)) { colorMissThisHand = true; break; }
+        }
+      }
+      if (turn === 4) t4Unspent = energy;
+    }
+    totalT4Might += boardMight;
+    if (colorMissThisHand) colorMissHands++;
+    totalUnspent += t4Unspent;
+  }
+  return {
+    avgMight: (totalT4Might / iterations).toFixed(2),
+    colorMiss: (colorMissHands / iterations * 100).toFixed(1) + '%',
+    unspent: (totalUnspent / iterations).toFixed(2)
+  };
+}
+
+function bSimulate() {
+  const res = document.getElementById('bSimResults');
+  if (!res) return;
+  res.innerHTML = 'Simulating...';
+  setTimeout(() => {
+    const data = simulateGoldfish();
+    if (data.error) { res.innerHTML = '<span style="color:var(--danger)">' + data.error + '</span>'; return; }
+    res.innerHTML = `
+      <div style="display:flex; justify-content:space-between"><span>Avg T4 Might:</span><span style="color:var(--text); font-weight:bold">${data.avgMight}</span></div>
+      <div style="display:flex; justify-content:space-between"><span>Color Miss Rate:</span><span style="color:var(--text); font-weight:bold">${data.colorMiss}</span></div>
+      <div style="display:flex; justify-content:space-between"><span>T4 Unspent Energy:</span><span style="color:var(--text); font-weight:bold">${data.unspent}</span></div>
+    `;
+  }, 10);
 }
 function bMove(name, from) {
   const src = from === 'side' ? bSide() : bMain();
@@ -2271,13 +2390,16 @@ function bToggleBf(name) {
   saveBf(); refreshBuilder();
 }
 function bLoadConsensus() {
-  const ex = consensusExtras(globalDecks.length);
-  writeMain(Object.fromEntries(currentProto.map(c => [c.name, c.copies])));
+  const sel = document.getElementById('bConsensusSelect');
+  const variantIndex = sel ? parseInt(sel.value, 10) : 0;
+  const v = consensusVariants[variantIndex] || consensusVariants[0];
+  const ex = v.ex;
+  writeMain(Object.fromEntries(v.proto.map(c => [c.name, c.copies])));
   writeSide(Object.fromEntries(ex.side.map(c => [c.name, c.copies])));
   builderRunes = {}; ex.runes.forEach(r => { if (r.count > 0) builderRunes[shortName(r.name).replace(' Rune', '')] = r.count; });
   builderBf = ex.bfs.slice(0, 3).map(b => b.name);
   saveRunes(); saveBf();
-  toast('Loaded the consensus build into the builder');
+  toast('Loaded ' + v.label + ' into the builder');
   refreshBuilder();
 }
 function bClear() {
@@ -2346,6 +2468,10 @@ function bPreviewHTML() {
   h += '<div class="bprev-name">' + escHtml(name) + '</div>';
   h += '<div class="bprev-meta">' + gemsFor(name) + '<span>' + escHtml([info.type, info.rarity].filter(Boolean).join(' · ')) + '</span></div>';
   if (info.effect) h += '<div class="bprev-eff">' + escHtml(info.effect).replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆') + '</div>';
+  const pkg = packageOf(name);
+  if (pkg && pkg.cards.length > 1) {
+    h += '<button style="margin-top:8px; width:100%" onclick="bAddPackage(\'' + attr(name).replace(/'/g, "\\'") + '\')" title="Add 1 copy of each card in this package to the main deck">Add full package (' + pkg.cards.length + ' cards)</button>';
+  }
   return h;
 }
 function renderBuilderResults() {
@@ -2396,15 +2522,25 @@ function builderHTML(N) {
   const price = priceTag(Object.entries(main).map(([name, count]) => ({ name, count })));
 
   // LEFT — preview + deck management
+  const optHTML = consensusVariants.map((v, i) => `<option value="${i}">${escHtml(v.label)}</option>`).join('');
   let left = '<div class="bpane left bcol"><div class="bprev" id="bPreview">' + bPreviewHTML() + '</div>' +
     '<div class="bmanage">' +
-    '<button onclick="bLoadConsensus()" class="full" title="Fill the builder with the current weighted-consensus 40, runes, battlefields and sideboard">Load consensus build</button>' +
+    '<div style="display:flex; gap:4px; margin-bottom:4px;">' +
+    '<select id="bConsensusSelect" style="flex:1" title="Select which consensus sub-archetype to load">' + optHTML + '</select>' +
+    '<button onclick="bLoadConsensus()" title="Fill the builder with the selected consensus 40, runes, battlefields and sideboard">Load</button>' +
+    '</div>' +
     '<button onclick="copyDecklist()" title="Copy the full registrable deck">Copy deck</button>' +
     '<button onclick="exportMyDeckImage()" title="Save a shareable PNG">Export PNG</button>' +
     '<button onclick="shareDeckLink()" title="Copy a URL with your list encoded">Share link</button>' +
     '<button onclick="bImport()" title="Paste a decklist to import">Import list</button>' +
     '<button class="ghost" onclick="bHelp()">Shortcuts</button>' +
     '<button class="ghost" onclick="bClear()" title="Empty the main deck and sideboard">Clear</button>' +
+    '</div>' +
+    '<div class="bsim-panel" style="margin-top:10px; padding:10px; background:var(--panel2); border-radius:8px; border:1px solid var(--border)">' +
+    '<div style="font-weight:bold; margin-bottom:6px; color:var(--gold)">Goldfish Simulator (T4)</div>' +
+    '<button onclick="bSimulate()" style="width:100%">Run 10,000 Hands</button>' +
+    '<div id="bSimResults" style="margin-top:8px; font-size:12px; color:var(--muted)"></div>' +
+    '<div style="margin-top:6px; font-size:10.5px; color:var(--muted); line-height:1.4">Units only, on the play (2 runes/turn). A rough curve-out proxy — the Consistency and Rune-math sections below give the exact odds.</div>' +
     '</div></div>';
 
   // CENTER — the deck itself
@@ -2416,7 +2552,7 @@ function builderHTML(N) {
     '<button class="ghost" onclick="bHelp()">?</button></span></div>';
   center += mainTotal
     ? '<div class="bgrid">' + bSortedEntries(main).map(([n, c]) => bTile(n, c, 'main')).join('') + '</div>'
-    : '<div class="bempty-note">Your main deck is empty. Use the card search to add cards, or <span class="deck-link" onclick="bLoadConsensus()">load the consensus build</span> to start from the field average.</div>';
+    : '<div class="bempty-note">Your main deck is empty. Use the card search to add cards, or <span class="deck-link" onclick="bLoadConsensus()">load a consensus build</span> to start from the field average.</div>';
 
   // zones: legend / runes+battlefields
   center += '<div class="bzones">';
@@ -2431,7 +2567,7 @@ function builderHTML(N) {
     if (i < rd.length - 1) center += '<span class="brune-sep">/</span>';
   });
   center += '</div>';
-  const ex = consensusExtras(globalDecks.length);
+  const ex = consensusExtras(globalDecks);
   const bfOpts = [...new Set([...builderBf, ...ex.bfs.map(b => b.name)])];
   center += '<div class="bzone-h" style="margin-top:12px">Battlefields <span class="z-count">' + builderBf.length + '/3</span></div><div class="bbf">';
   bfOpts.slice(0, 6).forEach(name => {
