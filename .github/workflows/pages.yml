@@ -1,0 +1,37 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  # Data-update commits are pushed with GITHUB_TOKEN, which doesn't fire
+  # `push` workflows — so also redeploy whenever the update workflow finishes.
+  workflow_run:
+    workflows: ["Update deck data"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # workflow_run events point at a pre-push sha; always deploy latest
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

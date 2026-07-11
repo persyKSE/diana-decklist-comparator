@@ -1,0 +1,5020 @@
+[
+  {
+    "label": "Alanzq - Vancouver 1st",
+    "player": "Alanzq",
+    "placement": "1st",
+    "event": "Vancouver Regional Qualifier",
+    "event_date": "2026-05-29",
+    "attendance": 1800,
+    "weight": 3.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-1st-alanzq",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 3,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp",
+        "code": "OGN-093",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Conservatory",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+        "code": "SFD-215",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Baron Nashor",
+        "count": 2,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Moonfall",
+        "count": 1,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Singularity",
+        "count": 2,
+        "image": "cache/images/Singularity.webp",
+        "code": "OGN-105",
+        "cost": 6,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ]
+  },
+  {
+    "label": "bsweitz - Hartford 2nd",
+    "player": "bsweitz",
+    "placement": "2nd",
+    "event": "Hartford Regional Qualifier",
+    "event_date": "2026-06-19",
+    "attendance": 1900,
+    "weight": 2.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-2nd-bsweitz",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 1,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 2,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 1,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp",
+        "code": "UNL-143",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Rebuke",
+        "count": 1,
+        "image": "cache/images/Rebuke.webp",
+        "code": "OGN-172",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Sprite Fountain",
+        "count": 3,
+        "image": "cache/images/Sprite_Fountain.webp",
+        "code": "UNL-078",
+        "cost": 2,
+        "type": "Gear",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 3,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 3,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Seat of Power",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-217.webp",
+        "code": "SFD-217",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "The Arena's Greatest",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-290.webp",
+        "code": "OGN-290",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Acceptable Losses",
+        "count": 1,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 1,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Moonfall",
+        "count": 1,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Singularity",
+        "count": 1,
+        "image": "cache/images/Singularity.webp",
+        "code": "OGN-105",
+        "cost": 6,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Switcheroo",
+        "count": 1,
+        "image": "cache/images/Switcheroo.webp",
+        "code": "SFD-145",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 2,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "Dhawally - Vancouver Top 4",
+    "player": "Dhawally",
+    "placement": "Top 4",
+    "event": "Vancouver Regional Qualifier",
+    "event_date": "2026-05-29",
+    "attendance": 1800,
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-top-4-dhawally",
+    "cards": [
+      {
+        "name": "Consult the Past",
+        "count": 1,
+        "image": "cache/images/Consult_the_Past.webp",
+        "code": "OGN-083",
+        "cost": 4,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 2,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Frigid Jewel",
+        "count": 3,
+        "image": "cache/images/Frigid_Jewel.webp",
+        "code": "UNL-074",
+        "cost": 2,
+        "type": "Gear",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp",
+        "code": "OGN-093",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 1,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Rockfall Path",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+        "code": "SFD-216",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Baron Nashor",
+        "count": 2,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Moonfall",
+        "count": 1,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Singularity",
+        "count": 2,
+        "image": "cache/images/Singularity.webp",
+        "code": "OGN-105",
+        "cost": 6,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 2,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "Dhawally - Utrecht Top 4",
+    "player": "Dhawally",
+    "placement": "Top 4",
+    "event": "Utrecht Regional Qualifier",
+    "event_date": "2026-06-12",
+    "attendance": 1900,
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-utrecht-regional-qualifier-top-4-dhawally",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 1,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp",
+        "code": "UNL-143",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp",
+        "code": "OGN-093",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Sprite Fountain",
+        "count": 1,
+        "image": "cache/images/Sprite_Fountain.webp",
+        "code": "UNL-078",
+        "cost": 2,
+        "type": "Gear",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Rockfall Path",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+        "code": "SFD-216",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Invert Timelines",
+        "count": 2,
+        "image": "cache/images/Invert_Timelines.webp",
+        "code": "OGN-201",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Singularity",
+        "count": 1,
+        "image": "cache/images/Singularity.webp",
+        "code": "OGN-105",
+        "cost": 6,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 3,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ]
+  },
+  {
+    "label": "linsanity - Hartford Top 4",
+    "player": "linsanity",
+    "placement": "Top 4",
+    "event": "Hartford Regional Qualifier",
+    "event_date": "2026-06-19",
+    "attendance": 1900,
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-4-linsanity",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eager Apprentice",
+        "count": 1,
+        "image": "cache/images/Eager_Apprentice.webp",
+        "code": "OGN-084",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 1,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp",
+        "code": "UNL-143",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 3,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Rockfall Path",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+        "code": "SFD-216",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Abandon",
+        "count": 1,
+        "image": "cache/images/Abandon.webp",
+        "code": "UNL-131",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Baron Nashor",
+        "count": 1,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Eager Apprentice",
+        "count": 1,
+        "image": "cache/images/Eager_Apprentice.webp",
+        "code": "OGN-084",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 3,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "nice boy - Sydney Top 4",
+    "player": "nice boy",
+    "placement": "Top 4",
+    "event": "Sydney Regional Qualifier",
+    "event_date": "2026-05-15",
+    "attendance": 1400,
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-4-nice-boy",
+    "cards": [
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Fading Memories",
+        "count": 1,
+        "image": "cache/images/Fading_Memories.webp",
+        "code": "OGN-180",
+        "cost": 4,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 2,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Frigid Jewel",
+        "count": 3,
+        "image": "cache/images/Frigid_Jewel.webp",
+        "code": "UNL-074",
+        "cost": 2,
+        "type": "Gear",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 3,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 1,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Last Rites",
+        "count": 1,
+        "image": "cache/images/Last_Rites.webp",
+        "code": "SFD-150",
+        "cost": 3,
+        "type": "Gear",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Mindsplitter",
+        "count": 1,
+        "image": "cache/images/Mindsplitter.webp",
+        "code": "OGN-192",
+        "cost": 7,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 7
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp",
+        "code": "OGN-093",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 1,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Conservatory",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+        "code": "SFD-215",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Angler Beast",
+        "count": 1,
+        "image": "cache/images/Angler_Beast.webp",
+        "code": "UNL-132",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Baron Nashor",
+        "count": 1,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Downwell",
+        "count": 1,
+        "image": "cache/images/Downwell.webp",
+        "code": "SFD-147",
+        "cost": 8,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Moonfall",
+        "count": 1,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Rebuke",
+        "count": 1,
+        "image": "cache/images/Rebuke.webp",
+        "code": "OGN-172",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Singularity",
+        "count": 1,
+        "image": "cache/images/Singularity.webp",
+        "code": "OGN-105",
+        "cost": 6,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Unchecked Power",
+        "count": 1,
+        "image": "cache/images/Unchecked_Power.webp",
+        "code": "OGN-123",
+        "cost": 7,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "CTG Alanzq - Sydney Top 8",
+    "player": "CTG Alanzq",
+    "placement": "Top 8",
+    "event": "Sydney Regional Qualifier",
+    "event_date": "2026-05-15",
+    "attendance": 1400,
+    "weight": 1.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-8-ctg-alanzq",
+    "cards": [
+      {
+        "name": "Abandon",
+        "count": 2,
+        "image": "cache/images/Abandon.webp",
+        "code": "UNL-131",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Existential Dread",
+        "count": 1,
+        "image": "cache/images/Existential_Dread.webp",
+        "code": "UNL-134",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Flash",
+        "count": 3,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 3,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp",
+        "code": "UNL-143",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Plundering Poro",
+        "count": 1,
+        "image": "cache/images/Plundering_Poro.webp",
+        "code": "SFD-069",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Thousand-Tailed Watcher",
+        "count": 1,
+        "image": "cache/images/Thousand_Tailed_Watcher.webp",
+        "code": "OGN-116",
+        "cost": 7,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 7
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 3,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 2,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Startipped Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-288.webp",
+        "code": "OGN-288",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Baron Nashor",
+        "count": 1,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Sprite Fountain",
+        "count": 3,
+        "image": "cache/images/Sprite_Fountain.webp",
+        "code": "UNL-078",
+        "cost": 2,
+        "type": "Gear",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 3,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "asc evansrhim - Hartford Top 8",
+    "player": "asc evansrhim",
+    "placement": "Top 8",
+    "event": "Hartford Regional Qualifier",
+    "event_date": "2026-06-19",
+    "attendance": 1900,
+    "weight": 1.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-8-asc-evansrhim",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 1,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 2,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp",
+        "code": "OGN-093",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Sprite Fountain",
+        "count": 1,
+        "image": "cache/images/Sprite_Fountain.webp",
+        "code": "UNL-078",
+        "cost": 2,
+        "type": "Gear",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 3,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Seat of Power",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-217.webp",
+        "code": "SFD-217",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Acceptable Losses",
+        "count": 1,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Singularity",
+        "count": 2,
+        "image": "cache/images/Singularity.webp",
+        "code": "OGN-105",
+        "cost": 6,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Sprite Fountain",
+        "count": 1,
+        "image": "cache/images/Sprite_Fountain.webp",
+        "code": "UNL-078",
+        "cost": 2,
+        "type": "Gear",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 2,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ]
+  },
+  {
+    "label": "xuejie buai wole - Changsha Top 4",
+    "player": "xuejie buai wole",
+    "placement": "Top 4",
+    "event": "S3 Regional Open Changsha",
+    "event_date": "2026-06-29",
+    "attendance": null,
+    "weight": 1.5,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-top-4-xuejie-buai-wole",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 2,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 1,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 1,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Maddened Marauder",
+        "count": 1,
+        "image": "cache/images/Maddened_Marauder.webp",
+        "code": "OGN-191",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Retreat",
+        "count": 1,
+        "image": "cache/images/Retreat.webp",
+        "code": "OGN-104",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Thousand-Tailed Watcher",
+        "count": 1,
+        "image": "cache/images/Thousand_Tailed_Watcher.webp",
+        "code": "OGN-116",
+        "cost": 7,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 7
+      },
+      {
+        "name": "Tideturner",
+        "count": 2,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 1,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 2,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Conservatory",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+        "code": "SFD-215",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Sigil of the Storm",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-287.webp",
+        "code": "OGN-287",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Abandon",
+        "count": 1,
+        "image": "cache/images/Abandon.webp",
+        "code": "UNL-131",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Acceptable Losses",
+        "count": 1,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Baron Nashor",
+        "count": 1,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Gust",
+        "count": 1,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Kha'Zix, Mutating Horror",
+        "count": 1,
+        "image": "cache/images/Kha_Zix_Mutating_Horror.webp",
+        "code": "UNL-143",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Retreat",
+        "count": 1,
+        "image": "cache/images/Retreat.webp",
+        "code": "OGN-104",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Time Warp",
+        "count": 1,
+        "image": "cache/images/Time_Warp.webp",
+        "code": "OGN-122",
+        "cost": 10,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 1,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      }
+    ]
+  },
+  {
+    "label": "banma chaowan cc - Changsha 2nd",
+    "player": "banma chaowan cc",
+    "placement": "2nd",
+    "event": "S3 Regional Open Changsha",
+    "event_date": "2026-06-29",
+    "attendance": null,
+    "weight": 2.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-2nd-banma-chaowan-cc",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp",
+        "code": "OGN-093",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Wages of Pain",
+        "count": 2,
+        "image": "cache/images/Wages_of_Pain.webp",
+        "code": "SFD-070",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hallowed Tomb",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-281.webp",
+        "code": "OGN-281",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Baron Nashor",
+        "count": 2,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Last Rites",
+        "count": 1,
+        "image": "cache/images/Last_Rites.webp",
+        "code": "SFD-150",
+        "cost": 3,
+        "type": "Gear",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Moonfall",
+        "count": 1,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Wages of Pain",
+        "count": 1,
+        "image": "cache/images/Wages_of_Pain.webp",
+        "code": "SFD-070",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "gambit ye - Tianjin Top 8",
+    "player": "gambit ye",
+    "placement": "Top 8",
+    "event": "S3 Regional Open Tianjin",
+    "event_date": "2026-06-10",
+    "attendance": null,
+    "weight": 1.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-top-8-gambit-ye",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 2,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 3,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 2,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 1,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 6,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Conservatory",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+        "code": "SFD-215",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Abandon",
+        "count": 1,
+        "image": "cache/images/Abandon.webp",
+        "code": "UNL-131",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Edge of Night",
+        "count": 1,
+        "image": "cache/images/Edge_of_Night.webp",
+        "code": "SFD-139",
+        "cost": 3,
+        "type": "Gear",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Existential Dread",
+        "count": 1,
+        "image": "cache/images/Existential_Dread.webp",
+        "code": "UNL-134",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Moonfall",
+        "count": 1,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Switcheroo",
+        "count": 1,
+        "image": "cache/images/Switcheroo.webp",
+        "code": "SFD-145",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 2,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "grey youchai - Tianjin 2nd",
+    "player": "grey youchai",
+    "placement": "2nd",
+    "event": "S3 Regional Open Tianjin",
+    "event_date": "2026-06-10",
+    "attendance": null,
+    "weight": 2.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-2nd-grey-youchai",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Baron Nashor",
+        "count": 2,
+        "image": "cache/images/Baron_Nashor.webp",
+        "code": "UNL-147",
+        "cost": 10,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 12
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 2,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 1,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Moonfall",
+        "count": 2,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 3,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 2,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Wages of Pain",
+        "count": 2,
+        "image": "cache/images/Wages_of_Pain.webp",
+        "code": "SFD-070",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Conservatory",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+        "code": "SFD-215",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Dr. Mundo, Expert",
+        "count": 1,
+        "image": "cache/images/Dr_Mundo_Expert.webp",
+        "code": "OGN-109",
+        "cost": 8,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 6
+      },
+      {
+        "name": "Moonfall",
+        "count": 1,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Singularity",
+        "count": 2,
+        "image": "cache/images/Singularity.webp",
+        "code": "OGN-105",
+        "cost": 6,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 2,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Wages of Pain",
+        "count": 1,
+        "image": "cache/images/Wages_of_Pain.webp",
+        "code": "SFD-070",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ]
+  },
+  {
+    "label": "fangzhuzhiren - Xian 2nd",
+    "player": "fangzhuzhiren",
+    "placement": "2nd",
+    "event": "S3 Regional Open Xian",
+    "event_date": "2026-06-04",
+    "attendance": null,
+    "weight": 2.0,
+    "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-xian-2nd-fangzhuzhiren",
+    "cards": [
+      {
+        "name": "Acceptable Losses",
+        "count": 2,
+        "image": "cache/images/Acceptable_Losses.webp",
+        "code": "OGN-179",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Diana, Lunari",
+        "count": 1,
+        "image": "cache/images/Diana_Lunari.webp",
+        "code": "UNL-079",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Eclipse",
+        "count": 1,
+        "image": "cache/images/Eclipse.webp",
+        "code": "UNL-063",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Fizz, Trickster",
+        "count": 2,
+        "image": "cache/images/Fizz_Trickster.webp",
+        "code": "SFD-140",
+        "cost": 3,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 3
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Gust",
+        "count": 3,
+        "image": "cache/images/Gust.webp",
+        "code": "OGN-169",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hard Bargain",
+        "count": 1,
+        "image": "cache/images/Hard_Bargain.webp",
+        "code": "SFD-136",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Hwei, Brooding Painter",
+        "count": 3,
+        "image": "cache/images/Hwei_Brooding_Painter.webp",
+        "code": "UNL-080",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 5
+      },
+      {
+        "name": "Moonfall",
+        "count": 3,
+        "image": "cache/images/Moonfall.webp",
+        "code": "UNL-198",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Mind",
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Ravenbloom Student",
+        "count": 3,
+        "image": "cache/images/Ravenbloom_Student.webp",
+        "code": "OGN-103",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Mind"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Ride the Wind",
+        "count": 2,
+        "image": "cache/images/Ride_the_Wind.webp",
+        "code": "OGN-173",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Smoke Screen",
+        "count": 1,
+        "image": "cache/images/Smoke_Screen.webp",
+        "code": "OGN-093",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stacked Deck",
+        "count": 3,
+        "image": "cache/images/Stacked_Deck.webp",
+        "code": "OGN-183",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 2,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Stupefy",
+        "count": 3,
+        "image": "cache/images/Stupefy.webp",
+        "code": "OGN-095",
+        "cost": 1,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Tideturner",
+        "count": 3,
+        "image": "cache/images/Tideturner.webp",
+        "code": "OGN-199",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Traveling Merchant",
+        "count": 2,
+        "image": "cache/images/Traveling_Merchant.webp",
+        "code": "OGN-185",
+        "cost": 2,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 2
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 1,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 1,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      },
+      {
+        "name": "Vex, Cheerless",
+        "count": 2,
+        "image": "cache/images/Vex_Cheerless.webp",
+        "code": "SFD-146",
+        "cost": 5,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 5
+      }
+    ],
+    "runes": [
+      {
+        "name": "Chaos Rune",
+        "count": 7,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+        "code": "OGN-166",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Mind Rune",
+        "count": 5,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+        "code": "OGN-089",
+        "cost": null,
+        "type": "Rune",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      }
+    ],
+    "battlefields": [
+      {
+        "name": "Abandoned Hall",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+        "code": "UNL-205",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Targon's Peak",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+        "code": "OGN-289",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      },
+      {
+        "name": "Treasure Hoard",
+        "count": 1,
+        "image": "https://static.dotgg.gg/riftbound/cards/SFD-220.webp",
+        "code": "SFD-220",
+        "cost": null,
+        "type": "Battlefield",
+        "color": [
+          "Colorless"
+        ],
+        "might": null
+      }
+    ],
+    "sideboard": [
+      {
+        "name": "Abandon",
+        "count": 1,
+        "image": "cache/images/Abandon.webp",
+        "code": "UNL-131",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Flash",
+        "count": 1,
+        "image": "cache/images/Flash.webp",
+        "code": "OGS-011",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Star-Crossed",
+        "count": 1,
+        "image": "cache/images/Star_Crossed.webp",
+        "code": "UNL-128",
+        "cost": 3,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Switcheroo",
+        "count": 1,
+        "image": "cache/images/Switcheroo.webp",
+        "code": "SFD-145",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Chaos"
+        ],
+        "might": null
+      },
+      {
+        "name": "Time Warp",
+        "count": 1,
+        "image": "cache/images/Time_Warp.webp",
+        "code": "OGN-122",
+        "cost": 10,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Turn to Dust",
+        "count": 2,
+        "image": "cache/images/Turn_to_Dust.webp",
+        "code": "UNL-070",
+        "cost": 2,
+        "type": "Spell",
+        "color": [
+          "Mind"
+        ],
+        "might": null
+      },
+      {
+        "name": "Vex, Apathetic",
+        "count": 1,
+        "image": "cache/images/Vex_Apathetic.webp",
+        "code": "UNL-150",
+        "cost": 4,
+        "type": "Unit",
+        "color": [
+          "Chaos"
+        ],
+        "might": 4
+      }
+    ]
+  }
+]
