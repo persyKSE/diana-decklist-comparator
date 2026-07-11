@@ -2556,7 +2556,7 @@ function builderHTML(N) {
 
   // zones: legend / runes+battlefields
   center += '<div class="bzones">';
-  center += '<div class="bzone"><div class="bzone-h">Legend</div><div class="blegend"><img src="cache/images/Diana_Lunari.webp" alt="Diana, Scorn of the Moon" title="Diana, Scorn of the Moon"></div></div>';
+  center += '<div class="bzone"><div class="bzone-h">Legend</div><div class="blegend"><div class="bnoimg" style="height:175px;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:6px;box-shadow:var(--shadow)">Diana, Scorn of the Moon</div></div></div>';
   center += '<div class="bzone"><div class="bzone-h">Runes <span class="z-count">' + runeTotal + '/12</span></div><div class="brunes">';
   const rd = Object.keys(builderRunes);
   rd.forEach((d, i) => {
@@ -2629,7 +2629,7 @@ function bImportApply() {
         name = name.trim();
         let canon = nameLookup[normName(name)] || name;
         
-        if (currentSection === 'maindeck' || currentSection === 'legend' || currentSection === 'champion') {
+        if (currentSection === 'maindeck' || currentSection === 'champion') {
           mainLines.push(count + ' ' + canon);
         } else if (currentSection === 'sideboard') {
           sideLines.push(count + ' ' + canon);
