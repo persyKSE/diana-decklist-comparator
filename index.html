@@ -2605,18 +2605,57 @@ function refreshBuilder() {
 }
 function bImport() {
   showModal('<div class="modal-head"><div class="modal-title">Import a decklist</div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
-    '<p class="sub">One card per line — "3 Gust", "3x Gust" or "Gust x3". This replaces your current main deck.</p>' +
+    '<p class="sub">Paste a full decklist (with headers like MainDeck:, Sideboard:) or just main deck cards.</p>' +
     '<textarea id="bImportText" style="width:100%;min-height:180px;font-family:ui-monospace,Menlo,monospace;font-size:13px;padding:11px;border:1px solid var(--border);border-radius:8px;background:var(--panel2);color:var(--text);">' + escHtml(coachText) + '</textarea>' +
     '<div style="margin-top:12px;display:flex;gap:8px;"><button onclick="bImportApply()">Import</button><button class="ghost" onclick="closeModal()">Cancel</button></div>');
 }
 function bImportApply() {
   const t = document.getElementById('bImportText');
   if (t) {
-    coachText = t.value; saveCoach();
-    const { counts, unknown } = parseDeckText(coachText);
-    const total = Object.values(counts).reduce((a, b) => a + b, 0);
-    toast('Imported ' + total + ' card' + (total === 1 ? '' : 's') +
-      (unknown.length ? ' — ' + unknown.length + ' unrecognized name' + (unknown.length === 1 ? '' : 's') + ' kept as written' : ''));
+    let raw = t.value;
+    if (/(^|\n)(MainDeck|Legend|Champion|Runes|Battlefields|Sideboard):/i.test(raw)) {
+      let mainLines = [], sideLines = [];
+      let newRunes = {}, newBf = [];
+      let currentSection = 'maindeck';
+      raw.split(/\r?\n/).forEach(line => {
+        let trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith('#') || trimmed.startsWith('//')) return;
+        let m = trimmed.match(/^(MainDeck|Legend|Champion|Runes|Battlefields|Sideboard):/i);
+        if (m) { currentSection = m[1].toLowerCase(); return; }
+        
+        let count = 1, name = trimmed, cm;
+        if ((cm = trimmed.match(/^(\d{1,2})\s*[xX]?\s+(.+)$/))) { count = parseInt(cm[1], 10); name = cm[2]; }
+        else if ((cm = trimmed.match(/^(.+?)\s*[xX]\s*(\d{1,2})$/))) { name = cm[1]; count = parseInt(cm[2], 10); }
+        name = name.trim();
+        let canon = nameLookup[normName(name)] || name;
+        
+        if (currentSection === 'maindeck' || currentSection === 'legend' || currentSection === 'champion') {
+          mainLines.push(count + ' ' + canon);
+        } else if (currentSection === 'sideboard') {
+          sideLines.push(count + ' ' + canon);
+        } else if (currentSection === 'runes') {
+          let domain = canon.replace(/Rune/i, '').trim();
+          if (count > 0) newRunes[domain] = count;
+        } else if (currentSection === 'battlefields') {
+          newBf.push(canon);
+        }
+      });
+      coachText = mainLines.join('\n'); saveCoach();
+      sideText = sideLines.join('\n'); try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+      if (Object.keys(newRunes).length > 0) { builderRunes = newRunes; saveRunes(); }
+      if (newBf.length > 0) { builderBf = newBf.slice(0, 3); saveBf(); }
+      
+      const { counts, unknown } = parseDeckText(coachText);
+      const total = Object.values(counts).reduce((a, b) => a + b, 0);
+      toast('Imported: ' + total + ' main, ' + sideLines.length + ' side, ' + Object.keys(newRunes).length + ' runes, ' + newBf.length + ' fields' +
+        (unknown.length ? ' (' + unknown.length + ' unknown main)' : ''));
+    } else {
+      coachText = raw; saveCoach();
+      const { counts, unknown } = parseDeckText(coachText);
+      const total = Object.values(counts).reduce((a, b) => a + b, 0);
+      toast('Imported ' + total + ' card' + (total === 1 ? '' : 's') +
+        (unknown.length ? ' — ' + unknown.length + ' unrecognized name' + (unknown.length === 1 ? '' : 's') + ' kept as written' : ''));
+    }
   }
   closeModal(); render();
 }

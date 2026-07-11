@@ -31,10 +31,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DB_FILE = Path(__file__).parent / "riftbound.db"
-DECKS_JSON = Path(__file__).parent / "decks.json"
-META_JSON = Path(__file__).parent / "meta.json"
-FIELD_JSON = Path(__file__).parent / "field.json"
-IMAGE_DIR = Path(__file__).parent / "cache" / "images"
+# React App Paths
+DECKS_JSON = Path(__file__).parent / "frontend" / "public" / "decks.json"
+META_JSON = Path(__file__).parent / "frontend" / "public" / "meta.json"
+FIELD_JSON = Path(__file__).parent / "frontend" / "public" / "field.json"
+IMAGE_DIR = Path(__file__).parent / "frontend" / "public" / "cache" / "images"
 
 DIANA_ARCHETYPE = "diana-scorn-of-the-moon"
 
@@ -525,7 +526,7 @@ def export_field_json(conn, path=FIELD_JSON):
 def export_cards_json(conn, path=None):
     """Write cards.json/cards.js: full details for every card that appears
     in any Diana deck section — powers the viewer's card-detail modal."""
-    path = path or (Path(__file__).parent / "cards.json")
+    path = path or (Path(__file__).parent / "frontend" / "public" / "cards.json")
     out = {}
     for row in conn.execute(
         "SELECT DISTINCT card_name FROM deck_cards dc JOIN decks d ON d.id = dc.deck_id "

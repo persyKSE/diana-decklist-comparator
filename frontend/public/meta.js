@@ -1,4 +1,4 @@
-{
+window.META = {
  "diana": "diana-scorn-of-the-moon",
  "generated": "2026-07-11T19:58:00+00:00",
  "latestEvent": "2026-06-29",
@@ -577,4 +577,4 @@
    }
   ]
  }
-}
+};

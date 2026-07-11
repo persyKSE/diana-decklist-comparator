@@ -44,9 +44,9 @@ HEADERS = {
 
 scraper = cloudscraper.create_scraper()
 
-CACHE_DIR = Path(__file__).parent / "cache"
+CACHE_DIR = Path(__file__).parent / "frontend" / "public" / "cache"
 IMAGE_DIR = CACHE_DIR / "images"
-OUTPUT_FILE = Path(__file__).parent / "decks.json"
+OUTPUT_FILE = Path(__file__).parent / "frontend" / "public" / "decks.json"
 
 CONFIG_FILE = Path(__file__).parent / "decks_config.json"
 
