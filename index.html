@@ -1315,6 +1315,19 @@ function openingWithMulligan(K, deck) {
   return hit + (1 - hit) * hyperAtLeast(1, K, deck - HAND_SIZE, MULLIGAN_MAX);
 }
 
+// P(you have drawn at least one of `K` relevant copies by the start of turn `t`,
+// off a `deck`-card deck, under the same set-aside mulligan model as the opener:
+// the straight draw sees HAND_SIZE + t cards, and a mulligan buys up to two more
+// early looks (the cards you set aside go to the bottom, so they aren't
+// re-counted). At t = 0 this reduces exactly to openingWithMulligan. This is the
+// bridge between "you own an answer" and "you have it in hand when it matters".
+function pAnswerByTurn(K, deck, t) {
+  if (K <= 0 || deck <= 0) return 0;
+  const seen = cardsSeenByTurn(t, deck);
+  const straight = hyperAtLeast(1, K, deck, seen);
+  return straight + (1 - straight) * hyperAtLeast(1, K, deck - seen, MULLIGAN_MAX);
+}
+
 // Never round a near-certainty up to a flat 100% (or a real chance down to 0%).
 function pct(p) {
   const v = 100 * p;
@@ -1840,6 +1853,7 @@ function archProfile(slug) {
   let units = 0, spells = 0, gear = 0, costSum = 0, costN = 0;
   const mightCounts = {};    // might -> unit copies (summed over their lists)
   const bucket = {};         // "type|might" -> copies, the things you must answer
+  const bucketCost = {};     // "type|might" -> Σ cost×copies, for a per-class landing turn
   decks.forEach(d => Object.entries(d.main).forEach(([name, c]) => {
     const m = FIELD.cards[name] || {};
     if (m.type === 'Unit') { units += c; if (m.might != null) mightCounts[m.might] = (mightCounts[m.might] || 0) + c; }
@@ -1848,11 +1862,15 @@ function archProfile(slug) {
     if (m.cost != null) { costSum += m.cost * c; costN += c; }
     const key = (m.type || 'Other') + '|' + (m.might == null ? '' : m.might);
     bucket[key] = (bucket[key] || 0) + c;
+    if (m.cost != null) bucketCost[key] = (bucketCost[key] || 0) + m.cost * c;
   }));
   const knownUnits = Object.values(mightCounts).reduce((a, b) => a + b, 0);
   const threats = Object.entries(bucket).map(([k, copies]) => {
     const [type, might] = k.split('|');
-    return { type, might: might === '' ? null : +might, copies: copies / n };
+    // Copy-weighted average cost of the class — a proxy for the turn it lands,
+    // which is the turn you need an answer in hand by.
+    const cost = copies && bucketCost[k] != null ? bucketCost[k] / copies : null;
+    return { type, might: might === '' ? null : +might, copies: copies / n, cost };
   });
   return {
     n: decks.length, units: units / n, spells: spells / n, gear: gear / n,
@@ -1912,13 +1930,29 @@ function handleQuality(tags, threat) {
 // Coverage of one archetype: the share of their main deck, copy by copy, that
 // you hold an answer to. No free calibration constants — every number is
 // "how many of their 40 cards can this list interact with".
-function coverageOf(list, p) {
+//
+// `opts.deckSize` opts in to TIMELY coverage: breadth asks only whether you own
+// an answer, which saturates (one counter "covers" all their spells). Timely
+// discounts each threat class by the probability you have actually drawn a
+// relevant answer by the turn it lands, off a deckSize-card deck. That makes
+// copies matter — a lone silver bullet is unreliable, a third copy of it is not
+// — and it can only ever lower breadth, never inflate it.
+function coverageOf(list, p, opts) {
+  const deckSize = opts && opts.deckSize;
   const answers = list.map(c => ({ name: c.name, count: c.count, tags: techTags(c.name) }));
-  let covered = 0;
+  let covered = 0, timely = 0;
   p.threats.forEach(t => {
-    let q = 0;
-    answers.forEach(a => { const x = handleQuality(a.tags, t); if (x > q) q = x; });
+    let q = 0, answerCopies = 0;
+    answers.forEach(a => {
+      const x = handleQuality(a.tags, t);
+      if (x > q) q = x;
+      if (x > 0) answerCopies += a.count;   // every copy that interacts is a card you could draw
+    });
     covered += t.copies * q;
+    if (deckSize && q > 0) {
+      const turn = Math.max(1, Math.round(t.cost != null ? t.cost : 3));
+      timely += t.copies * q * pAnswerByTurn(answerCopies, deckSize, turn);
+    }
   });
   const total = p.mainCopies || 1;
 
@@ -1933,7 +1967,9 @@ function coverageOf(list, p) {
     if (solo > 0) depth += a.count;
     if (solo > best.solo) best = { name: a.name, solo, tag: dominantTag(a.tags, p) };
   });
-  return { coverage: covered / total, ...best, solo: best.solo / total, depth };
+  const coverage = covered / total;
+  return { coverage, timely: timely / total, drawOdds: coverage > 0 ? (timely / total) / coverage : 0,
+    ...best, solo: best.solo / total, depth };
 }
 
 // The tag that explains most of a card's contribution — for the "why" string.
@@ -2074,10 +2110,11 @@ function coverageHTML() {
 
   const rows = tw.rows.map(w => {
     const p = archProfile(w.slug);
-    return { ...w, p, cov: coverageOf(list, p) };
+    return { ...w, p, cov: coverageOf(list, p, { deckSize: DECK_SIZE }) };
   });
   const wSum = rows.reduce((a, r) => a + r.weight, 0) || 1;
   const overall = rows.reduce((a, r) => a + r.weight * r.cov.coverage, 0) / wSum;
+  const overallTimely = rows.reduce((a, r) => a + r.weight * r.cov.timely, 0) / wSum;
   const gaps = [...rows].filter(r => r.cov.coverage < 0.5).slice(0, 5);
 
   const sideNames = new Set(list.map(c => c.name));
@@ -2086,18 +2123,23 @@ function coverageHTML() {
   const haveLog = loadMatches().length > 0;
 
   let html = '<div class="summary-box"><strong>' + (mine ? 'Your' : 'The consensus') + ' ' + nCards + '-card sideboard holds <em>some</em> answer to ' +
-    pct(overall) + ' of what the field plays.</strong> ' +
-    'For a card drawn at random from an opponent\'s main deck, that is the chance your rules text addresses it — averaged across archetypes weighted by ' +
+    pct(overall) + ' of what the field plays' +
+    ' — but weighting each of their cards by how likely you have actually <em>drawn</em> a relevant answer by the turn it lands, that falls to ' +
+    pct(overallTimely) + '.</strong> ' +
+    'The first number (<strong>breadth</strong>) is the chance your rules text addresses a random card from an opponent\'s main deck, averaged across archetypes weighted by ' +
     'how much of the top-cut field each one is <em>and</em> how well it converts into Day 2, so a rare deck that wins counts for more than a popular deck that folds. ' +
     (tw.modelOn ? '<strong>Field model: ' + escHtml(fieldModelLabel()) + '</strong> — effective sample ' + tw.effN.toFixed(1) + ' of ' + tw.rawN + ' lists. ' : '') +
     'The mirror is in the table too: other Diana players are part of your expected field.<br><br>' +
-    '<strong>This is breadth, not sufficiency.</strong> It asks whether you hold <em>any</em> answer to each of their cards — never whether you hold <em>enough</em> of them, ' +
-    'drew one in time, or could afford to cast it. A single counterspell "covers" all ' + Math.round(rows[0].p.spells) + ' spells ' + escHtml(FIELD.archetypes[rows[0].slug].name) +
-    ' runs. Read the <em>Answers</em> column for how many relevant cards you actually have, ' +
-    'and the Consistency section on the Build view for whether you will see them. It is not, and cannot be, a win rate: no per-match data is published for these events.</div>';
+    'The gap between the two columns is your <strong>draw problem</strong>. Breadth counts a lone silver bullet the same as a full playset; the <strong>Timely</strong> column does not — ' +
+    'a single counterspell "covers" all ' + Math.round(rows[0].p.spells) + ' spells ' + escHtml(FIELD.archetypes[rows[0].slug].name) +
+    ' runs, but off a 40-card deck you will rarely have it in hand on the turn they cast one. Adding copies closes the gap: each extra copy raises the odds you have drawn one in time. ' +
+    'Timely already folds the <em>Answers</em> depth column into hypergeometric draw odds (with mulligan). ' +
+    'Neither is a win rate — they cannot see sequencing, tempo, or your opponent\'s line: no per-match data is published for these events.</div>';
 
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th class="num">Conv.</th>' +
-    '<th>Their 40</th><th>Your best answer</th><th>Breadth</th><th class="num">Answers</th>' +
+    '<th>Their 40</th><th>Your best answer</th><th title="Do you hold any answer to each of their cards?">Breadth</th>' +
+    '<th title="Breadth discounted by the chance you have drawn a relevant answer by the turn each threat lands. Off a 40-card deck, with mulligan.">Timely</th>' +
+    '<th class="num">Answers</th>' +
     (haveLog ? '<th class="num" title="Your logged record vs this archetype (Log view)">You</th>' : '') + '</tr></thead><tbody>';
   rows.slice(0, 13).forEach(r => {
     const a = FIELD.archetypes[r.slug];
@@ -2107,6 +2149,7 @@ function coverageHTML() {
         '<span class="ci">' + escHtml(answerWhy(r.cov.name, r.cov.tag, r.p)) + '</span>'
       : '<span style="color:var(--danger)">nothing</span>';
     const c = r.cov.coverage;
+    const tm = r.cov.timely;
     const rec = haveLog ? matchRecord(r.slug) : null;
     html += '<tr' + (r.mirror ? ' style="font-weight:600"' : '') + '><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' +
       escHtml(r.mirror ? 'Diana — the mirror ★' : a.name) + '</span></td>' +
@@ -2116,6 +2159,8 @@ function coverageHTML() {
       '<td>' + ans + '</td>' +
       '<td title="' + attr((c * r.p.mainCopies).toFixed(0) + ' of their ' + r.p.mainCopies.toFixed(0) + ' main-deck cards, quality-weighted') + '">' +
       '<span class="incl-bar" style="width:' + Math.round(90 * c) + 'px;background:' + pctColor(c) + '"></span>' + pct(c) + '</td>' +
+      '<td title="' + attr(pct(r.cov.drawOdds) + ' of that breadth arrives in time — you have drawn a relevant answer by the turn each threat lands. Off a 40-card deck, with mulligan.') + '">' +
+      '<span class="incl-bar" style="width:' + Math.round(90 * tm) + 'px;background:' + pctColor(tm) + '"></span>' + pct(tm) + '</td>' +
       '<td class="num" title="' + attr('Cards in this sideboard that interact with them at all. Breadth says you hold an answer; this says how many.') + '" ' +
       'style="color:' + (r.cov.depth >= 3 ? 'var(--muted)' : 'var(--flex)') + '">' + r.cov.depth + '</td>' +
       (haveLog ? '<td class="num" style="color:' + (rec.n ? (rec.w / rec.n >= 0.5 ? 'var(--lock)' : 'var(--danger)') : 'var(--muted)') + '">' +
@@ -2130,7 +2175,7 @@ function coverageHTML() {
       const best = pool.map(n => ({ n, gain: marginalGain(n, list, r.p, r.cov.coverage) }))
         .filter(x => x.gain > 0.02).sort((x, y) => y.gain - x.gain).slice(0, 3);
       html += '<div class="pkg-box"><strong>' + escHtml(a.name) + '</strong> — answers to ' + pct(r.cov.coverage) + ' of their 40 (' +
-        r.cov.depth + ' relevant card' + (r.cov.depth === 1 ? '' : 's') + '), ' +
+        r.cov.depth + ' relevant card' + (r.cov.depth === 1 ? '' : 's') + ', ' + pct(r.cov.timely) + ' drawn in time), ' +
         pct(r.share) + ' of the field' + (r.conv ? ' at ' + r.conv.index.toFixed(2) + '× conversion' : '') + '.<br>' +
         '<span style="color:var(--muted);font-size:12.5px;">' + escHtml(r.cov.name
           ? 'Best you have is ' + r.cov.name + ' — ' + answerWhy(r.cov.name, r.cov.tag, r.p) + '.'
@@ -2156,13 +2201,17 @@ function coverageHTML() {
     '<p>Then, for every card copy in the opposing archetype\'s averaged main deck, we ask whether anything in your sideboard handles <em>that specific card</em>: ' +
     'a unit of 4 Might needs something that deals 4, kills outright, or shrinks it by 4; a Gear needs gear removal; a Spell needs a counter. ' +
     'Clean answers count 1, bounce 0.6, stun 0.35, a non-lethal combat trick 0.25. Coverage is the quality-weighted share of their 40 cards you can touch.</p>' +
-    '<p>There are no tuning constants beyond those four discounts: the denominator is literally their decklist. The headline number is the per-archetype breadths ' +
+    '<p>There are no tuning constants beyond those four discounts: the denominator is literally their decklist. The breadth headline is the per-archetype breadths ' +
     'averaged with weights of field share × Day 1→Day 2 conversion index.</p>' +
-    '<p><strong>The metric saturates by design.</strong> Because it asks "do you hold <em>any</em> answer to this card", one counterspell covers every spell they run and one ' +
-    'six-damage spell covers nearly every unit. A sideboard with one of each type will score very high on breadth while being far too thin to actually play — which is why the ' +
-    '<em>Answers</em> column reports how many relevant cards you hold, and why it is worth reading the two together. Breadth is good at finding holes; it is bad at telling you that you have none.</p>' +
-    '<p><strong>What this is not:</strong> a win rate. It cannot see sequencing, board state, tempo, or whether you drew the card. It answers one narrow, checkable ' +
-    'question — do you own a card whose text addresses what they play? — and nothing else. Per-match results are not published for any of these events.</p></details>';
+    '<p><strong>Breadth saturates by design.</strong> Because it asks "do you hold <em>any</em> answer to this card", one counterspell covers every spell they run and one ' +
+    'six-damage spell covers nearly every unit. A sideboard with one of each type scores very high on breadth while being far too thin to actually play. The <strong>Timely</strong> ' +
+    'column is the correction: for each of their cards we take the turn it lands (its copy-weighted average cost) and ask, off a 40-card deck with the Riftbound set-aside mulligan, ' +
+    'how likely you have already drawn one of your relevant answer copies by then — then multiply breadth by that probability. One counter vs twelve spells still counts once, but ' +
+    'now it is discounted by the low odds of holding your single copy on their spell turn; a second and third copy raise the odds and lift the number. That is the same exact ' +
+    'hypergeometric maths (with mulligan) the Consistency section on Build uses, so depth stops being a footnote and becomes part of the score.</p>' +
+    '<p><strong>What this is not:</strong> a win rate. Even Timely cannot see sequencing, board state, tempo, mulligan decisions, or whether the answer you drew was castable that turn. ' +
+    'It answers two narrow, checkable questions — do you own a card whose text addresses what they play, and are you likely to have drawn it in time? — and nothing else. ' +
+    'Per-match results are not published for any of these events.</p></details>';
   return html;
 }
 
@@ -3353,7 +3402,7 @@ function renderMirrorPrep() {
   const tw = threatWeights({ includeMirror: true });
   const row = tw.rows.find(r => r.mirror);
   const { list, source } = currentSideboard();
-  const cov = coverageOf(list, p);
+  const cov = coverageOf(list, p, { deckSize: DECK_SIZE });
 
   let html = '<h2>Mirror prep</h2>';
   html += '<p class="sub">Everyone netdecking the same results converges on the same 40 — so the mirror is the matchup you can prepare for with the most certainty. This section runs the coverage engine against the Diana field itself.</p>';
@@ -3364,6 +3413,7 @@ function renderMirrorPrep() {
     (rank ? ' — threat rank <strong>#' + rank + '</strong> of ' + tw.rows.length : '') +
     '. Their board: ' + p.units.toFixed(1) + ' units / ' + p.spells.toFixed(1) + ' spells / ' + p.gear.toFixed(1) + ' gear per deck. ' +
     'Against it, ' + escHtml(source) + ' holds answers to <strong style="color:' + pctColor(cov.coverage) + '">' + pct(cov.coverage) + '</strong> of the 40' +
+    ' (<strong style="color:' + pctColor(cov.timely) + '">' + pct(cov.timely) + '</strong> drawn in time)' +
     (cov.name ? ' — best is <strong>' + escHtml(cov.name) + '</strong> (' + escHtml(answerWhy(cov.name, cov.tag, p)) + ')' : '') + '.</div>';
 
   // What removal size actually lines up in the mirror.
@@ -3416,11 +3466,12 @@ function renderArchDetail(slug) {
   // What answers them — the mirror of the coverage table, for one archetype.
   if (!isDiana) {
     const { list, source } = currentSideboard();
-    const cov = coverageOf(list, p);
+    const cov = coverageOf(list, p, { deckSize: DECK_SIZE });
     html += '<div class="summary-box">Against them, ' + escHtml(source) + ' holds some answer to <strong style="color:' + pctColor(cov.coverage) + '">' + pct(cov.coverage) + '</strong> of their 40, ' +
-      'across <strong>' + cov.depth + '</strong> relevant card' + (cov.depth === 1 ? '' : 's') + '. ' +
+      'across <strong>' + cov.depth + '</strong> relevant card' + (cov.depth === 1 ? '' : 's') + ' — ' +
+      '<strong style="color:' + pctColor(cov.timely) + '">' + pct(cov.timely) + '</strong> of it drawn in time. ' +
       (cov.name ? 'The best is <strong>' + escHtml(cov.name) + '</strong> — ' + escHtml(answerWhy(cov.name, cov.tag, p)) + '.' : 'Nothing in it interacts with them.') +
-      ' <span style="color:var(--muted)">Breadth from rules text vs their board, not a win rate — see the Meta index for how.</span></div>';
+      ' <span style="color:var(--muted)">Breadth from rules text vs their board, timely discounts it by draw odds — not a win rate. See the Meta index for how.</span></div>';
   }
 
   // Unit sizes: the single most actionable thing about an opposing deck.
