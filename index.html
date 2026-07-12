@@ -390,6 +390,8 @@
   .bsearch .bs-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gold); margin: 8px 0 3px; font-weight: 600; }
   .bsearch .bs-label:first-child { margin-top: 0; }
   .bsearch input, .bsearch select { width: 100%; padding: 6px 8px; font-size: 12.5px; border-radius: 3px; border: 1px solid var(--border); background: var(--bg2); color: var(--text); }
+  .bs-facets { display: flex; flex-wrap: wrap; gap: 4px; }
+  .bs-facets .chip { font-size: 11px; padding: 3px 8px; }
   .bs-range { display: flex; align-items: center; gap: 5px; }
   .bs-range input { width: 100%; }
   .bs-range span { color: var(--muted); font-size: 11px; }
@@ -516,11 +518,14 @@ let nameLookup = {};
 let nonMainNames = new Set();
 let currentView = 'build';
 let clusterOptions = [];  // {gi, name, n} over the full set
-let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false, community: false };
+let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false, community: false, ladder: false };
 // Decks visitors submitted from the builder (Cloudflare /api/submissions).
 // Kept apart from the scraped tournament data: they join globalDecks only
 // when the "community decks" filter chip is on, and never join clustering.
 let communityDecks = [];
+// Ladder brews: scraped Diana lists with no verified tournament placement.
+// Same rules as community decks — opt-in via a filter chip, never clustered.
+let ladderDecks = [];
 let coachTimer = null;
 let packagesCache = null;   // findPackages over the active set, shared by views
 let paletteIndex = 0;       // highlighted row in the command palette
@@ -990,6 +995,7 @@ function coachInputChanged() {
 }
 
 function setCoach(text) {
+  if (typeof bCheckpoint === 'function' && text !== coachText) bCheckpoint();
   coachText = text; saveCoach();
   const ta = document.getElementById('coachInput'); if (ta) ta.value = text;
   // The builder grid renders this same list, so keep it in sync when the
@@ -1643,7 +1649,8 @@ function setDateFilter(which, val) { filters[which] = val; applyFilters(); }
 function toggleDedupe() { filters.dedupe = !filters.dedupe; applyFilters(); }
 function toggleFieldWeight() { filters.fieldWeight = !filters.fieldWeight; applyFilters(); }
 function toggleCommunity() { filters.community = !filters.community; applyFilters(); }
-function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false, community: false }; applyFilters(); }
+function toggleLadder() { filters.ladder = !filters.ladder; applyFilters(); }
+function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false, community: false, ladder: false }; applyFilters(); }
 
 // A result from a 1900-player event is stronger evidence than the same
 // result from a 1100-player one. Scale placement weight by sqrt of field
@@ -1674,7 +1681,9 @@ function dedupeByPlayer(decks) {
 
 function applyFilters() {
   changelogCache = null;   // field-size weighting feeds the replayed prototypes
-  const src = filters.community ? allDecks.concat(communityDecks) : allDecks;
+  let src = allDecks;
+  if (filters.community) src = src.concat(communityDecks);
+  if (filters.ladder) src = src.concat(ladderDecks);
   globalDecks = src.filter(deckPasses);
   if (filters.dedupe) globalDecks = dedupeByPlayer(globalDecks);
   rankedCards = computeStats(globalDecks);
@@ -1706,9 +1715,10 @@ function renderFilterBar() {
     (dupPlayers ? ' (−' + dupPlayers + ')' : '') + '</span>' +
     (haveAttendance ? '<span class="chip' + (filters.fieldWeight ? ' on' : '') + '" onclick="toggleFieldWeight()" title="Scale each deck&#39;s weight by the square root of (field size ÷ median field size), so a result from a 1900-player event counts for more than the same result from a 1100-player one">weight by field size</span>' : '') +
     (communityDecks.length ? '<span class="chip' + (filters.community ? ' on' : '') + '" onclick="toggleCommunity()" title="Include decks visitors submitted from the builder. They carry no tournament result, so treat the consensus math with them on as community opinion, not results evidence">community decks (' + communityDecks.length + ')</span>' : '') +
+    (ladderDecks.length ? '<span class="chip' + (filters.ladder ? ' on' : '') + '" onclick="toggleLadder()" title="Include scraped Mobalytics ladder brews — Diana lists with no verified tournament placement. Useful for spotting emerging tech early; they count half weight and never join the clustering">ladder brews (' + ladderDecks.length + ')</span>' : '') +
     '</div>';
-  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe || filters.fieldWeight || filters.community;
-  const poolN = allDecks.length + (filters.community ? communityDecks.length : 0);
+  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe || filters.fieldWeight || filters.community || filters.ladder;
+  const poolN = allDecks.length + (filters.community ? communityDecks.length : 0) + (filters.ladder ? ladderDecks.length : 0);
   const small = globalDecks.length < 20
     ? '<span style="color:var(--flex)"> · small sample — inclusion %s are noisy; see the ± intervals in Analyze</span>' : '';
   const upd = (window.META && META.generated)
@@ -2210,6 +2220,10 @@ function fieldLatestDate() {
 }
 
 function fieldDeckWeight(d) {
+  // Event showcase lists ("Best of <event>") are decklist evidence, not
+  // results evidence: they enrich archetype profiles (archProfile reads every
+  // list) but carry zero weight in field share and threat.
+  if (d.placement === 'Best of') return 0;
   if (fieldModel.region && regionOf(d.event) !== fieldModel.region) return 0;
   if (!fieldModel.recency) return 1;
   // Undated lists can't prove they're recent; treat them as very old.
@@ -2248,7 +2262,8 @@ function threatWeights(opts) {
       const conv = archConversion(slug);
       const share = totalW ? wOf[slug] / totalW : 0;
       return {
-        slug, n: FIELD.archetypes[slug].decks.length, effN: wOf[slug], share, conv,
+        slug, n: FIELD.archetypes[slug].decks.filter(d => d.placement !== 'Best of').length,
+        nAll: FIELD.archetypes[slug].decks.length, effN: wOf[slug], share, conv,
         weight: share * (conv ? conv.index : 1), mirror: slug === FIELD.diana,
       };
     })
@@ -2279,6 +2294,7 @@ function addToSideboard(name) {
   const counts = {};
   list.forEach(c => counts[c.name] = c.count);
   counts[name] = (counts[name] || 0) + 1;
+  bCheckpoint();
   sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n');
   try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
   const ta = document.getElementById('sideInput'); if (ta) ta.value = sideText;
@@ -2334,7 +2350,8 @@ function coverageHTML() {
     '<th title="Breadth discounted by the chance you have drawn a relevant answer by the turn each threat lands. Off a 40-card deck, with mulligan.">Timely G1</th>' +
     '<th title="Timely coverage against their post-board pool — their main plus the sideboard tech they can bring in for games 2-3. Only shown for archetypes with 3+ scraped lists. A drop means their board adds threats you cannot answer.">Post-SB</th>' +
     '<th class="num">Answers</th>' +
-    (haveLog ? '<th class="num" title="Your logged record vs this archetype (Log view)">You</th>' : '') + '</tr></thead><tbody>';
+    (haveLog ? '<th class="num" title="Your logged record vs this archetype (Log view)">You</th>' : '') +
+    '<th class="num" title="Log a game vs this archetype without leaving this page. Play/draw and notes can be added later in the Log view.">Log</th></tr></thead><tbody>';
   rows.slice(0, 13).forEach(r => {
     const a = FIELD.archetypes[r.slug];
     const board = r.p.units.toFixed(1) + ' units / ' + r.p.spells.toFixed(1) + ' spells / ' + r.p.gear.toFixed(1) + ' gear · avg cost ' + r.p.avgCost.toFixed(2);
@@ -2367,7 +2384,10 @@ function coverageHTML() {
       '<td class="num" title="' + attr('Cards in this sideboard that interact with them at all. Breadth says you hold an answer; this says how many.') + '" ' +
       'style="color:' + (r.cov.depth >= 3 ? 'var(--muted)' : 'var(--flex)') + '">' + r.cov.depth + '</td>' +
       (haveLog ? '<td class="num" style="color:' + (rec.n ? (rec.w / rec.n >= 0.5 ? 'var(--lock)' : 'var(--danger)') : 'var(--muted)') + '">' +
-        (rec.n ? rec.w + '–' + rec.l : '—') + '</td>' : '') + '</tr>';
+        (rec.n ? rec.w + '–' + rec.l : '—') + '</td>' : '') +
+      '<td class="num" style="white-space:nowrap">' +
+      '<button class="mini" onclick="quickLog(\'' + r.slug + '\',\'W\')" title="Log a win vs ' + attr(a.name) + '">W</button> ' +
+      '<button class="mini" onclick="quickLog(\'' + r.slug + '\',\'L\')" title="Log a loss vs ' + attr(a.name) + '">L</button></td></tr>';
   });
   html += '</tbody></table></div>';
 
@@ -2548,7 +2568,7 @@ let builderPoolCache = null;
 let builderRunes = null;     // {Chaos:7, Mind:5, …}, persisted 'ddl-runes'
 let builderBf = null;        // chosen battlefield names, persisted 'ddl-bf'
 let builderPreview = null;   // card name shown large in the left pane
-let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: 'cost', page: 0 };
+let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', tag: '', sort: 'cost', page: 0 };
 const BUILDER_PAGE = 18;   // keep the DOM light: 18 card images, not 296
 // Coarse pointer = no right-click, no shift-click, no hover: builder taps
 // open an action sheet instead. `let` so tests can force it on.
@@ -2590,11 +2610,55 @@ function bTotal(counts) { return Object.values(counts).reduce((a, b) => a + b, 0
 function writeMain(counts) { coachText = normalizeCoach(counts); saveCoach(); }
 function writeSide(counts) { sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n'); try { localStorage.setItem('ddl-side', sideText); } catch (e) {} }
 
+/* ---- Builder undo ----
+   Every tile is one misclick away from silently deleting a card. Snapshot the
+   four pieces of builder state before each mutation; Ctrl/Cmd+Z walks back,
+   Ctrl/Cmd+Shift+Z (or Ctrl+Y) walks forward. Session-only by design — undo
+   history across reloads would surprise more than it helps. */
+const B_UNDO_MAX = 30;
+let bUndoStack = [], bRedoStack = [];
+function bSnapshot() { return { main: coachText, side: sideText, runes: { ...builderRunes }, bf: [...builderBf] }; }
+function bCheckpoint() {
+  bUndoStack.push(bSnapshot());
+  if (bUndoStack.length > B_UNDO_MAX) bUndoStack.shift();
+  bRedoStack = [];   // a new edit invalidates the redo branch
+}
+function bRestore(s) {
+  coachText = s.main; saveCoach();
+  sideText = s.side; try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+  builderRunes = { ...s.runes }; saveRunes();
+  builderBf = [...s.bf]; saveBf();
+  const ta = document.getElementById('coachInput'); if (ta) ta.value = coachText;
+  refreshBuilder();
+}
+function bUndo() {
+  if (!bUndoStack.length) { toast('Nothing to undo'); return; }
+  bRedoStack.push(bSnapshot());
+  bRestore(bUndoStack.pop());
+}
+function bRedo() {
+  if (!bRedoStack.length) { toast('Nothing to redo'); return; }
+  bUndoStack.push(bSnapshot());
+  bRestore(bRedoStack.pop());
+}
+document.addEventListener('keydown', e => {
+  if (!(e.ctrlKey || e.metaKey)) return;
+  const k = e.key.toLowerCase();
+  if (k !== 'z' && k !== 'y') return;
+  const t = e.target;
+  // Inputs keep their native text undo; we only own clicks on the grid.
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+  if (!document.getElementById('deckBuilder')) return;   // builder view only
+  e.preventDefault();
+  if (k === 'y' || e.shiftKey) bRedo(); else bUndo();
+});
+
 function bAdd(name, sec) {
   const counts = sec === 'side' ? bSide() : bMain();
   if ((counts[name] || 0) >= 3) { toast(shortName(name) + ' is already at 3 copies'); return; }
   if (sec !== 'side' && bTotal(bMain()) >= 40) { toast('Main deck is full (40)'); return; }
   if (sec === 'side' && bTotal(bSide()) >= 8) { toast('Sideboard is full (8)'); return; }
+  bCheckpoint();
   counts[name] = (counts[name] || 0) + 1;
   sec === 'side' ? writeSide(counts) : writeMain(counts);
   refreshBuilder();
@@ -2612,6 +2676,7 @@ function bAddPackage(name) {
     }
   });
   if (added > 0) {
+    bCheckpoint();
     writeMain(counts);
     toast('Added ' + added + ' package cards to main deck');
     refreshBuilder();
@@ -2622,6 +2687,7 @@ function bAddPackage(name) {
 function bRemove(name, sec) {
   const counts = sec === 'side' ? bSide() : bMain();
   if (!counts[name]) return;
+  bCheckpoint();
   if (--counts[name] <= 0) delete counts[name];
   sec === 'side' ? writeSide(counts) : writeMain(counts);
   refreshBuilder();
@@ -2738,6 +2804,7 @@ function bMove(name, from) {
   if (!src[name]) return;
   if (from === 'side' && bTotal(bMain()) >= 40) { toast('Main deck is full (40)'); return; }
   if (from === 'main' && bTotal(bSide()) >= 8) { toast('Sideboard is full (8)'); return; }
+  bCheckpoint();
   if (--src[name] <= 0) delete src[name];
   dst[name] = (dst[name] || 0) + 1;
   if (from === 'side') { writeSide(src); writeMain(dst); } else { writeMain(src); writeSide(dst); }
@@ -2746,19 +2813,22 @@ function bMove(name, from) {
 function bRuneXfer(into) {   // pull 1 from the other domain into `into`
   const other = Object.keys(builderRunes).find(k => k !== into && builderRunes[k] > 0);
   if (!other) return;
+  bCheckpoint();
   builderRunes[other]--; builderRunes[into] = (builderRunes[into] || 0) + 1;
   saveRunes(); refreshBuilder();
 }
 function bRuneOut(from) {    // push 1 from `from` into the other domain
   const other = Object.keys(builderRunes).find(k => k !== from);
   if (!other || (builderRunes[from] || 0) <= 0) return;
+  bCheckpoint();
   builderRunes[from]--; builderRunes[other]++;
   saveRunes(); refreshBuilder();
 }
 function bToggleBf(name) {
   const i = builderBf.indexOf(name);
+  if (i < 0 && builderBf.length >= 3) { toast('Pick at most 3 battlefields'); return; }
+  bCheckpoint();
   if (i >= 0) builderBf.splice(i, 1);
-  else if (builderBf.length >= 3) { toast('Pick at most 3 battlefields'); return; }
   else builderBf.push(name);
   saveBf(); refreshBuilder();
 }
@@ -2767,6 +2837,7 @@ function bLoadConsensus() {
   const variantIndex = sel ? parseInt(sel.value, 10) : 0;
   const v = consensusVariants[variantIndex] || consensusVariants[0];
   const ex = v.ex;
+  bCheckpoint();
   writeMain(Object.fromEntries(v.proto.map(c => [c.name, c.copies])));
   writeSide(Object.fromEntries(ex.side.map(c => [c.name, c.copies])));
   builderRunes = {}; ex.runes.forEach(r => { if (r.count > 0) builderRunes[shortName(r.name).replace(' Rune', '')] = r.count; });
@@ -2777,6 +2848,7 @@ function bLoadConsensus() {
 }
 function bClear() {
   if (!coachText.trim() && !sideText.trim()) return;
+  bCheckpoint();
   coachText = ''; sideText = ''; saveCoach();
   try { localStorage.setItem('ddl-side', ''); } catch (e) {}
   toast('Deck cleared');
@@ -2785,12 +2857,27 @@ function bClear() {
 function bSetSort(v) { builderSearch.sort = v; renderBuilderResults(); }
 
 /* search */
+// Role facets: what a card DOES, from the same tag passes the Meta analysis
+// runs. "Show me every cheap answer" is the question a builder actually asks.
+const B_FACETS = {
+  removal: { label: 'Removal', test: n => techTags(n).some(t => ['kill', 'damage', 'killSmall', 'shrink', 'sweep', 'bounce', 'stun'].includes(t.tag)) },
+  counter: { label: 'Counters', test: n => techTags(n).some(t => t.tag === 'counter') },
+  draw:    { label: 'Draw', test: n => econTags(n).length > 0 },
+  trick:   { label: 'Tricks', test: n => protectTags(n).some(t => t.tag === 'pump') || techTags(n).some(t => t.tag === 'shrinkSoft') },
+  gear:    { label: 'Gear hate', test: n => techTags(n).some(t => t.tag === 'gearHate') },
+};
+function bSetFacet(k) {
+  builderSearch.tag = builderSearch.tag === k ? '' : k;
+  builderSearch.page = 0;
+  refreshBuilder();
+}
 function builderFiltered() {
   const s = builderSearch, q = x => (x || '').toLowerCase();
   const list = builderPool().filter(c => {
     if (s.name && !q(c.name).includes(q(s.name))) return false;
     if (s.text && !q(c.effect).includes(q(s.text))) return false;
     if (s.type && c.type !== s.type) return false;
+    if (s.tag && !(B_FACETS[s.tag] && B_FACETS[s.tag].test(c.name))) return false;
     if (s.color && !(c.color || []).includes(s.color)) return false;
     if (s.emin !== '' && (c.cost == null || c.cost < +s.emin)) return false;
     if (s.emax !== '' && (c.cost == null || c.cost > +s.emax)) return false;
@@ -2813,7 +2900,7 @@ function bReadSearch() {
   builderSearch.page = 0;
   renderBuilderResults();
 }
-function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', sort: builderSearch.sort, page: 0 }; refreshBuilder(); }
+function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', tag: '', sort: builderSearch.sort, page: 0 }; refreshBuilder(); }
 function bPage(delta) {
   const pages = Math.max(1, Math.ceil(builderFiltered().length / BUILDER_PAGE));
   builderSearch.page = Math.max(0, Math.min(pages - 1, builderSearch.page + delta));
@@ -2875,6 +2962,9 @@ function builderSearchHTML() {
     '<div class="bs-label">Card name</div><input id="bsName" value="' + attr(s.name) + '" placeholder="Search by name…" oninput="bReadSearch()">' +
     '<div class="bs-label">Card text</div><input id="bsText" value="' + attr(s.text) + '" placeholder="Search in rules text…" oninput="bReadSearch()">' +
     '<div class="bs-label">Type</div><select id="bsType" onchange="bReadSearch()">' + ['', 'Unit', 'Spell', 'Gear'].map(t => opt(t, s.type, t || 'All types')).join('') + '</select>' +
+    '<div class="bs-label" title="What the card does, from its rules text — the same tags the Meta coverage analysis reads">Role</div>' +
+    '<div class="bs-facets">' + Object.entries(B_FACETS).map(([k, f]) =>
+      '<span class="chip' + (s.tag === k ? ' on' : '') + '" onclick="bSetFacet(\'' + k + '\')">' + f.label + '</span>').join('') + '</div>' +
     '<div class="bs-label">Domain</div><select id="bsColor" onchange="bReadSearch()">' + ['', ...DOMAINS, 'Colorless'].map(t => opt(t, s.color, t || 'All domains')).join('') + '</select>' +
     '<div class="bs-label">Energy</div><div class="bs-range"><input id="bsEmin" type="number" min="0" max="12" value="' + attr(s.emin) + '" placeholder="min" oninput="bReadSearch()"><span>to</span><input id="bsEmax" type="number" min="0" max="12" value="' + attr(s.emax) + '" placeholder="max" oninput="bReadSearch()"></div>' +
     '<div class="bs-label">Might</div><div class="bs-range"><input id="bsMmin" type="number" min="0" max="12" value="' + attr(s.mmin) + '" placeholder="min" oninput="bReadSearch()"><span>to</span><input id="bsMmax" type="number" min="0" max="12" value="' + attr(s.mmax) + '" placeholder="max" oninput="bReadSearch()"></div>' +
@@ -2907,6 +2997,7 @@ function builderHTML(N) {
     '<button onclick="shareDeckLink()" title="Copy a URL with your list encoded">Share link</button>' +
     '<button onclick="bImport()" title="Paste a decklist to import">Import list</button>' +
     '<button onclick="submitToMeta()" title="Share this 40-card deck to the public community pool (anonymous). Community decks show up for everyone via the filter bar chip">Share to community</button>' +
+    '<button class="ghost" onclick="bUndo()" title="Undo the last builder change (Ctrl/Cmd+Z)">Undo</button>' +
     '<button class="ghost" onclick="bHelp()">Shortcuts</button>' +
     '<button class="ghost" onclick="bClear()" title="Empty the main deck and sideboard">Clear</button>' +
     '</div>' +
@@ -3104,7 +3195,8 @@ function bHelp() {
       '<li><kbd class="k">Click</kbd> — add one copy (up to 3)</li>' +
       '<li><kbd class="k">Right-click</kbd> — remove one copy</li>' +
       '<li><kbd class="k">Shift</kbd> + <kbd class="k">Click</kbd> — move between main deck and sideboard</li>' +
-      '<li><kbd class="k">Hover</kbd> — preview the card on the left</li></ul>' +
+      '<li><kbd class="k">Hover</kbd> — preview the card on the left</li>' +
+      '<li><kbd class="k">Ctrl/Cmd</kbd> + <kbd class="k">Z</kbd> — undo (<kbd class="k">Shift</kbd> to redo)</li></ul>' +
       '<h3>Search results</h3><ul>' +
       '<li><kbd class="k">Click</kbd> — add to the main deck</li>' +
       '<li><kbd class="k">Right-click</kbd> — add to the sideboard</li>' +
@@ -3476,6 +3568,21 @@ function logDelete(id) {
   render();
 }
 
+// One-tap logging from the Meta coverage table — right after a game you are
+// looking at the matchup row, not at the Log view. Same storage, no detail
+// fields; add play/draw or notes later from the Log view if you care.
+function quickLog(slug, result) {
+  const m = loadMatches();
+  m.push({
+    id: Date.now() + '-' + Math.random().toString(36).slice(2, 7),
+    date: new Date().toISOString().slice(0, 10),
+    arch: slug, result, play: null, mull: null, deck: null, notes: null,
+  });
+  writeMatches(m);
+  toast((result === 'W' ? 'Win' : 'Loss') + ' vs ' + (FIELD.archetypes[slug] ? FIELD.archetypes[slug].name : slug) + ' logged');
+  const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML();
+}
+
 function exportMatches() {
   const blob = new Blob([JSON.stringify(loadMatches(), null, 1)], { type: 'application/json' });
   const a = document.createElement('a');
@@ -3669,8 +3776,8 @@ function renderArchList() {
   const maxW = weights.length ? weights[0].weight : 1;
 
   let html = renderFieldModelBar();
-  html += '<h2>The field</h2><p class="sub">Every archetype scraped from the same top cuts as the Diana lists — ' + totalAll +
-    ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Shares are of the whole field (Diana included) under the model above. Click an archetype to see what it plays.</p>';
+  html += '<h2>The field</h2><p class="sub">Every archetype scraped from the same events as the Diana lists — ' + totalAll +
+    ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes: the top cuts plus each event\'s "Best of" showcases. Showcase lists enrich what we know each archetype <em>plays</em> (their averaged decklists, sideboards, coverage profiles) but carry <strong>zero weight</strong> in share and threat — those count top-cut results only. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Shares are of the whole field (Diana included) under the model above. Click an archetype to see what it plays.</p>';
 
   const dConv = archConversion(FIELD.diana);
   if (dConv) html += '<div class="summary-box">You are <strong>Diana</strong>: ' + dianaN + ' top-cut lists here, converting <strong>' +
@@ -3687,7 +3794,9 @@ function renderArchList() {
                     : '<span style="color:var(--danger)">▼ ' + pct(t.early) + ' → ' + pct(t.late) + '</span>';
     html += '<tr style="cursor:pointer" onclick="openArch(\'' + w.slug + '\')">' +
       '<td><strong>' + escHtml(a.name) + '</strong></td>' +
-      '<td class="num">' + w.n + (fieldModel.recency ? ' <span class="ci" style="display:inline">(eff ' + w.effN.toFixed(1) + ')</span>' : '') + '</td>' +
+      '<td class="num" title="' + attr(w.nAll > w.n ? (w.nAll - w.n) + ' more showcase list' + (w.nAll - w.n === 1 ? '' : 's') + ' feed this archetype\'s profile but not its share' : '') + '">' +
+      w.n + (w.nAll > w.n ? ' <span class="ci" style="display:inline">+' + (w.nAll - w.n) + '</span>' : '') +
+      (fieldModel.recency ? ' <span class="ci" style="display:inline">(eff ' + w.effN.toFixed(1) + ')</span>' : '') + '</td>' +
       '<td class="num">' + pct(w.share) + '</td>' +
       '<td class="num">' + (w.conv ? (100 * w.conv.conversion).toFixed(1) + '%' : '—') + '</td>' +
       '<td class="num" style="color:' + (w.conv && w.conv.index >= 1 ? 'var(--lock)' : 'var(--muted)') + '">' + (w.conv ? w.conv.index.toFixed(2) + '×' : '—') + '</td>' +
@@ -3769,7 +3878,8 @@ function renderArchDetail(slug) {
   let html = '<div class="crumb"><span class="deck-link" onclick="closeArch()">← All archetypes</span></div>';
   html += '<h2 style="margin-top:8px;">' + escHtml(a.name) + (isDiana ? ' ★' : '') + '</h2>';
 
-  const facts = [N + ' top-cut list' + (N === 1 ? '' : 's')];
+  const nTop = FIELD.archetypes[slug].decks.filter(d => d.placement !== 'Best of').length;
+  const facts = [nTop + ' top-cut list' + (nTop === 1 ? '' : 's') + (N > nTop ? ' + ' + (N - nTop) + ' event showcase' + (N - nTop === 1 ? '' : 's') : '')];
   if (conv) facts.push((100 * conv.conversion).toFixed(1) + '% Day 1→Day 2 (' + conv.index.toFixed(2) + '× the field, ' + conv.day1.toLocaleString() + ' decks recorded)');
   facts.push(p.units.toFixed(1) + ' units / ' + p.spells.toFixed(1) + ' spells / ' + p.gear.toFixed(1) + ' gear per deck');
   facts.push('avg cost ' + p.avgCost.toFixed(2));
@@ -4487,6 +4597,12 @@ async function load() {
     catch (e) { el.innerHTML = '<div class="empty">No deck data found. Run <code>python3 fetch_decks.py</code>, then reopen this page.</div>'; return; }
   }
   if (!allDecks || allDecks.length === 0) { el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages.</div>'; return; }
+  // Ladder brews ride in decks.json flagged by placement; they join the pool
+  // only via the filter chip and never join the tournament clustering.
+  ladderDecks = allDecks.filter(d => d.placement === 'Ladder');
+  ladderDecks.forEach(d => { d._region = regionOf(d.event); d._cluster = -1; d._clusterName = 'Ladder'; });
+  allDecks = allDecks.filter(d => d.placement !== 'Ladder');
+  if (ladderDecks.length) indexCards(ladderDecks);   // their card art/meta still joins the index
   // Visitor-submitted decks live only on the Cloudflare copy; on GitHub Pages
   // or file:// this 404s (or throws) and the site carries on without them.
   if (location.protocol.indexOf('http') === 0) {

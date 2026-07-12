@@ -31,13 +31,26 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DB_FILE = Path(__file__).parent / "riftbound.db"
-# React App Paths
-DECKS_JSON = Path(__file__).parent / "frontend" / "public" / "decks.json"
-META_JSON = Path(__file__).parent / "frontend" / "public" / "meta.json"
-FIELD_JSON = Path(__file__).parent / "frontend" / "public" / "field.json"
-IMAGE_DIR = Path(__file__).parent / "frontend" / "public" / "cache" / "images"
+# Canonical viewer paths (repo root) — the vanilla index.html deploy_cloudflare.sh
+# bundles, per its own comment that frontend/ ("experimental" React rewrite,
+# excluded from deploy) doesn't belong on the public host. These were pointed
+# at frontend/public/ during the React migration (6f67ad5, 2026-07-11) and
+# never reverted after that migration was abandoned — every fetch_decks.py
+# run since, including the weekly cron, was silently updating a directory
+# nobody deploys from while the live site's data stayed frozen. Fixed 2026-07-12.
+DECKS_JSON = Path(__file__).parent / "decks.json"
+META_JSON = Path(__file__).parent / "meta.json"
+FIELD_JSON = Path(__file__).parent / "field.json"
+IMAGE_DIR = Path(__file__).parent / "cache" / "images"
 
 DIANA_ARCHETYPE = "diana-scorn-of-the-moon"
+
+# Ladder brews: Diana sitemap decks with no verified tournament placement.
+# Stored under this synthetic event/placement so every consensus and meta
+# statistic can exclude them — the viewer shows them only behind an opt-in
+# filter chip, like community submissions.
+LADDER_EVENT = "Mobalytics Ladder"
+LADDER_PLACEMENT = "Ladder"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS cards (
@@ -334,9 +347,12 @@ def export_meta_json(conn, path=META_JSON):
     for e in conn.execute(
         "SELECT id, name, date, attendance, day1_decks, day2_decks FROM events ORDER BY date, name"
     ):
+        if e["name"] == LADDER_EVENT:
+            continue   # ladder brews are not a tournament top cut
         counts = {}
         for row in conn.execute(
             "SELECT archetype, COUNT(*) AS n FROM decks WHERE event_id = ? "
+            "AND COALESCE(placement, '') NOT IN ('Best of', 'Ladder') "
             "GROUP BY archetype", (e["id"],)
         ):
             counts[row["archetype"]] = row["n"]
@@ -382,7 +398,8 @@ def export_meta_json(conn, path=META_JSON):
     }
 
     other_total = conn.execute(
-        "SELECT COUNT(*) FROM decks WHERE archetype != ?", (DIANA_ARCHETYPE,)
+        "SELECT COUNT(*) FROM decks WHERE archetype != ? "
+        "AND COALESCE(placement, '') NOT IN ('Best of', 'Ladder')", (DIANA_ARCHETYPE,)
     ).fetchone()[0]
     card_base = {}
     for row in conn.execute(
@@ -397,13 +414,19 @@ def export_meta_json(conn, path=META_JSON):
         card_base[row["card_name"]] = row["n"]
 
     archetype_totals = {}
-    for row in conn.execute("SELECT archetype, COUNT(*) AS n FROM decks GROUP BY archetype"):
+    for row in conn.execute(
+        "SELECT archetype, COUNT(*) AS n FROM decks "
+        "WHERE COALESCE(placement, '') NOT IN ('Best of', 'Ladder') GROUP BY archetype"
+    ):
         archetype_totals[row["archetype"]] = row["n"]
 
     # Regenerated on every scrape, but the weekly workflow only commits when
     # some other file actually changed — so this reads as "data last changed",
-    # not "scraper last ran".
-    latest_event = conn.execute("SELECT MAX(date) FROM events WHERE date IS NOT NULL").fetchone()[0]
+    # not "scraper last ran". The ladder pseudo-event's date moves with every
+    # new brew, so it must not drive "latest".
+    latest_event = conn.execute(
+        "SELECT MAX(date) FROM events WHERE date IS NOT NULL AND name != ?", (LADDER_EVENT,)
+    ).fetchone()[0]
 
     meta = {
         "diana": DIANA_ARCHETYPE,
@@ -460,7 +483,8 @@ def export_field_json(conn, path=FIELD_JSON):
     for d in conn.execute(
         "SELECT d.id, d.label, d.player, d.placement, d.archetype, d.url, "
         "e.name AS event_name, e.date AS event_date "
-        "FROM decks d LEFT JOIN events e ON e.id = d.event_id ORDER BY d.id"
+        "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
+        "WHERE COALESCE(d.placement, '') != ? ORDER BY d.id", (LADDER_PLACEMENT,)
     ):
         arch = d["archetype"]
         if arch not in archetypes:
@@ -526,7 +550,7 @@ def export_field_json(conn, path=FIELD_JSON):
 def export_cards_json(conn, path=None):
     """Write cards.json/cards.js: full details for every card that appears
     in any Diana deck section — powers the viewer's card-detail modal."""
-    path = path or (Path(__file__).parent / "frontend" / "public" / "cards.json")
+    path = path or (Path(__file__).parent / "cards.json")
     out = {}
     for row in conn.execute(
         "SELECT DISTINCT card_name FROM deck_cards dc JOIN decks d ON d.id = dc.deck_id "

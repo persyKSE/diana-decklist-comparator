@@ -44,7 +44,7 @@ HEADERS = {
 
 scraper = cloudscraper.create_scraper()
 
-CACHE_DIR = Path(__file__).parent / "frontend" / "public" / "cache"
+CACHE_DIR = Path(__file__).parent / "cache"
 IMAGE_DIR = CACHE_DIR / "images"
 OUTPUT_FILE = Path(__file__).parent / "frontend" / "public" / "decks.json"
 
@@ -84,14 +84,18 @@ DEFAULT_DECK_URLS = {
 SITEMAP_URL = "https://mobalytics.gg/riftbound/sitemap.xml"
 ARCHETYPE_PREFIX = "diana-scorn-of-the-moon-"
 PLACEMENT_WEIGHTS = {"1st": 3.0, "2nd": 2.0, "3rd": 1.75,
-                     "top-4": 1.5, "top-8": 1.0, "top-16": 0.75}
+                     "top-4": 1.5, "top-8": 1.0, "top-16": 0.75,
+                     # Event showcase decks ("Best of <event>") — real event
+                     # lists with no placement evidence. They enrich archetype
+                     # profiles but are excluded from every top-cut statistic.
+                     "best-of": 0.5}
 EVENT_NOISE = {"s3", "regional", "qualifier", "open"}  # dropped from short labels
 
 
 # Event portion of a tournament slug: "<city>-regional-qualifier" or
 # "s3-regional-open-<city>", sitting between the archetype and the placement.
 EVENT_SLUG_RE = re.compile(r"((?:[a-z]+-regional-qualifier)|(?:s3-regional-open-[a-z]+))$")
-PLACEMENT_SLUG_RE = re.compile(r"(?:^|-)(1st|2nd|3rd|top-4|top-8|top-16)(?:-|$)")
+PLACEMENT_SLUG_RE = re.compile(r"(?:^|-)(1st|2nd|3rd|top-4|top-8|top-16|best-of)(?:-|$)")
 
 
 def parse_deck_slug(slug):
@@ -117,7 +121,12 @@ def parse_deck_slug(slug):
     event_words = event_slug.split("-")
     event = " ".join(w.upper() if w == "s3" else w.capitalize() for w in event_words)
     short_event = " ".join(w.capitalize() for w in event_words if w not in EVENT_NOISE) or event
-    placement = ("Top " + placement_slug.split("-")[1]) if placement_slug.startswith("top-") else placement_slug
+    if placement_slug == "best-of":
+        placement = "Best of"
+    elif placement_slug.startswith("top-"):
+        placement = "Top " + placement_slug.split("-")[1]
+    else:
+        placement = placement_slug
     return {
         "archetype": archetype,
         "event": event,
@@ -140,17 +149,28 @@ def discover_decks(config):
         xml = fetch_page(SITEMAP_URL)
     except Exception as e:
         print(f"Deck discovery failed ({e}); continuing with configured decks")
-        return 0, []
+        return 0, [], []
 
     existing_urls = {v[0] for v in config.values()}
-    added, meta_decks = 0, []
+    added, meta_decks, ladder, skipped = 0, [], [], 0
     for url in re.findall(r"<loc>(https://mobalytics\.gg/riftbound/decks/[^<]+)</loc>", xml):
         slug = url.rsplit("/", 1)[1]
         info = parse_deck_slug(slug)
         if not info:
+            # No placement token: a user brew. Diana brews feed the opt-in
+            # ladder tier; everything else stays skipped.
+            if slug.startswith(ARCHETYPE_PREFIX):
+                ladder.append(url)
+            else:
+                skipped += 1
             continue
         if info["archetype"] == db.DIANA_ARCHETYPE:
             if url in existing_urls:
+                continue
+            if info["placement"] == "Best of":
+                # Showcase Diana lists carry no placement evidence — they go
+                # to the opt-in brews tier, never into the consensus config.
+                ladder.append(url)
                 continue
             label = f"{info['player']} - {info['short_event']} {info['placement']}"
             if label in config:
@@ -160,7 +180,11 @@ def discover_decks(config):
             added += 1
         else:
             meta_decks.append({**info, "url": url, "slug": slug})
-    return added, meta_decks
+    # Growth failures on sitemap scraping are silent by nature — report what
+    # the run chose not to parse so a naming change is visible in the cron log.
+    print(f"Sitemap: {added} new Diana tournament, {len(meta_decks)} meta candidates, "
+          f"{len(ladder)} Diana ladder brews, {skipped} other-archetype brews skipped")
+    return added, meta_decks, ladder
 
 
 def fetch_meta_decks(conn, meta_decks):
@@ -200,6 +224,51 @@ def fetch_meta_decks(conn, meta_decks):
         time.sleep(0.5)
     conn.commit()
     print(f"  Stored {fetched} meta decks")
+    return fetched
+
+
+def fetch_ladder_decks(conn, ladder_urls, cap=30):
+    """Fetch Diana ladder brews — sitemap decks with no placement token.
+
+    They carry no tournament result, so they are stored under the synthetic
+    'Mobalytics Ladder' event with placement 'Ladder' and half weight. The
+    db.py exports keep them out of every consensus, meta and field statistic;
+    the viewer shows them only behind an opt-in filter chip. Capped per run
+    to keep the weekly cron bounded — the known-URL skip lets later runs
+    catch up.
+    """
+    known = {r[0] for r in conn.execute("SELECT url FROM decks WHERE url IS NOT NULL")}
+    todo = [u for u in ladder_urls if u not in known][:cap]
+    if not todo:
+        return 0
+    print(f"Fetching {len(todo)} Diana ladder brews (of {len(ladder_urls)} in the sitemap) ...")
+    fetched = 0
+    for url in todo:
+        slug = url.rsplit("/", 1)[1]
+        try:
+            html = fetch_page(url)
+        except Exception as e:
+            print(f"  Failed {slug}: {e}")
+            continue
+        parsed = parse_decklist(html)
+        if not parsed or not parsed.get("cards"):
+            print(f"  No cards parsed for {slug}")
+            continue
+        pretty = slug[len(ARCHETYPE_PREFIX):].replace("-", " ").strip() or slug
+        label = f"{pretty} - Ladder"
+        db.upsert_deck(conn, label, db.LADDER_PLACEMENT, db.LADDER_EVENT, 0.5, url, {
+            "main": parsed["cards"],
+            "rune": parsed["runes"],
+            "battlefield": parsed["battlefields"],
+            "side": parsed["sideboard"],
+        }, event_date=parsed.get("date"))
+        fetched += 1
+        if fetched % 10 == 0:
+            conn.commit()
+            print(f"  ... {fetched}/{len(todo)}")
+        time.sleep(0.5)
+    conn.commit()
+    print(f"  Stored {fetched} ladder brews")
     return fetched
 
 
@@ -323,9 +392,9 @@ def main():
         save_config(deck_config)
         print(f"Added {args.label} to config.")
 
-    meta_decks = []
+    meta_decks, ladder_urls = [], []
     if not args.no_discover:
-        added, meta_decks = discover_decks(deck_config)
+        added, meta_decks, ladder_urls = discover_decks(deck_config)
         if added:
             save_config(deck_config)
 
@@ -376,13 +445,14 @@ def main():
 
     conn.commit()
     meta_fetched = fetch_meta_decks(conn, meta_decks) if meta_decks else 0
+    ladder_fetched = fetch_ladder_decks(conn, ladder_urls) if ladder_urls else 0
     total = db.export_decks_json(conn)
     events = db.export_meta_json(conn)
     db.export_cards_json(conn)
     archetypes, _ = db.export_field_json(conn)
     conn.commit()
     conn.close()
-    print(f"\nStored {fetched} Diana + {meta_fetched} new meta decks; "
+    print(f"\nStored {fetched} Diana + {meta_fetched} new meta decks + {ladder_fetched} ladder brews; "
           f"exported {total} Diana decks, meta for {events} events, "
           f"{archetypes} archetypes to field.json")
     print("Open index.html (via a local server or GitHub Pages) to see the comparison.")
