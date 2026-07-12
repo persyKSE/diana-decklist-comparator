@@ -8,7 +8,9 @@
 <meta property="og:title" content="Diana Deck Lab">
 <meta property="og:description" content="Build your Riftbound Diana deck against the evidence: every winning list, distilled.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://persykse.github.io/diana-decklist-comparator/cache/images/Diana_Lunari.webp">
+<meta property="og:image" content="https://diana-decklist-comparator.pages.dev/cache/images/Diana_Lunari.webp">
+<meta property="og:url" content="https://diana-decklist-comparator.pages.dev/">
+<link rel="canonical" href="https://diana-decklist-comparator.pages.dev/">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0a0d14">
 <link rel="icon" href="icon.svg">
@@ -3832,7 +3834,7 @@ async function exportDeckImage(title, list, subtitle) {
   });
 
   g.fillStyle = '#c8aa6e'; g.font = '600 12px Palatino, Georgia, serif';
-  g.fillText('DIANA DECK LAB · persykse.github.io/diana-decklist-comparator', PAD, H - 18);
+  g.fillText('DIANA DECK LAB · diana-decklist-comparator.pages.dev', PAD, H - 18);
 
   cv.toBlob(blob => {
     if (!blob) { toast('Image export failed'); return; }
@@ -4085,6 +4087,23 @@ window.addEventListener('hashchange', router);
 
 /* ---------------- Load ---------------- */
 async function load() {
+  // One-shot localStorage hand-off from the old GitHub Pages origin. Its
+  // redirect page packs the ddl-* keys into #m=<base64url JSON>; we import
+  // only keys we don't already have (so a return visit can't clobber newer
+  // work here), then drop the fragment. Runs before any key is read below.
+  if (location.hash.indexOf('#m=') === 0) {
+    try {
+      const packed = JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(3).replace(/-/g, '+').replace(/_/g, '/')))));
+      let imported = 0;
+      Object.keys(packed).forEach(k => {
+        if (/^ddl-[a-z]+$/.test(k) && typeof packed[k] === 'string' && localStorage.getItem(k) == null) {
+          try { localStorage.setItem(k, packed[k]); imported++; } catch (e) {}
+        }
+      });
+      if (imported) setTimeout(() => toast('Welcome to the new home — your saved decks and match log came along'), 800);
+    } catch (e) {}
+    history.replaceState(null, '', location.pathname + location.search);
+  }
   try {
     if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f5f2ea'); }
     coachText = localStorage.getItem('ddl-coach') || '';

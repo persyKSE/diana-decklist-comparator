@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diana Deck Lab has moved</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://diana-decklist-comparator.pages.dev/">
+<!-- No-JS fallback: plain redirect (no data hand-off, which needs JS). -->
+<meta http-equiv="refresh" content="3;url=https://diana-decklist-comparator.pages.dev/">
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+         background: #0a0d14; color: #e8e6e3; font: 16px/1.6 Palatino, 'Palatino Linotype', serif; }
+  .card { max-width: 460px; padding: 32px 36px; border: 1px solid #c8aa6e55; border-top: 2px solid #c8aa6e; }
+  h1 { font-size: 20px; color: #c8aa6e; margin: 0 0 10px; letter-spacing: .04em; }
+  a { color: #c8aa6e; }
+  .sub { color: #9a978f; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Diana Deck Lab has moved</h1>
+  <p>The lab now lives at
+    <a id="dest" href="https://diana-decklist-comparator.pages.dev/">diana-decklist-comparator.pages.dev</a>
+    — taking you there now.</p>
+  <p class="sub">Your saved decks and match log travel with you automatically. Update your bookmark.</p>
+</div>
+<script>
+// This page is what the old GitHub Pages origin serves after the move to
+// Cloudflare. Besides redirecting, it does two things a bare redirect can't:
+// 1) unregisters the old service worker so this origin stops self-caching,
+// 2) hands the visitor's ddl-* localStorage to the new origin in the URL
+//    fragment (never sent to any server), where index.html imports any keys
+//    it doesn't already have. Priority order: irreplaceable data first, so
+//    if the 60KB budget bites, a giant match log crowds out the theme flag,
+//    not the other way round.
+(function () {
+  try {
+    if (navigator.serviceWorker) navigator.serviceWorker.getRegistrations()
+      .then(function (rs) { rs.forEach(function (r) { r.unregister(); }); });
+  } catch (e) {}
+
+  var dest = 'https://diana-decklist-comparator.pages.dev/' + (location.search || '');
+  var frag = location.hash || '';
+  try {
+    var keys = ['ddl-matches', 'ddl-saves', 'ddl-coach', 'ddl-side',
+                'ddl-runes', 'ddl-bf', 'ddl-fieldmodel', 'ddl-theme'];
+    var packed = {}, size = 0, any = false;
+    for (var i = 0; i < keys.length; i++) {
+      var v = localStorage.getItem(keys[i]);
+      if (v == null) continue;
+      if (size + v.length > 60000) continue;
+      packed[keys[i]] = v; size += v.length; any = true;
+    }
+    if (any) {
+      var b64 = btoa(unescape(encodeURIComponent(JSON.stringify(packed))))
+        .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      frag = '#m=' + b64;
+    }
+  } catch (e) {}
+  document.getElementById('dest').href = dest + frag;
+  location.replace(dest + frag);
+})();
+</script>
+</body>
+</html>

@@ -235,40 +235,41 @@ or edit `decks_config.json` directly and re-run `fetch_decks.py`.
 Weights: 1st = 3.0, 2nd = 2.0, Top 4 = 1.5, Top 8 = 1.0 (auto-assigned
 for discovered decks; tweak in the config afterwards if you like).
 
-## Hosting (GitHub Pages + weekly auto-update)
+## Hosting (Cloudflare Pages canonical + weekly auto-update)
 
-Two workflows ship in `.github/workflows/`:
-
-- `pages.yml` — deploys the repo to GitHub Pages on every push to
-  `main` (and after each data update).
-- `update-data.yml` — every Monday (and on demand from the Actions
-  tab) re-scrapes the configured decks, refreshes the card catalogue,
-  and commits any changes.
-
-One-time setup after pushing the repo to GitHub: in the repo settings
-under **Pages**, set **Source** to **GitHub Actions**.
-
-## Cloudflare mirror + community submissions
-
-The site also runs at https://diana-decklist-comparator.pages.dev
-(Cloudflare Pages), which additionally hosts `/api/submissions` — the
-backend for the builder's **Share to community** button. Submissions
-land in a D1 (SQLite) table, atomically and deduped by content hash;
-the server rebuilds every stored row from the deployed card catalogue
+The site's home is **https://diana-decklist-comparator.pages.dev**
+(Cloudflare Pages). It hosts everything GitHub Pages did — the viewer,
+the PWA, the card art — plus `/api/submissions`, the backend for the
+builder's **Share to community** button. Submissions land in a D1
+(SQLite) table, atomically and deduped by content hash; the server
+rebuilds every stored row from the deployed card catalogue
 (`field.json`), validates deck legality (40-card main, ≤3 copies,
 12 runes, ≤8 sideboard, ≤3 battlefields) and rate-limits per IP, so
 nothing client-authored is stored or served back. The viewer fetches
 the pool on load and shows it behind an opt-in **community decks**
 filter chip — community lists never join the tournament clustering or
-the default consensus math. On GitHub Pages or `file://` the fetch
-fails silently and the feature simply isn't there.
+the default consensus math. Anywhere without the API (`file://`, a
+plain static host) the fetch fails silently and the feature simply
+isn't there.
 
-Deploy by hand with `./deploy_cloudflare.sh` (assembles a clean
-`dist/` — the database, scrapers and `frontend/` never ship — then
-`wrangler pages deploy`). `pages.yml` redeploys Cloudflare on every
-push/data update once the `CLOUDFLARE_API_TOKEN` and
-`CLOUDFLARE_ACCOUNT_ID` repo secrets are set (token permission:
-Cloudflare Pages — Edit).
+Two workflows ship in `.github/workflows/`:
+
+- `update-data.yml` — every Monday (and on demand from the Actions
+  tab) re-scrapes the configured decks, refreshes the card catalogue,
+  and commits any changes.
+- `pages.yml` — after every push/data update, deploys to Cloudflare
+  (the `deploy_cloudflare.sh` script: assembles a clean `dist/` — the
+  database, scrapers and `frontend/` never ship — then
+  `wrangler pages deploy`). It needs the `CLOUDFLARE_API_TOKEN`
+  (permission: Cloudflare Pages — Edit) and `CLOUDFLARE_ACCOUNT_ID`
+  repo secrets. Until those exist the job skips and GitHub Pages keeps
+  serving the full site; once they exist, GitHub Pages switches to
+  `redirect.html`, which forwards visitors — along with their saved
+  decks and match logs, carried in the URL fragment — to the canonical
+  host.
+
+Deploy by hand anytime with `./deploy_cloudflare.sh` (uses your
+`npx wrangler login` session locally).
 
 ## Known limitations
 
