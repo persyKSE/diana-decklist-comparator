@@ -1946,6 +1946,10 @@ function handleQuality(tags, threat) {
   const at = (v) => { if (v > q) q = v; };
   tags.forEach(t => {
     const size = t.size;
+    // Hand attack is type-blind: it takes a card before it is ever a threat.
+    // Heavily discounted — you hit whatever they happen to be holding, not the
+    // card you need gone. (Was tagged but scored 0 against everything.)
+    if (t.tag === 'handAttack') { at(0.4); return; }
     if (threat.type === 'Unit') {
       const m = threat.might;
       switch (t.tag) {
@@ -2055,6 +2059,136 @@ function answerWhy(name, tag, p, opts) {
     case 'stun':       return 'stun — buys a turn';
     default:           return '';
   }
+}
+
+/* ---- Beyond neutralization ----
+   Coverage only sees cards that neutralize other cards — one of several ways a
+   list wins a matchup. These helpers read the other axes off the same printed
+   text and decklists: card economy (draw/selection/recursion), combat (your
+   units answering theirs by out-Mighting them), the clock (who is faster), and
+   protection (foiling their removal). Still no match data: every number is a
+   decklist fact or a disclosed discount. */
+
+const ECON_WEIGHTS = { draw: 1, loot: 0.5, selection: 0.5, recursion: 0.5 };
+const _econCache = new Map();
+function econTags(name) {
+  if (_econCache.has(name)) return _econCache.get(name);
+  const info = cardInfo(name);
+  const e = (info && info.effect) || '';
+  const tags = [];
+  const draw = e.match(/draw (\d+)/i);
+  // "draw 1, then discard 1" is selection, not card advantage (Hwei, Merchant).
+  const selfDiscard = /discard \d/i.test(e) && !/they discard|opponent/i.test(e);
+  if (draw) tags.push(selfDiscard
+    ? { tag: 'loot', label: 'loot — filters, does not add cards', value: ECON_WEIGHTS.loot }
+    : { tag: 'draw', label: 'draw ' + draw[1], value: ECON_WEIGHTS.draw * +draw[1] });
+  if (/look at the top (\d+)/i.test(e)) tags.push({ tag: 'selection', label: 'card selection', value: ECON_WEIGHTS.selection });
+  if (/return[\s\S]{0,60}?trash/i.test(e)) tags.push({ tag: 'recursion', label: 'recursion from trash', value: ECON_WEIGHTS.recursion });
+  _econCache.set(name, tags);
+  return tags;
+}
+function gasValue(name) { return econTags(name).reduce((a, t) => a + t.value, 0); }
+// Card-economy copies in a list: Σ copies × per-card weight. Flat per copy —
+// a repeatable engine is undercounted, a one-shot overcounted; disclosed.
+function gasOf(list) { return list.reduce((a, c) => a + c.count * gasValue(c.name), 0); }
+
+// Cards that FOIL removal rather than being removal: a counter stops the
+// removal spell itself, a +N Might trick lifts the target out of a sized
+// answer's range (situational, so it counts half). Spells only — a unit
+// pumping itself is a body, not a trick you hold up.
+const _protCache = new Map();
+function protectTags(name) {
+  if (_protCache.has(name)) return _protCache.get(name);
+  const info = cardInfo(name);
+  const tags = [];
+  if (info && info.type === 'Spell') {
+    const e = info.effect || '';
+    if (techTags(name).some(t => t.tag === 'counter')) tags.push({ tag: 'counterSave', label: 'counters the removal spell', q: 1 });
+    const pump = e.match(/\+(\d+) :rb_might:/i);
+    if (pump) tags.push({ tag: 'pump', label: '+' + pump[1] + ' Might trick', size: +pump[1], q: 0.5 });
+  }
+  _protCache.set(name, tags);
+  return tags;
+}
+
+// P(a random unit of yours out-Mights a random unit of theirs). Combat is the
+// game's native removal, and it is free — you are already playing the units.
+// Pure probability from both Might distributions, no constants.
+function combatParity(you, them) {
+  if (!you.knownUnits || !them.knownUnits) return null;
+  let win = 0, tie = 0;
+  Object.entries(you.mightCounts).forEach(([a, ca]) => {
+    Object.entries(them.mightCounts).forEach(([b, cb]) => {
+      const p = (ca / you.knownUnits) * (cb / them.knownUnits);
+      if (+a > +b) win += p; else if (+a === +b) tie += p;
+    });
+  });
+  return { win, tie, lose: Math.max(0, 1 - win - tie) };
+}
+
+// Share of their unit-removal copies you hold a foil to, quality-weighted —
+// the counterweight to the Exposure column.
+function shieldAgainst(theirAnswers, yourCards) {
+  const foils = [];
+  yourCards.forEach(c => protectTags(c.name).forEach(t => foils.push({ ...t, name: c.name })));
+  let total = 0, saved = 0, best = { name: null, q: 0 };
+  theirAnswers.forEach(a => {
+    const info = cardInfo(a.name);
+    const removal = techTags(a.name).filter(t => ['kill', 'damage', 'killSmall', 'shrink', 'sweep'].includes(t.tag));
+    if (!removal.length) return;
+    total += a.count;
+    let q = 0, who = null;
+    foils.forEach(f => {
+      let v = 0;
+      if (f.tag === 'counterSave' && info && info.type === 'Spell') v = f.q;
+      else if (f.tag === 'pump' && removal.some(t => t.size != null)) v = f.q;
+      if (v > q) { q = v; who = f.name; }
+    });
+    saved += a.count * q;
+    if (q > best.q) best = { name: who, q };
+  });
+  return total ? { share: saved / total, total, best: best.name } : null;
+}
+
+// Which axis most likely decides the pairing, from two decklist differentials.
+// The thresholds (±0.3 cost, ±1.5 gas) are disclosed judgment calls — there is
+// no result data to fit them to.
+function planFor(clockD, gasD) {
+  if (clockD >= 0.3) return { label: 'Race', axis: 'protect', why: 'your curve is ~' + clockD.toFixed(1) + ' cheaper — keep the pressure on and protect what sticks' };
+  if (clockD <= -0.3) return { label: 'Stabilize', axis: 'cheapAnswer', why: 'their curve is ~' + (-clockD).toFixed(1) + ' cheaper — cheap interaction beats clever interaction' };
+  if (gasD >= 1.5) return { label: 'Grind', axis: 'econ', why: 'even speed and you out-draw them by ~' + gasD.toFixed(1) + ' cards — extend the game' };
+  if (gasD <= -1.5) return { label: 'Pressure', axis: 'handAttack', why: 'even speed but they out-draw you by ~' + (-gasD).toFixed(1) + ' cards — end it before gas decides, or strip their hand' };
+  return { label: 'Attrition', axis: 'twoForOne', why: 'even speed, even gas — card-for-card exchanges decide it' };
+}
+
+// Board suggestions routed to the plan's axis, from the Diana pool — so the
+// advice stops defaulting to removal when removal is not what the matchup asks.
+function planSuggestions(axis, p, sideList) {
+  const inSide = new Set(sideList.map(c => c.name));
+  const cand = Object.keys(window.CARDS || {}).filter(n => !inSide.has(n));
+  let scored = [];
+  if (axis === 'econ') {
+    scored = cand.filter(n => gasValue(n) > 0)
+      .map(n => ({ n, s: gasValue(n), why: econTags(n).map(t => t.label).join(', ') }));
+  } else if (axis === 'cheapAnswer') {
+    const base = coverageOf(sideList, p).coverage;
+    scored = cand.filter(n => techTags(n).length && ((cardInfo(n) || {}).cost || 9) <= 2)
+      .map(n => ({ n, s: marginalGain(n, sideList, p, base), why: 'cheap answer — lands before their curve does' }))
+      .filter(x => x.s > 0.01);
+  } else if (axis === 'protect') {
+    scored = cand.filter(n => protectTags(n).length)
+      .map(n => ({ n, s: protectTags(n).reduce((a, t) => a + t.q, 0), why: protectTags(n).map(t => t.label).join(', ') }));
+  } else if (axis === 'handAttack') {
+    scored = cand.filter(n => techTags(n).some(t => t.tag === 'handAttack'))
+      .map(n => ({ n, s: 1, why: 'strips their gas before it lands' }));
+  } else { // twoForOne
+    scored = cand.filter(n => techTags(n).some(t => t.tag === 'sweep') || gasValue(n) > 0)
+      .map(n => ({
+        n, s: (techTags(n).some(t => t.tag === 'sweep') ? 1 : 0) + gasValue(n),
+        why: techTags(n).some(t => t.tag === 'sweep') ? 'sweeper — the cleanest 2-for-1' : econTags(n).map(t => t.label).join(', '),
+      }));
+  }
+  return scored.sort((a, b) => b.s - a.s).slice(0, 2);
 }
 
 /* ---- Field model: which field are you prepping for? ----
@@ -2192,7 +2326,8 @@ function coverageHTML() {
     'a single counterspell "covers" all ' + Math.round(rows[0].p.spells) + ' spells ' + escHtml(FIELD.archetypes[rows[0].slug].name) +
     ' runs, but off a 40-card deck you will rarely have it in hand on the turn they cast one. Adding copies closes the gap: each extra copy raises the odds you have drawn one in time. ' +
     'Timely already folds the <em>Answers</em> depth column into hypergeometric draw odds (with mulligan). ' +
-    'Neither is a win rate — they cannot see sequencing, tempo, or your opponent\'s line: no per-match data is published for these events.</div>';
+    'And interaction is only one axis of a matchup — the <strong>Matchup plans</strong> table below reads the clock, combat and card economy off the same decklists. ' +
+    'None of it is a win rate — it cannot see sequencing, tempo, or your opponent\'s line: no per-match data is published for these events.</div>';
 
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th class="num">Conv.</th>' +
     '<th>Their 40</th><th>Your best answer</th><th title="Do you hold any answer to each of their cards?">Breadth</th>' +
@@ -2270,10 +2405,12 @@ function coverageHTML() {
   const yourN = yourList.reduce((a, c) => a + c.count, 0);
   if (yourN >= 20) {
     const you = profileFromList(yourList);
+    const gasYou = gasOf(yourList);
     const exp = rows.filter(r => r.pSb && !r.mirror).map(r => {
-      const eSb = coverageOf(archAnswerList(r.slug, { includeSide: true }), you, { deckSize: DECK_SIZE });
+      const ansSb = archAnswerList(r.slug, { includeSide: true });
+      const eSb = coverageOf(ansSb, you, { deckSize: DECK_SIZE });
       const eMain = coverageOf(archAnswerList(r.slug, { includeSide: false }), you, { deckSize: DECK_SIZE });
-      return { ...r, eSb, boardAdds: eSb.coverage - eMain.coverage };
+      return { ...r, eSb, boardAdds: eSb.coverage - eMain.coverage, shield: shieldAgainst(ansSb, yourList.concat(list)) };
     }).sort((a, b) => b.weight * b.eSb.coverage - a.weight * a.eSb.coverage);
     if (exp.length && you.knownUnits) {
       const wS = exp.reduce((a, r) => a + r.weight, 0) || 1;
@@ -2284,7 +2421,8 @@ function coverageHTML() {
       html += '<div class="summary-box">Weighted across the field, opposing decks hold <em>some</em> answer to <strong style="color:' + pctColor(overallExp) + '">' + pct(overallExp) + '</strong> of your list once they board. Rows are ordered by field weight × exposure — the removal you most have to play around.</div>';
       html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th>Their key answer to your deck</th>' +
         '<th title="Share of your 40, copy by copy, that their post-board deck can interact with.">Exposure</th>' +
-        '<th class="num" title="Extra exposure their sideboard adds on top of their maindeck — the cards they specifically bring in against you.">From board</th></tr></thead><tbody>';
+        '<th class="num" title="Extra exposure their sideboard adds on top of their maindeck — the cards they specifically bring in against you.">From board</th>' +
+        '<th class="num" title="The counterweight: share of their unit-removal copies you hold a foil to. A counter stops the removal spell itself (counts 1); a +N Might trick lifts the target out of a sized answer\'s range (situational, counts ½). Reads your main + sideboard.">Shield</th></tr></thead><tbody>';
       exp.slice(0, 8).forEach(r => {
         const a = FIELD.archetypes[r.slug];
         const ex = r.eSb, c = ex.coverage;
@@ -2295,15 +2433,66 @@ function coverageHTML() {
         const adds = r.boardAdds > 0.02
           ? '<span style="color:var(--danger)">+' + pct(r.boardAdds) + '</span>'
           : '<span style="color:var(--muted)">—</span>';
+        const sh = r.shield;
         html += '<tr><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' + escHtml(a.name) + '</span></td>' +
           '<td class="num">' + pct(r.share) + '</td>' +
           '<td>' + ans + '</td>' +
           '<td title="' + attr((c * you.mainCopies).toFixed(0) + ' of your ' + you.mainCopies.toFixed(0) + ' cards, quality-weighted') + '">' +
           '<span class="incl-bar" style="width:' + Math.round(90 * c) + 'px;background:' + pctColor(c) + '"></span>' + pct(c) + '</td>' +
-          '<td class="num">' + adds + '</td></tr>';
+          '<td class="num">' + adds + '</td>' +
+          '<td class="num" title="' + attr(!sh ? 'Their list has no tagged unit-removal — they answer boards in combat, not with spells.'
+            : sh.best ? 'Best foil: ' + sh.best + '. Against their ~' + sh.total.toFixed(0) + ' unit-removal copies.'
+            : 'You hold nothing that foils their ~' + sh.total.toFixed(0) + ' removal copies — no counters, no Might tricks.') + '" ' +
+          'style="color:' + (sh && sh.share >= 0.3 ? 'var(--lock)' : 'var(--muted)') + '">' + (sh ? pct(sh.share) : '—') + '</td></tr>';
       });
       html += '</tbody></table></div>';
-      html += '<p class="sub">Read <em>Exposure</em> as a warning, not a verdict: a deck that answers a lot of your cards is a deck to bring resilient or evasive threats against. Where <em>From board</em> is high, they are tailoring removal to you specifically — that is the matchup to have a plan-B threat for.</p>';
+      html += '<p class="sub">Read <em>Exposure</em> as a warning, not a verdict: a deck that answers a lot of your cards is a deck to bring resilient or evasive threats against. Where <em>From board</em> is high, they are tailoring removal to you specifically — that is the matchup to have a plan-B threat for. <em>Shield</em> is your counterweight: the share of their removal you can foil with counters and Might tricks.</p>';
+    }
+
+    // ---- Matchup plans: which axis actually decides each pairing ----
+    // Interaction is one axis. The plan table reads three more straight off the
+    // decklists — the clock, combat, and card economy — then routes its board
+    // suggestions to the losing axis, so the advice stops defaulting to removal.
+    const plansRows = rows.slice(0, 10);
+    if (plansRows.length) {
+      html += '<h2>Matchup plans</h2>';
+      html += '<p class="sub">Killing their cards is one way to win a matchup; being faster, out-drawing them, or out-Mighting them in combat are three more, and none of them show up in a coverage number. Per archetype: <strong>Clock</strong> compares copy-weighted average cost (lower = faster), <strong>Combat</strong> is the chance a random unit of yours out-Mights a random unit of theirs — units answer units, and that removal is free — and <strong>Gas</strong> counts card-economy copies (draw, selection, recursion). The <strong>Plan</strong> names the axis most likely to decide the pairing, and the chips board for <em>that</em> axis.</p>';
+      html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th>' +
+        '<th title="Copy-weighted average cost, yours vs theirs. Lower is faster.">Clock</th>' +
+        '<th title="P(random unit of yours > random unit of theirs in Might) / P(theirs > yours). Ties excluded.">Combat</th>' +
+        '<th class="num" title="Card-economy copies per list: draw N counts N; loot, selection and recursion count ½ each.">Gas</th>' +
+        '<th>Plan</th><th>Board for it</th></tr></thead><tbody>';
+      plansRows.forEach(r => {
+        const a = FIELD.archetypes[r.slug];
+        const combat = combatParity(you, r.p);
+        const gasThem = gasOf(archAnswerList(r.slug, { includeSide: false }));
+        const clockD = r.p.avgCost - you.avgCost;   // positive = you are faster
+        const gasD = gasYou - gasThem;
+        const plan = planFor(clockD, gasD);
+        const sugg = planSuggestions(plan.axis, r.p, list);
+        const clockCell = you.avgCost.toFixed(1) + ' vs ' + r.p.avgCost.toFixed(1) +
+          (clockD >= 0.3 ? ' <span style="color:var(--lock);font-size:11px;">you</span>'
+            : clockD <= -0.3 ? ' <span style="color:var(--danger);font-size:11px;">them</span>'
+            : ' <span style="color:var(--muted);font-size:11px;">even</span>');
+        const combatCell = combat
+          ? '<span style="color:' + (combat.win > combat.lose ? 'var(--lock)' : combat.win < combat.lose ? 'var(--danger)' : 'var(--muted)') + '">' + pct(combat.win) + '</span> / ' + pct(combat.lose)
+          : '—';
+        const suggHtml = sugg.length
+          ? sugg.map(x => '<span class="pkg-chip" title="' + attr(x.why) + '">' + cardImg(x.n) +
+              '<span data-card="' + attr(x.n) + '">' + escHtml(shortName(x.n)) + '</span>' +
+              '<button class="mini" style="margin-left:4px" onclick="addToSideboard(\'' + x.n.replace(/'/g, "\\'") + '\')">+</button></span>').join(' ')
+          : '<span style="color:var(--muted);font-size:12px;">nothing in the Diana pool moves this axis</span>';
+        html += '<tr' + (r.mirror ? ' style="font-weight:600"' : '') + '><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' +
+          escHtml(r.mirror ? 'Diana — the mirror ★' : a.name) + '</span></td>' +
+          '<td style="font-size:12.5px;">' + clockCell + '</td>' +
+          '<td style="font-size:12.5px;" title="' + attr(combat ? pct(combat.tie) + ' of pairings tie on Might' : 'No unit data on one side') + '">' + combatCell + '</td>' +
+          '<td class="num" title="' + attr('You ' + gasYou.toFixed(1) + ' vs their ' + gasThem.toFixed(1)) + '" style="color:' + (gasD >= 1.5 ? 'var(--lock)' : gasD <= -1.5 ? 'var(--danger)' : 'var(--muted)') + '">' +
+          (gasD >= 0 ? '+' : '') + gasD.toFixed(1) + '</td>' +
+          '<td title="' + attr(plan.why) + '"><strong>' + plan.label + '</strong></td>' +
+          '<td>' + suggHtml + '</td></tr>';
+      });
+      html += '</tbody></table></div>';
+      html += '<p class="sub">Hover a plan for its reasoning. The thresholds (±0.3 cost for the clock, ±1.5 cards for gas) are disclosed judgment calls, not fitted parameters — no result data exists to fit them to.</p>';
     }
   }
 
@@ -2327,6 +2516,13 @@ function coverageHTML() {
     'with three or more scraped lists, because below that their "sideboard" is one player\'s choices. The <em>What the field boards against you</em> table swaps the arguments: their ' +
     'cards become the answers and your own list becomes the threats, so you can see how much of your deck their removal touches — and how much of that they specifically bring in from ' +
     'the board. Same engine, same discounts, no new constants.</p>' +
+    '<p><strong>Beyond neutralization.</strong> Killing their cards is one of several ways a list wins a matchup, and a pure coverage metric structurally over-recommends removal — ' +
+    'so the Matchup plans table reads three more axes off the same decklists. The <em>clock</em> compares copy-weighted average cost. <em>Combat</em> is the probability a random unit ' +
+    'of yours out-Mights a random unit of theirs — units answer units, and that removal costs no card. <em>Gas</em> counts card-economy copies from rules text: draw <em>N</em> counts ' +
+    '<em>N</em>; loot ("draw 1, then discard 1"), card selection and recursion count ½ each, flat per copy. The <em>Shield</em> column in the exposure table scores your foils against ' +
+    'their removal: a counter stops the removal spell itself (1), a +<em>N</em> Might trick lifts the target out of a sized answer\'s range (situational, ½). Hand attack, previously ' +
+    'tagged but scored zero, now answers any card type at 0.4 — it takes a card before it is a threat, but you hit whatever they are holding. The plan label routes suggestions to the ' +
+    'weakest axis using two disclosed thresholds — ±0.3 average cost, ±1.5 gas — which are judgment calls, not fitted parameters.</p>' +
     '<p><strong>What this is not:</strong> a win rate. Even Timely cannot see sequencing, board state, tempo, mulligan decisions, or whether the answer you drew was castable that turn. ' +
     'It answers two narrow, checkable questions — do you own a card whose text addresses what they play, and are you likely to have drawn it in time? — and nothing else. ' +
     'Per-match results are not published for any of these events.</p></details>';
