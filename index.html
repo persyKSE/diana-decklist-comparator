@@ -1845,17 +1845,26 @@ function archStats(slug) {
   return { decks, ranked: computeStats(decks) };
 }
 
-// How an archetype's board actually looks — the inputs the coverage heuristic
-// needs to say what a tech card is answering. Per-deck averages.
-function archProfile(slug) {
-  const decks = FIELD.archetypes[slug].decks;
-  const n = decks.length || 1;
+// Merge two {name: count} card maps, summing copies. Used to fold a deck's
+// sideboard into its main for the post-board "everything they can present" pool.
+function mergeCounts(a, b) {
+  const out = Object.assign({}, a);
+  Object.entries(b || {}).forEach(([k, v]) => { out[k] = (out[k] || 0) + v; });
+  return out;
+}
+
+// The shape of a set of decks as the coverage heuristic sees it: what there is
+// to answer, averaged per list. `perDeckMaps` is one {name: count} map per deck,
+// so the same code profiles an archetype's mains, its main+board pool, or a
+// single list (your own deck, for the reverse "what answers you" pass).
+function buildProfile(perDeckMaps) {
+  const n = perDeckMaps.length || 1;
   let units = 0, spells = 0, gear = 0, costSum = 0, costN = 0;
-  const mightCounts = {};    // might -> unit copies (summed over their lists)
+  const mightCounts = {};    // might -> unit copies (summed over the lists)
   const bucket = {};         // "type|might" -> copies, the things you must answer
   const bucketCost = {};     // "type|might" -> Σ cost×copies, for a per-class landing turn
-  decks.forEach(d => Object.entries(d.main).forEach(([name, c]) => {
-    const m = FIELD.cards[name] || {};
+  perDeckMaps.forEach(dm => Object.entries(dm).forEach(([name, c]) => {
+    const m = cardInfo(name) || {};
     if (m.type === 'Unit') { units += c; if (m.might != null) mightCounts[m.might] = (mightCounts[m.might] || 0) + c; }
     else if (m.type === 'Spell') spells += c;
     else if (m.type === 'Gear') gear += c;
@@ -1873,7 +1882,7 @@ function archProfile(slug) {
     return { type, might: might === '' ? null : +might, copies: copies / n, cost };
   });
   return {
-    n: decks.length, units: units / n, spells: spells / n, gear: gear / n,
+    n, units: units / n, spells: spells / n, gear: gear / n,
     avgCost: costN ? costSum / costN : 0, mightCounts, knownUnits, threats,
     mainCopies: threats.reduce((a, t) => a + t.copies, 0),
     // Fraction of their unit copies that a "deals/kills up to M might" answer hits.
@@ -1884,6 +1893,38 @@ function archProfile(slug) {
       return hit / knownUnits;
     },
   };
+}
+
+// How an archetype's board actually looks. opts.includeSide folds each list's
+// sideboard in, giving the superset of cards they can present across games 2-3.
+function archProfile(slug, opts) {
+  const decks = FIELD.archetypes[slug].decks;
+  const includeSide = opts && opts.includeSide;
+  const p = buildProfile(decks.map(d => includeSide ? mergeCounts(d.main, d.side) : d.main));
+  p.n = decks.length;
+  return p;
+}
+
+// Profile of a single arbitrary list (your deck) — the threats an opponent's
+// removal has to line up against, for the reverse coverage pass.
+function profileFromList(list) {
+  const counts = {};
+  list.forEach(c => { counts[c.name] = (counts[c.name] || 0) + c.count; });
+  const p = buildProfile([counts]);
+  p.n = 1;
+  return p;
+}
+
+// An archetype's averaged card list as answers — what they hold against YOU.
+// opts.includeSide adds the anti-you tech they bring in post-board.
+function archAnswerList(slug, opts) {
+  const decks = FIELD.archetypes[slug].decks;
+  const n = decks.length || 1;
+  const includeSide = opts && opts.includeSide;
+  const sum = {};
+  decks.forEach(d => Object.entries(includeSide ? mergeCounts(d.main, d.side) : d.main)
+    .forEach(([name, c]) => { sum[name] = (sum[name] || 0) + c; }));
+  return Object.entries(sum).map(([name, c]) => ({ name, count: c / n }));
 }
 
 /* ---------------- Tech coverage ----------------
@@ -1951,7 +1992,9 @@ function coverageOf(list, p, opts) {
     covered += t.copies * q;
     if (deckSize && q > 0) {
       const turn = Math.max(1, Math.round(t.cost != null ? t.cost : 3));
-      timely += t.copies * q * pAnswerByTurn(answerCopies, deckSize, turn);
+      // answerCopies can be fractional when the answers are an averaged list
+      // (the reverse pass); the hypergeometric wants an integer copy count.
+      timely += t.copies * q * pAnswerByTurn(Math.round(answerCopies), deckSize, turn);
     }
   });
   const total = p.mainCopies || 1;
@@ -1988,18 +2031,24 @@ function marginalGain(name, list, p, baseline) {
   return coverageOf(list.concat([{ name, count: 1 }]), p).coverage - baseline;
 }
 
-function answerWhy(name, tag, p) {
+// `p` is the profile being answered. By default that is the opponent ("their
+// units"); in the reverse pass p is your own deck, so opts.self flips the
+// pronouns to "your units" without duplicating the templates.
+function answerWhy(name, tag, p, opts) {
   if (!tag) return 'no interaction in its rules text';
   const size = tag.size;
   const n = x => Math.round(x);
+  const self = opts && opts.self;
+  const who = self ? 'you run' : 'they run';
+  const poss = self ? 'your' : 'their';
   switch (tag.tag) {
-    case 'counter':    return 'counters spells — they run ' + n(p.spells) + ' in their 40';
-    case 'kill':       return 'unconditional removal — answers any of their ' + n(p.units) + ' units';
-    case 'damage':     return 'deals ' + size + ', killing ' + pct(p.unitFracAtMost(size)) + ' of their unit copies';
-    case 'killSmall':  return 'answers ' + size + ' might or less — ' + pct(p.unitFracAtMost(size)) + ' of their units';
-    case 'shrink':     return '−' + size + ' might kills ' + pct(p.unitFracAtMost(size)) + ' of their units';
-    case 'sweep':      return 'sweeper — they run ' + n(p.units) + ' units in their 40';
-    case 'gearHate':   return 'gear removal — they run ' + n(p.gear) + ' gear in their 40';
+    case 'counter':    return 'counters spells — ' + who + ' ' + n(p.spells) + ' in ' + poss + ' 40';
+    case 'kill':       return 'unconditional removal — answers any of ' + poss + ' ' + n(p.units) + ' units';
+    case 'damage':     return 'deals ' + size + ', killing ' + pct(p.unitFracAtMost(size)) + ' of ' + poss + ' unit copies';
+    case 'killSmall':  return 'answers ' + size + ' might or less — ' + pct(p.unitFracAtMost(size)) + ' of ' + poss + ' units';
+    case 'shrink':     return '−' + size + ' might kills ' + pct(p.unitFracAtMost(size)) + ' of ' + poss + ' units';
+    case 'sweep':      return 'sweeper — ' + who + ' ' + n(p.units) + ' units in ' + poss + ' 40';
+    case 'gearHate':   return 'gear removal — ' + who + ' ' + n(p.gear) + ' gear in ' + poss + ' 40';
     case 'bounce':     return 'bounce — tempo, not a permanent answer';
     case 'shrinkSoft': return 'combat trick — blunts, never kills';
     case 'handAttack': return 'hand attack — strips one card';
@@ -2110,7 +2159,16 @@ function coverageHTML() {
 
   const rows = tw.rows.map(w => {
     const p = archProfile(w.slug);
-    return { ...w, p, cov: coverageOf(list, p, { deckSize: DECK_SIZE }) };
+    // Games 2-3 are against their post-board pool. With ≥3 lists we can trust
+    // their averaged sideboard; below that it is one player's tech, so we
+    // don't pretend to know their post-board deck.
+    const enoughSide = FIELD.archetypes[w.slug].decks.length >= 3;
+    const pSb = enoughSide ? archProfile(w.slug, { includeSide: true }) : null;
+    return {
+      ...w, p, pSb,
+      cov: coverageOf(list, p, { deckSize: DECK_SIZE }),
+      covSb: pSb ? coverageOf(list, pSb, { deckSize: DECK_SIZE }) : null,
+    };
   });
   const wSum = rows.reduce((a, r) => a + r.weight, 0) || 1;
   const overall = rows.reduce((a, r) => a + r.weight * r.cov.coverage, 0) / wSum;
@@ -2138,7 +2196,8 @@ function coverageHTML() {
 
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th class="num">Conv.</th>' +
     '<th>Their 40</th><th>Your best answer</th><th title="Do you hold any answer to each of their cards?">Breadth</th>' +
-    '<th title="Breadth discounted by the chance you have drawn a relevant answer by the turn each threat lands. Off a 40-card deck, with mulligan.">Timely</th>' +
+    '<th title="Breadth discounted by the chance you have drawn a relevant answer by the turn each threat lands. Off a 40-card deck, with mulligan.">Timely G1</th>' +
+    '<th title="Timely coverage against their post-board pool — their main plus the sideboard tech they can bring in for games 2-3. Only shown for archetypes with 3+ scraped lists. A drop means their board adds threats you cannot answer.">Post-SB</th>' +
     '<th class="num">Answers</th>' +
     (haveLog ? '<th class="num" title="Your logged record vs this archetype (Log view)">You</th>' : '') + '</tr></thead><tbody>';
   rows.slice(0, 13).forEach(r => {
@@ -2161,6 +2220,15 @@ function coverageHTML() {
       '<span class="incl-bar" style="width:' + Math.round(90 * c) + 'px;background:' + pctColor(c) + '"></span>' + pct(c) + '</td>' +
       '<td title="' + attr(pct(r.cov.drawOdds) + ' of that breadth arrives in time — you have drawn a relevant answer by the turn each threat lands. Off a 40-card deck, with mulligan.') + '">' +
       '<span class="incl-bar" style="width:' + Math.round(90 * tm) + 'px;background:' + pctColor(tm) + '"></span>' + pct(tm) + '</td>' +
+      (function () {
+        if (!r.covSb) return '<td class="num" style="color:var(--muted)" title="Fewer than 3 scraped lists — not enough sideboard data to trust an averaged post-board deck.">—</td>';
+        const sb = r.covSb.timely, delta = sb - tm;
+        const arrow = Math.abs(delta) < 0.03 ? '' : (delta < 0
+          ? ' <span style="color:var(--danger);font-size:11px;">▼' + pct(-delta) + '</span>'
+          : ' <span style="color:var(--lock);font-size:11px;">▲' + pct(delta) + '</span>');
+        return '<td title="' + attr('Timely coverage against their main + sideboard pool (' + r.pSb.mainCopies.toFixed(0) + ' cards). Game-1 timely was ' + pct(tm) + '.') + '">' +
+          '<span class="incl-bar" style="width:' + Math.round(90 * sb) + 'px;background:' + pctColor(sb) + '"></span>' + pct(sb) + arrow + '</td>';
+      })() +
       '<td class="num" title="' + attr('Cards in this sideboard that interact with them at all. Breadth says you hold an answer; this says how many.') + '" ' +
       'style="color:' + (r.cov.depth >= 3 ? 'var(--muted)' : 'var(--flex)') + '">' + r.cov.depth + '</td>' +
       (haveLog ? '<td class="num" style="color:' + (rec.n ? (rec.w / rec.n >= 0.5 ? 'var(--lock)' : 'var(--danger)') : 'var(--muted)') + '">' +
@@ -2194,6 +2262,51 @@ function coverageHTML() {
     html += '<div class="summary-box">Every archetype in the field sits at 50% coverage or better with this sideboard.</div>';
   }
 
+  // ---- Reverse pass: what the field boards against YOU ----
+  // Same engine, arguments swapped: their cards (main + the tech they board in)
+  // become the answers, your deck becomes the threats. This is the exposure a
+  // sideboard table never shows — whether your threats survive their removal.
+  const { list: yourList, source: yourSrc } = activeList();
+  const yourN = yourList.reduce((a, c) => a + c.count, 0);
+  if (yourN >= 20) {
+    const you = profileFromList(yourList);
+    const exp = rows.filter(r => r.pSb && !r.mirror).map(r => {
+      const eSb = coverageOf(archAnswerList(r.slug, { includeSide: true }), you, { deckSize: DECK_SIZE });
+      const eMain = coverageOf(archAnswerList(r.slug, { includeSide: false }), you, { deckSize: DECK_SIZE });
+      return { ...r, eSb, boardAdds: eSb.coverage - eMain.coverage };
+    }).sort((a, b) => b.weight * b.eSb.coverage - a.weight * a.eSb.coverage);
+    if (exp.length && you.knownUnits) {
+      const wS = exp.reduce((a, r) => a + r.weight, 0) || 1;
+      const overallExp = exp.reduce((a, r) => a + r.weight * r.eSb.coverage, 0) / wS;
+      html += '<h2>What the field boards against you</h2>';
+      html += '<p class="sub">The coverage engine run in reverse: their cards — main <em>plus</em> the sideboard tech they bring in for games 2-3 — as the answers, <strong>' + escHtml(yourSrc) + '</strong> as the threats. ' +
+        'This is how exposed your ' + you.units.toFixed(0) + ' units (and ' + (you.spells + you.gear).toFixed(0) + ' spells/gear) are to their removal — the mirror image of the table above, and the thing that actually decides whether your threats stick. Same caveats: breadth from rules text, not a win rate.</p>';
+      html += '<div class="summary-box">Weighted across the field, opposing decks hold <em>some</em> answer to <strong style="color:' + pctColor(overallExp) + '">' + pct(overallExp) + '</strong> of your list once they board. Rows are ordered by field weight × exposure — the removal you most have to play around.</div>';
+      html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th>Their key answer to your deck</th>' +
+        '<th title="Share of your 40, copy by copy, that their post-board deck can interact with.">Exposure</th>' +
+        '<th class="num" title="Extra exposure their sideboard adds on top of their maindeck — the cards they specifically bring in against you.">From board</th></tr></thead><tbody>';
+      exp.slice(0, 8).forEach(r => {
+        const a = FIELD.archetypes[r.slug];
+        const ex = r.eSb, c = ex.coverage;
+        const ans = ex.name
+          ? cardImg(ex.name, 'tiny') + '<span data-card="' + attr(ex.name) + '">' + escHtml(shortName(ex.name)) + '</span>' +
+            '<span class="ci">' + escHtml(answerWhy(ex.name, ex.tag, you, { self: true })) + '</span>'
+          : '<span style="color:var(--muted)">little that interacts</span>';
+        const adds = r.boardAdds > 0.02
+          ? '<span style="color:var(--danger)">+' + pct(r.boardAdds) + '</span>'
+          : '<span style="color:var(--muted)">—</span>';
+        html += '<tr><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' + escHtml(a.name) + '</span></td>' +
+          '<td class="num">' + pct(r.share) + '</td>' +
+          '<td>' + ans + '</td>' +
+          '<td title="' + attr((c * you.mainCopies).toFixed(0) + ' of your ' + you.mainCopies.toFixed(0) + ' cards, quality-weighted') + '">' +
+          '<span class="incl-bar" style="width:' + Math.round(90 * c) + 'px;background:' + pctColor(c) + '"></span>' + pct(c) + '</td>' +
+          '<td class="num">' + adds + '</td></tr>';
+      });
+      html += '</tbody></table></div>';
+      html += '<p class="sub">Read <em>Exposure</em> as a warning, not a verdict: a deck that answers a lot of your cards is a deck to bring resilient or evasive threats against. Where <em>From board</em> is high, they are tailoring removal to you specifically — that is the matchup to have a plan-B threat for.</p>';
+    }
+  }
+
   html += '<details class="howto"><summary>How coverage is computed</summary>' +
     '<p>Each card\'s printed rules text is matched against a small set of patterns — counter a spell, unconditional kill, deal <em>N</em>, ' +
     'kill/return up to <em>N</em> Might, −<em>N</em> Might (a floor of "to a minimum of 1 Might" means it can never kill, so it scores as a combat trick), ' +
@@ -2209,6 +2322,11 @@ function coverageHTML() {
     'how likely you have already drawn one of your relevant answer copies by then — then multiply breadth by that probability. One counter vs twelve spells still counts once, but ' +
     'now it is discounted by the low odds of holding your single copy on their spell turn; a second and third copy raise the odds and lift the number. That is the same exact ' +
     'hypergeometric maths (with mulligan) the Consistency section on Build uses, so depth stops being a footnote and becomes part of the score.</p>' +
+    '<p><strong>Post-SB and the reverse pass.</strong> Games 2-3 are not against their maindeck. The <em>Post-SB</em> column re-runs the same timely calculation against their ' +
+    'main <em>plus</em> their averaged sideboard — the superset of cards they can present — so a drop flags tech they board in that you cannot answer. It only appears for archetypes ' +
+    'with three or more scraped lists, because below that their "sideboard" is one player\'s choices. The <em>What the field boards against you</em> table swaps the arguments: their ' +
+    'cards become the answers and your own list becomes the threats, so you can see how much of your deck their removal touches — and how much of that they specifically bring in from ' +
+    'the board. Same engine, same discounts, no new constants.</p>' +
     '<p><strong>What this is not:</strong> a win rate. Even Timely cannot see sequencing, board state, tempo, mulligan decisions, or whether the answer you drew was castable that turn. ' +
     'It answers two narrow, checkable questions — do you own a card whose text addresses what they play, and are you likely to have drawn it in time? — and nothing else. ' +
     'Per-match results are not published for any of these events.</p></details>';
