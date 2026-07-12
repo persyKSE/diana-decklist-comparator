@@ -1,0 +1,15 @@
+# Cloudflare Pages cache rules (copied into dist/ by deploy_cloudflare.sh).
+# Card art is content-addressed by name and effectively immutable; data files
+# change weekly, so keep them on a short leash like GitHub Pages' 600s.
+
+/cache/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=600
+
+/*.json
+  Cache-Control: public, max-age=600
+
+/
+  Cache-Control: public, max-age=300

@@ -1,5 +1,5 @@
 /* Diana Deck Lab service worker — offline app shell + card-image cache. */
-const VERSION = 'ddl-v14';
+const VERSION = 'ddl-v15';
 const SHELL = ['./', './index.html', './decks.js', './meta.js', './cards.js', './field.js', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', e => {
@@ -16,6 +16,10 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
+
+  // Live API (community submissions): always straight to the network,
+  // never cached — a stale submissions list is worse than none.
+  if (url.pathname.startsWith('/api/')) return;
 
   // Card images are effectively immutable: cache-first.
   if (url.pathname.includes('/cache/images/')) {

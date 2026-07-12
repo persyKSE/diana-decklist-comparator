@@ -248,6 +248,28 @@ Two workflows ship in `.github/workflows/`:
 One-time setup after pushing the repo to GitHub: in the repo settings
 under **Pages**, set **Source** to **GitHub Actions**.
 
+## Cloudflare mirror + community submissions
+
+The site also runs at https://diana-decklist-comparator.pages.dev
+(Cloudflare Pages), which additionally hosts `/api/submissions` — the
+backend for the builder's **Share to community** button. Submissions
+land in a D1 (SQLite) table, atomically and deduped by content hash;
+the server rebuilds every stored row from the deployed card catalogue
+(`field.json`), validates deck legality (40-card main, ≤3 copies,
+12 runes, ≤8 sideboard, ≤3 battlefields) and rate-limits per IP, so
+nothing client-authored is stored or served back. The viewer fetches
+the pool on load and shows it behind an opt-in **community decks**
+filter chip — community lists never join the tournament clustering or
+the default consensus math. On GitHub Pages or `file://` the fetch
+fails silently and the feature simply isn't there.
+
+Deploy by hand with `./deploy_cloudflare.sh` (assembles a clean
+`dist/` — the database, scrapers and `frontend/` never ship — then
+`wrangler pages deploy`). `pages.yml` redeploys Cloudflare on every
+push/data update once the `CLOUDFLARE_API_TOKEN` and
+`CLOUDFLARE_ACCOUNT_ID` repo secrets are set (token permission:
+Cloudflare Pages — Edit).
+
 ## Known limitations
 
 - Discovery only sees decks in the Mobalytics sitemap under the

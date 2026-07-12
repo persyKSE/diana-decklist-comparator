@@ -35,3 +35,20 @@ jobs:
           path: .
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Mirror to Cloudflare Pages (diana-decklist-comparator.pages.dev), which
+  # also hosts the /api/submissions community-deck endpoint. Skipped until
+  # the CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID repo secrets exist
+  # (token needs the "Cloudflare Pages — Edit" permission).
+  deploy-cloudflare:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Deploy to Cloudflare Pages
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+        run: ./deploy_cloudflare.sh

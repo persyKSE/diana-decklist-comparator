@@ -2,6 +2,11 @@ __pycache__/
 *.pyc
 .DS_Store
 
+# Cloudflare: local miniflare/dev state, and the assembled deploy directory
+# (deploy_cloudflare.sh rebuilds dist/ from scratch on every run).
+.wrangler/
+dist/
+
 # Machine/session-specific — the preview tooling writes an absolute
 # scratchpad path in here, so a committed copy is never portable.
 .claude/launch.json

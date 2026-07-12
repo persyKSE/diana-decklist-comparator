@@ -514,7 +514,11 @@ let nameLookup = {};
 let nonMainNames = new Set();
 let currentView = 'build';
 let clusterOptions = [];  // {gi, name, n} over the full set
-let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false };
+let filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false, community: false };
+// Decks visitors submitted from the builder (Cloudflare /api/submissions).
+// Kept apart from the scraped tournament data: they join globalDecks only
+// when the "community decks" filter chip is on, and never join clustering.
+let communityDecks = [];
 let coachTimer = null;
 let packagesCache = null;   // findPackages over the active set, shared by views
 let paletteIndex = 0;       // highlighted row in the command palette
@@ -1623,7 +1627,8 @@ function toggleFilter(key, val) {
 function setDateFilter(which, val) { filters[which] = val; applyFilters(); }
 function toggleDedupe() { filters.dedupe = !filters.dedupe; applyFilters(); }
 function toggleFieldWeight() { filters.fieldWeight = !filters.fieldWeight; applyFilters(); }
-function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false }; applyFilters(); }
+function toggleCommunity() { filters.community = !filters.community; applyFilters(); }
+function clearFilters() { filters = { region: new Set(), cluster: new Set(), placement: new Set(), from: '', to: '', dedupe: false, fieldWeight: false, community: false }; applyFilters(); }
 
 // A result from a 1900-player event is stronger evidence than the same
 // result from a 1100-player one. Scale placement weight by sqrt of field
@@ -1654,7 +1659,8 @@ function dedupeByPlayer(decks) {
 
 function applyFilters() {
   changelogCache = null;   // field-size weighting feeds the replayed prototypes
-  globalDecks = allDecks.filter(deckPasses);
+  const src = filters.community ? allDecks.concat(communityDecks) : allDecks;
+  globalDecks = src.filter(deckPasses);
   if (filters.dedupe) globalDecks = dedupeByPlayer(globalDecks);
   rankedCards = computeStats(globalDecks);
   packagesCache = findPackages(globalDecks.length);
@@ -1684,13 +1690,15 @@ function renderFilterBar() {
     '<span class="chip' + (filters.dedupe ? ' on' : '') + '" onclick="toggleDedupe()" title="Keep one list per player (best placement) so a player who brought two near-identical lists doesn\'t double-count toward the consensus">one list per player' +
     (dupPlayers ? ' (−' + dupPlayers + ')' : '') + '</span>' +
     (haveAttendance ? '<span class="chip' + (filters.fieldWeight ? ' on' : '') + '" onclick="toggleFieldWeight()" title="Scale each deck&#39;s weight by the square root of (field size ÷ median field size), so a result from a 1900-player event counts for more than the same result from a 1100-player one">weight by field size</span>' : '') +
+    (communityDecks.length ? '<span class="chip' + (filters.community ? ' on' : '') + '" onclick="toggleCommunity()" title="Include decks visitors submitted from the builder. They carry no tournament result, so treat the consensus math with them on as community opinion, not results evidence">community decks (' + communityDecks.length + ')</span>' : '') +
     '</div>';
-  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe || filters.fieldWeight;
+  const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe || filters.fieldWeight || filters.community;
+  const poolN = allDecks.length + (filters.community ? communityDecks.length : 0);
   const small = globalDecks.length < 20
     ? '<span style="color:var(--flex)"> · small sample — inclusion %s are noisy; see the ± intervals in Analyze</span>' : '';
   const upd = (window.META && META.generated)
     ? '<span class="fbar-updated"> · data updated ' + escHtml(relativeTime(META.generated)) + '</span>' : '';
-  html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + allDecks.length + ' decks' + small + upd + '</span>' +
+  html += '<div class="fbar-foot"><span>Showing <strong>' + globalDecks.length + '</strong> of ' + poolN + ' decks' + small + upd + '</span>' +
     (anyOn ? '<button onclick="clearFilters()">Reset filters</button>' : '') + '</div>';
   html += '</div>';
   return html;
@@ -2533,6 +2541,7 @@ function builderHTML(N) {
     '<button onclick="exportMyDeckImage()" title="Save a shareable PNG">Export PNG</button>' +
     '<button onclick="shareDeckLink()" title="Copy a URL with your list encoded">Share link</button>' +
     '<button onclick="bImport()" title="Paste a decklist to import">Import list</button>' +
+    '<button onclick="submitToMeta()" title="Share this 40-card deck to the public community pool (anonymous). Community decks show up for everyone via the filter bar chip">Share to community</button>' +
     '<button class="ghost" onclick="bHelp()">Shortcuts</button>' +
     '<button class="ghost" onclick="bClear()" title="Empty the main deck and sideboard">Clear</button>' +
     '</div>' +
@@ -4094,6 +4103,17 @@ async function load() {
     catch (e) { el.innerHTML = '<div class="empty">No deck data found. Run <code>python3 fetch_decks.py</code>, then reopen this page.</div>'; return; }
   }
   if (!allDecks || allDecks.length === 0) { el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages.</div>'; return; }
+  // Visitor-submitted decks live only on the Cloudflare copy; on GitHub Pages
+  // or file:// this 404s (or throws) and the site carries on without them.
+  if (location.protocol.indexOf('http') === 0) {
+    try {
+      const r = await fetch('/api/submissions');
+      if (r.ok && (r.headers.get('content-type') || '').includes('json')) {
+        const subs = await r.json();
+        if (Array.isArray(subs)) communityDecks = subs.map(tagCommunityDeck).filter(Boolean);
+      }
+    } catch (e) {}
+  }
   indexCards(allDecks);
   computeFullClusters();
   // A shared list (?d=…) overrides whatever was last in this browser.
@@ -4105,6 +4125,63 @@ async function load() {
   const v = (location.hash || '#build').slice(1);
   currentView = VIEWS[v] ? v : 'build';
   applyFilters();
+}
+
+/* Community submissions. A visitor's builder deck can be shared into a
+   pool everyone sees (Cloudflare D1 behind /api/submissions). The server
+   rebuilds the deck object from whitelisted fields and validates every
+   name against the card catalogue, so what comes back down is safe to
+   render; tagCommunityDeck still checks the shape so one bad row can't
+   take the site down. */
+function tagCommunityDeck(d) {
+  if (!d || !Array.isArray(d.cards) || !d.cards.length) return null;
+  d.source = 'user';
+  d.weight = 1.0;
+  d._region = regionOf(d.event);
+  d._cluster = -1;                 // never joins the tournament clustering
+  d._clusterName = 'Community';
+  return d;
+}
+
+async function submitToMeta() {
+  const main = bMain(), side = bSide();
+  const mainN = bTotal(main);
+  if (mainN !== 40) { toast('Main deck must be exactly 40 cards to submit (currently ' + mainN + ')'); return; }
+  const unknown = parseDeckText(coachText).unknown.concat(parseDeckText(sideText).unknown);
+  if (unknown.length) { toast('Unrecognized card' + (unknown.length > 1 ? 's' : '') + ': ' + unknown.slice(0, 3).join(', ')); return; }
+  if (!confirm('Share this deck to the public community pool? It will be visible to everyone (anonymously).')) return;
+  ensureBuilderDefaults();
+  // Names + counts only: the server rebuilds every row (cost/type/image/…)
+  // from its own card catalogue, so nothing client-supplied gets stored.
+  const payload = {
+    cards: Object.entries(main).map(([n, c]) => ({ name: n, count: c })),
+    sideboard: Object.entries(side).map(([n, c]) => ({ name: n, count: c })),
+    runes: Object.entries(builderRunes).filter(([n, c]) => c > 0).map(([n, c]) => ({ name: n + ' Rune', count: c })),
+    battlefields: builderBf.map(n => ({ name: n, count: 1 }))
+  };
+  const btn = document.querySelector('button[onclick="submitToMeta()"]');
+  const oldText = btn ? btn.textContent : '';
+  if (btn) { btn.textContent = 'Submitting…'; btn.disabled = true; }
+  try {
+    const res = await fetch('/api/submissions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    let body = null;
+    try { body = await res.json(); } catch (e) {}
+    if (!res.ok) throw new Error((body && body.error) || ('HTTP ' + res.status));
+    if (body && body.duplicate) { toast('That exact deck is already in the community pool'); return; }
+    const mine = tagCommunityDeck(body && body.deck);
+    if (mine) communityDecks.push(mine);
+    filters.community = true;      // show them what they just joined
+    toast('Deck shared — it now shows under "community decks"');
+    applyFilters();
+  } catch (e) {
+    toast('Submit failed: ' + e.message);
+  } finally {
+    if (btn) { btn.textContent = oldText; btn.disabled = false; }
+  }
 }
 
 /* In-page smoke test: navigates every view, exercises the builder, and checks

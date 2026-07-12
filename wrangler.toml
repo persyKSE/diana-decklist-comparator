@@ -1,0 +1,8 @@
+name = "diana-decklist-comparator"
+compatibility_date = "2026-07-01"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "diana-submissions"
+database_id = "9af7aae1-9ef4-4a17-99dd-2a12631c813d"
