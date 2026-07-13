@@ -1905,6 +1905,46 @@ function buildProfile(perDeckMaps) {
   };
 }
 
+// Podium (1st/2nd) vs the rest of the top cut, per threat class — a proxy for
+// "the card that actually matters" beyond raw copy count. Needs 3+ lists on
+// each side to say anything; below that every class stays neutral, which is
+// also what recovers plain copies-only coverage (see applyImportance).
+function archLean(slug) {
+  const all = (FIELD.archetypes[slug] || { decks: [] }).decks
+    .filter(d => d.placement && d.placement !== 'Best of' && d.placement !== 'Ladder');
+  const podium = all.filter(d => d.placement === '1st' || d.placement === '2nd');
+  const rest = all.filter(d => d.placement !== '1st' && d.placement !== '2nd');
+  if (podium.length < 3 || rest.length < 3) return null;
+  const bucket = ds => {
+    const m = {};
+    buildProfile(ds.map(d => d.main)).threats.forEach(t => { m[t.type + '|' + (t.might == null ? '' : t.might)] = t.copies; });
+    return m;
+  };
+  return { podium: bucket(podium), rest: bucket(rest) };
+}
+
+// Importance multiplier per threat class: cost relative to the archetype's
+// own average (a bigger investment matters more) × podium lean (winning
+// lists lean on this beyond raw copies). Both factors default to neutral (1)
+// absent evidence, so importance=1 everywhere is a strict generalisation of
+// the original copies-only coverage, not a rewrite of it.
+function applyImportance(p, slug) {
+  const lean = slug ? archLean(slug) : null;
+  p.threats.forEach(t => {
+    const costW = p.avgCost ? Math.max(0.5, (t.cost != null ? t.cost : p.avgCost) / p.avgCost) : 1;
+    let leanW = 1;
+    if (lean) {
+      const key = t.type + '|' + (t.might == null ? '' : t.might);
+      const pod = lean.podium[key] || 0, rst = lean.rest[key] || 0;
+      if (rst > 0) leanW = Math.max(0.5, Math.min(2, pod / rst));
+      else if (pod > 0) leanW = 2;
+    }
+    t.importance = costW * leanW;
+  });
+  p.weightedMainCopies = p.threats.reduce((a, t) => a + t.copies * t.importance, 0) || p.mainCopies || 1;
+  return p;
+}
+
 // How an archetype's board actually looks. opts.includeSide folds each list's
 // sideboard in, giving the superset of cards they can present across games 2-3.
 function archProfile(slug, opts) {
@@ -1912,7 +1952,7 @@ function archProfile(slug, opts) {
   const includeSide = opts && opts.includeSide;
   const p = buildProfile(decks.map(d => includeSide ? mergeCounts(d.main, d.side) : d.main));
   p.n = decks.length;
-  return p;
+  return applyImportance(p, slug);
 }
 
 // Profile of a single arbitrary list (your deck) — the threats an opponent's
@@ -1951,7 +1991,7 @@ function techTags(name) {
 // How well does one card answer one thing the opponent plays? 1 = a clean
 // answer, 0 = no interaction. Partial answers (bounce, stun, a combat trick
 // that can never kill) are discounted rather than counted or ignored.
-function handleQuality(tags, threat) {
+function handleQuality(tags, threat, answerCost) {
   let q = 0;
   const at = (v) => { if (v > q) q = v; };
   tags.forEach(t => {
@@ -1979,6 +2019,13 @@ function handleQuality(tags, threat) {
       if (t.tag === 'counter') at(1);
     }
   });
+  // Answer economy: spending a card that costs more than the threat it kills
+  // is a worse rate exchange — discounted, floored at 0.5 because it still
+  // fully answers the card, just inefficiently. Never boosts: a cheap answer
+  // to an expensive threat keeps whatever quality the tag alone earned.
+  if (q > 0 && answerCost != null && threat.cost != null && answerCost > 0) {
+    q *= Math.max(0.5, Math.min(1, threat.cost / answerCost));
+  }
   return q;
 }
 
@@ -1994,24 +2041,27 @@ function handleQuality(tags, threat) {
 // — and it can only ever lower breadth, never inflate it.
 function coverageOf(list, p, opts) {
   const deckSize = opts && opts.deckSize;
-  const answers = list.map(c => ({ name: c.name, count: c.count, tags: techTags(c.name) }));
+  const answers = list.map(c => ({ name: c.name, count: c.count, tags: techTags(c.name), cost: (cardInfo(c.name) || {}).cost }));
   let covered = 0, timely = 0;
   p.threats.forEach(t => {
+    const w = t.importance || 1;   // threat-importance weight; 1 if none was computed (e.g. the reverse pass)
     let q = 0, answerCopies = 0;
     answers.forEach(a => {
-      const x = handleQuality(a.tags, t);
+      const x = handleQuality(a.tags, t, a.cost);
       if (x > q) q = x;
       if (x > 0) answerCopies += a.count;   // every copy that interacts is a card you could draw
     });
-    covered += t.copies * q;
+    covered += t.copies * w * q;
     if (deckSize && q > 0) {
       const turn = Math.max(1, Math.round(t.cost != null ? t.cost : 3));
       // answerCopies can be fractional when the answers are an averaged list
       // (the reverse pass); the hypergeometric wants an integer copy count.
-      timely += t.copies * q * pAnswerByTurn(Math.round(answerCopies), deckSize, turn);
+      timely += t.copies * w * q * pAnswerByTurn(Math.round(answerCopies), deckSize, turn);
     }
   });
-  const total = p.mainCopies || 1;
+  // weightedMainCopies (importance-weighted) when available, else the plain
+  // copy total — so importance=1 everywhere is provably the same score.
+  const total = p.weightedMainCopies || p.mainCopies || 1;
 
   // Which single card pulls the most weight, and how many relevant copies you hold.
   // `solo` stays in card-copies until the winner is picked — comparing a raw
@@ -2020,9 +2070,9 @@ function coverageOf(list, p, opts) {
   let best = { name: null, solo: 0, tag: null }, depth = 0;
   answers.forEach(a => {
     let solo = 0;
-    p.threats.forEach(t => solo += t.copies * handleQuality(a.tags, t));
+    p.threats.forEach(t => solo += t.copies * (t.importance || 1) * handleQuality(a.tags, t, a.cost));
     if (solo > 0) depth += a.count;
-    if (solo > best.solo) best = { name: a.name, solo, tag: dominantTag(a.tags, p) };
+    if (solo > best.solo) best = { name: a.name, solo, tag: dominantTag(a.tags, p, a.cost) };
   });
   const coverage = covered / total;
   return { coverage, timely: timely / total, drawOdds: coverage > 0 ? (timely / total) / coverage : 0,
@@ -2030,11 +2080,11 @@ function coverageOf(list, p, opts) {
 }
 
 // The tag that explains most of a card's contribution — for the "why" string.
-function dominantTag(tags, p) {
+function dominantTag(tags, p, answerCost) {
   let best = null, bestVal = -1;
   tags.forEach(t => {
     let v = 0;
-    p.threats.forEach(th => v += th.copies * handleQuality([t], th));
+    p.threats.forEach(th => v += th.copies * (th.importance || 1) * handleQuality([t], th, answerCost));
     if (v > bestVal) { bestVal = v; best = t; }
   });
   return best;
@@ -2302,6 +2352,117 @@ function addToSideboard(name) {
   toast('Added ' + name + ' to your sideboard');
 }
 
+/* ---- Sideboard optimizer ----
+   Same greedy hill-climb shape as the main-deck optimizer (optimizeList),
+   scored on the exact field-weighted timely coverage the table above already
+   shows — threat-importance and answer-economy discounts included, since
+   both flow through coverageOf. Not a separate metric, the same one made
+   actionable. `rows` (weight + archetype profile per row) is computed once
+   by the caller and reused across every trial list, so the hot loop never
+   recomputes archProfile/archLean. */
+function sideboardScore(list, rows) {
+  const wSum = rows.reduce((a, r) => a + r.weight, 0) || 1;
+  return rows.reduce((a, r) => a + r.weight * coverageOf(list, r.p, { deckSize: DECK_SIZE }).timely, 0) / wSum;
+}
+
+function optimizeSideboard(startCounts, rows, slots) {
+  const counts = {};
+  Object.entries(startCounts).forEach(([n, c]) => { if (c > 0) counts[n] = Math.min(c, 3); });
+  const pool = Object.keys(window.CARDS || {}).filter(n => techTags(n).length || econTags(n).length || protectTags(n).length);
+  const size = () => Object.values(counts).reduce((a, b) => a + b, 0);
+  const toList = c => Object.entries(c).map(([name, count]) => ({ name, count }));
+  const moves = [];
+
+  // Trim to the slot cap first if the starting board is oversize, cutting
+  // whatever costs the score least.
+  while (size() > slots) {
+    let worst = null, worstScore = Infinity;
+    Object.keys(counts).forEach(n => {
+      const trial = { ...counts }; trial[n]--; if (!trial[n]) delete trial[n];
+      const s = sideboardScore(toList(trial), rows);
+      if (s < worstScore) { worstScore = s; worst = n; }
+    });
+    counts[worst]--; if (!counts[worst]) delete counts[worst];
+    moves.push({ kind: 'trim', cut: worst });
+  }
+
+  // Fill remaining slots with whichever single add gains the most, one at a time.
+  while (size() < slots) {
+    const base = sideboardScore(toList(counts), rows);
+    let best = null, bestGain = 0.002;
+    pool.forEach(n => {
+      if ((counts[n] || 0) >= 3) return;
+      const gain = sideboardScore(toList({ ...counts, [n]: (counts[n] || 0) + 1 }), rows) - base;
+      if (gain > bestGain) { bestGain = gain; best = n; }
+    });
+    if (!best) break;
+    counts[best] = (counts[best] || 0) + 1;
+    moves.push({ kind: 'add', add: best, gain: bestGain });
+  }
+
+  // Swap pass: once full, try replacing each held card with something better.
+  for (let iter = 0; iter < 15; iter++) {
+    const base = sideboardScore(toList(counts), rows);
+    let best = null, bestGain = 0.002;
+    Object.keys(counts).forEach(cut => {
+      const trial = { ...counts }; trial[cut]--; if (!trial[cut]) delete trial[cut];
+      pool.forEach(add => {
+        if (add === cut || (trial[add] || 0) >= 3) return;
+        const gain = sideboardScore(toList({ ...trial, [add]: (trial[add] || 0) + 1 }), rows) - base;
+        if (gain > bestGain) { bestGain = gain; best = { cut, add }; }
+      });
+    });
+    if (!best) break;
+    counts[best.cut]--; if (!counts[best.cut]) delete counts[best.cut];
+    counts[best.add] = (counts[best.add] || 0) + 1;
+    moves.push({ kind: 'swap', ...best, gain: bestGain });
+  }
+
+  return { counts, moves };
+}
+
+function runSideboardOptimizer() {
+  const { list, source } = currentSideboard();
+  const tw = threatWeights({ includeMirror: true });
+  const rows = tw.rows.map(w => ({ weight: w.weight, p: archProfile(w.slug) }));
+  const startCounts = {};
+  list.forEach(c => startCounts[c.name] = c.count);
+  const before = sideboardScore(list, rows);
+  const { counts, moves } = optimizeSideboard(startCounts, rows, 8);
+  const optimizedList = Object.entries(counts).map(([name, count]) => ({ name, count }));
+  const after = sideboardScore(optimizedList, rows);
+  const out = document.getElementById('sbOptResults');
+  if (!out) return;
+
+  let html = '<div class="summary-box"><strong>Optimized from ' + escHtml(source) + '.</strong> Field-weighted timely coverage: ' +
+    pct(before) + ' → <strong>' + pct(after) + '</strong>. Greedy hill-climb over the same ' + rows.length + ' weighted archetypes and the same threat-importance / answer-economy discounts as the table above — consensus-optimal against the expected field, not a guarantee against any one opponent.</div>';
+  if (!moves.length) {
+    html += '<div class="summary-box">No improving change found — this sideboard already sits at a local optimum against the weighted field.</div>';
+  } else {
+    moves.forEach(m => {
+      if (m.kind === 'trim') {
+        html += '<div class="diff-line diff-del" data-card="' + attr(m.cut) + '">' + cardImg(m.cut) + '<span>&minus;1 ' + escHtml(m.cut) + '</span><span style="font-size:11px;opacity:0.7;">trimming to 8 slots</span></div>';
+      } else if (m.kind === 'add') {
+        html += '<div class="diff-line diff-add" data-card="' + attr(m.add) + '">' + cardImg(m.add) + '<span>+1 ' + escHtml(m.add) + '</span><span style="font-size:11px;opacity:0.7;">+' + pct(m.gain) + ' field-weighted timely</span></div>';
+      } else {
+        html += '<div class="diff-line diff-del" data-card="' + attr(m.cut) + '">' + cardImg(m.cut) + '<span>&minus;1 ' + escHtml(m.cut) + '</span></div>';
+        html += '<div class="diff-line diff-add" data-card="' + attr(m.add) + '">' + cardImg(m.add) + '<span>+1 ' + escHtml(m.add) + '</span><span style="font-size:11px;opacity:0.7;">+' + pct(m.gain) + ' field-weighted timely</span></div>';
+      }
+    });
+    html += '<div style="margin-top:10px;"><button id="sbOptApply">Apply optimized sideboard</button></div>';
+  }
+  out.innerHTML = html;
+  const btn = document.getElementById('sbOptApply');
+  if (btn) btn.onclick = () => {
+    bCheckpoint();
+    sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n');
+    try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+    const ta = document.getElementById('sideInput'); if (ta) ta.value = sideText;
+    const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML();
+    toast('Optimized sideboard applied');
+  };
+}
+
 function coverageHTML() {
   const { list, source, mine } = currentSideboard();
   const tw = threatWeights({ includeMirror: true });
@@ -2405,7 +2566,7 @@ function coverageHTML() {
           : 'Nothing in this sideboard interacts with them at all.') + '</span><br>';
       if (!best.length) html += '<span style="color:var(--muted);font-size:12.5px;">No card in the Diana pool would add meaningful coverage.</span>';
       best.forEach(x => {
-        const t = dominantTag(techTags(x.n), r.p);
+        const t = dominantTag(techTags(x.n), r.p, (cardInfo(x.n) || {}).cost);
         html += '<span class="pkg-chip" title="' + attr(answerWhy(x.n, t, r.p)) + '">' + cardImg(x.n) +
           '<span data-card="' + attr(x.n) + '">' + escHtml(x.n) + '</span>' +
           '<span style="color:var(--lock);font-size:11px;">+' + pct(x.gain) + '</span>' +
@@ -2416,6 +2577,9 @@ function coverageHTML() {
   } else {
     html += '<div class="summary-box">Every archetype in the field sits at 50% coverage or better with this sideboard.</div>';
   }
+
+  html += '<h2>Sideboard optimizer</h2><p class="sub">Hill-climbs single-card swaps over your 8 slots, scoring the exact field-weighted timely coverage above — same weights, same threat-importance and answer-economy discounts. Consensus-optimal against the expected field, the same way the Build view\'s optimizer is consensus-optimal for the main 40.</p>' +
+    '<button onclick="runSideboardOptimizer()">Optimize sideboard</button><div id="sbOptResults" style="margin-top:10px"></div>';
 
   // ---- Reverse pass: what the field boards against YOU ----
   // Same engine, arguments swapped: their cards (main + the tech they board in)
@@ -2536,6 +2700,13 @@ function coverageHTML() {
     'with three or more scraped lists, because below that their "sideboard" is one player\'s choices. The <em>What the field boards against you</em> table swaps the arguments: their ' +
     'cards become the answers and your own list becomes the threats, so you can see how much of your deck their removal touches — and how much of that they specifically bring in from ' +
     'the board. Same engine, same discounts, no new constants.</p>' +
+    '<p><strong>Threat importance and answer economy.</strong> Two more corrections, both strict generalisations — set every knob below to neutral and the numbers above are exactly ' +
+    'what you would get without them. Not every card in their 40 deserves equal weight: a threat class is upweighted by its cost relative to the archetype\'s own average (a bigger ' +
+    'investment matters more) and by how much more it appears in podium (1st/2nd) lists than the rest of the top cut — real signal, not a guess, but only applied once an archetype has ' +
+    '3+ lists on both sides of that split; thinner fields stay neutral rather than fabricate a trend from one list. Separately, <strong>answer economy</strong> discounts a card that costs ' +
+    'more than the threat it answers — spending a 6-cost removal spell on a 2-drop is a worse trade than the same effect at 2 mana — floored at half credit, since an over-costed answer ' +
+    'still fully answers the card, just inefficiently; a cheap answer to an expensive threat is never boosted, only left alone. Both feed every table on this page, including the ' +
+    'Coverage gaps and Mirror prep suggestions, since they all route through the same coverageOf/dominantTag functions.</p>' +
     '<p><strong>Beyond neutralization.</strong> Killing their cards is one of several ways a list wins a matchup, and a pure coverage metric structurally over-recommends removal — ' +
     'so the Matchup plans table reads three more axes off the same decklists. The <em>clock</em> compares copy-weighted average cost. <em>Combat</em> is the probability a random unit ' +
     'of yours out-Mights a random unit of theirs — units answer units, and that removal costs no card. <em>Gas</em> counts card-economy copies from rules text: draw <em>N</em> counts ' +
@@ -2617,7 +2788,11 @@ function writeSide(counts) { sideText = Object.entries(counts).map(([n, c]) => c
    history across reloads would surprise more than it helps. */
 const B_UNDO_MAX = 30;
 let bUndoStack = [], bRedoStack = [];
-function bSnapshot() { return { main: coachText, side: sideText, runes: { ...builderRunes }, bf: [...builderBf] }; }
+// builderRunes/builderBf stay null until the Build view first initializes
+// them (ensureBuilderDefaults) — bCheckpoint fires from Meta actions
+// (addToSideboard, the sideboard optimizer) too, well before that may have
+// happened, so both must tolerate null rather than assume the builder ran.
+function bSnapshot() { return { main: coachText, side: sideText, runes: { ...builderRunes }, bf: Array.isArray(builderBf) ? [...builderBf] : [] }; }
 function bCheckpoint() {
   bUndoStack.push(bSnapshot());
   if (bUndoStack.length > B_UNDO_MAX) bUndoStack.shift();
@@ -3539,8 +3714,11 @@ function renderAnalyze(ctx) {
 function loadMatches() { try { return JSON.parse(localStorage.getItem('ddl-matches') || '[]'); } catch (e) { return []; } }
 function writeMatches(m) { try { localStorage.setItem('ddl-matches', JSON.stringify(m)); } catch (e) {} }
 
-function matchRecord(slug) {
-  const games = loadMatches().filter(x => x.arch === slug);
+// opts.postBoard, when given, filters to just games 1 (false) or 2-3 (true) —
+// backward compatible, existing callers that pass nothing get every game.
+function matchRecord(slug, opts) {
+  let games = loadMatches().filter(x => x.arch === slug);
+  if (opts && opts.postBoard != null) games = games.filter(x => !!x.postBoard === opts.postBoard);
   const w = games.filter(x => x.result === 'W').length;
   return { n: games.length, w, l: games.length - w };
 }
@@ -3567,6 +3745,42 @@ function logDelete(id) {
   writeMatches(loadMatches().filter(x => x.id !== id));
   render();
 }
+
+/* ---- Bo3 set logging ----
+   A single game tells you nothing about pre- vs post-board performance; a
+   set does. logSetId/logSetArch are session-only (not persisted — reloading
+   mid-set just means tapping "New set" again) and link up to three games
+   against the same opponent, tagging games 2-3 postBoard so the record can
+   be split later. Everything else about a set-logged game — play/draw,
+   mulligan, notes — comes from the same shared fields the single-game form
+   already uses, read fresh at the moment each Won/Lost is tapped, so they
+   can differ game to game exactly like a real Bo3 does. */
+let logSetId = null, logSetArch = null;
+
+function logSetGame(game, result) {
+  const arch = document.getElementById('logArch').value;
+  if (!arch) { toast('Pick the opponent\'s archetype first'); return; }
+  if (!logSetId || logSetArch !== arch) {
+    logSetId = Date.now() + '-set-' + Math.random().toString(36).slice(2, 7);
+    logSetArch = arch;
+  }
+  const m = loadMatches();
+  m.push({
+    id: Date.now() + '-' + Math.random().toString(36).slice(2, 7),
+    date: new Date().toISOString().slice(0, 10),
+    arch, result,
+    play: document.getElementById('logPlay').value || null,
+    mull: document.getElementById('logMull').value === '' ? null : +document.getElementById('logMull').value,
+    deck: document.getElementById('logDeck').value || null,
+    notes: (document.getElementById('logNotes').value || '').trim() || null,
+    setId: logSetId, game, postBoard: game >= 2,
+  });
+  writeMatches(m);
+  toast('Game ' + game + ' (' + (result === 'W' ? 'win' : 'loss') + ') logged — ' + (game >= 2 ? 'post-board' : 'pre-board'));
+  render();
+}
+
+function logSetReset() { logSetId = null; logSetArch = null; render(); }
 
 // One-tap logging from the Meta coverage table — right after a game you are
 // looking at the matchup row, not at the Log view. Same storage, no detail
@@ -3632,6 +3846,25 @@ function renderLog() {
     '<button class="winbtn" onclick="logMatch(\'W\')">Won</button>' +
     '<button class="lossbtn" onclick="logMatch(\'L\')">Lost</button></div>';
 
+  // Bo3 set mode: one Won/Lost tap per game against the SAME opponent above,
+  // games 2-3 auto-flagged post-board. State lives in storage (matching
+  // setId), not just the transient JS globals, so it survives a re-render.
+  {
+    const gamesInSet = logSetId ? matches.filter(x => x.setId === logSetId) : [];
+    const gameDone = n => gamesInSet.find(x => x.game === n);
+    html += '<div class="logform" style="margin-top:-6px;">' +
+      '<span style="font-size:12px;color:var(--muted);">Log a set (Bo3) vs the opponent above — game 1 is pre-board, 2 and 3 are flagged post-board automatically:</span>';
+    [1, 2, 3].forEach(n => {
+      const done = gameDone(n);
+      html += done
+        ? '<span class="dist-badge" style="color:' + (done.result === 'W' ? 'var(--lock)' : 'var(--danger)') + '">G' + n + ': ' + done.result + '</span>'
+        : '<span style="display:inline-flex;gap:3px;align-items:center;">G' + n + '<button class="mini winbtn" style="margin-left:0" onclick="logSetGame(' + n + ',\'W\')">W</button>' +
+          '<button class="mini lossbtn" style="margin-left:0" onclick="logSetGame(' + n + ',\'L\')">L</button></span>';
+    });
+    if (gamesInSet.length) html += '<button class="mini ghost" style="margin-left:0" onclick="logSetReset()" title="Start a fresh Bo3 against a new opponent">New set</button>';
+    html += '</div>';
+  }
+
   if (!matches.length) {
     html += '<div class="summary-box">No games logged yet. Every other number on this site is inferred from decklists because <strong>no event publishes match results</strong> — ' +
       'this page is where you fix that for yourself. Log practice and tournament games with one tap; at ~10 games per matchup the intervals start meaning something, ' +
@@ -3653,21 +3886,27 @@ function renderLog() {
   matches.forEach(x => (bySlug[x.arch] = bySlug[x.arch] || []).push(x));
   const threatRank = {};
   if (haveField) threatWeights({ includeMirror: true }).rows.forEach((r, i) => threatRank[r.slug] = { rank: i + 1, weight: r.weight });
+  const haveSetData = matches.some(x => x.postBoard);
   const rows = Object.entries(bySlug).map(([slug, games]) => {
     const gw = games.filter(x => x.result === 'W').length;
     const onPlay = games.filter(x => x.play === 'play');
     const onDraw = games.filter(x => x.play === 'draw');
+    const pre = games.filter(x => !x.postBoard), post = games.filter(x => x.postBoard);
+    const rec = g => g.length ? g.filter(x => x.result === 'W').length + '–' + g.filter(x => x.result === 'L').length : '—';
     return {
       slug, n: games.length, w: gw, wr: gw / games.length,
       ci: wilson(gw, games.length),
       playStr: onPlay.length ? onPlay.filter(x => x.result === 'W').length + '–' + onPlay.filter(x => x.result === 'L').length : '—',
       drawStr: onDraw.length ? onDraw.filter(x => x.result === 'W').length + '–' + onDraw.filter(x => x.result === 'L').length : '—',
+      preStr: rec(pre), postStr: rec(post),
       threat: threatRank[slug] || null,
     };
   }).sort((a, b) => (a.threat && b.threat) ? a.threat.rank - b.threat.rank : b.n - a.n);
 
-  html += '<h2>By matchup</h2><p class="sub">Ordered by the archetype\'s threat rank in the expected field, so the top rows are the matchups that matter most. "Drill this" = losing record against a top-8 threat with 4+ games — the highest-value practice you can schedule.</p>';
+  html += '<h2>By matchup</h2><p class="sub">Ordered by the archetype\'s threat rank in the expected field, so the top rows are the matchups that matter most. "Drill this" = losing record against a top-8 threat with 4+ games — the highest-value practice you can schedule.' +
+    (haveSetData ? ' Games logged through the Bo3 set form split into <strong>Pre-board</strong> (game 1) and <strong>Post-board</strong> (games 2-3) — the empirical check on whether your actual sideboarding is working, not just the coverage heuristic\'s.' : '') + '</p>';
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Opponent</th><th class="num">Threat #</th><th class="num">Games</th><th>Record</th>' +
+    (haveSetData ? '<th class="num" title="Record in games logged as game 1 of a Bo3 set">Pre-board</th><th class="num" title="Record in games logged as game 2 or 3 of a Bo3 set">Post-board</th>' : '') +
     '<th class="num">On play</th><th class="num">On draw</th><th></th></tr></thead><tbody>';
   rows.forEach(r => {
     const drill = r.threat && r.threat.rank <= 8 && r.n >= 4 && r.wr < 0.5;
@@ -3678,6 +3917,7 @@ function renderLog() {
       '<td class="num">' + r.n + '</td>' +
       '<td><span class="incl-bar" style="width:' + Math.round(60 * r.wr) + 'px;background:' + (r.wr >= 0.5 ? 'var(--lock)' : 'var(--danger)') + '"></span>' +
       r.w + '–' + (r.n - r.w) + '<span class="ci">' + r.ci[0].toFixed(0) + '–' + r.ci[1].toFixed(0) + '%</span></td>' +
+      (haveSetData ? '<td class="num">' + r.preStr + '</td><td class="num">' + r.postStr + '</td>' : '') +
       '<td class="num">' + r.playStr + '</td><td class="num">' + r.drawStr + '</td>' +
       '<td>' + (drill ? '<span class="dist-badge" style="color:var(--danger)">drill this</span>'
               : strong ? '<span class="dist-badge" style="color:var(--lock)">solid</span>' : '') + '</td></tr>';
@@ -3692,7 +3932,7 @@ function renderLog() {
   [...matches].reverse().slice(0, 30).forEach(x => {
     html += '<div class="card-row"><span class="count-badge" style="min-width:20px;color:' + (x.result === 'W' ? 'var(--lock)' : 'var(--danger)') + '">' + x.result + '</span>' +
       '<span class="card-name">' + escHtml(archName(x.arch)) +
-      '<span class="card-meta"> · ' + x.date + (x.play ? ' · ' + x.play : '') + (x.mull != null ? ' · mull ' + x.mull : '') + (x.deck ? ' · ' + escHtml(x.deck) : '') + '</span>' +
+      '<span class="card-meta"> · ' + x.date + (x.game ? ' · G' + x.game + (x.postBoard ? ' (post-board)' : ' (pre-board)') : '') + (x.play ? ' · ' + x.play : '') + (x.mull != null ? ' · mull ' + x.mull : '') + (x.deck ? ' · ' + escHtml(x.deck) : '') + '</span>' +
       (x.notes ? '<div class="card-meta">' + escHtml(x.notes) + '</div>' : '') + '</span>' +
       '<button class="mini" style="background:var(--danger)" onclick="logDelete(\'' + x.id + '\')">×</button></div>';
   });
@@ -3853,7 +4093,7 @@ function renderMirrorPrep() {
   if (sugg.length) {
     html += '<div class="pkg-box"><strong>Best mirror tech you are not holding</strong> (marginal breadth added, from cards winning Diana lists already play):<br>';
     sugg.forEach(x => {
-      const t = dominantTag(techTags(x.n), p);
+      const t = dominantTag(techTags(x.n), p, (cardInfo(x.n) || {}).cost);
       html += '<span class="pkg-chip" title="' + attr(answerWhy(x.n, t, p)) + '">' + cardImg(x.n) +
         '<span data-card="' + attr(x.n) + '">' + escHtml(x.n) + '</span>' +
         '<span style="color:var(--lock);font-size:11px;">+' + pct(x.gain) + '</span>' +

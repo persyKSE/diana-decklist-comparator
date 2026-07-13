@@ -2,7 +2,14 @@ name: Update deck data
 
 on:
   schedule:
-    - cron: "0 6 * * 1"   # Mondays 06:00 UTC
+    # Two runs instead of one Monday-morning pass: a single weekly cron meant
+    # a weekend event published Saturday night could sit unscraped for most
+    # of a week. Sunday catches Friday/Saturday events fast; Tuesday catches
+    # whatever a Monday-published event needed a day to settle. Both runs are
+    # cheap — discover_decks/fetch_meta_decks/fetch_ladder_decks all skip
+    # already-known URLs, so a no-op week costs one HTTP call to the sitemap.
+    - cron: "0 22 * * 0"  # Sunday 22:00 UTC
+    - cron: "0 6 * * 2"   # Tuesday 06:00 UTC
   workflow_dispatch:
 
 permissions:
