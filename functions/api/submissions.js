@@ -14,6 +14,9 @@ const MAX_BODY_BYTES = 32 * 1024;
 const MAX_PER_IP_PER_HOUR = 5;
 const MAX_PER_DAY = 200;
 const MAX_RETURNED = 500;
+// A submission stops appearing in GET once this many distinct IPs report it.
+// Shared (duplicated, not imported — see report.js) with the report endpoint.
+const REPORT_HIDE_THRESHOLD = 3;
 
 const json = (obj, status = 200) =>
   new Response(JSON.stringify(obj), {
@@ -29,10 +32,20 @@ async function ensureSchema(db) {
          created_at TEXT NOT NULL DEFAULT (datetime('now')),
          ip_hash TEXT NOT NULL,
          deck_hash TEXT NOT NULL UNIQUE,
-         deck TEXT NOT NULL
+         deck TEXT NOT NULL,
+         report_count INTEGER NOT NULL DEFAULT 0
        )`
     )
     .run();
+  // The column above is new; a table created before this shipped won't have
+  // it. D1/SQLite has no "ADD COLUMN IF NOT EXISTS", so add it and swallow
+  // the one error that means "already there" — same idempotent-per-request
+  // spirit as CREATE TABLE IF NOT EXISTS above.
+  try {
+    await db.prepare('ALTER TABLE submissions ADD COLUMN report_count INTEGER NOT NULL DEFAULT 0').run();
+  } catch (e) {
+    if (!/duplicate column/i.test(String((e && e.message) || e))) throw e;
+  }
 }
 
 // The card catalogue ships with every deploy; cache it per isolate.
@@ -88,11 +101,17 @@ function buildSection(entries, cards, { types, maxCopies, maxEntries, label }) {
 export async function onRequestGet(context) {
   try {
     await ensureSchema(context.env.DB);
+    // report_count crossing the threshold hides a row from everyone — the
+    // one moderation lever this app has, since there is no login system to
+    // build a real admin role on top of. Hard delete is still a manual
+    // `wrangler d1 execute --remote`, unchanged.
     const { results } = await context.env.DB
-      .prepare('SELECT deck FROM submissions ORDER BY id LIMIT ?')
-      .bind(MAX_RETURNED)
+      .prepare('SELECT id, deck FROM submissions WHERE report_count < ? ORDER BY id LIMIT ?')
+      .bind(REPORT_HIDE_THRESHOLD, MAX_RETURNED)
       .all();
-    return json(results.map((r) => JSON.parse(r.deck)));
+    // id is merged in (not stored inside the JSON blob) so the client can
+    // target a specific row when reporting it.
+    return json(results.map((r) => ({ id: r.id, ...JSON.parse(r.deck) })));
   } catch (e) {
     return json({ error: 'submissions unavailable' }, 500);
   }

@@ -235,6 +235,17 @@
   .modal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
   .modal-title { font-family: var(--serif); font-size: 18px; font-weight: 600; letter-spacing: 0.5px; color: var(--gold-hi); }
   .modal-sub { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+  /* Printable one-pager: only the open modal's print-guide content survives
+     printing — chrome, nav, and the modal's own header/close button hide. */
+  @media print {
+    body > *:not(#modal) { display: none !important; }
+    #modal:not(.show) { display: none !important; }
+    #modal { position: static; inset: auto; background: none; backdrop-filter: none; padding: 0; overflow: visible; display: block !important; }
+    .modal { max-width: none; width: auto; box-shadow: none; border: none; padding: 0; background: #fff; color: #111; }
+    .no-print { display: none !important; }
+    .print-guide { color: #111; }
+    .print-guide table, .print-guide th, .print-guide td { border-color: #999 !important; }
+  }
   .icon-btn { background: var(--panel2); color: var(--text); border: 1px solid var(--border); width: 30px; height: 30px; border-radius: 3px; cursor: pointer; font-size: 14px; padding: 0; flex-shrink: 0; }
   .icon-btn:hover { border-color: var(--gold); }
   .modal-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
@@ -1199,6 +1210,48 @@ function avgDistTo(counts) {
   return globalDecks.reduce((a, d) => a + deckDistance(list, d.cards), 0) / (globalDecks.length || 1);
 }
 
+/* ---- Budget upgrades ----
+   Not a collection tracker — this app has no notion of which cards you
+   already own. What it CAN do: for every card in your current list, ask
+   whether swapping it for something else improves the same optScore the
+   main-deck optimizer uses, and at what net price. Ranked by score gained
+   per dollar spent, greedy — not a guaranteed-optimal knapsack solve, the
+   same simple-and-disclosed standard the other optimizers here hold to.
+   Swaps with a net cost ≤0 (an upgrade that's also cheaper or free) sort
+   first regardless of budget, since there's no reason not to take them. */
+function budgetUpgrades(startCounts, opts) {
+  const budget = opts && opts.budget != null ? opts.budget : null;
+  const base = optScore(startCounts);
+  const pool = rankedCards.map(c => c.name).filter(n => priceOf(n) > 0);
+  const suggestions = [];
+  Object.keys(startCounts).forEach(cut => {
+    const cutPrice = priceOf(cut);
+    if (!cutPrice) return;   // no price on what you'd be selling — can't quote a net cost
+    const trial = { ...startCounts }; trial[cut]--; if (!trial[cut]) delete trial[cut];
+    pool.forEach(add => {
+      if (add === cut || (trial[add] || 0) >= 3) return;
+      const gain = optScore({ ...trial, [add]: (trial[add] || 0) + 1 }) - base;
+      if (gain <= 0.02) return;   // not a real improvement
+      const netCost = priceOf(add) - cutPrice;
+      if (budget != null && netCost > budget) return;
+      suggestions.push({ cut, add, gain, netCost, cutPrice, addPrice: priceOf(add) });
+    });
+  });
+  // Free/cheaper upgrades first (infinite value per dollar), then by gain per
+  // dollar spent, then by raw gain as a tiebreak.
+  suggestions.sort((a, b) => {
+    const av = a.netCost <= 0 ? Infinity : a.gain / a.netCost;
+    const bv = b.netCost <= 0 ? Infinity : b.gain / b.netCost;
+    return bv - av || b.gain - a.gain;
+  });
+  // One suggestion per (cut) card — the single best add for it — so the list
+  // reads as "here are your worst-value cards and what beats them", not a
+  // combinatorial dump.
+  const seen = new Set(), out = [];
+  for (const s of suggestions) { if (seen.has(s.cut)) continue; seen.add(s.cut); out.push(s); if (out.length >= 8) break; }
+  return out;
+}
+
 function optimizeList(startCounts) {
   const counts = {};
   Object.entries(startCounts).forEach(([n, c]) => { if (c > 0) counts[n] = Math.min(c, 3); });
@@ -1286,6 +1339,48 @@ function runOptimizer() {
   if (btn) btn.onclick = () => { setCoach(normalizeCoach(optimized)); toast('Optimized list applied'); };
 }
 
+// Apply one budget-upgrade suggestion (cut one copy of `cut`, add one of
+// `add`) — each is an independent purchase, unlike the all-or-nothing
+// optimizer, so these apply one at a time rather than as a batch.
+function applyBudgetSwap(cut, add) {
+  const counts = bMain();
+  if (!counts[cut]) return;
+  bCheckpoint();
+  if (--counts[cut] <= 0) delete counts[cut];
+  counts[add] = (counts[add] || 0) + 1;
+  setCoach(normalizeCoach(counts));
+  toast('Swapped ' + cut + ' for ' + add);
+  runBudgetUpgrades();   // refresh the list — that swap may have changed what else is worth it
+}
+
+function runBudgetUpgrades() {
+  const capInput = document.getElementById('budgetCap');
+  const budget = capInput && capInput.value !== '' ? +capInput.value : null;
+  const counts = bMain();
+  const out = document.getElementById('budgetResults');
+  if (!out) return;
+  if (bTotal(counts) < 20) { out.innerHTML = '<div class="summary-box">Build at least a partial list first — there is nothing to price against.</div>'; return; }
+  const sugg = budgetUpgrades(counts, { budget });
+  let html = '';
+  if (!sugg.length) {
+    html = '<div class="summary-box">' + (budget != null
+      ? 'No improving swap found within $' + budget + '.'
+      : 'No improving swap found — every priced alternative is a downgrade by this scoring, or the relevant cards have no listed price.') + '</div>';
+  } else {
+    // Prices in this catalogue mostly run under $1 — .toFixed(0) rounded
+    // almost every real price to "$0". Two decimals so cent-level cards
+    // (the common case) still read as real numbers.
+    sugg.forEach(s => {
+      const netTxt = s.netCost <= 0 ? ('saves $' + (-s.netCost).toFixed(2)) : ('+$' + s.netCost.toFixed(2));
+      html += '<div class="diff-line diff-del" data-card="' + attr(s.cut) + '">' + cardImg(s.cut) + '<span>&minus;1 ' + escHtml(s.cut) + '</span><span style="font-size:11px;opacity:0.7;">$' + s.cutPrice.toFixed(2) + '</span></div>';
+      html += '<div class="diff-line diff-add" data-card="' + attr(s.add) + '">' + cardImg(s.add) + '<span>+1 ' + escHtml(s.add) + '</span>' +
+        '<span style="font-size:11px;opacity:0.7;">$' + s.addPrice.toFixed(2) + ' · ' + netTxt + ' · +' + s.gain.toFixed(1) + ' score</span>' +
+        '<button class="mini" style="margin-left:8px" onclick="applyBudgetSwap(\'' + s.cut.replace(/'/g, "\\'") + '\',\'' + s.add.replace(/'/g, "\\'") + '\')">Apply</button></div>';
+    });
+  }
+  out.innerHTML = html;
+}
+
 /* ---------------- Draw simulator ----------------
    Consistency is the one axis the consensus data can't speak to: whether a
    given 40 actually delivers its cards on time. That's pure hypergeometric
@@ -1332,6 +1427,24 @@ function pAnswerByTurn(K, deck, t) {
   const seen = cardsSeenByTurn(t, deck);
   const straight = hyperAtLeast(1, K, deck, seen);
   return straight + (1 - straight) * hyperAtLeast(1, K, deck - seen, MULLIGAN_MAX);
+}
+
+// Shared "does this opening hand curve out" bar — at least CURVE_MIN_CHEAP
+// cards costing CURVE_MAX_COST or less. This is the exact rule the Goldfish
+// Simulator's auto-mulligan already uses to decide whether to bottom cards;
+// extracting it means the mulligan trainer grades against the identical bar
+// instead of inventing a second opinion about what "good" means.
+const CURVE_MIN_CHEAP = 2, CURVE_MAX_COST = 2;
+function handCurvesOut(names) {
+  return names.filter(n => ((cardInfo(n) || {}).cost ?? 99) <= CURVE_MAX_COST).length >= CURVE_MIN_CHEAP;
+}
+// P(a random HAND_SIZE-card opener from this deckList misses the curve bar) —
+// exact hypergeometric, reusing hyperAtLeast rather than a new formula.
+function pCurveMiss(deckList) {
+  const deckSize = deckList.reduce((a, c) => a + c.count, 0);
+  if (!deckSize) return 0;
+  const cheapCount = deckList.reduce((a, c) => a + (((cardInfo(c.name) || {}).cost ?? 99) <= CURVE_MAX_COST ? c.count : 0), 0);
+  return 1 - hyperAtLeast(CURVE_MIN_CHEAP, cheapCount, deckSize, HAND_SIZE);
 }
 
 // Never round a near-certainty up to a flat 100% (or a real chance down to 0%).
@@ -1395,7 +1508,8 @@ function newHand() {
   const lib = [];
   list.forEach(c => { for (let i = 0; i < c.count; i++) lib.push(c.name); });
   shuffle(lib);
-  sim = { lib, hand: lib.splice(0, Math.min(HAND_SIZE, lib.length)), aside: new Set(), mulled: false };
+  const hand = lib.splice(0, Math.min(HAND_SIZE, lib.length));
+  sim = { lib, hand, opening: [...hand], aside: new Set(), mulled: false, decision: null };
   renderSimHand();
 }
 function toggleAside(i) {
@@ -1403,6 +1517,14 @@ function toggleAside(i) {
   if (sim.aside.has(i)) sim.aside.delete(i);
   else if (sim.aside.size < MULLIGAN_MAX) sim.aside.add(i);
   else { toast('You may set aside at most ' + MULLIGAN_MAX + ' cards'); return; }
+  renderSimHand();
+}
+// Explicit "keep" — grades the decision immediately rather than waiting for
+// the player to draw into the next turn. Kept separate from drawOne so
+// grading doesn't require ever hitting Draw.
+function keepHand() {
+  if (!sim || sim.mulled) return;
+  sim.decision = 'kept';
   renderSimHand();
 }
 function doMulligan() {
@@ -1414,6 +1536,7 @@ function doMulligan() {
   sim.hand = kept.concat(drawn);
   sim.aside = new Set();
   sim.mulled = true;
+  sim.decision = 'mulled';
   renderSimHand();
 }
 function drawOne() {
@@ -1421,8 +1544,32 @@ function drawOne() {
   if (!sim.lib.length) { toast('Main deck is empty'); return; }
   sim.hand.push(sim.lib.shift());
   sim.mulled = true;   // past the mulligan window
+  if (!sim.decision) sim.decision = 'kept';   // never mulliganed, drew anyway — an implicit keep
   renderSimHand();
 }
+
+// Grades the just-made keep/mulligan call against handCurvesOut/pCurveMiss —
+// the exact bar the Goldfish Simulator's own auto-mulligan uses. Reads the
+// ORIGINAL opening hand (sim.opening), not the post-mulligan one, since the
+// decision being graded was made on what you first saw.
+function mulliganGradeHTML() {
+  if (!sim || !sim.decision) return '';
+  const { list } = activeList();
+  const curved = handCurvesOut(sim.opening);
+  const cheapN = sim.opening.filter(n => ((cardInfo(n) || {}).cost ?? 99) <= CURVE_MAX_COST).length;
+  const p = pCurveMiss(list);
+  const kept = sim.decision === 'kept';
+  const agree = kept === curved;
+  return '<div class="summary-box" style="margin-top:8px; border-color:' + (agree ? 'var(--lock)' : 'var(--flex)') + '">' +
+    '<strong>' + (agree ? 'Agrees with the curve heuristic.' : 'Disagrees with the curve heuristic.') + '</strong> ' +
+    'Your opening hand had <strong>' + cheapN + '</strong> card' + (cheapN === 1 ? '' : 's') + ' costing ' + CURVE_MAX_COST + ' or less ' +
+    '(the bar is ' + CURVE_MIN_CHEAP + '+), so the same rule the Goldfish Simulator\'s auto-mulligan uses says <strong>' + (curved ? 'keep' : 'mulligan') +
+    '</strong> — you <strong>' + (kept ? 'kept' : 'mulliganed') + '</strong>. ' +
+    'Off this ' + list.reduce((a, c) => a + c.count, 0) + '-card list, a random opener misses that bar <strong>' + pct(p) + '</strong> of the time ' +
+    '(exact hypergeometric, same machinery as the odds above).</div>' +
+    '<p class="sub" style="margin-top:4px;">One simple, disclosed rule — cards ≤' + CURVE_MAX_COST + ' cost as a proxy for "can this hand do something early" — not a full hand evaluator. It cannot see removal, card draw, or the matchup. A disagreement is a prompt to think it through, not an automatic correction.</p>';
+}
+
 function renderSimHand() {
   const el = document.getElementById('simHand');
   if (!el) return;
@@ -1440,7 +1587,8 @@ function renderSimHand() {
   html += '<p class="sub" style="margin-top:8px;">' +
     (sim.mulled ? 'After ' + (turn ? turn + ' draw step' + (turn === 1 ? '' : 's') : 'the mulligan') + ': ' : 'Opening hand: ') +
     sim.hand.length + ' cards' + (cheapest != null ? ', cheapest costs ' + cheapest : '') +
-    (sim.mulled ? '' : ' · click up to ' + MULLIGAN_MAX + ' cards to set aside, then Mulligan') + '.</p>';
+    (sim.mulled ? '' : ' · click up to ' + MULLIGAN_MAX + ' cards to set aside, then Mulligan or Keep') + '.</p>';
+  html += mulliganGradeHTML();
   el.innerHTML = html;
 }
 
@@ -1466,7 +1614,9 @@ function renderConsistency() {
 
   html += '<div class="coach-tools"><label style="font-size:13px;color:var(--muted)">Odds by turn <strong id="simTurnLabel" style="color:var(--text)">' + simTurn + '</strong></label>' +
     '<input type="range" min="1" max="10" value="' + simTurn + '" oninput="setSimTurn(+this.value)" style="flex:1;max-width:240px;">' +
-    '<button onclick="newHand()">Deal a hand</button><button onclick="doMulligan()" class="ghost">Mulligan</button><button onclick="drawOne()" class="ghost">Draw</button></div>';
+    '<button onclick="newHand()">Deal a hand</button><button onclick="doMulligan()" class="ghost">Mulligan</button>' +
+    '<button onclick="keepHand()" class="ghost" title="Lock in this hand and grade the decision against the curve heuristic">Keep</button>' +
+    '<button onclick="drawOne()" class="ghost">Draw</button></div>';
   html += '<div id="simHand"></div>';
   html += '<div id="simTable">' + simTableHTML() + '</div>';
   return html;
@@ -2891,10 +3041,12 @@ function simulateGoldfish(iterations = 10000) {
 
     // Mulligan (Riftbound: set aside up to 2, draw replacements, then recycle
     // the set-aside to the bottom — no reshuffle). Heuristic: bottom the two
-    // priciest cards when the opener can't curve out (fewer than 2 cards ≤2).
-    let hand = m.slice(0, 7), deckIdx = 7;
-    const cheap = hand.filter(n => ((cardInfo(n) || {}).cost ?? 99) <= 2).length;
-    if (cheap < 2) {
+    // priciest cards when the opener can't curve out (handCurvesOut, shared
+    // with the interactive mulligan trainer below). Opens on HAND_SIZE (4),
+    // not a Magic-style 7 — a prior bug here overstated this deck's curve-out
+    // rate by dealing 3 extra cards of information no real opener gets.
+    let hand = m.slice(0, HAND_SIZE), deckIdx = HAND_SIZE;
+    if (!handCurvesOut(hand)) {
       const aside = hand.map((n, idx) => [idx, (cardInfo(n) || {}).cost ?? 0])
         .filter(([, c]) => c >= 4).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([idx]) => idx);
       if (aside.length) {
@@ -3151,6 +3303,20 @@ function builderSearchHTML() {
       : 'Click a card to add it to the main deck; right-click to send it to the sideboard. Use ‹ › to page.') + '</p>' +
     '</div>';
 }
+// Field-weighted timely coverage of the CURRENT sideboard, read live in the
+// builder so sideboarding doesn't require a trip to Meta to see if it's
+// working. Exactly the Meta view's own sideboardScore/archProfile/
+// threatWeights — same score, same discounts, not a second metric.
+function builderSideboardScore(sideCounts) {
+  if (!fieldReady()) return null;
+  const list = Object.entries(sideCounts).map(([name, count]) => ({ name, count }));
+  if (!list.length) return null;
+  const tw = threatWeights({ includeMirror: true });
+  if (!tw.rows.length) return null;
+  const rows = tw.rows.map(w => ({ weight: w.weight, p: archProfile(w.slug) }));
+  return sideboardScore(list, rows);
+}
+
 function builderHTML(N) {
   ensureBuilderDefaults();
   const main = bMain(), side = bSide();
@@ -3171,6 +3337,7 @@ function builderHTML(N) {
     '<button onclick="exportMyDeckImage()" title="Save a shareable PNG">Export PNG</button>' +
     '<button onclick="shareDeckLink()" title="Copy a URL with your list encoded">Share link</button>' +
     '<button onclick="bImport()" title="Paste a decklist to import">Import list</button>' +
+    '<button onclick="openPrintGuide()" title="A bring-to-the-table one-pager: your decklist plus top matchups by field weight">Print guide</button>' +
     '<button onclick="submitToMeta()" title="Share this 40-card deck to the public community pool (anonymous). Community decks show up for everyone via the filter bar chip">Share to community</button>' +
     '<button class="ghost" onclick="bUndo()" title="Undo the last builder change (Ctrl/Cmd+Z)">Undo</button>' +
     '<button class="ghost" onclick="bHelp()">Shortcuts</button>' +
@@ -3185,8 +3352,10 @@ function builderHTML(N) {
 
   // CENTER — the deck itself
   let center = '<div class="bpane center">';
+  const protoDist = currentProto.length ? deckDistance(Object.entries(main).map(([name, count]) => ({ name, count })), currentProto.map(c => ({ name: c.name, count: c.copies }))) : null;
   center += '<div class="bhead"><span class="btitle">Main Deck</span> <span class="bcount">' + mainTotal + '/40</span>' +
     '<span class="bvalid ' + (valid ? 'ok' : 'bad') + '">' + (valid ? '✓ Valid' : mainTotal + '/40') + '</span>' +
+    (protoDist != null ? '<span class="card-meta" title="Card-for-card distance to the consensus 40 — see the diff on Compare">' + protoDist + ' swap' + (protoDist === 1 ? '' : 's') + ' from consensus</span>' : '') +
     (price ? '<span class="card-meta">' + price + '</span>' : '') +
     '<span class="bctl"><select onchange="bSetSort(this.value)" title="Sort the search results"><option value="cost"' + (builderSearch.sort === 'cost' ? ' selected' : '') + '>Sort: energy</option><option value="name"' + (builderSearch.sort === 'name' ? ' selected' : '') + '>Sort: name</option><option value="might"' + (builderSearch.sort === 'might' ? ' selected' : '') + '>Sort: might</option></select>' +
     '<button class="ghost" onclick="bHelp()">?</button></span></div>';
@@ -3218,7 +3387,10 @@ function builderHTML(N) {
   center += '</div></div></div>';   // close .bbf, the rune .bzone, and .bzones
 
   // sideboard
-  center += '<div class="bzone-h" style="margin-top:16px">Side Deck <span class="z-count">' + sideTotal + '/8</span></div>';
+  const sbScore = builderSideboardScore(side);
+  center += '<div class="bzone-h" style="margin-top:16px">Side Deck <span class="z-count">' + sideTotal + '/8</span>' +
+    (sbScore != null ? ' <span class="dist-badge" style="color:' + pctColor(sbScore) + '" title="Field-weighted timely coverage of this sideboard — the same score the Meta view\'s Sideboard coverage table and Optimize sideboard button use. Not a win rate.">' + pct(sbScore) + ' coverage</span>' : '') +
+    '</div>';
   center += sideTotal
     ? '<div class="bgrid">' + bSortedEntries(side).map(([n, c]) => bTile(n, c, 'side')).join('') + '</div>'
     : '<div class="bempty-note">' + (IS_TOUCH
@@ -3415,6 +3587,9 @@ function renderBuild(ctx) {
     '<span class="card-meta">Hill-climbs card-for-card swaps from your list (or the prototype, if empty) toward the evidenced consensus of the filtered winning decks.</span></div>';
   html += renderWorkspace();
   html += '<div id="optResults"></div>';
+  html += '<h2 style="margin-top:16px">Budget upgrades</h2><p class="sub">Not a collection tracker — this ranks swaps in your <em>current</em> main deck by consensus-score gained per dollar spent, using the same scoring as the optimizer above and prices from the card catalogue. Swaps that are also cheaper sort first regardless of budget.</p>';
+  html += '<div class="coach-tools"><input id="budgetCap" type="number" min="0" step="1" placeholder="max $ per swap (optional)" style="max-width:200px"><button onclick="runBudgetUpgrades()">Find upgrades</button></div>';
+  html += '<div id="budgetResults" style="margin-top:8px"></div>';
   html += '<div id="coachResults">' + (coachText.trim() ? renderCoach(N) : '') + '</div>';
   html += runeMathHTML();
   html += renderConsistency();
@@ -4016,6 +4191,7 @@ function renderArchList() {
   const maxW = weights.length ? weights[0].weight : 1;
 
   let html = renderFieldModelBar();
+  html += '<div style="margin:8px 0"><button class="ghost" onclick="openPrintGuide()" title="A bring-to-the-table one-pager: your decklist plus top matchups by field weight">Print guide</button></div>';
   html += '<h2>The field</h2><p class="sub">Every archetype scraped from the same events as the Diana lists — ' + totalAll +
     ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes: the top cuts plus each event\'s "Best of" showcases. Showcase lists enrich what we know each archetype <em>plays</em> (their averaged decklists, sideboards, coverage profiles) but carry <strong>zero weight</strong> in share and threat — those count top-cut results only. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Shares are of the whole field (Diana included) under the model above. Click an archetype to see what it plays.</p>';
 
@@ -4219,6 +4395,18 @@ function renderCompare(ctx) {
   globalDecks.forEach((d, i) => { html += '<option value="' + i + '"' + (i === diffB ? ' selected' : '') + '>' + attr(d.label) + '</option>'; });
   html += '</select></div>' + renderDiff(globalDecks[diffA], globalDecks[diffB]);
 
+  // Distance from YOUR in-progress list to the consensus 40 — distinct from
+  // the ranking below, which measures each SOURCE deck's distance to the
+  // rest of the field, never to any list of yours.
+  const { list: yourList, source: yourSrc } = activeList();
+  if (yourSrc === 'your list' && currentProto.length) {
+    const protoList = currentProto.map(c => ({ name: c.name, count: c.copies }));
+    const dYou = deckDistance(yourList, protoList);
+    html += '<div class="summary-box"><strong>Your build</strong> is <strong>' + dYou + ' swap' + (dYou === 1 ? '' : 's') +
+      '</strong> from the consensus 40' + (dYou === 0 ? ' — an exact match.' : '.') +
+      ' See exactly which in the Coach section on Build.</div>';
+  }
+
   html += '<h2>Swap-distance analysis</h2><p class="sub">"Swap distance" is the number of cards you need to change to turn one deck into another. Lower average means closer to the consensus. Hover a matrix cell for the pair.</p>';
   const rankedDecks = globalDecks.map((d, i) => ({ i, label: d.label, avgDist: avgDistances[i] })).sort((a, b) => a.avgDist - b.avgDist);
   html += '<div class="summary-box"><strong>Closest to the field (most representative):</strong><ol style="margin:8px 0 0 20px; padding:0;">';
@@ -4283,6 +4471,70 @@ function deckExtrasHTML(d) {
   if (d.battlefields && d.battlefields.length) extra += '<div class="cost-head">Battlefields</div>' + d.battlefields.map(b => '<span class="pkg-chip" data-card="' + attr(b.name) + '">' + cardImg(b.name) + escHtml(b.name) + '</span>').join('');
   return extra;
 }
+/* ---------------- Printable guide ----------------
+   A bring-to-the-table one-pager: your decklist plus the top matchups by
+   field weight, entirely from data already computed elsewhere on the page.
+   No new math — just presentation of coverage/breadth/timely for the top-N
+   threats, in a form that survives being printed or saved as a PDF. */
+function printGuideHTML() {
+  const { list: mainList, source: mainSrc } = activeList();
+  const { list: sideList, source: sideSrc } = currentSideboard();
+  const ex = consensusExtras(globalDecks);
+  const runes = (builderRunes && Object.values(builderRunes).some(c => c > 0))
+    ? Object.entries(builderRunes).map(([d, c]) => ({ name: d + ' Rune', count: c })).filter(r => r.count > 0)
+    : ex.runes;
+  const bfs = (builderBf && builderBf.length) ? builderBf.map(name => ({ name })) : ex.bfs.slice(0, 3);
+  const tw = fieldReady() ? threatWeights({ includeMirror: true }) : { rows: [] };
+  const rows = tw.rows.slice(0, 10).map(w => {
+    const p = archProfile(w.slug);
+    return { ...w, p, cov: coverageOf(sideList, p, { deckSize: DECK_SIZE }) };
+  });
+
+  let html = '<div class="print-guide">';
+  html += '<h1 style="margin:0 0 2px;font-size:20px">Diana, Scorn of the Moon — Matchup Guide</h1>';
+  html += '<p style="margin:0 0 16px;color:var(--muted);font-size:11.5px">Generated ' + new Date().toISOString().slice(0, 10) +
+    ' · main: ' + escHtml(mainSrc) + (sideSrc !== mainSrc ? ' · side: ' + escHtml(sideSrc) : '') + '</p>';
+
+  const mainN = mainList.reduce((a, c) => a + c.count, 0), sideN = sideList.reduce((a, c) => a + c.count, 0);
+  html += '<h2 style="margin:10px 0 4px;font-size:14px">Main deck (' + mainN + ')</h2>';
+  html += '<div style="columns:2;column-gap:20px;font-size:12px;line-height:1.5">' +
+    [...mainList].sort((a, b) => ((cardMeta[a.name] || {}).cost ?? 99) - ((cardMeta[b.name] || {}).cost ?? 99) || a.name.localeCompare(b.name))
+      .map(c => '<div>' + c.count + ' ' + escHtml(c.name) + '</div>').join('') + '</div>';
+  html += '<h2 style="margin:10px 0 4px;font-size:14px">Sideboard (' + sideN + ')</h2>';
+  html += '<div style="font-size:12px;line-height:1.5">' + sideList.map(c => '<div>' + c.count + ' ' + escHtml(c.name) + '</div>').join('') + '</div>';
+  html += '<h2 style="margin:10px 0 4px;font-size:14px">Runes &amp; battlefields</h2>';
+  html += '<p style="font-size:12px;margin:0">' + runes.map(r => r.count + ' ' + escHtml(r.name)).join(' · ') +
+    (bfs.length ? ' &nbsp;·&nbsp; ' + bfs.map(b => escHtml(b.name)).join(', ') : '') + '</p>';
+
+  html += '<h2 style="margin:14px 0 4px;font-size:14px">Top matchups (field-weighted)</h2>';
+  if (!rows.length) {
+    html += '<p style="font-size:12px;color:var(--muted)">No field data loaded — open the Meta view once first.</p>';
+  } else {
+    html += '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="border-bottom:1px solid var(--border)">' +
+      '<th style="text-align:left;padding:3px 5px">Archetype</th><th style="text-align:right;padding:3px 5px">Share</th>' +
+      '<th style="text-align:right;padding:3px 5px">Breadth</th><th style="text-align:right;padding:3px 5px">Timely</th>' +
+      '<th style="text-align:left;padding:3px 5px">Best answer</th></tr></thead><tbody>';
+    rows.forEach(r => {
+      const a = FIELD.archetypes[r.slug];
+      html += '<tr style="border-bottom:1px solid var(--border)"><td style="padding:3px 5px">' + escHtml(r.mirror ? 'Diana (mirror)' : a.name) + '</td>' +
+        '<td style="text-align:right;padding:3px 5px">' + pct(r.share) + '</td>' +
+        '<td style="text-align:right;padding:3px 5px">' + pct(r.cov.coverage) + '</td>' +
+        '<td style="text-align:right;padding:3px 5px">' + pct(r.cov.timely) + '</td>' +
+        '<td style="padding:3px 5px">' + (r.cov.name ? escHtml(shortName(r.cov.name)) : '—') + '</td></tr>';
+    });
+    html += '</tbody></table>';
+  }
+  html += '<p style="font-size:10px;color:var(--muted);margin-top:14px">Breadth/Timely are rules-text coverage heuristics scored against your sideboard, not win rates — see the Meta view for full methodology. No per-match results are published for these events.</p>';
+  html += '</div>';
+  return html;
+}
+
+function openPrintGuide() {
+  showModal('<div class="modal-head no-print"><div class="modal-title">Printable matchup guide</div>' +
+    '<span><button class="ghost" onclick="window.print()" title="Opens your browser\'s print dialog — choose Save as PDF there for a file">Print / Save PDF</button> ' +
+    '<button class="icon-btn" onclick="closeModal()">✕</button></span></div>' + printGuideHTML());
+}
+
 function showModal(inner) {
   const modal = document.getElementById('modal');
   modal.querySelector('.modal').innerHTML = inner;
@@ -4300,6 +4552,7 @@ function openDeckModal(i) {
       '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') +
       (priceTag(d.cards) ? ' · ' + priceTag(d.cards) : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
     '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><button onclick="exportDeckImageFor(' + i + ')">Export PNG</button>' +
+      (d.source === 'user' ? '<button class="ghost" style="color:var(--danger)" onclick="reportSubmission(' + (d.id != null ? d.id : 'null') + ')" title="Flag this community submission as bad, spam, or illegal">Report</button>' : '') +
       '<span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
     '<div id="modalDiffOut"></div><div class="modal-cards">' + deckStacksHTML(d) + deckExtrasHTML(d) + '</div>');
 }
@@ -4881,6 +5134,27 @@ function tagCommunityDeck(d) {
   d._cluster = -1;                 // never joins the tournament clustering
   d._clusterName = 'Community';
   return d;
+}
+
+// Community flagging, not admin moderation — this app has no login system,
+// so there is no real moderator role to build. A deck auto-hides from
+// everyone once enough distinct visitors report it (server-enforced; see
+// functions/api/submissions/report.js). Removes it from THIS browser's view
+// immediately rather than waiting for the next page load's GET.
+async function reportSubmission(id) {
+  if (id == null) { toast('This deck has no id to report (reload the page?)'); return; }
+  if (!confirm('Report this community deck as bad/spam/illegal? Enough reports hide it for everyone.')) return;
+  try {
+    const res = await fetch('/api/submissions/report', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }),
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) { toast(body.error || 'Report failed'); return; }
+    communityDecks = communityDecks.filter(d => d.id !== id);
+    closeModal();
+    toast(body.alreadyReported ? 'You already reported this one' : (body.hidden ? 'Reported — now hidden for everyone' : 'Reported'));
+    if (filters.community) applyFilters();
+  } catch (e) { toast('Report failed — network error'); }
 }
 
 async function submitToMeta() {
