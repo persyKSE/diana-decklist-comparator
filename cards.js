@@ -31,7 +31,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
-  "price": 0.46
+  "price": 0.45
  },
  "Baron Nashor": {
   "code": "UNL-147",
@@ -110,7 +110,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nMove up to 2 friendly units to base.",
-  "price": 2.98
+  "price": 2.96
  },
  "Gust": {
   "code": "OGN-169",
@@ -135,7 +135,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
-  "price": 0.19
+  "price": 0.18
  },
  "Hard Bargain": {
   "code": "SFD-136",
@@ -155,7 +155,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
-  "price": 1.3
+  "price": 1.56
  },
  "Hwei, Brooding Painter": {
   "code": "UNL-080",
@@ -223,7 +223,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",
-  "price": 0.14
+  "price": 0.13
  },
  "Ravenbloom Student": {
   "code": "OGN-103",
@@ -239,7 +239,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When you play a spell, give me +1 :rb_might: this turn.",
-  "price": 0.27
+  "price": 0.26
  },
  "Ride the Wind": {
   "code": "OGN-173",
@@ -253,7 +253,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
-  "price": 0.4
+  "price": 0.45
  },
  "Singularity": {
   "code": "OGN-105",
@@ -273,7 +273,7 @@ window.CARDS = {
    }
   ],
   "effect": "Deal 6 to each of up to two units.",
-  "price": 0.92
+  "price": 0.88
  },
  "Smoke Screen": {
   "code": "OGN-093",
@@ -307,7 +307,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
-  "price": 7.46
+  "price": 7.32
  },
  "Star-Crossed": {
   "code": "UNL-128",
@@ -327,7 +327,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit and an enemy unit to their owners' hands.",
-  "price": 0.14
+  "price": 0.2
  },
  "Stupefy": {
   "code": "OGN-095",
@@ -347,7 +347,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:. Draw 1.",
-  "price": 0.24
+  "price": 0.21
  },
  "Targon's Peak": {
   "code": "OGN-289",
@@ -361,7 +361,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-  "price": 0.22
+  "price": 0.23
  },
  "Tideturner": {
   "code": "OGN-199",
@@ -393,7 +393,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I move, discard 1, then draw 1.",
-  "price": 0.23
+  "price": 0.2
  },
  "Turn to Dust": {
   "code": "UNL-070",
@@ -413,7 +413,7 @@ window.CARDS = {
    }
   ],
   "effect": "Give a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.08
+  "price": 0.14
  },
  "Vex, Apathetic": {
   "code": "UNL-150",
@@ -475,7 +475,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.07
+  "price": 0.06
  },
  "Kha'Zix, Mutating Horror": {
   "code": "UNL-143",
@@ -512,7 +512,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a unit at a battlefield to its owner's hand.",
-  "price": 0.26
+  "price": 0.25
  },
  "Seat of Power": {
   "code": "SFD-217",
@@ -540,7 +540,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
-  "price": 2.51
+  "price": 2.42
  },
  "Switcheroo": {
   "code": "SFD-145",
@@ -568,7 +568,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
-  "price": 0.5
+  "price": 0.55
  },
  "Consult the Past": {
   "code": "OGN-083",
@@ -610,7 +610,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "Units can't be played here.",
-  "price": 0.14
+  "price": 0.13
  },
  "Invert Timelines": {
   "code": "OGN-201",
@@ -650,7 +650,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell. Return it to its owner's hand instead of putting it in their trash.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.29
+  "price": 0.3
  },
  "Eager Apprentice": {
   "code": "OGN-084",
@@ -693,7 +693,7 @@ window.CARDS = {
    }
   ],
   "effect": "When you play me, return all units with 2 :rb_might: or less to their owners' hands.",
-  "price": 0.12
+  "price": 0.13
  },
  "Downwell": {
   "code": "SFD-147",
@@ -812,7 +812,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\n[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
-  "price": 0.19
+  "price": 0.21
  },
  "Plundering Poro": {
   "code": "SFD-069",
@@ -830,7 +830,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I conquer, play a Gold gear token exhausted.",
-  "price": 0.11
+  "price": 0.17
  },
  "Startipped Peak": {
   "code": "OGN-288",
@@ -903,7 +903,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
-  "price": 0.66
+  "price": 0.58
  },
  "Sigil of the Storm": {
   "code": "OGN-287",
@@ -945,7 +945,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, you may return your Chosen Champion from your trash to your Champion Zone if it is empty.",
-  "price": 0.13
+  "price": 0.12
  },
  "Wages of Pain": {
   "code": "SFD-070",
@@ -1012,6 +1012,6 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted.",
-  "price": 0.09
+  "price": 0.08
  }
 };
