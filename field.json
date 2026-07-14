@@ -13328,7 +13328,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
    "image": "cache/images/Acceptable_Losses.webp",
-   "price": 0.45
+   "price": 0.46
   },
   "Baron Nashor": {
    "cost": 10,
@@ -13402,7 +13402,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nMove up to 2 friendly units to base.",
    "image": "cache/images/Flash.webp",
-   "price": 2.96
+   "price": 2.98
   },
   "Gust": {
    "cost": 1,
@@ -13426,7 +13426,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
    "image": "cache/images/Gust.webp",
-   "price": 0.18
+   "price": 0.17
   },
   "Hard Bargain": {
    "cost": 2,
@@ -13445,7 +13445,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
    "image": "cache/images/Hard_Bargain.webp",
-   "price": 1.56
+   "price": 1.47
   },
   "Hwei, Brooding Painter": {
    "cost": 5,
@@ -13474,7 +13474,7 @@
    "techTags": [],
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
-   "price": 0.13
+   "price": 0.12
   },
   "Moonfall": {
    "cost": 3,
@@ -13509,7 +13509,7 @@
    "techTags": [],
    "effect": "When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
-   "price": 0.13
+   "price": 0.12
   },
   "Ravenbloom Student": {
    "cost": 2,
@@ -13524,7 +13524,7 @@
    "techTags": [],
    "effect": "When you play a spell, give me +1 :rb_might: this turn.",
    "image": "cache/images/Ravenbloom_Student.webp",
-   "price": 0.26
+   "price": 0.25
   },
   "Ride the Wind": {
    "cost": 2,
@@ -13537,7 +13537,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
    "image": "cache/images/Ride_the_Wind.webp",
-   "price": 0.45
+   "price": 0.43
   },
   "Singularity": {
    "cost": 6,
@@ -13588,7 +13588,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
    "image": "cache/images/Stacked_Deck.webp",
-   "price": 7.32
+   "price": 7.03
   },
   "Star-Crossed": {
    "cost": 3,
@@ -13607,7 +13607,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit and an enemy unit to their owners' hands.",
    "image": "cache/images/Star_Crossed.webp",
-   "price": 0.2
+   "price": 0.15
   },
   "Stupefy": {
    "cost": 1,
@@ -13639,7 +13639,7 @@
    "techTags": [],
    "effect": "When you conquer here, ready 2 runes at the end of this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
-   "price": 0.23
+   "price": 0.22
   },
   "Tideturner": {
    "cost": 2,
@@ -13795,7 +13795,7 @@
    "techTags": [],
    "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-217.webp",
-   "price": 0.1
+   "price": 0.13
   },
   "Sprite Fountain": {
    "cost": 2,
@@ -13808,7 +13808,7 @@
    "techTags": [],
    "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
    "image": "cache/images/Sprite_Fountain.webp",
-   "price": 2.42
+   "price": 3.07
   },
   "Switcheroo": {
    "cost": 2,
@@ -13834,7 +13834,7 @@
    "techTags": [],
    "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-290.webp",
-   "price": 0.55
+   "price": 0.62
   },
   "Consult the Past": {
    "cost": 4,
@@ -13911,7 +13911,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell. Return it to its owner's hand instead of putting it in their trash.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
    "image": "cache/images/Abandon.webp",
-   "price": 0.3
+   "price": 0.28
   },
   "Eager Apprentice": {
    "cost": 3,
@@ -13926,7 +13926,7 @@
    "techTags": [],
    "effect": "While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:.",
    "image": "cache/images/Eager_Apprentice.webp",
-   "price": 0.1
+   "price": 0.12
   },
   "Angler Beast": {
    "cost": 5,
@@ -13952,7 +13952,7 @@
    ],
    "effect": "When you play me, return all units with 2 :rb_might: or less to their owners' hands.",
    "image": "cache/images/Angler_Beast.webp",
-   "price": 0.13
+   "price": 0.14
   },
   "Downwell": {
    "cost": 8,
@@ -13990,7 +13990,7 @@
    ],
    "effect": "Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "cache/images/Fading_Memories.webp",
-   "price": 0.17
+   "price": 0.16
   },
   "Last Rites": {
    "cost": 3,
@@ -14065,7 +14065,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\n[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
    "image": "cache/images/Existential_Dread.webp",
-   "price": 0.21
+   "price": 0.2
   },
   "Plundering Poro": {
    "cost": 2,
@@ -14082,7 +14082,7 @@
    "techTags": [],
    "effect": "When I conquer, play a Gold gear token exhausted.",
    "image": "cache/images/Plundering_Poro.webp",
-   "price": 0.17
+   "price": 0.18
   },
   "Startipped Peak": {
    "cost": null,
@@ -14151,7 +14151,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
    "image": "cache/images/Retreat.webp",
-   "price": 0.58
+   "price": 0.59
   },
   "Sigil of the Storm": {
    "cost": null,
@@ -14164,7 +14164,7 @@
    "techTags": [],
    "effect": "When you conquer here, recycle one of your runes.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-287.webp",
-   "price": 0.2
+   "price": 0.19
   },
   "Time Warp": {
    "cost": 10,
@@ -14209,7 +14209,7 @@
    ],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. Play a Gold gear token exhausted.",
    "image": "cache/images/Wages_of_Pain.webp",
-   "price": 0.14
+   "price": 0.15
   },
   "Edge of Night": {
    "cost": 3,
@@ -14253,7 +14253,7 @@
    "techTags": [],
    "effect": "When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-220.webp",
-   "price": 0.08
+   "price": 0.09
   },
   "Alpha Strike": {
    "cost": 3,
@@ -14282,7 +14282,7 @@
    "techTags": [],
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-126.webp",
-   "price": 0.12
+   "price": 0.13
   },
   "Calm Rune": {
    "cost": null,
@@ -14295,7 +14295,7 @@
    "techTags": [],
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-042.webp",
-   "price": 0.13
+   "price": 0.12
   },
   "Challenge": {
    "cost": 2,
@@ -14308,7 +14308,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a friendly unit and an enemy unit. They deal damage equal to their Mights to each other.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-128.webp",
-   "price": 0.24
+   "price": 0.23
   },
   "Charm": {
    "cost": 1,
@@ -14321,7 +14321,7 @@
    "techTags": [],
    "effect": "Move an enemy unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-043.webp",
-   "price": 0.6
+   "price": 0.65
   },
   "Defy": {
    "cost": 1,
@@ -14340,7 +14340,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell that costs no more than :rb_energy_4: and no more than :rb_rune_rainbow:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-045.webp",
-   "price": 2.57
+   "price": 2.56
   },
   "Disarming Rake": {
    "cost": 3,
@@ -14361,7 +14361,7 @@
    ],
    "effect": "When you play me, you may kill a gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-032.webp",
-   "price": 0.13
+   "price": 0.12
   },
   "Discipline": {
    "cost": 2,
@@ -14374,7 +14374,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-058.webp",
-   "price": 1.78
+   "price": 1.89
   },
   "Emperor's Dais": {
    "cost": null,
@@ -14393,7 +14393,7 @@
    ],
    "effect": "When you conquer here, you may pay :rb_energy_1: and return a unit you control here to its owner's hand. If you do, play a 2 :rb_might: Sand Soldier unit token here.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-207.webp",
-   "price": 0.1
+   "price": 0.11
   },
   "En Garde": {
    "cost": 1,
@@ -14406,7 +14406,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a friendly unit +1 :rb_might: this turn, then an additional +1 :rb_might: this turn if it is the only unit you control there.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-046.webp",
-   "price": 0.19
+   "price": 0.18
   },
   "Fiora, Peerless": {
    "cost": 3,
@@ -14438,7 +14438,7 @@
    "techTags": [],
    "effect": "When you play me, ready another unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-132.webp",
-   "price": 0.17
+   "price": 0.18
   },
   "Lonely Poro": {
    "cost": 2,
@@ -14454,7 +14454,7 @@
    "techTags": [],
    "effect": "[Deathknell] \u2014 If I died alone, draw 1. (When I die, get the effect. I'm alone if there are no other friendly units here.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-036.webp",
-   "price": 0.14
+   "price": 0.13
   },
   "Master Yi, Tempered": {
    "cost": 4,
@@ -14485,7 +14485,7 @@
    "techTags": [],
    "effect": "When you play me, buff another friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-136.webp",
-   "price": 0.13
+   "price": 0.12
   },
   "Primal Strength": {
    "cost": 4,
@@ -14511,7 +14511,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a unit +5 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-097.webp",
-   "price": 0.17
+   "price": 0.16
   },
   "Rengar, Trophy Hunter": {
    "cost": 5,
@@ -14597,7 +14597,7 @@
    "techTags": [],
    "effect": "Increase the points needed to win the game by 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-276.webp",
-   "price": 0.26
+   "price": 0.25
   },
   "Bellows Breath": {
    "cost": 1,
@@ -14638,7 +14638,7 @@
    ],
    "effect": "When you play me, choose a player. They discard 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-121.webp",
-   "price": 0.08
+   "price": 0.07
   },
   "Deadly Flourish": {
    "cost": 4,
@@ -14730,7 +14730,7 @@
    ],
    "effect": "As you play this, name a tag. (For example, Miss Fortune, Demacia, and Poro are tags.)\n:rb_exhaust:: Give a unit with the named tag -2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-138.webp",
-   "price": 0.17
+   "price": 0.2
   },
   "Treasure Trove": {
    "cost": 2,
@@ -14743,7 +14743,7 @@
    "techTags": [],
    "effect": "When this leaves the board, draw 1 and channel 1 rune exhausted.\n:rb_rune_chaos:, :rb_exhaust:: Kill this.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-186.webp",
-   "price": 0.44
+   "price": 0.45
   },
   "Ashe, Focused": {
    "cost": 5,
@@ -14787,7 +14787,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nDraw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-061.webp",
-   "price": 0.07
+   "price": 0.08
   },
   "Ekko, Recurrent": {
    "cost": 5,
@@ -14845,7 +14845,7 @@
    "techTags": [],
    "effect": "Players can't score here until their third turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-209.webp",
-   "price": 0.08
+   "price": 0.07
   },
   "Garbage Grabber": {
    "cost": 2,
@@ -14874,7 +14874,7 @@
    "techTags": [],
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_energy_2:. Use only to play spells. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-014.webp",
-   "price": 2.92
+   "price": 3.02
   },
   "Order Rune": {
    "cost": null,
@@ -14981,7 +14981,7 @@
    "techTags": [],
    "effect": "Choose a friendly unit without [Temporary]. Give it [Temporary]. Draw 2. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-165.webp",
-   "price": 0.38
+   "price": 0.39
   },
   "Soaring Scout": {
    "cost": 2,
@@ -14997,7 +14997,7 @@
    "techTags": [],
    "effect": "[Deathknell] \u2014 Channel 1 rune exhausted. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-216.webp",
-   "price": 0.18
+   "price": 0.16
   },
   "Sprite Burst": {
    "cost": 5,
@@ -15036,7 +15036,7 @@
    "techTags": [],
    "effect": "When you hold here, each player channels 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-219.webp",
-   "price": 0.09
+   "price": 0.1
   },
   "The Ruination": {
    "cost": 9,
@@ -15097,7 +15097,7 @@
    ],
    "effect": "Each player kills one of their units.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-209.webp",
-   "price": 0.36
+   "price": 0.34
   },
   "Falling Star": {
    "cost": 2,
@@ -15129,7 +15129,7 @@
    "techTags": [],
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-007.webp",
-   "price": 0.17
+   "price": 0.16
   },
   "Grand Strategem": {
    "cost": 6,
@@ -15161,7 +15161,7 @@
    ],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nKill a unit at a battlefield. Its controller draws 2.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-213.webp",
-   "price": 0.91
+   "price": 0.92
   },
   "Honest Broker": {
    "cost": 2,
@@ -15176,7 +15176,7 @@
    "techTags": [],
    "effect": "[Deathknell] \u2014 Play a Gold gear token exhausted. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-155.webp",
-   "price": 0.13
+   "price": 0.16
   },
   "Imperial Decree": {
    "cost": 5,
@@ -15189,7 +15189,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nWhen any unit takes damage this turn, kill it.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-221.webp",
-   "price": 0.63
+   "price": 0.65
   },
   "Inferna": {
    "cost": 2,
@@ -15261,7 +15261,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nYou may kill a gear. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-224.webp",
-   "price": 2.83
+   "price": 2.82
   },
   "Seal of Unity": {
    "cost": null,
@@ -15303,7 +15303,7 @@
    "techTags": [],
    "effect": "Units here have +1 :rb_might:. (This includes attackers.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-294.webp",
-   "price": 0.28
+   "price": 0.29
   },
   "Vanguard Captain": {
    "cost": 3,
@@ -15319,7 +15319,7 @@
    "techTags": [],
    "effect": "[Legion] \u2014 When you play me, play two 1 :rb_might: Recruit unit tokens here. (Get the effect if you've played another card this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-218.webp",
-   "price": 0.18
+   "price": 0.17
   },
   "Vi, Peacekeeper": {
    "cost": 5,
@@ -15400,7 +15400,7 @@
    "techTags": [],
    "effect": "When you play me, play a 1 :rb_might: Recruit unit token here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-211.webp",
-   "price": 0.17
+   "price": 0.18
   },
   "Ferrous Forerunner": {
    "cost": 6,
@@ -15540,7 +15540,7 @@
    "techTags": [],
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen you play me, give your other units here [Shield] this turn. (+1 :rb_might: while they're defenders.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-071.webp",
-   "price": 0.07
+   "price": 0.08
   },
   "Facebreaker": {
    "cost": 2,
@@ -15553,7 +15553,7 @@
    "techTags": [],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nStun a friendly unit and an enemy unit at the same battlefield. (They don't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-220.webp",
-   "price": 0.19
+   "price": 0.2
   },
   "Forbidding Waste": {
    "cost": null,
@@ -15566,7 +15566,7 @@
    "techTags": [],
    "effect": "While a unit here is defending alone, it has -2 :rb_might:. (It's alone if there are no other friendly units here.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-210.webp",
-   "price": 0.08
+   "price": 0.07
   },
   "Pickpocket": {
    "cost": 3,
@@ -15652,7 +15652,7 @@
    "techTags": [],
    "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-042.webp",
-   "price": 0.26
+   "price": 0.28
   },
   "Deathgrip": {
    "cost": 2,
@@ -15695,7 +15695,7 @@
    "techTags": [],
    "effect": "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-153.webp",
-   "price": 0.1
+   "price": 0.09
   },
   "Guards!": {
    "cost": 3,
@@ -15721,7 +15721,7 @@
    "techTags": [],
    "effect": "When you conquer here, you may pay :rb_energy_1: to ready your legend.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-210.webp",
-   "price": 0.1
+   "price": 0.12
   },
   "Soul Sword": {
    "cost": 1,
@@ -15785,7 +15785,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a unit [Assault 3] this turn. (+3 :rb_might: while it's an attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-004.webp",
-   "price": 0.14
+   "price": 0.16
   },
   "Kai'Sa, Survivor": {
    "cost": 4,
@@ -15842,7 +15842,7 @@
    "techTags": [],
    "effect": "When I move, play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-130.webp",
-   "price": 0.1
+   "price": 0.11
   },
   "Void Seeker": {
    "cost": 3,
@@ -15874,7 +15874,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a friendly unit at a battlefield +2 :rb_might: this turn for each enemy unit there.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-001.webp",
-   "price": 0.1
+   "price": 0.11
   },
   "Annie, Stubborn": {
    "cost": 4,
@@ -15890,7 +15890,7 @@
    "techTags": [],
    "effect": "When you play me, return a spell from your trash to your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-010.webp",
-   "price": 4.0
+   "price": 3.98
   },
   "Factory Recall": {
    "cost": 1,
@@ -15909,7 +15909,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a gear to its owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-135.webp",
-   "price": 0.13
+   "price": 0.12
   },
   "Grim Apothecary": {
    "cost": 3,
@@ -16000,7 +16000,7 @@
    "techTags": [],
    "effect": "Draw 2.\n[Level 6][&gt;] This costs :rb_energy_2: less. (While you have 6+ XP, get the effect.)\n[Level 11][&gt;] This costs :rb_energy_4: less instead.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-091.webp",
-   "price": 0.1
+   "price": 0.09
   },
   "Emperor's Divide": {
    "cost": 2,
@@ -16042,7 +16042,7 @@
    "techTags": [],
    "effect": "[Hunt] (When I conquer or hold, gain 1 XP.)\n[Level 6][&gt;] I have +1 :rb_might:. (While you have 6+ XP, get the effect.)ambush",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-094.webp",
-   "price": 0.08
+   "price": 0.07
   },
   "Grim Resolve": {
    "cost": 2,
@@ -16055,7 +16055,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a friendly unit +3 :rb_might: this turn. When it wins a combat this turn, gain 2 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-095.webp",
-   "price": 0.09
+   "price": 0.07
   },
   "Herald of Spring": {
    "cost": 4,
@@ -16129,7 +16129,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit at a battlefield. Counter an enemy spell or ability that chooses it and no other friendly unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-106.webp",
-   "price": 0.29
+   "price": 0.27
   },
   "Skyward Strike": {
    "cost": 2,
@@ -16161,7 +16161,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nPrevent all spell and ability damage this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-145.webp",
-   "price": 0.57
+   "price": 0.58
   },
   "Vilemaw": {
    "cost": 8,
@@ -16237,7 +16237,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nIf an opponent's score is within 3 points of the Victory Score, this costs :rb_energy_2: less.\nDraw 1 and channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-047.webp",
-   "price": 0.17
+   "price": 0.15
   },
   "Mask of Foresight": {
    "cost": 2,
@@ -16263,7 +16263,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter an enemy spell or ability that chooses a friendly unit or gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-045.webp",
-   "price": 2.39
+   "price": 2.21
   },
   "Star Spring": {
    "cost": null,
@@ -16356,7 +16356,7 @@
    ],
    "effect": "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-056.webp",
-   "price": 0.26
+   "price": 0.24
   },
   "Boots of Swiftness": {
    "cost": 3,
@@ -16371,7 +16371,7 @@
    "techTags": [],
    "effect": "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-133.webp",
-   "price": 0.31
+   "price": 0.3
   },
   "Defiant Dance": {
    "cost": 1,
@@ -16429,7 +16429,7 @@
    ],
    "effect": "When you play me, choose an opponent. They reveal their hand. You may pay 2 XP to choose a card from their hand. If you do, they discard that card and draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-135.webp",
-   "price": 0.08
+   "price": 0.09
   },
   "Irelia, Fervent": {
    "cost": 5,
@@ -16476,7 +16476,7 @@
    "techTags": [],
    "effect": "When I move, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-048.webp",
-   "price": 0.57
+   "price": 0.56
   },
   "Sunken Temple": {
    "cost": null,
@@ -16489,7 +16489,7 @@
    "techTags": [],
    "effect": "When you conquer here with one or more [Mighty] units, you may pay :rb_energy_1: to draw 1. (A unit is Mighty while it has 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-218.webp",
-   "price": 0.11
+   "price": 0.13
   },
   "Battering Ram": {
    "cost": 5,
@@ -16505,7 +16505,7 @@
    "techTags": [],
    "effect": "I cost :rb_energy_1: less for each card you've played this turn, to a minimum of :rb_energy_1:.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-012.webp",
-   "price": 0.15
+   "price": 0.14
   },
   "Drag Under": {
    "cost": 5,
@@ -16580,7 +16580,7 @@
    ],
    "effect": "Kill a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-229.webp",
-   "price": 0.23
+   "price": 0.24
   },
   "Void Drone": {
    "cost": 3,
@@ -16803,7 +16803,7 @@
    "techTags": [],
    "effect": ":rb_exhaust:: Buff an exhausted friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-124.webp",
-   "price": 0.11
+   "price": 0.12
   },
   "Call to Glory": {
    "cost": 3,
@@ -16816,7 +16816,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nAs you play this, you may spend a buff as an additional cost. If you do, ignore this spell's cost.\nGive a unit +3 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-207.webp",
-   "price": 0.19
+   "price": 0.18
   },
   "Cithria of Cloudfield": {
    "cost": 2,
@@ -16832,7 +16832,7 @@
    "techTags": [],
    "effect": "When you play another unit, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-139.webp",
-   "price": 0.11
+   "price": 0.1
   },
   "Fiora, Victorious": {
    "cost": 4,
@@ -16876,7 +16876,7 @@
    "techTags": [],
    "effect": "When you play me, buff up to two other friendly units. (Each one that doesn't have a buff gets a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-141.webp",
-   "price": 0.27
+   "price": 0.22
   },
   "Lucian, Merciless": {
    "cost": 3,
@@ -17009,7 +17009,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nDiscard 1, then draw 2.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-125.webp",
-   "price": 0.09
+   "price": 0.08
   },
   "Mobilize": {
    "cost": 2,
@@ -17022,7 +17022,7 @@
    "techTags": [],
    "effect": "Channel 1 rune exhausted. If you can't, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-134.webp",
-   "price": 0.13
+   "price": 0.14
   },
   "Scryer's Bloom": {
    "cost": 1,
@@ -17077,7 +17077,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose one \u2014Choose up to 3 cards from opponents' trashes. Their owners recycle them.Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-103.webp",
-   "price": 0.17
+   "price": 0.16
   },
   "Immortal Phoenix": {
    "cost": 3,
@@ -17111,7 +17111,7 @@
    "techTags": [],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a unit. Double all damage that would be dealt to it this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-013.webp",
-   "price": 0.11
+   "price": 0.1
   },
   "Seal of Rage": {
    "cost": null,
@@ -17250,7 +17250,7 @@
    "techTags": [],
    "effect": "[Deathknell] \u2014 You may play a unit with cost no more than :rb_energy_3: and no more than :rb_rune_rainbow: from your trash, ignoring its cost. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-165.webp",
-   "price": 0.22
+   "price": 0.23
   },
   "Harnessed Dragon": {
    "cost": 8,
@@ -17372,7 +17372,7 @@
    "techTags": [],
    "effect": "[Deathknell] \u2014 Draw 1. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-096.webp",
-   "price": 0.16
+   "price": 0.17
   },
   "Windswept Hillock": {
    "cost": null,
@@ -17445,7 +17445,7 @@
    "techTags": [],
    "effect": "[Shield 2] (+2 :rb_might: while I'm a defender.)\n[Tank] (I must be assigned combat damage first.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-036.webp",
-   "price": 0.08
+   "price": 0.06
   },
   "Sona, Harmonious": {
    "cost": 4,
@@ -17545,7 +17545,7 @@
    "techTags": [],
    "effect": "You may play me to an open battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-176.webp",
-   "price": 0.21
+   "price": 0.22
   },
   "Spirit Wheel": {
    "cost": 2,
@@ -17571,7 +17571,7 @@
    "techTags": [],
    "effect": ":rb_energy_1:, :rb_exhaust:: Move a friendly unit at a battlefield to your base.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-184.webp",
-   "price": 0.18
+   "price": 0.19
   },
   "Arcane Shift": {
    "cost": 3,
@@ -17641,7 +17641,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nGive a unit -2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-066.webp",
-   "price": 0.06
+   "price": 0.07
   },
   "Deadbloom Predator": {
    "cost": 8,
@@ -17688,7 +17688,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nKill a unit at a battlefield with 2 :rb_might: or less. If it was an enemy unit, play a Gold gear token exhausted. If it was a friendly unit, play two Gold gear tokens exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-162.webp",
-   "price": 0.12
+   "price": 0.13
   },
   "Confront": {
    "cost": 2,
@@ -17701,7 +17701,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nUnits you play this turn enter ready. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-129.webp",
-   "price": 0.16
+   "price": 0.15
   },
   "Divine Judgment": {
    "cost": 7,
@@ -17733,7 +17733,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-064.webp",
-   "price": 0.3
+   "price": 0.33
   },
   "Bone Skewer": {
    "cost": 2,
@@ -17796,7 +17796,7 @@
    "techTags": [],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nPlay a ready 3 :rb_might: Sprite unit token with [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-094.webp",
-   "price": 0.12
+   "price": 0.11
   },
   "Teemo, Strategist": {
    "cost": 2,
@@ -17898,7 +17898,7 @@
    "techTags": [],
    "effect": "When you play me, give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-007.webp",
-   "price": 0.09
+   "price": 0.11
   },
   "Spinning Axe": {
    "cost": 2,
@@ -17964,7 +17964,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-009.webp",
-   "price": 0.18
+   "price": 0.19
   },
   "Icathian Rain": {
    "cost": 7,
@@ -18002,7 +18002,7 @@
    "techTags": [],
    "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-087.webp",
-   "price": 0.14
+   "price": 0.13
   },
   "Pouty Poro": {
    "cost": 2,
@@ -18068,7 +18068,7 @@
    "techTags": [],
    "effect": "You may pay :rb_energy_1: as an additional cost to play me.\nWhen you play me, if you paid the additional cost, buff me. (Give me a +1 :rb_might: buff if I don't already have one.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-098.webp",
-   "price": 0.09
+   "price": 0.08
   },
   "Sett, Brawler": {
    "cost": 5,
@@ -18268,7 +18268,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_rune_chaos: (You may pay the additional cost to repeat this spell's effect.)\nLook at the top 2 cards of your Main Deck. Draw one and recycle the other.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-122.webp",
-   "price": 0.1
+   "price": 0.11
   },
   "Scrapheap": {
    "cost": 2,
@@ -18281,7 +18281,7 @@
    "techTags": [],
    "effect": "When this is played, discarded, or killed, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-182.webp",
-   "price": 0.15
+   "price": 0.14
   },
   "The Dreaming Tree": {
    "cost": null,
@@ -18344,7 +18344,7 @@
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nDeal 2 to all enemy units in combat.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-127.webp",
-   "price": 0.12
+   "price": 0.13
   },
   "Counter Strike": {
    "cost": 2,
@@ -18404,7 +18404,7 @@
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a unit from your trash to your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-170.webp",
-   "price": 0.13
+   "price": 0.14
   },
   "Rocket Barrage": {
    "cost": 4,
@@ -18581,7 +18581,7 @@
    "techTags": [],
    "effect": "[Shield] (+1 :rb_might: while I'm a defender.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-052.webp",
-   "price": 0.13
+   "price": 0.14
   },
   "Qiyana, Victorious": {
    "cost": 4,
@@ -18629,7 +18629,7 @@
    "techTags": [],
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-010.webp",
-   "price": 0.11
+   "price": 0.12
   },
   "Tryndamere, Barbarian": {
    "cost": 7,
@@ -18701,7 +18701,7 @@
    "techTags": [],
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-098.webp",
-   "price": 0.16
+   "price": 0.17
   },
   "Falling Comet": {
    "cost": 5,
@@ -18720,7 +18720,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 6 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-085.webp",
-   "price": 0.2
+   "price": 0.19
   },
   "Gutter Palace": {
    "cost": 4,
@@ -18793,7 +18793,7 @@
    "techTags": [],
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)\nWhen I move to a battlefield, gain 2 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-127.webp",
-   "price": 0.06
+   "price": 0.07
   },
   "Void Assault": {
    "cost": 2,
@@ -18909,7 +18909,7 @@
    "techTags": [],
    "effect": ":rb_exhaust:: Play three 1 :rb_might: Recruit unit tokens. (You may play them to different locations.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-168.webp",
-   "price": 0.23
+   "price": 0.22
   },
   "Janna, Savior": {
    "cost": 3,
@@ -19053,7 +19053,7 @@
    "techTags": [],
    "effect": "While you control this battlefield, the first friendly non-token gear played each turn costs :rb_energy_1: less.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-213.webp",
-   "price": 0.09
+   "price": 0.1
   },
   "Ornn, Blacksmith": {
    "cost": 5,
@@ -19100,7 +19100,7 @@
    "techTags": [],
    "effect": "When you play a gear, ready me.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-091.webp",
-   "price": 0.09
+   "price": 0.07
   },
   "Poro Snax": {
    "cost": 1,
@@ -19174,7 +19174,7 @@
    "techTags": [],
    "effect": "When you play me or another Dragon, ready up to 2 runes.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-104.webp",
-   "price": 0.12
+   "price": 0.1
   },
   "Get Excited!": {
    "cost": 2,
@@ -19222,7 +19222,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nThis spell's Energy cost is reduced by the highest Might among units you control.\nDeal 5 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-014.webp",
-   "price": 0.12
+   "price": 0.13
   },
   "Stormbringer": {
    "cost": 6,
@@ -19472,7 +19472,7 @@
    "techTags": [],
    "effect": "When you play this, gain 1 XP.\n[Equip] \u2014 Spend 1 XP (Pay the cost: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-158.webp",
-   "price": 0.1
+   "price": 0.09
   },
   "Blitzcrank, Impassive": {
    "cost": 5,
@@ -19606,7 +19606,7 @@
    "techTags": [],
    "effect": "While you have another unit here, I have +1 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-159.webp",
-   "price": 0.07
+   "price": 0.06
   },
   "Ultrasoft Poro": {
    "cost": 5,
@@ -19654,7 +19654,7 @@
    "techTags": [],
    "effect": "[Assault 2], [Shield 2] (+2 :rb_might: while I'm an attacker or defender.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-007.webp",
-   "price": 0.69
+   "price": 0.7
   },
   "Jinx, Demolitionist": {
    "cost": 3,
@@ -19940,7 +19940,7 @@
    ],
    "effect": "Starting with the next player, each player may return a unit to its owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-187.webp",
-   "price": 0.13
+   "price": 0.14
   },
   "Trapping Grounds": {
    "cost": null,
@@ -19953,7 +19953,7 @@
    "techTags": [],
    "effect": "When you conquer here, if you assigned 3 or more excess damage, play a 1 :rb_might: Bird unit token with [Deflect].",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-217.webp",
-   "price": 0.07
+   "price": 0.08
   },
   "Meditation": {
    "cost": 2,
@@ -20056,7 +20056,7 @@
    "techTags": [],
    "effect": "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)\n[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-064.webp",
-   "price": 0.05
+   "price": 0.07
   },
   "Power Nexus": {
    "cost": null,
@@ -20069,7 +20069,7 @@
    "techTags": [],
    "effect": "When you hold here, you may pay :rb_rune_rainbow::rb_rune_rainbow::rb_rune_rainbow::rb_rune_rainbow: to score 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-214.webp",
-   "price": 0.1
+   "price": 0.11
   },
   "Sunlit Guardian": {
    "cost": 3,
@@ -20084,7 +20084,7 @@
    "techTags": [],
    "effect": "[Shield] (+1 :rb_might: while I'm a defender.)\n[Tank] (I must be assigned combat damage first.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-054.webp",
-   "price": 0.09
+   "price": 0.1
   },
   "Tactical Retreat": {
    "cost": 2,
@@ -20298,7 +20298,7 @@
    "techTags": [],
    "effect": "While I'm buffed, I have an additional +1 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-065.webp",
-   "price": 0.09
+   "price": 0.1
   },
   "Sandshifter": {
    "cost": 5,
@@ -20463,7 +20463,7 @@
    "techTags": [],
    "effect": "Other friendly units have +1 :rb_might: here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-013.webp",
-   "price": 0.66
+   "price": 0.68
   },
   "Recruit the Vanguard": {
    "cost": 6,
@@ -20550,7 +20550,7 @@
    "techTags": [],
    "effect": "I enter ready if you control another Dragon.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-094.webp",
-   "price": 0.08
+   "price": 0.09
   },
   "Herald of Scales": {
    "cost": 4,
@@ -20578,7 +20578,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nDraw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-106.webp",
-   "price": 0.13
+   "price": 0.14
   },
   "Keeper's Verdict": {
    "cost": 2,
@@ -20711,7 +20711,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. If this kills it, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-005.webp",
-   "price": 0.11
+   "price": 0.12
   },
   "Square Up": {
    "cost": 4,
@@ -20737,7 +20737,7 @@
    "techTags": [],
    "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nReady a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-009.webp",
-   "price": 0.06
+   "price": 0.05
   },
   "Jayce, Man of Progress": {
    "cost": 4,
@@ -20796,7 +20796,7 @@
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nGive a unit +2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-034.webp",
-   "price": 0.11
+   "price": 0.12
   },
   "Marai Spire": {
    "cost": null,
@@ -20809,7 +20809,7 @@
    "techTags": [],
    "effect": "While you control this battlefield, friendly [Repeat] costs cost :rb_energy_1: less.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-211.webp",
-   "price": 0.08
+   "price": 0.1
   },
   "Angle Shot": {
    "cost": 2,
@@ -21056,7 +21056,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 2 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-003.webp",
-   "price": 0.6
+   "price": 0.53
   },
   "Iron Ballista": {
    "cost": 3,
@@ -21090,7 +21090,7 @@
    "techTags": [],
    "effect": "Other friendly units enter ready.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-011.webp",
-   "price": 0.07
+   "price": 0.08
   },
   "Warwick, Hunter": {
    "cost": 6,
@@ -21159,7 +21159,7 @@
    "techTags": [],
    "effect": "As an additional cost to play me, kill a friendly unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-208.webp",
-   "price": 0.11
+   "price": 0.1
   },
   "Machine Evangel": {
    "cost": 5,
@@ -21251,7 +21251,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nKill a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-012.webp",
-   "price": 0.99
+   "price": 0.69
   },
   "Carnivorous Snapvine": {
    "cost": 5,
@@ -21281,7 +21281,7 @@
    "techTags": [],
    "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me, channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-137.webp",
-   "price": 0.08
+   "price": 0.1
   },
   "Final Spark": {
    "cost": 8,
@@ -21303,7 +21303,7 @@
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 8 to a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-022.webp",
-   "price": 1.24
+   "price": 1.18
   }
  }
 }

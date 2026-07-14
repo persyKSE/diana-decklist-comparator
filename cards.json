@@ -31,7 +31,7 @@
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
-  "price": 0.45
+  "price": 0.46
  },
  "Baron Nashor": {
   "code": "UNL-147",
@@ -110,7 +110,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nMove up to 2 friendly units to base.",
-  "price": 2.96
+  "price": 2.98
  },
  "Gust": {
   "code": "OGN-169",
@@ -135,7 +135,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
-  "price": 0.18
+  "price": 0.17
  },
  "Hard Bargain": {
   "code": "SFD-136",
@@ -155,7 +155,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
-  "price": 1.56
+  "price": 1.47
  },
  "Hwei, Brooding Painter": {
   "code": "UNL-080",
@@ -186,7 +186,7 @@
   "tags": [],
   "techTags": [],
   "effect": null,
-  "price": 0.13
+  "price": 0.12
  },
  "Moonfall": {
   "code": "UNL-198",
@@ -223,7 +223,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",
-  "price": 0.13
+  "price": 0.12
  },
  "Ravenbloom Student": {
   "code": "OGN-103",
@@ -239,7 +239,7 @@
   ],
   "techTags": [],
   "effect": "When you play a spell, give me +1 :rb_might: this turn.",
-  "price": 0.26
+  "price": 0.25
  },
  "Ride the Wind": {
   "code": "OGN-173",
@@ -253,7 +253,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
-  "price": 0.45
+  "price": 0.43
  },
  "Singularity": {
   "code": "OGN-105",
@@ -307,7 +307,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
-  "price": 7.32
+  "price": 7.03
  },
  "Star-Crossed": {
   "code": "UNL-128",
@@ -327,7 +327,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit and an enemy unit to their owners' hands.",
-  "price": 0.2
+  "price": 0.15
  },
  "Stupefy": {
   "code": "OGN-095",
@@ -361,7 +361,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-  "price": 0.23
+  "price": 0.22
  },
  "Tideturner": {
   "code": "OGN-199",
@@ -526,7 +526,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
-  "price": 0.1
+  "price": 0.13
  },
  "Sprite Fountain": {
   "code": "UNL-078",
@@ -540,7 +540,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
-  "price": 2.42
+  "price": 3.07
  },
  "Switcheroo": {
   "code": "SFD-145",
@@ -568,7 +568,7 @@
   "tags": [],
   "techTags": [],
   "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
-  "price": 0.55
+  "price": 0.62
  },
  "Consult the Past": {
   "code": "OGN-083",
@@ -650,7 +650,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell. Return it to its owner's hand instead of putting it in their trash.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.3
+  "price": 0.28
  },
  "Eager Apprentice": {
   "code": "OGN-084",
@@ -666,7 +666,7 @@
   ],
   "techTags": [],
   "effect": "While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:.",
-  "price": 0.1
+  "price": 0.12
  },
  "Angler Beast": {
   "code": "UNL-132",
@@ -693,7 +693,7 @@
    }
   ],
   "effect": "When you play me, return all units with 2 :rb_might: or less to their owners' hands.",
-  "price": 0.13
+  "price": 0.14
  },
  "Downwell": {
   "code": "SFD-147",
@@ -733,7 +733,7 @@
    }
   ],
   "effect": "Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.17
+  "price": 0.16
  },
  "Last Rites": {
   "code": "SFD-150",
@@ -812,7 +812,7 @@
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\n[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
-  "price": 0.21
+  "price": 0.2
  },
  "Plundering Poro": {
   "code": "SFD-069",
@@ -830,7 +830,7 @@
   ],
   "techTags": [],
   "effect": "When I conquer, play a Gold gear token exhausted.",
-  "price": 0.17
+  "price": 0.18
  },
  "Startipped Peak": {
   "code": "OGN-288",
@@ -903,7 +903,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
-  "price": 0.58
+  "price": 0.59
  },
  "Sigil of the Storm": {
   "code": "OGN-287",
@@ -917,7 +917,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, recycle one of your runes.",
-  "price": 0.2
+  "price": 0.19
  },
  "Time Warp": {
   "code": "OGN-122",
@@ -965,7 +965,7 @@
    }
   ],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. Play a Gold gear token exhausted.",
-  "price": 0.14
+  "price": 0.15
  },
  "Edge of Night": {
   "code": "SFD-139",
@@ -1012,6 +1012,6 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted.",
-  "price": 0.08
+  "price": 0.09
  }
 }
