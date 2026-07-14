@@ -3887,7 +3887,16 @@ function renderAnalyze(ctx) {
    existence — data no opponent has. */
 
 function loadMatches() { try { return JSON.parse(localStorage.getItem('ddl-matches') || '[]'); } catch (e) { return []; } }
-function writeMatches(m) { try { localStorage.setItem('ddl-matches', JSON.stringify(m)); } catch (e) {} }
+// Returns whether the write actually landed. Private/incognito browsing,
+// "block all cookies"-style privacy settings, or a full storage quota can
+// all make localStorage.setItem throw — silently swallowing that (the old
+// behavior) meant every "logged" toast fired unconditionally, so a blocked
+// browser looked exactly like a successful save right up until the next
+// reload wiped the illusion. Every caller below now checks this.
+function writeMatches(m) {
+  try { localStorage.setItem('ddl-matches', JSON.stringify(m)); return true; }
+  catch (e) { return false; }
+}
 
 // opts.postBoard, when given, filters to just games 1 (false) or 2-3 (true) —
 // backward compatible, existing callers that pass nothing get every game.
@@ -3911,7 +3920,7 @@ function logMatch(result) {
     deck: document.getElementById('logDeck').value || null,
     notes: (document.getElementById('logNotes').value || '').trim() || null,
   });
-  writeMatches(m);
+  if (!writeMatches(m)) { toast('Could not save — your browser is blocking site storage (private/incognito mode, or a privacy setting)'); return; }
   toast((result === 'W' ? 'Win' : 'Loss') + ' vs ' + (FIELD.archetypes[arch] ? FIELD.archetypes[arch].name : arch) + ' logged');
   render();
 }
@@ -3950,7 +3959,7 @@ function logSetGame(game, result) {
     notes: (document.getElementById('logNotes').value || '').trim() || null,
     setId: logSetId, game, postBoard: game >= 2,
   });
-  writeMatches(m);
+  if (!writeMatches(m)) { toast('Could not save — your browser is blocking site storage (private/incognito mode, or a privacy setting)'); return; }
   toast('Game ' + game + ' (' + (result === 'W' ? 'win' : 'loss') + ') logged — ' + (game >= 2 ? 'post-board' : 'pre-board'));
   render();
 }
@@ -3967,7 +3976,7 @@ function quickLog(slug, result) {
     date: new Date().toISOString().slice(0, 10),
     arch: slug, result, play: null, mull: null, deck: null, notes: null,
   });
-  writeMatches(m);
+  if (!writeMatches(m)) { toast('Could not save — your browser is blocking site storage (private/incognito mode, or a privacy setting)'); return; }
   toast((result === 'W' ? 'Win' : 'Loss') + ' vs ' + (FIELD.archetypes[slug] ? FIELD.archetypes[slug].name : slug) + ' logged');
   const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML();
 }
