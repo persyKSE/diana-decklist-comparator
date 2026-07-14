@@ -4484,11 +4484,6 @@ function printGuideHTML() {
     ? Object.entries(builderRunes).map(([d, c]) => ({ name: d + ' Rune', count: c })).filter(r => r.count > 0)
     : ex.runes;
   const bfs = (builderBf && builderBf.length) ? builderBf.map(name => ({ name })) : ex.bfs.slice(0, 3);
-  const tw = fieldReady() ? threatWeights({ includeMirror: true }) : { rows: [] };
-  const rows = tw.rows.slice(0, 10).map(w => {
-    const p = archProfile(w.slug);
-    return { ...w, p, cov: coverageOf(sideList, p, { deckSize: DECK_SIZE }) };
-  });
 
   let html = '<div class="print-guide">';
   html += '<h1 style="margin:0 0 2px;font-size:20px">Diana, Scorn of the Moon — Matchup Guide</h1>';
@@ -4506,25 +4501,52 @@ function printGuideHTML() {
   html += '<p style="font-size:12px;margin:0">' + runes.map(r => r.count + ' ' + escHtml(r.name)).join(' · ') +
     (bfs.length ? ' &nbsp;·&nbsp; ' + bfs.map(b => escHtml(b.name)).join(', ') : '') + '</p>';
 
-  html += '<h2 style="margin:14px 0 4px;font-size:14px">Top matchups (field-weighted)</h2>';
-  if (!rows.length) {
+  html += '<h2 style="margin:14px 0 6px;font-size:14px">Top matchups — plan, sideboard, and what to watch for</h2>';
+  if (!fieldReady()) {
     html += '<p style="font-size:12px;color:var(--muted)">No field data loaded — open the Meta view once first.</p>';
   } else {
-    html += '<table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="border-bottom:1px solid var(--border)">' +
-      '<th style="text-align:left;padding:3px 5px">Archetype</th><th style="text-align:right;padding:3px 5px">Share</th>' +
-      '<th style="text-align:right;padding:3px 5px">Breadth</th><th style="text-align:right;padding:3px 5px">Timely</th>' +
-      '<th style="text-align:left;padding:3px 5px">Best answer</th></tr></thead><tbody>';
+    // Same engine as the Meta view's coverage table, Matchup plans table, and
+    // reverse exposure pass — this section is those three, condensed to one
+    // block per opponent instead of three separate tables, because a guide
+    // you bring to a table needs "what do I do", not three percentages.
+    const tw = threatWeights({ includeMirror: true });
+    const you = mainN >= 20 ? profileFromList(mainList) : null;
+    const gasYou = gasOf(mainList);
+    const rows = tw.rows.slice(0, 6).map(w => {
+      const p = archProfile(w.slug);
+      const cov = coverageOf(sideList, p, { deckSize: DECK_SIZE });
+      const combat = you ? combatParity(you, p) : null;
+      const gasThem = gasOf(archAnswerList(w.slug, { includeSide: false }));
+      const clockD = you ? (p.avgCost - you.avgCost) : 0;
+      const gasD = gasYou - gasThem;
+      const plan = planFor(clockD, gasD);
+      const sugg = planSuggestions(plan.axis, p, sideList);
+      let exp = null;
+      if (you && !w.mirror) {
+        const ansSb = archAnswerList(w.slug, { includeSide: true });
+        exp = coverageOf(ansSb, you, { deckSize: DECK_SIZE });
+      }
+      return { ...w, p, cov, combat, plan, sugg, exp };
+    });
     rows.forEach(r => {
       const a = FIELD.archetypes[r.slug];
-      html += '<tr style="border-bottom:1px solid var(--border)"><td style="padding:3px 5px">' + escHtml(r.mirror ? 'Diana (mirror)' : a.name) + '</td>' +
-        '<td style="text-align:right;padding:3px 5px">' + pct(r.share) + '</td>' +
-        '<td style="text-align:right;padding:3px 5px">' + pct(r.cov.coverage) + '</td>' +
-        '<td style="text-align:right;padding:3px 5px">' + pct(r.cov.timely) + '</td>' +
-        '<td style="padding:3px 5px">' + (r.cov.name ? escHtml(shortName(r.cov.name)) : '—') + '</td></tr>';
+      html += '<div style="border:1px solid var(--border);border-radius:4px;padding:6px 9px;margin-bottom:6px;font-size:11.5px;break-inside:avoid">';
+      html += '<div style="font-weight:bold;font-size:12.5px">' + escHtml(r.mirror ? 'Diana (mirror)' : a.name) +
+        '<span style="font-weight:normal;color:var(--muted)"> — ' + pct(r.share) + ' of the field' +
+        (r.combat ? ', combat ' + pct(r.combat.win) + '/' + pct(r.combat.lose) : '') + ' · <strong>' + r.plan.label + '</strong> plan</span></div>';
+      html += '<div style="color:var(--muted);margin:2px 0">' + escHtml(r.plan.why) + '</div>';
+      html += '<div><strong>Board for it:</strong> ' + (r.sugg.length ? r.sugg.map(x => escHtml(shortName(x.n))).join(', ') : 'nothing in the pool moves this axis') + '</div>';
+      html += '<div><strong>Your coverage:</strong> ' + pct(r.cov.coverage) + ' breadth / ' + pct(r.cov.timely) + ' timely' +
+        (r.cov.name ? ' — best answer ' + escHtml(shortName(r.cov.name)) : ' — nothing interacts') + '</div>';
+      if (r.exp) {
+        html += '<div><strong>Watch for:</strong> ' + (r.exp.name
+          ? escHtml(shortName(r.exp.name)) + ' (' + escHtml(answerWhy(r.exp.name, r.exp.tag, you, { self: true })) + ')'
+          : 'little that answers your deck') + ' — you\'re exposed on ' + pct(r.exp.coverage) + ' of your list</div>';
+      }
+      html += '</div>';
     });
-    html += '</tbody></table>';
   }
-  html += '<p style="font-size:10px;color:var(--muted);margin-top:14px">Breadth/Timely are rules-text coverage heuristics scored against your sideboard, not win rates — see the Meta view for full methodology. No per-match results are published for these events.</p>';
+  html += '<p style="font-size:10px;color:var(--muted);margin-top:10px">Coverage/exposure are rules-text heuristics against these lists, not win rates; Plan and Combat are read straight off decklist averages. See the Meta view for full methodology. No per-match results are published for these events.</p>';
   html += '</div>';
   return html;
 }
