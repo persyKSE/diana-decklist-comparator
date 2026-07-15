@@ -11,7 +11,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When a player plays a spell, they may give a unit they control here +1 :rb_might: this turn.",
-  "price": 0.06
+  "price": 0.07
  },
  "Acceptable Losses": {
   "code": "OGN-179",
@@ -31,7 +31,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
-  "price": 0.44
+  "price": 0.46
  },
  "Baron Nashor": {
   "code": "UNL-147",
@@ -61,7 +61,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": null,
-  "price": 0.15
+  "price": 0.16
  },
  "Diana, Lunari": {
   "code": "UNL-079",
@@ -110,7 +110,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nMove up to 2 friendly units to base.",
-  "price": 2.95
+  "price": 2.98
  },
  "Gust": {
   "code": "OGN-169",
@@ -155,7 +155,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
-  "price": 1.31
+  "price": 1.3
  },
  "Hwei, Brooding Painter": {
   "code": "UNL-080",
@@ -253,7 +253,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
-  "price": 0.39
+  "price": 0.4
  },
  "Singularity": {
   "code": "OGN-105",
@@ -273,7 +273,7 @@ window.CARDS = {
    }
   ],
   "effect": "Deal 6 to each of up to two units.",
-  "price": 0.88
+  "price": 0.92
  },
  "Smoke Screen": {
   "code": "OGN-093",
@@ -307,7 +307,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
-  "price": 7.51
+  "price": 7.46
  },
  "Star-Crossed": {
   "code": "UNL-128",
@@ -327,7 +327,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit and an enemy unit to their owners' hands.",
-  "price": 0.13
+  "price": 0.14
  },
  "Stupefy": {
   "code": "OGN-095",
@@ -347,7 +347,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:. Draw 1.",
-  "price": 0.23
+  "price": 0.24
  },
  "Targon's Peak": {
   "code": "OGN-289",
@@ -361,7 +361,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-  "price": 0.23
+  "price": 0.22
  },
  "Tideturner": {
   "code": "OGN-199",
@@ -393,7 +393,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I move, discard 1, then draw 1.",
-  "price": 0.22
+  "price": 0.23
  },
  "Turn to Dust": {
   "code": "UNL-070",
@@ -413,7 +413,7 @@ window.CARDS = {
    }
   ],
   "effect": "Give a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.07
+  "price": 0.08
  },
  "Vex, Apathetic": {
   "code": "UNL-150",
@@ -526,7 +526,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
-  "price": 0.11
+  "price": 0.1
  },
  "Sprite Fountain": {
   "code": "UNL-078",
@@ -540,7 +540,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
-  "price": 2.49
+  "price": 2.51
  },
  "Switcheroo": {
   "code": "SFD-145",
@@ -582,7 +582,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Reaction] (Play any time, even before spells and abilities resolve.)\nDraw 2.",
-  "price": 0.16
+  "price": 0.15
  },
  "Frigid Jewel": {
   "code": "UNL-074",
@@ -610,7 +610,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "Units can't be played here.",
-  "price": 0.15
+  "price": 0.14
  },
  "Invert Timelines": {
   "code": "OGN-201",
@@ -830,7 +830,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I conquer, play a Gold gear token exhausted.",
-  "price": 0.12
+  "price": 0.11
  },
  "Startipped Peak": {
   "code": "OGN-288",
@@ -903,7 +903,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
-  "price": 0.65
+  "price": 0.66
  },
  "Sigil of the Storm": {
   "code": "OGN-287",
