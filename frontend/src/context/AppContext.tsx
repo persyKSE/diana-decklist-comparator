@@ -87,11 +87,21 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   
   const [filters, setFilters] = useState<Filters>(defaultFilters);
 
-  // Builder State
-  const [mainDeck, setMainDeck] = useState<Record<string, number>>({});
-  const [sideDeck, setSideDeck] = useState<Record<string, number>>({});
-  const [builderRunes, setBuilderRunes] = useState<Record<string, number>>({ Fury: 12 });
-  const [builderBf, setBuilderBf] = useState<string[]>([]);
+  // Builder State — hydrated synchronously from local storage via lazy
+  // initializers, not a mount effect, so there's no window where a
+  // "persist on change" effect can see the pre-hydration default and clobber
+  // what was saved (StrictMode's double-invoked mount effects made this a
+  // real race, not just a theoretical one).
+  const readStored = <T,>(key: string, fallback: T): T => {
+    try {
+      const raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (e) { return fallback; }
+  };
+  const [mainDeck, setMainDeck] = useState<Record<string, number>>(() => readStored('ddl-main', {}));
+  const [sideDeck, setSideDeck] = useState<Record<string, number>>(() => readStored('ddl-side', {}));
+  const [builderRunes, setBuilderRunes] = useState<Record<string, number>>(() => readStored('ddl-runes', { Fury: 12 }));
+  const [builderBf, setBuilderBf] = useState<string[]>(() => readStored('ddl-bf', []));
 
   // Initialize theme from local storage
   useEffect(() => {
@@ -150,24 +160,6 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     return () => { isMounted = false; };
   }, []);
 
-  // Load state from local storage on mount
-  useEffect(() => {
-    try {
-      const storedRunes = localStorage.getItem('ddl-runes');
-      if (storedRunes) setBuilderRunes(JSON.parse(storedRunes));
-      const storedBf = localStorage.getItem('ddl-bf');
-      if (storedBf) setBuilderBf(JSON.parse(storedBf));
-      
-      const storedCoach = localStorage.getItem('ddl-coach');
-      if (storedCoach) {
-         import('../utils/deckMath').then(({ /* parseDeckText */ }) => {
-            // Lazy load the parser just for initial hydration if needed, 
-            // but actually we will do this better later. Let's just keep the text for now.
-         });
-      }
-    } catch (e) {}
-  }, []);
-
   // Save builder state to local storage when changed
   useEffect(() => {
     localStorage.setItem('ddl-runes', JSON.stringify(builderRunes));
@@ -175,6 +167,12 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   useEffect(() => {
     localStorage.setItem('ddl-bf', JSON.stringify(builderBf));
   }, [builderBf]);
+  useEffect(() => {
+    localStorage.setItem('ddl-main', JSON.stringify(mainDeck));
+  }, [mainDeck]);
+  useEffect(() => {
+    localStorage.setItem('ddl-side', JSON.stringify(sideDeck));
+  }, [sideDeck]);
 
   const { imageMap, cardMeta, nameLookup, nonMainNames, rankedCards } = useMemo(() => {
     if (!allDecks || allDecks.length === 0 || !field) {
