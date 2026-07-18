@@ -549,6 +549,7 @@ def export_field_json(conn, path=FIELD_JSON):
             "image": f"cache/images/{local.name}" if local.exists() else card["image_url"],
             "price": card["price"],
             "banned": card["code"] in BANNED_CODES,
+            "set": card["set_name"],
         }
 
     # Deliberately no "generated" stamp: meta.json already carries one, and a
@@ -590,6 +591,7 @@ def export_cards_json(conn, path=None):
             "effect": card["effect"],
             "price": card["price"],
             "banned": card["code"] in BANNED_CODES,
+            "set": card["set_name"],
         }
     payload = json.dumps(out, indent=1)
     Path(path).write_text(payload)

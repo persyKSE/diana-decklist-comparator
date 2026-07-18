@@ -2905,7 +2905,7 @@ let builderPoolCache = null;
 let builderRunes = null;     // {Chaos:7, Mind:5, …}, persisted 'ddl-runes'
 let builderBf = null;        // chosen battlefield names, persisted 'ddl-bf'
 let builderPreview = null;   // card name shown large in the left pane
-let builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', tag: '', sort: 'cost', page: 0 };
+let builderSearch = { name: '', text: '', type: '', color: '', set: '', emin: '', emax: '', mmin: '', mmax: '', tag: '', sort: 'cost', page: 0 };
 const BUILDER_PAGE = 18;   // keep the DOM light: 18 card images, not 296
 // Coarse pointer = no right-click, no shift-click, no hover: builder taps
 // open an action sheet instead. `let` so tests can force it on.
@@ -2935,10 +2935,13 @@ function builderPool() {
   names.forEach(name => {
     const info = cardInfo(name) || {};
     if (!['Unit', 'Spell', 'Gear'].includes(info.type)) return;   // runes/battlefields have their own zones
-    out.push({ name, cost: info.cost, type: info.type, color: info.color || [], might: info.might, effect: info.effect || '', img: imageMap[name] || null });
+    out.push({ name, cost: info.cost, type: info.type, color: info.color || [], might: info.might, effect: info.effect || '', img: imageMap[name] || null, set: info.set || null });
   });
   builderPoolCache = out;
   return out;
+}
+function builderSetOptions() {
+  return [...new Set(builderPool().map(c => c.set).filter(Boolean))].sort();
 }
 
 function bMain() { return parseDeckText(coachText).counts; }
@@ -3223,7 +3226,11 @@ function builderFiltered() {
     if (s.text && !q(c.effect).includes(q(s.text))) return false;
     if (s.type && c.type !== s.type) return false;
     if (s.tag && !(B_FACETS[s.tag] && B_FACETS[s.tag].test(c.name))) return false;
-    if (s.color && !(c.color || []).includes(s.color)) return false;
+    if (s.color) {
+      const wanted = s.color.split('+');
+      if (!(c.color || []).some(col => wanted.includes(col))) return false;
+    }
+    if (s.set && c.set !== s.set) return false;
     if (s.emin !== '' && (c.cost == null || c.cost < +s.emin)) return false;
     if (s.emax !== '' && (c.cost == null || c.cost > +s.emax)) return false;
     if (s.mmin !== '' && (c.might == null || c.might < +s.mmin)) return false;
@@ -3240,12 +3247,13 @@ function bReadSearch() {
   const g = id => { const el = document.getElementById(id); return el ? el.value : ''; };
   builderSearch.name = g('bsName'); builderSearch.text = g('bsText');
   builderSearch.type = g('bsType'); builderSearch.color = g('bsColor');
+  builderSearch.set = g('bsSet');
   builderSearch.emin = g('bsEmin'); builderSearch.emax = g('bsEmax');
   builderSearch.mmin = g('bsMmin'); builderSearch.mmax = g('bsMmax');
   builderSearch.page = 0;
   renderBuilderResults();
 }
-function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', emin: '', emax: '', mmin: '', mmax: '', tag: '', sort: builderSearch.sort, page: 0 }; refreshBuilder(); }
+function bResetSearch() { builderSearch = { name: '', text: '', type: '', color: '', set: '', emin: '', emax: '', mmin: '', mmax: '', tag: '', sort: builderSearch.sort, page: 0 }; refreshBuilder(); }
 function bPage(delta) {
   const pages = Math.max(1, Math.ceil(builderFiltered().length / BUILDER_PAGE));
   builderSearch.page = Math.max(0, Math.min(pages - 1, builderSearch.page + delta));
@@ -3305,6 +3313,7 @@ function renderBuilderResults() {
 }
 function builderSearchHTML() {
   const s = builderSearch;
+  const legendDomains = Object.keys(builderRunes || {});
   const opt = (v, cur, label) => '<option value="' + attr(v) + '"' + (v === cur ? ' selected' : '') + '>' + escHtml(label || v || 'All') + '</option>';
   return '<div class="bsearch">' +
     '<div class="bs-label">Card name</div><input id="bsName" value="' + attr(s.name) + '" placeholder="Search by name…" oninput="bReadSearch()">' +
@@ -3313,7 +3322,10 @@ function builderSearchHTML() {
     '<div class="bs-label" title="What the card does, from its rules text — the same tags the Meta coverage analysis reads">Role</div>' +
     '<div class="bs-facets">' + Object.entries(B_FACETS).map(([k, f]) =>
       '<span class="chip' + (s.tag === k ? ' on' : '') + '" onclick="bSetFacet(\'' + k + '\')">' + f.label + '</span>').join('') + '</div>' +
-    '<div class="bs-label">Domain</div><select id="bsColor" onchange="bReadSearch()">' + ['', ...DOMAINS, 'Colorless'].map(t => opt(t, s.color, t || 'All domains')).join('') + '</select>' +
+    '<div class="bs-label">Domain</div><select id="bsColor" onchange="bReadSearch()">' + opt('', s.color, 'All domains') +
+      (legendDomains.length === 2 ? '<option value="' + attr(legendDomains.join('+')) + '"' + (s.color === legendDomains.join('+') ? ' selected' : '') + '>' + escHtml(legendDomains.join(' & ')) + ' (legend domains)</option>' : '') +
+      DOMAINS.map(t => opt(t, s.color, t)).join('') + opt('Colorless', s.color, 'Colorless') + '</select>' +
+    '<div class="bs-label">Set</div><select id="bsSet" onchange="bReadSearch()">' + ['', ...builderSetOptions()].map(t => opt(t, s.set, t || 'All sets')).join('') + '</select>' +
     '<div class="bs-label">Energy</div><div class="bs-range"><input id="bsEmin" type="number" min="0" max="12" value="' + attr(s.emin) + '" placeholder="min" oninput="bReadSearch()"><span>to</span><input id="bsEmax" type="number" min="0" max="12" value="' + attr(s.emax) + '" placeholder="max" oninput="bReadSearch()"></div>' +
     '<div class="bs-label">Might</div><div class="bs-range"><input id="bsMmin" type="number" min="0" max="12" value="' + attr(s.mmin) + '" placeholder="min" oninput="bReadSearch()"><span>to</span><input id="bsMmax" type="number" min="0" max="12" value="' + attr(s.mmax) + '" placeholder="max" oninput="bReadSearch()"></div>' +
     '<div class="bs-actions"><button class="bs-reset" onclick="bResetSearch()">Reset</button></div>' +

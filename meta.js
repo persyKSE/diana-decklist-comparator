@@ -1,6 +1,6 @@
 window.META = {
  "diana": "diana-scorn-of-the-moon",
- "generated": "2026-07-18T09:24:55+00:00",
+ "generated": "2026-07-18T10:01:09+00:00",
  "latestEvent": "2026-06-29",
  "otherDecks": 88,
  "archetypes": {

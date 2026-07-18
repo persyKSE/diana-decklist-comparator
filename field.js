@@ -13310,7 +13310,8 @@ window.FIELD = {
    "effect": "When a player plays a spell, they may give a unit they control here +1 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Acceptable Losses": {
    "cost": 1,
@@ -13330,7 +13331,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
    "image": "cache/images/Acceptable_Losses.webp",
    "price": 0.45,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Baron Nashor": {
    "cost": 10,
@@ -13346,7 +13348,8 @@ window.FIELD = {
    "effect": "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there. (It has &quot;Units can move here from anywhere.&quot;)\nI can't be chosen by enemy spells and abilities.\nOther friendly units have +2 :rb_might:.",
    "image": "cache/images/Baron_Nashor.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Chaos Rune": {
    "cost": null,
@@ -13360,7 +13363,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Diana, Lunari": {
    "cost": 3,
@@ -13377,7 +13381,8 @@ window.FIELD = {
    "effect": "When a showdown begins here, you may pay :rb_energy_1:. If you do, [Predict], then reveal the top card of your Main Deck. If it's a spell, draw it. (To Predict, look at the top card of your Main Deck. You may recycle it.)",
    "image": "cache/images/Diana_Lunari.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Fizz, Trickster": {
    "cost": 3,
@@ -13395,7 +13400,8 @@ window.FIELD = {
    "effect": "When you play me, you may play a spell from your trash with Energy cost no more than :rb_energy_3:, ignoring its Energy cost. Recycle that spell after you play it. (You must still pay its Power cost.)",
    "image": "cache/images/Fizz_Trickster.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Flash": {
    "cost": 2,
@@ -13409,7 +13415,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nMove up to 2 friendly units to base.",
    "image": "cache/images/Flash.webp",
    "price": 3.01,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Gust": {
    "cost": 1,
@@ -13434,7 +13441,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
    "image": "cache/images/Gust.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Hard Bargain": {
    "cost": 2,
@@ -13454,7 +13462,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
    "image": "cache/images/Hard_Bargain.webp",
    "price": 1.36,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Hwei, Brooding Painter": {
    "cost": 5,
@@ -13471,7 +13480,8 @@ window.FIELD = {
    "effect": "When I move, draw 1, then discard 1. Then, do the following based on the discarded card's type:Spell \u2014 Draw 1.Gear \u2014 Ready up to 2 runes.Unit \u2014 Give me +3 :rb_might: this turn.",
    "image": "cache/images/Hwei_Brooding_Painter.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Mind Rune": {
    "cost": null,
@@ -13485,7 +13495,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Moonfall": {
    "cost": 3,
@@ -13508,7 +13519,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a battlefield where you have units. You may move up to one enemy unit to that battlefield. Then give enemy units there -2 :rb_might: this turn.",
    "image": "cache/images/Moonfall.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Ravenbloom Conservatory": {
    "cost": null,
@@ -13522,7 +13534,8 @@ window.FIELD = {
    "effect": "When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Ravenbloom Student": {
    "cost": 2,
@@ -13538,7 +13551,8 @@ window.FIELD = {
    "effect": "When you play a spell, give me +1 :rb_might: this turn.",
    "image": "cache/images/Ravenbloom_Student.webp",
    "price": 0.23,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Ride the Wind": {
    "cost": 2,
@@ -13552,7 +13566,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
    "image": "cache/images/Ride_the_Wind.webp",
    "price": 0.37,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Singularity": {
    "cost": 6,
@@ -13572,7 +13587,8 @@ window.FIELD = {
    "effect": "Deal 6 to each of up to two units.",
    "image": "cache/images/Singularity.webp",
    "price": 0.85,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Smoke Screen": {
    "cost": 2,
@@ -13592,7 +13608,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn, to a minimum of 1 :rb_might:.",
    "image": "cache/images/Smoke_Screen.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Stacked Deck": {
    "cost": 1,
@@ -13606,7 +13623,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
    "image": "cache/images/Stacked_Deck.webp",
    "price": 6.91,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Star-Crossed": {
    "cost": 3,
@@ -13626,7 +13644,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit and an enemy unit to their owners' hands.",
    "image": "cache/images/Star_Crossed.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Stupefy": {
    "cost": 1,
@@ -13646,7 +13665,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:. Draw 1.",
    "image": "cache/images/Stupefy.webp",
    "price": 0.21,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Targon's Peak": {
    "cost": null,
@@ -13660,7 +13680,8 @@ window.FIELD = {
    "effect": "When you conquer here, ready 2 runes at the end of this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
    "price": 0.24,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Tideturner": {
    "cost": 2,
@@ -13676,7 +13697,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play me, you may choose a friendly unit. Move me to its location and it to my original location.",
    "image": "cache/images/Tideturner.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Traveling Merchant": {
    "cost": 2,
@@ -13692,7 +13714,8 @@ window.FIELD = {
    "effect": "When I move, discard 1, then draw 1.",
    "image": "cache/images/Traveling_Merchant.webp",
    "price": 0.21,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Turn to Dust": {
    "cost": 2,
@@ -13712,7 +13735,8 @@ window.FIELD = {
    "effect": "Give a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "cache/images/Turn_to_Dust.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Vex, Apathetic": {
    "cost": 4,
@@ -13736,7 +13760,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhen an opponent plays a unit while I'm at a battlefield, [Stun] it. They can't move it this turn. (It doesn't deal combat damage this turn.)",
    "image": "cache/images/Vex_Apathetic.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Vex, Cheerless": {
    "cost": 5,
@@ -13754,7 +13779,8 @@ window.FIELD = {
    "effect": "While I'm in combat, friendly spells cost :rb_energy_1::rb_rune_rainbow: less to a minimum of :rb_energy_1:, and enemy spells cost :rb_energy_1::rb_rune_rainbow: more.",
    "image": "cache/images/Vex_Cheerless.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Eclipse": {
    "cost": 3,
@@ -13774,7 +13800,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
    "image": "cache/images/Eclipse.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Kha'Zix, Mutating Horror": {
    "cost": 4,
@@ -13791,7 +13818,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen I attack or defend, if an enemy unit is alone here, give me +2 :rb_might: this turn and gain 2 XP.",
    "image": "cache/images/Kha_Zix_Mutating_Horror.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Rebuke": {
    "cost": 2,
@@ -13811,7 +13839,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a unit at a battlefield to its owner's hand.",
    "image": "cache/images/Rebuke.webp",
    "price": 0.25,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Seat of Power": {
    "cost": null,
@@ -13825,7 +13854,8 @@ window.FIELD = {
    "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-217.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sprite Fountain": {
    "cost": 2,
@@ -13839,7 +13869,8 @@ window.FIELD = {
    "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
    "image": "cache/images/Sprite_Fountain.webp",
    "price": 3.67,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Switcheroo": {
    "cost": 2,
@@ -13853,7 +13884,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nSwap the Might of two units at the same battlefield this turn.",
    "image": "cache/images/Switcheroo.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "The Arena's Greatest": {
    "cost": null,
@@ -13867,7 +13899,8 @@ window.FIELD = {
    "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-290.webp",
    "price": 0.51,
-   "banned": true
+   "banned": true,
+   "set": "Origins"
   },
   "Consult the Past": {
    "cost": 4,
@@ -13881,7 +13914,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Reaction] (Play any time, even before spells and abilities resolve.)\nDraw 2.",
    "image": "cache/images/Consult_the_Past.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Frigid Jewel": {
    "cost": 2,
@@ -13895,7 +13929,8 @@ window.FIELD = {
    "effect": "When you draw your second card each turn, give a friendly unit +2 :rb_might: this turn.",
    "image": "cache/images/Frigid_Jewel.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Rockfall Path": {
    "cost": null,
@@ -13909,7 +13944,8 @@ window.FIELD = {
    "effect": "Units can't be played here.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Invert Timelines": {
    "cost": 3,
@@ -13929,7 +13965,8 @@ window.FIELD = {
    "effect": "Each player discards their hand, then draws 4.",
    "image": "cache/images/Invert_Timelines.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Abandon": {
    "cost": 2,
@@ -13949,7 +13986,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell. Return it to its owner's hand instead of putting it in their trash.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
    "image": "cache/images/Abandon.webp",
    "price": 0.29,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Eager Apprentice": {
    "cost": 3,
@@ -13965,7 +14003,8 @@ window.FIELD = {
    "effect": "While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:.",
    "image": "cache/images/Eager_Apprentice.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Angler Beast": {
    "cost": 5,
@@ -13992,7 +14031,8 @@ window.FIELD = {
    "effect": "When you play me, return all units with 2 :rb_might: or less to their owners' hands.",
    "image": "cache/images/Angler_Beast.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Downwell": {
    "cost": 8,
@@ -14012,7 +14052,8 @@ window.FIELD = {
    "effect": "Return all units and gear to their owners' hands.",
    "image": "cache/images/Downwell.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Fading Memories": {
    "cost": 4,
@@ -14032,7 +14073,8 @@ window.FIELD = {
    "effect": "Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "cache/images/Fading_Memories.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Last Rites": {
    "cost": 3,
@@ -14048,7 +14090,8 @@ window.FIELD = {
    "effect": "[Equip] \u2014 :rb_rune_chaos:, Recycle 2 cards from your trash (Pay the cost: Attach this to a unit you control.)",
    "image": "cache/images/Last_Rites.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Mindsplitter": {
    "cost": 7,
@@ -14071,7 +14114,8 @@ window.FIELD = {
    "effect": "When you play me, choose an opponent. They reveal their hand. Choose a card from it, and they discard that card.",
    "image": "cache/images/Mindsplitter.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Unchecked Power": {
    "cost": 7,
@@ -14091,7 +14135,8 @@ window.FIELD = {
    "effect": "Exhaust all friendly units, then deal 12 to ALL units at battlefields.",
    "image": "cache/images/Unchecked_Power.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Existential Dread": {
    "cost": 1,
@@ -14111,7 +14156,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\n[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
    "image": "cache/images/Existential_Dread.webp",
    "price": 0.2,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Plundering Poro": {
    "cost": 2,
@@ -14129,7 +14175,8 @@ window.FIELD = {
    "effect": "When I conquer, play a Gold gear token exhausted.",
    "image": "cache/images/Plundering_Poro.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Startipped Peak": {
    "cost": null,
@@ -14143,7 +14190,8 @@ window.FIELD = {
    "effect": "When you hold here, you may channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-288.webp",
    "price": 0.27,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Thousand-Tailed Watcher": {
    "cost": 7,
@@ -14165,7 +14213,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)\nWhen you play me, give enemy units -3 :rb_might: this turn, to a minimum of 1 :rb_might:.",
    "image": "cache/images/Thousand_Tailed_Watcher.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Maddened Marauder": {
    "cost": 5,
@@ -14182,7 +14231,8 @@ window.FIELD = {
    "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me, move a unit from a battlefield to its base.",
    "image": "cache/images/Maddened_Marauder.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Retreat": {
    "cost": 1,
@@ -14202,7 +14252,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
    "image": "cache/images/Retreat.webp",
    "price": 0.61,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sigil of the Storm": {
    "cost": null,
@@ -14216,7 +14267,8 @@ window.FIELD = {
    "effect": "When you conquer here, recycle one of your runes.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-287.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Time Warp": {
    "cost": 10,
@@ -14230,7 +14282,8 @@ window.FIELD = {
    "effect": "Take a turn after this one. Banish this.",
    "image": "cache/images/Time_Warp.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Hallowed Tomb": {
    "cost": null,
@@ -14244,7 +14297,8 @@ window.FIELD = {
    "effect": "When you hold here, you may return your Chosen Champion from your trash to your Champion Zone if it is empty.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-281.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Wages of Pain": {
    "cost": 3,
@@ -14264,7 +14318,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. Play a Gold gear token exhausted.",
    "image": "cache/images/Wages_of_Pain.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Edge of Night": {
    "cost": 3,
@@ -14280,7 +14335,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play this from face down, attach it to a unit you control here.\n[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
    "image": "cache/images/Edge_of_Night.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Dr. Mundo, Expert": {
    "cost": 8,
@@ -14297,7 +14353,8 @@ window.FIELD = {
    "effect": "My Might is increased by the number of cards in your trash.\nAt the start of your Beginning Phase, recycle 3 from your trash.",
    "image": "cache/images/Dr_Mundo_Expert.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Treasure Hoard": {
    "cost": null,
@@ -14311,7 +14368,8 @@ window.FIELD = {
    "effect": "When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-220.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Alpha Strike": {
    "cost": 3,
@@ -14328,7 +14386,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a friendly unit. It deals damage equal to its Might split among enemy units at battlefields. Then for each unit this kills, do this: Gain 1 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-192.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Body Rune": {
    "cost": null,
@@ -14342,7 +14401,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-126.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Calm Rune": {
    "cost": null,
@@ -14356,7 +14416,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-042.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Challenge": {
    "cost": 2,
@@ -14370,7 +14431,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a friendly unit and an enemy unit. They deal damage equal to their Mights to each other.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-128.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Charm": {
    "cost": 1,
@@ -14384,7 +14446,8 @@ window.FIELD = {
    "effect": "Move an enemy unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-043.webp",
    "price": 0.67,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Defy": {
    "cost": 1,
@@ -14404,7 +14467,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell that costs no more than :rb_energy_4: and no more than :rb_rune_rainbow:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-045.webp",
    "price": 2.47,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Disarming Rake": {
    "cost": 3,
@@ -14426,7 +14490,8 @@ window.FIELD = {
    "effect": "When you play me, you may kill a gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-032.webp",
    "price": 0.14,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Discipline": {
    "cost": 2,
@@ -14440,7 +14505,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-058.webp",
    "price": 1.73,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Emperor's Dais": {
    "cost": null,
@@ -14460,7 +14526,8 @@ window.FIELD = {
    "effect": "When you conquer here, you may pay :rb_energy_1: and return a unit you control here to its owner's hand. If you do, play a 2 :rb_might: Sand Soldier unit token here.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-207.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "En Garde": {
    "cost": 1,
@@ -14474,7 +14541,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a friendly unit +1 :rb_might: this turn, then an additional +1 :rb_might: this turn if it is the only unit you control there.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-046.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Fiora, Peerless": {
    "cost": 3,
@@ -14491,7 +14559,8 @@ window.FIELD = {
    "effect": "When I attack or defend one on one, double my Might this combat.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-110.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "First Mate": {
    "cost": 3,
@@ -14508,7 +14577,8 @@ window.FIELD = {
    "effect": "When you play me, ready another unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-132.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Lonely Poro": {
    "cost": 2,
@@ -14525,7 +14595,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 If I died alone, draw 1. (When I die, get the effect. I'm alone if there are no other friendly units here.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-036.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Master Yi, Tempered": {
    "cost": 4,
@@ -14542,7 +14613,8 @@ window.FIELD = {
    "effect": "[Hunt 2] (When I conquer or hold, gain 2 XP.)\n[Level 6][&gt;] I have [Deflect] and [Ganking]. (While you have 6+ XP, opponents must pay :rb_rune_rainbow: to choose me with a spell or ability and I can move from battlefield to battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-113.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Pit Rookie": {
    "cost": 2,
@@ -14558,7 +14630,8 @@ window.FIELD = {
    "effect": "When you play me, buff another friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-136.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Primal Strength": {
    "cost": 4,
@@ -14572,7 +14645,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a unit +7 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-154.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Punch First": {
    "cost": 1,
@@ -14586,7 +14660,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a unit +5 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-097.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Rengar, Trophy Hunter": {
    "cost": 5,
@@ -14604,7 +14679,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nI can be played to a battlefield where there are enemy units (even if you don't have units there).",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-120.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Ruin Runner": {
    "cost": 6,
@@ -14620,7 +14696,8 @@ window.FIELD = {
    "effect": "I can't be chosen by enemy spells and abilities.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-105.webp",
    "price": 0.36,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sabotage": {
    "cost": 1,
@@ -14634,7 +14711,8 @@ window.FIELD = {
    "effect": "Choose an opponent. They reveal their hand. Choose a non-unit card from it, and recycle that card.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-156.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Scuttle Crab": {
    "cost": 2,
@@ -14650,7 +14728,8 @@ window.FIELD = {
    "effect": "(Units with 0 :rb_might: can conquer and hold.)\nWhen you play me, draw 1.\n[Deathknell][&gt;] Choose an opponent. They reveal their hand. You can look at their facedown cards this turn. Gain 1 XP. (When I die, get the effects.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-053.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Zhonya's Hourglass": {
    "cost": 2,
@@ -14664,7 +14743,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-077.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Aspirant's Climb": {
    "cost": null,
@@ -14678,7 +14758,8 @@ window.FIELD = {
    "effect": "Increase the points needed to win the game by 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-276.webp",
    "price": 0.25,
-   "banned": true
+   "banned": true,
+   "set": "Origins"
   },
   "Bellows Breath": {
    "cost": 1,
@@ -14698,7 +14779,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_1::rb_rune_mind: (You may pay the additional cost to repeat this spell's effect.)\nDeal 1 to up to three units at the same location.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-080.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Bewitching Spirit": {
    "cost": 3,
@@ -14721,7 +14803,8 @@ window.FIELD = {
    "effect": "When you play me, choose a player. They discard 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-121.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Deadly Flourish": {
    "cost": 4,
@@ -14741,7 +14824,8 @@ window.FIELD = {
    "effect": "Deal 3 to an enemy unit. When it dies this turn, play a Gold gear token exhausted. (It has &quot;[Reaction][&gt;] Kill this, :rb_exhaust:: [Add] :rb_rune_rainbow:.&quot;)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-073.webp",
    "price": 0.23,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Ezreal, Prodigy": {
    "cost": 3,
@@ -14758,7 +14842,8 @@ window.FIELD = {
    "effect": "When you play me, discard 1, then draw 2.\nOptional additional costs you pay cost :rb_energy_1: or :rb_rune_rainbow: less.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-149.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Frozen Fortress": {
    "cost": null,
@@ -14778,7 +14863,8 @@ window.FIELD = {
    "effect": "At the start of each player's Beginning Phase, deal 1 to each unit here. (This happens before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-212.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Pack of Wonders": {
    "cost": 2,
@@ -14798,7 +14884,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: Return another friendly gear, unit, or [Hidden] card to its owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-181.webp",
    "price": 0.37,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "The List": {
    "cost": 1,
@@ -14818,7 +14905,8 @@ window.FIELD = {
    "effect": "As you play this, name a tag. (For example, Miss Fortune, Demacia, and Poro are tags.)\n:rb_exhaust:: Give a unit with the named tag -2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-138.webp",
    "price": 0.18,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Treasure Trove": {
    "cost": 2,
@@ -14832,7 +14920,8 @@ window.FIELD = {
    "effect": "When this leaves the board, draw 1 and channel 1 rune exhausted.\n:rb_rune_chaos:, :rb_exhaust:: Kill this.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-186.webp",
    "price": 0.42,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Ashe, Focused": {
    "cost": 5,
@@ -14849,7 +14938,8 @@ window.FIELD = {
    "effect": "When you play me, choose an opponent. They reveal their hand. Choose a card revealed this way and banish it. When they hold, return it to their hand (even if I'm no longer on the board).",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-169.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Card Sharp": {
    "cost": 3,
@@ -14865,7 +14955,8 @@ window.FIELD = {
    "effect": "When you play me, you and each opponent may play a Gold gear token exhausted. For each opponent who did, you play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-081.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Downstage Dramatics": {
    "cost": 2,
@@ -14879,7 +14970,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nDraw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-061.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Ekko, Recurrent": {
    "cost": 5,
@@ -14896,7 +14988,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)\n[Deathknell] \u2014 Recycle me to ready your runes. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-110.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Fiora, Worthy": {
    "cost": 3,
@@ -14913,7 +15006,8 @@ window.FIELD = {
    "effect": "When a unit you control becomes [Mighty], you may pay :rb_rune_order: to ready it. (A unit is Mighty while it has 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-180.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Forge of the Future": {
    "cost": 2,
@@ -14927,7 +15021,8 @@ window.FIELD = {
    "effect": "When you play this, play a 1 :rb_might: Recruit unit token at your base.\nKill this: Recycle up to 4 cards from trashes.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-212.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Forgotten Monument": {
    "cost": null,
@@ -14941,7 +15036,8 @@ window.FIELD = {
    "effect": "Players can't score here until their third turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-209.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Garbage Grabber": {
    "cost": 2,
@@ -14955,7 +15051,8 @@ window.FIELD = {
    "effect": "Recycle 3 from your trash, :rb_energy_1:, :rb_exhaust:: Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-099.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Lux, Crownguard": {
    "cost": 4,
@@ -14972,7 +15069,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_energy_2:. Use only to play spells. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-014.webp",
    "price": 2.99,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Order Rune": {
    "cost": null,
@@ -14986,7 +15084,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-214.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Progress Day": {
    "cost": 6,
@@ -15000,7 +15099,8 @@ window.FIELD = {
    "effect": "Draw 4.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-114.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Promising Future": {
    "cost": 5,
@@ -15014,7 +15114,8 @@ window.FIELD = {
    "effect": "Each player looks at the top 5 cards of their Main Deck, chooses one, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-115.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Rally the Troops": {
    "cost": 2,
@@ -15028,7 +15129,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nWhen a friendly unit is played this turn, buff it. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)\nDraw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-166.webp",
    "price": 0.19,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Renata Glasc, Mastermind": {
    "cost": 5,
@@ -15045,7 +15147,8 @@ window.FIELD = {
    "effect": ":rb_energy_1::rb_rune_mind:: Draw 1.\n:rb_energy_4::rb_rune_mind::rb_rune_mind::rb_rune_mind::rb_rune_mind:, :rb_exhaust:: Score 1 point.\nUse my abilities only while I'm at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-088.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sacrifice": {
    "cost": 1,
@@ -15059,7 +15162,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nAs an additional cost to play this, kill a friendly [Mighty] unit. (A unit is Mighty while it has 5+ :rb_might:.)\nDraw 2 and channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-173.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Seal of Insight": {
    "cost": null,
@@ -15073,7 +15177,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_rune_mind:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-120.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Shadow's Call": {
    "cost": 2,
@@ -15087,7 +15192,8 @@ window.FIELD = {
    "effect": "Choose a friendly unit without [Temporary]. Give it [Temporary]. Draw 2. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-165.webp",
    "price": 0.36,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Soaring Scout": {
    "cost": 2,
@@ -15104,7 +15210,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 Channel 1 rune exhausted. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-216.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sprite Burst": {
    "cost": 5,
@@ -15118,7 +15225,8 @@ window.FIELD = {
    "effect": "Play two ready 3 :rb_might: Sprite unit tokens with [Temporary]. (Kill each at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-069.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Sumpworks Map": {
    "cost": 2,
@@ -15132,7 +15240,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen an opponent scores, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-085.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "The Papertree": {
    "cost": null,
@@ -15146,7 +15255,8 @@ window.FIELD = {
    "effect": "When you hold here, each player channels 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-219.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "The Ruination": {
    "cost": 9,
@@ -15160,7 +15270,8 @@ window.FIELD = {
    "effect": "Kill all units.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-180.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Baited Hook": {
    "cost": 3,
@@ -15174,7 +15285,8 @@ window.FIELD = {
    "effect": ":rb_energy_1::rb_rune_order:, :rb_exhaust:: Kill a friendly unit. Look at the top 5 cards of your Main Deck. You may banish a unit from among them that has Might up to 1 more than the killed unit and play it, ignoring its cost. Then recycle the rest.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-242.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Carrion Dredger": {
    "cost": 2,
@@ -15191,7 +15303,8 @@ window.FIELD = {
    "effect": "[Deathknell][&gt;] Play a 1 :rb_might: Bird unit token with [Deflect] to your base. (When I die, get the effect. Opponents must pay :rb_rune_rainbow: to choose a [Deflect] unit with a spell or ability.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-153.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Cull the Weak": {
    "cost": 2,
@@ -15211,7 +15324,8 @@ window.FIELD = {
    "effect": "Each player kills one of their units.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-209.webp",
    "price": 0.34,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Falling Star": {
    "cost": 2,
@@ -15231,7 +15345,8 @@ window.FIELD = {
    "effect": "Deal 3 to a unit.\nDeal 3 to a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-029.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Fury Rune": {
    "cost": null,
@@ -15245,7 +15360,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-007.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Grand Strategem": {
    "cost": 6,
@@ -15259,7 +15375,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive friendly units +5 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-233.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Hidden Blade": {
    "cost": 2,
@@ -15279,7 +15396,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nKill a unit at a battlefield. Its controller draws 2.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-213.webp",
    "price": 0.72,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Honest Broker": {
    "cost": 2,
@@ -15295,7 +15413,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 Play a Gold gear token exhausted. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-155.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Imperial Decree": {
    "cost": 5,
@@ -15309,7 +15428,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nWhen any unit takes damage this turn, kill it.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-221.webp",
    "price": 0.65,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Inferna": {
    "cost": 2,
@@ -15325,7 +15445,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\n[Assault 2] (+2 :rb_might: while I'm an attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-002.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Noxus Hopeful": {
    "cost": 4,
@@ -15342,7 +15463,8 @@ window.FIELD = {
    "effect": "[Legion] \u2014 I cost :rb_energy_2: less. (Get the effect if you've played another card this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-012.webp",
    "price": 0.33,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Safety Inspector": {
    "cost": 5,
@@ -15365,7 +15487,8 @@ window.FIELD = {
    "effect": "You may spend 3 XP as an additional cost to play me.\nWhen you play me, each player must kill one of their units. If you paid my additional cost, you don't kill a unit this way.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-164.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Salvage": {
    "cost": 2,
@@ -15385,7 +15508,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nYou may kill a gear. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-224.webp",
    "price": 2.46,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Seal of Unity": {
    "cost": null,
@@ -15399,7 +15523,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_rune_order:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-245.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Spectral Matron": {
    "cost": 4,
@@ -15416,7 +15541,8 @@ window.FIELD = {
    "effect": "When you play me, you may play a unit costing no more than :rb_energy_3: and no more than :rb_rune_rainbow: from your trash, ignoring its cost.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-226.webp",
    "price": 0.29,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Trifarian War Camp": {
    "cost": null,
@@ -15430,7 +15556,8 @@ window.FIELD = {
    "effect": "Units here have +1 :rb_might:. (This includes attackers.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-294.webp",
    "price": 0.27,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Vanguard Captain": {
    "cost": 3,
@@ -15447,7 +15574,8 @@ window.FIELD = {
    "effect": "[Legion] \u2014 When you play me, play two 1 :rb_might: Recruit unit tokens here. (Get the effect if you've played another card this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-218.webp",
    "price": 0.18,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Vi, Peacekeeper": {
    "cost": 5,
@@ -15470,7 +15598,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen I attack, [Stun] an enemy unit here. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-176.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Xin Zhao, Vigilant": {
    "cost": 3,
@@ -15487,7 +15616,8 @@ window.FIELD = {
    "effect": "[Tank] (I must be assigned combat damage first.)\nI enter ready if you have two or more other units in your base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-176.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Blood Rush": {
    "cost": 1,
@@ -15501,7 +15631,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_1: (You may pay the additional cost to repeat this spell's effect.)\nGive a unit [Assault 2]. (+2 :rb_might: while it's an attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-003.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Daring Poro": {
    "cost": 2,
@@ -15517,7 +15648,8 @@ window.FIELD = {
    "effect": "[Assault] (+1 :rb_might: while I'm an attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-210.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Faithful Manufactor": {
    "cost": 3,
@@ -15533,7 +15665,8 @@ window.FIELD = {
    "effect": "When you play me, play a 1 :rb_might: Recruit unit token here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-211.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Ferrous Forerunner": {
    "cost": 6,
@@ -15551,7 +15684,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 Play two 3 :rb_might: Mech unit tokens to your base. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-021.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Long Sword": {
    "cost": 2,
@@ -15567,7 +15701,8 @@ window.FIELD = {
    "effect": "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)\n[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-022.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Pyke, Dockside Butcher": {
    "cost": 3,
@@ -15584,7 +15719,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Ganking] (I can move from battlefield to battlefield.)\nYou may pay :rb_rune_fury: as an additional cost to play me.\nWhen you play me, if you paid the additional cost, ready me and give me +2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-028.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Rengar, Pouncing": {
    "cost": 3,
@@ -15602,7 +15738,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)\n[Assault 2] (+2 :rb_might: while I'm an attacker.)\nI can be played to a battlefield you're attacking.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-025.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "The Candlelit Sanctum": {
    "cost": null,
@@ -15616,7 +15753,8 @@ window.FIELD = {
    "effect": "When you conquer here, look at the top two cards of your Main Deck. You may recycle one or both of them. Put those you don't back in any order.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-291.webp",
    "price": 0.27,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Undertitan": {
    "cost": 6,
@@ -15632,7 +15770,8 @@ window.FIELD = {
    "effect": "When you play me, give your other units +2 :rb_might: this turn.\nAs I'm revealed from your deck, [Add] :rb_energy_2:.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-175.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Vi, Destructive": {
    "cost": 2,
@@ -15649,7 +15788,8 @@ window.FIELD = {
    "effect": "[Ganking] (I can move from battlefield to battlefield.)\nRecycle 1 from your trash: Give me +1 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-036.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Void Rush": {
    "cost": 2,
@@ -15666,7 +15806,8 @@ window.FIELD = {
    "effect": "Reveal the top 2 cards of your Main Deck. You may play one of them, reducing its cost by :rb_energy_2:. Draw any you did not play this way.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-188.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Chakram Dancer": {
    "cost": 3,
@@ -15682,7 +15823,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen you play me, give your other units here [Shield] this turn. (+1 :rb_might: while they're defenders.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-071.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Facebreaker": {
    "cost": 2,
@@ -15696,7 +15838,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nStun a friendly unit and an enemy unit at the same battlefield. (They don't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-220.webp",
    "price": 0.22,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Forbidding Waste": {
    "cost": null,
@@ -15710,7 +15853,8 @@ window.FIELD = {
    "effect": "While a unit here is defending alone, it has -2 :rb_might:. (It's alone if there are no other friendly units here.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-210.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Pickpocket": {
    "cost": 3,
@@ -15732,7 +15876,8 @@ window.FIELD = {
    "effect": "When you play me, you may kill a gear with Energy cost no more than :rb_energy_1:. If you do, play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-074.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Arise!": {
    "cost": 6,
@@ -15749,7 +15894,8 @@ window.FIELD = {
    "effect": "Play a 2 :rb_might: Sand Soldier unit token for each Equipment you control. Then ready two of them.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-198.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "B.F. Sword": {
    "cost": 4,
@@ -15765,7 +15911,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-161.webp",
    "price": 0.26,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Back Off": {
    "cost": 3,
@@ -15785,7 +15932,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\n[Stun] a unit. (It doesn't deal combat damage this turn.)\nIf you played this from your hand, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-042.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Brutalizer": {
    "cost": 2,
@@ -15801,7 +15949,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-042.webp",
    "price": 0.28,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Deathgrip": {
    "cost": 2,
@@ -15815,7 +15964,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nKill a friendly unit to give +:rb_might: equal to its Might to another friendly unit this turn. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-163.webp",
    "price": 0.28,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Doran's Shield": {
    "cost": 1,
@@ -15831,7 +15981,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-033.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Eye of the Herald": {
    "cost": 1,
@@ -15847,7 +15998,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-153.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Guards!": {
    "cost": 3,
@@ -15861,7 +16013,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nPlay a 2 :rb_might: Sand Soldier unit token. You may pay :rb_rune_order: to ready it.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-154.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Hall of Legends": {
    "cost": null,
@@ -15875,7 +16028,8 @@ window.FIELD = {
    "effect": "When you conquer here, you may pay :rb_energy_1: to ready your legend.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-210.webp",
    "price": 0.14,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Soul Sword": {
    "cost": 1,
@@ -15891,7 +16045,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-039.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Blighted Battleaxe": {
    "cost": 4,
@@ -15907,7 +16062,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_energy_1::rb_rune_fury: (:rb_energy_1::rb_rune_fury:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-019.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Brynhir Thundersong": {
    "cost": 6,
@@ -15929,7 +16085,8 @@ window.FIELD = {
    "effect": "When you play me, opponents can't play cards this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-026.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Cleave": {
    "cost": 1,
@@ -15943,7 +16100,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a unit [Assault 3] this turn. (+3 :rb_might: while it's an attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-004.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Kai'Sa, Survivor": {
    "cost": 4,
@@ -15960,7 +16118,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\nWhen I conquer, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-039.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Ripper's Bay": {
    "cost": null,
@@ -15974,7 +16133,8 @@ window.FIELD = {
    "effect": "When a unit here is returned to a player's hand, that player may pay :rb_energy_1: to channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-214.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Thermo Beam": {
    "cost": 5,
@@ -15988,7 +16148,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nKill all gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-022.webp",
    "price": 0.33,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Treasure Hunter": {
    "cost": 2,
@@ -16004,7 +16165,8 @@ window.FIELD = {
    "effect": "When I move, play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-130.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Void Seeker": {
    "cost": 3,
@@ -16024,7 +16186,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 4 to a unit at a battlefield. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-024.webp",
    "price": 0.19,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Against the Odds": {
    "cost": 2,
@@ -16038,7 +16201,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a friendly unit at a battlefield +2 :rb_might: this turn for each enemy unit there.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-001.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Annie, Stubborn": {
    "cost": 4,
@@ -16055,7 +16219,8 @@ window.FIELD = {
    "effect": "When you play me, return a spell from your trash to your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-010.webp",
    "price": 4.09,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Factory Recall": {
    "cost": 1,
@@ -16075,7 +16240,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a gear to its owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-135.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Grim Apothecary": {
    "cost": 3,
@@ -16097,7 +16263,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen you play me, you may return a friendly unit at a battlefield to its owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-021.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Overzealous Fan": {
    "cost": 2,
@@ -16113,7 +16280,8 @@ window.FIELD = {
    "effect": "When I defend, you may kill me to move an attacking unit to its base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-128.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Zaun Warrens": {
    "cost": null,
@@ -16127,7 +16295,8 @@ window.FIELD = {
    "effect": "When you conquer here, discard 1, then draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-298.webp",
    "price": 0.23,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Arachnoid Horror": {
    "cost": 6,
@@ -16144,7 +16313,8 @@ window.FIELD = {
    "effect": "[Hunt 2] (When I conquer or hold, gain 2 XP.)\nI can be played to an occupied battlefield if an enemy unit is alone there.\nFriendly units can be played to an occupied battlefield if an enemy unit is alone there.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-117.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Block": {
    "cost": 2,
@@ -16158,7 +16328,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nGive a unit [Shield 3] and [Tank] this turn. (+3 :rb_might: while it's a defender. It must be assigned combat damage first.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-057.webp",
    "price": 0.2,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Concentrate": {
    "cost": 5,
@@ -16172,7 +16343,8 @@ window.FIELD = {
    "effect": "Draw 2.\n[Level 6][&gt;] This costs :rb_energy_2: less. (While you have 6+ XP, get the effect.)\n[Level 11][&gt;] This costs :rb_energy_4: less instead.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-091.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Emperor's Divide": {
    "cost": 2,
@@ -16186,7 +16358,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nMove any number of friendly units at a battlefield to their base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-043.webp",
    "price": 0.33,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Gardens of Becoming": {
    "cost": null,
@@ -16200,7 +16373,8 @@ window.FIELD = {
    "effect": "Units here have &quot;:rb_exhaust:: Gain 1 XP.&quot;",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-213.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Gemhand Hunter": {
    "cost": 2,
@@ -16217,7 +16391,8 @@ window.FIELD = {
    "effect": "[Hunt] (When I conquer or hold, gain 1 XP.)\n[Level 6][&gt;] I have +1 :rb_might:. (While you have 6+ XP, get the effect.)ambush",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-094.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Grim Resolve": {
    "cost": 2,
@@ -16231,7 +16406,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a friendly unit +3 :rb_might: this turn. When it wins a combat this turn, gain 2 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-095.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Herald of Spring": {
    "cost": 4,
@@ -16247,7 +16423,8 @@ window.FIELD = {
    "effect": "[Hunt] (When I conquer or hold, gain 1 XP.)\nWhen you play me, gain 2 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-034.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Master Yi, Unstoppable": {
    "cost": 12,
@@ -16264,7 +16441,8 @@ window.FIELD = {
    "effect": "[Level 3][&gt;] I cost :rb_energy_2::rb_rune_calm: less. (While you have 3+ XP, get the effect.)\n[Level 6][&gt;] I cost :rb_energy_4::rb_rune_calm::rb_rune_calm: less instead.\n[Level 11][&gt;] I cost :rb_energy_6::rb_rune_calm::rb_rune_calm::rb_rune_calm: less instead.\n[Level 16][&gt;] I can't be chosen by enemy spells and abilities.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-059.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Poppy, Paragon": {
    "cost": 5,
@@ -16282,7 +16460,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhen you play me, if an opponent's score is within 3 points of the Victory Score, ready me and gain 3 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-116.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Reckoner's Arena": {
    "cost": null,
@@ -16296,7 +16475,8 @@ window.FIELD = {
    "effect": "When you hold here, activate the conquer effects of units here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-286.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Repulse": {
    "cost": 1,
@@ -16310,7 +16490,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit at a battlefield. Counter an enemy spell or ability that chooses it and no other friendly unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-106.webp",
    "price": 0.27,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Skyward Strike": {
    "cost": 2,
@@ -16330,7 +16511,8 @@ window.FIELD = {
    "effect": "Move an enemy unit.\n[Level 6][&gt;] [Stun] an enemy unit. (While you have 6+ XP, get the effect. A stunned unit doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-038.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Unyielding Spirit": {
    "cost": 1,
@@ -16344,7 +16526,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nPrevent all spell and ability damage this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-145.webp",
    "price": 0.51,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Vilemaw": {
    "cost": 8,
@@ -16361,7 +16544,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nEnemy units here with less Might than me don't deal combat damage.\nWhen I hold, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-060.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Voracious Gromp": {
    "cost": 5,
@@ -16377,7 +16561,8 @@ window.FIELD = {
    "effect": "[Hunt 3] (When I conquer or hold, gain 3 XP.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-100.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Wuju Apprentice": {
    "cost": 2,
@@ -16393,7 +16578,8 @@ window.FIELD = {
    "effect": "[Hunt] (When I conquer or hold, gain 1 XP.)\n[Level 6][&gt;] When you play me, draw 1. (While you have 6+ XP, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-040.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Akshan, Mischievous": {
    "cost": 4,
@@ -16411,7 +16597,8 @@ window.FIELD = {
    "effect": "[Weaponmaster]\nYou may pay :rb_rune_body::rb_rune_body: as an additional cost to play me.\nWhen you play me, if you paid the additional cost, move an enemy gear to your base. You control it until I leave the board. If it's an Equipment, attach it to me.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-109.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Find Your Center": {
    "cost": 3,
@@ -16425,7 +16612,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nIf an opponent's score is within 3 points of the Victory Score, this costs :rb_energy_2: less.\nDraw 1 and channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-047.webp",
    "price": 0.14,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Mask of Foresight": {
    "cost": 2,
@@ -16439,7 +16627,8 @@ window.FIELD = {
    "effect": "When a friendly unit attacks or defends alone, give it +1 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-060.webp",
    "price": 0.26,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Not So Fast": {
    "cost": 2,
@@ -16453,7 +16642,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter an enemy spell or ability that chooses a friendly unit or gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-045.webp",
    "price": 1.71,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Star Spring": {
    "cost": null,
@@ -16467,7 +16657,8 @@ window.FIELD = {
    "effect": "The first time a player plays a non-token unit here each turn, they may move another unit they control here to its base.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-215.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Tasty Faefolk": {
    "cost": 7,
@@ -16484,7 +16675,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_calm: as an additional cost to have me enter ready.)\n[Deathknell] \u2014 Channel 2 runes exhausted and draw 1. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-075.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Valley of Idols": {
    "cost": null,
@@ -16498,7 +16690,8 @@ window.FIELD = {
    "effect": "When a player plays a unit here, they may pay :rb_energy_1: to [Buff] it. (Give it a +1 :rb_might: buff if it doesn't have one.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-218.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Vilemaw's Lair": {
    "cost": null,
@@ -16512,7 +16705,8 @@ window.FIELD = {
    "effect": "Units can't move from here to base.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-295.webp",
    "price": 0.26,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Whiteflame Protector": {
    "cost": 8,
@@ -16529,7 +16723,8 @@ window.FIELD = {
    "effect": "When you play me, give a unit +8 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-082.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Adaptatron": {
    "cost": 4,
@@ -16552,7 +16747,8 @@ window.FIELD = {
    "effect": "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-056.webp",
    "price": 0.24,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Boots of Swiftness": {
    "cost": 3,
@@ -16568,7 +16764,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-133.webp",
    "price": 0.3,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Defiant Dance": {
    "cost": 1,
@@ -16591,7 +16788,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn and another unit -2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-196.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Guardian Angel": {
    "cost": 2,
@@ -16607,7 +16805,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-051.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Insightful Investigator": {
    "cost": 3,
@@ -16629,7 +16828,8 @@ window.FIELD = {
    "effect": "When you play me, choose an opponent. They reveal their hand. You may pay 2 XP to choose a card from their hand. If you do, they discard that card and draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-135.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Irelia, Fervent": {
    "cost": 5,
@@ -16646,7 +16846,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhen you choose or ready me, give me +1 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-057.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Pyke, Returned": {
    "cost": 3,
@@ -16663,7 +16864,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Backline] (I must be assigned combat damage last.)\nOnce each turn, when an enemy unit dies while I'm at a battlefield, play a Gold gear token exhausted. (It has &quot;[Reaction][&gt;] Kill this, :rb_exhaust:: [Add] :rb_rune_rainbow:.&quot;)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-145.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Stellacorn Herder": {
    "cost": 4,
@@ -16679,7 +16881,8 @@ window.FIELD = {
    "effect": "When I move, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-048.webp",
    "price": 0.57,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sunken Temple": {
    "cost": null,
@@ -16693,7 +16896,8 @@ window.FIELD = {
    "effect": "When you conquer here with one or more [Mighty] units, you may pay :rb_energy_1: to draw 1. (A unit is Mighty while it has 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-218.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Battering Ram": {
    "cost": 5,
@@ -16710,7 +16914,8 @@ window.FIELD = {
    "effect": "I cost :rb_energy_1: less for each card you've played this turn, to a minimum of :rb_energy_1:.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-012.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Drag Under": {
    "cost": 5,
@@ -16730,7 +16935,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nI cost :rb_energy_2: less to play from anywhere other than your hand.\nKill a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-164.webp",
    "price": 0.19,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Mischievous Marai": {
    "cost": 2,
@@ -16752,7 +16958,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play me to a battlefield, deal 2 to an enemy unit here.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-003.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Rek'Sai, Breacher": {
    "cost": 3,
@@ -16769,7 +16976,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\n[Assault] (+1 :rb_might: while I'm an attacker.)\nFriendly units played from anywhere other than a player's hand have [Accelerate].",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-029.webp",
    "price": 4.7,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Vengeance": {
    "cost": 4,
@@ -16789,7 +16997,8 @@ window.FIELD = {
    "effect": "Kill a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-229.webp",
    "price": 0.22,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Void Drone": {
    "cost": 3,
@@ -16805,7 +17014,8 @@ window.FIELD = {
    "effect": "I cost :rb_energy_2: less to play from anywhere other than your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-010.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Darius, Trifarian": {
    "cost": 5,
@@ -16823,7 +17033,8 @@ window.FIELD = {
    "effect": "When you play your second card in a turn, give me +2 :rb_might: this turn and ready me.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-027.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Determined Sentry": {
    "cost": 1,
@@ -16840,7 +17051,8 @@ window.FIELD = {
    "effect": "I can't move to base.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-111.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Irresistible Faefolk": {
    "cost": 2,
@@ -16857,7 +17069,8 @@ window.FIELD = {
    "effect": "When I move to a battlefield, you may move an enemy unit to that battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-112.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Kinkou Initiate": {
    "cost": 3,
@@ -16873,7 +17086,8 @@ window.FIELD = {
    "effect": "When you play me, draw 1 if your other units have total Might 5 or more.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-097.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Nidalee, Cat Form": {
    "cost": 3,
@@ -16891,7 +17105,8 @@ window.FIELD = {
    "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen I win a combat, draw 1. (I win if I remain after combat.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-114.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Thrill of the Hunt": {
    "cost": 2,
@@ -16908,7 +17123,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nBanish a friendly unit, then its owner plays it to any battlefield, ignoring its cost.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-184.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Death from Below": {
    "cost": 4,
@@ -16931,7 +17147,8 @@ window.FIELD = {
    "effect": "Kill a unit at a battlefield. Then, if it had 3 :rb_might: or less, you may play this from your trash for :rb_rune_rainbow:.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-186.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Piercing Light": {
    "cost": 2,
@@ -16951,7 +17168,8 @@ window.FIELD = {
    "effect": "[Repeat] :rb_energy_2::rb_rune_fury: (You may pay the additional cost to repeat this spell's effect.)\nDeal 2 to a unit at a battlefield, then deal 2 to up to one other unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-023.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sharkling": {
    "cost": 3,
@@ -16967,7 +17185,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\n[Assault 4] (+4 :rb_might: while I'm an attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-006.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Soulgorger": {
    "cost": 8,
@@ -16984,7 +17203,8 @@ window.FIELD = {
    "effect": "When you play me, you may play a unit from your trash, ignoring its Energy cost. (You must still pay its Power cost.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-196.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Temptation": {
    "cost": 2,
@@ -16998,7 +17218,8 @@ window.FIELD = {
    "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nMove an enemy unit to a location where there's a unit with the same controller.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-129.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Void Gate": {
    "cost": null,
@@ -17012,7 +17233,8 @@ window.FIELD = {
    "effect": "Spells and abilities affecting units here each deal 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-296.webp",
    "price": 0.21,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Arena Bar": {
    "cost": 3,
@@ -17026,7 +17248,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: Buff an exhausted friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-124.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Call to Glory": {
    "cost": 3,
@@ -17040,7 +17263,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nAs you play this, you may spend a buff as an additional cost. If you do, ignore this spell's cost.\nGive a unit +3 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-207.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Cithria of Cloudfield": {
    "cost": 2,
@@ -17057,7 +17281,8 @@ window.FIELD = {
    "effect": "When you play another unit, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-139.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Fiora, Victorious": {
    "cost": 4,
@@ -17074,7 +17299,8 @@ window.FIELD = {
    "effect": "While I'm [Mighty], I have [Deflect], [Ganking], and [Shield]. (I'm Mighty while I have 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-232.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Grove of the God-Willow": {
    "cost": null,
@@ -17088,7 +17314,8 @@ window.FIELD = {
    "effect": "When you hold here, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-280.webp",
    "price": 0.24,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Kinkou Monk": {
    "cost": 4,
@@ -17104,7 +17331,8 @@ window.FIELD = {
    "effect": "When you play me, buff up to two other friendly units. (Each one that doesn't have a buff gets a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-141.webp",
    "price": 0.21,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Lucian, Merciless": {
    "cost": 3,
@@ -17122,7 +17350,8 @@ window.FIELD = {
    "effect": "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)\nThe first time I conquer each turn, ready me.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-113.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Monastery of Hirana": {
    "cost": null,
@@ -17136,7 +17365,8 @@ window.FIELD = {
    "effect": "When you conquer here, you may spend a buff to draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-282.webp",
    "price": 0.21,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Showstopper": {
    "cost": 1,
@@ -17153,7 +17383,8 @@ window.FIELD = {
    "effect": "Buff a friendly unit in your base, then move it to a battlefield. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-270.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Catalyst of Aeons": {
    "cost": 4,
@@ -17167,7 +17398,8 @@ window.FIELD = {
    "effect": "Channel 2 runes exhausted. If you couldn't channel 2 runes this way, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-138.webp",
    "price": 0.45,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Dazzling Aurora": {
    "cost": 9,
@@ -17181,7 +17413,8 @@ window.FIELD = {
    "effect": "At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit. Play it, ignoring its cost, and recycle the rest.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-160.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Elder Dragon": {
    "cost": 12,
@@ -17198,7 +17431,8 @@ window.FIELD = {
    "effect": "Any amount of your damage is enough to kill enemy units.\nWhen you play me, choose up to one enemy unit at each location. Deal 1 to them.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-118.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Flurry of Blades": {
    "cost": 1,
@@ -17218,7 +17452,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nDeal 1 to all units at battlefields.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-133.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Heedless Resurrection": {
    "cost": 2,
@@ -17232,7 +17467,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nAs an additional cost to play this, kill a friendly unit.\nPlay a unit from your trash that costs no more Energy and no more Power than the killed unit, ignoring its cost.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-142.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Lunar Boon": {
    "cost": 3,
@@ -17246,7 +17482,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nDiscard 1, then draw 2.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-125.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Mobilize": {
    "cost": 2,
@@ -17260,7 +17497,8 @@ window.FIELD = {
    "effect": "Channel 1 rune exhausted. If you can't, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-134.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Scryer's Bloom": {
    "cost": 1,
@@ -17274,7 +17512,8 @@ window.FIELD = {
    "effect": "This enters exhausted.\nKill this, :rb_energy_1:, :rb_exhaust:: [Predict 2], then draw 1. Gain 1 XP.  (To Predict 2, look at the top two cards of your Main Deck. Recycle any of them and put the rest back in any order.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-136.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Sivir, Mercenary": {
    "cost": 4,
@@ -17291,7 +17530,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)\nIf you've spent at least :rb_rune_rainbow::rb_rune_rainbow: this turn, I have +2 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-143.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "The Harrowing": {
    "cost": 6,
@@ -17305,7 +17545,8 @@ window.FIELD = {
    "effect": "Play a unit from your trash, ignoring its Energy cost. (You must still pay its Power cost.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-198.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Disposal Order": {
    "cost": 2,
@@ -17319,7 +17560,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose one \u2014Choose up to 3 cards from opponents' trashes. Their owners recycle them.Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-103.webp",
    "price": 0.17,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Immortal Phoenix": {
    "cost": 3,
@@ -17341,7 +17583,8 @@ window.FIELD = {
    "effect": "[Assault 2] (+2 :rb_might: while I'm an attacker.)\nWhen you kill a unit with a spell, you may pay :rb_energy_1::rb_rune_fury: to play me from your trash.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-037.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Lotus Trap": {
    "cost": 2,
@@ -17355,7 +17598,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a unit. Double all damage that would be dealt to it this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-013.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Seal of Rage": {
    "cost": null,
@@ -17369,7 +17613,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_rune_fury:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-040.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Smite": {
    "cost": 2,
@@ -17389,7 +17634,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. If it would die this turn, banish it instead.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-007.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Void Hatchling": {
    "cost": 2,
@@ -17405,7 +17651,8 @@ window.FIELD = {
    "effect": "If you would reveal cards from a deck, look at the top card first. You may recycle it. Then reveal those cards.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-018.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Heart of Dark Ice": {
    "cost": 3,
@@ -17419,7 +17666,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: Give a unit +3 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-052.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Azir, Sovereign": {
    "cost": 4,
@@ -17437,7 +17685,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)\nWhen I attack, you may move any number of your token units to this battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-177.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Atakhan": {
    "cost": 10,
@@ -17454,7 +17703,8 @@ window.FIELD = {
    "effect": "You may kill a friendly unit as an additional cost to play me. If you do, I cost :rb_energy_1: less for each Energy it costs and :rb_rune_order: less for each Power it costs.\n[Ganking] (I can move from battlefield to battlefield.)\nWhen I attack, the defender must kill one of their units here.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-170.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Black Rose Dignitary": {
    "cost": 3,
@@ -17470,7 +17720,8 @@ window.FIELD = {
    "effect": "[Assault] (+1 :rb_might: while I'm an attacker.)\n[Deathknell][&gt;] Channel 1 rune exhausted. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-152.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Galio, Indefatigable": {
    "cost": 3,
@@ -17487,7 +17738,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\n[Tank] (I must be assigned combat damage first.)\nI don't deal combat damage.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-171.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Glasc Mixologist": {
    "cost": 5,
@@ -17503,7 +17755,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 You may play a unit with cost no more than :rb_energy_3: and no more than :rb_rune_rainbow: from your trash, ignoring its cost. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-165.webp",
    "price": 0.23,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Harnessed Dragon": {
    "cost": 8,
@@ -17526,7 +17779,8 @@ window.FIELD = {
    "effect": "When you play me, kill an enemy unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-234.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Karthus, Eternal": {
    "cost": 3,
@@ -17544,7 +17798,8 @@ window.FIELD = {
    "effect": "Your [Deathknell] effects trigger an additional time.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-236.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "LeBlanc, Everywhere at Once": {
    "cost": 4,
@@ -17561,7 +17816,8 @@ window.FIELD = {
    "effect": "[Backline] (I must be assigned combat damage last.)\nYour [Temporary] effects at my battlefield don't trigger.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-090.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Mirror Image": {
    "cost": 3,
@@ -17578,7 +17834,8 @@ window.FIELD = {
    "effect": "Choose a unit. Play a ready Reflection unit token to your base. It becomes a copy of that unit. Give it [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-200.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Rift Herald": {
    "cost": 8,
@@ -17594,7 +17851,8 @@ window.FIELD = {
    "effect": "When I move to a battlefield, look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest.\n[Deathknell][&gt;] Play a unit from your hand to your base, ignoring its Energy cost. (When I die, get the effect. You must still pay its Power cost.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-179.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Ruined Rex": {
    "cost": 6,
@@ -17616,7 +17874,8 @@ window.FIELD = {
    "effect": "[Deathknell][&gt;] Deal 4 to an enemy unit. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-067.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Watchful Sentry": {
    "cost": 2,
@@ -17632,7 +17891,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 Draw 1. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-096.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Windswept Hillock": {
    "cost": null,
@@ -17646,7 +17906,8 @@ window.FIELD = {
    "effect": "Units here have [Ganking]. (They can move from battlefield to battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-297.webp",
    "price": 0.23,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Bandle Tree": {
    "cost": null,
@@ -17660,7 +17921,8 @@ window.FIELD = {
    "effect": "You may hide an additional card here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-278.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Ember Monk": {
    "cost": 4,
@@ -17676,7 +17938,8 @@ window.FIELD = {
    "effect": "When you play a card from [Hidden], give me +2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-167.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Evelynn, Entrancing": {
    "cost": 2,
@@ -17693,7 +17956,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Backline] (I must be assigned combat damage last.)\nWhen you play me from face down on your turn, you may move an enemy unit at a different location to my battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-141.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Mutated Mouser": {
    "cost": 2,
@@ -17710,7 +17974,8 @@ window.FIELD = {
    "effect": "[Shield 2] (+2 :rb_might: while I'm a defender.)\n[Tank] (I must be assigned combat damage first.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-036.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Sona, Harmonious": {
    "cost": 4,
@@ -17727,7 +17992,8 @@ window.FIELD = {
    "effect": "While I'm at a battlefield, ready 4 friendly runes at the end of your turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-073.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Teemo, Scout": {
    "cost": 2,
@@ -17745,7 +18011,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play me, give me +3 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-197.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Dusk Rose Lab": {
    "cost": null,
@@ -17765,7 +18032,8 @@ window.FIELD = {
    "effect": "At the start of your Beginning Phase, you may kill a unit you control here to draw 1. (This happens before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-209.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "LeBlanc, Fragmented": {
    "cost": 3,
@@ -17782,7 +18050,8 @@ window.FIELD = {
    "effect": "[Assault] (+1 :rb_might: while I'm an attacker.)\n[Deathknell][&gt;] Draw 1. If it's your Beginning Phase, draw 2 instead. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-172.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Draven, Audacious": {
    "cost": 6,
@@ -17799,7 +18068,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nThe first time I win a combat each turn, you score 1 point.\nWhen I die in combat, choose an opponent. They score 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-148.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sneaky Deckhand": {
    "cost": 3,
@@ -17816,7 +18086,8 @@ window.FIELD = {
    "effect": "You may play me to an open battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-176.webp",
    "price": 0.19,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Spirit Wheel": {
    "cost": 2,
@@ -17830,7 +18101,8 @@ window.FIELD = {
    "effect": "When you choose a friendly unit, you may pay :rb_energy_1: and exhaust this to draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-144.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "The Syren": {
    "cost": 2,
@@ -17844,7 +18116,8 @@ window.FIELD = {
    "effect": ":rb_energy_1:, :rb_exhaust:: Move a friendly unit at a battlefield to your base.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-184.webp",
    "price": 0.18,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Arcane Shift": {
    "cost": 3,
@@ -17867,7 +18140,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nBanish a friendly unit, then its owner plays it, ignoring its cost. Deal 3 to an enemy unit at a battlefield. Banish this.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-200.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Rhasa the Sunderer": {
    "cost": 10,
@@ -17884,7 +18158,8 @@ window.FIELD = {
    "effect": "I cost :rb_energy_1: less for each card in your trash.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-195.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Seal of Discord": {
    "cost": null,
@@ -17898,7 +18173,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_rune_chaos:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-204.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Frigid Touch": {
    "cost": 2,
@@ -17918,7 +18194,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nGive a unit -2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-066.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Deadbloom Predator": {
    "cost": 8,
@@ -17934,7 +18211,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nYou may play me to an occupied enemy battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-161.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Possession": {
    "cost": 8,
@@ -17948,7 +18226,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nChoose an enemy unit at a battlefield. Take control of it and recall it. (Send it to your base. This isn't a move.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-203.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Blood Money": {
    "cost": 2,
@@ -17968,7 +18247,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nKill a unit at a battlefield with 2 :rb_might: or less. If it was an enemy unit, play a Gold gear token exhausted. If it was a friendly unit, play two Gold gear tokens exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-162.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Confront": {
    "cost": 2,
@@ -17982,7 +18262,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nUnits you play this turn enter ready. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-129.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Divine Judgment": {
    "cost": 7,
@@ -17996,7 +18277,8 @@ window.FIELD = {
    "effect": "Each player chooses 2 units, 2 gear, 2 runes, and 2 cards in their hands. Recycle the rest.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-244.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Wind Wall": {
    "cost": 3,
@@ -18016,7 +18298,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-064.webp",
    "price": 0.44,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Bone Skewer": {
    "cost": 2,
@@ -18036,7 +18319,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nChoose a battlefield. An opponent reveals their hand. You may choose a unit from it. They play that unit to that battlefield, ignoring any and all costs. When they do, [Stun] it. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-139.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Guerilla Warfare": {
    "cost": 2,
@@ -18053,7 +18337,8 @@ window.FIELD = {
    "effect": "Return up to two cards with [Hidden] from your trash to your hand. You can hide cards ignoring costs this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-264.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Nocturne, Horrifying": {
    "cost": 4,
@@ -18069,7 +18354,8 @@ window.FIELD = {
    "effect": "[Ganking] (I can move from battlefield to battlefield.)\nWhen you look at cards from the top of your deck (and don't draw them) and see me, you may play me for :rb_rune_rainbow:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-194.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sprite Call": {
    "cost": 3,
@@ -18083,7 +18369,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nPlay a ready 3 :rb_might: Sprite unit token with [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-094.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Teemo, Strategist": {
    "cost": 2,
@@ -18107,7 +18394,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-121.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Windsinger": {
    "cost": 2,
@@ -18134,7 +18422,8 @@ window.FIELD = {
    "effect": "Hidden (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play me, you may return another unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-138.webp",
    "price": 0.22,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Beast Below": {
    "cost": 7,
@@ -18156,7 +18445,8 @@ window.FIELD = {
    "effect": "When you play me, return another friendly unit and an enemy unit to their owners' hands.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-132.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Draven, Showboat": {
    "cost": 5,
@@ -18173,7 +18463,8 @@ window.FIELD = {
    "effect": "My Might is increased by your points.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-028.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Gem Jammer": {
    "cost": 2,
@@ -18190,7 +18481,8 @@ window.FIELD = {
    "effect": "When you play me, give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-007.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Spinning Axe": {
    "cost": 2,
@@ -18208,7 +18500,8 @@ window.FIELD = {
    "effect": "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)\n[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)\n[Temporary] (If this is unattached, kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-186.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Desert's Call": {
    "cost": 2,
@@ -18222,7 +18515,8 @@ window.FIELD = {
    "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nPlay a 2 :rb_might: Sand Soldier unit token.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-031.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Forecaster": {
    "cost": 2,
@@ -18240,7 +18534,8 @@ window.FIELD = {
    "effect": "Your Mechs have [Vision]. (When you play us, look at the top card of your Main Deck. You may recycle it.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-065.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Hextech Ray": {
    "cost": 1,
@@ -18260,7 +18555,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-009.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Icathian Rain": {
    "cost": 7,
@@ -18283,7 +18579,8 @@ window.FIELD = {
    "effect": "Deal 2 to a unit.\nDeal 2 to a unit.\nDeal 2 to a unit.\nDeal 2 to a unit.\nDeal 2 to a unit.\nDeal 2 to a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-248.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Lecturing Yordle": {
    "cost": 3,
@@ -18300,7 +18597,8 @@ window.FIELD = {
    "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-087.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Pouty Poro": {
    "cost": 2,
@@ -18316,7 +18614,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-013.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Rumble, Hotheaded": {
    "cost": 4,
@@ -18335,7 +18634,8 @@ window.FIELD = {
    "effect": "Your Mechs each have [Assault]. (+1 :rb_might: while we're attackers.)\nWhen I conquer, you may recycle another friendly unit to play a Mech from your trash. Reduce its Energy cost by the Might of the unit you recycled.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-026.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Fae Dragon": {
    "cost": 7,
@@ -18353,7 +18653,8 @@ window.FIELD = {
    "effect": "When you play me, buff up to four friendly units. (Give each a +1 :rb_might: buff if it doesn't have one.)\nWhen you spend a buff, play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-101.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sea Monkey": {
    "cost": 2,
@@ -18370,7 +18671,8 @@ window.FIELD = {
    "effect": "You may pay :rb_energy_1: as an additional cost to play me.\nWhen you play me, if you paid the additional cost, buff me. (Give me a +1 :rb_might: buff if I don't already have one.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-098.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sett, Brawler": {
    "cost": 5,
@@ -18387,7 +18689,8 @@ window.FIELD = {
    "effect": "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)\nSpend my buff: Give me +4 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-164.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sett, Kingpin": {
    "cost": 4,
@@ -18404,7 +18707,8 @@ window.FIELD = {
    "effect": "[Tank] (I must be assigned combat damage first.)\nI get +1 :rb_might: for each buffed friendly unit at my battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-240.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sacred Shears": {
    "cost": 2,
@@ -18420,7 +18724,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-172.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Forge of the Fluft": {
    "cost": null,
@@ -18434,7 +18739,8 @@ window.FIELD = {
    "effect": "While you control this battlefield, friendly legends have &quot;:rb_exhaust:: Attach an Equipment you control to a unit you control.&quot;",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-208.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Navori Scout": {
    "cost": 4,
@@ -18451,7 +18757,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-037.webp",
    "price": 0.04,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Thwonk!": {
    "cost": 2,
@@ -18465,7 +18772,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nStun an attacking unit. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-040.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Trinity Force": {
    "cost": 4,
@@ -18481,7 +18789,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-115.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Clockwork Keeper": {
    "cost": 2,
@@ -18497,7 +18806,8 @@ window.FIELD = {
    "effect": "As you play me, you may pay :rb_rune_calm: as an additional cost. If you do, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-044.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Draven, Vanquisher": {
    "cost": 4,
@@ -18514,7 +18824,8 @@ window.FIELD = {
    "effect": "When I win a combat, play a Gold gear token exhausted.\nWhen I attack or defend, you may pay :rb_rune_fury:. If you do, give me +2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-020.webp",
    "price": null,
-   "banned": true
+   "banned": true,
+   "set": "Spiritforged"
   },
   "Fight or Flight": {
    "cost": 2,
@@ -18528,7 +18839,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nMove a unit from a battlefield to its base.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-168.webp",
    "price": 0.08,
-   "banned": true
+   "banned": true,
+   "set": "Origins"
   },
   "Obelisk of Power": {
    "cost": null,
@@ -18542,7 +18854,8 @@ window.FIELD = {
    "effect": "At the start of each player's first Beginning Phase, that player channels 1 rune.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-284.webp",
    "price": 0.14,
-   "banned": true
+   "banned": true,
+   "set": "Origins"
   },
   "Reaver's Row": {
    "cost": null,
@@ -18556,7 +18869,8 @@ window.FIELD = {
    "effect": "When you defend here, you may move a friendly unit here to base.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-285.webp",
    "price": 0.14,
-   "banned": true
+   "banned": true,
+   "set": "Origins"
   },
   "Bushwhack": {
    "cost": 2,
@@ -18570,7 +18884,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nFriendly units enter ready this turn. Play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-004.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Called Shot": {
    "cost": null,
@@ -18584,7 +18899,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_rune_chaos: (You may pay the additional cost to repeat this spell's effect.)\nLook at the top 2 cards of your Main Deck. Draw one and recycle the other.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-122.webp",
    "price": 0.12,
-   "banned": true
+   "banned": true,
+   "set": "Spiritforged"
   },
   "Scrapheap": {
    "cost": 2,
@@ -18598,7 +18914,8 @@ window.FIELD = {
    "effect": "When this is played, discarded, or killed, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-182.webp",
    "price": 0.14,
-   "banned": true
+   "banned": true,
+   "set": "Origins"
   },
   "The Dreaming Tree": {
    "cost": null,
@@ -18612,7 +18929,8 @@ window.FIELD = {
    "effect": "When a player chooses a friendly unit here with a spell for the first time each turn, they draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-292.webp",
    "price": 0.22,
-   "banned": true
+   "banned": true,
+   "set": "Origins"
   },
   "Aphelios, Exalted": {
    "cost": 4,
@@ -18629,7 +18947,8 @@ window.FIELD = {
    "effect": "When you attach an Equipment to me, choose one that hasn't been chosen this turn \u2014Ready 2 runes.Channel 1 rune exhausted.Buff a friendly unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-049.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Boneshiver": {
    "cost": 3,
@@ -18645,7 +18964,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_energy_1::rb_rune_body: (:rb_energy_1::rb_rune_body:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-118.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Cannon Barrage": {
    "cost": 2,
@@ -18665,7 +18985,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nDeal 2 to all enemy units in combat.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-127.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Counter Strike": {
    "cost": 2,
@@ -18682,7 +19003,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a unit. The next time that unit would be dealt damage this turn, prevent it. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-194.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Jax, Unmatched": {
    "cost": 5,
@@ -18699,7 +19021,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nEach Equipment in your hand has [Quick-Draw]. (It gains [Reaction]. When you play it, attach it to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-054.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Warmog's Armor": {
    "cost": 1,
@@ -18715,7 +19038,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-108.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Morbid Return": {
    "cost": 2,
@@ -18729,7 +19053,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a unit from your trash to your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-170.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Rocket Barrage": {
    "cost": 4,
@@ -18754,7 +19079,8 @@ window.FIELD = {
    "effect": "[Repeat] :rb_energy_4::rb_rune_mind: (You may pay the additional cost to repeat this spell's effect, and may make different choices.)\nChoose one \u2014Deal 4 to a unit in a base.Kill a gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-077.webp",
    "price": 0.2,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Bullet Time": {
    "cost": 1,
@@ -18777,7 +19103,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nPay any amount of :rb_rune_rainbow: to deal that much damage to all enemy units at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-268.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Miss Fortune, Buccaneer": {
    "cost": 4,
@@ -18795,7 +19122,8 @@ window.FIELD = {
    "effect": "You may play me to an open battlefield.\nFriendly units may be played to open battlefields.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-193.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Miss Fortune, Captain": {
    "cost": 5,
@@ -18813,7 +19141,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)\n[Ganking] (I can move from battlefield to battlefield.)\nThe first time I move each turn, you may ready something else that's exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-162.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Volibear, Imposing": {
    "cost": 12,
@@ -18830,7 +19159,8 @@ window.FIELD = {
    "effect": "[Shield 3] (+3 :rb_might: while I'm a defender.)\n[Tank] (I must be assigned combat damage first.)\nWhen an opponent moves to a battlefield other than mine, draw 1. (Bases are not battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-158.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Riptide Rex": {
    "cost": 6,
@@ -18853,7 +19183,8 @@ window.FIELD = {
    "effect": "When you play me, deal 6 to an enemy unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-092.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Viktor, Leader": {
    "cost": 4,
@@ -18870,7 +19201,8 @@ window.FIELD = {
    "effect": "When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-246.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Mountain Drake": {
    "cost": 9,
@@ -18886,7 +19218,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-142.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Rune Prison": {
    "cost": 2,
@@ -18900,7 +19233,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nStun a unit. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-050.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Stalwart Poro": {
    "cost": 2,
@@ -18916,7 +19250,8 @@ window.FIELD = {
    "effect": "[Shield] (+1 :rb_might: while I'm a defender.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-052.webp",
    "price": 0.15,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Qiyana, Victorious": {
    "cost": 4,
@@ -18933,7 +19268,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhen I conquer, draw 1 or channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-155.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Vayne, Hunter": {
    "cost": 4,
@@ -18950,7 +19286,8 @@ window.FIELD = {
    "effect": "[Assault 3] (+3 :rb_might: while I'm an attacker.)\nIf an opponent controls a battlefield, I enter ready.\nWhen I conquer, you may pay :rb_energy_1: to return me to my owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-035.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Legion Rearguard": {
    "cost": 2,
@@ -18967,7 +19304,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-010.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Tryndamere, Barbarian": {
    "cost": 7,
@@ -18984,7 +19322,8 @@ window.FIELD = {
    "effect": "When I conquer after an attack, if you assigned 5 or more excess damage to enemy units, you score 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-034.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Trifarian Gloryseeker": {
    "cost": 2,
@@ -19001,7 +19340,8 @@ window.FIELD = {
    "effect": "[Legion] \u2014 When you play me, buff me. (If I don't have a buff, I get a +1 :rb_might: buff. Get the effect if you've played another card this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-217.webp",
    "price": 0.14,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Curtain Call": {
    "cost": 4,
@@ -19029,7 +19369,8 @@ window.FIELD = {
    "effect": "[Repeat] \u2014 :rb_energy_1: / :rb_rune_rainbow: / :rb_energy_1::rb_rune_rainbow: (You may pay each additional cost to repeat this spell's effect.)\nChoose one you haven't already chosen \u2014Draw 1.Deal 2 to a unit at a battlefield.Deal 3 to a unit at a base.Give a unit at a battlefield -4 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-182.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Energy Conduit": {
    "cost": 3,
@@ -19043,7 +19384,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-098.webp",
    "price": 0.16,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Falling Comet": {
    "cost": 5,
@@ -19063,7 +19405,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 6 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-085.webp",
    "price": 0.2,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Gutter Palace": {
    "cost": 4,
@@ -19077,7 +19420,8 @@ window.FIELD = {
    "effect": "At the start of your Beginning Phase, if you have exactly 4 cards in hand and exactly 4 units at battlefields, you win the game.\nDiscard 1, :rb_exhaust:: Play a 1 :rb_might: Bird unit token with [Deflect]. (Opponents must pay :rb_rune_rainbow: to choose it with a spell or ability.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-088.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Hextech Anomaly": {
    "cost": 3,
@@ -19091,7 +19435,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 Pay any amount of :rb_rune_rainbow: to [Add] that much Energy. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-083.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Jhin, Meticulous Killer": {
    "cost": 4,
@@ -19108,7 +19453,8 @@ window.FIELD = {
    "effect": "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)\nIf you've spent :rb_energy_4: or more to play a spell this turn, you may play me for :rb_rune_mind:.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-089.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Keeper of Masks": {
    "cost": 2,
@@ -19124,7 +19470,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Temporary] (Kill me at the start of my controller's Beginning Phase, before scoring.)\nWhen you play me, play two Reflection unit tokens here. They become copies of me.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-081.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Mister Root": {
    "cost": 2,
@@ -19141,7 +19488,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)\nWhen I move to a battlefield, gain 2 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-127.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Void Assault": {
    "cost": 2,
@@ -19158,7 +19506,8 @@ window.FIELD = {
    "effect": "Move a friendly unit, then move an enemy unit. (If they both move to a battlefield you don't control, you're the attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-202.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Yordle Explorer": {
    "cost": 4,
@@ -19175,7 +19524,8 @@ window.FIELD = {
    "effect": "When you play a card with Power cost :rb_rune_rainbow::rb_rune_rainbow: or more, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-100.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Ahri, Alluring": {
    "cost": 5,
@@ -19192,7 +19542,8 @@ window.FIELD = {
    "effect": "When I hold, you score 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-066.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Allay, Eager Admirer": {
    "cost": 3,
@@ -19209,7 +19560,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhile I'm at a battlefield, your other units here have [Deflect].",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-041.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Shadow": {
    "cost": 3,
@@ -19233,7 +19585,8 @@ window.FIELD = {
    "effect": "If you play me to a battlefield, I enter ready.\n[Action][&gt;] :rb_energy_1::rb_rune_rainbow:, :rb_exhaust:: [Stun] an enemy unit attacking here. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-194.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Jhin, Murderous Artist": {
    "cost": 4,
@@ -19250,7 +19603,8 @@ window.FIELD = {
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\n[Ganking] (I can move from battlefield to battlefield.)\nWhen I move, [Add] :rb_energy_1::rb_rune_rainbow:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-022.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Vanguard Armory": {
    "cost": 7,
@@ -19264,7 +19618,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: Play three 1 :rb_might: Recruit unit tokens. (You may play them to different locations.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-168.webp",
    "price": 0.22,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Janna, Savior": {
    "cost": 3,
@@ -19281,7 +19636,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)\nWhen you play me, heal your units here, then move an enemy unit from here to its base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-053.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Lillia, Fae Fawn": {
    "cost": 3,
@@ -19299,7 +19655,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)\nWhen I move from a location, play a 3 :rb_might: Sprite unit token with [Temporary] there. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-082.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Lilting Lullaby": {
    "cost": 2,
@@ -19322,7 +19679,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell. Its controller can't play spells this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-190.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Smoke and Mirrors": {
    "cost": 2,
@@ -19336,7 +19694,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nChoose a unit you control and another unit you control at a different location. If at least one of them has [Temporary], move each to the other's location. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-083.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Doran's Blade": {
    "cost": 2,
@@ -19352,7 +19711,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-095.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Relentless Pursuit": {
    "cost": 2,
@@ -19369,7 +19729,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit. You may attach an Equipment with the same controller to it. This turn, that unit has &quot;When I conquer, you may move me to my base.&quot;",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-184.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Dropboarder": {
    "cost": 4,
@@ -19385,7 +19746,8 @@ window.FIELD = {
    "effect": "When you play me, if you control two or more gear, ready me.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-072.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Forgefire Cape": {
    "cost": 4,
@@ -19403,7 +19765,8 @@ window.FIELD = {
    "effect": "[Unique] (Your deck can have only 1 card with this name.)\n[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-190.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Ornn's Forge": {
    "cost": null,
@@ -19417,7 +19780,8 @@ window.FIELD = {
    "effect": "While you control this battlefield, the first friendly non-token gear played each turn costs :rb_energy_1: less.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-213.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Ornn, Blacksmith": {
    "cost": 5,
@@ -19434,7 +19798,8 @@ window.FIELD = {
    "effect": "When you play me or when I hold, look at the top 4 cards of your Main Deck. You may reveal a gear from among them and draw it. Then recycle the rest.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-058.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Ornn, Forge God": {
    "cost": 6,
@@ -19451,7 +19816,8 @@ window.FIELD = {
    "effect": "[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or ability.)\n[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)\nI have +1 :rb_might: for each friendly gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-085.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Pit Crew": {
    "cost": 3,
@@ -19467,7 +19833,8 @@ window.FIELD = {
    "effect": "When you play a gear, ready me.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-091.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Poro Snax": {
    "cost": 1,
@@ -19481,7 +19848,8 @@ window.FIELD = {
    "effect": "When you play this, draw 1.\n:rb_energy_1::rb_rune_calm:, :rb_exhaust:, Kill this: Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-046.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Seal of Focus": {
    "cost": null,
@@ -19495,7 +19863,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_rune_calm:. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-081.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Shurelya's Requiem": {
    "cost": 4,
@@ -19513,7 +19882,8 @@ window.FIELD = {
    "effect": "[Unique] (Your deck can have only 1 card with this name.)\n[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)\nWhen you play this, ready your units.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-192.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sterak's Gage": {
    "cost": 3,
@@ -19529,7 +19899,8 @@ window.FIELD = {
    "effect": "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)\n[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-056.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Gentle Gemdragon": {
    "cost": 8,
@@ -19546,7 +19917,8 @@ window.FIELD = {
    "effect": "When you play me or another Dragon, ready up to 2 runes.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-104.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Get Excited!": {
    "cost": 2,
@@ -19560,7 +19932,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDiscard 1. Deal its Energy cost as damage to a unit at a battlefield. (Ignore its Power cost.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-008.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Kadregrin the Infernal": {
    "cost": 9,
@@ -19577,7 +19950,8 @@ window.FIELD = {
    "effect": "When you play me, draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-038.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sky Splitter": {
    "cost": 8,
@@ -19597,7 +19971,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nThis spell's Energy cost is reduced by the highest Might among units you control.\nDeal 5 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-014.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Stormbringer": {
    "cost": 6,
@@ -19620,7 +19995,8 @@ window.FIELD = {
    "effect": "Choose a friendly unit in your base. Deal damage equal to its Might to all enemy units at a battlefield, then move your unit there.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-250.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Volibear, Furious": {
    "cost": 10,
@@ -19637,7 +20013,8 @@ window.FIELD = {
    "effect": "[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or ability.)\nWhen I attack, deal 5 damage split among any number of enemy units here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-041.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Ahri, Inquisitive": {
    "cost": 3,
@@ -19660,7 +20037,8 @@ window.FIELD = {
    "effect": "When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-119.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Amateur Recital": {
    "cost": null,
@@ -19674,7 +20052,8 @@ window.FIELD = {
    "effect": "When you hold here, you may move a unit at a battlefield to its base.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-207.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Flurry of Feathers": {
    "cost": 4,
@@ -19694,7 +20073,8 @@ window.FIELD = {
    "effect": "[Reaction]\nChoose one \u2014Counter a spell.Play four 1 :rb_might: Bird unit tokens with [Deflect]. (Opponents must pay :rb_rune_rainbow: to choose them with a spell or ability.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-044.webp",
    "price": 0.19,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Kai'Sa, Evolutionary": {
    "cost": 6,
@@ -19711,7 +20091,8 @@ window.FIELD = {
    "effect": "[Ganking] (I can move from battlefield to battlefield.)\nWhen I conquer, you may play a spell from your trash with Energy cost less than your points without paying its Energy cost. Then recycle it. (You must still pay its Power cost.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-112.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Tricksy Tentacles": {
    "cost": 4,
@@ -19725,7 +20106,8 @@ window.FIELD = {
    "effect": "Move any number of enemy units with the same controller and a total Might of 8 or less to a single location.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-054.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Hunter's Machete": {
    "cost": 3,
@@ -19741,7 +20123,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-096.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Lee Sin, Centered": {
    "cost": 6,
@@ -19758,7 +20141,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)\nOther buffed friendly units at my battlefield have +2 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-151.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Leona, Zealot": {
    "cost": 6,
@@ -19775,7 +20159,8 @@ window.FIELD = {
    "effect": "If an opponent's score is within 3 points of the Victory Score, I enter ready.\nStunned enemy units here have -8 :rb_might:, to a minimum of 1 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-079.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Nami, Headstrong": {
    "cost": 3,
@@ -19798,7 +20183,8 @@ window.FIELD = {
    "effect": "You may pay :rb_rune_calm: as an additional cost to play me.\nWhen you play me, if you paid the additional cost, [Stun] an enemy unit. (It doesn't deal combat damage this turn.)\nWhen I hold, the next time you play a unit this turn, ready it and [Buff] it.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-052.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Zenith Blade": {
    "cost": 3,
@@ -19815,7 +20201,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nStun an enemy unit at a battlefield. You may move a friendly unit to that enemy unit's battlefield. (A stunned unit doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-262.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Divining Shells": {
    "cost": 2,
@@ -19829,7 +20216,8 @@ window.FIELD = {
    "effect": "[Vision] (When you play this, look at the top card of your Main Deck. You may recycle it.)\n[Action][&gt;] Kill this, :rb_exhaust:: Give a unit +2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-161.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Riposte": {
    "cost": 2,
@@ -19846,7 +20234,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit and a spell. Counter that spell and give that unit +:rb_might: equal to that spell's Energy cost this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-206.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Shepherd's Heirloom": {
    "cost": 2,
@@ -19862,7 +20251,8 @@ window.FIELD = {
    "effect": "When you play this, gain 1 XP.\n[Equip] \u2014 Spend 1 XP (Pay the cost: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-158.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Blitzcrank, Impassive": {
    "cost": 5,
@@ -19880,7 +20270,8 @@ window.FIELD = {
    "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me to a battlefield, you may move an enemy unit to here.\nWhen I hold, return me to my owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-067.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Crimson Pigeons": {
    "cost": 3,
@@ -19897,7 +20288,8 @@ window.FIELD = {
    "effect": "I have +2 :rb_might: while I'm attacking with another unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-154.webp",
    "price": 0.04,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Daisy!": {
    "cost": 9,
@@ -19921,7 +20313,8 @@ window.FIELD = {
    "effect": "I enter ready.\nReduce my cost by :rb_energy_1: for each of the following tags among your units \u2014 Bird, Cat, Dog, and Poro.\nWhen I attack while your units have all 4 tags, [Stun] an enemy unit here. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-196.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Friendship": {
    "cost": 1,
@@ -19935,7 +20328,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a unit. Give it +1 :rb_might: this turn for each of the following tags among your units \u2014 Bird, Cat, Dog, and Poro.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-046.webp",
    "price": 0.14,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Frisky Hunter": {
    "cost": 4,
@@ -19952,7 +20346,8 @@ window.FIELD = {
    "effect": "When you play me, play a 1 :rb_might: Bird unit token with [Deflect] here. (Opponents must pay :rb_rune_rainbow: to choose it with a spell or ability.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-033.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Ivern, Friend to All": {
    "cost": 6,
@@ -19969,7 +20364,8 @@ window.FIELD = {
    "effect": "As you play me, choose Bird, Cat, Dog, or Poro. I gain that tag.\nWhen I conquer or hold, score 1 point if your units have all of the following tags among them \u2014 Bird, Cat, Dog, and Poro.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-177.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Ivern, Nurturer": {
    "cost": 5,
@@ -19986,7 +20382,8 @@ window.FIELD = {
    "effect": "When you play me or when I hold, look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest. Then if you revealed a Bird, Cat, Dog, or Poro, do this: [Buff] a friendly unit. (Give it a +1 :rb_might: buff if it doesn't have one.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-051.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Trusty Ramhound": {
    "cost": 2,
@@ -20004,7 +20401,8 @@ window.FIELD = {
    "effect": "While you have another unit here, I have +1 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-159.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Ultrasoft Poro": {
    "cost": 5,
@@ -20021,7 +20419,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: Play two :rb_energy_1: :rb_might: Bird unit tokens with [Deflect]. Use this ability only while I'm at a battlefield. (Opponents must pay :rb_rune_rainbow: to choose a [Deflect] unit with a spell or ability.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-160.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Corina Veraza": {
    "cost": 7,
@@ -20037,7 +20436,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)\nWhen I move to a battlefield, play three 1 :rb_might: Recruit unit tokens here.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-179.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Garen, Rugged": {
    "cost": 6,
@@ -20055,7 +20455,8 @@ window.FIELD = {
    "effect": "[Assault 2], [Shield 2] (+2 :rb_might: while I'm an attacker or defender.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-007.webp",
    "price": 0.69,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Jinx, Demolitionist": {
    "cost": 3,
@@ -20072,7 +20473,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\n[Assault 2] (+2 :rb_might: while I'm an attacker.)\nWhen you play me, discard 2.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-030.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Katarina, Reckless": {
    "cost": 5,
@@ -20095,7 +20497,8 @@ window.FIELD = {
    "effect": "When you hide a card, ready me.\nWhen you play a card from face down, deal 2 to an enemy unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-023.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Rengar, Unseen": {
    "cost": 4,
@@ -20113,7 +20516,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\n[Assault 2] (+2 :rb_might: while I'm an attacker.)\n[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\n[Ganking] (I can move from battlefield to battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-024.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Super Mega Death Rocket!": {
    "cost": 4,
@@ -20136,7 +20540,8 @@ window.FIELD = {
    "effect": "Deal 5 to a unit.\nWhen you conquer, you may discard 1 to return this from your trash to your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-252.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Yasuo, Remorseful": {
    "cost": 6,
@@ -20153,7 +20558,8 @@ window.FIELD = {
    "effect": "When I attack, deal damage equal to my Might to an enemy unit here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-076.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Yasuo, Windrider": {
    "cost": 5,
@@ -20170,7 +20576,8 @@ window.FIELD = {
    "effect": "[Ganking] (I can move from battlefield to battlefield.)\nThe third time I move in a turn, you score 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-205.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Bubble Bot": {
    "cost": 3,
@@ -20188,7 +20595,8 @@ window.FIELD = {
    "effect": "When you play me, ready another friendly Mech.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-062.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Dunebreaker": {
    "cost": 7,
@@ -20204,7 +20612,8 @@ window.FIELD = {
    "effect": "If you have two or fewer cards in your hand, I enter ready.\nWhen I hold, draw 2.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-027.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Portal Rescue": {
    "cost": 3,
@@ -20218,7 +20627,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nBanish a friendly unit, then play it to base, ignoring its cost.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-102.webp",
    "price": 0.22,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Production Surge": {
    "cost": 4,
@@ -20232,7 +20642,8 @@ window.FIELD = {
    "effect": "This costs :rb_energy_2: less if you control a Mech.\nPlay a 3 :rb_might: Mech unit token to your base.\nDraw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-076.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Rumble, Scrapper": {
    "cost": 5,
@@ -20251,7 +20662,8 @@ window.FIELD = {
    "effect": "Your Mechs have +1 :rb_might: (including me).\nWhen I hold, play a 3 :rb_might: Mech unit token to your base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-089.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Skyfall of Areion": {
    "cost": 3,
@@ -20267,7 +20679,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_energy_1::rb_rune_fury: (:rb_energy_1::rb_rune_fury:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-030.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Hextech Gauntlets": {
    "cost": 3,
@@ -20285,7 +20698,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_energy_3::rb_rune_rainbow:. This ability's Energy cost is reduced by the Might of the unit you choose. (Pay the cost: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-188.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Noxus Saboteur": {
    "cost": 3,
@@ -20302,7 +20716,8 @@ window.FIELD = {
    "effect": "Your opponents' [Hidden] cards can't be revealed here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-018.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Minotaur Reckoner": {
    "cost": 5,
@@ -20318,7 +20733,8 @@ window.FIELD = {
    "effect": "Units can't move to base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-014.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Orb of Regret": {
    "cost": 1,
@@ -20338,7 +20754,8 @@ window.FIELD = {
    "effect": ":rb_exhaust:: Give a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-090.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Whirlwind": {
    "cost": 3,
@@ -20358,7 +20775,8 @@ window.FIELD = {
    "effect": "Starting with the next player, each player may return a unit to its owner's hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-187.webp",
    "price": 0.14,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Trapping Grounds": {
    "cost": null,
@@ -20372,7 +20790,8 @@ window.FIELD = {
    "effect": "When you conquer here, if you assigned 3 or more excess damage, play a 1 :rb_might: Bird unit token with [Deflect].",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-217.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Meditation": {
    "cost": 2,
@@ -20386,7 +20805,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nAs an additional cost to play this, you may exhaust a friendly unit. If you do, draw 2. Otherwise, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-048.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Vault Breaker": {
    "cost": 1,
@@ -20400,7 +20820,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nGive a unit [Assault 2] and [Ganking] this turn. (+2 :rb_might: while it's an attacker. It can move from battlefield to battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-010.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Red Brambleback": {
    "cost": 4,
@@ -20416,7 +20837,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\nYour conquer effects for conquering here trigger an additional time.\nWhen I conquer, [Buff] a friendly unit. (Give it a +1 :rb_might: buff if it doesn't have one.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-029.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Dragon's Rage": {
    "cost": 4,
@@ -20433,7 +20855,8 @@ window.FIELD = {
    "effect": "Move an enemy unit. Then choose another enemy unit at its destination. They deal damage equal to their Mights to each other.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-258.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Alpha Wildclaw": {
    "cost": 6,
@@ -20450,7 +20873,8 @@ window.FIELD = {
    "effect": "[Tank] (I must be assigned combat damage first.)\nYour units here with less Might than me can't be chosen by enemy spells and abilities.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-057.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Blue Sentinel": {
    "cost": 4,
@@ -20466,7 +20890,8 @@ window.FIELD = {
    "effect": "[Shield 2] (+2 :rb_might: while I'm a defender.)\nYour hold effects for holding here trigger an additional time.\nWhen I hold, [Add] :rb_rune_rainbow: at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-087.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Cloth Armor": {
    "cost": 1,
@@ -20482,7 +20907,8 @@ window.FIELD = {
    "effect": "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)\n[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-064.webp",
    "price": 0.07,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Power Nexus": {
    "cost": null,
@@ -20496,7 +20922,8 @@ window.FIELD = {
    "effect": "When you hold here, you may pay :rb_rune_rainbow::rb_rune_rainbow::rb_rune_rainbow::rb_rune_rainbow: to score 1 point.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-214.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sunlit Guardian": {
    "cost": 3,
@@ -20512,7 +20939,8 @@ window.FIELD = {
    "effect": "[Shield] (+1 :rb_might: while I'm a defender.)\n[Tank] (I must be assigned combat damage first.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-054.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Tactical Retreat": {
    "cost": 2,
@@ -20526,7 +20954,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit. The next time it would die this turn, heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-175.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "The Grand Plaza": {
    "cost": null,
@@ -20540,7 +20969,8 @@ window.FIELD = {
    "effect": "When you hold here, if you have 7+ units here, you win the game.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-293.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Hostile Takeover": {
    "cost": 5,
@@ -20557,7 +20987,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nTake control of an enemy unit at a battlefield. Ready it. (Start a combat if other enemies are there. Otherwise, conquer.)\nLose control of that unit and recall it at end of turn. (Send it to base. This isn't a move.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-202.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Demacian Diplomat": {
    "cost": 2,
@@ -20573,7 +21004,8 @@ window.FIELD = {
    "effect": "When you play me, gain 1 XP.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-092.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Aspiring Engineer": {
    "cost": 3,
@@ -20589,7 +21021,8 @@ window.FIELD = {
    "effect": "When you play me, return a gear from your trash to your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-061.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Zaun Punk": {
    "cost": 3,
@@ -20611,7 +21044,8 @@ window.FIELD = {
    "effect": "You may kill a friendly gear as an additional cost to play me.\nWhen you play me, if you paid the additional cost, kill a gear.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-160.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Sprite Queen": {
    "cost": 7,
@@ -20628,7 +21062,8 @@ window.FIELD = {
    "effect": "When you play me or at the start of your Beginning Phase, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base. (Kill them at the start of their controller's next Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-084.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Shen, Kinkou": {
    "cost": 3,
@@ -20645,7 +21080,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)\n[Shield 2] (+2 :rb_might: while I'm a defender.)\n[Tank] (I must be assigned combat damage first.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-241.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Noxian Guillotine": {
    "cost": 4,
@@ -20662,7 +21098,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a unit. Kill it the next time it takes damage this turn.\n[Legion] \u2014 Kill it now instead. (Get the effect if you've played another card this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-254.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Undying Legion": {
    "cost": 3,
@@ -20679,7 +21116,8 @@ window.FIELD = {
    "effect": "[Legion][&gt;] You may play me from your trash for :rb_energy_3::rb_rune_fury:. (Get the effect if you've played another card this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-025.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Unsung Hero": {
    "cost": 2,
@@ -20696,7 +21134,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 If I was [Mighty], draw 2. (When I die, get the effect. I'm Mighty while I have 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-167.webp",
    "price": 0.19,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Isolate": {
    "cost": 2,
@@ -20710,7 +21149,8 @@ window.FIELD = {
    "effect": "Move an enemy unit from a battlefield to its base. Then, if there's an enemy unit alone at that battlefield, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-124.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Veiled Temple": {
    "cost": null,
@@ -20724,7 +21164,8 @@ window.FIELD = {
    "effect": "When you conquer here, you may ready a friendly gear. If it's an Equipment, you may detach it.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-221.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Wizened Elder": {
    "cost": 4,
@@ -20740,7 +21181,8 @@ window.FIELD = {
    "effect": "While I'm buffed, I have an additional +1 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-065.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sandshifter": {
    "cost": 5,
@@ -20762,7 +21204,8 @@ window.FIELD = {
    "effect": "When you play me, kill an enemy unit with 3 :rb_might: or less.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-158.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "The Zero Drive": {
    "cost": 3,
@@ -20778,7 +21221,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_energy_1::rb_rune_mind: (:rb_energy_1::rb_rune_mind:: Attach this to a unit you control.)\n:rb_energy_3::rb_rune_mind:, Banish this: Play all units banished with this, ignoring their costs. (Use only if unattached.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-090.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Loyal Poro": {
    "cost": 3,
@@ -20795,7 +21239,8 @@ window.FIELD = {
    "effect": "[Deathknell][&gt;] If I didn't die alone, draw 1. (When I die, get the effect. I wasn't alone if there were other friendly units here.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-156.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Vaults of Helia": {
    "cost": null,
@@ -20809,7 +21254,8 @@ window.FIELD = {
    "effect": "When you hold here, your non-token units cost :rb_energy_1: more to play this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-219.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Guardian of the Passage": {
    "cost": 6,
@@ -20826,7 +21272,8 @@ window.FIELD = {
    "effect": "When I hold, you may return a unit or gear from your trash to your hand.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-035.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Yuumi, Magical Cat": {
    "cost": 3,
@@ -20845,7 +21292,8 @@ window.FIELD = {
    "effect": "When I attack or defend, give one of your other units here +3 :rb_might: and [Tank] this turn. (It must be assigned combat damage first.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-056.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Forgotten Library": {
    "cost": null,
@@ -20859,7 +21307,8 @@ window.FIELD = {
    "effect": "While you control this battlefield, when you play a spell, if you spent :rb_energy_4: or more, [Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-211.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Altar of Memories": {
    "cost": 2,
@@ -20873,7 +21322,8 @@ window.FIELD = {
    "effect": "When a friendly unit dies, you may exhaust me to draw 1, then put a card from your hand on the top or bottom of your Main Deck.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-169.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Anivia, Primal": {
    "cost": 7,
@@ -20897,7 +21347,8 @@ window.FIELD = {
    "effect": "When I attack, deal 3 to all enemy units here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-148.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Garen, Commander": {
    "cost": 6,
@@ -20915,7 +21366,8 @@ window.FIELD = {
    "effect": "Other friendly units have +1 :rb_might: here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-013.webp",
    "price": 0.7,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Recruit the Vanguard": {
    "cost": 6,
@@ -20929,7 +21381,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nPlay four 1 :rb_might: Recruit unit tokens. (They can be played to your base or to battlefields you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-015.webp",
    "price": 1.2,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Sivir, Ambitious": {
    "cost": 6,
@@ -20946,7 +21399,8 @@ window.FIELD = {
    "effect": "[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or Ability.)\nWhen I conquer after an attack, if you assigned 5 or more excess damage to enemy units, you may deal that much to an enemy unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-120.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Minefield": {
    "cost": null,
@@ -20960,7 +21414,8 @@ window.FIELD = {
    "effect": "When you conquer here, put the top 2 cards of your Main Deck into your trash.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-212.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Assembly Rig": {
    "cost": 4,
@@ -20974,7 +21429,8 @@ window.FIELD = {
    "effect": ":rb_energy_1::rb_rune_fury:, Recycle a unit from your trash, :rb_exhaust:: Play a 3 :rb_might: Mech unit token to your base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-019.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Blazing Scorcher": {
    "cost": 5,
@@ -20991,7 +21447,8 @@ window.FIELD = {
    "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-001.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Direwing": {
    "cost": 7,
@@ -21008,7 +21465,8 @@ window.FIELD = {
    "effect": "I enter ready if you control another Dragon.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-094.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Herald of Scales": {
    "cost": 4,
@@ -21024,7 +21482,8 @@ window.FIELD = {
    "effect": "Your Dragons' Energy costs are reduced by :rb_energy_2:, to a minimum of :rb_energy_1:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-140.webp",
    "price": 0.24,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Show of Strength": {
    "cost": 2,
@@ -21038,7 +21497,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nDraw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-106.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Keeper's Verdict": {
    "cost": 2,
@@ -21055,7 +21515,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nChoose an enemy unit at a battlefield. Its owner places it on the top or bottom of their Main Deck.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-204.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Viktor, Innovator": {
    "cost": 4,
@@ -21072,7 +21533,8 @@ window.FIELD = {
    "effect": "When you play a card on an opponent's turn, play a 1 :rb_might: Recruit unit token in your base.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-117.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sprite Mother": {
    "cost": 4,
@@ -21088,7 +21550,8 @@ window.FIELD = {
    "effect": "When you play me, play a ready 3 :rb_might: Sprite unit token with [Temporary] here. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-106.webp",
    "price": 0.24,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Chemtech Enforcer": {
    "cost": 2,
@@ -21104,7 +21567,8 @@ window.FIELD = {
    "effect": "[Assault 2] (+2 :rb_might: while I'm an attacker.)\nWhen you play me, discard 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-003.webp",
    "price": 0.05,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Evershade Stalker": {
    "cost": 3,
@@ -21120,7 +21584,8 @@ window.FIELD = {
    "effect": "When you play me, discard 1, then draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-123.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Flame Chompers": {
    "cost": 3,
@@ -21136,7 +21601,8 @@ window.FIELD = {
    "effect": "When you discard me, you may pay :rb_rune_fury: to play me.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-006.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Kog'Maw, Caustic": {
    "cost": 3,
@@ -21159,7 +21625,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 Deal 4 to all units at my battlefield. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-190.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Disintegrate": {
    "cost": 4,
@@ -21179,7 +21646,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. If this kills it, draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-005.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Square Up": {
    "cost": 4,
@@ -21193,7 +21661,8 @@ window.FIELD = {
    "effect": "[Repeat] \u2014 Discard 1 (You may pay the additional cost to repeat this spell's effect.)\nGive a unit [Assault 4] this turn. (+4 :rb_might: while it's an attacker.)",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-017.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Upstage Comedy": {
    "cost": 2,
@@ -21207,7 +21676,8 @@ window.FIELD = {
    "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nReady a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/UNL-009.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Unleashed"
   },
   "Jayce, Man of Progress": {
    "cost": 4,
@@ -21224,7 +21694,8 @@ window.FIELD = {
    "effect": "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than :rb_energy_7: from hand this turn, ignoring its Energy cost. (You must still pay its Power cost.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-084.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "World Atlas": {
    "cost": 3,
@@ -21240,7 +21711,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-086.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Black Market Broker": {
    "cost": 3,
@@ -21256,7 +21728,8 @@ window.FIELD = {
    "effect": "When you play a card from face down, play a Gold gear token exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-121.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Feral Strength": {
    "cost": 2,
@@ -21270,7 +21743,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nGive a unit +2 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-034.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Marai Spire": {
    "cost": null,
@@ -21284,7 +21758,8 @@ window.FIELD = {
    "effect": "While you control this battlefield, friendly [Repeat] costs cost :rb_energy_1: less.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-211.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Angle Shot": {
    "cost": 2,
@@ -21298,7 +21773,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a unit and an Equipment with the same controller. Attach that Equipment to that unit or detach that Equipment from that unit. Draw 1.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-011.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Karma, Channeler": {
    "cost": 6,
@@ -21315,7 +21791,8 @@ window.FIELD = {
    "effect": "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)\nWhen you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff. Runes aren't cards.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-235.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Breakneck Mech": {
    "cost": 8,
@@ -21333,7 +21810,8 @@ window.FIELD = {
    "effect": "Your Mechs have [Deflect] and [Ganking]. (Opponents must pay :rb_rune_rainbow: to choose us with a spell or ability. We can move from battlefield to battlefield.)\nI enter ready if you control another Mech.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-071.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Mega-Mech": {
    "cost": 7,
@@ -21350,7 +21828,8 @@ window.FIELD = {
    "effect": null,
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-088.webp",
    "price": 0.06,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Svellsongur": {
    "cost": 3,
@@ -21366,7 +21845,8 @@ window.FIELD = {
    "effect": "[Equip] :rb_energy_1::rb_rune_calm: (:rb_energy_1::rb_rune_calm:: Attach this to a unit you control.)\nAs this is attached to a unit, copy that unit's text to this Equipment's effect text for as long as this is attached to it.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-059.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "King's Edict": {
    "cost": 6,
@@ -21380,7 +21860,8 @@ window.FIELD = {
    "effect": "Starting with the next player, each other player chooses a unit you don't control that hasn't been chosen for this spell. Kill those units.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-237.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Leona, Determined": {
    "cost": 4,
@@ -21397,7 +21878,8 @@ window.FIELD = {
    "effect": "[Shield] (+1 :rb_might: while I'm a defender.)\nWhen I attack, stun an enemy unit here. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-238.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Noxian Drummer": {
    "cost": 3,
@@ -21414,7 +21896,8 @@ window.FIELD = {
    "effect": "When I move to a battlefield, play a 1 :rb_might: Recruit unit token here. (It is also at the battlefield.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-222.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Solari Shieldbearer": {
    "cost": 3,
@@ -21430,7 +21913,8 @@ window.FIELD = {
    "effect": "When you play me, stun a unit. (It doesn't deal combat damage this turn.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-051.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Shakedown": {
    "cost": 2,
@@ -21444,7 +21928,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose an enemy unit. Deal 6 to it unless its controller has you draw 2.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-033.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Marching Orders": {
    "cost": 3,
@@ -21458,7 +21943,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_3: (You may pay the additional cost to repeat this spell's effect.)\nChoose a friendly unit anywhere and an enemy unit at a battlefield. They deal damage equal to their Mights to each other.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-114.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Yone, Blademaster": {
    "cost": 5,
@@ -21476,7 +21962,8 @@ window.FIELD = {
    "effect": "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)\nWhen I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-116.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Jinx, Rebel": {
    "cost": 5,
@@ -21493,7 +21980,8 @@ window.FIELD = {
    "effect": "When you discard one or more cards, ready me and give me +1 :rb_might: this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-202.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Sudden Storm": {
    "cost": 3,
@@ -21513,7 +22001,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nDeal 2 to a unit at a battlefield. If it's attacking, deal 4 to it instead.",
    "image": "https://static.dotgg.gg/riftbound/cards/SFD-017.webp",
    "price": 0.11,
-   "banned": false
+   "banned": false,
+   "set": "Spiritforged"
   },
   "Convergent Mutation": {
    "cost": 2,
@@ -21527,7 +22016,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit. This turn, increase its Might to the Might of another friendly unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-108.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Incinerate": {
    "cost": 2,
@@ -21547,7 +22037,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 2 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-003.webp",
    "price": 0.54,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Iron Ballista": {
    "cost": 3,
@@ -21567,7 +22058,8 @@ window.FIELD = {
    "effect": "This enters exhausted.\n:rb_exhaust:: Deal 2 to a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-017.webp",
    "price": 0.13,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Magma Wurm": {
    "cost": 8,
@@ -21583,7 +22075,8 @@ window.FIELD = {
    "effect": "Other friendly units enter ready.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-011.webp",
    "price": 0.08,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Warwick, Hunter": {
    "cost": 6,
@@ -21601,7 +22094,8 @@ window.FIELD = {
    "effect": "I enter ready.\nWhen I attack, kill all damaged enemy units here.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-159.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Wielder of Water": {
    "cost": 3,
@@ -21617,7 +22111,8 @@ window.FIELD = {
    "effect": "While I'm attacking or defending alone, I have +2 :rb_might:.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-055.webp",
    "price": 0.1,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Udyr, Wildman": {
    "cost": 6,
@@ -21640,7 +22135,8 @@ window.FIELD = {
    "effect": "Spend my buff: Choose one you've not chosen this turn \u2014Deal 2 to a unit at a battlefield.Stun a unit at a battlefield.Ready me.Give me [Ganking] this turn.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-157.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Cruel Patron": {
    "cost": 4,
@@ -21656,7 +22152,8 @@ window.FIELD = {
    "effect": "As an additional cost to play me, kill a friendly unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-208.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Machine Evangel": {
    "cost": 5,
@@ -21672,7 +22169,8 @@ window.FIELD = {
    "effect": "[Deathknell] \u2014 Play three 1 :rb_might: Recruit unit tokens into your base. (When I die, get the effect.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-239.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Vanguard Attendant": {
    "cost": 6,
@@ -21689,7 +22187,8 @@ window.FIELD = {
    "effect": "I enter ready.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-016.webp",
    "price": 0.25,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Fox-Fire": {
    "cost": 3,
@@ -21706,7 +22205,8 @@ window.FIELD = {
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nKill any number of units at a battlefield with total Might 4 or less.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-256.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Mystic Reversal": {
    "cost": 4,
@@ -21720,7 +22220,8 @@ window.FIELD = {
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGain control of a spell. You may make new choices for it.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-080.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Unlicensed Armory": {
    "cost": 2,
@@ -21734,7 +22235,8 @@ window.FIELD = {
    "effect": "Discard 1, :rb_exhaust:: Choose a friendly unit. The next time it dies this turn, you may pay :rb_rune_fury: to recall it exhausted instead. (Send it to base. This isn't a move.)",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-023.webp",
    "price": 0.12,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Blast of Power": {
    "cost": 6,
@@ -21754,7 +22256,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nKill a unit at a battlefield.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-012.webp",
    "price": 0.71,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   },
   "Carnivorous Snapvine": {
    "cost": 5,
@@ -21770,7 +22273,8 @@ window.FIELD = {
    "effect": "When you play me, choose an enemy unit at a battlefield. We deal damage equal to our Mights to each other.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-149.webp",
    "price": null,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Stormclaw Ursine": {
    "cost": 7,
@@ -21786,7 +22290,8 @@ window.FIELD = {
    "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me, channel 1 rune exhausted.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGN-137.webp",
    "price": 0.09,
-   "banned": false
+   "banned": false,
+   "set": "Origins"
   },
   "Final Spark": {
    "cost": 8,
@@ -21809,7 +22314,8 @@ window.FIELD = {
    "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 8 to a unit.",
    "image": "https://static.dotgg.gg/riftbound/cards/OGS-022.webp",
    "price": 1.15,
-   "banned": false
+   "banned": false,
+   "set": "Proving Grounds"
   }
  }
 };
