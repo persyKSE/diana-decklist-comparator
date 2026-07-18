@@ -129,7 +129,7 @@ export function buildIndices(decks: Deck[], field: any) {
   decks.forEach(d => {
     d.cards.concat(d.sideboard || []).forEach(c => {
       if ((c as any).image && !imageMap[c.name]) imageMap[c.name] = (c as any).image;
-      if (!cardMeta[c.name]) cardMeta[c.name] = { cost: (c as any).cost, type: (c as any).type, color: (c as any).color || [], might: (c as any).might };
+      if (!cardMeta[c.name]) cardMeta[c.name] = { cost: (c as any).cost, type: (c as any).type, color: (c as any).color || [], might: (c as any).might, banned: !!(c as any).banned };
       nameLookup[normName(c.name)] = c.name;
     });
     (d.runes || []).concat(d.battlefields || []).forEach(c => {
@@ -142,7 +142,7 @@ export function buildIndices(decks: Deck[], field: any) {
   if (field && field.cards) {
     Object.entries(field.cards).forEach(([name, c]: [string, any]) => {
       if (c.image && !imageMap[name]) imageMap[name] = c.image;
-      if (!cardMeta[name]) cardMeta[name] = { cost: c.cost, type: c.type, color: c.color || [], might: c.might };
+      if (!cardMeta[name]) cardMeta[name] = { cost: c.cost, type: c.type, color: c.color || [], might: c.might, banned: !!c.banned };
     });
   }
 

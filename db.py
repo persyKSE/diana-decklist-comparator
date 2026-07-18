@@ -52,6 +52,23 @@ DIANA_ARCHETYPE = "diana-scorn-of-the-moon"
 LADDER_EVENT = "Mobalytics Ladder"
 LADDER_PLACEMENT = "Ladder"
 
+# Cards/battlefields banned from sanctioned Constructed play, by code (stable
+# across reprints/renames, unlike name). Maintained by hand against Riot's
+# banlist announcements — the dotgg API has no legality field of its own.
+# Updated for the Vendetta (Set 5) banlist, 2026-07-18.
+BANNED_CODES = {
+    "SFD-122",  # Called Shot
+    "SFD-020",  # Draven - Vanquisher
+    "OGN-168",  # Fight or Flight
+    "OGN-182",  # Scrapheap
+    "OGN-177",  # Stealthy Pursuer
+    "OGN-290",  # The Arena's Greatest
+    "OGN-276",  # Aspirant's Climb
+    "OGN-292",  # The Dreaming Tree
+    "OGN-284",  # Obelisk of Power
+    "OGN-285",  # Reaver's Row
+}
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS cards (
     code      TEXT PRIMARY KEY,   -- e.g. UNL-079
@@ -531,6 +548,7 @@ def export_field_json(conn, path=FIELD_JSON):
             "effect": card["effect"],
             "image": f"cache/images/{local.name}" if local.exists() else card["image_url"],
             "price": card["price"],
+            "banned": card["code"] in BANNED_CODES,
         }
 
     # Deliberately no "generated" stamp: meta.json already carries one, and a
@@ -571,6 +589,7 @@ def export_cards_json(conn, path=None):
             "techTags": json.loads(card["tech_tags"]) if card["tech_tags"] else [],
             "effect": card["effect"],
             "price": card["price"],
+            "banned": card["code"] in BANNED_CODES,
         }
     payload = json.dumps(out, indent=1)
     Path(path).write_text(payload)

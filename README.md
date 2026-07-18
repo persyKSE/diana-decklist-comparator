@@ -244,8 +244,9 @@ builder's **Share to community** button. Submissions land in a D1
 (SQLite) table, atomically and deduped by content hash; the server
 rebuilds every stored row from the deployed card catalogue
 (`field.json`), validates deck legality (40-card main, ≤3 copies,
-12 runes, ≤8 sideboard, ≤3 battlefields) and rate-limits per IP, so
-nothing client-authored is stored or served back. The viewer fetches
+12 runes, ≤10 sideboard, ≤3 battlefields, no banned cards) and
+rate-limits per IP, so nothing client-authored is stored or served
+back. The viewer fetches
 the pool on load and shows it behind an opt-in **community decks**
 filter chip — community lists never join the tournament clustering or
 the default consensus math. Anywhere without the API (`file://`, a

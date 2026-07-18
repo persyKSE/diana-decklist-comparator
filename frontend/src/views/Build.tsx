@@ -19,6 +19,7 @@ interface SearchState {
 }
 
 const BUILDER_PAGE = 30;
+const SIDEBOARD_SIZE = 10;
 
 const Build: React.FC = () => {
   const {
@@ -52,7 +53,7 @@ const Build: React.FC = () => {
 
   const mainTotal = Object.values(mainDeck).reduce((a, b) => a + b, 0);
   const sideTotal = Object.values(sideDeck).reduce((a, b) => a + b, 0);
-  const valid = mainTotal === 40 && sideTotal <= 8;
+  const valid = mainTotal === 40 && sideTotal <= SIDEBOARD_SIZE;
   const runeTotal = Object.values(builderRunes).reduce((a, b) => a + b, 0);
 
   // Explains *why* the deck is invalid, not just that it is — surfaces
@@ -62,7 +63,7 @@ const Build: React.FC = () => {
     const list: string[] = [];
     if (mainTotal > 0 && mainTotal < 40) list.push(`Main deck is ${40 - mainTotal} card${40 - mainTotal === 1 ? '' : 's'} short of 40`);
     if (mainTotal > 40) list.push(`Main deck is ${mainTotal - 40} card${mainTotal - 40 === 1 ? '' : 's'} over 40`);
-    if (sideTotal > 8) list.push(`Sideboard is ${sideTotal - 8} card${sideTotal - 8 === 1 ? '' : 's'} over the 8-card limit`);
+    if (sideTotal > SIDEBOARD_SIZE) list.push(`Sideboard is ${sideTotal - SIDEBOARD_SIZE} card${sideTotal - SIDEBOARD_SIZE === 1 ? '' : 's'} over the ${SIDEBOARD_SIZE}-card limit`);
     Object.entries(mainDeck).filter(([, n]) => n > 3).forEach(([name, n]) => list.push(`${name} has ${n} copies in the main deck (max 3)`));
     Object.entries(sideDeck).filter(([, n]) => n > 3).forEach(([name, n]) => list.push(`${name} has ${n} copies in the sideboard (max 3)`));
     return list;
@@ -81,13 +82,15 @@ const Build: React.FC = () => {
   };
 
   // Enforces the same limits the deck legally allows: 3 copies of any card
-  // per section, 40 in the main deck, 8 in the sideboard.
+  // per section, 40 in the main deck, SIDEBOARD_SIZE in the sideboard, and
+  // nothing on the current banlist.
   const tryAdd = (name: string, sec: 'main' | 'side') => {
+    if (cardMeta[name]?.banned) { showToast(`${name} is banned from sanctioned Constructed play`); return; }
     const deck = sec === 'main' ? mainDeck : sideDeck;
     const total = sec === 'main' ? mainTotal : sideTotal;
-    const cap = sec === 'main' ? 40 : 8;
+    const cap = sec === 'main' ? 40 : SIDEBOARD_SIZE;
     if ((deck[name] || 0) >= 3) { showToast(`${name} is already at 3 copies`); return; }
-    if (total >= cap) { showToast(sec === 'main' ? 'Main deck is full (40)' : 'Sideboard is full (8)'); return; }
+    if (total >= cap) { showToast(sec === 'main' ? 'Main deck is full (40)' : `Sideboard is full (${SIDEBOARD_SIZE})`); return; }
     modDeck(sec === 'main' ? setMainDeck : setSideDeck, name, 1);
   };
 
@@ -95,9 +98,9 @@ const Build: React.FC = () => {
     const to = from === 'main' ? 'side' : 'main';
     const toDeck = to === 'main' ? mainDeck : sideDeck;
     const toTotal = to === 'main' ? mainTotal : sideTotal;
-    const cap = to === 'main' ? 40 : 8;
+    const cap = to === 'main' ? 40 : SIDEBOARD_SIZE;
     if ((toDeck[name] || 0) >= 3) { showToast(`${name} is already at 3 copies in the ${to === 'main' ? 'main deck' : 'sideboard'}`); return; }
-    if (toTotal >= cap) { showToast(to === 'main' ? 'Main deck is full (40)' : 'Sideboard is full (8)'); return; }
+    if (toTotal >= cap) { showToast(to === 'main' ? 'Main deck is full (40)' : `Sideboard is full (${SIDEBOARD_SIZE})`); return; }
     modDeck(from === 'main' ? setMainDeck : setSideDeck, name, -1);
     modDeck(to === 'main' ? setMainDeck : setSideDeck, name, 1);
   };
@@ -213,6 +216,7 @@ const Build: React.FC = () => {
   const renderTile = (name: string, sec: 'main' | 'side' | 'search') => {
     const img = imageMap[name];
     const cost = cardMeta[name]?.cost;
+    const banned = !!cardMeta[name]?.banned;
     const mainCount = mainDeck[name] || 0;
     const sideCount = sideDeck[name] || 0;
     const count = sec === 'side' ? sideCount : mainCount;
@@ -237,12 +241,14 @@ const Build: React.FC = () => {
     return (
       <div
         key={name}
-        className={`relative aspect-[3/4] w-full rounded-md shadow-sm overflow-hidden border transition-all cursor-pointer group ${maxed ? 'opacity-50 grayscale select-none' : 'hover:-translate-y-0.5 hover:shadow-md border-surface-border hover:border-brand-accent/50'}`}
+        className={`relative aspect-[3/4] w-full rounded-md shadow-sm overflow-hidden border transition-all cursor-pointer group ${maxed ? 'opacity-50 grayscale select-none' : 'hover:-translate-y-0.5 hover:shadow-md border-surface-border hover:border-brand-accent/50'} ${banned ? 'ring-2 ring-status-danger grayscale' : ''}`}
         onMouseEnter={() => setPreview(name)}
         onClick={onClick}
         onContextMenu={onContextMenu}
         title={
-          isTouch
+          banned
+            ? `${name} — banned from sanctioned Constructed play`
+            : isTouch
             ? `${name} — tap for options`
             : `${name} — ${sec === 'search' ? 'Click to add to main, right-click to add to side' : 'Click +1, right-click -1, shift-click to move'}`
         }
@@ -253,6 +259,11 @@ const Build: React.FC = () => {
           <div className="w-full h-full bg-surface-hover flex items-center justify-center text-xs text-center p-2 text-content-muted">
             {name}
           </div>
+        )}
+        {banned && (
+          <span className="absolute bottom-0 left-0 right-0 bg-status-danger text-white text-[9px] font-bold text-center uppercase tracking-wide py-0.5">
+            Banned
+          </span>
         )}
 
         {cost != null && (
@@ -415,8 +426,8 @@ const Build: React.FC = () => {
             <div className="mt-6 pt-6 border-t border-surface-border">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-semibold text-content-heading">Side Deck</h3>
-                <span className={`text-xs font-mono px-2 py-0.5 rounded-full border ${sideTotal <= 8 ? 'bg-surface-muted text-content-muted border-surface-border' : 'bg-status-danger/10 text-status-danger border-status-danger/20'}`}>
-                  {sideTotal}/8
+                <span className={`text-xs font-mono px-2 py-0.5 rounded-full border ${sideTotal <= SIDEBOARD_SIZE ? 'bg-surface-muted text-content-muted border-surface-border' : 'bg-status-danger/10 text-status-danger border-status-danger/20'}`}>
+                  {sideTotal}/{SIDEBOARD_SIZE}
                 </span>
               </div>
               {sideTotal > 0 ? (

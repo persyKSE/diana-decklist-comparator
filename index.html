@@ -343,15 +343,25 @@
 
   /* left: preview + management */
   .bprev { padding: 12px; }
-  .bprev-img { width: 100%; aspect-ratio: 3/4.2; border-radius: 6px; background: var(--bg2) center/cover no-repeat; border: 1px solid var(--border); box-shadow: var(--shadow); display: block; }
+  .bprev-img { width: 100%; aspect-ratio: 3/4.2; border-radius: 6px; background: var(--bg2) center/cover no-repeat; border: 1px solid var(--border); box-shadow: var(--shadow); display: block; object-fit: cover; }
+  .bprev-img.wide { aspect-ratio: 3/2.05; }
   .bprev-empty { display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; text-align: center; padding: 20px; }
   .bprev-name { font-family: var(--serif); font-size: 15px; color: var(--gold-hi); margin: 10px 0 3px; }
   .bprev-meta { font-size: 11.5px; color: var(--muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .bprev-eff { font-size: 12px; line-height: 1.5; color: var(--text); margin-top: 8px; background: var(--panel2); border: 1px solid var(--border); border-radius: 5px; padding: 8px 10px; max-height: 168px; overflow-y: auto; }
-  .bmanage { border-top: 1px solid var(--border); padding: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-  .bmanage button, .bmanage select { grid-column: span 1; width: 100%; margin: 0; font-size: 11.5px; padding: 7px 8px; }
-  .bmanage .full { grid-column: span 2; }
+  .bmanage { border-top: 1px solid var(--border); padding: 10px; }
   .bmanage select { background: var(--bg2); color: var(--text); border: 1px solid var(--border); border-radius: 3px; clip-path: none; }
+  /* Secondary deck actions (copy/export/share/import/undo/etc.) collapse behind
+     a disclosure — building and previewing the deck should own the space, not
+     a permanent wall of buttons most sessions never touch. */
+  .bmanage-more summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); padding: 6px 2px; user-select: none; }
+  .bmanage-more summary::-webkit-details-marker { display: none; }
+  .bmanage-more summary::before { content: '▸'; font-size: 9px; display: inline-block; transition: transform 0.15s; }
+  .bmanage-more[open] summary::before { transform: rotate(90deg); }
+  .bmanage-more summary:hover { color: var(--text); }
+  .bmanage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding-top: 6px; }
+  .bmanage-grid button { grid-column: span 1; width: 100%; margin: 0; font-size: 11.5px; padding: 7px 8px; }
+  .bmanage-grid button.full { grid-column: span 2; }
 
   /* center: deck */
   .bhead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
@@ -419,6 +429,8 @@
   .bresult .bnoimg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--muted); padding: 3px; text-align: center; }
   .bresult .rin { position: absolute; right: 2px; top: 2px; background: var(--gold); color: #14100a; font-size: 10px; font-weight: 800; border-radius: 3px; padding: 0 4px; }
   .bresult-empty { grid-column: 1/-1; color: var(--muted); font-size: 12px; text-align: center; padding: 18px; }
+  .bresult.banned, .bslot.banned { outline: 2px solid var(--danger); outline-offset: -2px; filter: grayscale(0.6); }
+  .ban-badge { position: absolute; left: 0; bottom: 0; right: 0; background: var(--danger); color: #fff; font-size: 9px; font-weight: 800; text-align: center; padding: 1px 2px; letter-spacing: 0.03em; text-transform: uppercase; }
 
   /* Touch action sheet: right-click/shift-click don't exist on phones, so a
      tap opens this instead. */
@@ -553,7 +565,7 @@ const FIELD_HALF_LIFE_DAYS = 28;
 
 // Riftbound: 40-card main deck, opening hand of 4, mulligan up to 2 (set aside,
 // draw replacements, recycle to the bottom — no reshuffle), then draw 1 per turn.
-const HAND_SIZE = 4, MULLIGAN_MAX = 2, DECK_SIZE = 40;
+const HAND_SIZE = 4, MULLIGAN_MAX = 2, DECK_SIZE = 40, SIDEBOARD_SIZE = 10;
 
 const PLACEMENT_RANK = { '1st': 0, '2nd': 1, '3rd': 2, 'Top 4': 3, 'Top 8': 4, 'Top 16': 5 };
 
@@ -587,6 +599,10 @@ function gemsFor(name) {
 // pool in full, field.js covers every card any scraped deck plays.
 function cardInfo(name) {
   return (window.CARDS && CARDS[name]) || (window.FIELD && FIELD.cards[name]) || null;
+}
+function isBanned(name) {
+  const info = cardInfo(name);
+  return !!(info && info.banned);
 }
 
 const VIEWS = {
@@ -710,7 +726,7 @@ function consensusExtras(decks = globalDecks) {
   decks.forEach(d => (d.battlefields || []).forEach(b => { bfFreq[b.name] = (bfFreq[b.name] || 0) + 1; }));
   const bfs = Object.entries(bfFreq).map(([name, n]) => ({ name, n })).sort((a, b) => b.n - a.n);
 
-  // weighted consensus sideboard, filled to 8
+  // weighted consensus sideboard, filled to SIDEBOARD_SIZE
   const sideStats = {};
   decks.forEach(d => (d.sideboard || []).forEach(c => {
     if (!sideStats[c.name]) sideStats[c.name] = { score: 0, decksIn: 0, counts: [], weights: [] };
@@ -723,8 +739,8 @@ function consensusExtras(decks = globalDecks) {
   Object.entries(sideStats).map(([name, s]) => ({ name, ...s, copies: weightedAverage(s.counts, s.weights) }))
     .sort((a, b) => b.score - a.score)
     .forEach(c => {
-      if (total >= 8) return;
-      const copies = Math.min(c.copies, 8 - total);
+      if (total >= SIDEBOARD_SIZE) return;
+      const copies = Math.min(c.copies, SIDEBOARD_SIZE - total);
       if (copies > 0) { side.push({ ...c, copies }); total += copies; }
     });
 
@@ -2488,8 +2504,8 @@ function sideChanged() {
 }
 function addToSideboard(name) {
   // With an empty box we are scoring the consensus sideboard, so "add" has to
-  // mean "add to that" — otherwise the first click silently swaps 8 cards for 1
-  // and coverage falls.
+  // mean "add to that" — otherwise the first click silently swaps SIDEBOARD_SIZE
+  // cards for 1 and coverage falls.
   const { list } = currentSideboard();
   const counts = {};
   list.forEach(c => counts[c.name] = c.count);
@@ -2578,7 +2594,7 @@ function runSideboardOptimizer() {
   const startCounts = {};
   list.forEach(c => startCounts[c.name] = c.count);
   const before = sideboardScore(list, rows);
-  const { counts, moves } = optimizeSideboard(startCounts, rows, 8);
+  const { counts, moves } = optimizeSideboard(startCounts, rows, SIDEBOARD_SIZE);
   const optimizedList = Object.entries(counts).map(([name, count]) => ({ name, count }));
   const after = sideboardScore(optimizedList, rows);
   const out = document.getElementById('sbOptResults');
@@ -2728,7 +2744,7 @@ function coverageHTML() {
     html += '<div class="summary-box">Every archetype in the field sits at 50% coverage or better with this sideboard.</div>';
   }
 
-  html += '<h2>Sideboard optimizer</h2><p class="sub">Hill-climbs single-card swaps over your 8 slots, scoring the exact field-weighted timely coverage above — same weights, same threat-importance and answer-economy discounts. Consensus-optimal against the expected field, the same way the Build view\'s optimizer is consensus-optimal for the main 40.</p>' +
+  html += '<h2>Sideboard optimizer</h2><p class="sub">Hill-climbs single-card swaps over your ' + SIDEBOARD_SIZE + ' slots, scoring the exact field-weighted timely coverage above — same weights, same threat-importance and answer-economy discounts. Consensus-optimal against the expected field, the same way the Build view\'s optimizer is consensus-optimal for the main 40.</p>' +
     '<button onclick="runSideboardOptimizer()">Optimize sideboard</button><div id="sbOptResults" style="margin-top:10px"></div>';
 
   // ---- Reverse pass: what the field boards against YOU ----
@@ -2979,10 +2995,11 @@ document.addEventListener('keydown', e => {
 });
 
 function bAdd(name, sec) {
+  if (isBanned(name)) { toast(shortName(name) + ' is banned from sanctioned Constructed play'); return; }
   const counts = sec === 'side' ? bSide() : bMain();
   if ((counts[name] || 0) >= 3) { toast(shortName(name) + ' is already at 3 copies'); return; }
   if (sec !== 'side' && bTotal(bMain()) >= 40) { toast('Main deck is full (40)'); return; }
-  if (sec === 'side' && bTotal(bSide()) >= 8) { toast('Sideboard is full (8)'); return; }
+  if (sec === 'side' && bTotal(bSide()) >= SIDEBOARD_SIZE) { toast('Sideboard is full (' + SIDEBOARD_SIZE + ')'); return; }
   bCheckpoint();
   counts[name] = (counts[name] || 0) + 1;
   sec === 'side' ? writeSide(counts) : writeMain(counts);
@@ -2995,7 +3012,7 @@ function bAddPackage(name) {
   const counts = bMain();
   let added = 0;
   pkg.cards.forEach(c => {
-    if ((counts[c] || 0) < 3 && bTotal(counts) < 40) {
+    if (!isBanned(c) && (counts[c] || 0) < 3 && bTotal(counts) < 40) {
       counts[c] = (counts[c] || 0) + 1;
       added++;
     }
@@ -3130,7 +3147,7 @@ function bMove(name, from) {
   const dst = from === 'side' ? bMain() : bSide();
   if (!src[name]) return;
   if (from === 'side' && bTotal(bMain()) >= 40) { toast('Main deck is full (40)'); return; }
-  if (from === 'main' && bTotal(bSide()) >= 8) { toast('Sideboard is full (8)'); return; }
+  if (from === 'main' && bTotal(bSide()) >= SIDEBOARD_SIZE) { toast('Sideboard is full (' + SIDEBOARD_SIZE + ')'); return; }
   bCheckpoint();
   if (--src[name] <= 0) delete src[name];
   dst[name] = (dst[name] || 0) + 1;
@@ -3153,6 +3170,7 @@ function bRuneOut(from) {    // push 1 from `from` into the other domain
 }
 function bToggleBf(name) {
   const i = builderBf.indexOf(name);
+  if (i < 0 && isBanned(name)) { toast(shortName(name) + ' is banned from sanctioned Constructed play'); return; }
   if (i < 0 && builderBf.length >= 3) { toast('Pick at most 3 battlefields'); return; }
   bCheckpoint();
   if (i >= 0) builderBf.splice(i, 1);
@@ -3251,7 +3269,8 @@ function bPreviewHTML() {
   if (!name || !cardInfo(name)) return '<div class="bprev-img bprev-empty">' +
     (IS_TOUCH ? 'Tap any card for options and details.' : 'Hover any card to preview it here.') + '</div>';
   const info = cardInfo(name), img = imageMap[name];
-  let h = img ? '<img class="bprev-img" src="' + attr(img) + '" alt="">' : '<div class="bprev-img bprev-empty">' + escHtml(name) + '</div>';
+  const wideCls = info.type === 'Battlefield' ? ' wide' : '';
+  let h = img ? '<img class="bprev-img' + wideCls + '" src="' + attr(img) + '" alt="">' : '<div class="bprev-img' + wideCls + ' bprev-empty">' + escHtml(name) + '</div>';
   h += '<div class="bprev-name">' + escHtml(name) + '</div>';
   h += '<div class="bprev-meta">' + gemsFor(name) + '<span>' + escHtml([info.type, info.rarity].filter(Boolean).join(' · ')) + '</span></div>';
   if (info.effect) h += '<div class="bprev-eff">' + escHtml(info.effect).replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆') + '</div>';
@@ -3270,9 +3289,11 @@ function renderBuilderResults() {
   const slice = list.slice(builderSearch.page * BUILDER_PAGE, (builderSearch.page + 1) * BUILDER_PAGE);
   let h = slice.map(c => {
     const inDeck = (main[c.name] || 0) + (side[c.name] || 0);
-    return '<div class="bresult" data-bname="' + attr(c.name) + '" data-bsec="result" ' +
-      'title="' + attr(c.name + ' — click → main, right-click → sideboard') + '">' +
+    const banned = isBanned(c.name);
+    return '<div class="bresult' + (banned ? ' banned' : '') + '" data-bname="' + attr(c.name) + '" data-bsec="result" ' +
+      'title="' + attr(c.name + (banned ? ' — banned from sanctioned Constructed play' : ' — click → main, right-click → sideboard')) + '">' +
       (c.img ? '<img src="' + attr(c.img) + '" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(c.name) + '</div>') +
+      (banned ? '<span class="ban-badge">Banned</span>' : '') +
       (inDeck ? '<span class="rin">' + inDeck + '</span>' : '') + '</div>';
   }).join('');
   if (!list.length) h = '<div class="bresult-empty">No cards match those filters.</div>';
@@ -3321,7 +3342,7 @@ function builderHTML(N) {
   ensureBuilderDefaults();
   const main = bMain(), side = bSide();
   const mainTotal = bTotal(main), sideTotal = bTotal(side);
-  const valid = mainTotal === 40 && sideTotal <= 8;
+  const valid = mainTotal === 40 && sideTotal <= SIDEBOARD_SIZE;
   const runeTotal = Object.values(builderRunes).reduce((a, b) => a + b, 0);
   const price = priceTag(Object.entries(main).map(([name, count]) => ({ name, count })));
 
@@ -3329,19 +3350,21 @@ function builderHTML(N) {
   const optHTML = consensusVariants.map((v, i) => `<option value="${i}">${escHtml(v.label)}</option>`).join('');
   let left = '<div class="bpane left bcol"><div class="bprev" id="bPreview">' + bPreviewHTML() + '</div>' +
     '<div class="bmanage">' +
-    '<div style="display:flex; gap:4px; margin-bottom:4px;">' +
+    '<div style="display:flex; gap:4px;">' +
     '<select id="bConsensusSelect" style="flex:1" title="Select which consensus sub-archetype to load">' + optHTML + '</select>' +
     '<button onclick="bLoadConsensus()" title="Fill the builder with the selected consensus 40, runes, battlefields and sideboard">Load</button>' +
     '</div>' +
+    '<details class="bmanage-more"><summary>Deck actions</summary><div class="bmanage-grid">' +
     '<button onclick="copyDecklist()" title="Copy the full registrable deck">Copy deck</button>' +
     '<button onclick="exportMyDeckImage()" title="Save a shareable PNG">Export PNG</button>' +
     '<button onclick="shareDeckLink()" title="Copy a URL with your list encoded">Share link</button>' +
     '<button onclick="bImport()" title="Paste a decklist to import">Import list</button>' +
     '<button onclick="openPrintGuide()" title="A bring-to-the-table one-pager: your decklist plus top matchups by field weight">Print guide</button>' +
-    '<button onclick="submitToMeta()" title="Share this 40-card deck to the public community pool (anonymous). Community decks show up for everyone via the filter bar chip">Share to community</button>' +
+    '<button class="full" onclick="submitToMeta()" title="Share this 40-card deck to the public community pool (anonymous). Community decks show up for everyone via the filter bar chip">Share to community</button>' +
     '<button class="ghost" onclick="bUndo()" title="Undo the last builder change (Ctrl/Cmd+Z)">Undo</button>' +
     '<button class="ghost" onclick="bHelp()">Shortcuts</button>' +
     '<button class="ghost" onclick="bClear()" title="Empty the main deck and sideboard">Clear</button>' +
+    '</div></details>' +
     '</div>' +
     '<div class="bsim-panel" style="margin-top:10px; padding:10px; background:var(--panel2); border-radius:8px; border:1px solid var(--border)">' +
     '<div style="font-weight:bold; margin-bottom:6px; color:var(--gold)">Goldfish Simulator (T4)</div>' +
@@ -3380,15 +3403,16 @@ function builderHTML(N) {
   const bfOpts = [...new Set([...builderBf, ...ex.bfs.map(b => b.name)])];
   center += '<div class="bzone-h" style="margin-top:12px">Battlefields <span class="z-count">' + builderBf.length + '/3</span></div><div class="bbf">';
   bfOpts.slice(0, 6).forEach(name => {
-    const on = builderBf.includes(name), img = imageMap[name];
-    center += '<div class="bslot' + (on ? '' : ' off') + '" data-bf="' + attr(name) + '" title="' + attr(name + (on ? ' — click to remove' : ' — click to add')) + '">' +
-      (img ? '<img src="' + attr(img) + '" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') + '</div>';
+    const on = builderBf.includes(name), img = imageMap[name], banned = isBanned(name);
+    center += '<div class="bslot' + (on ? '' : ' off') + (banned ? ' banned' : '') + '" data-bf="' + attr(name) + '" title="' + attr(name + (banned ? ' — banned from sanctioned Constructed play' : (on ? ' — click to remove' : ' — click to add'))) + '">' +
+      (img ? '<img src="' + attr(img) + '" decoding="async" alt="">' : '<div class="bnoimg">' + escHtml(name) + '</div>') +
+      (banned ? '<span class="ban-badge">Banned</span>' : '') + '</div>';
   });
   center += '</div></div></div>';   // close .bbf, the rune .bzone, and .bzones
 
   // sideboard
   const sbScore = builderSideboardScore(side);
-  center += '<div class="bzone-h" style="margin-top:16px">Side Deck <span class="z-count">' + sideTotal + '/8</span>' +
+  center += '<div class="bzone-h" style="margin-top:16px">Side Deck <span class="z-count">' + sideTotal + '/' + SIDEBOARD_SIZE + '</span>' +
     (sbScore != null ? ' <span class="dist-badge" style="color:' + pctColor(sbScore) + '" title="Field-weighted timely coverage of this sideboard — the same score the Meta view\'s Sideboard coverage table and Optimize sideboard button use. Not a win rate.">' + pct(sbScore) + ' coverage</span>' : '') +
     '</div>';
   center += sideTotal
@@ -4955,6 +4979,7 @@ function updateBuilderPreview(name) {
     if (!info) { p.innerHTML = bPreviewHTML(); return; }
     let img = p.querySelector('img.bprev-img');
     if (!img) { p.innerHTML = bPreviewHTML(); img = p.querySelector('img.bprev-img'); if (!img) return; }
+    img.classList.toggle('wide', info.type === 'Battlefield');
     const src = imageMap[builderPreview];
     if (src && img.getAttribute('src') !== src) img.setAttribute('src', src);
     const nameEl = p.querySelector('.bprev-name'); if (nameEl) nameEl.textContent = builderPreview;

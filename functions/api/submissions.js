@@ -83,6 +83,8 @@ function buildSection(entries, cards, { types, maxCopies, maxEntries, label }) {
     const info = cards[e.name];
     if (!info || !types.includes(info.type))
       return { error: `${label}: "${e.name.slice(0, 60)}" is not a known ${types.join('/')} card` };
+    if (info.banned)
+      return { error: `${label}: "${e.name.slice(0, 60)}" is banned from sanctioned Constructed play` };
     total += e.count;
     rows.push({
       name: e.name,
@@ -137,10 +139,10 @@ export async function onRequestPost(context) {
     if (main.total !== 40) return json({ error: `main deck must total exactly 40 cards (got ${main.total})` }, 400);
 
     const side = buildSection(body.sideboard || [], cards, {
-      types: ['Unit', 'Spell', 'Gear'], maxCopies: 3, maxEntries: 8, label: 'sideboard',
+      types: ['Unit', 'Spell', 'Gear'], maxCopies: 3, maxEntries: 10, label: 'sideboard',
     });
     if (side.error) return json({ error: side.error }, 400);
-    if (side.total > 8) return json({ error: `sideboard must total at most 8 cards (got ${side.total})` }, 400);
+    if (side.total > 10) return json({ error: `sideboard must total at most 10 cards (got ${side.total})` }, 400);
 
     const runes = buildSection(body.runes || [], cards, {
       types: ['Rune'], maxCopies: 12, maxEntries: 6, label: 'runes',

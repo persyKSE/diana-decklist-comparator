@@ -11,7 +11,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When a player plays a spell, they may give a unit they control here +1 :rb_might: this turn.",
-  "price": 0.07
+  "price": 0.08,
+  "banned": false
  },
  "Acceptable Losses": {
   "code": "OGN-179",
@@ -31,7 +32,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
-  "price": 0.46
+  "price": 0.45,
+  "banned": false
  },
  "Baron Nashor": {
   "code": "UNL-147",
@@ -47,7 +49,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there. (It has &quot;Units can move here from anywhere.&quot;)\nI can't be chosen by enemy spells and abilities.\nOther friendly units have +2 :rb_might:.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Chaos Rune": {
   "code": "OGN-166",
@@ -61,7 +64,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": null,
-  "price": 0.16
+  "price": 0.11,
+  "banned": false
  },
  "Diana, Lunari": {
   "code": "UNL-079",
@@ -78,7 +82,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When a showdown begins here, you may pay :rb_energy_1:. If you do, [Predict], then reveal the top card of your Main Deck. If it's a spell, draw it. (To Predict, look at the top card of your Main Deck. You may recycle it.)",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Fizz, Trickster": {
   "code": "SFD-140",
@@ -96,7 +101,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When you play me, you may play a spell from your trash with Energy cost no more than :rb_energy_3:, ignoring its Energy cost. Recycle that spell after you play it. (You must still pay its Power cost.)",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Flash": {
   "code": "OGS-011",
@@ -110,7 +116,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nMove up to 2 friendly units to base.",
-  "price": 2.98
+  "price": 3.01,
+  "banned": false
  },
  "Gust": {
   "code": "OGN-169",
@@ -135,7 +142,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
-  "price": 0.17
+  "price": 0.16,
+  "banned": false
  },
  "Hard Bargain": {
   "code": "SFD-136",
@@ -155,7 +163,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
-  "price": 1.47
+  "price": 1.36,
+  "banned": false
  },
  "Hwei, Brooding Painter": {
   "code": "UNL-080",
@@ -172,7 +181,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I move, draw 1, then discard 1. Then, do the following based on the discarded card's type:Spell \u2014 Draw 1.Gear \u2014 Ready up to 2 runes.Unit \u2014 Give me +3 :rb_might: this turn.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Mind Rune": {
   "code": "OGN-089",
@@ -186,7 +196,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": null,
-  "price": 0.12
+  "price": 0.13,
+  "banned": false
  },
  "Moonfall": {
   "code": "UNL-198",
@@ -209,7 +220,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a battlefield where you have units. You may move up to one enemy unit to that battlefield. Then give enemy units there -2 :rb_might: this turn.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Ravenbloom Conservatory": {
   "code": "SFD-215",
@@ -223,7 +235,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",
-  "price": 0.12
+  "price": 0.15,
+  "banned": false
  },
  "Ravenbloom Student": {
   "code": "OGN-103",
@@ -239,7 +252,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When you play a spell, give me +1 :rb_might: this turn.",
-  "price": 0.25
+  "price": 0.23,
+  "banned": false
  },
  "Ride the Wind": {
   "code": "OGN-173",
@@ -253,7 +267,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
-  "price": 0.43
+  "price": 0.37,
+  "banned": false
  },
  "Singularity": {
   "code": "OGN-105",
@@ -273,7 +288,8 @@ window.CARDS = {
    }
   ],
   "effect": "Deal 6 to each of up to two units.",
-  "price": 0.88
+  "price": 0.85,
+  "banned": false
  },
  "Smoke Screen": {
   "code": "OGN-093",
@@ -293,7 +309,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn, to a minimum of 1 :rb_might:.",
-  "price": 0.19
+  "price": 0.16,
+  "banned": false
  },
  "Stacked Deck": {
   "code": "OGN-183",
@@ -307,7 +324,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
-  "price": 7.03
+  "price": 6.91,
+  "banned": false
  },
  "Star-Crossed": {
   "code": "UNL-128",
@@ -327,7 +345,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit and an enemy unit to their owners' hands.",
-  "price": 0.15
+  "price": 0.15,
+  "banned": false
  },
  "Stupefy": {
   "code": "OGN-095",
@@ -347,7 +366,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:. Draw 1.",
-  "price": 0.21
+  "price": 0.21,
+  "banned": false
  },
  "Targon's Peak": {
   "code": "OGN-289",
@@ -361,7 +381,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-  "price": 0.22
+  "price": 0.24,
+  "banned": false
  },
  "Tideturner": {
   "code": "OGN-199",
@@ -377,7 +398,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play me, you may choose a friendly unit. Move me to its location and it to my original location.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Traveling Merchant": {
   "code": "OGN-185",
@@ -393,7 +415,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I move, discard 1, then draw 1.",
-  "price": 0.2
+  "price": 0.21,
+  "banned": false
  },
  "Turn to Dust": {
   "code": "UNL-070",
@@ -413,7 +436,8 @@ window.CARDS = {
    }
   ],
   "effect": "Give a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.14
+  "price": 0.1,
+  "banned": false
  },
  "Vex, Apathetic": {
   "code": "UNL-150",
@@ -437,7 +461,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhen an opponent plays a unit while I'm at a battlefield, [Stun] it. They can't move it this turn. (It doesn't deal combat damage this turn.)",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Vex, Cheerless": {
   "code": "SFD-146",
@@ -455,7 +480,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "While I'm in combat, friendly spells cost :rb_energy_1::rb_rune_rainbow: less to a minimum of :rb_energy_1:, and enemy spells cost :rb_energy_1::rb_rune_rainbow: more.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Eclipse": {
   "code": "UNL-063",
@@ -475,7 +501,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.06
+  "price": 0.07,
+  "banned": false
  },
  "Kha'Zix, Mutating Horror": {
   "code": "UNL-143",
@@ -492,7 +519,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen I attack or defend, if an enemy unit is alone here, give me +2 :rb_might: this turn and gain 2 XP.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Rebuke": {
   "code": "OGN-172",
@@ -512,7 +540,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a unit at a battlefield to its owner's hand.",
-  "price": 0.25
+  "price": 0.25,
+  "banned": false
  },
  "Seat of Power": {
   "code": "SFD-217",
@@ -526,7 +555,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
-  "price": 0.13
+  "price": 0.13,
+  "banned": false
  },
  "Sprite Fountain": {
   "code": "UNL-078",
@@ -540,7 +570,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
-  "price": 3.07
+  "price": 3.67,
+  "banned": false
  },
  "Switcheroo": {
   "code": "SFD-145",
@@ -554,7 +585,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nSwap the Might of two units at the same battlefield this turn.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "The Arena's Greatest": {
   "code": "OGN-290",
@@ -568,7 +600,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
-  "price": 0.62
+  "price": 0.51,
+  "banned": true
  },
  "Consult the Past": {
   "code": "OGN-083",
@@ -582,7 +615,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Reaction] (Play any time, even before spells and abilities resolve.)\nDraw 2.",
-  "price": 0.15
+  "price": 0.16,
+  "banned": false
  },
  "Frigid Jewel": {
   "code": "UNL-074",
@@ -596,7 +630,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you draw your second card each turn, give a friendly unit +2 :rb_might: this turn.",
-  "price": 0.11
+  "price": 0.12,
+  "banned": false
  },
  "Rockfall Path": {
   "code": "SFD-216",
@@ -610,7 +645,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "Units can't be played here.",
-  "price": 0.13
+  "price": 0.12,
+  "banned": false
  },
  "Invert Timelines": {
   "code": "OGN-201",
@@ -630,7 +666,8 @@ window.CARDS = {
    }
   ],
   "effect": "Each player discards their hand, then draws 4.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Abandon": {
   "code": "UNL-131",
@@ -650,7 +687,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell. Return it to its owner's hand instead of putting it in their trash.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.28
+  "price": 0.29,
+  "banned": false
  },
  "Eager Apprentice": {
   "code": "OGN-084",
@@ -666,7 +704,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:.",
-  "price": 0.12
+  "price": 0.1,
+  "banned": false
  },
  "Angler Beast": {
   "code": "UNL-132",
@@ -693,7 +732,8 @@ window.CARDS = {
    }
   ],
   "effect": "When you play me, return all units with 2 :rb_might: or less to their owners' hands.",
-  "price": 0.14
+  "price": 0.13,
+  "banned": false
  },
  "Downwell": {
   "code": "SFD-147",
@@ -713,7 +753,8 @@ window.CARDS = {
    }
   ],
   "effect": "Return all units and gear to their owners' hands.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Fading Memories": {
   "code": "OGN-180",
@@ -733,7 +774,8 @@ window.CARDS = {
    }
   ],
   "effect": "Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.16
+  "price": 0.17,
+  "banned": false
  },
  "Last Rites": {
   "code": "SFD-150",
@@ -749,7 +791,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "[Equip] \u2014 :rb_rune_chaos:, Recycle 2 cards from your trash (Pay the cost: Attach this to a unit you control.)",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Mindsplitter": {
   "code": "OGN-192",
@@ -772,7 +815,8 @@ window.CARDS = {
    }
   ],
   "effect": "When you play me, choose an opponent. They reveal their hand. Choose a card from it, and they discard that card.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Unchecked Power": {
   "code": "OGN-123",
@@ -792,7 +836,8 @@ window.CARDS = {
    }
   ],
   "effect": "Exhaust all friendly units, then deal 12 to ALL units at battlefields.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Existential Dread": {
   "code": "UNL-134",
@@ -812,7 +857,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\n[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
-  "price": 0.2
+  "price": 0.2,
+  "banned": false
  },
  "Plundering Poro": {
   "code": "SFD-069",
@@ -830,7 +876,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I conquer, play a Gold gear token exhausted.",
-  "price": 0.18
+  "price": 0.13,
+  "banned": false
  },
  "Startipped Peak": {
   "code": "OGN-288",
@@ -844,7 +891,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, you may channel 1 rune exhausted.",
-  "price": 0.24
+  "price": 0.27,
+  "banned": false
  },
  "Thousand-Tailed Watcher": {
   "code": "OGN-116",
@@ -866,7 +914,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)\nWhen you play me, give enemy units -3 :rb_might: this turn, to a minimum of 1 :rb_might:.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Maddened Marauder": {
   "code": "OGN-191",
@@ -883,7 +932,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me, move a unit from a battlefield to its base.",
-  "price": 0.17
+  "price": 0.17,
+  "banned": false
  },
  "Retreat": {
   "code": "OGN-104",
@@ -903,7 +953,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
-  "price": 0.59
+  "price": 0.61,
+  "banned": false
  },
  "Sigil of the Storm": {
   "code": "OGN-287",
@@ -917,7 +968,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, recycle one of your runes.",
-  "price": 0.19
+  "price": 0.16,
+  "banned": false
  },
  "Time Warp": {
   "code": "OGN-122",
@@ -931,7 +983,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "Take a turn after this one. Banish this.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Hallowed Tomb": {
   "code": "OGN-281",
@@ -945,7 +998,8 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, you may return your Chosen Champion from your trash to your Champion Zone if it is empty.",
-  "price": 0.12
+  "price": 0.12,
+  "banned": false
  },
  "Wages of Pain": {
   "code": "SFD-070",
@@ -965,7 +1019,8 @@ window.CARDS = {
    }
   ],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. Play a Gold gear token exhausted.",
-  "price": 0.15
+  "price": 0.15,
+  "banned": false
  },
  "Edge of Night": {
   "code": "SFD-139",
@@ -981,7 +1036,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play this from face down, attach it to a unit you control here.\n[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Dr. Mundo, Expert": {
   "code": "OGN-109",
@@ -998,7 +1054,8 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "My Might is increased by the number of cards in your trash.\nAt the start of your Beginning Phase, recycle 3 from your trash.",
-  "price": null
+  "price": null,
+  "banned": false
  },
  "Treasure Hoard": {
   "code": "SFD-220",
@@ -1012,6 +1069,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted.",
-  "price": 0.09
+  "price": 0.11,
+  "banned": false
  }
 };
