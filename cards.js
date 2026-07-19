@@ -11,7 +11,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When a player plays a spell, they may give a unit they control here +1 :rb_might: this turn.",
-  "price": 0.08,
+  "price": 0.07,
   "banned": false,
   "set": "Unleashed"
  },
@@ -33,7 +33,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
-  "price": 0.45,
+  "price": 0.5,
   "banned": false,
   "set": "Origins"
  },
@@ -149,7 +149,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
-  "price": 0.16,
+  "price": 0.18,
   "banned": false,
   "set": "Origins"
  },
@@ -171,7 +171,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
-  "price": 1.36,
+  "price": 1.53,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -265,7 +265,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When you play a spell, give me +1 :rb_might: this turn.",
-  "price": 0.23,
+  "price": 0.25,
   "banned": false,
   "set": "Origins"
  },
@@ -281,7 +281,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
-  "price": 0.37,
+  "price": 0.41,
   "banned": false,
   "set": "Origins"
  },
@@ -303,7 +303,7 @@ window.CARDS = {
    }
   ],
   "effect": "Deal 6 to each of up to two units.",
-  "price": 0.85,
+  "price": 0.87,
   "banned": false,
   "set": "Origins"
  },
@@ -325,7 +325,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn, to a minimum of 1 :rb_might:.",
-  "price": 0.16,
+  "price": 0.15,
   "banned": false,
   "set": "Origins"
  },
@@ -341,7 +341,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
-  "price": 6.91,
+  "price": 7.04,
   "banned": false,
   "set": "Origins"
  },
@@ -363,7 +363,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit and an enemy unit to their owners' hands.",
-  "price": 0.15,
+  "price": 0.12,
   "banned": false,
   "set": "Unleashed"
  },
@@ -385,7 +385,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:. Draw 1.",
-  "price": 0.21,
+  "price": 0.19,
   "banned": false,
   "set": "Origins"
  },
@@ -437,7 +437,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I move, discard 1, then draw 1.",
-  "price": 0.21,
+  "price": 0.18,
   "banned": false,
   "set": "Origins"
  },
@@ -459,7 +459,7 @@ window.CARDS = {
    }
   ],
   "effect": "Give a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.1,
+  "price": 0.11,
   "banned": false,
   "set": "Unleashed"
  },
@@ -527,7 +527,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.07,
+  "price": 0.08,
   "banned": false,
   "set": "Unleashed"
  },
@@ -568,7 +568,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a unit at a battlefield to its owner's hand.",
-  "price": 0.25,
+  "price": 0.26,
   "banned": false,
   "set": "Origins"
  },
@@ -584,7 +584,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
-  "price": 0.13,
+  "price": 0.11,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -600,7 +600,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
-  "price": 3.67,
+  "price": 3.42,
   "banned": false,
   "set": "Unleashed"
  },
@@ -632,7 +632,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
-  "price": 0.51,
+  "price": 0.43,
   "banned": true,
   "set": "Origins"
  },
@@ -680,7 +680,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "Units can't be played here.",
-  "price": 0.12,
+  "price": 0.13,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -724,7 +724,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell. Return it to its owner's hand instead of putting it in their trash.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.29,
+  "price": 0.27,
   "banned": false,
   "set": "Unleashed"
  },
@@ -742,7 +742,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:.",
-  "price": 0.1,
+  "price": 0.09,
   "banned": false,
   "set": "Origins"
  },
@@ -815,7 +815,7 @@ window.CARDS = {
    }
   ],
   "effect": "Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.17,
+  "price": 0.16,
   "banned": false,
   "set": "Origins"
  },
@@ -902,7 +902,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\n[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
-  "price": 0.2,
+  "price": 0.27,
   "banned": false,
   "set": "Unleashed"
  },
@@ -922,7 +922,7 @@ window.CARDS = {
   ],
   "techTags": [],
   "effect": "When I conquer, play a Gold gear token exhausted.",
-  "price": 0.13,
+  "price": 0.15,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -938,7 +938,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, you may channel 1 rune exhausted.",
-  "price": 0.27,
+  "price": 0.26,
   "banned": false,
   "set": "Origins"
  },
@@ -1003,7 +1003,7 @@ window.CARDS = {
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
-  "price": 0.61,
+  "price": 0.57,
   "banned": false,
   "set": "Origins"
  },
@@ -1019,7 +1019,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, recycle one of your runes.",
-  "price": 0.16,
+  "price": 0.18,
   "banned": false,
   "set": "Origins"
  },
@@ -1051,7 +1051,7 @@ window.CARDS = {
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, you may return your Chosen Champion from your trash to your Champion Zone if it is empty.",
-  "price": 0.12,
+  "price": 0.11,
   "banned": false,
   "set": "Origins"
  },
