@@ -146,6 +146,7 @@ CREATE TABLE IF NOT EXISTS decks (
     event_id  INTEGER REFERENCES events(id),
     url       TEXT UNIQUE,
     archetype TEXT DEFAULT 'diana-scorn-of-the-moon',
+    source    TEXT DEFAULT 'mobalytics',
     fetched_at TEXT DEFAULT (datetime('now'))
 );
 
@@ -172,6 +173,8 @@ def migrate_schema(conn):
     if cols and "archetype" not in cols:
         conn.execute("ALTER TABLE decks ADD COLUMN archetype TEXT "
                      f"DEFAULT '{DIANA_ARCHETYPE}'")
+    if cols and "source" not in cols:
+        conn.execute("ALTER TABLE decks ADD COLUMN source TEXT DEFAULT 'mobalytics'")
     card_cols = [r[1] for r in conn.execute("PRAGMA table_info(cards)")]
     if card_cols and "effect" not in card_cols:
         conn.execute("ALTER TABLE cards ADD COLUMN effect TEXT")
@@ -284,22 +287,26 @@ def upsert_tournament(conn, slug, attendance, date, day1, day2, rows):
 
 
 def upsert_deck(conn, label, placement, event_name, weight, url, sections,
-                event_date=None, archetype=DIANA_ARCHETYPE):
+                event_date=None, archetype=DIANA_ARCHETYPE, source='mobalytics',
+                player=None):
     """Insert or replace a deck and its cards.
 
     sections: dict of section name -> {card name: count}, where section is
-    one of main / rune / battlefield / side.
+    one of main / rune / battlefield / side. `player` overrides the
+    label-splitting heuristic (needed for sources that give a real player
+    name that itself contains " - ").
     """
     event_id = upsert_event(conn, event_name, date=event_date)
-    player = label.split(" - ")[0].strip() if " - " in label else None
+    if player is None:
+        player = label.split(" - ")[0].strip() if " - " in label else None
     conn.execute(
-        "INSERT INTO decks (label, player, placement, weight, event_id, url, archetype) "
-        "VALUES (?, ?, ?, ?, ?, ?, ?) "
+        "INSERT INTO decks (label, player, placement, weight, event_id, url, archetype, source) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?) "
         "ON CONFLICT(label) DO UPDATE SET player = excluded.player, "
         "placement = excluded.placement, weight = excluded.weight, "
         "event_id = excluded.event_id, url = excluded.url, "
-        "archetype = excluded.archetype, fetched_at = datetime('now')",
-        (label, player, placement, weight, event_id, url, archetype),
+        "archetype = excluded.archetype, source = excluded.source, fetched_at = datetime('now')",
+        (label, player, placement, weight, event_id, url, archetype, source),
     )
     deck_id = conn.execute("SELECT id FROM decks WHERE label = ?", (label,)).fetchone()[0]
     conn.execute("DELETE FROM deck_cards WHERE deck_id = ?", (deck_id,))
@@ -340,7 +347,14 @@ def export_decks_json(conn, path=DECKS_JSON):
     """Write decks.json: every LEGENDS archetype's decks, fully enriched, keyed
     by archetype slug — this is the "yours" pool the viewer's legend switcher
     picks between (as opposed to field.json, which covers every archetype but
-    only enriches images for the LEGENDS ones)."""
+    only enriches images for the LEGENDS ones).
+
+    Deliberately restricted to source='mobalytics': this is the curated,
+    placement-weighted set the consensus builder/coach/optimizer are tuned
+    against. riftools.app's much larger per-deck ingestion (fetch_riftools.py)
+    only ever feeds field.json/meta.json — it must never silently reshape the
+    "yours" dataset these curated builds are computed from.
+    """
     out = {}
     for archetype, info in LEGENDS.items():
         decks_out = []
@@ -348,7 +362,7 @@ def export_decks_json(conn, path=DECKS_JSON):
             "SELECT d.*, e.name AS event_name, e.date AS event_date, "
             "e.attendance AS attendance "
             "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
-            "WHERE d.archetype = ? ORDER BY d.id", (archetype,)
+            "WHERE d.archetype = ? AND d.source = 'mobalytics' ORDER BY d.id", (archetype,)
         ).fetchall()
         for d in deck_rows:
             sections = {"main": [], "rune": [], "battlefield": [], "side": []}

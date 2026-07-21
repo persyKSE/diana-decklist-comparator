@@ -1808,5 +1808,521 @@ window.CARDS = {
   "price": null,
   "banned": false,
   "set": "Origins"
+ },
+ "Targon\\'s Peak": {
+  "code": "OGN-289",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you conquer here, ready 2 runes at the end of this turn.",
+  "price": 0.22,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Kha\\'Zix, Mutating Horror": {
+  "code": "UNL-143",
+  "cost": 4,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 4,
+  "rarity": "Rare",
+  "tags": [
+   "Kha'Zix",
+   "The Void"
+  ],
+  "techTags": [],
+  "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen I attack or defend, if an enemy unit is alone here, give me +2 :rb_might: this turn and gain 2 XP.",
+  "price": null,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "The Arena\\'s Greatest": {
+  "code": "OGN-290",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
+  "price": 0.45,
+  "banned": true,
+  "set": "Origins"
+ },
+ "Treasure Hunter": {
+  "code": "SFD-130",
+  "cost": 2,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 1,
+  "rarity": "Common",
+  "tags": [
+   "Shurima"
+  ],
+  "techTags": [],
+  "effect": "When I move, play a Gold gear token exhausted.",
+  "price": 0.13,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Sprite Burst": {
+  "code": "UNL-069",
+  "cost": 5,
+  "type": "Spell",
+  "color": [
+   "Mind"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "Play two ready 3 :rb_might: Sprite unit tokens with [Temporary]. (Kill each at the start of its controller's Beginning Phase, before scoring.)",
+  "price": 0.11,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Zhonya\\'s Hourglass": {
+  "code": "OGN-077",
+  "cost": 2,
+  "type": "Gear",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Rare",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
+  "price": null,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Crescent Strike": {
+  "code": "UNL-072",
+  "cost": 3,
+  "type": "Spell",
+  "color": [
+   "Mind"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a battlefield and an enemy unit there. Deal 4 to that unit and 1 to each other enemy unit there.",
+  "price": 0.08,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "The Candlelit Sanctum": {
+  "code": "OGN-291",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you conquer here, look at the top two cards of your Main Deck. You may recycle one or both of them. Put those you don't back in any order.",
+  "price": 0.27,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Star Spring": {
+  "code": "UNL-215",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "The first time a player plays a non-token unit here each turn, they may move another unit they control here to its base.",
+  "price": 0.07,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Forbidding Waste": {
+  "code": "UNL-210",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "While a unit here is defending alone, it has -2 :rb_might:. (It's alone if there are no other friendly units here.)",
+  "price": 0.06,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Bellows Breath": {
+  "code": "SFD-080",
+  "cost": 1,
+  "type": "Spell",
+  "color": [
+   "Mind"
+  ],
+  "might": null,
+  "rarity": "Rare",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "damage",
+    "label": "damage",
+    "size": 1
+   }
+  ],
+  "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_1::rb_rune_mind: (You may pay the additional cost to repeat this spell's effect.)\nDeal 1 to up to three units at the same location.",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Vilemaw": {
+  "code": "UNL-060",
+  "cost": 8,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 8,
+  "rarity": "Epic",
+  "tags": [
+   "Shadow Isles",
+   "Spider"
+  ],
+  "techTags": [],
+  "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nEnemy units here with less Might than me don't deal combat damage.\nWhen I hold, draw 1.",
+  "price": null,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Sivir, Mercenary": {
+  "code": "SFD-143",
+  "cost": 4,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 4,
+  "rarity": "Rare",
+  "tags": [
+   "Sivir",
+   "Shurima"
+  ],
+  "techTags": [],
+  "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)\nIf you've spent at least :rb_rune_rainbow::rb_rune_rainbow: this turn, I have +2 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Evelynn, Entrancing": {
+  "code": "UNL-141",
+  "cost": 2,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 2,
+  "rarity": "Rare",
+  "tags": [
+   "Evelynn",
+   "Demon"
+  ],
+  "techTags": [],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Backline] (I must be assigned combat damage last.)\nWhen you play me from face down on your turn, you may move an enemy unit at a different location to my battlefield.",
+  "price": null,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Frozen Fortress": {
+  "code": "UNL-212",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "damage",
+    "label": "damage",
+    "size": 1
+   }
+  ],
+  "effect": "At the start of each player's Beginning Phase, deal 1 to each unit here. (This happens before scoring.)",
+  "price": 0.06,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Cloth Armor": {
+  "code": "SFD-064",
+  "cost": 1,
+  "type": "Gear",
+  "color": [
+   "Mind"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [
+   "Equipment"
+  ],
+  "techTags": [],
+  "effect": "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)\n[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
+  "price": 0.08,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Yasuo, Windrider": {
+  "code": "OGN-205",
+  "cost": 5,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 4,
+  "rarity": "Epic",
+  "tags": [
+   "Yasuo",
+   "Ionia"
+  ],
+  "techTags": [],
+  "effect": "[Ganking] (I can move from battlefield to battlefield.)\nThe third time I move in a turn, you score 1 point.",
+  "price": null,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Block": {
+  "code": "OGN-057",
+  "cost": 2,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nGive a unit [Shield 3] and [Tank] this turn. (+3 :rb_might: while it's a defender. It must be assigned combat damage first.)",
+  "price": 0.2,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Cull": {
+  "code": "SFD-134",
+  "cost": 1,
+  "type": "Gear",
+  "color": [
+   "Chaos"
+  ],
+  "might": 1,
+  "rarity": "Uncommon",
+  "tags": [
+   "Equipment"
+  ],
+  "techTags": [],
+  "effect": "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
+  "price": 0.14,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Teemo, Scout": {
+  "code": "OGN-197",
+  "cost": 2,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 1,
+  "rarity": "Rare",
+  "tags": [
+   "Yordle",
+   "Teemo",
+   "Bandle City"
+  ],
+  "techTags": [],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nWhen you play me, give me +3 :rb_might: this turn.",
+  "price": null,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Whiteflame Protector": {
+  "code": "OGN-082",
+  "cost": 8,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 8,
+  "rarity": "Epic",
+  "tags": [
+   "Dragon",
+   "Mount Targon"
+  ],
+  "techTags": [],
+  "effect": "When you play me, give a unit +8 :rb_might: this turn.",
+  "price": null,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Ornn's Forge": {
+  "code": "SFD-213",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "While you control this battlefield, the first friendly non-token gear played each turn costs :rb_energy_1: less.",
+  "price": 0.09,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Vaults of Helia": {
+  "code": "UNL-219",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you hold here, your non-token units cost :rb_energy_1: more to play this turn.",
+  "price": 0.05,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Deadly Flourish": {
+  "code": "UNL-073",
+  "cost": 4,
+  "type": "Spell",
+  "color": [
+   "Mind"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "damage",
+    "label": "damage",
+    "size": 3
+   }
+  ],
+  "effect": "Deal 3 to an enemy unit. When it dies this turn, play a Gold gear token exhausted. (It has &quot;[Reaction][&gt;] Kill this, :rb_exhaust:: [Add] :rb_rune_rainbow:.&quot;)",
+  "price": 0.23,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Temptation": {
+  "code": "SFD-129",
+  "cost": 2,
+  "type": "Spell",
+  "color": [
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nMove an enemy unit to a location where there's a unit with the same controller.",
+  "price": 0.07,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "The Academy": {
+  "code": "UNL-216",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you hold here, give your next spell this turn [Repeat] equal to its base cost. (You may pay the additional cost to repeat the spell's effect.)",
+  "price": 0.05,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Chemtech Cask": {
+  "code": "SFD-063",
+  "cost": 1,
+  "type": "Gear",
+  "color": [
+   "Mind"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you play a spell on an opponent's turn, you may exhaust me to play a Gold gear token exhausted.",
+  "price": 0.09,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Seal of Discord": {
+  "code": "OGN-204",
+  "cost": null,
+  "type": "Gear",
+  "color": [
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Epic",
+  "tags": [],
+  "techTags": [],
+  "effect": ":rb_exhaust:: [Reaction] \u2014 [Add] :rb_rune_chaos:. (Abilities that add resources can't be reacted to.)",
+  "price": null,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Bone Skewer": {
+  "code": "UNL-139",
+  "cost": 2,
+  "type": "Spell",
+  "color": [
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Rare",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "stun",
+    "label": "stun",
+    "size": null
+   }
+  ],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nChoose a battlefield. An opponent reveals their hand. You may choose a unit from it. They play that unit to that battlefield, ignoring any and all costs. When they do, [Stun] it. (It doesn't deal combat damage this turn.)",
+  "price": null,
+  "banned": false,
+  "set": "Unleashed"
  }
 };
