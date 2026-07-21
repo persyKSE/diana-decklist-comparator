@@ -4359,6 +4359,36 @@ function renderRealWinrates(weights) {
   return html;
 }
 
+// riftools.app's own archetype ranking (meta_tier_list snapshot) — a much
+// larger real-match sample (thousands of decks) than this site's own scraped
+// top-cut lists, so it's shown as its own ranked table rather than folded
+// into "The field" (which is scoped to decks this project has scraped).
+function renderTierList() {
+  if (!window.RIFTOOLS || !RIFTOOLS.tierList || !RIFTOOLS.tierList.length) return '';
+  const list = [...RIFTOOLS.tierList].sort((a, b) => (b.standingScore || 0) - (a.standingScore || 0));
+  let html = '<h2>Meta tier list</h2>';
+  html += '<p class="sub">riftools.app\'s own archetype ranking over a much larger real-match sample than this site\'s scraped top-cut lists. Sourced from <a href="' +
+    attr(RIFTOOLS.sourceUrl) + '" target="_blank" rel="noopener">riftools.app</a>' +
+    (RIFTOOLS.tierListPublishedAt ? ', published ' + escHtml(RIFTOOLS.tierListPublishedAt.slice(0, 10)) : '') + '.</p>';
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Tier</th><th>Archetype</th><th class="num">Play rate</th>' +
+    '<th class="num">Top 25%</th><th>Trend</th><th class="num">Sample</th></tr></thead><tbody>';
+  list.forEach(t => {
+    const known = !!FIELD.archetypes[t.slug];
+    const mine = t.slug === selectedLegend;
+    const trendColor = t.trend === 'Rising' ? 'var(--lock)' : t.trend === 'Falling' ? 'var(--danger)' : 'var(--muted)';
+    html += '<tr' + (known ? ' style="cursor:pointer' + (mine ? ';font-weight:700' : '') + '" onclick="openArch(\'' + t.slug + '\')"' : '') + '>' +
+      '<td><span class="dist-badge">' + escHtml(t.tier || '—') + '</span></td>' +
+      '<td>' + escHtml(t.name) + (mine ? ' ★' : '') + '</td>' +
+      '<td class="num">' + (t.playRate != null ? t.playRate.toFixed(1) + '%' : '—') + '</td>' +
+      '<td class="num">' + (t.top25Rate != null ? t.top25Rate.toFixed(1) + '%' : '—') + '</td>' +
+      '<td style="font-size:12px;color:' + trendColor + '">' + escHtml(t.trend || '—') +
+      (t.trendDelta != null ? ' (' + (t.trendDelta > 0 ? '+' : '') + t.trendDelta.toFixed(1) + ')' : '') + '</td>' +
+      '<td class="num">' + (t.sample != null ? t.sample.toLocaleString() : '—') + '</td></tr>';
+  });
+  html += '</tbody></table></div>';
+  return html;
+}
+
 function renderArchList() {
   const tw = threatWeights();
   const weights = tw.rows;
@@ -4400,6 +4430,7 @@ function renderArchList() {
   html += '<p class="sub">Conversion is archetype-level across ' + ((window.META && META.performance && META.performance.fieldDay1) || 0).toLocaleString() +
     ' recorded decks; a dash means that legend never cleared the 20-deck minimum. Trend compares the last three events to everything before them (unweighted) and needs at least four events.</p>';
 
+  html += renderTierList();
   html += renderRealWinrates(weights);
 
   html += '<h2>Sideboard coverage</h2>';
