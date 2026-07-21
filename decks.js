@@ -260,7 +260,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 6,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -640,7 +640,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -666,7 +666,7 @@ window.DECKS = {
           {
             "name": "Seat of Power",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/SFD-217.webp",
+            "image": "cache/images/Seat_of_Power.webp",
             "code": "SFD-217",
             "cost": null,
             "type": "Battlefield",
@@ -678,7 +678,7 @@ window.DECKS = {
           {
             "name": "The Arena's Greatest",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-290.webp",
+            "image": "cache/images/The_Arena_s_Greatest.webp",
             "code": "OGN-290",
             "cost": null,
             "type": "Battlefield",
@@ -1044,7 +1044,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -1070,7 +1070,7 @@ window.DECKS = {
           {
             "name": "Rockfall Path",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+            "image": "cache/images/Rockfall_Path.webp",
             "code": "SFD-216",
             "cost": null,
             "type": "Battlefield",
@@ -1412,7 +1412,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -1438,7 +1438,7 @@ window.DECKS = {
           {
             "name": "Rockfall Path",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+            "image": "cache/images/Rockfall_Path.webp",
             "code": "SFD-216",
             "cost": null,
             "type": "Battlefield",
@@ -1779,7 +1779,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -1805,7 +1805,7 @@ window.DECKS = {
           {
             "name": "Rockfall Path",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/SFD-216.webp",
+            "image": "cache/images/Rockfall_Path.webp",
             "code": "SFD-216",
             "cost": null,
             "type": "Battlefield",
@@ -2170,7 +2170,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 6,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -2562,7 +2562,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -2588,7 +2588,7 @@ window.DECKS = {
           {
             "name": "Startipped Peak",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-288.webp",
+            "image": "cache/images/Startipped_Peak.webp",
             "code": "OGN-288",
             "cost": null,
             "type": "Battlefield",
@@ -2917,7 +2917,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -2943,7 +2943,7 @@ window.DECKS = {
           {
             "name": "Seat of Power",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/SFD-217.webp",
+            "image": "cache/images/Seat_of_Power.webp",
             "code": "SFD-217",
             "cost": null,
             "type": "Battlefield",
@@ -3320,7 +3320,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -3358,7 +3358,7 @@ window.DECKS = {
           {
             "name": "Sigil of the Storm",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-287.webp",
+            "image": "cache/images/Sigil_of_the_Storm.webp",
             "code": "OGN-287",
             "cost": null,
             "type": "Battlefield",
@@ -3723,7 +3723,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -3749,7 +3749,7 @@ window.DECKS = {
           {
             "name": "Hallowed Tomb",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-281.webp",
+            "image": "cache/images/Hallowed_Tomb.webp",
             "code": "OGN-281",
             "cost": null,
             "type": "Battlefield",
@@ -4103,7 +4103,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 6,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -4495,7 +4495,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -4887,7 +4887,7 @@ window.DECKS = {
           {
             "name": "Mind Rune",
             "count": 5,
-            "image": "https://static.dotgg.gg/riftbound/cards/OGN-089.webp",
+            "image": "cache/images/Mind_Rune.webp",
             "code": "OGN-089",
             "cost": null,
             "type": "Rune",
@@ -4925,7 +4925,7 @@ window.DECKS = {
           {
             "name": "Treasure Hoard",
             "count": 1,
-            "image": "https://static.dotgg.gg/riftbound/cards/SFD-220.webp",
+            "image": "cache/images/Treasure_Hoard.webp",
             "code": "SFD-220",
             "cost": null,
             "type": "Battlefield",

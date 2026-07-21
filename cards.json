@@ -11,7 +11,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When a player plays a spell, they may give a unit they control here +1 :rb_might: this turn.",
-  "price": 0.08,
+  "price": 0.06,
   "banned": false,
   "set": "Unleashed"
  },
@@ -33,7 +33,7 @@
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\nEach player kills one of their gear.",
-  "price": 0.45,
+  "price": 0.48,
   "banned": false,
   "set": "Origins"
  },
@@ -122,7 +122,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nMove up to 2 friendly units to base.",
-  "price": 3.01,
+  "price": 2.97,
   "banned": false,
   "set": "Proving Grounds"
  },
@@ -149,7 +149,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
-  "price": 0.16,
+  "price": 0.15,
   "banned": false,
   "set": "Origins"
  },
@@ -171,7 +171,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nCounter a spell unless its controller pays :rb_energy_2:.",
-  "price": 1.36,
+  "price": 1.63,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -206,7 +206,7 @@
   "tags": [],
   "techTags": [],
   "effect": null,
-  "price": 0.13,
+  "price": 0.14,
   "banned": false,
   "set": "Origins"
  },
@@ -265,7 +265,7 @@
   ],
   "techTags": [],
   "effect": "When you play a spell, give me +1 :rb_might: this turn.",
-  "price": 0.23,
+  "price": 0.24,
   "banned": false,
   "set": "Origins"
  },
@@ -281,7 +281,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nMove a friendly unit and ready it.",
-  "price": 0.37,
+  "price": 0.38,
   "banned": false,
   "set": "Origins"
  },
@@ -303,7 +303,7 @@
    }
   ],
   "effect": "Deal 6 to each of up to two units.",
-  "price": 0.85,
+  "price": 0.87,
   "banned": false,
   "set": "Origins"
  },
@@ -325,7 +325,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn, to a minimum of 1 :rb_might:.",
-  "price": 0.16,
+  "price": 0.15,
   "banned": false,
   "set": "Origins"
  },
@@ -341,7 +341,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nLook at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",
-  "price": 6.91,
+  "price": 7.29,
   "banned": false,
   "set": "Origins"
  },
@@ -401,7 +401,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-  "price": 0.24,
+  "price": 0.22,
   "banned": false,
   "set": "Origins"
  },
@@ -437,7 +437,7 @@
   ],
   "techTags": [],
   "effect": "When I move, discard 1, then draw 1.",
-  "price": 0.21,
+  "price": 0.17,
   "banned": false,
   "set": "Origins"
  },
@@ -459,7 +459,7 @@
    }
   ],
   "effect": "Give a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.1,
+  "price": 0.12,
   "banned": false,
   "set": "Unleashed"
  },
@@ -527,7 +527,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit -4 :rb_might: this turn.\n[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
-  "price": 0.07,
+  "price": 0.06,
   "banned": false,
   "set": "Unleashed"
  },
@@ -584,7 +584,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
-  "price": 0.13,
+  "price": 0.12,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -600,7 +600,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)\nWhen you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.\n[Deathknell][&gt;] Repeat this gear's play effect. (When this dies, get the effect.)",
-  "price": 3.67,
+  "price": 3.18,
   "banned": false,
   "set": "Unleashed"
  },
@@ -632,7 +632,7 @@
   "tags": [],
   "techTags": [],
   "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
-  "price": 0.51,
+  "price": 0.45,
   "banned": true,
   "set": "Origins"
  },
@@ -680,7 +680,7 @@
   "tags": [],
   "techTags": [],
   "effect": "Units can't be played here.",
-  "price": 0.12,
+  "price": 0.14,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -742,7 +742,7 @@
   ],
   "techTags": [],
   "effect": "While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:.",
-  "price": 0.1,
+  "price": 0.09,
   "banned": false,
   "set": "Origins"
  },
@@ -771,7 +771,7 @@
    }
   ],
   "effect": "When you play me, return all units with 2 :rb_might: or less to their owners' hands.",
-  "price": 0.13,
+  "price": 0.12,
   "banned": false,
   "set": "Unleashed"
  },
@@ -815,7 +815,7 @@
    }
   ],
   "effect": "Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-  "price": 0.17,
+  "price": 0.15,
   "banned": false,
   "set": "Origins"
  },
@@ -902,7 +902,7 @@
    }
   ],
   "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\n[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
-  "price": 0.2,
+  "price": 0.26,
   "banned": false,
   "set": "Unleashed"
  },
@@ -922,7 +922,7 @@
   ],
   "techTags": [],
   "effect": "When I conquer, play a Gold gear token exhausted.",
-  "price": 0.13,
+  "price": 0.17,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -938,7 +938,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, you may channel 1 rune exhausted.",
-  "price": 0.27,
+  "price": 0.26,
   "banned": false,
   "set": "Origins"
  },
@@ -981,7 +981,7 @@
   ],
   "techTags": [],
   "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me, move a unit from a battlefield to its base.",
-  "price": 0.17,
+  "price": 0.16,
   "banned": false,
   "set": "Origins"
  },
@@ -1003,7 +1003,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nReturn a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",
-  "price": 0.61,
+  "price": 0.56,
   "banned": false,
   "set": "Origins"
  },
@@ -1019,7 +1019,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, recycle one of your runes.",
-  "price": 0.16,
+  "price": 0.18,
   "banned": false,
   "set": "Origins"
  },
@@ -1051,7 +1051,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, you may return your Chosen Champion from your trash to your Champion Zone if it is empty.",
-  "price": 0.12,
+  "price": 0.1,
   "banned": false,
   "set": "Origins"
  },
@@ -1126,7 +1126,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted.",
-  "price": 0.11,
+  "price": 0.13,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1151,7 +1151,7 @@
    }
   ],
   "effect": "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
-  "price": 0.24,
+  "price": 0.22,
   "banned": false,
   "set": "Origins"
  },
@@ -1169,7 +1169,7 @@
   ],
   "techTags": [],
   "effect": "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
-  "price": 0.3,
+  "price": 0.32,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1185,7 +1185,7 @@
   "tags": [],
   "techTags": [],
   "effect": null,
-  "price": 0.12,
+  "price": 0.14,
   "banned": false,
   "set": "Origins"
  },
@@ -1201,7 +1201,7 @@
   "tags": [],
   "techTags": [],
   "effect": "Move an enemy unit.",
-  "price": 0.67,
+  "price": 0.65,
   "banned": false,
   "set": "Origins"
  },
@@ -1248,7 +1248,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell that costs no more than :rb_energy_4: and no more than :rb_rune_rainbow:.",
-  "price": 2.47,
+  "price": 2.12,
   "banned": false,
   "set": "Origins"
  },
@@ -1272,7 +1272,7 @@
    }
   ],
   "effect": "When you play me, you may kill a gear.",
-  "price": 0.14,
+  "price": 0.13,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1288,7 +1288,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn. Draw 1.",
-  "price": 1.73,
+  "price": 1.5,
   "banned": false,
   "set": "Origins"
  },
@@ -1346,7 +1346,7 @@
    }
   ],
   "effect": "When you play me, choose an opponent. They reveal their hand. You may pay 2 XP to choose a card from their hand. If you do, they discard that card and draw 1.",
-  "price": 0.09,
+  "price": 0.1,
   "banned": false,
   "set": "Unleashed"
  },
@@ -1381,7 +1381,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter an enemy spell or ability that chooses a friendly unit or gear.",
-  "price": 1.71,
+  "price": 1.99,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1436,7 +1436,7 @@
   ],
   "techTags": [],
   "effect": "When I move, draw 1.",
-  "price": 0.57,
+  "price": 0.81,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1484,7 +1484,7 @@
   "tags": [],
   "techTags": [],
   "effect": "Increase the points needed to win the game by 1.",
-  "price": 0.25,
+  "price": 0.22,
   "banned": true,
   "set": "Origins"
  },
@@ -1500,7 +1500,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Action] (Play on your turn or in showdowns.)\nIf an opponent's score is within 3 points of the Victory Score, this costs :rb_energy_2: less.\nDraw 1 and channel 1 rune exhausted.",
-  "price": 0.14,
+  "price": 0.15,
   "banned": false,
   "set": "Origins"
  },
@@ -1535,7 +1535,7 @@
   ],
   "techTags": [],
   "effect": "[Deathknell] \u2014 If I died alone, draw 1. (When I die, get the effect. I'm alone if there are no other friendly units here.)",
-  "price": 0.15,
+  "price": 0.17,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1595,7 +1595,7 @@
   ],
   "techTags": [],
   "effect": "You may play me to an open battlefield.",
-  "price": 0.19,
+  "price": 0.2,
   "banned": false,
   "set": "Origins"
  },
@@ -1649,7 +1649,7 @@
    }
   ],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\n[Stun] a unit. (It doesn't deal combat damage this turn.)\nIf you played this from your hand, draw 1.",
-  "price": 0.16,
+  "price": 0.17,
   "banned": false,
   "set": "Unleashed"
  },
@@ -1671,7 +1671,7 @@
    }
   ],
   "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell.",
-  "price": 0.44,
+  "price": 0.43,
   "banned": false,
   "set": "Origins"
  },
@@ -1687,7 +1687,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nPlay a 2 :rb_might: Sand Soldier unit token.",
-  "price": 0.12,
+  "price": 0.13,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1719,7 +1719,7 @@
   "tags": [],
   "techTags": [],
   "effect": "When you hold here, draw 1.",
-  "price": 0.24,
+  "price": 0.22,
   "banned": false,
   "set": "Origins"
  },
@@ -1738,7 +1738,7 @@
   ],
   "techTags": [],
   "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)",
-  "price": 0.04,
+  "price": 0.05,
   "banned": false,
   "set": "Spiritforged"
  },
@@ -1754,7 +1754,7 @@
   "tags": [],
   "techTags": [],
   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nMove a unit from a battlefield to its base.",
-  "price": 0.08,
+  "price": 0.09,
   "banned": true,
   "set": "Origins"
  },
