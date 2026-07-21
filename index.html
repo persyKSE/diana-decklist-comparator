@@ -5016,7 +5016,10 @@ function render() {
   document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.view === currentView));
   document.getElementById('deckCount').textContent = allDecks.length + ' decks loaded';
   document.title = legend.name + ' Deck Lab';
-  const brandEl = document.getElementById('brandText'); if (brandEl) brandEl.textContent = legend.name + ' Deck Lab';
+  // Brand stays generic (not legend.name) — it's a fixed-width, nowrap strip
+  // tuned to fit the sidebar for "Riftbound Deck Lab"; a legend name of
+  // arbitrary length would overflow it, and the switcher right below already
+  // shows which legend is selected.
   const sw = document.getElementById('legendSwitch'); if (sw && sw.value !== selectedLegend) sw.value = selectedLegend;
   renderLastUpdated();
   if (document.getElementById('bResults')) renderBuilderResults();   // fill the builder's search grid
