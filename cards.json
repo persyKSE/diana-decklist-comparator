@@ -1129,5 +1129,684 @@
   "price": 0.11,
   "banned": false,
   "set": "Spiritforged"
+ },
+ "Adaptatron": {
+  "code": "OGN-056",
+  "cost": 4,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 3,
+  "rarity": "Uncommon",
+  "tags": [
+   "Mech",
+   "Piltover"
+  ],
+  "techTags": [
+   {
+    "tag": "gearHate",
+    "label": "gear hate",
+    "size": null
+   }
+  ],
+  "effect": "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
+  "price": 0.24,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Boots of Swiftness": {
+  "code": "SFD-133",
+  "cost": 3,
+  "type": "Gear",
+  "color": [
+   "Chaos"
+  ],
+  "might": 2,
+  "rarity": "Uncommon",
+  "tags": [
+   "Equipment"
+  ],
+  "techTags": [],
+  "effect": "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
+  "price": 0.3,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Calm Rune": {
+  "code": "OGN-042",
+  "cost": null,
+  "type": "Rune",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": null,
+  "price": 0.12,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Charm": {
+  "code": "OGN-043",
+  "cost": 1,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "Move an enemy unit.",
+  "price": 0.67,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Defiant Dance": {
+  "code": "SFD-196",
+  "cost": 1,
+  "type": "Spell",
+  "color": [
+   "Calm",
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Epic",
+  "tags": [
+   "Irelia"
+  ],
+  "techTags": [
+   {
+    "tag": "shrink",
+    "label": "shrink",
+    "size": 2
+   }
+  ],
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn and another unit -2 :rb_might: this turn.",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Defy": {
+  "code": "OGN-045",
+  "cost": 1,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "counter",
+    "label": "counter",
+    "size": null
+   }
+  ],
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell that costs no more than :rb_energy_4: and no more than :rb_rune_rainbow:.",
+  "price": 2.47,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Disarming Rake": {
+  "code": "SFD-032",
+  "cost": 3,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 2,
+  "rarity": "Common",
+  "tags": [
+   "Demacia"
+  ],
+  "techTags": [
+   {
+    "tag": "gearHate",
+    "label": "gear hate",
+    "size": null
+   }
+  ],
+  "effect": "When you play me, you may kill a gear.",
+  "price": 0.14,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Discipline": {
+  "code": "OGN-058",
+  "cost": 2,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn. Draw 1.",
+  "price": 1.73,
+  "banned": false,
+  "set": "Origins"
+ },
+ "En Garde": {
+  "code": "OGN-046",
+  "cost": 1,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a friendly unit +1 :rb_might: this turn, then an additional +1 :rb_might: this turn if it is the only unit you control there.",
+  "price": 0.17,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Guardian Angel": {
+  "code": "SFD-051",
+  "cost": 2,
+  "type": "Gear",
+  "color": [
+   "Calm"
+  ],
+  "might": 1,
+  "rarity": "Rare",
+  "tags": [
+   "Equipment"
+  ],
+  "techTags": [],
+  "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Insightful Investigator": {
+  "code": "UNL-135",
+  "cost": 3,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 3,
+  "rarity": "Uncommon",
+  "tags": [
+   "Piltover"
+  ],
+  "techTags": [
+   {
+    "tag": "handAttack",
+    "label": "hand attack",
+    "size": null
+   }
+  ],
+  "effect": "When you play me, choose an opponent. They reveal their hand. You may pay 2 XP to choose a card from their hand. If you do, they discard that card and draw 1.",
+  "price": 0.09,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Irelia, Fervent": {
+  "code": "SFD-057",
+  "cost": 5,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 4,
+  "rarity": "Epic",
+  "tags": [
+   "Irelia",
+   "Ionia"
+  ],
+  "techTags": [],
+  "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhen you choose or ready me, give me +1 :rb_might: this turn.",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Not So Fast": {
+  "code": "SFD-045",
+  "cost": 2,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter an enemy spell or ability that chooses a friendly unit or gear.",
+  "price": 1.71,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Pyke, Returned": {
+  "code": "UNL-145",
+  "cost": 3,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 3,
+  "rarity": "Rare",
+  "tags": [
+   "Pyke",
+   "Bilgewater"
+  ],
+  "techTags": [],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Backline] (I must be assigned combat damage last.)\nOnce each turn, when an enemy unit dies while I'm at a battlefield, play a Gold gear token exhausted. (It has &quot;[Reaction][&gt;] Kill this, :rb_exhaust:: [Add] :rb_rune_rainbow:.&quot;)",
+  "price": null,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Scuttle Crab": {
+  "code": "UNL-053",
+  "cost": 2,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Rare",
+  "tags": [
+   "Bilgewater"
+  ],
+  "techTags": [],
+  "effect": "(Units with 0 :rb_might: can conquer and hold.)\nWhen you play me, draw 1.\n[Deathknell][&gt;] Choose an opponent. They reveal their hand. You can look at their facedown cards this turn. Gain 1 XP. (When I die, get the effects.)",
+  "price": null,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Stellacorn Herder": {
+  "code": "SFD-048",
+  "cost": 4,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 3,
+  "rarity": "Uncommon",
+  "tags": [
+   "Mount Targon"
+  ],
+  "techTags": [],
+  "effect": "When I move, draw 1.",
+  "price": 0.57,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Sunken Temple": {
+  "code": "SFD-218",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you conquer here with one or more [Mighty] units, you may pay :rb_energy_1: to draw 1. (A unit is Mighty while it has 5+ :rb_might:.)",
+  "price": 0.12,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Zhonya's Hourglass": {
+  "code": "OGN-077",
+  "cost": 2,
+  "type": "Gear",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Rare",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
+  "price": null,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Aspirant's Climb": {
+  "code": "OGN-276",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "Increase the points needed to win the game by 1.",
+  "price": 0.25,
+  "banned": true,
+  "set": "Origins"
+ },
+ "Find Your Center": {
+  "code": "OGN-047",
+  "cost": 3,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Action] (Play on your turn or in showdowns.)\nIf an opponent's score is within 3 points of the Victory Score, this costs :rb_energy_2: less.\nDraw 1 and channel 1 rune exhausted.",
+  "price": 0.14,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Heart of Dark Ice": {
+  "code": "SFD-052",
+  "cost": 3,
+  "type": "Gear",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Rare",
+  "tags": [],
+  "techTags": [],
+  "effect": ":rb_exhaust:: Give a unit +3 :rb_might: this turn.",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Lonely Poro": {
+  "code": "SFD-036",
+  "cost": 2,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 2,
+  "rarity": "Common",
+  "tags": [
+   "Poro",
+   "Freljord"
+  ],
+  "techTags": [],
+  "effect": "[Deathknell] \u2014 If I died alone, draw 1. (When I die, get the effect. I'm alone if there are no other friendly units here.)",
+  "price": 0.15,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Factory Recall": {
+  "code": "SFD-135",
+  "cost": 1,
+  "type": "Spell",
+  "color": [
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "bounce",
+    "label": "bounce",
+    "size": null
+   }
+  ],
+  "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a gear to its owner's hand.",
+  "price": 0.11,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Draven, Audacious": {
+  "code": "SFD-148",
+  "cost": 6,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 6,
+  "rarity": "Epic",
+  "tags": [
+   "Draven",
+   "Noxus"
+  ],
+  "techTags": [],
+  "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nThe first time I win a combat each turn, you score 1 point.\nWhen I die in combat, choose an opponent. They score 1 point.",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Sneaky Deckhand": {
+  "code": "OGN-176",
+  "cost": 3,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 2,
+  "rarity": "Common",
+  "tags": [
+   "Pirate",
+   "Bilgewater"
+  ],
+  "techTags": [],
+  "effect": "You may play me to an open battlefield.",
+  "price": 0.19,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Spirit Wheel": {
+  "code": "SFD-144",
+  "cost": 2,
+  "type": "Gear",
+  "color": [
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Rare",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you choose a friendly unit, you may pay :rb_energy_1: and exhaust this to draw 1.",
+  "price": null,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "The Syren": {
+  "code": "OGN-184",
+  "cost": 2,
+  "type": "Gear",
+  "color": [
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": ":rb_energy_1:, :rb_exhaust:: Move a friendly unit at a battlefield to your base.",
+  "price": 0.18,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Back Off": {
+  "code": "UNL-042",
+  "cost": 3,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "stun",
+    "label": "stun",
+    "size": null
+   }
+  ],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\n[Stun] a unit. (It doesn't deal combat damage this turn.)\nIf you played this from your hand, draw 1.",
+  "price": 0.16,
+  "banned": false,
+  "set": "Unleashed"
+ },
+ "Wind Wall": {
+  "code": "OGN-064",
+  "cost": 3,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [
+   {
+    "tag": "counter",
+    "label": "counter",
+    "size": null
+   }
+  ],
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell.",
+  "price": 0.44,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Desert's Call": {
+  "code": "SFD-031",
+  "cost": 2,
+  "type": "Spell",
+  "color": [
+   "Calm"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nPlay a 2 :rb_might: Sand Soldier unit token.",
+  "price": 0.12,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Zaun Warrens": {
+  "code": "OGN-298",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you conquer here, discard 1, then draw 1.",
+  "price": 0.23,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Grove of the God-Willow": {
+  "code": "OGN-280",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When you hold here, draw 1.",
+  "price": 0.24,
+  "banned": false,
+  "set": "Origins"
+ },
+ "Navori Scout": {
+  "code": "SFD-037",
+  "cost": 4,
+  "type": "Unit",
+  "color": [
+   "Calm"
+  ],
+  "might": 4,
+  "rarity": "Common",
+  "tags": [
+   "Yordle",
+   "Ionia"
+  ],
+  "techTags": [],
+  "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)",
+  "price": 0.04,
+  "banned": false,
+  "set": "Spiritforged"
+ },
+ "Fight or Flight": {
+  "code": "OGN-168",
+  "cost": 2,
+  "type": "Spell",
+  "color": [
+   "Chaos"
+  ],
+  "might": null,
+  "rarity": "Common",
+  "tags": [],
+  "techTags": [],
+  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nMove a unit from a battlefield to its base.",
+  "price": 0.08,
+  "banned": true,
+  "set": "Origins"
+ },
+ "Obelisk of Power": {
+  "code": "OGN-284",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "At the start of each player's first Beginning Phase, that player channels 1 rune.",
+  "price": 0.14,
+  "banned": true,
+  "set": "Origins"
+ },
+ "The Dreaming Tree": {
+  "code": "OGN-292",
+  "cost": null,
+  "type": "Battlefield",
+  "color": [
+   "Colorless"
+  ],
+  "might": null,
+  "rarity": "Uncommon",
+  "tags": [],
+  "techTags": [],
+  "effect": "When a player chooses a friendly unit here with a spell for the first time each turn, they draw 1.",
+  "price": 0.22,
+  "banned": true,
+  "set": "Origins"
+ },
+ "Rhasa the Sunderer": {
+  "code": "OGN-195",
+  "cost": 10,
+  "type": "Unit",
+  "color": [
+   "Chaos"
+  ],
+  "might": 6,
+  "rarity": "Rare",
+  "tags": [
+   "Spirit",
+   "Shadow Isles"
+  ],
+  "techTags": [],
+  "effect": "I cost :rb_energy_1: less for each card in your trash.",
+  "price": null,
+  "banned": false,
+  "set": "Origins"
  }
 }

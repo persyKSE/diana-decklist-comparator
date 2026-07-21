@@ -1,5 +1,19 @@
 window.FIELD = {
- "diana": "diana-scorn-of-the-moon",
+ "legends": [
+  {
+   "slug": "diana-scorn-of-the-moon",
+   "name": "Diana, Scorn of the Moon",
+   "legendSlug": "scorn-of-the-moon",
+   "heroImage": "Diana_Lunari.webp"
+  },
+  {
+   "slug": "irelia-blade-dancer",
+   "name": "Irelia, Blade Dancer",
+   "legendSlug": "blade-dancer",
+   "heroImage": "Irelia_BladeDancer.webp"
+  }
+ ],
+ "defaultLegend": "diana-scorn-of-the-moon",
  "archetypes": {
   "diana-scorn-of-the-moon": {
    "name": "Diana, Scorn of the Moon",
@@ -5127,102 +5141,6 @@ window.FIELD = {
       "Obelisk of Power",
       "Sunken Temple",
       "The Dreaming Tree"
-     ]
-    },
-    {
-     "label": "guubums - Hartford Best of (Irelia Blade Dancer)",
-     "player": "guubums",
-     "placement": "Best of",
-     "event": "Hartford Regional Qualifier",
-     "date": "2026-06-19",
-     "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-hartford-regional-qualifier-best-of-guubums",
-     "main": {
-      "Abandon": 1,
-      "Boots of Swiftness": 3,
-      "Charm": 3,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Guardian Angel": 2,
-      "Gust": 1,
-      "Irelia, Fervent": 1,
-      "Kha'Zix, Mutating Horror": 2,
-      "Not So Fast": 1,
-      "Pyke, Returned": 2,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 3,
-      "Star-Crossed": 1,
-      "Stellacorn Herder": 2,
-      "Tideturner": 3,
-      "Vex, Apathetic": 2
-     },
-     "side": {
-      "Adaptatron": 3,
-      "Gust": 1,
-      "Not So Fast": 1,
-      "Star-Crossed": 1,
-      "Switcheroo": 1,
-      "Vex, Cheerless": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Sunken Temple",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "comeback king - Utrecht Best of (Irelia Blade Dancer)",
-     "player": "comeback king",
-     "placement": "Best of",
-     "event": "Utrecht Regional Qualifier",
-     "date": "2026-06-12",
-     "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-utrecht-regional-qualifier-best-of-comeback-king",
-     "main": {
-      "Adaptatron": 1,
-      "Boots of Swiftness": 2,
-      "Charm": 1,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fizz, Trickster": 1,
-      "Guardian Angel": 2,
-      "Gust": 1,
-      "Irelia, Fervent": 1,
-      "Not So Fast": 1,
-      "Rebuke": 1,
-      "Rhasa the Sunderer": 2,
-      "Ride the Wind": 1,
-      "Scuttle Crab": 2,
-      "Stacked Deck": 3,
-      "Star-Crossed": 1,
-      "Stellacorn Herder": 3,
-      "Tideturner": 2,
-      "Traveling Merchant": 3,
-      "Vex, Apathetic": 1
-     },
-     "side": {
-      "Adaptatron": 1,
-      "Gust": 2,
-      "Not So Fast": 1,
-      "Star-Crossed": 1,
-      "Switcheroo": 1,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Targon's Peak",
-      "Zaun Warrens"
      ]
     }
    ]
@@ -13308,7 +13226,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When a player plays a spell, they may give a unit they control here +1 :rb_might: this turn.",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-205.webp",
+   "image": "cache/images/Abandoned_Hall.webp",
    "price": 0.08,
    "banned": false,
    "set": "Unleashed"
@@ -13361,7 +13279,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": null,
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-166.webp",
+   "image": "cache/images/Chaos_Rune.webp",
    "price": 0.11,
    "banned": false,
    "set": "Origins"
@@ -13532,7 +13450,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-215.webp",
+   "image": "cache/images/Ravenbloom_Conservatory.webp",
    "price": 0.15,
    "banned": false,
    "set": "Spiritforged"
@@ -13678,7 +13596,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-289.webp",
+   "image": "cache/images/Targon_s_Peak.webp",
    "price": 0.24,
    "banned": false,
    "set": "Origins"
@@ -14414,7 +14332,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": null,
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-042.webp",
+   "image": "cache/images/Calm_Rune.webp",
    "price": 0.12,
    "banned": false,
    "set": "Origins"
@@ -14444,7 +14362,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "Move an enemy unit.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-043.webp",
+   "image": "cache/images/Charm.webp",
    "price": 0.67,
    "banned": false,
    "set": "Origins"
@@ -14465,7 +14383,7 @@ window.FIELD = {
     }
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell that costs no more than :rb_energy_4: and no more than :rb_rune_rainbow:.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-045.webp",
+   "image": "cache/images/Defy.webp",
    "price": 2.47,
    "banned": false,
    "set": "Origins"
@@ -14488,7 +14406,7 @@ window.FIELD = {
     }
    ],
    "effect": "When you play me, you may kill a gear.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-032.webp",
+   "image": "cache/images/Disarming_Rake.webp",
    "price": 0.14,
    "banned": false,
    "set": "Spiritforged"
@@ -14503,7 +14421,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn. Draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-058.webp",
+   "image": "cache/images/Discipline.webp",
    "price": 1.73,
    "banned": false,
    "set": "Origins"
@@ -14539,7 +14457,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a friendly unit +1 :rb_might: this turn, then an additional +1 :rb_might: this turn if it is the only unit you control there.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-046.webp",
+   "image": "cache/images/En_Garde.webp",
    "price": 0.17,
    "banned": false,
    "set": "Origins"
@@ -14593,7 +14511,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "[Deathknell] \u2014 If I died alone, draw 1. (When I die, get the effect. I'm alone if there are no other friendly units here.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-036.webp",
+   "image": "cache/images/Lonely_Poro.webp",
    "price": 0.15,
    "banned": false,
    "set": "Spiritforged"
@@ -14726,7 +14644,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "(Units with 0 :rb_might: can conquer and hold.)\nWhen you play me, draw 1.\n[Deathknell][&gt;] Choose an opponent. They reveal their hand. You can look at their facedown cards this turn. Gain 1 XP. (When I die, get the effects.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-053.webp",
+   "image": "cache/images/Scuttle_Crab.webp",
    "price": null,
    "banned": false,
    "set": "Unleashed"
@@ -14741,7 +14659,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-077.webp",
+   "image": "cache/images/Zhonya_s_Hourglass.webp",
    "price": null,
    "banned": false,
    "set": "Origins"
@@ -14756,7 +14674,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "Increase the points needed to win the game by 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-276.webp",
+   "image": "cache/images/Aspirant_s_Climb.webp",
    "price": 0.25,
    "banned": true,
    "set": "Origins"
@@ -15930,7 +15848,7 @@ window.FIELD = {
     }
    ],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\n[Stun] a unit. (It doesn't deal combat damage this turn.)\nIf you played this from your hand, draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-042.webp",
+   "image": "cache/images/Back_Off.webp",
    "price": 0.16,
    "banned": false,
    "set": "Unleashed"
@@ -16238,7 +16156,7 @@ window.FIELD = {
     }
    ],
    "effect": "[Action] (Play on your turn or in showdowns.)\nReturn a gear to its owner's hand.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-135.webp",
+   "image": "cache/images/Factory_Recall.webp",
    "price": 0.11,
    "banned": false,
    "set": "Spiritforged"
@@ -16293,7 +16211,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When you conquer here, discard 1, then draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-298.webp",
+   "image": "cache/images/Zaun_Warrens.webp",
    "price": 0.23,
    "banned": false,
    "set": "Origins"
@@ -16610,7 +16528,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "[Action] (Play on your turn or in showdowns.)\nIf an opponent's score is within 3 points of the Victory Score, this costs :rb_energy_2: less.\nDraw 1 and channel 1 rune exhausted.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-047.webp",
+   "image": "cache/images/Find_Your_Center.webp",
    "price": 0.14,
    "banned": false,
    "set": "Origins"
@@ -16640,7 +16558,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter an enemy spell or ability that chooses a friendly unit or gear.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-045.webp",
+   "image": "cache/images/Not_So_Fast.webp",
    "price": 1.71,
    "banned": false,
    "set": "Spiritforged"
@@ -16745,7 +16663,7 @@ window.FIELD = {
     }
    ],
    "effect": "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-056.webp",
+   "image": "cache/images/Adaptatron.webp",
    "price": 0.24,
    "banned": false,
    "set": "Origins"
@@ -16762,7 +16680,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-133.webp",
+   "image": "cache/images/Boots_of_Swiftness.webp",
    "price": 0.3,
    "banned": false,
    "set": "Spiritforged"
@@ -16786,7 +16704,7 @@ window.FIELD = {
     }
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nGive a unit +2 :rb_might: this turn and another unit -2 :rb_might: this turn.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-196.webp",
+   "image": "cache/images/Defiant_Dance.webp",
    "price": null,
    "banned": false,
    "set": "Spiritforged"
@@ -16803,7 +16721,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-051.webp",
+   "image": "cache/images/Guardian_Angel.webp",
    "price": null,
    "banned": false,
    "set": "Spiritforged"
@@ -16826,7 +16744,7 @@ window.FIELD = {
     }
    ],
    "effect": "When you play me, choose an opponent. They reveal their hand. You may pay 2 XP to choose a card from their hand. If you do, they discard that card and draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-135.webp",
+   "image": "cache/images/Insightful_Investigator.webp",
    "price": 0.09,
    "banned": false,
    "set": "Unleashed"
@@ -16844,7 +16762,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nWhen you choose or ready me, give me +1 :rb_might: this turn.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-057.webp",
+   "image": "cache/images/Irelia_Fervent.webp",
    "price": null,
    "banned": false,
    "set": "Spiritforged"
@@ -16862,7 +16780,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Backline] (I must be assigned combat damage last.)\nOnce each turn, when an enemy unit dies while I'm at a battlefield, play a Gold gear token exhausted. (It has &quot;[Reaction][&gt;] Kill this, :rb_exhaust:: [Add] :rb_rune_rainbow:.&quot;)",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-145.webp",
+   "image": "cache/images/Pyke_Returned.webp",
    "price": null,
    "banned": false,
    "set": "Unleashed"
@@ -16879,7 +16797,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "When I move, draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-048.webp",
+   "image": "cache/images/Stellacorn_Herder.webp",
    "price": 0.57,
    "banned": false,
    "set": "Spiritforged"
@@ -16894,7 +16812,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When you conquer here with one or more [Mighty] units, you may pay :rb_energy_1: to draw 1. (A unit is Mighty while it has 5+ :rb_might:.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-218.webp",
+   "image": "cache/images/Sunken_Temple.webp",
    "price": 0.12,
    "banned": false,
    "set": "Spiritforged"
@@ -17312,7 +17230,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When you hold here, draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-280.webp",
+   "image": "cache/images/Grove_of_the_God_Willow.webp",
    "price": 0.24,
    "banned": false,
    "set": "Origins"
@@ -17664,7 +17582,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": ":rb_exhaust:: Give a unit +3 :rb_might: this turn.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-052.webp",
+   "image": "cache/images/Heart_of_Dark_Ice.webp",
    "price": null,
    "banned": false,
    "set": "Spiritforged"
@@ -18066,7 +17984,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)\nThe first time I win a combat each turn, you score 1 point.\nWhen I die in combat, choose an opponent. They score 1 point.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-148.webp",
+   "image": "cache/images/Draven_Audacious.webp",
    "price": null,
    "banned": false,
    "set": "Spiritforged"
@@ -18084,7 +18002,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "You may play me to an open battlefield.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-176.webp",
+   "image": "cache/images/Sneaky_Deckhand.webp",
    "price": 0.19,
    "banned": false,
    "set": "Origins"
@@ -18099,7 +18017,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When you choose a friendly unit, you may pay :rb_energy_1: and exhaust this to draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-144.webp",
+   "image": "cache/images/Spirit_Wheel.webp",
    "price": null,
    "banned": false,
    "set": "Spiritforged"
@@ -18114,7 +18032,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": ":rb_energy_1:, :rb_exhaust:: Move a friendly unit at a battlefield to your base.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-184.webp",
+   "image": "cache/images/The_Syren.webp",
    "price": 0.18,
    "banned": false,
    "set": "Origins"
@@ -18156,7 +18074,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "I cost :rb_energy_1: less for each card in your trash.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-195.webp",
+   "image": "cache/images/Rhasa_the_Sunderer.webp",
    "price": null,
    "banned": false,
    "set": "Origins"
@@ -18296,7 +18214,7 @@ window.FIELD = {
     }
    ],
    "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-064.webp",
+   "image": "cache/images/Wind_Wall.webp",
    "price": 0.44,
    "banned": false,
    "set": "Origins"
@@ -18513,7 +18431,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nPlay a 2 :rb_might: Sand Soldier unit token.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-031.webp",
+   "image": "cache/images/Desert_s_Call.webp",
    "price": 0.12,
    "banned": false,
    "set": "Spiritforged"
@@ -18755,7 +18673,7 @@ window.FIELD = {
    ],
    "techTags": [],
    "effect": "[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-037.webp",
+   "image": "cache/images/Navori_Scout.webp",
    "price": 0.04,
    "banned": false,
    "set": "Spiritforged"
@@ -18837,7 +18755,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nMove a unit from a battlefield to its base.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-168.webp",
+   "image": "cache/images/Fight_or_Flight.webp",
    "price": 0.08,
    "banned": true,
    "set": "Origins"
@@ -18852,7 +18770,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "At the start of each player's first Beginning Phase, that player channels 1 rune.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-284.webp",
+   "image": "cache/images/Obelisk_of_Power.webp",
    "price": 0.14,
    "banned": true,
    "set": "Origins"
@@ -18927,7 +18845,7 @@ window.FIELD = {
    "tags": [],
    "techTags": [],
    "effect": "When a player chooses a friendly unit here with a spell for the first time each turn, they draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-292.webp",
+   "image": "cache/images/The_Dreaming_Tree.webp",
    "price": 0.22,
    "banned": true,
    "set": "Origins"

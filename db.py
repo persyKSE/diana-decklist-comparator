@@ -2,7 +2,7 @@
 """
 db.py
 
-SQLite layer for the Diana decklist database (riftbound.db).
+SQLite layer for the Riftbound decklist database (riftbound.db).
 
 Tables:
     cards       full Riftbound card catalogue (populated by import_cards.py)
@@ -11,11 +11,15 @@ Tables:
     deck_cards  card name/count per deck, by section (main/rune/battlefield/side)
 
 The DB is the source of truth. Exports for the static viewer:
-    decks.json / decks.js   Diana decks only, fully enriched
+    decks.json / decks.js   LEGENDS archetypes' decks, fully enriched, keyed by
+                            archetype slug — the "yours" pool the viewer's
+                            legend switcher (LEGENDS below) picks between
     meta.json / meta.js     whole-field context: per-event archetype counts
-                            and cross-archetype card baselines
+                            and per-LEGENDS-archetype card baselines
     field.json / field.js   every archetype's decklists + a card index, so the
-                            viewer can explore the whole meta, not just Diana
+                            viewer can explore the whole meta, not just the
+                            legends you can build around; also carries the
+                            `legends` manifest the switcher UI reads
 
 CLI:
     python3 db.py migrate   one-time import of a legacy decks.json
@@ -45,10 +49,32 @@ IMAGE_DIR = Path(__file__).parent / "cache" / "images"
 
 DIANA_ARCHETYPE = "diana-scorn-of-the-moon"
 
-# Ladder brews: Diana sitemap decks with no verified tournament placement.
-# Stored under this synthetic event/placement so every consensus and meta
-# statistic can exclude them — the viewer shows them only behind an opt-in
-# filter chip, like community submissions.
+# Legends the viewer lets you build around ("yours"), as opposed to the other
+# ~40 archetypes in field.json which are only ever "the field"/opponents.
+# Adding a legend here is the whole backend side of that decision: it flows
+# into decks_config.json's shape, every export function below, and the
+# viewer's legend switcher (which reads this same registry from field.json).
+# `legend_slug` is how event_performance/legend_slug_for key the conversion
+# tables (the archetype slug is "<champion>-<legend>"; the legend alone is
+# what mobalytics prints in its Day1/Day2 table).
+LEGENDS = {
+    "diana-scorn-of-the-moon": {
+        "name": "Diana, Scorn of the Moon",
+        "legend_slug": "scorn-of-the-moon",
+        "hero_image": "Diana_Lunari.webp",
+    },
+    "irelia-blade-dancer": {
+        "name": "Irelia, Blade Dancer",
+        "legend_slug": "blade-dancer",
+        "hero_image": "Irelia_BladeDancer.webp",
+    },
+}
+DEFAULT_LEGEND = "diana-scorn-of-the-moon"
+
+# Ladder brews: sitemap decks of a LEGENDS archetype with no verified
+# tournament placement. Stored under this synthetic event/placement so every
+# consensus and meta statistic can exclude them — the viewer shows them only
+# behind an opt-in filter chip, like community submissions.
 LADDER_EVENT = "Mobalytics Ladder"
 LADDER_PLACEMENT = "Ladder"
 
@@ -311,54 +337,67 @@ def card_json(conn, name, count):
 
 
 def export_decks_json(conn, path=DECKS_JSON):
-    """Write decks.json (Diana decks, enriched) for the static viewer."""
-    decks_out = []
-    deck_rows = conn.execute(
-        "SELECT d.*, e.name AS event_name, e.date AS event_date, "
-        "e.attendance AS attendance "
-        "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
-        "WHERE d.archetype = ? ORDER BY d.id", (DIANA_ARCHETYPE,)
-    ).fetchall()
-    for d in deck_rows:
-        sections = {"main": [], "rune": [], "battlefield": [], "side": []}
-        for row in conn.execute(
-            "SELECT card_name, count, section FROM deck_cards WHERE deck_id = ? "
-            "ORDER BY section, card_name", (d["id"],)
-        ):
-            sections[row["section"]].append(
-                card_json(conn, row["card_name"], row["count"])
-            )
-        decks_out.append({
-            "label": d["label"],
-            "player": d["player"],
-            "placement": d["placement"],
-            "event": d["event_name"],
-            "event_date": d["event_date"],
-            "attendance": d["attendance"],
-            "weight": d["weight"],
-            "url": d["url"],
-            "cards": sections["main"],
-            "runes": sections["rune"],
-            "battlefields": sections["battlefield"],
-            "sideboard": sections["side"],
-        })
-    payload = json.dumps(decks_out, indent=2)
+    """Write decks.json: every LEGENDS archetype's decks, fully enriched, keyed
+    by archetype slug — this is the "yours" pool the viewer's legend switcher
+    picks between (as opposed to field.json, which covers every archetype but
+    only enriches images for the LEGENDS ones)."""
+    out = {}
+    for archetype, info in LEGENDS.items():
+        decks_out = []
+        deck_rows = conn.execute(
+            "SELECT d.*, e.name AS event_name, e.date AS event_date, "
+            "e.attendance AS attendance "
+            "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
+            "WHERE d.archetype = ? ORDER BY d.id", (archetype,)
+        ).fetchall()
+        for d in deck_rows:
+            sections = {"main": [], "rune": [], "battlefield": [], "side": []}
+            for row in conn.execute(
+                "SELECT card_name, count, section FROM deck_cards WHERE deck_id = ? "
+                "ORDER BY section, card_name", (d["id"],)
+            ):
+                sections[row["section"]].append(
+                    card_json(conn, row["card_name"], row["count"])
+                )
+            decks_out.append({
+                "label": d["label"],
+                "player": d["player"],
+                "placement": d["placement"],
+                "event": d["event_name"],
+                "event_date": d["event_date"],
+                "attendance": d["attendance"],
+                "weight": d["weight"],
+                "url": d["url"],
+                "cards": sections["main"],
+                "runes": sections["rune"],
+                "battlefields": sections["battlefield"],
+                "sideboard": sections["side"],
+            })
+        out[archetype] = {
+            "name": info["name"],
+            "legendSlug": info["legend_slug"],
+            "heroImage": info["hero_image"],
+            "decks": decks_out,
+        }
+    payload = json.dumps(out, indent=2)
     Path(path).write_text(payload)
     # decks.js mirrors decks.json so index.html also works from file://
     # (double-clicked in Finder), where browsers block fetch().
     Path(path).with_suffix(".js").write_text("window.DECKS = " + payload + ";\n")
-    return len(decks_out)
+    return sum(len(v["decks"]) for v in out.values())
 
 
 def export_meta_json(conn, path=META_JSON):
     """Write meta.json/meta.js: whole-field context for the viewer.
 
-    events: per event, deck counts by archetype (meta share of top cuts).
-    cardBase: for every card in a Diana main deck, how much of the
-    NON-Diana field mains it — separates format staples from Diana choices.
+    events: per event, deck counts by archetype (meta share of top cuts), plus
+    each LEGENDS archetype's Day1/Day2 conversion under perfByLegend.
+    cardBase: per LEGENDS archetype, for every card in ITS main/side, how much
+    of the field EXCLUDING that archetype mains it — separates format staples
+    from that legend's own tech. Keyed by archetype slug so the viewer's
+    legend switcher can pick the right baseline for whichever is selected.
     """
-    # Diana's legend name as it appears in the conversion tables.
-    DIANA_LEGEND_SLUG = "scorn-of-the-moon"
+    legend_slugs = {a: info["legend_slug"] for a, info in LEGENDS.items()}
 
     events = []
     for e in conn.execute(
@@ -373,20 +412,23 @@ def export_meta_json(conn, path=META_JSON):
             "GROUP BY archetype", (e["id"],)
         ):
             counts[row["archetype"]] = row["n"]
-        perf = conn.execute(
-            "SELECT day1, day2 FROM event_performance WHERE event_id = ? AND slug = ?",
-            (e["id"], DIANA_LEGEND_SLUG),
-        ).fetchone()
+        perf_by_legend = {}
+        for archetype, slug in legend_slugs.items():
+            perf = conn.execute(
+                "SELECT day1, day2 FROM event_performance WHERE event_id = ? AND slug = ?",
+                (e["id"], slug),
+            ).fetchone()
+            if perf:
+                perf_by_legend[archetype] = {"day1": perf["day1"], "day2": perf["day2"]}
         entry = {"name": e["name"], "date": e["date"], "counts": counts}
         if e["attendance"]:
             entry["attendance"] = e["attendance"]
         if e["day1_decks"]:
             entry["day1"] = e["day1_decks"]
             entry["day2"] = e["day2_decks"]
-        if perf:
-            entry["dianaDay1"] = perf["day1"]
-            entry["dianaDay2"] = perf["day2"]
-        if counts or perf:
+        if perf_by_legend:
+            entry["perfByLegend"] = perf_by_legend
+        if counts or perf_by_legend:
             events.append(entry)
 
     # Aggregate archetype performance across every event that published a
@@ -407,28 +449,32 @@ def export_meta_json(conn, path=META_JSON):
         "SELECT SUM(day1) AS d1, SUM(day2) AS d2 FROM event_performance"
     ).fetchone()
     performance = {
-        "dianaLegendSlug": DIANA_LEGEND_SLUG,
+        "legends": legend_slugs,
         "fieldDay1": field["d1"] or 0,
         "fieldDay2": field["d2"] or 0,
         "fieldConversion": (field["d2"] / field["d1"]) if field["d1"] else 0,
         "archetypes": perf_rows,
     }
 
-    other_total = conn.execute(
-        "SELECT COUNT(*) FROM decks WHERE archetype != ? "
-        "AND COALESCE(placement, '') NOT IN ('Best of', 'Ladder')", (DIANA_ARCHETYPE,)
-    ).fetchone()[0]
+    other_decks = {}
     card_base = {}
-    for row in conn.execute(
-        "SELECT dc.card_name, COUNT(DISTINCT dc.deck_id) AS n "
-        "FROM deck_cards dc JOIN decks d ON d.id = dc.deck_id "
-        "WHERE dc.section = 'main' AND d.archetype != ? "
-        "AND dc.card_name IN (SELECT DISTINCT card_name FROM deck_cards dc2 "
-        "  JOIN decks d2 ON d2.id = dc2.deck_id "
-        "  WHERE dc2.section IN ('main','side') AND d2.archetype = ?) "
-        "GROUP BY dc.card_name", (DIANA_ARCHETYPE, DIANA_ARCHETYPE)
-    ):
-        card_base[row["card_name"]] = row["n"]
+    for archetype in LEGENDS:
+        other_decks[archetype] = conn.execute(
+            "SELECT COUNT(*) FROM decks WHERE archetype != ? "
+            "AND COALESCE(placement, '') NOT IN ('Best of', 'Ladder')", (archetype,)
+        ).fetchone()[0]
+        base = {}
+        for row in conn.execute(
+            "SELECT dc.card_name, COUNT(DISTINCT dc.deck_id) AS n "
+            "FROM deck_cards dc JOIN decks d ON d.id = dc.deck_id "
+            "WHERE dc.section = 'main' AND d.archetype != ? "
+            "AND dc.card_name IN (SELECT DISTINCT card_name FROM deck_cards dc2 "
+            "  JOIN decks d2 ON d2.id = dc2.deck_id "
+            "  WHERE dc2.section IN ('main','side') AND d2.archetype = ?) "
+            "GROUP BY dc.card_name", (archetype, archetype)
+        ):
+            base[row["card_name"]] = row["n"]
+        card_base[archetype] = base
 
     archetype_totals = {}
     for row in conn.execute(
@@ -446,10 +492,9 @@ def export_meta_json(conn, path=META_JSON):
     ).fetchone()[0]
 
     meta = {
-        "diana": DIANA_ARCHETYPE,
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "latestEvent": latest_event,
-        "otherDecks": other_total,
+        "otherDecks": other_decks,
         "archetypes": archetype_totals,
         "events": events,
         "cardBase": card_base,
@@ -555,8 +600,14 @@ def export_field_json(conn, path=FIELD_JSON):
     # Deliberately no "generated" stamp: meta.json already carries one, and a
     # timestamp here would make field.json churn on every scrape, defeating the
     # weekly workflow's "did the data actually change?" check.
+    legends = [
+        {"slug": archetype, "name": info["name"], "legendSlug": info["legend_slug"],
+         "heroImage": info["hero_image"]}
+        for archetype, info in LEGENDS.items()
+    ]
     field = {
-        "diana": DIANA_ARCHETYPE,
+        "legends": legends,
+        "defaultLegend": DEFAULT_LEGEND,
         "archetypes": archetypes,
         "cards": cards,
     }
@@ -567,13 +618,15 @@ def export_field_json(conn, path=FIELD_JSON):
 
 
 def export_cards_json(conn, path=None):
-    """Write cards.json/cards.js: full details for every card that appears
-    in any Diana deck section — powers the viewer's card-detail modal."""
+    """Write cards.json/cards.js: full details for every card that appears in
+    any LEGENDS archetype's deck section — powers the viewer's card-detail
+    modal and (via builderPool) the deck-builder's search results."""
     path = path or (Path(__file__).parent / "cards.json")
     out = {}
+    placeholders = ",".join("?" for _ in LEGENDS)
     for row in conn.execute(
         "SELECT DISTINCT card_name FROM deck_cards dc JOIN decks d ON d.id = dc.deck_id "
-        "WHERE d.archetype = ?", (DIANA_ARCHETYPE,)
+        f"WHERE d.archetype IN ({placeholders})", tuple(LEGENDS.keys())
     ):
         name = row["card_name"]
         card = lookup_card(conn, name)
@@ -626,7 +679,7 @@ def main():
         k = export_cards_json(conn)
         a, c = export_field_json(conn)
         conn.commit()
-        print(f"Exported {n} Diana decks, meta for {m} events, {k} card details, "
+        print(f"Exported {n} legend decks, meta for {m} events, {k} card details, "
               f"{a} archetypes / {c} cards to field.json")
     elif cmd == "stats":
         for table in ("cards", "events", "decks", "deck_cards"):

@@ -1,8 +1,10 @@
 window.META = {
- "diana": "diana-scorn-of-the-moon",
- "generated": "2026-07-18T10:01:09+00:00",
+ "generated": "2026-07-21T18:23:54+00:00",
  "latestEvent": "2026-06-29",
- "otherDecks": 88,
+ "otherDecks": {
+  "diana-scorn-of-the-moon": 88,
+  "irelia-blade-dancer": 81
+ },
  "archetypes": {
   "annie-dark-child": 5,
   "azir-emperor-of-the-sands": 4,
@@ -41,7 +43,13 @@ window.META = {
    },
    "attendance": 1600,
    "day1": 1417,
-   "day2": 235
+   "day2": 235,
+   "perfByLegend": {
+    "irelia-blade-dancer": {
+     "day1": 132,
+     "day2": 33
+    }
+   }
   },
   {
    "name": "Lille Regional Qualifier",
@@ -54,7 +62,13 @@ window.META = {
     "master-yi-wuju-bladesman": 2
    },
    "day1": 1736,
-   "day2": 319
+   "day2": 319,
+   "perfByLegend": {
+    "irelia-blade-dancer": {
+     "day1": 253,
+     "day2": 70
+    }
+   }
   },
   {
    "name": "Atlanta Regional Qualifier",
@@ -69,7 +83,13 @@ window.META = {
    },
    "attendance": 1500,
    "day1": 1510,
-   "day2": 295
+   "day2": 295,
+   "perfByLegend": {
+    "irelia-blade-dancer": {
+     "day1": 178,
+     "day2": 40
+    }
+   }
   },
   {
    "name": "Sydney Regional Qualifier",
@@ -85,8 +105,16 @@ window.META = {
    "attendance": 1400,
    "day1": 1575,
    "day2": 193,
-   "dianaDay1": 56,
-   "dianaDay2": 12
+   "perfByLegend": {
+    "diana-scorn-of-the-moon": {
+     "day1": 56,
+     "day2": 12
+    },
+    "irelia-blade-dancer": {
+     "day1": 78,
+     "day2": 21
+    }
+   }
   },
   {
    "name": "Bologna Regional Qualifier",
@@ -99,7 +127,13 @@ window.META = {
     "viktor-herald-of-the-arcane": 1
    },
    "day1": 1466,
-   "day2": 246
+   "day2": 246,
+   "perfByLegend": {
+    "irelia-blade-dancer": {
+     "day1": 129,
+     "day2": 33
+    }
+   }
   },
   {
    "name": "Houston Regional Qualifier",
@@ -138,8 +172,16 @@ window.META = {
    "attendance": 1800,
    "day1": 1496,
    "day2": 265,
-   "dianaDay1": 98,
-   "dianaDay2": 21
+   "perfByLegend": {
+    "diana-scorn-of-the-moon": {
+     "day1": 98,
+     "day2": 21
+    },
+    "irelia-blade-dancer": {
+     "day1": 130,
+     "day2": 42
+    }
+   }
   },
   {
    "name": "S3 Regional Open Xian",
@@ -179,8 +221,16 @@ window.META = {
    "attendance": 1900,
    "day1": 1812,
    "day2": 321,
-   "dianaDay1": 175,
-   "dianaDay2": 41
+   "perfByLegend": {
+    "diana-scorn-of-the-moon": {
+     "day1": 175,
+     "day2": 41
+    },
+    "irelia-blade-dancer": {
+     "day1": 169,
+     "day2": 38
+    }
+   }
   },
   {
    "name": "Hartford Regional Qualifier",
@@ -196,8 +246,16 @@ window.META = {
    "attendance": 1900,
    "day1": 1663,
    "day2": 307,
-   "dianaDay1": 134,
-   "dianaDay2": 33
+   "perfByLegend": {
+    "diana-scorn-of-the-moon": {
+     "day1": 134,
+     "day2": 33
+    },
+    "irelia-blade-dancer": {
+     "day1": 93,
+     "day2": 23
+    }
+   }
   },
   {
    "name": "S3 Regional Open Changsha",
@@ -211,51 +269,102 @@ window.META = {
   }
  ],
  "cardBase": {
-  "Abandon": 13,
-  "Acceptable Losses": 4,
-  "Baron Nashor": 11,
-  "Consult the Past": 15,
-  "Diana, Lunari": 1,
-  "Downwell": 2,
-  "Dr. Mundo, Expert": 1,
-  "Eager Apprentice": 1,
-  "Eclipse": 12,
-  "Edge of Night": 16,
-  "Existential Dread": 7,
-  "Fading Memories": 2,
-  "Fizz, Trickster": 37,
-  "Flash": 26,
-  "Gust": 58,
-  "Hard Bargain": 43,
-  "Hwei, Brooding Painter": 4,
-  "Invert Timelines": 7,
-  "Kha'Zix, Mutating Horror": 15,
-  "Last Rites": 25,
-  "Mindsplitter": 34,
-  "Plundering Poro": 35,
-  "Ravenbloom Student": 23,
-  "Rebuke": 46,
-  "Retreat": 20,
-  "Ride the Wind": 56,
-  "Singularity": 40,
-  "Smoke Screen": 16,
-  "Sprite Fountain": 22,
-  "Stacked Deck": 85,
-  "Star-Crossed": 48,
-  "Stupefy": 54,
-  "Switcheroo": 25,
-  "Thousand-Tailed Watcher": 61,
-  "Tideturner": 57,
-  "Time Warp": 37,
-  "Traveling Merchant": 31,
-  "Turn to Dust": 7,
-  "Unchecked Power": 8,
-  "Vex, Apathetic": 41,
-  "Vex, Cheerless": 7,
-  "Wages of Pain": 27
+  "diana-scorn-of-the-moon": {
+   "Abandon": 13,
+   "Acceptable Losses": 4,
+   "Baron Nashor": 11,
+   "Consult the Past": 15,
+   "Diana, Lunari": 1,
+   "Downwell": 2,
+   "Dr. Mundo, Expert": 1,
+   "Eager Apprentice": 1,
+   "Eclipse": 12,
+   "Edge of Night": 16,
+   "Existential Dread": 7,
+   "Fading Memories": 2,
+   "Fizz, Trickster": 37,
+   "Flash": 26,
+   "Gust": 58,
+   "Hard Bargain": 43,
+   "Hwei, Brooding Painter": 4,
+   "Invert Timelines": 7,
+   "Kha'Zix, Mutating Horror": 15,
+   "Last Rites": 25,
+   "Mindsplitter": 34,
+   "Plundering Poro": 35,
+   "Ravenbloom Student": 23,
+   "Rebuke": 46,
+   "Retreat": 20,
+   "Ride the Wind": 56,
+   "Singularity": 40,
+   "Smoke Screen": 16,
+   "Sprite Fountain": 22,
+   "Stacked Deck": 85,
+   "Star-Crossed": 48,
+   "Stupefy": 54,
+   "Switcheroo": 25,
+   "Thousand-Tailed Watcher": 61,
+   "Tideturner": 57,
+   "Time Warp": 37,
+   "Traveling Merchant": 31,
+   "Turn to Dust": 7,
+   "Unchecked Power": 8,
+   "Vex, Apathetic": 41,
+   "Vex, Cheerless": 7,
+   "Wages of Pain": 27
+  },
+  "irelia-blade-dancer": {
+   "Abandon": 13,
+   "Adaptatron": 1,
+   "Back Off": 33,
+   "Boots of Swiftness": 10,
+   "Charm": 58,
+   "Defy": 80,
+   "Desert's Call": 15,
+   "Disarming Rake": 6,
+   "Discipline": 79,
+   "Downwell": 2,
+   "Draven, Audacious": 2,
+   "Edge of Night": 11,
+   "En Garde": 36,
+   "Factory Recall": 2,
+   "Fight or Flight": 15,
+   "Find Your Center": 12,
+   "Fizz, Trickster": 40,
+   "Flash": 29,
+   "Guardian Angel": 17,
+   "Gust": 58,
+   "Hard Bargain": 49,
+   "Heart of Dark Ice": 13,
+   "Irelia, Fervent": 18,
+   "Kha'Zix, Mutating Horror": 17,
+   "Lonely Poro": 35,
+   "Mindsplitter": 32,
+   "Navori Scout": 2,
+   "Not So Fast": 22,
+   "Pyke, Returned": 6,
+   "Rebuke": 39,
+   "Rhasa the Sunderer": 10,
+   "Ride the Wind": 48,
+   "Scuttle Crab": 31,
+   "Sneaky Deckhand": 4,
+   "Stacked Deck": 85,
+   "Star-Crossed": 46,
+   "Stellacorn Herder": 17,
+   "Switcheroo": 25,
+   "Tideturner": 53,
+   "Traveling Merchant": 41,
+   "Vex, Apathetic": 46,
+   "Vex, Cheerless": 13,
+   "Wind Wall": 3,
+   "Zhonya's Hourglass": 42
+  }
  },
  "performance": {
-  "dianaLegendSlug": "scorn-of-the-moon",
+  "legends": {
+   "diana-scorn-of-the-moon": "scorn-of-the-moon",
+   "irelia-blade-dancer": "blade-dancer"
+  },
   "fieldDay1": 13798,
   "fieldDay2": 2245,
   "fieldConversion": 0.16270473981736483,

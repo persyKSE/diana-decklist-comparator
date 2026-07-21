@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Diana Deck Lab</title>
-<meta name="description" content="A deck builder and meta lab for Riftbound's Diana, Scorn of the Moon: every winning tournament list distilled into a consensus build, draw odds, rune math and matchup coverage.">
-<meta property="og:title" content="Diana Deck Lab">
-<meta property="og:description" content="Build your Riftbound Diana deck against the evidence: every winning list, distilled.">
+<title>Riftbound Deck Lab</title>
+<meta name="description" content="A deck builder and meta lab for Riftbound: pick a legend to build around and see every winning tournament list distilled into a consensus build, draw odds, rune math and matchup coverage.">
+<meta property="og:title" content="Riftbound Deck Lab">
+<meta property="og:description" content="Build your Riftbound deck against the evidence: every winning list, distilled.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://diana-decklist-comparator.pages.dev/cache/images/Diana_Lunari.webp">
 <meta property="og:url" content="https://diana-decklist-comparator.pages.dev/">
@@ -74,6 +74,11 @@
   nav a .nico svg { width: 17px; height: 17px; }
   nav a:hover { background: var(--panel); color: var(--text); }
   nav a.active { background: var(--panel2); color: var(--gold-hi); box-shadow: inset 2px 0 0 var(--gold); }
+  .legend-switch {
+    background: var(--panel); color: var(--text); border: 1px solid var(--border); border-radius: 3px;
+    padding: 7px 8px; font-size: 12px; font-weight: 600; margin: 0 0 12px; cursor: pointer;
+  }
+  .legend-switch:hover { border-color: var(--gold-dim); }
   .side-foot { margin-top: auto; padding: 12px 8px 0; font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 10px; }
   #lastUpdated { line-height: 1.5; cursor: help; }
   .fbar-updated { display: none; }   /* sidebar shows it on desktop */
@@ -477,6 +482,7 @@
     .app { flex-direction: column; }
     .sidebar { width: auto; height: auto; position: sticky; top: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 6px; padding: 10px 12px; border-right: none; border-bottom: 1px solid var(--border); background: var(--bg); z-index: 60; }
     .brand { padding: 0 8px 0 4px; font-size: 15px; flex: 1 1 auto; }
+    .legend-switch { margin: 0; order: 2; }
     nav { flex-direction: row; flex-wrap: wrap; gap: 4px; flex: 1 1 100%; order: 3; }
     nav a { padding: 7px 12px; flex: 1 1 auto; justify-content: center; }
     nav a.active { box-shadow: inset 0 -2px 0 var(--gold); }
@@ -492,7 +498,8 @@
 
 <div class="app">
   <aside class="sidebar">
-    <div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Diana Deck Lab</div>
+    <div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> <span id="brandText">Riftbound Deck Lab</span></div>
+    <select id="legendSwitch" class="legend-switch" onchange="setLegend(this.value)" title="Which legend to build around"></select>
     <nav id="nav">
       <a href="#build" data-view="build"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 20.2 7.25 V16.75 L12 21.5 3.8 16.75 V7.25 Z"/><circle cx="12" cy="12" r="2.1" fill="currentColor" stroke="none"/></svg></span> Build</a>
       <a href="#analyze" data-view="analyze"><span class="nico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5 H20.5"/><path d="M4.5 15.5 9.5 9.5 13 12.5 19.5 4.5"/></svg></span> Analyze</a>
@@ -595,8 +602,8 @@ function gemsFor(name) {
   return html;
 }
 
-// Card details, from whichever catalogue has them: cards.js covers the Diana
-// pool in full, field.js covers every card any scraped deck plays.
+// Card details, from whichever catalogue has them: cards.js covers every
+// LEGENDS archetype's pool, field.js covers every card any scraped deck plays.
 function cardInfo(name) {
   return (window.CARDS && CARDS[name]) || (window.FIELD && FIELD.cards[name]) || null;
 }
@@ -605,8 +612,90 @@ function isBanned(name) {
   return !!(info && info.banned);
 }
 
+/* ---------------- Legend switcher ----------------
+   "Yours" used to mean Diana, full stop — FIELD.diana/META.diana were single
+   hardcoded slugs. field.json now carries a `legends` manifest (db.LEGENDS)
+   and decks.json is keyed by archetype instead of being a flat Diana-only
+   array; selectedLegend is the one pointer everything "yours" reads from. */
+let selectedLegend = null;
+
+function legendManifest() { return (window.FIELD && FIELD.legends) || []; }
+function currentLegend() {
+  return legendManifest().find(l => l.slug === selectedLegend) ||
+    legendManifest()[0] || { slug: selectedLegend, name: 'Deck Lab', heroImage: '' };
+}
+// Per-legend localStorage namespacing: two legends' in-progress builds, saves
+// and match logs must not clobber each other. ddl-theme/ddl-fieldmodel stay
+// unscoped — app-wide preferences, not "your deck" state.
+function storageKey(base) { return selectedLegend ? base + ':' + selectedLegend : base; }
+
+// One-time hand-off for users who had Diana data under the old unscoped keys
+// (before legend-scoping existed) — copy it under the resolved legend's
+// namespace so nobody's saved builds/match log silently vanish on upgrade.
+function migrateLegendStorage() {
+  ['ddl-coach', 'ddl-side', 'ddl-runes', 'ddl-bf', 'ddl-saves', 'ddl-matches'].forEach(base => {
+    try {
+      const scoped = storageKey(base);
+      if (localStorage.getItem(scoped) == null) {
+        const old = localStorage.getItem(base);
+        if (old != null) localStorage.setItem(scoped, old);
+      }
+    } catch (e) {}
+  });
+}
+
+function pickInitialLegend() {
+  const manifest = legendManifest();
+  let saved = null;
+  try { saved = localStorage.getItem('ddl-legend'); } catch (e) {}
+  if (saved && manifest.some(l => l.slug === saved)) return saved;
+  return (window.FIELD && FIELD.defaultLegend) || (manifest[0] && manifest[0].slug) || 'diana-scorn-of-the-moon';
+}
+
+// Everything derived from allDecks/coachText/etc that must reset when the
+// selected legend changes — shared by load() (first run) and setLegend().
+function loadLegendDecks() {
+  const entry = (window.DECKS && window.DECKS[selectedLegend]) || { decks: [] };
+  allDecks = entry.decks || [];
+  ladderDecks = allDecks.filter(d => d.placement === 'Ladder');
+  ladderDecks.forEach(d => { d._region = regionOf(d.event); d._cluster = -1; d._clusterName = 'Ladder'; });
+  allDecks = allDecks.filter(d => d.placement !== 'Ladder');
+  // The "not seen in any winning list" coach warning is meant to be scoped to
+  // the selected legend, so nameLookup/nonMainNames are rebuilt from scratch
+  // rather than accumulated across a legend switch.
+  nameLookup = {}; nonMainNames = new Set();
+  if (ladderDecks.length) indexCards(ladderDecks);
+  indexCards(allDecks);
+  computeFullClusters();
+}
+
+// Cards some winning list of the SELECTED legend has already played (main or
+// side) — the "nothing invented" pool for board/sideboard suggestions, as
+// opposed to builderPool() which deliberately spans the whole catalogue.
+function yourCardNames() {
+  const s = new Set();
+  allDecks.forEach(d => d.cards.concat(d.sideboard || []).forEach(c => s.add(c.name)));
+  return s;
+}
+
+function setLegend(slug) {
+  if (slug === selectedLegend || !legendManifest().some(l => l.slug === slug)) return;
+  selectedLegend = slug;
+  try { localStorage.setItem('ddl-legend', slug); } catch (e) {}
+  migrateLegendStorage();
+  try {
+    coachText = localStorage.getItem(storageKey('ddl-coach')) || '';
+    sideText = localStorage.getItem(storageKey('ddl-side')) || '';
+    const safeJSON = k => { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } };
+    builderRunes = safeJSON(storageKey('ddl-runes'));
+    builderBf = safeJSON(storageKey('ddl-bf'));
+  } catch (e) { coachText = ''; sideText = ''; builderRunes = null; builderBf = null; }
+  loadLegendDecks();
+  clearFilters();   // region/cluster/placement values are legend-specific; applyFilters() -> render()
+}
+
 const VIEWS = {
-  build:   { title: 'Build', desc: 'Build your deck with the evidence beside you: this lab watches every winning Diana list and turns it into a consensus build, live draw odds, rune math and coaching.', render: renderBuild },
+  build:   { title: 'Build', desc: () => 'Build your deck with the evidence beside you: this lab watches every winning ' + currentLegend().name + ' list and turns it into a consensus build, live draw odds, rune math and coaching.', render: renderBuild },
   analyze: { title: 'Analyze', desc: 'What the filtered field agrees and disagrees on: inclusion rates, card packages, curves, sub-archetypes, and shifts over time.', render: renderAnalyze },
   meta:    { title: 'Meta', desc: 'Every archetype in the scraped field — what they play, how often they convert, and how well your sideboard answers them. Reads the whole field, so the Build/Analyze filters do not apply here.', render: renderMeta },
   log:     { title: 'Match log', desc: 'Your own results, one tap per game. No event publishes per-match data — after enough logged games this page holds the only matchup table for your list in existence.', render: renderLog },
@@ -640,7 +729,8 @@ function indexCards(decks) {
   });
   // Every card the wider field plays, so the Meta view can render opposing
   // lists. Deliberately NOT added to nameLookup: the coach's "not seen in any
-  // winning Diana deck" warning depends on that staying Diana-only.
+  // winning deck" warning depends on that staying scoped to the selected
+  // legend (indexCards is only ever called with that legend's own decks).
   if (window.FIELD) {
     Object.entries(FIELD.cards).forEach(([name, c]) => {
       if (c.image && !imageMap[name]) imageMap[name] = c.image;
@@ -1005,7 +1095,7 @@ function findPackages(N) {
 }
 
 /* ---------------- Coach ---------------- */
-function saveCoach() { try { localStorage.setItem('ddl-coach', coachText); } catch (e) {} }
+function saveCoach() { try { localStorage.setItem(storageKey('ddl-coach'), coachText); } catch (e) {} }
 
 function coachInputChanged() {
   const ta = document.getElementById('coachInput');
@@ -1032,8 +1122,8 @@ function setCoach(text) {
 }
 
 /* ---- Saved-deck workspace ---- */
-function loadSaves() { try { return JSON.parse(localStorage.getItem('ddl-saves') || '{}'); } catch (e) { return {}; } }
-function writeSaves(o) { try { localStorage.setItem('ddl-saves', JSON.stringify(o)); } catch (e) {} }
+function loadSaves() { try { return JSON.parse(localStorage.getItem(storageKey('ddl-saves')) || '{}'); } catch (e) { return {}; } }
+function writeSaves(o) { try { localStorage.setItem(storageKey('ddl-saves'), JSON.stringify(o)); } catch (e) {} }
 
 function saveCurrentDeck() {
   const inp = document.getElementById('saveName');
@@ -1317,10 +1407,10 @@ function swapEvidence(name, adding) {
   let ev = s ? 'in ' + s.decksIn + '/' + N + ' winning decks (score ' + s.score.toFixed(1) + ')' : 'in no winning deck';
   const pkg = packageOf(name);
   if (pkg) ev += (adding ? '; completes' : '; breaks') + ' package with ' + pkg.cards.filter(n => n !== name).map(shortName).join(', ');
-  if (window.META && META.otherDecks) {
-    const base = META.cardBase[name] || 0;
-    const pct = Math.round(100 * base / META.otherDecks);
-    if (pct >= 25) ev += '; format staple (' + pct + '% of the non-Diana field)';
+  if (window.META && META.otherDecks && META.otherDecks[selectedLegend]) {
+    const base = (META.cardBase[selectedLegend] || {})[name] || 0;
+    const pct = Math.round(100 * base / META.otherDecks[selectedLegend]);
+    if (pct >= 25) ev += '; format staple (' + pct + '% of the field outside ' + currentLegend().name + ')';
   }
   return ev;
 }
@@ -1881,7 +1971,7 @@ function renderFilterBar() {
     (dupPlayers ? ' (−' + dupPlayers + ')' : '') + '</span>' +
     (haveAttendance ? '<span class="chip' + (filters.fieldWeight ? ' on' : '') + '" onclick="toggleFieldWeight()" title="Scale each deck&#39;s weight by the square root of (field size ÷ median field size), so a result from a 1900-player event counts for more than the same result from a 1100-player one">weight by field size</span>' : '') +
     (communityDecks.length ? '<span class="chip' + (filters.community ? ' on' : '') + '" onclick="toggleCommunity()" title="Include decks visitors submitted from the builder. They carry no tournament result, so treat the consensus math with them on as community opinion, not results evidence">community decks (' + communityDecks.length + ')</span>' : '') +
-    (ladderDecks.length ? '<span class="chip' + (filters.ladder ? ' on' : '') + '" onclick="toggleLadder()" title="Include scraped Mobalytics ladder brews — Diana lists with no verified tournament placement. Useful for spotting emerging tech early; they count half weight and never join the clustering">ladder brews (' + ladderDecks.length + ')</span>' : '') +
+    (ladderDecks.length ? '<span class="chip' + (filters.ladder ? ' on' : '') + '" onclick="toggleLadder()" title="Include scraped Mobalytics ladder brews — ' + attr(currentLegend().name) + ' lists with no verified tournament placement. Useful for spotting emerging tech early; they count half weight and never join the clustering">ladder brews (' + ladderDecks.length + ')</span>' : '') +
     '</div>';
   const anyOn = filters.region.size || filters.cluster.size || filters.placement.size || filters.from || filters.to || filters.dedupe || filters.fieldWeight || filters.community || filters.ladder;
   const poolN = allDecks.length + (filters.community ? communityDecks.length : 0) + (filters.ladder ? ladderDecks.length : 0);
@@ -1965,16 +2055,18 @@ function renderChangelog() {
     }
 
     const facts = [];
-    facts.push(e.arrived.length + ' Diana list' + (e.arrived.length === 1 ? '' : 's') + ' added (' +
+    const legendName = currentLegend().name;
+    facts.push(e.arrived.length + ' ' + legendName + ' list' + (e.arrived.length === 1 ? '' : 's') + ' added (' +
       e.arrived.map(d => d.placement).filter(Boolean).join(', ') + ') · ' + e.decksTotal + ' total');
     const clusterBits = Object.entries(e.clusters).map(([n, c]) => c + '× ' + n);
     if (clusterBits.length) facts.push(clusterBits.join(', '));
     if (e.ev) {
       const total = Object.values(e.ev.counts || {}).reduce((a, b) => a + b, 0);
-      const dn = (e.ev.counts || {})[META.diana] || 0;
-      if (total) facts.push('Diana was ' + dn + '/' + total + ' (' + Math.round(100 * dn / total) + '%) of the top cut');
-      if (e.ev.dianaDay1 && e.ev.day1) {
-        const dc = 100 * e.ev.dianaDay2 / e.ev.dianaDay1, fc = 100 * e.ev.day2 / e.ev.day1;
+      const dn = (e.ev.counts || {})[selectedLegend] || 0;
+      if (total) facts.push(legendName + ' was ' + dn + '/' + total + ' (' + Math.round(100 * dn / total) + '%) of the top cut');
+      const perf = e.ev.perfByLegend && e.ev.perfByLegend[selectedLegend];
+      if (perf && perf.day1 && e.ev.day1) {
+        const dc = 100 * perf.day2 / perf.day1, fc = 100 * e.ev.day2 / e.ev.day1;
         facts.push('converted ' + dc.toFixed(1) + '% into Day 2 vs field ' + fc.toFixed(1) + '% (' + (dc / fc).toFixed(2) + '×)');
       }
       if (e.ev.attendance) facts.push(e.ev.attendance.toLocaleString() + ' players');
@@ -2387,11 +2479,11 @@ function planFor(clockD, gasD) {
   return { label: 'Attrition', axis: 'twoForOne', why: 'even speed, even gas — card-for-card exchanges decide it' };
 }
 
-// Board suggestions routed to the plan's axis, from the Diana pool — so the
-// advice stops defaulting to removal when removal is not what the matchup asks.
+// Board suggestions routed to the plan's axis, from your legend's own pool —
+// so the advice stops defaulting to removal when removal is not what the matchup asks.
 function planSuggestions(axis, p, sideList) {
   const inSide = new Set(sideList.map(c => c.name));
-  const cand = Object.keys(window.CARDS || {}).filter(n => !inSide.has(n));
+  const cand = [...yourCardNames()].filter(n => !inSide.has(n));
   let scored = [];
   if (axis === 'econ') {
     scored = cand.filter(n => gasValue(n) > 0)
@@ -2473,14 +2565,14 @@ function threatWeights(opts) {
     rawN += FIELD.archetypes[slug].decks.length; effN += w;
   });
   const rows = slugs
-    .filter(s => includeMirror || s !== FIELD.diana)
+    .filter(s => includeMirror || s !== selectedLegend)
     .map(slug => {
       const conv = archConversion(slug);
       const share = totalW ? wOf[slug] / totalW : 0;
       return {
         slug, n: FIELD.archetypes[slug].decks.filter(d => d.placement !== 'Best of').length,
         nAll: FIELD.archetypes[slug].decks.length, effN: wOf[slug], share, conv,
-        weight: share * (conv ? conv.index : 1), mirror: slug === FIELD.diana,
+        weight: share * (conv ? conv.index : 1), mirror: slug === selectedLegend,
       };
     })
     .filter(r => r.effN > 0)
@@ -2498,7 +2590,7 @@ function currentSideboard() {
 
 function sideChanged() {
   sideText = document.getElementById('sideInput').value;
-  try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+  try { localStorage.setItem(storageKey('ddl-side'), sideText); } catch (e) {}
   clearTimeout(sideTimer);
   sideTimer = setTimeout(() => { const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML(); }, 350);
 }
@@ -2512,7 +2604,7 @@ function addToSideboard(name) {
   counts[name] = (counts[name] || 0) + 1;
   bCheckpoint();
   sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n');
-  try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+  try { localStorage.setItem(storageKey('ddl-side'), sideText); } catch (e) {}
   const ta = document.getElementById('sideInput'); if (ta) ta.value = sideText;
   const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML();
   toast('Added ' + name + ' to your sideboard');
@@ -2534,7 +2626,7 @@ function sideboardScore(list, rows) {
 function optimizeSideboard(startCounts, rows, slots) {
   const counts = {};
   Object.entries(startCounts).forEach(([n, c]) => { if (c > 0) counts[n] = Math.min(c, 3); });
-  const pool = Object.keys(window.CARDS || {}).filter(n => techTags(n).length || econTags(n).length || protectTags(n).length);
+  const pool = [...yourCardNames()].filter(n => techTags(n).length || econTags(n).length || protectTags(n).length);
   const size = () => Object.values(counts).reduce((a, b) => a + b, 0);
   const toList = c => Object.entries(c).map(([name, count]) => ({ name, count }));
   const moves = [];
@@ -2622,7 +2714,7 @@ function runSideboardOptimizer() {
   if (btn) btn.onclick = () => {
     bCheckpoint();
     sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n');
-    try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+    try { localStorage.setItem(storageKey('ddl-side'), sideText); } catch (e) {}
     const ta = document.getElementById('sideInput'); if (ta) ta.value = sideText;
     const o = document.getElementById('coverOut'); if (o) o.innerHTML = coverageHTML();
     toast('Optimized sideboard applied');
@@ -2653,7 +2745,7 @@ function coverageHTML() {
   const gaps = [...rows].filter(r => r.cov.coverage < 0.5).slice(0, 5);
 
   const sideNames = new Set(list.map(c => c.name));
-  const pool = Object.keys((window.CARDS) || {}).filter(n => !sideNames.has(n) && techTags(n).length);
+  const pool = [...yourCardNames()].filter(n => !sideNames.has(n) && techTags(n).length);
   const nCards = list.reduce((a, c) => a + c.count, 0);
   const haveLog = loadMatches().length > 0;
 
@@ -2664,7 +2756,7 @@ function coverageHTML() {
     'The first number (<strong>breadth</strong>) is the chance your rules text addresses a random card from an opponent\'s main deck, averaged across archetypes weighted by ' +
     'how much of the top-cut field each one is <em>and</em> how well it converts into Day 2, so a rare deck that wins counts for more than a popular deck that folds. ' +
     (tw.modelOn ? '<strong>Field model: ' + escHtml(fieldModelLabel()) + '</strong> — effective sample ' + tw.effN.toFixed(1) + ' of ' + tw.rawN + ' lists. ' : '') +
-    'The mirror is in the table too: other Diana players are part of your expected field.<br><br>' +
+    'The mirror is in the table too: other ' + escHtml(currentLegend().name) + ' players are part of your expected field.<br><br>' +
     'The gap between the two columns is your <strong>draw problem</strong>. Breadth counts a lone silver bullet the same as a full playset; the <strong>Timely</strong> column does not — ' +
     'a single counterspell "covers" all ' + Math.round(rows[0].p.spells) + ' spells ' + escHtml(FIELD.archetypes[rows[0].slug].name) +
     ' runs, but off a 40-card deck you will rarely have it in hand on the turn they cast one. Adding copies closes the gap: each extra copy raises the odds you have drawn one in time. ' +
@@ -2690,7 +2782,7 @@ function coverageHTML() {
     const tm = r.cov.timely;
     const rec = haveLog ? matchRecord(r.slug) : null;
     html += '<tr' + (r.mirror ? ' style="font-weight:600"' : '') + '><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' +
-      escHtml(r.mirror ? 'Diana — the mirror ★' : a.name) + '</span></td>' +
+      escHtml(r.mirror ? currentLegend().name + ' — the mirror ★' : a.name) + '</span></td>' +
       '<td class="num">' + pct(r.share) + '</td>' +
       '<td class="num" style="color:' + (r.conv && r.conv.index >= 1 ? 'var(--lock)' : 'var(--muted)') + '">' + (r.conv ? r.conv.index.toFixed(2) + '×' : '—') + '</td>' +
       '<td style="color:var(--muted);font-size:12px;">' + escHtml(board) + '</td>' +
@@ -2719,7 +2811,7 @@ function coverageHTML() {
   html += '</tbody></table></div>';
 
   if (gaps.length) {
-    html += '<h2>Coverage gaps</h2><p class="sub">The decks you are least equipped for, worst-weighted first. Each suggestion shows the coverage it would <em>add</em> against that archetype, and comes only from cards some winning Diana list has already played, main or side — nothing invented.</p>';
+    html += '<h2>Coverage gaps</h2><p class="sub">The decks you are least equipped for, worst-weighted first. Each suggestion shows the coverage it would <em>add</em> against that archetype, and comes only from cards some winning ' + escHtml(currentLegend().name) + ' list has already played, main or side — nothing invented.</p>';
     gaps.forEach(r => {
       const a = FIELD.archetypes[r.slug];
       const best = pool.map(n => ({ n, gain: marginalGain(n, list, r.p, r.cov.coverage) }))
@@ -2730,7 +2822,7 @@ function coverageHTML() {
         '<span style="color:var(--muted);font-size:12.5px;">' + escHtml(r.cov.name
           ? 'Best you have is ' + r.cov.name + ' — ' + answerWhy(r.cov.name, r.cov.tag, r.p) + '.'
           : 'Nothing in this sideboard interacts with them at all.') + '</span><br>';
-      if (!best.length) html += '<span style="color:var(--muted);font-size:12.5px;">No card in the Diana pool would add meaningful coverage.</span>';
+      if (!best.length) html += '<span style="color:var(--muted);font-size:12.5px;">No card in the ' + escHtml(currentLegend().name) + ' pool would add meaningful coverage.</span>';
       best.forEach(x => {
         const t = dominantTag(techTags(x.n), r.p, (cardInfo(x.n) || {}).cost);
         html += '<span class="pkg-chip" title="' + attr(answerWhy(x.n, t, r.p)) + '">' + cardImg(x.n) +
@@ -2831,9 +2923,9 @@ function coverageHTML() {
           ? sugg.map(x => '<span class="pkg-chip" title="' + attr(x.why) + '">' + cardImg(x.n) +
               '<span data-card="' + attr(x.n) + '">' + escHtml(shortName(x.n)) + '</span>' +
               '<button class="mini" style="margin-left:4px" onclick="addToSideboard(\'' + x.n.replace(/'/g, "\\'") + '\')">+</button></span>').join(' ')
-          : '<span style="color:var(--muted);font-size:12px;">nothing in the Diana pool moves this axis</span>';
+          : '<span style="color:var(--muted);font-size:12px;">nothing in the ' + escHtml(currentLegend().name) + ' pool moves this axis</span>';
         html += '<tr' + (r.mirror ? ' style="font-weight:600"' : '') + '><td><span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' +
-          escHtml(r.mirror ? 'Diana — the mirror ★' : a.name) + '</span></td>' +
+          escHtml(r.mirror ? currentLegend().name + ' — the mirror ★' : a.name) + '</span></td>' +
           '<td style="font-size:12.5px;">' + clockCell + '</td>' +
           '<td style="font-size:12.5px;" title="' + attr(combat ? pct(combat.tie) + ' of pairings tie on Might' : 'No unit data on one side') + '">' + combatCell + '</td>' +
           '<td class="num" title="' + attr('You ' + gasYou.toFixed(1) + ' vs their ' + gasThem.toFixed(1)) + '" style="color:' + (gasD >= 1.5 ? 'var(--lock)' : gasD <= -1.5 ? 'var(--danger)' : 'var(--muted)') + '">' +
@@ -2912,8 +3004,8 @@ const BUILDER_PAGE = 18;   // keep the DOM light: 18 card images, not 296
 let IS_TOUCH = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches);
 const DOMAINS = ['Fury', 'Calm', 'Mind', 'Body', 'Chaos', 'Order'];
 
-function saveRunes() { try { localStorage.setItem('ddl-runes', JSON.stringify(builderRunes)); } catch (e) {} }
-function saveBf() { try { localStorage.setItem('ddl-bf', JSON.stringify(builderBf)); } catch (e) {} }
+function saveRunes() { try { localStorage.setItem(storageKey('ddl-runes'), JSON.stringify(builderRunes)); } catch (e) {} }
+function saveBf() { try { localStorage.setItem(storageKey('ddl-bf'), JSON.stringify(builderBf)); } catch (e) {} }
 
 // Runes/battlefields aren't part of coachText, so seed them from the consensus
 // the first time (or if a saved value is unusable).
@@ -2948,7 +3040,7 @@ function bMain() { return parseDeckText(coachText).counts; }
 function bSide() { return parseDeckText(sideText).counts; }
 function bTotal(counts) { return Object.values(counts).reduce((a, b) => a + b, 0); }
 function writeMain(counts) { coachText = normalizeCoach(counts); saveCoach(); }
-function writeSide(counts) { sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n'); try { localStorage.setItem('ddl-side', sideText); } catch (e) {} }
+function writeSide(counts) { sideText = Object.entries(counts).map(([n, c]) => c + ' ' + n).join('\n'); try { localStorage.setItem(storageKey('ddl-side'), sideText); } catch (e) {} }
 
 /* ---- Builder undo ----
    Every tile is one misclick away from silently deleting a card. Snapshot the
@@ -2969,7 +3061,7 @@ function bCheckpoint() {
 }
 function bRestore(s) {
   coachText = s.main; saveCoach();
-  sideText = s.side; try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+  sideText = s.side; try { localStorage.setItem(storageKey('ddl-side'), sideText); } catch (e) {}
   builderRunes = { ...s.runes }; saveRunes();
   builderBf = [...s.bf]; saveBf();
   const ta = document.getElementById('coachInput'); if (ta) ta.value = coachText;
@@ -3198,7 +3290,7 @@ function bClear() {
   if (!coachText.trim() && !sideText.trim()) return;
   bCheckpoint();
   coachText = ''; sideText = ''; saveCoach();
-  try { localStorage.setItem('ddl-side', ''); } catch (e) {}
+  try { localStorage.setItem(storageKey('ddl-side'), ''); } catch (e) {}
   toast('Deck cleared');
   refreshBuilder();
 }
@@ -3400,7 +3492,7 @@ function builderHTML(N) {
 
   // zones: legend / runes+battlefields
   center += '<div class="bzones">';
-  center += '<div class="bzone"><div class="bzone-h">Legend</div><div class="blegend"><div class="bnoimg" style="height:175px;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:6px;box-shadow:var(--shadow)">Diana, Scorn of the Moon</div></div></div>';
+  center += '<div class="bzone"><div class="bzone-h">Legend</div><div class="blegend"><img class="blegend-img" data-legend-name="' + attr(currentLegend().name) + '" src="cache/images/' + attr(currentLegend().heroImage) + '" alt="' + attr(currentLegend().name) + '"></div></div>';
   center += '<div class="bzone"><div class="bzone-h">Runes <span class="z-count">' + runeTotal + '/12</span></div><div class="brunes">';
   const rd = Object.keys(builderRunes);
   rd.forEach((d, i) => {
@@ -3489,7 +3581,7 @@ function bImportApply() {
         }
       });
       coachText = mainLines.join('\n'); saveCoach();
-      sideText = sideLines.join('\n'); try { localStorage.setItem('ddl-side', sideText); } catch (e) {}
+      sideText = sideLines.join('\n'); try { localStorage.setItem(storageKey('ddl-side'), sideText); } catch (e) {}
       if (Object.keys(newRunes).length > 0) { builderRunes = newRunes; saveRunes(); }
       if (newBf.length > 0) { builderBf = newBf.slice(0, 3); saveBf(); }
       
@@ -3604,7 +3696,7 @@ function renderBuild(ctx) {
   // moment the deck has cards, so it never nags a returning user.
   if (!bTotal(bMain())) {
     html += '<div class="summary-box starthere"><strong>Start here.</strong> ' +
-      '<span class="st-step"><b>1</b> <button class="mini" style="margin:0" onclick="bLoadConsensus()">Load the consensus build</button> — the weighted average of every winning Diana list.</span> ' +
+      '<span class="st-step"><b>1</b> <button class="mini" style="margin:0" onclick="bLoadConsensus()">Load the consensus build</button> — the weighted average of every winning ' + escHtml(currentLegend().name) + ' list.</span> ' +
       '<span class="st-step"><b>2</b> Tweak it in the builder — the draw odds, rune math and coach below update as you go.</span> ' +
       '<span class="st-step"><b>3</b> <em>Copy deck</em> when it\'s yours.</span></div>';
   }
@@ -3634,10 +3726,11 @@ function renderBuild(ctx) {
 
 /* ---------------- ANALYZE ---------------- */
 function fieldBadge(name) {
-  if (!window.META || !META.otherDecks) return '—';
-  const pct = Math.round(100 * (META.cardBase[name] || 0) / META.otherDecks);
-  if (pct >= 25) return '<span class="dist-badge" style="color:var(--accent)" title="Played across the wider field — a format staple, not a Diana choice">' + pct + '% · staple</span>';
-  if (pct <= 5) return '<span class="dist-badge" style="color:var(--flex)" title="Barely played outside Diana — an archetype-defining choice">' + pct + '% · Diana tech</span>';
+  if (!window.META || !META.otherDecks || !META.otherDecks[selectedLegend]) return '—';
+  const legendName = currentLegend().name;
+  const pct = Math.round(100 * ((META.cardBase[selectedLegend] || {})[name] || 0) / META.otherDecks[selectedLegend]);
+  if (pct >= 25) return '<span class="dist-badge" style="color:var(--accent)" title="Played across the wider field — a format staple, not a ' + attr(legendName) + ' choice">' + pct + '% · staple</span>';
+  if (pct <= 5) return '<span class="dist-badge" style="color:var(--flex)" title="Barely played outside ' + attr(legendName) + ' — an archetype-defining choice">' + pct + '% · ' + escHtml(legendName) + ' tech</span>';
   return '<span class="dist-badge">' + pct + '%</span>';
 }
 
@@ -3650,24 +3743,25 @@ function renderAnalyze(ctx) {
   let html = renderChangelog();
 
   // ---- Meta context (whole scraped field, unaffected by filters) ----
-  if (window.META && META.otherDecks > 0) {
-    const totalAll = META.otherDecks + (META.archetypes[META.diana] || 0);
-    html += '<h2>Meta context</h2><p class="sub">The whole scraped top-cut field (' + totalAll + ' decks, all archetypes) — how big a slice Diana is, per event and overall. This section ignores the filters above.</p>';
+  const legendName = currentLegend().name;
+  if (window.META && META.otherDecks && META.otherDecks[selectedLegend] > 0) {
+    const totalAll = META.otherDecks[selectedLegend] + (META.archetypes[selectedLegend] || 0);
+    html += '<h2>Meta context</h2><p class="sub">The whole scraped top-cut field (' + totalAll + ' decks, all archetypes) — how big a slice ' + escHtml(legendName) + ' is, per event and overall. This section ignores the filters above.</p>';
     const topArch = Object.entries(META.archetypes).sort((a, b) => b[1] - a[1]).slice(0, 10);
     const maxN = topArch[0][1];
     html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th>Top-cut decks</th></tr></thead><tbody>';
     topArch.forEach(([arch, n]) => {
-      const isDiana = arch === META.diana;
-      html += '<tr' + (isDiana ? ' style="font-weight:700"' : '') + '><td>' + escHtml(prettyArchetype(arch)) + (isDiana ? ' ★' : '') + '</td>' +
-        '<td><span class="incl-bar" style="width:' + Math.round(140 * n / maxN) + 'px;' + (isDiana ? '' : 'background:var(--muted);opacity:0.55;') + '"></span>' + n + ' (' + Math.round(100 * n / totalAll) + '%)</td></tr>';
+      const isMine = arch === selectedLegend;
+      html += '<tr' + (isMine ? ' style="font-weight:700"' : '') + '><td>' + escHtml(prettyArchetype(arch)) + (isMine ? ' ★' : '') + '</td>' +
+        '<td><span class="incl-bar" style="width:' + Math.round(140 * n / maxN) + 'px;' + (isMine ? '' : 'background:var(--muted);opacity:0.55;') + '"></span>' + n + ' (' + Math.round(100 * n / totalAll) + '%)</td></tr>';
     });
     html += '</tbody></table></div>';
     const evRows = META.events.filter(e => Object.values(e.counts).reduce((a, b) => a + b, 0) >= 3);
     if (evRows.length) {
-      html += '<div class="panel-wrap" style="margin-top:12px;"><table class="incl"><thead><tr><th>Event</th><th>Date</th><th>Diana share of top cut</th></tr></thead><tbody>';
+      html += '<div class="panel-wrap" style="margin-top:12px;"><table class="incl"><thead><tr><th>Event</th><th>Date</th><th>' + escHtml(legendName) + ' share of top cut</th></tr></thead><tbody>';
       evRows.forEach(e => {
         const total = Object.values(e.counts).reduce((a, b) => a + b, 0);
-        const dn = e.counts[META.diana] || 0;
+        const dn = e.counts[selectedLegend] || 0;
         html += '<tr><td>' + escHtml(e.name) + '</td><td>' + (e.date || '—') + '</td>' +
           '<td><span class="incl-bar" style="width:' + Math.round(120 * dn / total) + 'px"></span>' + dn + '/' + total + ' (' + Math.round(100 * dn / total) + '%)</td></tr>';
       });
@@ -3678,22 +3772,23 @@ function renderAnalyze(ctx) {
   // ---- Deck performance: the only published results data ----
   if (window.META && META.performance && META.performance.fieldDay1) {
     const P = META.performance;
-    const diana = P.archetypes.find(a => a.slug === P.dianaLegendSlug);
+    const myLegendSlug = P.legends && P.legends[selectedLegend];
+    const mine = P.archetypes.find(a => a.slug === myLegendSlug);
     const fieldPct = 100 * P.fieldConversion;
     html += '<h2>Deck performance (Day 1 → Day 2)</h2>';
-    html += '<p class="sub">Events publish no per-player match records, but they do publish how many decks of each archetype started Day 1 and how many survived into Day 2. That <strong>conversion rate</strong> is a real performance measure across <strong>' + P.fieldDay1.toLocaleString() + '</strong> recorded decks — far more data than the ' + allDecks.length + ' top-cut lists everything else here is built on. It is archetype-level, so it cannot rank individual Diana lists.</p>';
-    if (diana) {
-      const idx = diana.conversion / P.fieldConversion;
-      const rank = P.archetypes.indexOf(diana) + 1;
-      html += '<div class="summary-box"><strong>Diana converts ' + (100 * diana.conversion).toFixed(1) + '%</strong> of its Day 1 decks into Day 2 (' + diana.day2 + '/' + diana.day1 + '), against a field average of ' + fieldPct.toFixed(1) + '%. ' +
+    html += '<p class="sub">Events publish no per-player match records, but they do publish how many decks of each archetype started Day 1 and how many survived into Day 2. That <strong>conversion rate</strong> is a real performance measure across <strong>' + P.fieldDay1.toLocaleString() + '</strong> recorded decks — far more data than the ' + allDecks.length + ' top-cut lists everything else here is built on. It is archetype-level, so it cannot rank individual ' + escHtml(legendName) + ' lists.</p>';
+    if (mine) {
+      const idx = mine.conversion / P.fieldConversion;
+      const rank = P.archetypes.indexOf(mine) + 1;
+      html += '<div class="summary-box"><strong>' + escHtml(legendName) + ' converts ' + (100 * mine.conversion).toFixed(1) + '%</strong> of its Day 1 decks into Day 2 (' + mine.day2 + '/' + mine.day1 + '), against a field average of ' + fieldPct.toFixed(1) + '%. ' +
         'That is <strong>' + idx.toFixed(2) + '×</strong> the field — <strong>' + rank + (rank === 1 ? 'st' : rank === 2 ? 'nd' : rank === 3 ? 'rd' : 'th') + ' best</strong> of ' + P.archetypes.length + ' archetypes. The deck is genuinely strong, not just popular.</div>';
     }
-    // Diana conversion per event, over time
-    const evs = META.events.filter(e => e.dianaDay1 && e.day1);
+    // Selected legend's conversion per event, over time
+    const evs = META.events.filter(e => e.perfByLegend && e.perfByLegend[selectedLegend] && e.perfByLegend[selectedLegend].day1 && e.day1);
     if (evs.length >= 2) {
       const W = 660, H = 200, mL = 40, mB = 30, mT = 12, mR = 16;
       const pw = W - mL - mR, ph = H - mT - mB;
-      const ymax = Math.max(...evs.map(e => 100 * e.dianaDay2 / e.dianaDay1), fieldPct) * 1.25;
+      const ymax = Math.max(...evs.map(e => 100 * e.perfByLegend[selectedLegend].day2 / e.perfByLegend[selectedLegend].day1), fieldPct) * 1.25;
       const x = i => mL + (evs.length === 1 ? pw / 2 : i / (evs.length - 1) * pw);
       const y = v => mT + ph - v / ymax * ph;
       let p = [];
@@ -3702,22 +3797,22 @@ function renderAnalyze(ctx) {
         p.push('<text class="axis" x="' + (mL - 6) + '" y="' + (y(v) + 4) + '" font-size="10" text-anchor="end">' + v + '%</text>');
       });
       p.push('<polyline points="' + evs.map((e, i) => x(i) + ',' + y(100 * e.day2 / e.day1)).join(' ') + '" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="4 3"/>');
-      const dpts = evs.map((e, i) => ({ x: x(i), y: y(100 * e.dianaDay2 / e.dianaDay1), e }));
+      const dpts = evs.map((e, i) => ({ x: x(i), y: y(100 * e.perfByLegend[selectedLegend].day2 / e.perfByLegend[selectedLegend].day1), e }));
       p.push('<polyline points="' + dpts.map(q => q.x + ',' + q.y).join(' ') + '" fill="none" stroke="var(--accent)" stroke-width="3"/>');
-      dpts.forEach(q => p.push('<circle class="pt" data-tip="' + attr(q.e.name + ': Diana ' + q.e.dianaDay2 + '/' + q.e.dianaDay1 + ' = ' + (100 * q.e.dianaDay2 / q.e.dianaDay1).toFixed(1) + '% vs field ' + (100 * q.e.day2 / q.e.day1).toFixed(1) + '%' + (q.e.attendance ? ' · ' + q.e.attendance + ' players' : '')) + '" cx="' + q.x + '" cy="' + q.y + '" r="4" fill="var(--accent)"/>'));
+      dpts.forEach(q => { const perf = q.e.perfByLegend[selectedLegend]; p.push('<circle class="pt" data-tip="' + attr(q.e.name + ': ' + legendName + ' ' + perf.day2 + '/' + perf.day1 + ' = ' + (100 * perf.day2 / perf.day1).toFixed(1) + '% vs field ' + (100 * q.e.day2 / q.e.day1).toFixed(1) + '%' + (q.e.attendance ? ' · ' + q.e.attendance + ' players' : '')) + '" cx="' + q.x + '" cy="' + q.y + '" r="4" fill="var(--accent)"/>'); });
       evs.forEach((e, i) => p.push('<text class="axis" x="' + x(i) + '" y="' + (H - 10) + '" font-size="10" text-anchor="middle">' + escHtml(e.name.split(' ')[0]) + '</text>'));
       html += '<svg class="viz" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + p.join('') + '</svg>';
-      html += '<div class="legend"><span class="legend-chip"><span class="legend-swatch" style="background:var(--accent)"></span>Diana conversion</span>' +
+      html += '<div class="legend"><span class="legend-chip"><span class="legend-swatch" style="background:var(--accent)"></span>' + escHtml(legendName) + ' conversion</span>' +
         '<span class="legend-chip"><span class="legend-swatch" style="background:var(--muted)"></span>Whole-field average</span></div>';
     }
     // Archetype leaderboard — who you actually have to beat
     const top = P.archetypes.slice(0, 8), bottom = P.archetypes.slice(-3);
-    html += '<h2>What you have to beat</h2><p class="sub">Archetypes ranked by conversion rate (min. 20 Day 1 decks). The ones above Diana are the decks that most often survive to Day 2 — target your sideboard at these, not at whatever is merely popular.</p>';
+    html += '<h2>What you have to beat</h2><p class="sub">Archetypes ranked by conversion rate (min. 20 Day 1 decks). The ones above ' + escHtml(legendName) + ' are the decks that most often survive to Day 2 — target your sideboard at these, not at whatever is merely popular.</p>';
     html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Day 1</th><th class="num">Day 2</th><th>Conversion</th><th class="num">vs field</th></tr></thead><tbody>';
     const maxConv = P.archetypes[0].conversion;
     [...top, null, ...bottom].forEach(a => {
       if (!a) { html += '<tr><td colspan="5" style="text-align:center;color:var(--muted)">… ' + (P.archetypes.length - top.length - bottom.length) + ' more …</td></tr>'; return; }
-      const isD = a.slug === P.dianaLegendSlug;
+      const isD = a.slug === myLegendSlug;
       const idx = a.conversion / P.fieldConversion;
       html += '<tr' + (isD ? ' style="font-weight:700"' : '') + '><td>' + escHtml(a.legend) + (isD ? ' ★' : '') + '</td>' +
         '<td class="num">' + a.day1 + '</td><td class="num">' + a.day2 + '</td>' +
@@ -3727,7 +3822,7 @@ function renderAnalyze(ctx) {
     html += '</tbody></table></div>';
   }
 
-  html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the Diana field: how many decks run it, at what counts. The small grey range under each percentage is the <strong>Wilson 95% interval</strong> — on ' + N + ' decks, 12/13 really means "somewhere around 65–99%", so don\'t over-read a single point estimate. The Field column is the card\'s play rate across all other archetypes — high means format staple, low means Diana-specific tech.</p>';
+  html += '<h2>Card inclusion across winning decks</h2><p class="sub">Every card seen in the ' + escHtml(legendName) + ' field: how many decks run it, at what counts. The small grey range under each percentage is the <strong>Wilson 95% interval</strong> — on ' + N + ' decks, 12/13 really means "somewhere around 65–99%", so don\'t over-read a single point estimate. The Field column is the card\'s play rate across all other archetypes — high means format staple, low means ' + escHtml(legendName) + '-specific tech.</p>';
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Card</th><th>Cost/Domain</th><th>Type</th><th>Inclusion</th><th class="num">Avg copies</th><th>Copy counts</th><th>Field</th></tr></thead><tbody>';
   [...rankedCards].sort((a, b) => b.decksIn - a.decksIn || b.score - a.score).forEach(c => {
     const meta = cardMeta[c.name] || {};
@@ -3922,7 +4017,7 @@ function renderAnalyze(ctx) {
    exportable. After ~50 games this is the only matchup table for your list in
    existence — data no opponent has. */
 
-function loadMatches() { try { return JSON.parse(localStorage.getItem('ddl-matches') || '[]'); } catch (e) { return []; } }
+function loadMatches() { try { return JSON.parse(localStorage.getItem(storageKey('ddl-matches')) || '[]'); } catch (e) { return []; } }
 // Returns whether the write actually landed. Private/incognito browsing,
 // "block all cookies"-style privacy settings, or a full storage quota can
 // all make localStorage.setItem throw — silently swallowing that (the old
@@ -3930,7 +4025,7 @@ function loadMatches() { try { return JSON.parse(localStorage.getItem('ddl-match
 // browser looked exactly like a successful save right up until the next
 // reload wiped the illusion. Every caller below now checks this.
 function writeMatches(m) {
-  try { localStorage.setItem('ddl-matches', JSON.stringify(m)); return true; }
+  try { localStorage.setItem(storageKey('ddl-matches'), JSON.stringify(m)); return true; }
   catch (e) { return false; }
 }
 
@@ -4021,7 +4116,7 @@ function exportMatches() {
   const blob = new Blob([JSON.stringify(loadMatches(), null, 1)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'diana-match-log-' + new Date().toISOString().slice(0, 10) + '.json';
+  a.download = selectedLegend + '-match-log-' + new Date().toISOString().slice(0, 10) + '.json';
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 5000);
   toast('Match log exported');
@@ -4053,7 +4148,7 @@ function renderLog() {
   // Quick-add: one tap per game.
   const archOpts = haveField
     ? threatWeights({ includeMirror: true }).rows.map(r =>
-        '<option value="' + attr(r.slug) + '">' + attr(r.mirror ? 'Diana (mirror)' : FIELD.archetypes[r.slug].name) + '</option>').join('')
+        '<option value="' + attr(r.slug) + '">' + attr(r.mirror ? currentLegend().name + ' (mirror)' : FIELD.archetypes[r.slug].name) + '</option>').join('')
     : '';
   const saveOpts = Object.keys(loadSaves()).sort().map(n => '<option value="' + attr(n) + '">' + attr(n) + '</option>').join('');
   let html = '<h2>Log a game</h2>';
@@ -4231,18 +4326,19 @@ function renderFieldModelBar() {
 function renderArchList() {
   const tw = threatWeights();
   const weights = tw.rows;
-  const dianaN = FIELD.archetypes[FIELD.diana] ? FIELD.archetypes[FIELD.diana].decks.length : 0;
+  const legendName = currentLegend().name;
+  const myN = FIELD.archetypes[selectedLegend] ? FIELD.archetypes[selectedLegend].decks.length : 0;
   const totalAll = Object.values(FIELD.archetypes).reduce((a, x) => a + x.decks.length, 0);
   const maxW = weights.length ? weights[0].weight : 1;
 
   let html = renderFieldModelBar();
   html += '<div style="margin:8px 0"><button class="ghost" onclick="openPrintGuide()" title="A bring-to-the-table one-pager: your decklist plus top matchups by field weight">Print guide</button></div>';
-  html += '<h2>The field</h2><p class="sub">Every archetype scraped from the same events as the Diana lists — ' + totalAll +
-    ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes: the top cuts plus each event\'s "Best of" showcases. Showcase lists enrich what we know each archetype <em>plays</em> (their averaged decklists, sideboards, coverage profiles) but carry <strong>zero weight</strong> in share and threat — those count top-cut results only. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Shares are of the whole field (Diana included) under the model above. Click an archetype to see what it plays.</p>';
+  html += '<h2>The field</h2><p class="sub">Every archetype scraped from the same events as the ' + escHtml(legendName) + ' lists — ' + totalAll +
+    ' decks across ' + Object.keys(FIELD.archetypes).length + ' archetypes: the top cuts plus each event\'s "Best of" showcases. Showcase lists enrich what we know each archetype <em>plays</em> (their averaged decklists, sideboards, coverage profiles) but carry <strong>zero weight</strong> in share and threat — those count top-cut results only. <strong>Threat</strong> is field share × Day 1→Day 2 conversion index: how much of what you will actually face, weighted by how often it survives. Shares are of the whole field (' + escHtml(legendName) + ' included) under the model above. Click an archetype to see what it plays.</p>';
 
-  const dConv = archConversion(FIELD.diana);
-  if (dConv) html += '<div class="summary-box">You are <strong>Diana</strong>: ' + dianaN + ' top-cut lists here, converting <strong>' +
-    (100 * dConv.conversion).toFixed(1) + '%</strong> into Day 2 — <strong>' + dConv.index.toFixed(2) + '×</strong> the field average. The table below is everyone else; the mirror gets its own section below.</div>';
+  const myConv = archConversion(selectedLegend);
+  if (myConv) html += '<div class="summary-box">You are <strong>' + escHtml(legendName) + '</strong>: ' + myN + ' top-cut lists here, converting <strong>' +
+    (100 * myConv.conversion).toFixed(1) + '%</strong> into Day 2 — <strong>' + myConv.index.toFixed(2) + '×</strong> the field average. The table below is everyone else; the mirror gets its own section below.</div>';
 
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Top-cut decks</th><th class="num">Field share</th>' +
     '<th class="num">Conversion</th><th class="num">vs field</th><th>Trend</th><th>Threat</th></tr></thead><tbody>';
@@ -4277,19 +4373,20 @@ function renderArchList() {
 }
 
 /* ---- Mirror prep ----
-   The better the consensus gets, the more other Diana players converge on it —
-   which makes the mirror the most predictable matchup in the tournament. Prep
-   against the consensus build itself. */
+   The better the consensus gets, the more other players of your legend
+   converge on it — which makes the mirror the most predictable matchup in
+   the tournament. Prep against the consensus build itself. */
 function renderMirrorPrep() {
-  if (!FIELD.archetypes[FIELD.diana]) return '';
-  const p = archProfile(FIELD.diana);
+  if (!FIELD.archetypes[selectedLegend]) return '';
+  const legendName = currentLegend().name;
+  const p = archProfile(selectedLegend);
   const tw = threatWeights({ includeMirror: true });
   const row = tw.rows.find(r => r.mirror);
   const { list, source } = currentSideboard();
   const cov = coverageOf(list, p, { deckSize: DECK_SIZE });
 
   let html = '<h2>Mirror prep</h2>';
-  html += '<p class="sub">Everyone netdecking the same results converges on the same 40 — so the mirror is the matchup you can prepare for with the most certainty. This section runs the coverage engine against the Diana field itself.</p>';
+  html += '<p class="sub">Everyone netdecking the same results converges on the same 40 — so the mirror is the matchup you can prepare for with the most certainty. This section runs the coverage engine against the ' + escHtml(legendName) + ' field itself.</p>';
 
   const rank = row ? tw.rows.indexOf(row) + 1 : null;
   html += '<div class="summary-box">The mirror is <strong>' + (row ? pct(row.share) : '—') + '</strong> of the expected field' +
@@ -4306,13 +4403,13 @@ function renderMirrorPrep() {
   html += '<p class="sub">Removal sizing: ' + sizes.map(x => '≤' + x.s + ' hits ' + pct(x.f)).join(' · ') +
     (enough ? ' — <strong>deal ' + enough.s + '</strong> is the cheapest size that answers 80%+ of mirror units.' : '.') + '</p>';
 
-  // Best mirror tech from the Diana pool, by marginal breadth added.
+  // Best mirror tech from your legend's own pool, by marginal breadth added.
   const sideNames = new Set(list.map(c => c.name));
-  const pool = Object.keys(window.CARDS || {}).filter(n => !sideNames.has(n) && techTags(n).length);
+  const pool = [...yourCardNames()].filter(n => !sideNames.has(n) && techTags(n).length);
   const sugg = pool.map(n => ({ n, gain: marginalGain(n, list, p, cov.coverage) }))
     .filter(x => x.gain > 0.02).sort((a, b) => b.gain - a.gain).slice(0, 5);
   if (sugg.length) {
-    html += '<div class="pkg-box"><strong>Best mirror tech you are not holding</strong> (marginal breadth added, from cards winning Diana lists already play):<br>';
+    html += '<div class="pkg-box"><strong>Best mirror tech you are not holding</strong> (marginal breadth added, from cards winning ' + escHtml(currentLegend().name) + ' lists already play):<br>';
     sugg.forEach(x => {
       const t = dominantTag(techTags(x.n), p, (cardInfo(x.n) || {}).cost);
       html += '<span class="pkg-chip" title="' + attr(answerWhy(x.n, t, p)) + '">' + cardImg(x.n) +
@@ -4322,9 +4419,9 @@ function renderMirrorPrep() {
     });
     html += '</div>';
   } else {
-    html += '<div class="summary-box">Nothing in the Diana pool would add meaningful breadth against the mirror beyond what this sideboard already holds.</div>';
+    html += '<div class="summary-box">Nothing in the ' + escHtml(legendName) + ' pool would add meaningful breadth against the mirror beyond what this sideboard already holds.</div>';
   }
-  html += '<p class="sub"><span class="deck-link" onclick="openArch(\'' + FIELD.diana + '\')">Open the full Diana field page →</span></p>';
+  html += '<p class="sub"><span class="deck-link" onclick="openArch(\'' + selectedLegend + '\')">Open the full ' + escHtml(legendName) + ' field page →</span></p>';
   return html;
 }
 
@@ -4334,7 +4431,7 @@ function renderArchDetail(slug) {
   const N = decks.length;
   const p = archProfile(slug);
   const conv = archConversion(slug);
-  const isDiana = slug === FIELD.diana;
+  const isDiana = slug === selectedLegend;
 
   let html = '<div class="crumb"><span class="deck-link" onclick="closeArch()">← All archetypes</span></div>';
   html += '<h2 style="margin-top:8px;">' + escHtml(a.name) + (isDiana ? ' ★' : '') + '</h2>';
@@ -4531,7 +4628,7 @@ function printGuideHTML() {
   const bfs = (builderBf && builderBf.length) ? builderBf.map(name => ({ name })) : ex.bfs.slice(0, 3);
 
   let html = '<div class="print-guide">';
-  html += '<h1 style="margin:0 0 2px;font-size:20px">Diana, Scorn of the Moon — Matchup Guide</h1>';
+  html += '<h1 style="margin:0 0 2px;font-size:20px">' + escHtml(currentLegend().name) + ' — Matchup Guide</h1>';
   html += '<p style="margin:0 0 16px;color:var(--muted);font-size:11.5px">Generated ' + new Date().toISOString().slice(0, 10) +
     ' · main: ' + escHtml(mainSrc) + (sideSrc !== mainSrc ? ' · side: ' + escHtml(sideSrc) : '') + '</p>';
 
@@ -4576,7 +4673,7 @@ function printGuideHTML() {
     rows.forEach(r => {
       const a = FIELD.archetypes[r.slug];
       html += '<div style="border:1px solid var(--border);border-radius:4px;padding:6px 9px;margin-bottom:6px;font-size:11.5px;break-inside:avoid">';
-      html += '<div style="font-weight:bold;font-size:12.5px">' + escHtml(r.mirror ? 'Diana (mirror)' : a.name) +
+      html += '<div style="font-weight:bold;font-size:12.5px">' + escHtml(r.mirror ? currentLegend().name + ' (mirror)' : a.name) +
         '<span style="font-weight:normal;color:var(--muted)"> — ' + pct(r.share) + ' of the field' +
         (r.combat ? ', combat ' + pct(r.combat.win) + '/' + pct(r.combat.lose) : '') + ' · <strong>' + r.plan.label + '</strong> plan</span></div>';
       html += '<div style="color:var(--muted);margin:2px 0">' + escHtml(r.plan.why) + '</div>';
@@ -4664,20 +4761,21 @@ function openCardModal(name) {
     info += '<div class="cm-effect">' + escHtml(details.effect).replace(/:rb_might:/g, '⚔').replace(/:rb_energy:/g, '◆') + '</div>';
   }
 
-  // Diana-field stats
+  // Legend-field stats
+  const legendName = currentLegend().name;
   if (stat) {
     const distBadges = Object.entries(stat.dist).sort((a, b) => b[0] - a[0]).map(([copies, nD]) => '<span class="dist-badge">x' + copies + ' in ' + nD + '</span>').join(' ');
     const [lo, hi] = wilson(stat.decksIn, N);
-    info += '<div class="cost-head">In the Diana field</div><div>Main-decked by <strong>' + stat.decksIn + '/' + N + '</strong> (' +
+    info += '<div class="cost-head">In the ' + escHtml(legendName) + ' field</div><div>Main-decked by <strong>' + stat.decksIn + '/' + N + '</strong> (' +
       Math.round(100 * stat.decksIn / N) + '%, <span title="Wilson 95% interval">95% CI ' + lo.toFixed(0) + '–' + hi.toFixed(0) + '%</span>), avg ' + stat.avgCopies.toFixed(1) + ' copies. ' + distBadges + '</div>';
   } else {
-    info += '<div class="cost-head">In the Diana field</div><div>Not main-decked in the current filtered set.</div>';
+    info += '<div class="cost-head">In the ' + escHtml(legendName) + ' field</div><div>Not main-decked in the current filtered set.</div>';
   }
   const sideIn = globalDecks.filter(d => (d.sideboard || []).some(c => c.name === name)).length;
   if (sideIn) info += '<div style="margin-top:4px;">Sideboarded by ' + sideIn + '/' + N + ' decks.</div>';
-  if (window.META && META.otherDecks) {
-    const pct = Math.round(100 * (META.cardBase[name] || 0) / META.otherDecks);
-    info += '<div style="margin-top:4px;">Played in ' + pct + '% of the non-Diana field' + (pct >= 25 ? ' — a format staple.' : pct <= 5 ? ' — Diana-specific tech.' : '.') + '</div>';
+  if (window.META && META.otherDecks && META.otherDecks[selectedLegend]) {
+    const pct = Math.round(100 * ((META.cardBase[selectedLegend] || {})[name] || 0) / META.otherDecks[selectedLegend]);
+    info += '<div style="margin-top:4px;">Played in ' + pct + '% of the field outside ' + escHtml(legendName) + (pct >= 25 ? ' — a format staple.' : pct <= 5 ? ' — ' + escHtml(legendName) + '-specific tech.' : '.') + '</div>';
   }
   const pkg = packageOf(name);
   if (pkg) info += '<div style="margin-top:4px;">Travels with ' + pkg.cards.filter(n => n !== name).map(escHtml).join(', ') + ' (package in ' + pkg.decks + '/' + N + ' decks).</div>';
@@ -4869,7 +4967,7 @@ async function exportDeckImage(title, list, subtitle) {
   });
 
   g.fillStyle = '#c8aa6e'; g.font = '600 12px Palatino, Georgia, serif';
-  g.fillText('DIANA DECK LAB · diana-decklist-comparator.pages.dev', PAD, H - 18);
+  g.fillText(currentLegend().name.toUpperCase() + ' DECK LAB · diana-decklist-comparator.pages.dev', PAD, H - 18);
 
   cv.toBlob(blob => {
     if (!blob) { toast('Image export failed'); return; }
@@ -4884,7 +4982,7 @@ async function exportDeckImage(title, list, subtitle) {
 
 function exportProtoImage() {
   const sub = 'Consensus build · ' + globalDecks.length + ' winning lists' + (filters.cluster.size ? ' · filtered' : '');
-  exportDeckImage('Diana prototype', currentProto.map(c => ({ name: c.name, count: c.copies })), sub);
+  exportDeckImage(currentLegend().name + ' prototype', currentProto.map(c => ({ name: c.name, count: c.copies })), sub);
 }
 function exportDeckImageFor(i) {
   const d = globalDecks[i];
@@ -4892,7 +4990,7 @@ function exportDeckImageFor(i) {
 }
 function exportMyDeckImage() {
   const { counts } = parseDeckText(coachText);
-  exportDeckImage('My Diana deck', Object.entries(counts).map(([name, count]) => ({ name, count })), new Date().toISOString().slice(0, 10));
+  exportDeckImage('My ' + currentLegend().name + ' deck', Object.entries(counts).map(([name, count]) => ({ name, count })), new Date().toISOString().slice(0, 10));
 }
 
 /* ---------------- Render / router ---------------- */
@@ -4901,8 +4999,10 @@ function render() {
   const ci = document.getElementById('coachInput'); if (ci) coachText = ci.value;
   const si = document.getElementById('sideInput'); if (si) sideText = si.value;
   const view = VIEWS[currentView] || VIEWS.build;
-  let html = '<div class="view-head"><img class="hero-art" src="cache/images/Diana_Lunari.webp" alt=""><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(view.desc) + '</p></div>';
-  // Meta reads the whole scraped field and Log is personal data, so the Diana
+  const legend = currentLegend();
+  const desc = typeof view.desc === 'function' ? view.desc() : view.desc;
+  let html = '<div class="view-head"><img class="hero-art" src="cache/images/' + attr(legend.heroImage) + '" alt=""><h1>' + escHtml(view.title) + '</h1><p>' + escHtml(desc) + '</p></div>';
+  // Meta reads the whole scraped field and Log is personal data, so the
   // filter bar would only mislead on either — the one thing it touches is the
   // fallback consensus sideboard, and that is labelled where it is used.
   if (currentView !== 'meta' && currentView !== 'log') {
@@ -4915,6 +5015,9 @@ function render() {
   document.getElementById('content').innerHTML = html;
   document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.view === currentView));
   document.getElementById('deckCount').textContent = allDecks.length + ' decks loaded';
+  document.title = legend.name + ' Deck Lab';
+  const brandEl = document.getElementById('brandText'); if (brandEl) brandEl.textContent = legend.name + ' Deck Lab';
+  const sw = document.getElementById('legendSwitch'); if (sw && sw.value !== selectedLegend) sw.value = selectedLegend;
   renderLastUpdated();
   if (document.getElementById('bResults')) renderBuilderResults();   // fill the builder's search grid
 }
@@ -5112,6 +5215,12 @@ document.addEventListener('error', e => {
     d.className = 'bnoimg';
     d.textContent = holder.getAttribute('data-bname') || holder.getAttribute('data-bf') || img.alt || 'no art';
     img.replaceWith(d);
+  } else if (img.classList.contains('blegend-img')) {
+    const d = document.createElement('div');
+    d.className = 'bnoimg';
+    d.style.cssText = 'height:175px;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:6px;box-shadow:var(--shadow)';
+    d.textContent = img.getAttribute('data-legend-name') || img.alt || 'no art';
+    img.replaceWith(d);
   } else if (img.classList.contains('cimg') || img.classList.contains('scard')) {
     const d = document.createElement('div');
     d.className = 'noimg';
@@ -5140,30 +5249,29 @@ async function load() {
     } catch (e) {}
     history.replaceState(null, '', location.pathname + location.search);
   }
+  const el = document.getElementById('content');
+  if (!window.DECKS) {
+    try { const res = await fetch('decks.json'); if (!res.ok) throw new Error(); window.DECKS = await res.json(); }
+    catch (e) { el.innerHTML = '<div class="empty">No deck data found. Run <code>python3 fetch_decks.py</code>, then reopen this page.</div>'; return; }
+  }
+  if (!window.DECKS || !Object.keys(window.DECKS).length) { el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages.</div>'; return; }
+  selectedLegend = pickInitialLegend();
+  const sw = document.getElementById('legendSwitch');
+  if (sw) sw.innerHTML = legendManifest().map(l => '<option value="' + attr(l.slug) + '">' + escHtml(l.name) + '</option>').join('');
+  migrateLegendStorage();
   try {
     if (localStorage.getItem('ddl-theme') === 'light') { document.body.classList.add('light'); document.querySelector('meta[name=theme-color]').setAttribute('content', '#f5f2ea'); }
-    coachText = localStorage.getItem('ddl-coach') || '';
-    sideText = localStorage.getItem('ddl-side') || '';
+    coachText = localStorage.getItem(storageKey('ddl-coach')) || '';
+    sideText = localStorage.getItem(storageKey('ddl-side')) || '';
     // One corrupted key must not take the others down with it.
     const safeJSON = k => { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } };
-    builderRunes = safeJSON('ddl-runes');
-    builderBf = safeJSON('ddl-bf');
+    builderRunes = safeJSON(storageKey('ddl-runes'));
+    builderBf = safeJSON(storageKey('ddl-bf'));
     const fm = safeJSON('ddl-fieldmodel');
     if (fm && typeof fm === 'object') fieldModel = { recency: !!fm.recency, region: fm.region || null };
   } catch (e) {}
-  const el = document.getElementById('content');
-  if (window.DECKS) allDecks = window.DECKS;
-  else {
-    try { const res = await fetch('decks.json'); if (!res.ok) throw new Error(); allDecks = await res.json(); }
-    catch (e) { el.innerHTML = '<div class="empty">No deck data found. Run <code>python3 fetch_decks.py</code>, then reopen this page.</div>'; return; }
-  }
-  if (!allDecks || allDecks.length === 0) { el.innerHTML = '<div class="empty">decks.json is empty — the scraper reached no pages.</div>'; return; }
-  // Ladder brews ride in decks.json flagged by placement; they join the pool
-  // only via the filter chip and never join the tournament clustering.
-  ladderDecks = allDecks.filter(d => d.placement === 'Ladder');
-  ladderDecks.forEach(d => { d._region = regionOf(d.event); d._cluster = -1; d._clusterName = 'Ladder'; });
-  allDecks = allDecks.filter(d => d.placement !== 'Ladder');
-  if (ladderDecks.length) indexCards(ladderDecks);   // their card art/meta still joins the index
+  loadLegendDecks();
+  if (!allDecks.length) { el.innerHTML = '<div class="empty">decks.json has no ' + escHtml(currentLegend().name) + ' decks — the scraper reached no pages.</div>'; return; }
   // Visitor-submitted decks live only on the Cloudflare copy; on GitHub Pages
   // or file:// this 404s (or throws) and the site carries on without them.
   if (location.protocol.indexOf('http') === 0) {
@@ -5175,8 +5283,6 @@ async function load() {
       }
     } catch (e) {}
   }
-  indexCards(allDecks);
-  computeFullClusters();
   // A shared list (?d=…) overrides whatever was last in this browser.
   const shared = new URLSearchParams(location.search).get('d');
   if (shared) {
@@ -5185,6 +5291,7 @@ async function load() {
   }
   const v = (location.hash || '#build').slice(1);
   currentView = VIEWS[v] ? v : 'build';
+  if (sw) sw.value = selectedLegend;
   applyFilters();
 }
 
