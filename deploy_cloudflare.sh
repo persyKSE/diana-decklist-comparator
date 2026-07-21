@@ -14,8 +14,8 @@ cd "$(dirname "$0")"
 
 rm -rf dist
 mkdir -p dist/cache
-cp index.html decks.js meta.js cards.js field.js \
-   decks.json meta.json cards.json field.json \
+cp index.html decks.js meta.js cards.js field.js riftools.js \
+   decks.json meta.json cards.json field.json riftools.json \
    sw.js manifest.webmanifest icon.svg _headers dist/
 cp -R cache/images dist/cache/images
 

@@ -30,17 +30,20 @@ jobs:
         run: python fetch_decks.py
       - name: Fetch tournament results (field size + day1/day2 conversion)
         run: python fetch_tournaments.py
+      - name: Fetch real matchup win rates (riftools.app)
+        run: python fetch_riftools.py
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           # riftbound.db's bytes churn on every scrape, and meta.json/meta.js
-          # carry a "generated" timestamp that changes every run. Ignore all
-          # three when deciding whether anything really changed — they still
-          # get committed alongside a real change, which is what makes the
-          # site's "updated" stamp mean "data last changed".
-          if git diff --cached --quiet -- ':(exclude)riftbound.db' ':(exclude)meta.json' ':(exclude)meta.js'; then
+          # and riftools.json/riftools.js each carry a "generated" timestamp
+          # that changes every run. Ignore all five when deciding whether
+          # anything really changed — they still get committed alongside a
+          # real change, which is what makes the site's "updated" stamp mean
+          # "data last changed".
+          if git diff --cached --quiet -- ':(exclude)riftbound.db' ':(exclude)meta.json' ':(exclude)meta.js' ':(exclude)riftools.json' ':(exclude)riftools.js'; then
             echo "No data changes this week."
             git reset
           else

@@ -535,6 +535,7 @@
 <script src="meta.js"></script>
 <script src="cards.js"></script>
 <script src="field.js"></script>
+<script src="riftools.js"></script>
 <script>
 let allDecks = [];      // full set (tagged with _region / _cluster / _clusterName)
 let globalDecks = [];   // active (filtered) set — every view reads this
@@ -2762,7 +2763,10 @@ function coverageHTML() {
     ' runs, but off a 40-card deck you will rarely have it in hand on the turn they cast one. Adding copies closes the gap: each extra copy raises the odds you have drawn one in time. ' +
     'Timely already folds the <em>Answers</em> depth column into hypergeometric draw odds (with mulligan). ' +
     'And interaction is only one axis of a matchup — the <strong>Matchup plans</strong> table below reads the clock, combat and card economy off the same decklists. ' +
-    'None of it is a win rate — it cannot see sequencing, tempo, or your opponent\'s line: no per-match data is published for these events.</div>';
+    'None of it is a win rate — it cannot see sequencing, tempo, or your opponent\'s line. ' +
+    (window.RIFTOOLS && RIFTOOLS.winrates && RIFTOOLS.winrates[selectedLegend]
+      ? 'For that, see <strong>Real matchup data</strong> above — actual match records, not inferred from decklists.'
+      : 'No per-match data is published for these events.') + '</div>';
 
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Field</th><th class="num">Conv.</th>' +
     '<th>Their 40</th><th>Your best answer</th><th title="Do you hold any answer to each of their cards?">Breadth</th>' +
@@ -4323,6 +4327,38 @@ function renderFieldModelBar() {
   return html;
 }
 
+// Real match-record win rates, from riftools.app's own aggregated snapshot
+// (winrates_set3.json) — not derived from anything scraped into this DB.
+// Distinct on purpose from the heuristic coverage/threat engine below (which
+// is inferred from decklists, since no other source publishes real matches):
+// this is actual game/match results, so it's labelled and sourced separately
+// rather than blended into the same numbers.
+function renderRealWinrates(weights) {
+  if (!window.RIFTOOLS || !RIFTOOLS.winrates || !RIFTOOLS.winrates[selectedLegend]) return '';
+  const mine = RIFTOOLS.winrates[selectedLegend];
+  const rows = weights.map(w => ({ w, r: mine[w.slug] })).filter(x => x.r && x.r.matches);
+  if (!rows.length) return '';
+  let html = '<h2>Real matchup data</h2>';
+  html += '<p class="sub">Actual match records — not inferred from decklists like the rest of this page. Sourced from <a href="' +
+    attr(RIFTOOLS.sourceUrl) + '" target="_blank" rel="noopener">riftools.app</a>' +
+    (RIFTOOLS.winratesPublishedAt ? ', published ' + escHtml(RIFTOOLS.winratesPublishedAt.slice(0, 10)) : '') +
+    '. Confidence reflects riftools\' own sample-size tiering.</p>';
+  html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th><th class="num">Matches</th>' +
+    '<th class="num">Match win%</th><th class="num">Game win%</th><th>Confidence</th></tr></thead><tbody>';
+  rows.forEach(({ w, r }) => {
+    const a = FIELD.archetypes[w.slug];
+    const good = r.matchWinrate >= 50;
+    html += '<tr style="cursor:pointer" onclick="openArch(\'' + w.slug + '\')">' +
+      '<td><strong>' + escHtml(a.name) + '</strong></td>' +
+      '<td class="num">' + r.matches + '</td>' +
+      '<td class="num" style="color:' + (good ? 'var(--lock)' : 'var(--danger)') + '">' + r.matchWinrate.toFixed(1) + '%</td>' +
+      '<td class="num">' + (r.gameWinrate != null ? r.gameWinrate.toFixed(1) + '%' : '—') + '</td>' +
+      '<td style="font-size:12px;">' + escHtml(r.confidence || '—') + '</td></tr>';
+  });
+  html += '</tbody></table></div>';
+  return html;
+}
+
 function renderArchList() {
   const tw = threatWeights();
   const weights = tw.rows;
@@ -4363,6 +4399,8 @@ function renderArchList() {
   html += '</tbody></table></div>';
   html += '<p class="sub">Conversion is archetype-level across ' + ((window.META && META.performance && META.performance.fieldDay1) || 0).toLocaleString() +
     ' recorded decks; a dash means that legend never cleared the 20-deck minimum. Trend compares the last three events to everything before them (unweighted) and needs at least four events.</p>';
+
+  html += renderRealWinrates(weights);
 
   html += '<h2>Sideboard coverage</h2>';
   html += '<p class="sub">What your sideboard answers, archetype by archetype, weighted by the field model above. Leave the box empty to score the consensus sideboard from the Build view. One card per line, like the deck coach.</p>';

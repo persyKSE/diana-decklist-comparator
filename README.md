@@ -28,6 +28,13 @@ deck builder.
   coverage heuristic, which needs the *opponents'* unit sizes, gear counts
   and spell density. Carries no timestamp, so it only changes when the
   data does.
+- **`fetch_riftools.py`** — pulls two pre-aggregated snapshots from
+  riftools.app (a fan-made stats site whose `robots.txt` explicitly allows
+  crawling and whose ToS permits informational-use scraping): a real
+  legend-vs-legend win-rate matrix computed from actual match records, and
+  a meta tier list. Exports `riftools.json`. This is the only *real* win
+  rate data in the project — Mobalytics never published per-match results,
+  only archetype-level Day1→Day2 conversion counts.
 - **`index.html`** — the static site. Reads `decks.json`; no build step.
 
 ## Setup (one-time)
