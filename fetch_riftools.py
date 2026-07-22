@@ -96,6 +96,22 @@ def normalize_player(name):
     return re.sub(r"[^a-z0-9]+", "", (name or "").lower())
 
 
+# riftools gives a real region per deck (unlike Mobalytics, where the viewer
+# has to guess region from the event name via regex — see index.html's
+# regionOf()). Map it to the same short codes the frontend's REGION_ORDER
+# already uses, so it can be used directly instead of guessed.
+REGION_MAP = {
+    "north america": "NA", "na": "NA",
+    "europe": "EU", "emea": "EU",
+    "oceania": "OCE", "oce": "OCE",
+    "china": "CN", "cn": "CN",
+}
+
+
+def map_region(raw):
+    return REGION_MAP.get((raw or "").strip().lower(), "Other")
+
+
 # riftools' own `placement` field is inconsistent across events — sometimes
 # "#4", sometimes "#4 8-2-1" (rank + Swiss W-L-D record), sometimes just a
 # record string with no "#" — which exploded the viewer's Placement filter
@@ -290,6 +306,7 @@ def ingest_decks(conn, manifest, deck_details_index, cap):
             conn, label, placement, it["tournament_name"], weight, url,
             sections, event_date=it["event_date"], archetype=archetype,
             source=SOURCE_TAG, player=it["player_name"],
+            region=map_region(it.get("region")), attendance=it.get("players"),
         )
         fetched += 1
         if fetched % 50 == 0:

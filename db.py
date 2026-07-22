@@ -228,17 +228,18 @@ def lookup_card(conn, name):
     return rows[0] if rows else None
 
 
-def upsert_event(conn, name, date=None, region=None):
+def upsert_event(conn, name, date=None, region=None, attendance=None):
     # Decks from the same event can carry different page dates; keep the earliest.
     conn.execute(
-        "INSERT INTO events (name, date, region) VALUES (?, ?, ?) "
+        "INSERT INTO events (name, date, region, attendance) VALUES (?, ?, ?, ?) "
         "ON CONFLICT(name) DO UPDATE SET "
         "date = CASE WHEN events.date IS NULL THEN excluded.date "
         "            WHEN excluded.date IS NULL THEN events.date "
         "            WHEN excluded.date < events.date THEN excluded.date "
         "            ELSE events.date END, "
-        "region = COALESCE(excluded.region, events.region)",
-        (name, date, region),
+        "region = COALESCE(excluded.region, events.region), "
+        "attendance = COALESCE(excluded.attendance, events.attendance)",
+        (name, date, region, attendance),
     )
     return conn.execute("SELECT id FROM events WHERE name = ?", (name,)).fetchone()[0]
 
@@ -288,15 +289,19 @@ def upsert_tournament(conn, slug, attendance, date, day1, day2, rows):
 
 def upsert_deck(conn, label, placement, event_name, weight, url, sections,
                 event_date=None, archetype=DIANA_ARCHETYPE, source='mobalytics',
-                player=None):
+                player=None, region=None, attendance=None):
     """Insert or replace a deck and its cards.
 
     sections: dict of section name -> {card name: count}, where section is
     one of main / rune / battlefield / side. `player` overrides the
     label-splitting heuristic (needed for sources that give a real player
-    name that itself contains " - ").
+    name that itself contains " - "). `region`/`attendance` set the event's
+    columns directly when the source already knows them (riftools gives both
+    per deck; Mobalytics-sourced events instead get attendance later from
+    fetch_tournaments.py and region is left for the frontend to derive from
+    the event name).
     """
-    event_id = upsert_event(conn, event_name, date=event_date)
+    event_id = upsert_event(conn, event_name, date=event_date, region=region, attendance=attendance)
     if player is None:
         player = label.split(" - ")[0].strip() if " - " in label else None
     conn.execute(
@@ -361,7 +366,7 @@ def export_decks_json(conn, path=DECKS_JSON):
         decks_out = []
         deck_rows = conn.execute(
             "SELECT d.*, e.name AS event_name, e.date AS event_date, "
-            "e.attendance AS attendance "
+            "e.attendance AS attendance, e.region AS event_region "
             "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
             "WHERE d.archetype = ? ORDER BY d.id", (archetype,)
         ).fetchall()
@@ -381,8 +386,10 @@ def export_decks_json(conn, path=DECKS_JSON):
                 "event": d["event_name"],
                 "event_date": d["event_date"],
                 "attendance": d["attendance"],
+                "region": d["event_region"],
                 "weight": d["weight"],
                 "url": d["url"],
+                "source": d["source"],
                 "cards": sections["main"],
                 "runes": sections["rune"],
                 "battlefields": sections["battlefield"],
@@ -558,8 +565,8 @@ def export_field_json(conn, path=FIELD_JSON):
 
     archetypes = {}
     for d in conn.execute(
-        "SELECT d.id, d.label, d.player, d.placement, d.archetype, d.url, "
-        "e.name AS event_name, e.date AS event_date "
+        "SELECT d.id, d.label, d.player, d.placement, d.archetype, d.url, d.source, "
+        "e.name AS event_name, e.date AS event_date, e.region AS event_region "
         "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
         "WHERE COALESCE(d.placement, '') != ? ORDER BY d.id", (LADDER_PLACEMENT,)
     ):
@@ -582,7 +589,9 @@ def export_field_json(conn, path=FIELD_JSON):
             "placement": d["placement"],
             "event": d["event_name"],
             "date": d["event_date"],
+            "region": d["event_region"],
             "url": d["url"],
+            "source": d["source"],
             "main": sections["main"],
             "side": sections["side"],
             "runes": sections["rune"],

@@ -11,8 +11,10 @@
         "event": "Vancouver Regional Qualifier",
         "event_date": "2026-05-29",
         "attendance": 1800,
+        "region": null,
         "weight": 3.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-1st-alanzq",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -391,8 +393,10 @@
         "event": "Hartford Regional Qualifier",
         "event_date": "2026-06-19",
         "attendance": 1900,
+        "region": null,
         "weight": 2.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-2nd-bsweitz",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -783,8 +787,10 @@
         "event": "Vancouver Regional Qualifier",
         "event_date": "2026-05-29",
         "attendance": 1800,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-top-4-dhawally",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Consult the Past",
@@ -1163,8 +1169,10 @@
         "event": "Utrecht Regional Qualifier",
         "event_date": "2026-06-12",
         "attendance": 1900,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-utrecht-regional-qualifier-top-4-dhawally",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -1530,8 +1538,10 @@
         "event": "Hartford Regional Qualifier",
         "event_date": "2026-06-19",
         "attendance": 1900,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-4-linsanity",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -1909,8 +1919,10 @@
         "event": "Sydney Regional Qualifier",
         "event_date": "2026-05-15",
         "attendance": 1400,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-4-nice-boy",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Diana, Lunari",
@@ -2325,8 +2337,10 @@
         "event": "Sydney Regional Qualifier",
         "event_date": "2026-05-15",
         "attendance": 1400,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-8-ctg-alanzq",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Abandon",
@@ -2668,8 +2682,10 @@
         "event": "Hartford Regional Qualifier",
         "event_date": "2026-06-19",
         "attendance": 1900,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-8-asc-evansrhim",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -3047,8 +3063,10 @@
         "event": "S3 Regional Open Changsha",
         "event_date": "2026-06-29",
         "attendance": null,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-top-4-xuejie-buai-wole",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -3474,8 +3492,10 @@
         "event": "S3 Regional Open Changsha",
         "event_date": "2026-06-29",
         "attendance": null,
+        "region": null,
         "weight": 2.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-2nd-banma-chaowan-cc",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -3866,8 +3886,10 @@
         "event": "S3 Regional Open Tianjin",
         "event_date": "2026-06-10",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-top-8-gambit-ye",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -4246,8 +4268,10 @@
         "event": "S3 Regional Open Tianjin",
         "event_date": "2026-06-10",
         "attendance": null,
+        "region": null,
         "weight": 2.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-2nd-grey-youchai",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -4626,8 +4650,10 @@
         "event": "S3 Regional Open Xian",
         "event_date": "2026-06-04",
         "attendance": null,
+        "region": null,
         "weight": 2.0,
         "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-xian-2nd-fangzhuzhiren",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -5028,9 +5054,11 @@
         "placement": "Top 8",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 1.0,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-006-aa-arestidios-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -5420,9 +5448,11 @@
         "placement": "Top 8",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 1.0,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-007-frisco-fahs-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -5823,9 +5853,11 @@
         "placement": "Top 8",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 1.0,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-007-rellik-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -6238,9 +6270,11 @@
         "placement": "Top 16",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.75,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-016-christian-cedeno-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -6581,9 +6615,11 @@
         "placement": "Top 32",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.5,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-017-cody-childers-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -6948,9 +6984,11 @@
         "placement": "Top 32",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.5,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-019-nic-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -7315,9 +7353,11 @@
         "placement": "Top 32",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.5,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-020-diego-rodriguez-del-valle-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -7682,9 +7722,11 @@
         "placement": "Top 32",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.5,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-025-jorge-vallazza-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -8085,9 +8127,11 @@
         "placement": "Top 32",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.5,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-032-zared-redding-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -8464,9 +8508,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-037-paxton-keskitalo-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -8867,9 +8913,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-042-kenneth-kish-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -9246,9 +9294,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-045-logan-davidson-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -9661,9 +9711,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-046-roland-krenz-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Consult the Past",
@@ -10016,9 +10068,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-050-brett-holman-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -10371,9 +10425,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-050-na-cord-tv-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -10751,9 +10807,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-063-kyle-emery-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Diana, Lunari",
@@ -11142,9 +11200,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-063-alexander-alegria-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -11522,9 +11582,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-064-cam-peavy-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -11889,9 +11951,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-064-botella-thomas-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -12256,9 +12320,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-071-jacob-moore-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -12599,9 +12665,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-075-sam-vanvickle-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -12966,9 +13034,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-076-daniel-combs-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -13333,9 +13403,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-079-kevin-nieves-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -13676,9 +13748,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-095-ethan-chavez-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -14044,9 +14118,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-110-dylan-pack-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -14436,9 +14512,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-120-david-higgins-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -14816,9 +14894,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-121-facundo-conde-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Diana, Lunari",
@@ -15159,9 +15239,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-123-jay-hoerner-diana-scorn-of-the-moon",
+        "source": "riftools",
         "cards": [
           {
             "name": "Consult the Past",
@@ -15526,9 +15608,11 @@
         "placement": "1st",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 3.0,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/234395cc-2b6a-4a21-a289-8ab1a48ffa51",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -15796,9 +15880,11 @@
         "placement": "3rd",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 1.75,
         "url": "wechat://riftbound-china/cardGroup/224559",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -16211,9 +16297,11 @@
         "placement": "3rd",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 1.75,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9378fdd0-6f41-4dc5-af42-d25b902ec87c",
+        "source": "riftools",
         "cards": [
           {
             "name": "Baron Nashor",
@@ -16541,9 +16629,11 @@
         "placement": "Top 4",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 1.5,
         "url": "wechat://riftbound-china/cardGroup/225131",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -16944,9 +17034,11 @@
         "placement": "Top 16",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.75,
         "url": "wechat://riftbound-china/cardGroup/224801",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -17347,9 +17439,11 @@
         "placement": "Top 32",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.5,
         "url": "wechat://riftbound-china/cardGroup/224831",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -17774,9 +17868,11 @@
         "placement": "Top 32",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.5,
         "url": "wechat://riftbound-china/cardGroup/223987",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -18153,9 +18249,11 @@
         "placement": "Top 32",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.5,
         "url": "wechat://riftbound-china/cardGroup/224527",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -18580,9 +18678,11 @@
         "placement": "Top 32",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.5,
         "url": "wechat://riftbound-china/cardGroup/224553",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -18983,9 +19083,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3e3d4427-ba0f-4810-82b6-352e6bcb510d",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -19313,9 +19415,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bbdc30ee-3946-4e2b-acc1-ea8ab9c0e9b2",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -19655,9 +19759,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a5df9097-84a4-442d-aae1-98ba91e30b7c",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -19949,9 +20055,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225246",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -20364,9 +20472,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0b05f916-2a3d-4eb7-8ae8-86ba76f79294",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -20670,9 +20780,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222876",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -21061,9 +21173,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224089",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -21476,9 +21590,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224480",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -21856,9 +21972,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222910",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -22271,9 +22389,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225349",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -22686,9 +22806,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223730",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -23053,9 +23175,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/de428a7d-6227-418d-95d0-97d36bd4bb2e",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -23407,9 +23531,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224247",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -23798,9 +23924,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9c60c665-82c6-4e76-9f34-7b9ce4347c28",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -24128,9 +24256,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225163",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -24508,9 +24638,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223064",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -24899,9 +25031,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225446",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -25327,9 +25461,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/50e08c7a-9869-4f98-8f8d-eaaec7a293f3",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -25657,9 +25793,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/23dce36c-da44-436f-b081-da756a1a039a",
+        "source": "riftools",
         "cards": [
           {
             "name": "Consult the Past",
@@ -25999,9 +26137,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/83d6dfba-9e0f-4a92-bcef-184ca2751b1d",
+        "source": "riftools",
         "cards": [
           {
             "name": "Fizz, Trickster",
@@ -26341,9 +26481,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224218",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -26744,9 +26886,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223810",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -27159,9 +27303,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/89b5b901-aba0-4406-a225-a75689d3a16d",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -27489,9 +27635,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bfecad58-0e2a-472c-b2e8-7bf39b272c33",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -27783,9 +27931,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224064",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -28126,9 +28276,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222873",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -28566,9 +28718,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224513",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -28945,9 +29099,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223375",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -29348,9 +29504,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224750",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -29727,9 +29885,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222663",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -30118,9 +30278,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225161",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -30498,9 +30660,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225173",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -30901,9 +31065,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225267",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -31293,9 +31459,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225327",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -31684,9 +31852,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224736",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -32099,9 +32269,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224071",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -32479,9 +32651,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224020",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -32870,9 +33044,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224011",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -33249,9 +33425,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222572",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -33652,9 +33830,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224674",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -34067,9 +34247,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223224",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -34422,9 +34604,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225055",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -34801,9 +34985,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224432",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -35156,9 +35342,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222570",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -35559,9 +35747,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225028",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -35970,8 +36160,10 @@
         "event": "S3 Regional Open Changsha",
         "event_date": "2026-06-29",
         "attendance": null,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-changsha-top-4-linghuaji-ecg-xiaosashiguang",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -36337,8 +36529,10 @@
         "event": "S3 Regional Open Changsha",
         "event_date": "2026-06-29",
         "attendance": null,
+        "region": null,
         "weight": 3.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-changsha-1st-gugugaga-amen-gambit",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -36752,8 +36946,10 @@
         "event": "S3 Regional Open Tianjin",
         "event_date": "2026-06-10",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-tianjin-top-8-rosencrantz",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -37131,8 +37327,10 @@
         "event": "S3 Regional Open Tianjin",
         "event_date": "2026-06-10",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-tianjin-top-8-ccb-chun",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -37522,8 +37720,10 @@
         "event": "Vancouver Regional Qualifier",
         "event_date": "2026-05-29",
         "attendance": 1800,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-vancouver-regional-qualifier-top-8-baobaoaz",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -37937,8 +38137,10 @@
         "event": "Vancouver Regional Qualifier",
         "event_date": "2026-05-29",
         "attendance": 1800,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-vancouver-regional-qualifier-top-8-arito",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -38340,8 +38542,10 @@
         "event": "Sydney Regional Qualifier",
         "event_date": "2026-05-15",
         "attendance": 1400,
+        "region": null,
         "weight": 3.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-sydney-regional-qualifier-1st-edg-rico1997",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -38719,8 +38923,10 @@
         "event": "S3 Regional Open Xian",
         "event_date": "2026-06-04",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-8-beijingzexuan-cui",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -39134,8 +39340,10 @@
         "event": "S3 Regional Open Xian",
         "event_date": "2026-06-04",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-8-ccb-chun",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -39525,8 +39733,10 @@
         "event": "S3 Regional Open Xian",
         "event_date": "2026-06-04",
         "attendance": null,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-4-zijin-madai-sdubby",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -39928,8 +40138,10 @@
         "event": "S3 Regional Open Xian",
         "event_date": "2026-06-04",
         "attendance": null,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-4-edg-rico1997",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -40307,8 +40519,10 @@
         "event": "S3 Regional Open Suzhou",
         "event_date": "2026-05-23",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-suzhou-top-8-jiyan-yada",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -40662,8 +40876,10 @@
         "event": "S3 Regional Open Suzhou",
         "event_date": "2026-05-23",
         "attendance": null,
+        "region": null,
         "weight": 2.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-suzhou-2nd-lineka-oak",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -41101,8 +41317,10 @@
         "event": "Sydney Regional Qualifier",
         "event_date": "2026-05-15",
         "attendance": 1400,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-sydney-regional-qualifier-top-8-ghosterdriver",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Back Off",
@@ -41540,8 +41758,10 @@
         "event": "Atlanta Regional Qualifier",
         "event_date": "2026-04-24",
         "attendance": 1500,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-atlanta-regional-qualifier-top-4-harukaze",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -41931,8 +42151,10 @@
         "event": "Lille Regional Qualifier",
         "event_date": "2026-04-17",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-lille-regional-qualifier-top-8-natureal",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -42310,8 +42532,10 @@
         "event": "Lille Regional Qualifier",
         "event_date": "2026-04-17",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-lille-regional-qualifier-top-8-alex-shans",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -42677,8 +42901,10 @@
         "event": "Lille Regional Qualifier",
         "event_date": "2026-04-17",
         "attendance": null,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-lille-regional-qualifier-top-8-tinodluffy",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -43044,8 +43270,10 @@
         "event": "Vegas Regional Qualifier",
         "event_date": "2026-02-27",
         "attendance": 1600,
+        "region": null,
         "weight": 1.0,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-vegas-regional-qualifier-top-8-deluxephilcheeze",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -43387,8 +43615,10 @@
         "event": "Bologna Regional Qualifier",
         "event_date": "2026-05-19",
         "attendance": null,
+        "region": null,
         "weight": 1.5,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-bologna-regional-qualifier-top-4-krowz",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -43730,8 +43960,10 @@
         "event": "Mobalytics Ladder",
         "event_date": null,
         "attendance": null,
+        "region": null,
         "weight": 0.5,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-hartford-regional-qualifier-best-of-guubums",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Abandon",
@@ -44109,8 +44341,10 @@
         "event": "Mobalytics Ladder",
         "event_date": null,
         "attendance": null,
+        "region": null,
         "weight": 0.5,
         "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-utrecht-regional-qualifier-best-of-comeback-king",
+        "source": "mobalytics",
         "cards": [
           {
             "name": "Adaptatron",
@@ -44535,9 +44769,11 @@
         "placement": "Top 16",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.75,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-009-snoopydafloofy-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -44890,9 +45126,11 @@
         "placement": "Top 16",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.75,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-015-frog-eryn-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -45281,9 +45519,11 @@
         "placement": "Top 32",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.5,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-025-connoorrr-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -45612,9 +45852,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-043-christopher-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -45991,9 +46233,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-054-justin-etheridge-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -46394,9 +46638,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-069-yangpanting-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Acceptable Losses",
@@ -46797,9 +47043,11 @@
         "placement": "Swiss",
         "event": "CCS Sunday $5,000 Riftbound Event #4",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 82,
+        "region": "NA",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-077-patrick-garner-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Back Off",
@@ -47176,9 +47424,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-087-jesus-riva-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -47555,9 +47805,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-099-zach-whitley-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -47946,9 +48198,11 @@
         "placement": "Swiss",
         "event": "RiftAtlas Convergence #1",
         "event_date": "2026-07-19",
-        "attendance": null,
+        "attendance": 128,
+        "region": "Other",
         "weight": 0.25,
         "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-109-tubbyx-gavin-irelia-blade-dancer",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -48337,9 +48591,11 @@
         "placement": "1st",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 3.0,
         "url": "wechat://riftbound-china/cardGroup/225002",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -48728,9 +48984,11 @@
         "placement": "2nd",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 2.0,
         "url": "wechat://riftbound-china/cardGroup/225058",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -49131,9 +49389,11 @@
         "placement": "Top 4",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 1.5,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8d719799-580b-4250-8444-3a081d4bc533",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -49461,9 +49721,11 @@
         "placement": "Top 16",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.75,
         "url": "wechat://riftbound-china/cardGroup/225335",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -49852,9 +50114,11 @@
         "placement": "Top 16",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.75,
         "url": "wechat://riftbound-china/cardGroup/224176",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -50207,9 +50471,11 @@
         "placement": "Top 16",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.75,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0f4cce39-cfe0-4abf-9969-3c19e396a18b",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -50561,9 +50827,11 @@
         "placement": "Top 32",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.5,
         "url": "wechat://riftbound-china/cardGroup/225018",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -50952,9 +51220,11 @@
         "placement": "Top 32",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.5,
         "url": "wechat://riftbound-china/cardGroup/224061",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -51355,9 +51625,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225057",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -51758,9 +52030,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223566",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -52149,9 +52423,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225063",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -52528,9 +52804,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224724",
+        "source": "riftools",
         "cards": [
           {
             "name": "Back Off",
@@ -52955,9 +53233,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224471",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -53370,9 +53650,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/452b2c1b-b2dc-4cac-bbdd-5de03276335e",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -53724,9 +54006,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225196",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -54139,9 +54423,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225177",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -54566,9 +54852,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224696",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -54981,9 +55269,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/81c93126-d12b-44d5-b3f5-15a838365a25",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -55323,9 +55613,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225147",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -55702,9 +55994,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225039",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -56081,9 +56375,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223738",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -56496,9 +56792,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222641",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -56911,9 +57209,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225021",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -57326,9 +57626,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6b0c498a-515e-45ee-873f-0143d0129f60",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -57692,9 +57994,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223989",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -58119,9 +58423,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5f5b26ee-b993-4f4e-a565-f3b4ed25aaeb",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -58461,9 +58767,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223785",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -58864,9 +59172,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b2a1b18a-27e8-4734-a4da-e15c5e184627",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -59206,9 +59516,11 @@
         "placement": "Swiss",
         "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 256,
+        "region": "EU",
         "weight": 0.25,
         "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b689ec94-1b1a-4623-a48a-4baee9d79e86",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -59548,9 +59860,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224528",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -59927,9 +60241,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224554",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -60342,9 +60658,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223821",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -60733,9 +61051,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224728",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -61148,9 +61468,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225179",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -61563,9 +61885,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224410",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -61978,9 +62302,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223865",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -62381,9 +62707,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224451",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -62808,9 +63136,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224794",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -63223,9 +63553,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224610",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -63638,9 +63970,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224691",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -64053,9 +64387,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224682",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -64468,9 +64804,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224892",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -64871,9 +65209,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222652",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -65286,9 +65626,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225208",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -65677,9 +66019,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224536",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",
@@ -66056,9 +66400,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224663",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -66519,9 +66865,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222753",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -66922,9 +67270,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224210",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -67301,9 +67651,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222364",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -67704,9 +68056,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/222220",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -68131,9 +68485,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224573",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -68522,9 +68878,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225364",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -68937,9 +69295,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224293",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -69376,9 +69736,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224006",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -69791,9 +70153,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224907",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -70206,9 +70570,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223745",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -70573,9 +70939,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/221922",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -70988,9 +71356,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223361",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -71367,9 +71737,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224771",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -71770,9 +72142,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223391",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -72185,9 +72559,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/225403",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -72576,9 +72952,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224522",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -72991,9 +73369,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224000",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -73430,9 +73810,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224888",
+        "source": "riftools",
         "cards": [
           {
             "name": "Boots of Swiftness",
@@ -73845,9 +74227,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224792",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -74272,9 +74656,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/224821",
+        "source": "riftools",
         "cards": [
           {
             "name": "Adaptatron",
@@ -74687,9 +75073,11 @@
         "placement": "Swiss",
         "event": "S3 China National Open",
         "event_date": "2026-07-18",
-        "attendance": null,
+        "attendance": 2032,
+        "region": "CN",
         "weight": 0.25,
         "url": "wechat://riftbound-china/cardGroup/223287",
+        "source": "riftools",
         "cards": [
           {
             "name": "Abandon",

@@ -25,7 +25,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-1st-alanzq",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -71,7 +73,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-2nd-bsweitz",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -118,7 +122,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-vancouver-regional-qualifier-top-4-dhawally",
+     "source": "mobalytics",
      "main": {
       "Consult the Past": 1,
       "Diana, Lunari": 1,
@@ -164,7 +170,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-utrecht-regional-qualifier-top-4-dhawally",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Eclipse": 1,
@@ -209,7 +217,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-4-linsanity",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -255,7 +265,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-4-nice-boy",
+     "source": "mobalytics",
      "main": {
       "Diana, Lunari": 1,
       "Fading Memories": 1,
@@ -304,7 +316,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-sydney-regional-qualifier-top-8-ctg-alanzq",
+     "source": "mobalytics",
      "main": {
       "Abandon": 2,
       "Diana, Lunari": 1,
@@ -347,7 +361,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-hartford-regional-qualifier-top-8-asc-evansrhim",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -393,7 +409,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-top-4-xuejie-buai-wole",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -443,7 +461,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-changsha-2nd-banma-chaowan-cc",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -490,7 +510,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-top-8-gambit-ye",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -536,7 +558,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-tianjin-2nd-grey-youchai",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Baron Nashor": 2,
@@ -582,7 +606,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/diana-scorn-of-the-moon-s3-regional-open-xian-2nd-fangzhuzhiren",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -630,7 +656,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-006-aa-arestidios-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -677,7 +705,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-007-frisco-fahs-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -725,7 +755,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-007-rellik-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -774,7 +806,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-016-christian-cedeno-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -817,7 +851,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-017-cody-childers-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -862,7 +898,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-019-nic-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -907,7 +945,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-020-diego-rodriguez-del-valle-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -952,7 +992,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-025-jorge-vallazza-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 1,
@@ -1000,7 +1042,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-032-zared-redding-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -1046,7 +1090,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-037-paxton-keskitalo-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -1094,7 +1140,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-042-kenneth-kish-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -1140,7 +1188,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-045-logan-davidson-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -1189,7 +1239,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-046-roland-krenz-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Consult the Past": 2,
       "Diana, Lunari": 1,
@@ -1233,7 +1285,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-050-brett-holman-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -1277,7 +1331,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-050-na-cord-tv-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1323,7 +1379,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-063-kyle-emery-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Diana, Lunari": 1,
       "Eclipse": 1,
@@ -1370,7 +1428,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-063-alexander-alegria-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -1416,7 +1476,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-064-cam-peavy-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1461,7 +1523,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-064-botella-thomas-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1506,7 +1570,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-071-jacob-moore-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1549,7 +1615,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-075-sam-vanvickle-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1594,7 +1662,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-076-daniel-combs-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -1639,7 +1709,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-079-kevin-nieves-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1682,7 +1754,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-095-ethan-chavez-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1727,7 +1801,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-110-dylan-pack-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1774,7 +1850,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-120-david-higgins-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -1820,7 +1898,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-121-facundo-conde-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Diana, Lunari": 1,
       "Eclipse": 1,
@@ -1863,7 +1943,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-123-jay-hoerner-diana-scorn-of-the-moon",
+     "source": "riftools",
      "main": {
       "Consult the Past": 1,
       "Diana, Lunari": 1,
@@ -1908,7 +1990,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/234395cc-2b6a-4a21-a289-8ab1a48ffa51",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Fizz, Trickster": 2,
@@ -1944,7 +2028,9 @@ window.FIELD = {
      "placement": "3rd",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224559",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -1993,7 +2079,9 @@ window.FIELD = {
      "placement": "3rd",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9378fdd0-6f41-4dc5-af42-d25b902ec87c",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Fizz, Trickster": 1,
@@ -2034,7 +2122,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225131",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -2082,7 +2172,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224801",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Baron Nashor": 1,
@@ -2130,7 +2222,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224831",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -2180,7 +2274,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223987",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2226,7 +2322,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224527",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2276,7 +2374,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224553",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2324,7 +2424,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3e3d4427-ba0f-4810-82b6-352e6bcb510d",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Fizz, Trickster": 2,
@@ -2365,7 +2467,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bbdc30ee-3946-4e2b-acc1-ea8ab9c0e9b2",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -2407,7 +2511,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a5df9097-84a4-442d-aae1-98ba91e30b7c",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Fizz, Trickster": 2,
@@ -2445,7 +2551,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225246",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2494,7 +2602,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0b05f916-2a3d-4eb7-8ae8-86ba76f79294",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Fizz, Trickster": 2,
@@ -2533,7 +2643,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222876",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2580,7 +2692,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224089",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -2629,7 +2743,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224480",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2675,7 +2791,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222910",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -2724,7 +2842,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225349",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -2773,7 +2893,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223730",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2818,7 +2940,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/de428a7d-6227-418d-95d0-97d36bd4bb2e",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Eclipse": 2,
@@ -2861,7 +2985,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224247",
+     "source": "riftools",
      "main": {
       "Abandon": 2,
       "Acceptable Losses": 2,
@@ -2908,7 +3034,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9c60c665-82c6-4e76-9f34-7b9ce4347c28",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Fizz, Trickster": 2,
@@ -2949,7 +3077,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225163",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -2995,7 +3125,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223064",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3042,7 +3174,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225446",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -3092,7 +3226,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/50e08c7a-9869-4f98-8f8d-eaaec7a293f3",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Eclipse": 1,
@@ -3133,7 +3269,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/23dce36c-da44-436f-b081-da756a1a039a",
+     "source": "riftools",
      "main": {
       "Consult the Past": 1,
       "Fizz, Trickster": 2,
@@ -3175,7 +3313,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/83d6dfba-9e0f-4a92-bcef-184ca2751b1d",
+     "source": "riftools",
      "main": {
       "Fizz, Trickster": 2,
       "Flash": 2,
@@ -3217,7 +3357,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224218",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3265,7 +3407,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223810",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -3314,7 +3458,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/89b5b901-aba0-4406-a225-a75689d3a16d",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Eclipse": 1,
@@ -3355,7 +3501,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bfecad58-0e2a-472c-b2e8-7bf39b272c33",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Fizz, Trickster": 2,
@@ -3393,7 +3541,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224064",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3436,7 +3586,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222873",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3487,7 +3639,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224513",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Deadly Flourish": 2,
@@ -3533,7 +3687,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223375",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3581,7 +3737,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224750",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -3627,7 +3785,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222663",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Baron Nashor": 1,
@@ -3674,7 +3834,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225161",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3720,7 +3882,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225173",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3768,7 +3932,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225267",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -3815,7 +3981,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225327",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Baron Nashor": 1,
@@ -3862,7 +4030,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224736",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -3911,7 +4081,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224071",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -3957,7 +4129,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224020",
+     "source": "riftools",
      "main": {
       "Abandon": 2,
       "Acceptable Losses": 2,
@@ -4004,7 +4178,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224011",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -4050,7 +4226,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222572",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -4098,7 +4276,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224674",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Diana, Lunari": 1,
@@ -4147,7 +4327,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223224",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Baron Nashor": 1,
@@ -4191,7 +4373,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225055",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -4237,7 +4421,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224432",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -4281,7 +4467,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222570",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -4329,7 +4517,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225028",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Diana, Lunari": 1,
@@ -4383,7 +4573,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-hartford-regional-qualifier-1st-factor",
+     "source": "mobalytics",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -4426,7 +4618,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-s3-regional-open-changsha-top-8-xxt-blank",
+     "source": "mobalytics",
      "main": {
       "Arachnoid Horror": 2,
       "Challenge": 1,
@@ -4470,7 +4664,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-s3-regional-open-changsha-top-8-hbg-w",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -4518,7 +4714,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-s3-regional-open-changsha-top-8-arbd-noppl",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -4565,7 +4763,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-utrecht-regional-qualifier-top-8-bakura",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -4608,7 +4808,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-vancouver-regional-qualifier-top-4-housesarebig",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -4652,7 +4854,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-s3-regional-open-tianjin-1st-chen-qian-yu",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -4698,7 +4902,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-s3-regional-open-suzhou-1st-lin-chuan",
+     "source": "mobalytics",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -4737,7 +4943,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-lille-regional-qualifier-2nd-schorn",
+     "source": "mobalytics",
      "main": {
       "Charm": 3,
       "Defy": 2,
@@ -4784,7 +4992,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-lille-regional-qualifier-top-8-barczek",
+     "source": "mobalytics",
      "main": {
       "Charm": 3,
       "Clockwork Keeper": 3,
@@ -4829,7 +5039,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-houston-regional-qualifier-2nd-blargh1111",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -4872,7 +5084,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-houston-regional-qualifier-top-8-clyde",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -4915,7 +5129,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-sydney-regional-qualifier-best-of-minjuu",
+     "source": "mobalytics",
      "main": {
       "Alpha Strike": 1,
       "Back Off": 1,
@@ -4961,7 +5177,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-bladesman-atlanta-regional-qualifier-best-of-ominousmilk",
+     "source": "mobalytics",
      "main": {
       "Charm": 3,
       "Clockwork Keeper": 3,
@@ -5007,7 +5225,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-001-zachary-plott-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 2,
@@ -5050,7 +5270,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-002-brandon-blakeborough-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 2,
@@ -5092,7 +5314,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-002-sevbash-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 2,
@@ -5137,7 +5361,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-004-fernando-dore-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -5176,7 +5402,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-012-jimmy-y-tan-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Challenge": 1,
@@ -5224,7 +5452,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-013-luigi-vallazza-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Challenge": 3,
@@ -5268,7 +5498,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-016-ff-norolemodel-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Challenge": 1,
@@ -5311,7 +5543,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-018-silang-jia-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 2,
@@ -5353,7 +5587,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-020-mois-s-santiba-ez-ossio-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5396,7 +5632,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-021-trevor-wenzel-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 2,
@@ -5440,7 +5678,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-022-siming-jia-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 1,
@@ -5483,7 +5723,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-028-orlando-lucas-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 2,
@@ -5526,7 +5768,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-030-aa-romomo-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5571,7 +5815,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-033-jason-seabolt-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5614,7 +5860,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-035-noah-m-tosado-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Back Off": 3,
@@ -5657,7 +5905,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-039-t-vang-oneofus-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5703,7 +5953,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-040-gandalfthegosu-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 3,
       "Catalyst of Aeons": 3,
@@ -5741,7 +5993,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-044-anthony-strange-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 2,
@@ -5784,7 +6038,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-044-aa-kaaleb-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5829,7 +6085,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-049-jaxon-miller-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5872,7 +6130,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-051-nicklauss-mcdonald-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5917,7 +6177,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-052-2kcheezy-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -5960,7 +6222,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-053-robert-j-schneider-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -6002,7 +6266,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-057-liz-cox-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -6045,7 +6311,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-059-aydan-gutekunst-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 2,
@@ -6088,7 +6356,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-070-brandon-mckamey-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Carnivorous Snapvine": 1,
@@ -6132,7 +6402,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-081-juliuse-mallari-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -6175,7 +6447,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-086-escapedbard-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -6221,7 +6495,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-092-oscar-groves-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -6263,7 +6539,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-116-ubersterben-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Charm": 2,
@@ -6309,7 +6587,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-117-florian-ramoner-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -6352,7 +6632,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-118-kankrit-m-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Carnivorous Snapvine": 1,
       "Challenge": 2,
@@ -6395,7 +6677,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-119-atorre-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -6436,7 +6720,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-128-angelo-parisi-master-yi-wuju-bladesman",
+     "source": "riftools",
      "main": {
       "Block": 1,
       "Challenge": 1,
@@ -6485,7 +6771,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224661",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -6529,7 +6817,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3df29b96-e483-479c-8253-f92802966e76",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -6567,7 +6857,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224048",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -6612,7 +6904,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225171",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -6656,7 +6950,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224646",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -6701,7 +6997,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222549",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -6746,7 +7044,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224749",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Alpha Strike": 1,
@@ -6792,7 +7092,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c34dd7f7-9f5d-4a2f-9cbb-c6a771a325ee",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -6830,7 +7132,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223867",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -6877,7 +7181,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223722",
+     "source": "riftools",
      "main": {
       "Brutalizer": 1,
       "Challenge": 3,
@@ -6917,7 +7223,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225025",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -6963,7 +7271,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6483f0b4-2cf2-4f8e-a0d9-6e154e86b70d",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7001,7 +7311,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224402",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -7046,7 +7358,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223760",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Challenge": 1,
@@ -7089,7 +7403,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224894",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -7135,7 +7451,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/19368977-dd85-475d-bb86-2b4264ef176a",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7176,7 +7494,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/820f5d8a-bb49-4d0a-837f-2e680d86893a",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7216,7 +7536,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225400",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -7260,7 +7582,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225144",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Challenge": 1,
@@ -7305,7 +7629,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225306",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -7352,7 +7678,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225350",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Charm": 3,
@@ -7397,7 +7725,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225089",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -7438,7 +7768,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223970",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Challenge": 1,
@@ -7483,7 +7815,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225158",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7527,7 +7861,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225145",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -7575,7 +7911,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224529",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -7619,7 +7957,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f87db2c5-eab8-467d-9462-27b44538738c",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 1,
@@ -7658,7 +7998,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223615",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -7704,7 +8046,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8cb6a193-fd40-432e-825f-662bdfcdac05",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7743,7 +8087,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225329",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7787,7 +8133,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224769",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -7833,7 +8181,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224534",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7877,7 +8227,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225140",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -7920,7 +8272,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/eee3b596-2ba8-4307-8cb3-170b3f1501bf",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -7959,7 +8313,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8e212151-483c-4838-9280-fc0b626e7730",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -8000,7 +8356,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224906",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 2,
@@ -8045,7 +8403,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223671",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Alpha Strike": 1,
@@ -8089,7 +8449,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224909",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -8137,7 +8499,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224586",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -8183,7 +8547,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224707",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -8230,7 +8596,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2a6965f9-7a6a-4a06-927e-575ef524dc7d",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -8269,7 +8637,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224265",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -8316,7 +8686,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224473",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -8360,7 +8732,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/72111d72-8d1d-4e41-8871-2738f1267793",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -8402,7 +8776,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224790",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -8445,7 +8821,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223842",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 1,
@@ -8491,7 +8869,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/90790d70-ebea-4f7f-8198-095e828e1df3",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -8529,7 +8909,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222730",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -8575,7 +8957,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ed909d4b-543a-4e55-99f4-96b107fdf190",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -8616,7 +9000,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224699",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -8661,7 +9047,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225282",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -8705,7 +9093,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223951",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -8750,7 +9140,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/221025",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -8798,7 +9190,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224301",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -8844,7 +9238,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222893",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -8890,7 +9286,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224650",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -8935,7 +9333,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225153",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 2,
@@ -8976,7 +9376,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225198",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -9021,7 +9423,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d0a55181-182b-44b5-a1c0-4a2040774110",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -9062,7 +9466,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/facc02ef-d16e-4705-b120-310d02cae0e7",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -9100,7 +9506,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225445",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -9145,7 +9553,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224708",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Challenge": 2,
@@ -9190,7 +9600,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225093",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -9236,7 +9648,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222348",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Brutalizer": 2,
@@ -9278,7 +9692,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224741",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 1,
@@ -9322,7 +9738,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225146",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Alpha Strike": 1,
@@ -9371,7 +9789,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225201",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Catalyst of Aeons": 2,
@@ -9415,7 +9835,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224632",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Arachnoid Horror": 2,
@@ -9461,7 +9883,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223067",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -9504,7 +9928,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224285",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Challenge": 1,
@@ -9548,7 +9974,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223577",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -9596,7 +10024,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225111",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -9641,7 +10071,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224377",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -9687,7 +10119,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224882",
+     "source": "riftools",
      "main": {
       "Brutalizer": 1,
       "Challenge": 2,
@@ -9732,7 +10166,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223620",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -9780,7 +10216,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225114",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -9823,7 +10261,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224702",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -9870,7 +10310,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225129",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -9916,7 +10358,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223657",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -9959,7 +10403,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223579",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -10002,7 +10448,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222887",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -10046,7 +10494,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223969",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 2,
@@ -10092,7 +10542,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225108",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Back Off": 1,
@@ -10145,7 +10597,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224701",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -10191,7 +10645,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222535",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -10236,7 +10692,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223885",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 2,
@@ -10279,7 +10737,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224382",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -10322,7 +10782,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222914",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -10366,7 +10828,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224990",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -10412,7 +10876,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224319",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -10459,7 +10925,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224047",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Challenge": 1,
@@ -10503,7 +10971,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224438",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -10549,7 +11019,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222770",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -10595,7 +11067,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222111",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -10643,7 +11117,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225390",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -10689,7 +11165,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225046",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -10734,7 +11212,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224958",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -10779,7 +11259,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223537",
+     "source": "riftools",
      "main": {
       "Challenge": 3,
       "Charm": 2,
@@ -10819,7 +11301,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224075",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -10866,7 +11350,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224543",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 1,
@@ -10912,7 +11398,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224962",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -10958,7 +11446,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224257",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Challenge": 1,
@@ -11001,7 +11491,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225211",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 2,
@@ -11047,7 +11539,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222526",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -11093,7 +11587,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224952",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Back Off": 1,
@@ -11139,7 +11635,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224774",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -11184,7 +11682,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225440",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 1,
@@ -11230,7 +11730,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224679",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 2,
@@ -11276,7 +11778,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225380",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -11318,7 +11822,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225249",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Challenge": 1,
@@ -11362,7 +11868,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224746",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -11409,7 +11917,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225441",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Charm": 3,
@@ -11457,7 +11967,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224740",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -11499,7 +12011,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223731",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 2,
@@ -11544,7 +12058,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224984",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 2,
@@ -11588,7 +12104,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223903",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -11636,7 +12154,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224678",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -11685,7 +12205,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224672",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 1,
@@ -11731,7 +12253,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224027",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -11778,7 +12302,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225095",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -11826,7 +12352,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222653",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -11879,7 +12407,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-hartford-regional-qualifier-top-4-bradykin",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -11924,7 +12454,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-s3-regional-open-suzhou-top-8-txg-gaoyuan",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 3,
@@ -11968,7 +12500,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-s3-regional-open-suzhou-top-8-andy1996",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 2,
@@ -12010,7 +12544,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-atlanta-regional-qualifier-top-4-ctg-alanzq",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 3,
@@ -12055,7 +12591,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-vegas-regional-qualifier-top-8-alanzq1",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 3,
@@ -12102,7 +12640,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-bologna-regional-qualifier-1st-alanzq1",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 2,
@@ -12150,7 +12690,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-bologna-regional-qualifier-top-8-themanlandrft",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 3,
       "Called Shot": 3,
@@ -12193,7 +12735,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-utrecht-regional-qualifier-best-of-bermuda",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 1,
       "Bellows Breath": 2,
@@ -12240,7 +12784,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-vancouver-regional-qualifier-best-of-slabshark2025",
+     "source": "mobalytics",
      "main": {
       "Annie, Stubborn": 1,
       "Bellows Breath": 3,
@@ -12288,7 +12834,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-sydney-regional-qualifier-best-of-apexlyy",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 1,
       "Arcane Shift": 3,
@@ -12337,7 +12885,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ezreal-prodigal-explorer-lille-regional-qualifier-best-of-afrozial",
+     "source": "mobalytics",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 3,
@@ -12383,7 +12933,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-009-george-gebhardt-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12430,7 +12982,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-030-paul-miller-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 1,
       "Bellows Breath": 3,
@@ -12476,7 +13030,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-048-dennis-kim-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12523,7 +13079,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-055-drowsy-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12568,7 +13126,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-058-zane-simpson-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12615,7 +13175,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-068-jaime-riva-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Annie, Stubborn": 1,
       "Bellows Breath": 3,
@@ -12663,7 +13225,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-072-timothy-s-henderson-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 2,
@@ -12708,7 +13272,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-077-nyx-stinson-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12753,7 +13319,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-082-renaiman-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12797,7 +13365,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-089-purplecrayon-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12842,7 +13412,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-091-donkerberos-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12886,7 +13458,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-101-baldrift-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -12931,7 +13505,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-122-liv-ezreal-prodigal-explorer",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 1,
       "Bewitching Spirit": 3,
@@ -12974,7 +13550,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224940",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bellows Breath": 3,
@@ -13021,7 +13599,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/73786a32-067c-4ffe-abaa-8be3e13c8230",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -13063,7 +13643,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/008f1b01-c7bf-4d75-b167-b4befeaadbea",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -13105,7 +13687,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/98caa1c7-3a57-41ba-a4a9-2c4d3d297744",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bellows Breath": 3,
@@ -13145,7 +13729,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/526270b3-2c20-483e-ae49-3d78b1af473d",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -13187,7 +13773,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225436",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -13232,7 +13820,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224840",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 3,
@@ -13277,7 +13867,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/cb050480-00a8-4afa-b299-85076bc3b490",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 1,
       "Bellows Breath": 3,
@@ -13319,7 +13911,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224010",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -13366,7 +13960,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224369",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 2,
@@ -13412,7 +14008,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223968",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 3,
@@ -13461,7 +14059,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224390",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 1,
       "Bellows Breath": 3,
@@ -13505,7 +14105,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d2e1b3f8-e33e-47a2-b9f6-738da4e682ef",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -13547,7 +14149,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224999",
+     "source": "riftools",
      "main": {
       "Arcane Shift": 2,
       "Bellows Breath": 2,
@@ -13595,7 +14199,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/220532",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Arcane Shift": 2,
@@ -13639,7 +14245,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225330",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Bewitching Spirit": 3,
@@ -13692,7 +14300,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lux-lady-of-luminosity-hartford-regional-qualifier-top-8-ctcg-relivia",
+     "source": "mobalytics",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -13737,7 +14347,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lux-lady-of-luminosity-utrecht-regional-qualifier-best-of-sanan",
+     "source": "mobalytics",
      "main": {
       "Card Sharp": 2,
       "Cull the Weak": 2,
@@ -13780,7 +14392,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lux-lady-of-luminosity-vancouver-regional-qualifier-best-of-tingfw",
+     "source": "mobalytics",
      "main": {
       "Cull the Weak": 2,
       "Hidden Blade": 2,
@@ -13826,7 +14440,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lux-lady-of-luminosity-sydney-regional-qualifier-best-of-obscurity",
+     "source": "mobalytics",
      "main": {
       "Ashe, Focused": 3,
       "Blood Money": 2,
@@ -13869,7 +14485,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lux-lady-of-luminosity-atlanta-regional-qualifier-best-of-gni",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Card Sharp": 3,
@@ -13911,7 +14529,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lux-lady-of-luminosity-lille-regional-qualifier-best-of-dongd",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Card Sharp": 3,
@@ -13953,7 +14573,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lux-lady-of-luminosity-houston-regional-qualifier-best-of-ryanempire",
+     "source": "mobalytics",
      "main": {
       "Blast of Power": 3,
       "Consult the Past": 1,
@@ -13996,7 +14618,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-052-cayce-bowen-lux-lady-of-luminosity",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 2,
       "Ekko, Recurrent": 3,
@@ -14040,7 +14664,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-062-collin-etheridge-lux-lady-of-luminosity",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14085,7 +14711,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224129",
+     "source": "riftools",
      "main": {
       "Cull the Weak": 1,
       "Ekko, Recurrent": 3,
@@ -14131,7 +14759,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a67f56df-0068-4b55-a919-9a4142117940",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14171,7 +14801,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223898",
+     "source": "riftools",
      "main": {
       "Black Rose Dignitary": 1,
       "Consult the Past": 3,
@@ -14214,7 +14846,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fa1b9cf5-fe87-45b5-bc3e-e957e3d0c3dc",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14254,7 +14888,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223562",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14299,7 +14935,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225113",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14343,7 +14981,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224509",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Cull the Weak": 3,
@@ -14387,7 +15027,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224119",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14432,7 +15074,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224286",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Bellows Breath": 3,
@@ -14478,7 +15122,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/41f4a01c-6304-42df-b9b2-2cc6442139cb",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14517,7 +15163,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/73362493-1c82-4c5e-b788-14ec61e79a23",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Downstage Dramatics": 3,
@@ -14557,7 +15205,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224925",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Downstage Dramatics": 2,
@@ -14603,7 +15253,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223697",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14648,7 +15300,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225094",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 2,
       "Ekko, Recurrent": 3,
@@ -14694,7 +15348,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223414",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14739,7 +15395,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224111",
+     "source": "riftools",
      "main": {
       "Consult the Past": 3,
       "Downstage Dramatics": 3,
@@ -14782,7 +15440,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223559",
+     "source": "riftools",
      "main": {
       "Downstage Dramatics": 3,
       "Ekko, Recurrent": 3,
@@ -14827,7 +15487,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223972",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Ekko, Recurrent": 3,
@@ -14873,7 +15535,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224805",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Cull the Weak": 2,
@@ -14919,7 +15583,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224993",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Deadly Flourish": 3,
@@ -14969,7 +15635,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/darius-hand-of-noxus-utrecht-regional-qualifier-top-8-mice-diamondhat",
+     "source": "mobalytics",
      "main": {
       "Baited Hook": 3,
       "Carrion Dredger": 3,
@@ -15012,7 +15680,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/darius-hand-of-noxus-hartford-regional-qualifier-best-of-asiptofu",
+     "source": "mobalytics",
      "main": {
       "Blighted Battleaxe": 2,
       "Call to Glory": 2,
@@ -15056,7 +15726,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/darius-hand-of-noxus-vancouver-regional-qualifier-best-of-dinobravo",
+     "source": "mobalytics",
      "main": {
       "Ashe, Focused": 2,
       "B.F. Sword": 2,
@@ -15101,7 +15773,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/darius-hand-of-noxus-sydney-regional-qualifier-best-of-dimmers",
+     "source": "mobalytics",
      "main": {
       "B.F. Sword": 3,
       "Baited Hook": 3,
@@ -15144,7 +15818,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/darius-hand-of-noxus-atlanta-regional-qualifier-best-of-zile",
+     "source": "mobalytics",
      "main": {
       "Baited Hook": 3,
       "Darius, Trifarian": 1,
@@ -15186,7 +15862,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/darius-hand-of-noxus-lille-regional-qualifier-best-of-sanan",
+     "source": "mobalytics",
      "main": {
       "Baited Hook": 3,
       "Darius, Trifarian": 1,
@@ -15228,7 +15906,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/darius-hand-of-noxus-houston-regional-qualifier-best-of-puyshpii",
+     "source": "mobalytics",
      "main": {
       "Baited Hook": 3,
       "Cleave": 2,
@@ -15272,7 +15952,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-065-josh-darius-hand-of-noxus",
+     "source": "riftools",
      "main": {
       "Arena Kingpin": 1,
       "Call to Glory": 1,
@@ -15319,7 +16001,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/40fdb514-5941-4031-b5a4-a00daf2c7573",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Blood Rush": 2,
@@ -15360,7 +16044,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0f21b3c5-6ade-4692-b8f3-f25c6de77335",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Carrion Dredger": 3,
@@ -15399,7 +16085,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225376",
+     "source": "riftools",
      "main": {
       "Black Rose Dignitary": 2,
       "Blighted Battleaxe": 1,
@@ -15449,7 +16137,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1bdf77c2-7aa4-4c2d-9b22-0d318c7e153f",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Carrion Dredger": 3,
@@ -15488,7 +16178,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0bb9aec5-af88-47b3-a90e-de4ac8be22f4",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Cleave": 2,
@@ -15529,7 +16221,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225209",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Carrion Dredger": 2,
@@ -15580,7 +16274,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224834",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Darius, Trifarian": 1,
@@ -15624,7 +16320,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225307",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Blighted Battleaxe": 3,
@@ -15678,7 +16376,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-utrecht-regional-qualifier-top-8-mice-ramekiano",
+     "source": "mobalytics",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -15718,7 +16418,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-s3-regional-open-tianjin-top-4-fsw-bandaotiehe-wm7",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Carrion Dredger": 3,
@@ -15761,7 +16463,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-s3-regional-open-tianjin-top-8-moran-dongyue-ovo",
+     "source": "mobalytics",
      "main": {
       "Carrion Dredger": 3,
       "Cleave": 3,
@@ -15810,7 +16514,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-hartford-regional-qualifier-best-of-zult",
+     "source": "mobalytics",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -15848,7 +16554,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-vancouver-regional-qualifier-best-of-zaboomafoo",
+     "source": "mobalytics",
      "main": {
       "Blood Rush": 1,
       "Carrion Dredger": 1,
@@ -15896,7 +16604,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-sydney-regional-qualifier-best-of-trasterisk",
+     "source": "mobalytics",
      "main": {
       "Cull the Weak": 2,
       "Deathgrip": 3,
@@ -15940,7 +16650,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-atlanta-regional-qualifier-best-of-rischster",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Cull the Weak": 1,
@@ -15981,7 +16693,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/reksai-void-burrower-lille-regional-qualifier-best-of-xtacio",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 2,
       "Blood Rush": 3,
@@ -16029,7 +16743,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-utrecht-regional-qualifier-2nd-rednaxell",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 2,
@@ -16075,7 +16791,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-bologna-regional-qualifier-top-4-ghosterdriver",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Cull the Weak": 3,
@@ -16121,7 +16839,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-hartford-regional-qualifier-best-of-hto-juicy",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Carrion Dredger": 3,
@@ -16164,7 +16884,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-vancouver-regional-qualifier-best-of-ddragon999",
+     "source": "mobalytics",
      "main": {
       "B.F. Sword": 2,
       "Bellows Breath": 2,
@@ -16206,7 +16928,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-sydney-regional-qualifier-best-of-grommy1999",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Blood Money": 3,
@@ -16249,7 +16973,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-atlanta-regional-qualifier-best-of-riftboundplus",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Cull the Weak": 3,
@@ -16289,7 +17015,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-lille-regional-qualifier-best-of-znt-agazapado",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 3,
       "Card Sharp": 1,
@@ -16334,7 +17062,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/viktor-herald-of-the-arcane-houston-regional-qualifier-best-of-gambit01",
+     "source": "mobalytics",
      "main": {
       "Call to Glory": 3,
       "Cull the Weak": 3,
@@ -16376,7 +17106,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-010-alex-doan-viktor-herald-of-the-arcane",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 2,
       "Bellows Breath": 2,
@@ -16423,7 +17155,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-022-peng0o-viktor-herald-of-the-arcane",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 2,
@@ -16470,7 +17204,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-034-ge-yang-viktor-herald-of-the-arcane",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 1,
       "Blastcone Fae": 2,
@@ -16517,7 +17253,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-047-inwha-viktor-herald-of-the-arcane",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Blood Money": 2,
@@ -16563,7 +17301,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-111-noobwas2bad-viktor-herald-of-the-arcane",
+     "source": "riftools",
      "main": {
       "Cull the Weak": 3,
       "Deadly Flourish": 3,
@@ -16602,7 +17342,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223659",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Blood Money": 2,
@@ -16648,7 +17390,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223899",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Blood Money": 3,
@@ -16689,7 +17433,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/26496aec-c0fd-4514-b0ff-eaf14ca2ce50",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 2,
@@ -16728,7 +17474,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225381",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Blood Money": 3,
@@ -16769,7 +17517,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a07d474d-7971-41ae-87d2-6fae5ba98fdb",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 1,
@@ -16811,7 +17561,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b3277a89-38f7-474f-b6da-0a19a087ed18",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 2,
       "Bellows Breath": 2,
@@ -16849,7 +17601,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/58c7a7cc-d2c6-496e-a7ea-92fd0495f3b6",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Carrion Dredger": 3,
@@ -16889,7 +17643,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222832",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Blood Money": 3,
@@ -16937,7 +17693,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6f2374d2-622a-4be4-814a-c94bd346bb09",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 2,
@@ -16979,7 +17737,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/06fca18c-d5f3-42a8-af26-d0547a2aa658",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 2,
@@ -17019,7 +17779,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224685",
+     "source": "riftools",
      "main": {
       "Azir, Sovereign": 2,
       "Bellows Breath": 3,
@@ -17065,7 +17827,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222825",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Blood Money": 2,
@@ -17109,7 +17873,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224757",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Blood Money": 3,
@@ -17152,7 +17918,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4f3e9dab-cd27-4ba8-8c10-b911e2b8e8e5",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Carrion Dredger": 3,
@@ -17193,7 +17961,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224193",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Bellows Breath": 3,
@@ -17242,7 +18012,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d3f5c08e-ef24-43a2-a0ce-e5c2ce6d8935",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 2,
@@ -17284,7 +18056,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/221939",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Bellows Breath": 2,
@@ -17330,7 +18104,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224983",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Blood Money": 3,
@@ -17378,7 +18154,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224228",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Carrion Dredger": 3,
@@ -17421,7 +18199,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224977",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 1,
       "Bellows Breath": 2,
@@ -17469,7 +18249,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223739",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Blood Money": 1,
@@ -17513,7 +18295,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222128",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Carrion Dredger": 3,
@@ -17554,7 +18338,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225365",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Carrion Dredger": 3,
@@ -17598,7 +18384,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223939",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Blood Money": 1,
@@ -17648,7 +18436,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224140",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Bellows Breath": 3,
@@ -17692,7 +18482,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224359",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Cull the Weak": 3,
@@ -17734,7 +18526,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225070",
+     "source": "riftools",
      "main": {
       "Back to Back": 1,
       "Bellows Breath": 3,
@@ -17777,7 +18571,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224657",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 3,
       "Carrion Dredger": 2,
@@ -17827,7 +18623,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/azir-emperor-of-the-sands-utrecht-regional-qualifier-1st-squirtle",
+     "source": "mobalytics",
      "main": {
       "Arise!": 3,
       "B.F. Sword": 3,
@@ -17868,7 +18666,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/azir-emperor-of-the-sands-vancouver-regional-qualifier-top-8-rocklho",
+     "source": "mobalytics",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -17913,7 +18713,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/azir-emperor-of-the-sands-s3-regional-open-xian-1st-aipotu",
+     "source": "mobalytics",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -17958,7 +18760,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/azir-emperor-of-the-sands-lille-regional-qualifier-1st-squirtle",
+     "source": "mobalytics",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18002,7 +18806,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/azir-emperor-of-the-sands-hartford-regional-qualifier-best-of-hxn-strog",
+     "source": "mobalytics",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18044,7 +18850,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/azir-emperor-of-the-sands-sydney-regional-qualifier-best-of-yellow-castor",
+     "source": "mobalytics",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18087,7 +18895,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/azir-emperor-of-the-sands-atlanta-regional-qualifier-best-of-rocklho",
+     "source": "mobalytics",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18132,7 +18942,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-004-axel-alvarez-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18174,7 +18986,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-005-steven-thai-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18216,7 +19030,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-008-gotachi-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18258,7 +19074,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-010-adam-winter-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18301,7 +19119,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-024-anthony-bailous-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18343,7 +19163,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-024-chuichuy-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 2,
       "Azir, Sovereign": 1,
@@ -18387,7 +19209,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-036-emil-menzies-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18429,7 +19253,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-038-pohsivix-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18471,7 +19297,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-061-justice-aaron-fowler-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18514,7 +19342,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-080-marvin-reyna-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18556,7 +19386,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-096-bryan-patterson-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18596,7 +19428,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-124-jesse-azir-emperor-of-the-sands",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18638,7 +19472,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c1f48979-1570-4521-b8a6-a4c4fd4b1f4c",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "B.F. Sword": 3,
@@ -18674,7 +19510,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223676",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18715,7 +19553,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224116",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18757,7 +19597,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223800",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18805,7 +19647,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a860553e-db1f-4845-b995-557590c06429",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "B.F. Sword": 3,
@@ -18842,7 +19686,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222806",
+     "source": "riftools",
      "main": {
       "Arise!": 2,
       "Azir, Sovereign": 1,
@@ -18884,7 +19730,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0502b784-c0fa-4498-a9e6-472014134e37",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "B.F. Sword": 3,
@@ -18920,7 +19768,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225078",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -18966,7 +19816,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224797",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19010,7 +19862,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222732",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19057,7 +19911,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223973",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19103,7 +19959,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223769",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19147,7 +20005,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224773",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19188,7 +20048,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224555",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19233,7 +20095,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223381",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Ashe, Focused": 2,
@@ -19278,7 +20142,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224692",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19319,7 +20185,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224961",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19367,7 +20235,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222165",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19409,7 +20279,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225236",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Ascendant": 1,
@@ -19453,7 +20325,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223751",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19497,7 +20371,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223328",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19542,7 +20418,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223303",
+     "source": "riftools",
      "main": {
       "Arise!": 3,
       "Azir, Sovereign": 1,
@@ -19592,7 +20470,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/pyke-bloodharbor-ripper-hartford-regional-qualifier-top-8-mirru",
+     "source": "mobalytics",
      "main": {
       "Bewitching Spirit": 3,
       "Blighted Battleaxe": 2,
@@ -19636,7 +20516,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/pyke-bloodharbor-ripper-s3-regional-open-tianjin-top-4-dc-huanyou-kj",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 1,
       "Baron Nashor": 1,
@@ -19689,7 +20571,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/pyke-bloodharbor-ripper-utrecht-regional-qualifier-best-of-wolverex",
+     "source": "mobalytics",
      "main": {
       "Baron Nashor": 2,
       "Beast Below": 1,
@@ -19743,7 +20627,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/pyke-bloodharbor-ripper-vancouver-regional-qualifier-best-of-royy",
+     "source": "mobalytics",
      "main": {
       "Baron Nashor": 1,
       "Beast Below": 1,
@@ -19793,7 +20679,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/pyke-bloodharbor-ripper-sydney-regional-qualifier-best-of-xdpow",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 2,
@@ -19841,7 +20729,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-013-giorgio-guardo-pyke-bloodharbor-ripper",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 2,
       "Bewitching Spirit": 3,
@@ -19886,7 +20776,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-015-christian-harrington-pyke-bloodharbor-ripper",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 2,
       "Bewitching Spirit": 3,
@@ -19930,7 +20822,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-029-huan-huynh-pyke-bloodharbor-ripper",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bewitching Spirit": 3,
@@ -19976,7 +20870,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-033-tako-time-pyke-bloodharbor-ripper",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Bewitching Spirit": 3,
@@ -20027,7 +20923,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-059-ricardo-cruz-pyke-bloodharbor-ripper",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bewitching Spirit": 3,
@@ -20072,7 +20970,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-066-brandon-pierce-pyke-bloodharbor-ripper",
+     "source": "riftools",
      "main": {
       "Bewitching Spirit": 3,
       "Blighted Battleaxe": 2,
@@ -20116,7 +21016,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/869865e2-1dae-46de-b3c1-9cfb8d3c25c0",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bewitching Spirit": 3,
@@ -20158,7 +21060,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224120",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Bewitching Spirit": 3,
@@ -20205,7 +21109,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224216",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Baron Nashor": 1,
@@ -20258,7 +21164,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a7f11089-e973-4efe-a7a8-2961087e019e",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bewitching Spirit": 3,
@@ -20300,7 +21208,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223416",
+     "source": "riftools",
      "main": {
       "Bewitching Spirit": 3,
       "Blighted Battleaxe": 2,
@@ -20345,7 +21255,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/342578d0-3df7-43a8-812d-72472544b1c6",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 2,
@@ -20388,7 +21300,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223953",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Beast Below": 1,
@@ -20440,7 +21354,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c1f5021a-f5a3-43fb-aa41-535fe93c44c2",
+     "source": "riftools",
      "main": {
       "Bewitching Spirit": 3,
       "Blighted Battleaxe": 1,
@@ -20484,7 +21400,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224954",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bewitching Spirit": 3,
@@ -20528,7 +21446,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224411",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Bewitching Spirit": 3,
@@ -20578,7 +21498,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224723",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Bewitching Spirit": 3,
@@ -20628,7 +21550,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224062",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Baron Nashor": 1,
@@ -20686,7 +21610,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/annie-dark-child-hartford-regional-qualifier-top-8-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Annie, Stubborn": 1,
@@ -20732,7 +21658,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/annie-dark-child-utrecht-regional-qualifier-top-8-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Cleave": 2,
@@ -20777,7 +21705,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/annie-dark-child-atlanta-regional-qualifier-1st-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Annie, Stubborn": 1,
       "Cleave": 2,
@@ -20822,7 +21752,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/annie-dark-child-lille-regional-qualifier-top-4-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Annie, Stubborn": 1,
       "Cleave": 2,
@@ -20867,7 +21799,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/annie-dark-child-houston-regional-qualifier-top-8-noveggies",
+     "source": "mobalytics",
      "main": {
       "Annie, Stubborn": 1,
       "Cleave": 3,
@@ -20912,7 +21846,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/annie-dark-child-vancouver-regional-qualifier-best-of-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Annie, Stubborn": 1,
@@ -20960,7 +21896,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/annie-dark-child-sydney-regional-qualifier-best-of-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Abandon": 2,
       "Annie, Stubborn": 1,
@@ -21006,7 +21944,9 @@ window.FIELD = {
      "placement": "3rd",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-003-canon-black-annie-dark-child",
+     "source": "riftools",
      "main": {
       "Abandon": 2,
       "Against the Odds": 1,
@@ -21050,7 +21990,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-006-rishi-chaudhary-annie-dark-child",
+     "source": "riftools",
      "main": {
       "Annie, Stubborn": 1,
       "Cleave": 2,
@@ -21097,7 +22039,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-023-talia-garvey-annie-dark-child",
+     "source": "riftools",
      "main": {
       "Annie, Stubborn": 1,
       "Cleave": 2,
@@ -21143,7 +22087,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-074-valerie-annie-dark-child",
+     "source": "riftools",
      "main": {
       "Annie, Stubborn": 1,
       "Cleave": 2,
@@ -21189,7 +22135,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225393",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Annie, Stubborn": 1,
@@ -21236,7 +22184,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b97ce6f0-882c-4b5c-8a06-88718e947aeb",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Ferrous Forerunner": 3,
@@ -21276,7 +22226,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7af0771d-e2f9-4b7f-9b66-d66c0c38b4c6",
+     "source": "riftools",
      "main": {
       "Against the Odds": 1,
       "Cleave": 2,
@@ -21319,7 +22271,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225090",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Against the Odds": 3,
@@ -21364,7 +22318,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e99bfcca-3d24-470b-907a-b899a7c112f1",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Ferrous Forerunner": 3,
@@ -21405,7 +22361,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d1ebb63f-641d-45e0-bd7f-13efd4313d44",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Cleave": 2,
@@ -21446,7 +22404,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224351",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Against the Odds": 1,
@@ -21497,7 +22457,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223948",
+     "source": "riftools",
      "main": {
       "Against the Odds": 2,
       "Annie, Stubborn": 1,
@@ -21546,7 +22508,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/443a00c2-93bf-4038-bbd3-82758d97825e",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Cleave": 2,
@@ -21587,7 +22551,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223406",
+     "source": "riftools",
      "main": {
       "Annie, Stubborn": 1,
       "Darius, Trifarian": 3,
@@ -21631,7 +22597,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223879",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Annie, Stubborn": 1,
@@ -21679,7 +22647,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224921",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Against the Odds": 1,
@@ -21726,7 +22696,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223465",
+     "source": "riftools",
      "main": {
       "Against the Odds": 2,
       "Annie, Stubborn": 1,
@@ -21776,7 +22748,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223843",
+     "source": "riftools",
      "main": {
       "Annie, Stubborn": 1,
       "Cleave": 2,
@@ -21828,7 +22802,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-master-s3-regional-open-changsha-top-8-hso-asn-ger",
+     "source": "mobalytics",
      "main": {
       "Alpha Strike": 2,
       "Arachnoid Horror": 1,
@@ -21875,7 +22851,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-master-hartford-regional-qualifier-best-of-chairman",
+     "source": "mobalytics",
      "main": {
       "Back Off": 2,
       "Concentrate": 3,
@@ -21917,7 +22895,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-master-utrecht-regional-qualifier-best-of-narutak",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 2,
@@ -21959,7 +22939,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-master-vancouver-regional-qualifier-best-of-davo88",
+     "source": "mobalytics",
      "main": {
       "Alpha Strike": 2,
       "Arachnoid Horror": 2,
@@ -22003,7 +22985,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/master-yi-wuju-master-sydney-regional-qualifier-best-of-youngnewnew",
+     "source": "mobalytics",
      "main": {
       "Back Off": 2,
       "Concentrate": 3,
@@ -22045,7 +23029,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1cdc75ea-e5ed-429b-ac68-309b9b0a16a4",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Challenge": 2,
@@ -22082,7 +23068,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f86f8d3f-d34e-4f17-afe7-ee21479ec833",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Charm": 2,
@@ -22124,7 +23112,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e0abd887-5b47-4d55-bc7f-f18e6978bc1a",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 2,
       "Arachnoid Horror": 2,
@@ -22168,7 +23158,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/dccef986-3997-4179-9eaa-0780229afd7f",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -22207,7 +23199,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222625",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 1,
       "Back Off": 3,
@@ -22255,7 +23249,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225042",
+     "source": "riftools",
      "main": {
       "Alpha Strike": 2,
       "Arachnoid Horror": 1,
@@ -22307,7 +23303,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-changsha-top-4-linghuaji-ecg-xiaosashiguang",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 3,
@@ -22352,7 +23350,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "S3 Regional Open Changsha",
      "date": "2026-06-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-changsha-1st-gugugaga-amen-gambit",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22401,7 +23401,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-tianjin-top-8-rosencrantz",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22447,7 +23449,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Tianjin",
      "date": "2026-06-10",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-tianjin-top-8-ccb-chun",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22494,7 +23498,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-vancouver-regional-qualifier-top-8-baobaoaz",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22543,7 +23549,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-vancouver-regional-qualifier-top-8-arito",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22591,7 +23599,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-sydney-regional-qualifier-1st-edg-rico1997",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22637,7 +23647,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-8-beijingzexuan-cui",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -22686,7 +23698,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-8-ccb-chun",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22733,7 +23747,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-4-zijin-madai-sdubby",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -22781,7 +23797,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-xian-top-4-edg-rico1997",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -22827,7 +23845,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-suzhou-top-8-jiyan-yada",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -22871,7 +23891,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-s3-regional-open-suzhou-2nd-lineka-oak",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -22922,7 +23944,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-sydney-regional-qualifier-top-8-ghosterdriver",
+     "source": "mobalytics",
      "main": {
       "Back Off": 1,
       "Boots of Swiftness": 2,
@@ -22973,7 +23997,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-atlanta-regional-qualifier-top-4-harukaze",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 3,
@@ -23020,7 +24046,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-lille-regional-qualifier-top-8-natureal",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -23066,7 +24094,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-lille-regional-qualifier-top-8-alex-shans",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 2,
@@ -23111,7 +24141,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-lille-regional-qualifier-top-8-tinodluffy",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -23156,7 +24188,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-vegas-regional-qualifier-top-8-deluxephilcheeze",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 3,
       "Defiant Dance": 3,
@@ -23199,7 +24233,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/irelia-blade-dancer-bologna-regional-qualifier-top-4-krowz",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 3,
@@ -23242,7 +24278,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-009-snoopydafloofy-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 3,
@@ -23286,7 +24324,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-015-frog-eryn-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 2,
@@ -23333,7 +24373,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-025-connoorrr-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 3,
@@ -23375,7 +24417,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-043-christopher-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 2,
@@ -23421,7 +24465,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-054-justin-etheridge-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Boots of Swiftness": 2,
@@ -23469,7 +24515,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-069-yangpanting-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Boots of Swiftness": 1,
@@ -23517,7 +24565,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-077-patrick-garner-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Boots of Swiftness": 2,
@@ -23563,7 +24613,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-087-jesus-riva-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -23609,7 +24661,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-099-zach-whitley-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -23656,7 +24710,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-109-tubbyx-gavin-irelia-blade-dancer",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -23703,7 +24759,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225002",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Boots of Swiftness": 3,
@@ -23750,7 +24808,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225058",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Adaptatron": 1,
@@ -23798,7 +24858,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8d719799-580b-4250-8444-3a081d4bc533",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -23839,7 +24901,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225335",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Defiant Dance": 3,
@@ -23886,7 +24950,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224176",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Defiant Dance": 3,
@@ -23930,7 +24996,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0f4cce39-cfe0-4abf-9969-3c19e396a18b",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 1,
       "Charm": 1,
@@ -23973,7 +25041,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225018",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Defiant Dance": 3,
@@ -24020,7 +25090,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224061",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24068,7 +25140,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225057",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -24116,7 +25190,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223566",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 2,
@@ -24163,7 +25239,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225063",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -24209,7 +25287,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224724",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Block": 1,
@@ -24259,7 +25339,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224471",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24308,7 +25390,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/452b2c1b-b2dc-4cac-bbdd-5de03276335e",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24351,7 +25435,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225196",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -24400,7 +25486,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225177",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -24450,7 +25538,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224696",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Adaptatron": 1,
@@ -24499,7 +25589,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/81c93126-d12b-44d5-b3f5-15a838365a25",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -24541,7 +25633,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225147",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Boots of Swiftness": 3,
@@ -24587,7 +25681,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225039",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Boots of Swiftness": 3,
@@ -24633,7 +25729,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223738",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24682,7 +25780,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222641",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -24731,7 +25831,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225021",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24780,7 +25882,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6b0c498a-515e-45ee-873f-0143d0129f60",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24824,7 +25928,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223989",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24874,7 +25980,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5f5b26ee-b993-4f4e-a565-f3b4ed25aaeb",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -24916,7 +26024,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223785",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 2,
@@ -24964,7 +26074,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b2a1b18a-27e8-4734-a4da-e15c5e184627",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Boots of Swiftness": 3,
@@ -25006,7 +26118,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b689ec94-1b1a-4623-a48a-4baee9d79e86",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -25048,7 +26162,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224528",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -25094,7 +26210,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224554",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Back Off": 1,
@@ -25143,7 +26261,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223821",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Back Off": 1,
@@ -25190,7 +26310,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224728",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -25239,7 +26361,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225179",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -25288,7 +26412,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224410",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -25337,7 +26463,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223865",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -25385,7 +26513,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224451",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -25435,7 +26565,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224794",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -25484,7 +26616,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224610",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -25533,7 +26667,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224691",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -25582,7 +26718,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224682",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Boots of Swiftness": 2,
@@ -25631,7 +26769,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224892",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -25679,7 +26819,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222652",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -25728,7 +26870,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225208",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Boots of Swiftness": 3,
@@ -25775,7 +26919,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224536",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Adaptatron": 1,
@@ -25821,7 +26967,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224663",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -25874,7 +27022,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222753",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 1,
@@ -25922,7 +27072,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224210",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -25968,7 +27120,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222364",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -26016,7 +27170,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222220",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26066,7 +27222,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224573",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26113,7 +27271,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225364",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26162,7 +27322,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224293",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -26213,7 +27375,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224006",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26262,7 +27426,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224907",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -26311,7 +27477,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223745",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 3,
@@ -26356,7 +27524,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/221922",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26405,7 +27575,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223361",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -26451,7 +27623,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224771",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 3,
@@ -26499,7 +27673,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223391",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26548,7 +27724,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225403",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Defiant Dance": 3,
@@ -26595,7 +27773,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224522",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26644,7 +27824,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224000",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26695,7 +27877,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224888",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 2,
@@ -26744,7 +27928,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224792",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 2,
@@ -26794,7 +27980,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224821",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Boots of Swiftness": 3,
@@ -26843,7 +28031,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223287",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Adaptatron": 1,
@@ -26896,7 +28086,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rengar-pridestalker-vancouver-regional-qualifier-2nd-samdsherman",
+     "source": "mobalytics",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -26937,7 +28129,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rengar-pridestalker-hartford-regional-qualifier-best-of-mom-sky",
+     "source": "mobalytics",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 2,
@@ -26982,7 +28176,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rengar-pridestalker-utrecht-regional-qualifier-best-of-urlichmtg",
+     "source": "mobalytics",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 1,
@@ -27023,7 +28219,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rengar-pridestalker-sydney-regional-qualifier-best-of-starkoss",
+     "source": "mobalytics",
      "main": {
       "Blazing Scorcher": 2,
       "Catalyst of Aeons": 3,
@@ -27064,7 +28262,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-001-aa-matmatu-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 1,
@@ -27108,7 +28308,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-005-aa-claedeusfr-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 2,
       "Determined Sentry": 3,
@@ -27150,7 +28352,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-011-salvatore-schembri-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 2,
@@ -27196,7 +28400,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-014-alexis-plettener-nguyen-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 1,
@@ -27242,7 +28448,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-032-thr-cojoh-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 2,
@@ -27286,7 +28494,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-048-novi-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 2,
@@ -27333,7 +28543,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-053-thr-panderpen-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Determined Sentry": 2,
@@ -27376,7 +28588,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-057-matthew-r-miller-rengar-pridestalker",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -27417,7 +28631,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/029b5c27-b736-4ad6-a5a0-791ecf9a0ca4",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 2,
@@ -27458,7 +28674,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224979",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 1,
@@ -27505,7 +28723,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/eb53ed27-4e94-4134-9439-02d130886806",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 1,
@@ -27542,7 +28762,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e47e48cc-2262-4ba1-9238-8d5b874c13df",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -27578,7 +28800,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e09dc948-1bb5-478b-b438-21e67bb7d3c3",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Challenge": 2,
@@ -27617,7 +28841,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224872",
+     "source": "riftools",
      "main": {
       "Determined Sentry": 3,
       "First Mate": 3,
@@ -27655,7 +28881,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224960",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -27698,7 +28926,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222936",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -27739,7 +28969,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225165",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -27780,7 +29012,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225122",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 2,
       "Challenge": 2,
@@ -27826,7 +29060,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222110",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Cleave": 1,
@@ -27867,7 +29103,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224877",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -27910,7 +29148,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224842",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Darius, Trifarian": 2,
@@ -27958,7 +29198,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sett-the-boss-utrecht-regional-qualifier-top-4-ctcg-collin-k",
+     "source": "mobalytics",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28000,7 +29242,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sett-the-boss-atlanta-regional-qualifier-top-8-ctcg-collin-k",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "Arena Bar": 3,
@@ -28043,7 +29287,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sett-the-boss-hartford-regional-qualifier-best-of-ctcg-collin-k",
+     "source": "mobalytics",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28086,7 +29332,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sett-the-boss-vancouver-regional-qualifier-best-of-ctcg-collin-k",
+     "source": "mobalytics",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28130,7 +29378,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sett-the-boss-sydney-regional-qualifier-best-of-ctcg-collin-k",
+     "source": "mobalytics",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -28174,7 +29424,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sett-the-boss-lille-regional-qualifier-best-of-nlv-tomino",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "Boneshiver": 2,
@@ -28222,7 +29474,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sett-the-boss-houston-regional-qualifier-best-of-boiwaffle",
+     "source": "mobalytics",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28264,7 +29518,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-039-jakobe-bratton-sett-the-boss",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28307,7 +29563,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-072-justin-gapp-sett-the-boss",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28350,7 +29608,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/cb12a816-2f09-4cfe-a880-91e3ac70d34d",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28387,7 +29647,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fdae36fd-c7a5-45d1-a77f-9ddb34f6c17d",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28426,7 +29688,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224994",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -28473,7 +29737,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/468edca9-95c8-4812-8010-ca19681f2317",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28511,7 +29777,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222433",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -28559,7 +29827,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/324860dd-5419-4d0e-9b21-d58481cf5cb2",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28597,7 +29867,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4fb88a46-9d0f-4798-b2f7-0226ab3d98e9",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28635,7 +29907,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223081",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Arena Bar": 3,
@@ -28681,7 +29955,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d07c169c-9dd5-4822-ac7b-35d8d0c8145d",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28718,7 +29994,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222560",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28762,7 +30040,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224597",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28806,7 +30086,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224860",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -28852,7 +30134,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7039b096-ba28-428d-86cc-2f8d7fb0a64a",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Arena Bar": 3,
@@ -28892,7 +30176,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c5171c79-710f-4de9-9a7c-256cd70d6ac9",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -28930,7 +30216,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/60e836fa-1a23-4885-a3a0-d3e723e3d2e8",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -28973,7 +30261,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6f343781-f2b1-4aab-af06-4a2a883ff6f9",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -29011,7 +30301,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5f604454-cbc4-4cef-8b2f-19926d56bf0a",
+     "source": "riftools",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -29047,7 +30339,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225281",
+     "source": "riftools",
      "main": {
       "Arena Bar": 1,
       "Call to Glory": 3,
@@ -29094,7 +30388,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222077",
+     "source": "riftools",
      "main": {
       "Arena Bar": 3,
       "Call to Glory": 3,
@@ -29137,7 +30433,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222530",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 2,
@@ -29183,7 +30481,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224300",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -29233,7 +30533,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223467",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -29282,7 +30584,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224251",
+     "source": "riftools",
      "main": {
       "Arena Bar": 2,
       "Call to Glory": 3,
@@ -29327,7 +30631,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225035",
+     "source": "riftools",
      "main": {
       "Arena Bar": 1,
       "B.F. Sword": 1,
@@ -29386,7 +30692,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-vancouver-regional-qualifier-top-8-ali-aintrazi",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Dazzling Aurora": 3,
@@ -29430,7 +30738,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-s3-regional-open-suzhou-top-8-duoguanjiujiehun",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -29473,7 +30783,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-s3-regional-open-suzhou-top-4-cangbao-enheng",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -29515,7 +30827,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-sydney-regional-qualifier-2nd-tss-souledout",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Dazzling Aurora": 3,
@@ -29555,7 +30869,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-hartford-regional-qualifier-best-of-bloody",
+     "source": "mobalytics",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 1,
@@ -29600,7 +30916,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-utrecht-regional-qualifier-best-of-loriwwa",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -29642,7 +30960,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-atlanta-regional-qualifier-best-of-ali-aintrazi",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 1,
       "Catalyst of Aeons": 3,
@@ -29686,7 +31006,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/sivir-battle-mistress-lille-regional-qualifier-best-of-tenrjihs",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 3,
       "Challenge": 3,
@@ -29726,7 +31048,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-008-jordan-cedeno-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Catalyst of Aeons": 3,
@@ -29772,7 +31096,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-014-ethan-stringer-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 1,
@@ -29818,7 +31144,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-017-vincent-lin-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -29862,7 +31190,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-029-justin-lawson-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 1,
@@ -29907,7 +31237,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-043-kris-wheelis-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 1,
@@ -29952,7 +31284,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-051-zachary-roggina-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 1,
@@ -29999,7 +31333,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-065-jacob-robertson-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 2,
       "Catalyst of Aeons": 3,
@@ -30040,7 +31376,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-097-serena-kerrigan-sivir-battle-mistress",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 1,
@@ -30087,7 +31425,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/54db8dfd-aa7c-4f16-952f-4f125ee8fb83",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -30125,7 +31465,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f2c8667a-1753-4ff2-8348-b8aabe8dbcb7",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Catalyst of Aeons": 3,
@@ -30169,7 +31511,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222935",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Dazzling Aurora": 3,
@@ -30214,7 +31558,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224106",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -30260,7 +31606,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224742",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -30305,7 +31653,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224886",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -30350,7 +31700,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224166",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -30392,7 +31744,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224816",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -30437,7 +31791,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224469",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -30481,7 +31837,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224552",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -30528,7 +31886,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223840",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 3,
@@ -30568,7 +31928,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224051",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 3,
@@ -30618,7 +31980,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224545",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -30663,7 +32027,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225369",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -30705,7 +32071,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225309",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 1,
@@ -30757,7 +32125,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leblanc-deceiver-sydney-regional-qualifier-top-8-ctcg-dziden",
+     "source": "mobalytics",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -30798,7 +32168,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leblanc-deceiver-s3-regional-open-xian-top-8-dwt-along",
+     "source": "mobalytics",
      "main": {
       "Ashe, Focused": 1,
       "Bellows Breath": 1,
@@ -30844,7 +32216,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leblanc-deceiver-hartford-regional-qualifier-best-of-alex",
+     "source": "mobalytics",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -30886,7 +32260,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leblanc-deceiver-utrecht-regional-qualifier-best-of-ggnext00",
+     "source": "mobalytics",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -30928,7 +32304,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leblanc-deceiver-vancouver-regional-qualifier-best-of-riuzake",
+     "source": "mobalytics",
      "main": {
       "Atakhan": 1,
       "Baited Hook": 3,
@@ -30970,7 +32348,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-011-angelo-jay-jay-galeon-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31012,7 +32392,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-018-samson-rast-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Atakhan": 2,
       "Blade of the Ruined King": 1,
@@ -31053,7 +32435,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-023-geoff-mullin-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31095,7 +32479,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-027-david-zhang-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31137,7 +32523,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-040-tdt-low-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31179,7 +32567,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-041-tml-ian-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31222,7 +32612,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-069-joseph-mathew-conway-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31266,7 +32658,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-074-garrett-doonan-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31309,7 +32703,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-083-miguel-perez-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Deathgrip": 2,
@@ -31350,7 +32746,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-084-perry-hayward-leblanc-deceiver",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 2,
@@ -31391,7 +32789,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a4c0be6f-53b7-4b63-bc21-61f08a2286d2",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31428,7 +32828,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2fd3fb3f-9840-4362-85e5-d7fee94184db",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31465,7 +32867,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222463",
+     "source": "riftools",
      "main": {
       "Chakram Dancer": 2,
       "Cull the Weak": 3,
@@ -31506,7 +32910,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224617",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 2,
@@ -31551,7 +32957,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f297d0ce-0584-448b-9cb4-998b81b76b4c",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31589,7 +32997,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6498eb82-7d43-48a4-bd18-c591671de0f0",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -31627,7 +33037,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224104",
+     "source": "riftools",
      "main": {
       "Atakhan": 1,
       "B.F. Sword": 3,
@@ -31673,7 +33085,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224782",
+     "source": "riftools",
      "main": {
       "Black Rose Dignitary": 2,
       "Cull the Weak": 2,
@@ -31717,7 +33131,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222688",
+     "source": "riftools",
      "main": {
       "Cloth Armor": 3,
       "Cull the Weak": 3,
@@ -31755,7 +33171,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224517",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Cull the Weak": 3,
@@ -31801,7 +33219,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225067",
+     "source": "riftools",
      "main": {
       "Baited Hook": 2,
       "Black Rose Dignitary": 3,
@@ -31844,7 +33264,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224865",
+     "source": "riftools",
      "main": {
       "Carrion Dredger": 3,
       "Cull the Weak": 2,
@@ -31886,7 +33308,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225214",
+     "source": "riftools",
      "main": {
       "Carrion Dredger": 1,
       "Cull the Weak": 3,
@@ -31935,7 +33359,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4997aa5c-a8b3-43bc-9b5e-235dcead1706",
+     "source": "riftools",
      "main": {
       "Black Rose Dignitary": 2,
       "Cull the Weak": 3,
@@ -31973,7 +33399,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224181",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Cull the Weak": 2,
@@ -32020,7 +33448,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224433",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 3,
@@ -32066,7 +33496,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222880",
+     "source": "riftools",
      "main": {
       "Black Rose Dignitary": 2,
       "Cull the Weak": 3,
@@ -32109,7 +33541,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223418",
+     "source": "riftools",
      "main": {
       "Baited Hook": 2,
       "Black Rose Dignitary": 3,
@@ -32151,7 +33585,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224951",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 2,
@@ -32193,7 +33629,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224809",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Cull the Weak": 2,
@@ -32237,7 +33675,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225109",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 1,
@@ -32284,7 +33724,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223426",
+     "source": "riftools",
      "main": {
       "Blastcone Fae": 2,
       "Cull the Weak": 3,
@@ -32324,7 +33766,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224714",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Black Rose Dignitary": 2,
@@ -32371,7 +33815,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224404",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Deathgrip": 1,
@@ -32414,7 +33860,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224567",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Deathgrip": 1,
@@ -32457,7 +33905,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223827",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 1,
@@ -32503,7 +33953,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223713",
+     "source": "riftools",
      "main": {
       "Baited Hook": 3,
       "Black Rose Dignitary": 2,
@@ -32545,7 +33997,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224647",
+     "source": "riftools",
      "main": {
       "Baited Hook": 2,
       "Cloth Armor": 1,
@@ -32592,7 +34046,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224863",
+     "source": "riftools",
      "main": {
       "Atakhan": 1,
       "Baited Hook": 3,
@@ -32636,7 +34092,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225020",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Bellows Breath": 1,
@@ -32689,7 +34147,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vex-gloomist-sydney-regional-qualifier-top-4-eep-bonk-repeat",
+     "source": "mobalytics",
      "main": {
       "Back Off": 2,
       "Boots of Swiftness": 2,
@@ -32736,7 +34196,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 Regional Open Xian",
      "date": "2026-06-04",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vex-gloomist-s3-regional-open-xian-top-8-kadian-noobqingqi",
+     "source": "mobalytics",
      "main": {
       "Back Off": 2,
       "Boots of Swiftness": 2,
@@ -32787,7 +34249,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vex-gloomist-hartford-regional-qualifier-best-of-tinyguy",
+     "source": "mobalytics",
      "main": {
       "Ahri, Alluring": 2,
       "Allay, Eager Admirer": 1,
@@ -32834,7 +34298,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vex-gloomist-utrecht-regional-qualifier-best-of-fabsio",
+     "source": "mobalytics",
      "main": {
       "Back Off": 1,
       "Defy": 3,
@@ -32875,7 +34341,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vex-gloomist-vancouver-regional-qualifier-best-of-tex",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Allay, Eager Admirer": 1,
@@ -32922,7 +34390,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-031-noelle-ching-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Abandon": 2,
       "Back Off": 3,
@@ -32967,7 +34437,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-038-kayla-bailous-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 2,
       "Allay, Eager Admirer": 1,
@@ -33013,7 +34485,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-046-kevin-cate-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 1,
       "Allay, Eager Admirer": 2,
@@ -33056,7 +34530,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-049-tomas-osorio-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Blast Cone": 1,
@@ -33103,7 +34579,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-056-youredull-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 1,
       "Allay, Eager Admirer": 2,
@@ -33151,7 +34629,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-058-kurcz-pieczon-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 1,
       "Allay, Eager Admirer": 2,
@@ -33194,7 +34674,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-070-ryan-heitmann-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Charm": 2,
@@ -33241,7 +34723,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-100-david-brazee-vex-gloomist",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 1,
       "Back Off": 3,
@@ -33290,7 +34774,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0cd100d9-14a7-4827-a349-bd53f633139f",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Boots of Swiftness": 2,
@@ -33335,7 +34821,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5843fb29-3dad-4e9a-ae37-d46a32f35270",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 2,
       "Back Off": 3,
@@ -33378,7 +34866,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0c5691bf-dbed-48b9-a74a-38af450ec521",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Back Off": 2,
@@ -33422,7 +34912,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/75f44ab3-870c-494b-b036-6c73c9d815b1",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Back Off": 2,
@@ -33465,7 +34957,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224964",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Back Off": 1,
@@ -33513,7 +35007,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224642",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 1,
       "Charm": 2,
@@ -33557,7 +35053,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7670bcc0-45fb-4c19-9db3-f15e435ee15e",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Blast Cone": 1,
@@ -33596,7 +35094,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fd99e906-1f2c-43d5-9381-c34f70090dd1",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Boots of Swiftness": 2,
@@ -33638,7 +35138,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/eed196c8-76b1-4c5d-b769-a5f9bf98230b",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Block": 1,
@@ -33677,7 +35179,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d3135069-5041-41e9-8b3f-219a8e1e1c79",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Back Off": 2,
@@ -33719,7 +35223,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a5a2e9ce-8f59-4560-a336-fc7c27149de7",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 1,
       "Back Off": 3,
@@ -33758,7 +35264,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bed46b81-57f3-4d1d-9b62-422165d296cb",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Boots of Swiftness": 2,
@@ -33798,7 +35306,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1b806ba0-571c-44e5-beaa-93620c47a3a2",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Charm": 2,
@@ -33838,7 +35348,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223941",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Boots of Swiftness": 3,
@@ -33880,7 +35392,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224658",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Back Off": 1,
@@ -33926,7 +35440,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224847",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Back Off": 1,
@@ -33974,7 +35490,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223743",
+     "source": "riftools",
      "main": {
       "Allay, Eager Admirer": 2,
       "Back Off": 3,
@@ -34026,7 +35544,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224836",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 3,
       "Charm": 2,
@@ -34071,7 +35591,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224937",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 1,
       "Charm": 2,
@@ -34117,7 +35639,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223901",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Charm": 1,
@@ -34166,7 +35690,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223701",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Blitzcrank, Impassive": 1,
@@ -34216,7 +35742,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224101",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Boots of Swiftness": 2,
@@ -34266,7 +35794,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "S3 Regional Open Suzhou",
      "date": "2026-05-23",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/poppy-keeper-of-the-hammer-s3-regional-open-suzhou-top-4-zhuoka-tannisi",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Confront": 3,
@@ -34306,7 +35836,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/poppy-keeper-of-the-hammer-hartford-regional-qualifier-best-of-tss-noveggies",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -34347,7 +35879,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/poppy-keeper-of-the-hammer-utrecht-regional-qualifier-best-of-hirob",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 2,
       "Catalyst of Aeons": 3,
@@ -34391,7 +35925,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/poppy-keeper-of-the-hammer-vancouver-regional-qualifier-best-of-tss-noveggies",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -34433,7 +35969,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/poppy-keeper-of-the-hammer-sydney-regional-qualifier-best-of-rowanno1",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 2,
       "Catalyst of Aeons": 3,
@@ -34476,7 +36014,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e39ecc1b-43a9-4b0e-9877-9f51211bb63d",
+     "source": "riftools",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -34514,7 +36054,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0be30400-c10e-47ce-a532-63179a75b7f7",
+     "source": "riftools",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -34551,7 +36093,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4d66d3a5-666f-408b-8206-59a8190c4d8f",
+     "source": "riftools",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -34587,7 +36131,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/221946",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Confront": 3,
@@ -34628,7 +36174,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222745",
+     "source": "riftools",
      "main": {
       "Black Rose Dignitary": 2,
       "Challenge": 2,
@@ -34677,7 +36225,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222672",
+     "source": "riftools",
      "main": {
       "Blood Money": 2,
       "Catalyst of Aeons": 3,
@@ -34723,7 +36273,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223619",
+     "source": "riftools",
      "main": {
       "Blood Money": 2,
       "Catalyst of Aeons": 3,
@@ -34766,7 +36318,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223539",
+     "source": "riftools",
      "main": {
       "Blood Money": 2,
       "Catalyst of Aeons": 3,
@@ -34816,7 +36370,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/teemo-swift-scout-sydney-regional-qualifier-top-8-ashenoce",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 1,
@@ -34860,7 +36416,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/teemo-swift-scout-hartford-regional-qualifier-best-of-batsmak",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Consult the Past": 3,
@@ -34906,7 +36464,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/teemo-swift-scout-utrecht-regional-qualifier-best-of-catl-kedjius",
+     "source": "mobalytics",
      "main": {
       "Edge of Night": 2,
       "Ember Monk": 2,
@@ -34949,7 +36509,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/teemo-swift-scout-vancouver-regional-qualifier-best-of-lunasky",
+     "source": "mobalytics",
      "main": {
       "Consult the Past": 3,
       "Eclipse": 2,
@@ -34990,7 +36552,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/teemo-swift-scout-atlanta-regional-qualifier-best-of-nashun",
+     "source": "mobalytics",
      "main": {
       "Beast Below": 2,
       "Black Market Broker": 3,
@@ -35035,7 +36599,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/teemo-swift-scout-lille-regional-qualifier-best-of-flashshad0w",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 1,
       "Consult the Past": 3,
@@ -35081,7 +36647,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/teemo-swift-scout-houston-regional-qualifier-best-of-gorica",
+     "source": "mobalytics",
      "main": {
       "Consult the Past": 3,
       "Dr. Mundo, Expert": 3,
@@ -35124,7 +36692,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-079-rachel-taylor-teemo-swift-scout",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Consult the Past": 3,
@@ -35172,7 +36742,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-085-nick-skoler-teemo-swift-scout",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 1,
@@ -35216,7 +36788,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/19f29bb5-d595-452f-8630-7150abdabff0",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 3,
@@ -35262,7 +36836,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7636bcd3-d8e6-4f52-b86b-e46cb597c8b3",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Consult the Past": 3,
@@ -35304,7 +36880,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222934",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Consult the Past": 2,
@@ -35349,7 +36927,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/79861e53-eb35-4f39-a42c-a97fbc918451",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Consult the Past": 3,
@@ -35390,7 +36970,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/220952",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 2,
       "Edge of Night": 2,
@@ -35433,7 +37015,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222414",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 2,
       "Baron Nashor": 1,
@@ -35480,7 +37064,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fac4b202-4ac6-4ffd-99c1-64b810524e60",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Acceptable Losses": 2,
@@ -35522,7 +37108,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224154",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 1,
@@ -35570,7 +37158,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ee78dd15-a299-43b6-abc3-3b34735c5ace",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Bone Skewer": 2,
@@ -35614,7 +37204,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2d09bffc-156a-4e43-ab98-3c340d321d2a",
+     "source": "riftools",
      "main": {
       "Edge of Night": 2,
       "Ember Monk": 2,
@@ -35652,7 +37244,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224859",
+     "source": "riftools",
      "main": {
       "Acceptable Losses": 1,
       "Consult the Past": 3,
@@ -35699,7 +37293,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224038",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Blastcone Fae": 1,
@@ -35742,7 +37338,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224354",
+     "source": "riftools",
      "main": {
       "Bone Skewer": 1,
       "Consult the Past": 3,
@@ -35792,7 +37390,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223793",
+     "source": "riftools",
      "main": {
       "Blastcone Fae": 3,
       "Bone Skewer": 2,
@@ -35835,7 +37435,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224135",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Consult the Past": 1,
@@ -35887,7 +37489,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-atlanta-regional-qualifier-2nd-ctcg-koko-lopez",
+     "source": "mobalytics",
      "main": {
       "Beast Below": 1,
       "Blood Rush": 1,
@@ -35935,7 +37539,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-atlanta-regional-qualifier-top-8-boulevard",
+     "source": "mobalytics",
      "main": {
       "Brynhir Thundersong": 1,
       "Cleave": 2,
@@ -35984,7 +37590,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-atlanta-regional-qualifier-top-8-stardust",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 1,
       "Brynhir Thundersong": 1,
@@ -36031,7 +37639,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-lille-regional-qualifier-top-4-ctcg-dziden",
+     "source": "mobalytics",
      "main": {
       "Brynhir Thundersong": 1,
       "Cleave": 2,
@@ -36076,7 +37686,9 @@ window.FIELD = {
      "placement": "1st",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-vegas-regional-qualifier-1st-samdsherman",
+     "source": "mobalytics",
      "main": {
       "Brynhir Thundersong": 2,
       "Darius, Trifarian": 3,
@@ -36120,7 +37732,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-vegas-regional-qualifier-2nd-tta",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Bushwhack": 2,
@@ -36163,7 +37777,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-vegas-regional-qualifier-top-4-argan",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Bushwhack": 1,
@@ -36210,7 +37826,9 @@ window.FIELD = {
      "placement": "Top 4",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-vegas-regional-qualifier-top-4-shizzle",
+     "source": "mobalytics",
      "main": {
       "Brynhir Thundersong": 2,
       "Darius, Trifarian": 2,
@@ -36255,7 +37873,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-vegas-regional-qualifier-top-8-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Bushwhack": 2,
@@ -36303,7 +37923,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-bologna-regional-qualifier-top-8-prismaticism",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Bushwhack": 2,
@@ -36350,7 +37972,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-bologna-regional-qualifier-top-8-randyyy",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Boots of Swiftness": 1,
@@ -36397,7 +38021,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-bologna-regional-qualifier-top-8-m4rcus99",
+     "source": "mobalytics",
      "main": {
       "Brynhir Thundersong": 2,
       "Darius, Trifarian": 3,
@@ -36442,7 +38068,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-hartford-regional-qualifier-best-of-tcg-sogeking",
+     "source": "mobalytics",
      "main": {
       "Blighted Battleaxe": 1,
       "Cleave": 3,
@@ -36488,7 +38116,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-utrecht-regional-qualifier-best-of-dynamic",
+     "source": "mobalytics",
      "main": {
       "Cleave": 1,
       "Darius, Trifarian": 3,
@@ -36534,7 +38164,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-vancouver-regional-qualifier-best-of-pog-chungus",
+     "source": "mobalytics",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 3,
@@ -36579,7 +38211,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/draven-glorious-executioner-sydney-regional-qualifier-best-of-micah-catelan",
+     "source": "mobalytics",
      "main": {
       "Baron Nashor": 1,
       "Brynhir Thundersong": 1,
@@ -36626,7 +38260,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-026-mello-gambit-draven-glorious-executioner",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Angle Shot": 1,
@@ -36672,7 +38308,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-027-spicee-draven-glorious-executioner",
+     "source": "riftools",
      "main": {
       "Cleave": 3,
       "Darius, Trifarian": 2,
@@ -36717,7 +38355,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-028-emillio-pina-draven-glorious-executioner",
+     "source": "riftools",
      "main": {
       "Cleave": 1,
       "Darius, Trifarian": 2,
@@ -36770,7 +38410,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-056-joshua-p-draven-glorious-executioner",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 3,
@@ -36816,7 +38458,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-060-parker-draven-glorious-executioner",
+     "source": "riftools",
      "main": {
       "Cleave": 3,
       "Darius, Trifarian": 3,
@@ -36860,7 +38504,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/31f80c7a-d9ec-4ece-87ba-1a1024807c45",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 3,
@@ -36899,7 +38545,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/23dd8f14-879f-43a2-8d81-28e0365c481d",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 3,
@@ -36942,7 +38590,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/aea17fe7-3adb-45c4-b679-d9315c32cfc4",
+     "source": "riftools",
      "main": {
       "Cleave": 1,
       "Darius, Trifarian": 2,
@@ -36984,7 +38634,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0bba2c49-e7af-48d9-8417-0efa4f6ce011",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 1,
       "Cleave": 3,
@@ -37023,7 +38675,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/23899617-9efc-4fc0-97b6-1e76b341fddd",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 3,
@@ -37066,7 +38720,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224298",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Cleave": 1,
@@ -37119,7 +38775,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8f99b05e-0f30-4c9a-9709-3a9b2f752f39",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 3,
@@ -37159,7 +38817,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224664",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 1,
       "Brynhir Thundersong": 1,
@@ -37206,7 +38866,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6b86293d-44ac-449c-bc24-edefe75ce7cd",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 3,
@@ -37247,7 +38909,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223441",
+     "source": "riftools",
      "main": {
       "Blood Rush": 1,
       "Cleave": 1,
@@ -37296,7 +38960,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223664",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 2,
@@ -37343,7 +39009,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223576",
+     "source": "riftools",
      "main": {
       "Cleave": 1,
       "Draven, Showboat": 1,
@@ -37389,7 +39057,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222101",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Brynhir Thundersong": 1,
@@ -37439,7 +39109,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224539",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 2,
@@ -37487,7 +39159,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222784",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Blighted Battleaxe": 1,
@@ -37543,7 +39217,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kaisa-daughter-of-the-void-atlanta-regional-qualifier-top-8-frosty",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 2,
       "Cleave": 2,
@@ -37586,7 +39262,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kaisa-daughter-of-the-void-hartford-regional-qualifier-best-of-flamekilla",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 1,
       "Falling Star": 3,
@@ -37634,7 +39312,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kaisa-daughter-of-the-void-utrecht-regional-qualifier-best-of-carlmerin",
+     "source": "mobalytics",
      "main": {
       "Battering Ram": 3,
       "Falling Star": 3,
@@ -37675,7 +39355,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kaisa-daughter-of-the-void-vancouver-regional-qualifier-best-of-sinzari",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 1,
       "Brynhir Thundersong": 1,
@@ -37723,7 +39405,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kaisa-daughter-of-the-void-sydney-regional-qualifier-best-of-savthegod",
+     "source": "mobalytics",
      "main": {
       "Darius, Trifarian": 1,
       "Falling Star": 3,
@@ -37771,7 +39455,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kaisa-daughter-of-the-void-lille-regional-qualifier-best-of-risolan",
+     "source": "mobalytics",
      "main": {
       "Darius, Trifarian": 1,
       "Falling Star": 3,
@@ -37825,7 +39511,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Vegas Regional Qualifier",
      "date": "2026-02-27",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jax-grandmaster-at-arms-vegas-regional-qualifier-top-8-theverybestgamer",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "Aphelios, Exalted": 2,
@@ -37872,7 +39560,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jax-grandmaster-at-arms-hartford-regional-qualifier-best-of-edward-marie",
+     "source": "mobalytics",
      "main": {
       "Brutalizer": 3,
       "Challenge": 3,
@@ -37915,7 +39605,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jax-grandmaster-at-arms-utrecht-regional-qualifier-best-of-sebiqqqqqqqqqqqq",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Charm": 2,
@@ -37959,7 +39651,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jax-grandmaster-at-arms-vancouver-regional-qualifier-best-of-ennelle",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Back Off": 1,
@@ -38002,7 +39696,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jax-grandmaster-at-arms-sydney-regional-qualifier-best-of-kevin-please",
+     "source": "mobalytics",
      "main": {
       "Brutalizer": 3,
       "Challenge": 2,
@@ -38047,7 +39743,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jax-grandmaster-at-arms-atlanta-regional-qualifier-best-of-jimbo-in-limbo",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "Boneshiver": 2,
@@ -38092,7 +39790,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jax-grandmaster-at-arms-lille-regional-qualifier-best-of-tempetedelaneige",
+     "source": "mobalytics",
      "main": {
       "Boneshiver": 3,
       "Brutalizer": 3,
@@ -38136,7 +39836,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-094-kaleb-duitsman-jax-grandmaster-at-arms",
+     "source": "riftools",
      "main": {
       "Brutalizer": 3,
       "Challenge": 3,
@@ -38180,7 +39882,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d7e69472-58b7-4653-82e6-a41646215538",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Charm": 2,
@@ -38219,7 +39923,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224986",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Brutalizer": 3,
@@ -38266,7 +39972,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225269",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Boneshiver": 3,
@@ -38316,7 +40024,9 @@ window.FIELD = {
      "placement": "2nd",
      "event": "Bologna Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-bologna-regional-qualifier-2nd-sebiqqqqqqqqqqqq",
+     "source": "mobalytics",
      "main": {
       "Bullet Time": 2,
       "Called Shot": 3,
@@ -38360,7 +40070,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-hartford-regional-qualifier-best-of-doctor-snuffles",
+     "source": "mobalytics",
      "main": {
       "Baron Nashor": 1,
       "Bullet Time": 2,
@@ -38401,7 +40113,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-utrecht-regional-qualifier-best-of-vendilion",
+     "source": "mobalytics",
      "main": {
       "Bullet Time": 3,
       "Catalyst of Aeons": 3,
@@ -38444,7 +40158,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-vancouver-regional-qualifier-best-of-matcharuzu",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 1,
@@ -38493,7 +40209,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-sydney-regional-qualifier-best-of-battle-cattle",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Bullet Time": 1,
@@ -38534,7 +40252,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-atlanta-regional-qualifier-best-of-snake",
+     "source": "mobalytics",
      "main": {
       "Bullet Time": 2,
       "Catalyst of Aeons": 3,
@@ -38578,7 +40298,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-lille-regional-qualifier-best-of-pippers",
+     "source": "mobalytics",
      "main": {
       "Bullet Time": 2,
       "Catalyst of Aeons": 3,
@@ -38623,7 +40345,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/miss-fortune-bounty-hunter-houston-regional-qualifier-best-of-trinityjohn",
+     "source": "mobalytics",
      "main": {
       "Acceptable Losses": 2,
       "Bullet Time": 2,
@@ -38665,7 +40389,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-019-ucra-miss-fortune-bounty-hunter",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -38711,7 +40437,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b45d7310-1017-47b7-a6c8-371457f3fccf",
+     "source": "riftools",
      "main": {
       "Bullet Time": 2,
       "Catalyst of Aeons": 3,
@@ -38755,7 +40483,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ac965bfd-726d-47c9-b463-bc2725f30984",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Bullet Time": 2,
@@ -38791,7 +40521,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224225",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Bullet Time": 1,
@@ -38833,7 +40565,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224472",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Catalyst of Aeons": 3,
@@ -38873,7 +40607,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224602",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 1,
@@ -38920,7 +40656,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224624",
+     "source": "riftools",
      "main": {
       "Bullet Time": 2,
       "Catalyst of Aeons": 3,
@@ -38964,7 +40702,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223826",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -39007,7 +40747,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224476",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -39051,7 +40793,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223521",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Dazzling Aurora": 3,
@@ -39097,7 +40841,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224209",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 3,
@@ -39142,7 +40888,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224580",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 1,
@@ -39186,7 +40934,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225049",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Catalyst of Aeons": 3,
@@ -39232,7 +40982,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223370",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Baron Nashor": 3,
@@ -39275,7 +41027,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222885",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 2,
       "Bullet Time": 1,
@@ -39328,7 +41082,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kai-sa-daughter-of-the-void-houston-regional-qualifier-top-8-alanzq1",
+     "source": "mobalytics",
      "main": {
       "Cleave": 3,
       "Darius, Trifarian": 3,
@@ -39368,7 +41124,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/kai-sa-daughter-of-the-void-houston-regional-qualifier-top-8-georgeg",
+     "source": "mobalytics",
      "main": {
       "Cleave": 3,
       "Darius, Trifarian": 3,
@@ -39412,7 +41170,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-037-kaoe-he-him-kai-sa-daughter-of-the-void",
+     "source": "riftools",
      "main": {
       "Darius, Trifarian": 1,
       "Falling Star": 3,
@@ -39460,7 +41220,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-045-frosty-kai-sa-daughter-of-the-void",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Brynhir Thundersong": 1,
@@ -39506,7 +41268,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-060-better-days-kai-sa-daughter-of-the-void",
+     "source": "riftools",
      "main": {
       "Battering Ram": 3,
       "Falling Star": 3,
@@ -39547,7 +41311,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-062-k-vin-gervais-kai-sa-daughter-of-the-void",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Darius, Trifarian": 2,
@@ -39594,7 +41360,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9d1284fd-4df1-4422-86f3-2c6d35525085",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Falling Star": 3,
@@ -39635,7 +41403,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c94923be-4ee6-4342-b897-3b86c0d67562",
+     "source": "riftools",
      "main": {
       "Eclipse": 2,
       "Falling Star": 3,
@@ -39677,7 +41447,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224103",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Falling Star": 3,
@@ -39726,7 +41498,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/cb4f60d0-727c-4b2c-b8ed-448ebef3cc0e",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Chakram Dancer": 1,
@@ -39770,7 +41544,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225048",
+     "source": "riftools",
      "main": {
       "Blood Rush": 1,
       "Darius, Trifarian": 2,
@@ -39819,7 +41595,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f4a39898-7963-4aed-8fd8-da1b2689f40e",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Eclipse": 1,
@@ -39860,7 +41638,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/63e1406e-1650-4bcd-bbb2-3a6c06088f54",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Cleave": 2,
@@ -39900,7 +41680,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c055c061-d843-4b4e-901a-bf35b0f95837",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Eclipse": 1,
@@ -39942,7 +41724,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224967",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Falling Star": 3,
@@ -39991,7 +41775,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224196",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Brynhir Thundersong": 2,
@@ -40039,7 +41825,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223806",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Cleave": 2,
@@ -40084,7 +41872,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223808",
+     "source": "riftools",
      "main": {
       "Blood Rush": 1,
       "Darius, Trifarian": 2,
@@ -40133,7 +41923,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/adae650f-be78-4b4f-8d48-05054a396bde",
+     "source": "riftools",
      "main": {
       "Falling Star": 3,
       "Ferrous Forerunner": 3,
@@ -40172,7 +41964,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223853",
+     "source": "riftools",
      "main": {
       "Battering Ram": 3,
       "Bellows Breath": 1,
@@ -40217,7 +42011,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224328",
+     "source": "riftools",
      "main": {
       "Cleave": 1,
       "Darius, Trifarian": 1,
@@ -40264,7 +42060,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224029",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 2,
       "Darius, Trifarian": 2,
@@ -40308,7 +42106,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224686",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Brynhir Thundersong": 1,
@@ -40356,7 +42156,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224876",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Brynhir Thundersong": 1,
@@ -40405,7 +42207,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224009",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Cleave": 1,
@@ -40455,7 +42259,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224168",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Falling Star": 3,
@@ -40501,7 +42307,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223744",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Brynhir Thundersong": 1,
@@ -40550,7 +42358,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223547",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Falling Star": 3,
@@ -40598,7 +42408,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223971",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Cleave": 1,
@@ -40648,7 +42460,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224435",
+     "source": "riftools",
      "main": {
       "Cleave": 1,
       "Falling Star": 3,
@@ -40695,7 +42509,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224651",
+     "source": "riftools",
      "main": {
       "Falling Star": 3,
       "Ferrous Forerunner": 2,
@@ -40743,7 +42559,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224826",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Cleave": 1,
@@ -40796,7 +42614,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224566",
+     "source": "riftools",
      "main": {
       "Ekko, Recurrent": 2,
       "Falling Star": 3,
@@ -40841,7 +42661,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224012",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Cleave": 1,
@@ -40892,7 +42714,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224915",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 1,
       "Cleave": 2,
@@ -40946,7 +42770,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jhin-virtuoso-hartford-regional-qualifier-best-of-ksdden",
+     "source": "mobalytics",
      "main": {
       "Brynhir Thundersong": 3,
       "Consult the Past": 3,
@@ -40989,7 +42815,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jhin-virtuoso-utrecht-regional-qualifier-best-of-jibbs",
+     "source": "mobalytics",
      "main": {
       "Consult the Past": 3,
       "Curtain Call": 3,
@@ -41036,7 +42864,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jhin-virtuoso-vancouver-regional-qualifier-best-of-alienbed",
+     "source": "mobalytics",
      "main": {
       "Consult the Past": 2,
       "Curtain Call": 3,
@@ -41081,7 +42911,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jhin-virtuoso-sydney-regional-qualifier-best-of-mord",
+     "source": "mobalytics",
      "main": {
       "Consult the Past": 1,
       "Curtain Call": 3,
@@ -41130,7 +42962,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-042-zack-burney-jhin-virtuoso",
+     "source": "riftools",
      "main": {
       "Consult the Past": 3,
       "Curtain Call": 3,
@@ -41177,7 +43011,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-055-ben-jhin-virtuoso",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 3,
       "Consult the Past": 3,
@@ -41220,7 +43056,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223520",
+     "source": "riftools",
      "main": {
       "Consult the Past": 3,
       "Curtain Call": 3,
@@ -41267,7 +43105,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224758",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 3,
       "Consult the Past": 3,
@@ -41310,7 +43150,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224970",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 2,
       "Curtain Call": 3,
@@ -41357,7 +43199,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223984",
+     "source": "riftools",
      "main": {
       "Consult the Past": 2,
       "Curtain Call": 3,
@@ -41405,7 +43249,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224060",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 1,
       "Consult the Past": 3,
@@ -41454,7 +43300,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224729",
+     "source": "riftools",
      "main": {
       "Brynhir Thundersong": 2,
       "Consult the Past": 3,
@@ -41506,7 +43354,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/khazix-voidreaver-hartford-regional-qualifier-best-of-av-dantelush",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Evelynn, Entrancing": 3,
@@ -41551,7 +43401,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/khazix-voidreaver-utrecht-regional-qualifier-best-of-jun",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Fizz, Trickster": 3,
@@ -41595,7 +43447,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/khazix-voidreaver-vancouver-regional-qualifier-best-of-ctcg-zrob",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 2,
       "Demacian Diplomat": 2,
@@ -41638,7 +43492,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/khazix-voidreaver-sydney-regional-qualifier-best-of-ppoong",
+     "source": "mobalytics",
      "main": {
       "Baron Nashor": 1,
       "Catalyst of Aeons": 3,
@@ -41686,7 +43542,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lillia-bashful-bloom-hartford-regional-qualifier-best-of-nerfnick",
+     "source": "mobalytics",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -41732,7 +43590,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lillia-bashful-bloom-utrecht-regional-qualifier-best-of-lks10",
+     "source": "mobalytics",
      "main": {
       "Charm": 1,
       "Defy": 3,
@@ -41778,7 +43638,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lillia-bashful-bloom-vancouver-regional-qualifier-best-of-tss-ghaelwinds",
+     "source": "mobalytics",
      "main": {
       "Charm": 1,
       "Defy": 3,
@@ -41825,7 +43687,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lillia-bashful-bloom-sydney-regional-qualifier-best-of-duncan",
+     "source": "mobalytics",
      "main": {
       "Charm": 1,
       "Defy": 3,
@@ -41865,7 +43729,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-090-kenneth-hagood-lillia-bashful-bloom",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -41906,7 +43772,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-112-zak-brown-lillia-bashful-bloom",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -41954,7 +43822,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224001",
+     "source": "riftools",
      "main": {
       "Chakram Dancer": 1,
       "Charm": 3,
@@ -41999,7 +43869,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222558",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -42042,7 +43914,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/583f562d-508d-42bb-9551-56350ea33467",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Charm": 2,
@@ -42080,7 +43954,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225439",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 2,
@@ -42124,7 +44000,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/52e5b4bf-e779-448a-87fa-42cb54d4db5f",
+     "source": "riftools",
      "main": {
       "Charm": 1,
       "Defy": 3,
@@ -42163,7 +44041,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222647",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -42207,7 +44087,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fc2b3721-7828-4297-9e09-f961b5cc5f34",
+     "source": "riftools",
      "main": {
       "Brutalizer": 1,
       "Charm": 2,
@@ -42252,7 +44134,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ab220d7c-7b7c-403d-befd-8853be4db69a",
+     "source": "riftools",
      "main": {
       "Brutalizer": 1,
       "Charm": 1,
@@ -42294,7 +44178,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223707",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -42337,7 +44223,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4618551c-f86f-416c-9b6f-682ce88633af",
+     "source": "riftools",
      "main": {
       "Brutalizer": 1,
       "Charm": 1,
@@ -42379,7 +44267,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b5a7e9b7-6d26-4f42-9f56-5b1c537e547d",
+     "source": "riftools",
      "main": {
       "Charm": 1,
       "Defy": 3,
@@ -42419,7 +44309,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8023e628-1bb9-44c1-94c9-9bf34cab94bd",
+     "source": "riftools",
      "main": {
       "Brutalizer": 1,
       "Charm": 2,
@@ -42459,7 +44351,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224764",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -42507,7 +44401,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7dbfdfc4-6847-46df-a0e1-63341bd6df9d",
+     "source": "riftools",
      "main": {
       "Charm": 1,
       "Defy": 3,
@@ -42545,7 +44441,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223940",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -42589,7 +44487,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223285",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -42633,7 +44533,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225438",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -42681,7 +44583,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223488",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Defy": 3,
@@ -42726,7 +44630,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224487",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Consult the Past": 2,
@@ -42770,7 +44676,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225378",
+     "source": "riftools",
      "main": {
       "Bellows Breath": 2,
       "Charm": 2,
@@ -42822,7 +44730,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lucian-purifier-hartford-regional-qualifier-best-of-kaillou",
+     "source": "mobalytics",
      "main": {
       "Blighted Battleaxe": 3,
       "Challenge": 2,
@@ -42866,7 +44776,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lucian-purifier-utrecht-regional-qualifier-best-of-chimarin",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "Cleave": 2,
@@ -42910,7 +44822,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lucian-purifier-vancouver-regional-qualifier-best-of-blaedsounds",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "Blighted Battleaxe": 3,
@@ -42956,7 +44870,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lucian-purifier-sydney-regional-qualifier-best-of-lockon",
+     "source": "mobalytics",
      "main": {
       "Blighted Battleaxe": 2,
       "Challenge": 2,
@@ -42997,7 +44913,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lucian-purifier-atlanta-regional-qualifier-best-of-deamon",
+     "source": "mobalytics",
      "main": {
       "Challenge": 3,
       "Confront": 3,
@@ -43036,7 +44954,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lucian-purifier-lille-regional-qualifier-best-of-tcgn-otterzocker",
+     "source": "mobalytics",
      "main": {
       "Angle Shot": 1,
       "Brynhir Thundersong": 2,
@@ -43080,7 +45000,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-054-hiemer12-lucian-purifier",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 1,
       "Challenge": 2,
@@ -43123,7 +45045,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-061-florian-sieber-lucian-purifier",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Doran's Blade": 1,
@@ -43166,7 +45090,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3171093d-e55b-42c5-9d59-97a022948e5d",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Blighted Battleaxe": 3,
@@ -43207,7 +45133,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224201",
+     "source": "riftools",
      "main": {
       "Boneshiver": 2,
       "Doran's Blade": 3,
@@ -43249,7 +45177,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/335bcaa9-bce1-4c06-b6df-b8e35075e94f",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -43288,7 +45218,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224290",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Blighted Battleaxe": 2,
@@ -43334,7 +45266,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222961",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 1,
       "Boneshiver": 3,
@@ -43385,7 +45319,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ornn-fire-below-the-mountain-hartford-regional-qualifier-best-of-24goldfish",
+     "source": "mobalytics",
      "main": {
       "Brutalizer": 2,
       "Charm": 3,
@@ -43428,7 +45364,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ornn-fire-below-the-mountain-utrecht-regional-qualifier-best-of-skepas",
+     "source": "mobalytics",
      "main": {
       "Brutalizer": 2,
       "Charm": 3,
@@ -43469,7 +45407,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ornn-fire-below-the-mountain-vancouver-regional-qualifier-best-of-stephe",
+     "source": "mobalytics",
      "main": {
       "Brutalizer": 2,
       "Charm": 3,
@@ -43510,7 +45450,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ornn-fire-below-the-mountain-sydney-regional-qualifier-best-of-saintauz",
+     "source": "mobalytics",
      "main": {
       "Brutalizer": 3,
       "Charm": 3,
@@ -43553,7 +45495,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ornn-fire-below-the-mountain-atlanta-regional-qualifier-best-of-housesarebig",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 2,
       "Charm": 1,
@@ -43597,7 +45541,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ornn-fire-below-the-mountain-lille-regional-qualifier-best-of-schnaitzel",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 2,
       "Clockwork Keeper": 3,
@@ -43642,7 +45588,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-071-windzy-ornn-fire-below-the-mountain",
+     "source": "riftools",
      "main": {
       "Brutalizer": 3,
       "Charm": 3,
@@ -43685,7 +45633,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8efeb92a-b42f-4a01-8d4f-502169c3d9f1",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Charm": 3,
@@ -43723,7 +45673,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e43664f8-37ab-47a9-87fb-009e492c3f6b",
+     "source": "riftools",
      "main": {
       "Brutalizer": 3,
       "Charm": 3,
@@ -43764,7 +45716,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e52769d4-2f9f-4707-974a-a6789c95ec7d",
+     "source": "riftools",
      "main": {
       "Brutalizer": 3,
       "Charm": 2,
@@ -43801,7 +45755,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7a902e9f-417a-4e2b-9783-b7adc61765f3",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Brutalizer": 2,
@@ -43845,7 +45801,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/abfeeb92-3071-478d-a207-65d89b32d7bf",
+     "source": "riftools",
      "main": {
       "Brutalizer": 3,
       "Charm": 2,
@@ -43883,7 +45841,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224373",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Charm": 1,
@@ -43929,7 +45889,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/24dd6c08-27c8-4b47-b91e-a764ba443919",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Charm": 3,
@@ -43967,7 +45929,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1655bdfa-953d-458c-b966-8861734f341d",
+     "source": "riftools",
      "main": {
       "Brutalizer": 2,
       "Charm": 3,
@@ -44004,7 +45968,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224855",
+     "source": "riftools",
      "main": {
       "Aphelios, Exalted": 2,
       "Brutalizer": 3,
@@ -44052,7 +46018,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224535",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Brutalizer": 2,
@@ -44100,7 +46068,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224222",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Charm": 1,
@@ -44149,7 +46119,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223875",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Brutalizer": 2,
@@ -44197,7 +46169,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222144",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Charm": 2,
@@ -44247,7 +46221,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/volibear-relentless-storm-hartford-regional-qualifier-best-of-zanberserker",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -44290,7 +46266,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/volibear-relentless-storm-utrecht-regional-qualifier-best-of-ctcg-villionaire",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -44333,7 +46311,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/volibear-relentless-storm-vancouver-regional-qualifier-best-of-ctcg-villionaire",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 3,
@@ -44374,7 +46354,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/volibear-relentless-storm-sydney-regional-qualifier-best-of-ctcg-villionaire",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -44417,7 +46399,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/volibear-relentless-storm-atlanta-regional-qualifier-best-of-ctcg-villionaire",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -44461,7 +46445,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/volibear-relentless-storm-lille-regional-qualifier-best-of-dv12321",
+     "source": "mobalytics",
      "main": {
       "Blazing Scorcher": 3,
       "Brynhir Thundersong": 1,
@@ -44511,7 +46497,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/volibear-relentless-storm-houston-regional-qualifier-best-of-malakx",
+     "source": "mobalytics",
      "main": {
       "Anivia, Primal": 3,
       "Catalyst of Aeons": 3,
@@ -44552,7 +46540,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-068-joey-volibear-relentless-storm",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 3,
@@ -44593,7 +46583,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-073-william-fortin-auger-volibear-relentless-storm",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Direwing": 3,
@@ -44634,7 +46626,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-080-alex-silver-volibear-relentless-storm",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 3,
       "Challenge": 3,
@@ -44677,7 +46671,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ef9ae767-066d-44c1-a5d7-e85e9d96f5cf",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -44715,7 +46711,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/669305d6-15b5-4ff2-b2d0-094aa3fdbaf0",
+     "source": "riftools",
      "main": {
       "Arachnoid Horror": 1,
       "Catalyst of Aeons": 3,
@@ -44755,7 +46753,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222483",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 3,
       "Catalyst of Aeons": 3,
@@ -44797,7 +46797,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3036f220-182f-4763-aa03-1ec5b3292ef6",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 3,
       "Catalyst of Aeons": 1,
@@ -44837,7 +46839,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/890f13db-e30d-4e63-b4a5-705676432869",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -44875,7 +46879,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224337",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -44916,7 +46922,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225180",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 3,
       "Brynhir Thundersong": 1,
@@ -44961,7 +46969,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223506",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 3,
       "Brynhir Thundersong": 1,
@@ -45008,7 +47018,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/221431",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 2,
       "Dazzling Aurora": 3,
@@ -45052,7 +47064,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224439",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 2,
@@ -45095,7 +47109,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224364",
+     "source": "riftools",
      "main": {
       "Battering Ram": 2,
       "Blazing Scorcher": 3,
@@ -45140,7 +47156,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223393",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 3,
       "Brynhir Thundersong": 1,
@@ -45185,7 +47203,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225370",
+     "source": "riftools",
      "main": {
       "Arachnoid Horror": 1,
       "Blazing Scorcher": 3,
@@ -45230,7 +47250,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222359",
+     "source": "riftools",
      "main": {
       "Blazing Scorcher": 3,
       "Brynhir Thundersong": 1,
@@ -45283,7 +47305,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ahri-nine-tailed-fox-hartford-regional-qualifier-best-of-sorentity",
+     "source": "mobalytics",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 1,
@@ -45332,7 +47356,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ahri-nine-tailed-fox-utrecht-regional-qualifier-best-of-malakx",
+     "source": "mobalytics",
      "main": {
       "Ahri, Alluring": 1,
       "Alpha Wildclaw": 1,
@@ -45379,7 +47405,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ahri-nine-tailed-fox-vancouver-regional-qualifier-best-of-suoo",
+     "source": "mobalytics",
      "main": {
       "Ahri, Alluring": 1,
       "Back Off": 2,
@@ -45426,7 +47454,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ahri-nine-tailed-fox-sydney-regional-qualifier-best-of-kawaii-tsukiko",
+     "source": "mobalytics",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 2,
@@ -45470,7 +47500,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ahri-nine-tailed-fox-atlanta-regional-qualifier-best-of-teh-bestest-one",
+     "source": "mobalytics",
      "main": {
       "Ahri, Inquisitive": 1,
       "Blitzcrank, Impassive": 1,
@@ -45515,7 +47547,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ahri-nine-tailed-fox-lille-regional-qualifier-best-of-daniel",
+     "source": "mobalytics",
      "main": {
       "Ahri, Inquisitive": 1,
       "Bellows Breath": 1,
@@ -45561,7 +47595,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ahri-nine-tailed-fox-houston-regional-qualifier-best-of-kale",
+     "source": "mobalytics",
      "main": {
       "Ahri, Alluring": 1,
       "Defy": 3,
@@ -45605,7 +47641,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-076-mari-groh-ahri-nine-tailed-fox",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Chakram Dancer": 3,
@@ -45644,7 +47682,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1c207e94-88fe-4ae6-a41b-bb8e68b664c3",
+     "source": "riftools",
      "main": {
       "Alpha Wildclaw": 1,
       "Back Off": 3,
@@ -45684,7 +47724,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e4638074-fdb5-4583-b798-68bf49c12384",
+     "source": "riftools",
      "main": {
       "Alpha Wildclaw": 1,
       "Back Off": 3,
@@ -45724,7 +47766,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f40f86d3-7bb8-45af-a071-674d804c7ac3",
+     "source": "riftools",
      "main": {
       "Chakram Dancer": 2,
       "Charm": 3,
@@ -45762,7 +47806,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fb8004a7-6e24-4eaf-af03-33bf69c3f498",
+     "source": "riftools",
      "main": {
       "Charm": 3,
       "Consult the Past": 3,
@@ -45803,7 +47849,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6d394cbc-21fd-45a4-bc76-175a17ee807c",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -45841,7 +47889,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b9c1a2e9-c1cc-450e-be39-771b14100fe8",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Charm": 2,
@@ -45879,7 +47929,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224406",
+     "source": "riftools",
      "main": {
       "Ahri, Alluring": 1,
       "Back Off": 3,
@@ -45922,7 +47974,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/920841e8-4886-4c4b-acfd-e2dbbf040836",
+     "source": "riftools",
      "main": {
       "Charm": 2,
       "Consult the Past": 2,
@@ -45962,7 +48016,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224814",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 2,
@@ -46008,7 +48064,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223720",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 1,
@@ -46056,7 +48114,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225213",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 1,
@@ -46107,7 +48167,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224616",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 1,
@@ -46156,7 +48218,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225292",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Bellows Breath": 2,
@@ -46200,7 +48264,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224157",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 3,
@@ -46253,7 +48319,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223670",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Back Off": 2,
@@ -46299,7 +48367,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224456",
+     "source": "riftools",
      "main": {
       "Ahri, Inquisitive": 1,
       "Bellows Breath": 2,
@@ -46349,7 +48419,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lee-sin-blind-monk-hartford-regional-qualifier-best-of-troy",
+     "source": "mobalytics",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -46392,7 +48464,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lee-sin-blind-monk-utrecht-regional-qualifier-best-of-jestekote",
+     "source": "mobalytics",
      "main": {
       "Back Off": 2,
       "Catalyst of Aeons": 3,
@@ -46436,7 +48510,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lee-sin-blind-monk-vancouver-regional-qualifier-best-of-terrythecactus",
+     "source": "mobalytics",
      "main": {
       "Back Off": 1,
       "Charm": 2,
@@ -46481,7 +48557,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lee-sin-blind-monk-sydney-regional-qualifier-best-of-croque-monsieur",
+     "source": "mobalytics",
      "main": {
       "Back Off": 2,
       "Catalyst of Aeons": 3,
@@ -46525,7 +48603,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lee-sin-blind-monk-atlanta-regional-qualifier-best-of-troy",
+     "source": "mobalytics",
      "main": {
       "Challenge": 3,
       "Charm": 3,
@@ -46567,7 +48647,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lee-sin-blind-monk-lille-regional-qualifier-best-of-pay-eighthundred",
+     "source": "mobalytics",
      "main": {
       "Challenge": 3,
       "Charm": 3,
@@ -46610,7 +48692,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/lee-sin-blind-monk-houston-regional-qualifier-best-of-lmjeffjones",
+     "source": "mobalytics",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -46653,7 +48737,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224417",
+     "source": "riftools",
      "main": {
       "Challenge": 3,
       "Charm": 1,
@@ -46698,7 +48784,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2edaf5a4-5737-42ed-bb98-b4d6d67dab3b",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 2,
@@ -46738,7 +48826,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d5e3bb86-40dd-4e34-9534-792bee5eb643",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 2,
@@ -46776,7 +48866,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4b217075-b14d-4b16-859c-d79dcafb825c",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Catalyst of Aeons": 3,
@@ -46814,7 +48906,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4ba87e89-76d2-429f-84de-7ae1c1a7b09b",
+     "source": "riftools",
      "main": {
       "Challenge": 2,
       "Charm": 3,
@@ -46852,7 +48946,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225080",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 2,
@@ -46896,7 +48992,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224715",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Back Off": 1,
@@ -46947,7 +49045,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leona-radiant-dawn-hartford-regional-qualifier-best-of-clouds-king",
+     "source": "mobalytics",
      "main": {
       "Back Off": 3,
       "Call to Glory": 3,
@@ -46989,7 +49089,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leona-radiant-dawn-utrecht-regional-qualifier-best-of-yaino",
+     "source": "mobalytics",
      "main": {
       "Back Off": 3,
       "Call to Glory": 2,
@@ -47034,7 +49136,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leona-radiant-dawn-vancouver-regional-qualifier-best-of-bargosy",
+     "source": "mobalytics",
      "main": {
       "Back Off": 3,
       "Call to Glory": 1,
@@ -47079,7 +49183,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leona-radiant-dawn-sydney-regional-qualifier-best-of-elle-xv",
+     "source": "mobalytics",
      "main": {
       "Back Off": 3,
       "Call to Glory": 2,
@@ -47124,7 +49230,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leona-radiant-dawn-atlanta-regional-qualifier-best-of-snowfallz",
+     "source": "mobalytics",
      "main": {
       "B.F. Sword": 2,
       "Clockwork Keeper": 2,
@@ -47168,7 +49276,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leona-radiant-dawn-lille-regional-qualifier-best-of-sei-shin-casios",
+     "source": "mobalytics",
      "main": {
       "B.F. Sword": 2,
       "Brutalizer": 1,
@@ -47216,7 +49326,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/leona-radiant-dawn-houston-regional-qualifier-best-of-frodan",
+     "source": "mobalytics",
      "main": {
       "Call to Glory": 3,
       "Clockwork Keeper": 3,
@@ -47258,7 +49370,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5a4ccd5e-65b4-4325-a858-b5922c215c3c",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Call to Glory": 2,
@@ -47297,7 +49411,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224131",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Brutalizer": 3,
@@ -47344,7 +49460,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0a4be3ec-f43a-4b43-835d-2d2dbea32529",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Call to Glory": 2,
@@ -47380,7 +49498,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e4413784-bb30-4f62-b3a9-7b9c2d07ba24",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Call to Glory": 2,
@@ -47418,7 +49538,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1793e372-af01-4884-adaa-3ac8af534f91",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Call to Glory": 3,
@@ -47456,7 +49578,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224521",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Call to Glory": 2,
@@ -47504,7 +49628,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223794",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Call to Glory": 3,
@@ -47546,7 +49672,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224761",
+     "source": "riftools",
      "main": {
       "Back Off": 3,
       "Call to Glory": 2,
@@ -47589,7 +49717,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223643",
+     "source": "riftools",
      "main": {
       "Allay, Eager Admirer": 2,
       "Back Off": 3,
@@ -47644,7 +49774,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/fiora-grand-duelist-hartford-regional-qualifier-best-of-designedly-pref",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 3,
       "Challenge": 3,
@@ -47686,7 +49818,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/fiora-grand-duelist-utrecht-regional-qualifier-best-of-fr0zen",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 3,
       "Challenge": 3,
@@ -47728,7 +49862,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/fiora-grand-duelist-vancouver-regional-qualifier-best-of-ricemaster",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 3,
       "Challenge": 3,
@@ -47770,7 +49906,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/fiora-grand-duelist-sydney-regional-qualifier-best-of-orangeoctober",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 2,
       "Catalyst of Aeons": 3,
@@ -47815,7 +49953,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/fiora-grand-duelist-atlanta-regional-qualifier-best-of-vves",
+     "source": "mobalytics",
      "main": {
       "B.F. Sword": 3,
       "Call to Glory": 2,
@@ -47858,7 +49998,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/fiora-grand-duelist-lille-regional-qualifier-best-of-azirim",
+     "source": "mobalytics",
      "main": {
       "Akshan, Mischievous": 1,
       "B.F. Sword": 3,
@@ -47905,7 +50047,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-067-brian-torres-fiora-grand-duelist",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 3,
       "Call to Glory": 3,
@@ -47946,7 +50090,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223985",
+     "source": "riftools",
      "main": {
       "Call to Glory": 2,
       "Challenge": 2,
@@ -47992,7 +50138,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1918774b-a9d3-4dc1-87e0-f42214818d3e",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "B.F. Sword": 3,
@@ -48034,7 +50182,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224215",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Ashe, Focused": 1,
@@ -48078,7 +50228,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224262",
+     "source": "riftools",
      "main": {
       "Arena Bar": 1,
       "Call to Glory": 2,
@@ -48124,7 +50276,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/366a3407-4321-4013-9ad7-c23286096216",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 3,
       "Baited Hook": 2,
@@ -48164,7 +50318,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b0204efe-95a4-4371-990e-1e34de76b22f",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 3,
       "Call to Glory": 2,
@@ -48206,7 +50362,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223961",
+     "source": "riftools",
      "main": {
       "Baited Hook": 2,
       "Blood Rose": 1,
@@ -48253,7 +50411,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223857",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Challenge": 1,
@@ -48297,7 +50457,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/dfc27d67-f348-40d3-8ab2-dc547dc69791",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Ashe, Focused": 1,
@@ -48339,7 +50501,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e24abfc8-f446-4f51-ace8-a15945dc5e4a",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 3,
@@ -48377,7 +50541,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/86f03505-a733-4c7a-a013-f831cbd12250",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 3,
       "Challenge": 2,
@@ -48417,7 +50583,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223778",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "B.F. Sword": 3,
@@ -48461,7 +50629,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1029b505-82b5-4407-928e-a6c2dcd4911d",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 1,
       "Call to Glory": 3,
@@ -48504,7 +50674,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223282",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 1,
       "Call to Glory": 3,
@@ -48553,7 +50725,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224813",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Dazzling Aurora": 3,
@@ -48595,7 +50769,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222771",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Ashe, Focused": 1,
@@ -48644,7 +50820,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223423",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Baited Hook": 2,
@@ -48691,7 +50869,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224772",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 1,
       "Call to Glory": 2,
@@ -48741,7 +50921,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222742",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Ashe, Focused": 1,
@@ -48787,7 +50969,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223768",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 3,
       "Challenge": 3,
@@ -48829,7 +51013,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224603",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Ashe, Focused": 1,
@@ -48876,7 +51062,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225172",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Ashe, Focused": 1,
@@ -48922,7 +51110,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225136",
+     "source": "riftools",
      "main": {
       "Call to Glory": 2,
       "Challenge": 2,
@@ -48969,7 +51159,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224920",
+     "source": "riftools",
      "main": {
       "Call to Glory": 3,
       "Challenge": 3,
@@ -49012,7 +51204,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225071",
+     "source": "riftools",
      "main": {
       "Call to Glory": 2,
       "Challenge": 2,
@@ -49058,7 +51252,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224799",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "B.F. Sword": 1,
@@ -49115,7 +51311,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ivern-green-father-hartford-regional-qualifier-best-of-mr-raze",
+     "source": "mobalytics",
      "main": {
       "Azir, Sovereign": 2,
       "Back Off": 1,
@@ -49161,7 +51359,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ivern-green-father-utrecht-regional-qualifier-best-of-marshall",
+     "source": "mobalytics",
      "main": {
       "Azir, Sovereign": 2,
       "Back Off": 1,
@@ -49208,7 +51408,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ivern-green-father-vancouver-regional-qualifier-best-of-boulevard",
+     "source": "mobalytics",
      "main": {
       "Azir, Sovereign": 1,
       "Back Off": 1,
@@ -49255,7 +51457,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/ivern-green-father-sydney-regional-qualifier-best-of-stunningpram",
+     "source": "mobalytics",
      "main": {
       "Back Off": 1,
       "Blitzcrank, Impassive": 3,
@@ -49297,7 +51501,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-035-not-seth-ivern-green-father",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Call to Glory": 2,
@@ -49342,7 +51548,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-066-norf974-ivern-green-father",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 2,
       "Azir, Sovereign": 2,
@@ -49386,7 +51594,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-088-bryan-richter-ivern-green-father",
+     "source": "riftools",
      "main": {
       "Azir, Sovereign": 2,
       "Back Off": 1,
@@ -49432,7 +51642,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1f0f01a8-0d87-48f8-a17a-fbe44522e3db",
+     "source": "riftools",
      "main": {
       "Azir, Sovereign": 1,
       "Back Off": 1,
@@ -49474,7 +51686,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1382b153-a767-467d-b846-e926c67b781c",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Blitzcrank, Impassive": 1,
@@ -49515,7 +51729,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2dbcab86-9df8-4776-93a9-d9303165f05a",
+     "source": "riftools",
      "main": {
       "Azir, Sovereign": 2,
       "Back Off": 1,
@@ -49558,7 +51774,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/46be205a-a5d6-4b92-a98c-c951ddffbcaa",
+     "source": "riftools",
      "main": {
       "Azir, Sovereign": 2,
       "Back Off": 1,
@@ -49599,7 +51817,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9dcd885b-b3f7-45bf-8001-136ddd70dac3",
+     "source": "riftools",
      "main": {
       "Back Off": 2,
       "Charm": 2,
@@ -49638,7 +51858,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223766",
+     "source": "riftools",
      "main": {
       "Azir, Sovereign": 2,
       "Back Off": 2,
@@ -49693,7 +51915,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/renata-glasc-chem-baroness-hartford-regional-qualifier-best-of-absolute",
+     "source": "mobalytics",
      "main": {
       "Black Rose Dignitary": 3,
       "Consult the Past": 2,
@@ -49736,7 +51960,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/renata-glasc-chem-baroness-utrecht-regional-qualifier-best-of-evox-13",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 1,
       "Card Sharp": 3,
@@ -49780,7 +52006,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/renata-glasc-chem-baroness-vancouver-regional-qualifier-best-of-youknowwho",
+     "source": "mobalytics",
      "main": {
       "Ashe, Focused": 2,
       "Bellows Breath": 1,
@@ -49829,7 +52057,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/renata-glasc-chem-baroness-sydney-regional-qualifier-best-of-dois",
+     "source": "mobalytics",
      "main": {
       "B.F. Sword": 1,
       "Card Sharp": 3,
@@ -49874,7 +52104,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/renata-glasc-chem-baroness-atlanta-regional-qualifier-best-of-t0ad5ack",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 3,
@@ -49915,7 +52147,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/renata-glasc-chem-baroness-lille-regional-qualifier-best-of-trecore",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 2,
       "Card Sharp": 3,
@@ -49956,7 +52190,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/28162d1b-0053-4458-be48-a8173d97cdeb",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 1,
       "Bellows Breath": 1,
@@ -50001,7 +52237,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224825",
+     "source": "riftools",
      "main": {
       "Blastcone Fae": 1,
       "Cloth Armor": 2,
@@ -50055,7 +52293,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/garen-might-of-demacia-hartford-regional-qualifier-best-of-lusavor",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -50099,7 +52339,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/garen-might-of-demacia-utrecht-regional-qualifier-best-of-noobvengador",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -50140,7 +52382,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/garen-might-of-demacia-vancouver-regional-qualifier-best-of-swainy",
+     "source": "mobalytics",
      "main": {
       "Altar of Memories": 2,
       "Catalyst of Aeons": 3,
@@ -50184,7 +52428,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/garen-might-of-demacia-sydney-regional-qualifier-best-of-duality",
+     "source": "mobalytics",
      "main": {
       "Catalyst of Aeons": 3,
       "Concentrate": 1,
@@ -50227,7 +52473,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/garen-might-of-demacia-atlanta-regional-qualifier-best-of-jasolf",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 2,
       "Catalyst of Aeons": 3,
@@ -50268,7 +52516,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/garen-might-of-demacia-lille-regional-qualifier-best-of-noobvengador",
+     "source": "mobalytics",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -50308,7 +52558,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/garen-might-of-demacia-houston-regional-qualifier-best-of-riftboundtee",
+     "source": "mobalytics",
      "main": {
       "Blast of Power": 3,
       "Carnivorous Snapvine": 2,
@@ -50351,7 +52603,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/58e67af6-5e0d-4009-83bf-295ecd62ee8d",
+     "source": "riftools",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -50388,7 +52642,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bfe80c73-88df-440e-9c0d-5230bd75bbfb",
+     "source": "riftools",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -50424,7 +52680,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/45c5f7e2-4f8d-4952-b9ce-c04c2e7a1bc0",
+     "source": "riftools",
      "main": {
       "Catalyst of Aeons": 3,
       "Concentrate": 1,
@@ -50464,7 +52722,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223711",
+     "source": "riftools",
      "main": {
       "Arachnoid Horror": 1,
       "Catalyst of Aeons": 3,
@@ -50507,7 +52767,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224640",
+     "source": "riftools",
      "main": {
       "Blood Money": 3,
       "Catalyst of Aeons": 3,
@@ -50550,7 +52812,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224467",
+     "source": "riftools",
      "main": {
       "Altar of Memories": 2,
       "Catalyst of Aeons": 3,
@@ -50598,7 +52862,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jinx-loose-cannon-hartford-regional-qualifier-best-of-freaknastyxphd",
+     "source": "mobalytics",
      "main": {
       "Blighted Battleaxe": 2,
       "Edge of Night": 3,
@@ -50642,7 +52908,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jinx-loose-cannon-utrecht-regional-qualifier-best-of-ghosterdriver",
+     "source": "mobalytics",
      "main": {
       "Blighted Battleaxe": 2,
       "Edge of Night": 3,
@@ -50690,7 +52958,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jinx-loose-cannon-vancouver-regional-qualifier-best-of-spiritless",
+     "source": "mobalytics",
      "main": {
       "Blood Rush": 1,
       "Cleave": 2,
@@ -50739,7 +53009,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jinx-loose-cannon-sydney-regional-qualifier-best-of-htpiper151",
+     "source": "mobalytics",
      "main": {
       "Chemtech Enforcer": 3,
       "Cleave": 2,
@@ -50784,7 +53056,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jinx-loose-cannon-atlanta-regional-qualifier-best-of-rien",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 1,
       "Cleave": 3,
@@ -50826,7 +53100,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jinx-loose-cannon-lille-regional-qualifier-best-of-quayou",
+     "source": "mobalytics",
      "main": {
       "Blood Rush": 2,
       "Darius, Trifarian": 3,
@@ -50870,7 +53146,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/jinx-loose-cannon-houston-regional-qualifier-best-of-eric",
+     "source": "mobalytics",
      "main": {
       "Chemtech Enforcer": 3,
       "Cleave": 3,
@@ -50911,7 +53189,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/be368135-dd1a-44e4-82dc-4350f9cf7a19",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Edge of Night": 3,
@@ -50951,7 +53231,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b680f160-bd0c-4756-b1f6-5574f92885a2",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Darius, Trifarian": 3,
@@ -50987,7 +53269,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224525",
+     "source": "riftools",
      "main": {
       "Battering Ram": 2,
       "Edge of Night": 3,
@@ -51033,7 +53317,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5a64228f-6758-4913-a858-fe82a5a9c07d",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Edge of Night": 3,
@@ -51078,7 +53364,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c1c1ed67-196c-4e11-bc3c-2ab0e64142a4",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Edge of Night": 3,
@@ -51117,7 +53405,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/46f182d5-552a-4cd1-931b-4b0982202bf7",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Edge of Night": 2,
@@ -51160,7 +53450,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/93755692-8265-4f06-83b5-967ef9e82279",
+     "source": "riftools",
      "main": {
       "Cleave": 2,
       "Evelynn, Entrancing": 2,
@@ -51199,7 +53491,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223527",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Evershade Stalker": 1,
@@ -51246,7 +53540,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/27fc3436-507b-4528-94ff-0984fa036ff5",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Cleave": 2,
@@ -51288,7 +53584,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f489ac8e-c2bc-423e-8b4f-c48aa8c13815",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Edge of Night": 3,
@@ -51331,7 +53629,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/220595",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Blighted Battleaxe": 2,
@@ -51380,7 +53680,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224557",
+     "source": "riftools",
      "main": {
       "Chemtech Enforcer": 3,
       "Evershade Stalker": 3,
@@ -51421,7 +53723,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223595",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Blood Rush": 1,
@@ -51473,7 +53777,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224344",
+     "source": "riftools",
      "main": {
       "Blighted Battleaxe": 2,
       "Evershade Stalker": 3,
@@ -51516,7 +53822,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223551",
+     "source": "riftools",
      "main": {
       "Chemtech Enforcer": 3,
       "Eager Drakehound": 1,
@@ -51566,7 +53874,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/yasuo-unforgiven-hartford-regional-qualifier-best-of-complex",
+     "source": "mobalytics",
      "main": {
       "Boots of Swiftness": 1,
       "Charm": 2,
@@ -51610,7 +53920,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/yasuo-unforgiven-utrecht-regional-qualifier-best-of-bezz",
+     "source": "mobalytics",
      "main": {
       "Adaptatron": 1,
       "Back Off": 1,
@@ -51659,7 +53971,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/yasuo-unforgiven-vancouver-regional-qualifier-best-of-kiiro",
+     "source": "mobalytics",
      "main": {
       "Abandon": 1,
       "Charm": 3,
@@ -51703,7 +54017,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/yasuo-unforgiven-sydney-regional-qualifier-best-of-sussy",
+     "source": "mobalytics",
      "main": {
       "Back Off": 2,
       "Defy": 3,
@@ -51749,7 +54065,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/yasuo-unforgiven-atlanta-regional-qualifier-best-of-mom-sky",
+     "source": "mobalytics",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -51794,7 +54112,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/yasuo-unforgiven-lille-regional-qualifier-best-of-boky",
+     "source": "mobalytics",
      "main": {
       "Charm": 2,
       "Defy": 3,
@@ -51839,7 +54159,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Houston Regional Qualifier",
      "date": "2026-05-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/yasuo-unforgiven-houston-regional-qualifier-best-of-ghael-winds",
+     "source": "mobalytics",
      "main": {
       "Charm": 1,
       "Clockwork Keeper": 2,
@@ -51886,7 +54208,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9e878f0e-ed2e-46cf-a131-8f21eaac98e2",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Baron Nashor": 2,
@@ -51926,7 +54250,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/af3c0ba3-96a9-4b0a-b38e-b1304e721ab3",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 1,
       "Charm": 2,
@@ -51969,7 +54295,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2f0fbf81-0827-446e-bb8e-f4c41116eb96",
+     "source": "riftools",
      "main": {
       "Back Off": 1,
       "Baron Nashor": 2,
@@ -52012,7 +54340,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224818",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Charm": 1,
@@ -52066,7 +54396,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9d71345e-7d64-4684-bd1a-162c34b65492",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Boots of Swiftness": 2,
@@ -52102,7 +54434,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2ba50ae6-518b-4600-9b1f-e2484e2a4d8d",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Charm": 1,
@@ -52143,7 +54477,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224726",
+     "source": "riftools",
      "main": {
       "Baron Nashor": 3,
       "Defy": 2,
@@ -52190,7 +54526,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225102",
+     "source": "riftools",
      "main": {
       "Defy": 2,
       "Discipline": 3,
@@ -52235,7 +54573,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223070",
+     "source": "riftools",
      "main": {
       "Adaptatron": 1,
       "Defy": 3,
@@ -52293,7 +54633,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rumble-mechanized-menace-hartford-regional-qualifier-best-of-thelostankh",
+     "source": "mobalytics",
      "main": {
       "Bubble Bot": 3,
       "Dunebreaker": 3,
@@ -52331,7 +54673,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rumble-mechanized-menace-utrecht-regional-qualifier-best-of-tkbtkbtkbtkb",
+     "source": "mobalytics",
      "main": {
       "Blood Rush": 1,
       "Bubble Bot": 3,
@@ -52376,7 +54720,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rumble-mechanized-menace-vancouver-regional-qualifier-best-of-nack",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 1,
       "Blood Rush": 1,
@@ -52420,7 +54766,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rumble-mechanized-menace-sydney-regional-qualifier-best-of-catmeat",
+     "source": "mobalytics",
      "main": {
       "Bellows Breath": 1,
       "Blood Rush": 1,
@@ -52464,7 +54812,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Atlanta Regional Qualifier",
      "date": "2026-04-24",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rumble-mechanized-menace-atlanta-regional-qualifier-best-of-dreari",
+     "source": "mobalytics",
      "main": {
       "Breakneck Mech": 2,
       "Bubble Bot": 3,
@@ -52505,7 +54855,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Lille Regional Qualifier",
      "date": "2026-04-17",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/rumble-mechanized-menace-lille-regional-qualifier-best-of-redblar",
+     "source": "mobalytics",
      "main": {
       "Breakneck Mech": 3,
       "Bubble Bot": 3,
@@ -52549,7 +54901,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c835adfe-8e4e-4669-8c5d-0c7019e67300",
+     "source": "riftools",
      "main": {
       "Bubble Bot": 3,
       "Cleave": 2,
@@ -52588,7 +54942,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a9eb783d-e100-45e5-8003-014cc5abba6b",
+     "source": "riftools",
      "main": {
       "Blood Rush": 1,
       "Bubble Bot": 3,
@@ -52628,7 +54984,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0ae0bb1f-fb97-444f-9158-5226d09e52bc",
+     "source": "riftools",
      "main": {
       "Assembly Rig": 1,
       "Breakneck Mech": 1,
@@ -52675,7 +55033,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6cd757ef-c525-4a56-811b-5d292477eff2",
+     "source": "riftools",
      "main": {
       "Breakneck Mech": 2,
       "Bubble Bot": 3,
@@ -52715,7 +55075,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225185",
+     "source": "riftools",
      "main": {
       "Blood Rush": 1,
       "Breakneck Mech": 1,
@@ -52769,7 +55131,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Hartford Regional Qualifier",
      "date": "2026-06-19",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vi-piltover-enforcer-hartford-regional-qualifier-best-of-ghost-of-fyrat",
+     "source": "mobalytics",
      "main": {
       "Carrion Dredger": 3,
       "Cull the Weak": 3,
@@ -52815,7 +55179,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Utrecht Regional Qualifier",
      "date": "2026-06-12",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vi-piltover-enforcer-utrecht-regional-qualifier-best-of-utter-trash",
+     "source": "mobalytics",
      "main": {
       "Cleave": 2,
       "Deathgrip": 2,
@@ -52858,7 +55224,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Vancouver Regional Qualifier",
      "date": "2026-05-29",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vi-piltover-enforcer-vancouver-regional-qualifier-best-of-violetexe",
+     "source": "mobalytics",
      "main": {
       "Ashe, Focused": 1,
       "Cleave": 2,
@@ -52900,7 +55268,9 @@ window.FIELD = {
      "placement": "Best of",
      "event": "Sydney Regional Qualifier",
      "date": "2026-05-15",
+     "region": null,
      "url": "https://mobalytics.gg/riftbound/decks/vi-piltover-enforcer-sydney-regional-qualifier-best-of-sirieous",
+     "source": "mobalytics",
      "main": {
       "B.F. Sword": 3,
       "Deathgrip": 3,
@@ -52942,7 +55312,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/62211487-c722-4965-a39e-0235bb9f3c12",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 2,
       "B.F. Sword": 3,
@@ -52983,7 +55355,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1d723dc9-ac47-4ecf-9043-dedb4b736fd9",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "B.F. Sword": 3,
@@ -53026,7 +55400,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/61320e29-35cb-4b83-aa8e-f170951ee030",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 2,
       "B.F. Sword": 3,
@@ -53073,7 +55449,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-026-jacob-claxton-rek-sai-void-burrower",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53115,7 +55493,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-036-mockingbeat-rek-sai-void-burrower",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53161,7 +55541,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-078-zack-harper-rek-sai-void-burrower",
+     "source": "riftools",
      "main": {
       "Battering Ram": 3,
       "Carrion Dredger": 3,
@@ -53205,7 +55587,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-093-kyle-rek-sai-void-burrower",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53246,7 +55630,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-098-adam-pierce-rek-sai-void-burrower",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53289,7 +55675,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-115-sirelusive-rek-sai-void-burrower",
+     "source": "riftools",
      "main": {
       "Blood Rush": 2,
       "Carrion Dredger": 3,
@@ -53332,7 +55720,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223628",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53372,7 +55762,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0369ca46-19b9-4a43-9c85-becf76addbe5",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53410,7 +55802,9 @@ window.FIELD = {
      "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/09689bdb-b2be-4a76-a285-6bd93f46f8b8",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53447,7 +55841,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1e3a5cf5-48fd-4193-ac6b-24167e945a59",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53485,7 +55881,9 @@ window.FIELD = {
      "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224614",
+     "source": "riftools",
      "main": {
       "B.F. Sword": 1,
       "Baited Hook": 1,
@@ -53530,7 +55928,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/76db8978-ce50-44fa-800d-ac222b4c06ee",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53566,7 +55966,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9cc72625-14a5-4e43-b30f-d7a0661550ac",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53603,7 +56005,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224660",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53646,7 +56050,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224803",
+     "source": "riftools",
      "main": {
       "Battering Ram": 2,
       "Brynhir Thundersong": 1,
@@ -53687,7 +56093,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c56d0f59-b3c1-4c6e-83a5-1fba8613368f",
+     "source": "riftools",
      "main": {
       "Blood Rush": 2,
       "Carrion Dredger": 2,
@@ -53728,7 +56136,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224893",
+     "source": "riftools",
      "main": {
       "Blood Rush": 1,
       "Carrion Dredger": 3,
@@ -53775,7 +56185,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223672",
+     "source": "riftools",
      "main": {
       "Battering Ram": 2,
       "Brynhir Thundersong": 1,
@@ -53821,7 +56233,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225387",
+     "source": "riftools",
      "main": {
       "Battering Ram": 3,
       "Carrion Dredger": 3,
@@ -53864,7 +56278,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225149",
+     "source": "riftools",
      "main": {
       "Battering Ram": 3,
       "Carrion Dredger": 3,
@@ -53907,7 +56323,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224516",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53950,7 +56368,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224162",
+     "source": "riftools",
      "main": {
       "Blood Rush": 3,
       "Carrion Dredger": 3,
@@ -53992,7 +56412,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224530",
+     "source": "riftools",
      "main": {
       "Battering Ram": 3,
       "Carrion Dredger": 3,
@@ -54038,7 +56460,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225050",
+     "source": "riftools",
      "main": {
       "Ashe, Focused": 1,
       "Cleave": 2,
@@ -54081,7 +56505,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223555",
+     "source": "riftools",
      "main": {
       "Blood Rush": 2,
       "Carrion Dredger": 2,
@@ -54125,7 +56551,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/222517",
+     "source": "riftools",
      "main": {
       "Battering Ram": 3,
       "Carrion Dredger": 3,
@@ -54173,7 +56601,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-041-quanbao-nguyen-kha-zix-voidreaver",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Fizz, Trickster": 3,
@@ -54218,7 +56648,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
+     "region": "NA",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-047-steadman-demarco-kha-zix-voidreaver",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Challenge": 1,
@@ -54263,7 +56695,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
+     "region": "Other",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-075-sebastian-stone-kha-zix-voidreaver",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 1,
       "Demacian Diplomat": 2,
@@ -54310,7 +56744,9 @@ window.FIELD = {
      "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f91c2443-980b-4360-8688-1b1a3c742660",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Fizz, Trickster": 3,
@@ -54349,7 +56785,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225251",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Challenge": 1,
@@ -54400,7 +56838,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224649",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Boots of Swiftness": 2,
@@ -54445,7 +56885,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225423",
+     "source": "riftools",
      "main": {
       "Boots of Swiftness": 2,
       "Challenge": 1,
@@ -54494,7 +56936,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7e898e0c-c8e5-4366-9d01-c0c629862381",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Demacian Diplomat": 2,
@@ -54535,7 +56979,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0f95182d-c25a-4d61-8313-fad6fe88a65e",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Fizz, Trickster": 3,
@@ -54575,7 +57021,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
+     "region": "EU",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/de79b859-ea77-4806-8cf9-246edc33e763",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 2,
       "Boots of Swiftness": 1,
@@ -54618,7 +57066,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/224754",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Boneshiver": 2,
@@ -54671,7 +57121,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223694",
+     "source": "riftools",
      "main": {
       "Blast Cone": 1,
       "Demacian Diplomat": 2,
@@ -54717,7 +57169,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223317",
+     "source": "riftools",
      "main": {
       "Akshan, Mischievous": 1,
       "Demacian Diplomat": 2,
@@ -54768,7 +57222,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/223268",
+     "source": "riftools",
      "main": {
       "Abandon": 1,
       "Akshan, Mischievous": 1,
@@ -54819,7 +57275,9 @@ window.FIELD = {
      "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
+     "region": "CN",
      "url": "wechat://riftbound-china/cardGroup/225355",
+     "source": "riftools",
      "main": {
       "Challenge": 1,
       "Edge of Night": 1,

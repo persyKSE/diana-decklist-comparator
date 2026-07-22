@@ -531,11 +531,11 @@
 <div id="toast"></div>
 <datalist id="cardNames"></datalist>
 
-<script src="decks.js"></script>
-<script src="meta.js"></script>
-<script src="cards.js"></script>
-<script src="field.js"></script>
-<script src="riftools.js"></script>
+<script src="decks.js" defer></script>
+<script src="meta.js" defer></script>
+<script src="cards.js" defer></script>
+<script src="field.js" defer></script>
+<script src="riftools.js" defer></script>
 <script>
 let allDecks = [];      // full set (tagged with _region / _cluster / _clusterName)
 let globalDecks = [];   // active (filtered) set — every view reads this
@@ -659,7 +659,7 @@ function loadLegendDecks() {
   const entry = (window.DECKS && window.DECKS[selectedLegend]) || { decks: [] };
   allDecks = entry.decks || [];
   ladderDecks = allDecks.filter(d => d.placement === 'Ladder');
-  ladderDecks.forEach(d => { d._region = regionOf(d.event); d._cluster = -1; d._clusterName = 'Ladder'; });
+  ladderDecks.forEach(d => { d._region = regionOf(d); d._cluster = -1; d._clusterName = 'Ladder'; });
   allDecks = allDecks.filter(d => d.placement !== 'Ladder');
   // The "not seen in any winning list" coach warning is meant to be scoped to
   // the selected legend, so nameLookup/nonMainNames are rebuilt from scratch
@@ -939,7 +939,12 @@ function cardImg(name, cls) {
       ? '<img class="' + c + '" data-card="' + attr(name) + '" src="' + attr(img) + '" alt="">'
       : '<div class="noimg" data-card="' + attr(name) + '"></div>';
 }
-function deckRef(i, text) { return '<span class="deck-link" data-deck="' + i + '">' + escHtml(text) + '</span>'; }
+const SOURCE_BADGE = { riftools: 'riftools', user: 'community' };
+function deckRef(i, text) {
+  const src = globalDecks[i] && globalDecks[i].source;
+  const badge = SOURCE_BADGE[src] ? '<span class="dist-badge" style="margin-left:4px">' + SOURCE_BADGE[src] + '</span>' : '';
+  return '<span class="deck-link" data-deck="' + i + '">' + escHtml(text) + '</span>' + badge;
+}
 
 function setDiff() {
   diffA = parseInt(document.getElementById('diffA').value, 10);
@@ -1845,7 +1850,15 @@ function runeMathHTML() {
 }
 
 /* ---------------- Filtering ---------------- */
-function regionOf(event) {
+// Takes a deck object (or, for back-compat, a bare event-name string).
+// riftools decks carry a real region straight from their own data (see
+// fetch_riftools.py's map_region) — use it directly rather than guessing.
+// Mobalytics decks have no such field, so they fall through to the
+// name-regex guess this always used.
+function regionOf(d) {
+  const deck = (d && typeof d === 'object') ? d : null;
+  if (deck && deck.region) return deck.region;
+  const event = deck ? deck.event : d;
   const e = (event || '').toLowerCase();
   if (/vancouver|hartford|atlanta|dallas|chicago|toronto|montreal|seattle|boston|vegas|houston/.test(e)) return 'NA';
   if (/utrecht|london|paris|berlin|madrid|milan|lyon|amsterdam|lille|bologna/.test(e)) return 'EU';
@@ -1856,7 +1869,7 @@ function regionOf(event) {
 
 function computeFullClusters() {
   const N = allDecks.length;
-  allDecks.forEach(d => { d._region = regionOf(d.event); });
+  allDecks.forEach(d => { d._region = regionOf(d); });
   if (N < 2) { allDecks.forEach(d => { d._cluster = 0; d._clusterName = 'All'; }); clusterOptions = []; return; }
   const dist = distanceMatrix(allDecks);
   const groups = cutClusters(buildDendrogram(dist));
@@ -2533,7 +2546,7 @@ function fieldDeckWeight(d) {
   // results evidence: they enrich archetype profiles (archProfile reads every
   // list) but carry zero weight in field share and threat.
   if (d.placement === 'Best of') return 0;
-  if (fieldModel.region && regionOf(d.event) !== fieldModel.region) return 0;
+  if (fieldModel.region && regionOf(d) !== fieldModel.region) return 0;
   if (!fieldModel.recency) return 1;
   // Undated lists can't prove they're recent; treat them as very old.
   const age = d.date ? Math.max(0, (fieldLatestDate() - new Date(d.date).getTime()) / 86400000) : 120;
@@ -2901,13 +2914,17 @@ function coverageHTML() {
     // suggestions to the losing axis, so the advice stops defaulting to removal.
     const plansRows = rows.slice(0, 10);
     if (plansRows.length) {
+      const rtWinrates = window.RIFTOOLS && RIFTOOLS.winrates && RIFTOOLS.winrates[selectedLegend];
       html += '<h2>Matchup plans</h2>';
-      html += '<p class="sub">Killing their cards is one way to win a matchup; being faster, out-drawing them, or out-Mighting them in combat are three more, and none of them show up in a coverage number. Per archetype: <strong>Clock</strong> compares copy-weighted average cost (lower = faster), <strong>Combat</strong> is the chance a random unit of yours out-Mights a random unit of theirs — units answer units, and that removal is free — and <strong>Gas</strong> counts card-economy copies (draw, selection, recursion). The <strong>Plan</strong> names the axis most likely to decide the pairing, and the chips board for <em>that</em> axis.</p>';
+      html += '<p class="sub">Killing their cards is one way to win a matchup; being faster, out-drawing them, or out-Mighting them in combat are three more, and none of them show up in a coverage number. Per archetype: <strong>Clock</strong> compares copy-weighted average cost (lower = faster), <strong>Combat</strong> is the chance a random unit of yours out-Mights a random unit of theirs — units answer units, and that removal is free — and <strong>Gas</strong> counts card-economy copies (draw, selection, recursion). The <strong>Plan</strong> names the axis most likely to decide the pairing, and the chips board for <em>that</em> axis.' +
+        (rtWinrates ? ' <strong>Real WR</strong> is riftools.app\'s actual match win rate for the same matchup — a reality check on whether the modeled axes line up with what actually happens, not something the plan is derived from.' : '') + '</p>';
       html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Archetype</th>' +
         '<th title="Copy-weighted average cost, yours vs theirs. Lower is faster.">Clock</th>' +
         '<th title="P(random unit of yours > random unit of theirs in Might) / P(theirs > yours). Ties excluded.">Combat</th>' +
         '<th class="num" title="Card-economy copies per list: draw N counts N; loot, selection and recursion count ½ each.">Gas</th>' +
-        '<th>Plan</th><th>Board for it</th></tr></thead><tbody>';
+        '<th>Plan</th><th>Board for it</th>' +
+        (rtWinrates ? '<th class="num" title="Real match win rate from riftools.app\'s aggregated match records — not modeled, not used to derive the Plan column">Real WR</th>' : '') +
+        '</tr></thead><tbody>';
       plansRows.forEach(r => {
         const a = FIELD.archetypes[r.slug];
         const combat = combatParity(you, r.p);
@@ -2935,7 +2952,13 @@ function coverageHTML() {
           '<td class="num" title="' + attr('You ' + gasYou.toFixed(1) + ' vs their ' + gasThem.toFixed(1)) + '" style="color:' + (gasD >= 1.5 ? 'var(--lock)' : gasD <= -1.5 ? 'var(--danger)' : 'var(--muted)') + '">' +
           (gasD >= 0 ? '+' : '') + gasD.toFixed(1) + '</td>' +
           '<td title="' + attr(plan.why) + '"><strong>' + plan.label + '</strong></td>' +
-          '<td>' + suggHtml + '</td></tr>';
+          '<td>' + suggHtml + '</td>' +
+          (rtWinrates ? (() => {
+            const rt = rtWinrates[r.slug];
+            return '<td class="num"' + (rt ? ' style="color:' + (rt.matchWinrate >= 50 ? 'var(--lock)' : 'var(--danger)') + '"' : '') + '>' +
+              (rt ? rt.matchWinrate.toFixed(0) + '%' : '—') + '</td>';
+          })() : '') +
+          '</tr>';
       });
       html += '</tbody></table></div>';
       html += '<p class="sub">Hover a plan for its reasoning. The thresholds (±0.3 cost for the clock, ±1.5 cards for gas) are disclosed judgment calls, not fitted parameters — no result data exists to fit them to.</p>';
@@ -4222,14 +4245,19 @@ function renderLog() {
     };
   }).sort((a, b) => (a.threat && b.threat) ? a.threat.rank - b.threat.rank : b.n - a.n);
 
+  const rtWinrates = window.RIFTOOLS && RIFTOOLS.winrates && RIFTOOLS.winrates[selectedLegend];
   html += '<h2>By matchup</h2><p class="sub">Ordered by the archetype\'s threat rank in the expected field, so the top rows are the matchups that matter most. "Drill this" = losing record against a top-8 threat with 4+ games — the highest-value practice you can schedule.' +
-    (haveSetData ? ' Games logged through the Bo3 set form split into <strong>Pre-board</strong> (game 1) and <strong>Post-board</strong> (games 2-3) — the empirical check on whether your actual sideboarding is working, not just the coverage heuristic\'s.' : '') + '</p>';
+    (haveSetData ? ' Games logged through the Bo3 set form split into <strong>Pre-board</strong> (game 1) and <strong>Post-board</strong> (games 2-3) — the empirical check on whether your actual sideboarding is working, not just the coverage heuristic\'s.' : '') +
+    (rtWinrates ? ' <strong>Field WR</strong> is riftools.app\'s real match win rate for this matchup, across everyone — a benchmark for your own small sample, not a target it has to match.' : '') + '</p>';
   html += '<div class="panel-wrap"><table class="incl"><thead><tr><th>Opponent</th><th class="num">Threat #</th><th class="num">Games</th><th>Record</th>' +
     (haveSetData ? '<th class="num" title="Record in games logged as game 1 of a Bo3 set">Pre-board</th><th class="num" title="Record in games logged as game 2 or 3 of a Bo3 set">Post-board</th>' : '') +
-    '<th class="num">On play</th><th class="num">On draw</th><th></th></tr></thead><tbody>';
+    '<th class="num">On play</th><th class="num">On draw</th>' +
+    (rtWinrates ? '<th class="num" title="Real match win rate from riftools.app\'s aggregated match records">Field WR</th>' : '') +
+    '<th></th></tr></thead><tbody>';
   rows.forEach(r => {
     const drill = r.threat && r.threat.rank <= 8 && r.n >= 4 && r.wr < 0.5;
     const strong = r.n >= 4 && r.ci[0] > 50;
+    const rt = rtWinrates && rtWinrates[r.slug];
     html += '<tr><td>' + (haveField && FIELD.archetypes[r.slug]
         ? '<span class="deck-link" onclick="openArch(\'' + r.slug + '\')">' + escHtml(archName(r.slug)) + '</span>' : escHtml(r.slug)) + '</td>' +
       '<td class="num">' + (r.threat ? '#' + r.threat.rank : '—') + '</td>' +
@@ -4238,6 +4266,7 @@ function renderLog() {
       r.w + '–' + (r.n - r.w) + '<span class="ci">' + r.ci[0].toFixed(0) + '–' + r.ci[1].toFixed(0) + '%</span></td>' +
       (haveSetData ? '<td class="num">' + r.preStr + '</td><td class="num">' + r.postStr + '</td>' : '') +
       '<td class="num">' + r.playStr + '</td><td class="num">' + r.drawStr + '</td>' +
+      (rtWinrates ? '<td class="num">' + (rt ? rt.matchWinrate.toFixed(0) + '%' : '—') + '</td>' : '') +
       '<td>' + (drill ? '<span class="dist-badge" style="color:var(--danger)">drill this</span>'
               : strong ? '<span class="dist-badge" style="color:var(--lock)">solid</span>' : '') + '</td></tr>';
   });
@@ -4308,7 +4337,7 @@ function renderMeta() {
 }
 
 function renderFieldModelBar() {
-  const regions = [...new Set(Object.values(FIELD.archetypes).flatMap(a => a.decks.map(d => regionOf(d.event))))]
+  const regions = [...new Set(Object.values(FIELD.archetypes).flatMap(a => a.decks.map(d => regionOf(d))))]
     .filter(r => r !== 'Other').sort();
   const chip = (on, label, fn, title) => '<span class="chip' + (on ? ' on' : '') + '" onclick="' + fn + '" title="' + attr(title || '') + '">' + escHtml(label) + '</span>';
   let html = '<div class="filterbar"><div class="fgroup"><span class="flabel">Prep for</span>' +
@@ -4649,8 +4678,9 @@ function renderDecks(ctx) {
   let html = '<h2>Source decks (' + ctx.N + ')</h2><p class="sub">Every tournament list in the filtered set. Click a deck to open its full decklist.</p>';
   globalDecks.forEach((d, i) => {
     const cardTotal = d.cards.reduce((a, c) => a + c.count, 0);
+    const srcBadge = SOURCE_BADGE[d.source] ? ' · <span class="dist-badge">' + SOURCE_BADGE[d.source] + '</span>' : '';
     html += '<div class="deck-tile" data-deck="' + i + '"><div class="dt-main"><div class="dt-title"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.label) + '</div>' +
-      '<div class="dt-sub">' + escHtml(d.event || '') + (d._region ? ' · ' + d._region : '') + (d.event_date ? ' · ' + d.event_date : '') + ' · ' + (d._clusterName || '') + ' · ' + cardTotal + ' cards</div></div><div class="dt-open">›</div></div>';
+      '<div class="dt-sub">' + escHtml(d.event || '') + (d._region ? ' · ' + d._region : '') + (d.event_date ? ' · ' + d.event_date : '') + ' · ' + (d._clusterName || '') + ' · ' + cardTotal + ' cards' + srcBadge + '</div></div><div class="dt-open">›</div></div>';
   });
   return html;
 }
@@ -4783,7 +4813,7 @@ function openDeckModal(i) {
   showModal(
     '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
       '<div class="modal-sub"><span class="badge">' + attr(d.placement || '') + '</span> ' + escHtml(d.event || '') + ' · weight ' + (d.weight || 1) + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') +
-      (priceTag(d.cards) ? ' · ' + priceTag(d.cards) : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
+      (priceTag(d.cards) ? ' · ' + priceTag(d.cards) : '') + (SOURCE_BADGE[d.source] ? ' · <span class="dist-badge">' + SOURCE_BADGE[d.source] + '</span>' : '') + '</div></div><button class="icon-btn" onclick="closeModal()">✕</button></div>' +
     '<div class="modal-actions"><button onclick="copyDeck(' + i + ')">Copy list</button><button onclick="exportDeckImageFor(' + i + ')">Export PNG</button>' +
       (d.source === 'user' ? '<button class="ghost" style="color:var(--danger)" onclick="reportSubmission(' + (d.id != null ? d.id : 'null') + ')" title="Flag this community submission as bad, spam, or illegal">Report</button>' : '') +
       '<span class="cmp">Compare with <select id="modalCmp" onchange="modalDiff(' + i + ')"><option value="">—</option>' + opts + '</select></span></div>' +
@@ -4800,7 +4830,8 @@ function openFieldDeckModal(slug, j) {
   showModal(
     '<div class="modal-head"><div><div class="modal-title">' + escHtml(d.label) + '</div>' +
       '<div class="modal-sub"><span class="badge">' + attr(d.placement || '—') + '</span> ' + escHtml(FIELD.archetypes[slug].name) + ' · ' +
-      escHtml(d.event || '') + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') + '</div></div>' +
+      escHtml(d.event || '') + ' · ' + total + ' cards' + (d.event_date ? ' · ' + d.event_date : '') +
+      (SOURCE_BADGE[d.source] ? ' · <span class="dist-badge">' + SOURCE_BADGE[d.source] + '</span>' : '') + '</div></div>' +
       '<button class="icon-btn" onclick="closeModal()">✕</button></div>' +
     '<div class="modal-actions"><button onclick="copyFieldDeck(\'' + slug + '\',' + j + ')">Copy list</button>' +
       (opts ? '<span class="cmp">Compare with <select id="modalCmp" onchange="fieldModalDiff(\'' + slug + '\',' + j + ')"><option value="">—</option>' + opts + '</select></span>' : '') +
@@ -5377,7 +5408,7 @@ function tagCommunityDeck(d) {
   if (!d || !Array.isArray(d.cards) || !d.cards.length) return null;
   d.source = 'user';
   d.weight = 1.0;
-  d._region = regionOf(d.event);
+  d._region = regionOf(d);
   d._cluster = -1;                 // never joins the tournament clustering
   d._clusterName = 'Community';
   return d;
@@ -5503,7 +5534,14 @@ if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
     });
   }).catch(() => {}));
 }
-load();
+// decks.js/meta.js/cards.js/field.js/riftools.js are loaded with `defer` so
+// the browser can download them in parallel (field.js alone is ~1.7MB) —
+// defer guarantees they execute, in order, before DOMContentLoaded, so
+// window.DECKS/META/CARDS/FIELD/RIFTOOLS are all set by the time load() runs.
+// This inline script itself is never deferred (defer has no effect without a
+// src attribute), so load() must wait for the event explicitly rather than
+// just running at the bottom of the script.
+document.addEventListener('DOMContentLoaded', load);
 </script>
 </body>
 </html>

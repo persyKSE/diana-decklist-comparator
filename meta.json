@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-22T13:23:42+00:00",
+ "generated": "2026-07-22T14:07:51+00:00",
  "latestEvent": "2026-07-19",
  "otherDecks": {
   "diana-scorn-of-the-moon": 944,
@@ -328,7 +328,8 @@
     "viktor-herald-of-the-arcane": 20,
     "volibear-relentless-storm": 10,
     "yasuo-unforgiven": 4
-   }
+   },
+   "attendance": 2032
   },
   {
    "name": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
@@ -373,7 +374,8 @@
     "viktor-herald-of-the-arcane": 8,
     "volibear-relentless-storm": 4,
     "yasuo-unforgiven": 5
-   }
+   },
+   "attendance": 256
   },
   {
    "name": "CCS Sunday $5,000 Riftbound Event #4",
@@ -398,7 +400,8 @@
     "vex-gloomist": 2,
     "viktor-herald-of-the-arcane": 1,
     "volibear-relentless-storm": 1
-   }
+   },
+   "attendance": 82
   },
   {
    "name": "RiftAtlas Convergence #1",
@@ -432,7 +435,8 @@
     "vex-gloomist": 6,
     "viktor-herald-of-the-arcane": 4,
     "volibear-relentless-storm": 2
-   }
+   },
+   "attendance": 128
   }
  ],
  "cardBase": {
