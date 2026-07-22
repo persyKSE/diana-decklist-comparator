@@ -1,5 +1,5 @@
 window.META = {
- "generated": "2026-07-22T08:28:40+00:00",
+ "generated": "2026-07-22T13:23:42+00:00",
  "latestEvent": "2026-07-19",
  "otherDecks": {
   "diana-scorn-of-the-moon": 944,
@@ -463,8 +463,7 @@ window.META = {
    "Hard Bargain": 130,
    "Hwei, Brooding Painter": 26,
    "Invert Timelines": 32,
-   "Kha'Zix, Mutating Horror": 80,
-   "Kha\\'Zix, Mutating Horror": 12,
+   "Kha'Zix, Mutating Horror": 92,
    "Last Rites": 79,
    "Maddened Marauder": 1,
    "Mindsplitter": 79,
@@ -506,7 +505,7 @@ window.META = {
    "Boots of Swiftness": 50,
    "Charm": 327,
    "Defy": 396,
-   "Desert's Call": 26,
+   "Desert's Call": 31,
    "Disarming Rake": 29,
    "Discipline": 392,
    "Downwell": 5,
@@ -524,8 +523,7 @@ window.META = {
    "Heart of Dark Ice": 46,
    "Insightful Investigator": 1,
    "Irelia, Fervent": 66,
-   "Kha'Zix, Mutating Horror": 73,
-   "Kha\\'Zix, Mutating Horror": 20,
+   "Kha'Zix, Mutating Horror": 93,
    "Lonely Poro": 229,
    "Mindsplitter": 80,
    "Navori Scout": 2,
@@ -553,8 +551,7 @@ window.META = {
    "Whiteflame Protector": 44,
    "Wind Wall": 6,
    "Yasuo, Windrider": 6,
-   "Zhonya's Hourglass": 214,
-   "Zhonya\\'s Hourglass": 26
+   "Zhonya's Hourglass": 240
   }
  },
  "performance": {

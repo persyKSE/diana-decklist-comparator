@@ -202,12 +202,21 @@ def fetch_deck_details_index():
     return data.get("details", {})
 
 
+def clean_card_name(name):
+    """riftools' own data has a stray backslash before the apostrophe in every
+    possessive card name ("Zhonya\\'s Hourglass", "Kha\\'Zix, Mutating Horror")
+    — a data-quality bug on their end, not a legitimate part of the name.
+    Left alone, it splits a card's inclusion stats across two "different"
+    names (confirmed: 20 distinct names affected, all riftools-sourced)."""
+    return name.replace("\\'", "'") if name else name
+
+
 def parse_deck_detail(detail):
     """riftools' flat cards[] (each tagged Spell/Unit/Gear/Runes/Sideboard/
     Battlefield) -> our sections dict of {name: count}."""
     sections = {"main": {}, "rune": {}, "battlefield": {}, "side": {}}
     for c in detail.get("cards", []):
-        name = c.get("card_name")
+        name = clean_card_name(c.get("card_name"))
         count = c.get("count") or 0
         # The champion/legend card rides in this same flat array (card_type
         # "Legend") — it's a fixed always-present binder slot, not part of

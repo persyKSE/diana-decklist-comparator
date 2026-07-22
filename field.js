@@ -668,7 +668,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -687,7 +687,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 2,
@@ -716,7 +716,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -752,7 +752,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Baron Nashor": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Rebuke": 1,
       "Sprite Fountain": 1,
       "Turn to Dust": 2,
@@ -765,7 +765,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -808,7 +808,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -853,7 +853,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -871,7 +871,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 2,
@@ -898,7 +898,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -917,7 +917,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 2,
@@ -943,7 +943,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -980,7 +980,7 @@ window.FIELD = {
       "Abandon": 1,
       "Downwell": 1,
       "Invert Timelines": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Sprite Burst": 1,
       "Turn to Dust": 2
      },
@@ -991,7 +991,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1037,7 +1037,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1055,7 +1055,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 2,
       "Plundering Poro": 1,
       "Ravenbloom Student": 3,
@@ -1084,7 +1084,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Abandoned Hall",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -1103,7 +1103,7 @@ window.FIELD = {
       "Gust": 1,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Rebuke": 1,
@@ -1131,7 +1131,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1167,7 +1167,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Baron Nashor": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Rebuke": 1,
       "Sprite Fountain": 1,
       "Traveling Merchant": 1,
@@ -1180,7 +1180,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Ravenbloom Conservatory",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1224,7 +1224,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1267,7 +1267,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Abandoned Hall",
-      "Targon\\'s Peak",
+      "Targon's Peak",
       "The Candlelit Sanctum"
      ]
     },
@@ -1287,7 +1287,7 @@ window.FIELD = {
       "Gust": 3,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 2,
       "Ravenbloom Student": 3,
       "Ride the Wind": 3,
@@ -1301,7 +1301,7 @@ window.FIELD = {
      },
      "side": {
       "Baron Nashor": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 1,
       "Singularity": 2,
       "Star-Crossed": 1,
@@ -1314,7 +1314,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Ravenbloom Conservatory",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1332,7 +1332,7 @@ window.FIELD = {
       "Gust": 3,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 2,
@@ -1361,7 +1361,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1380,7 +1380,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Moonfall": 2,
       "Ravenbloom Student": 3,
       "Ride the Wind": 3,
@@ -1407,7 +1407,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -1425,7 +1425,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 2,
@@ -1452,7 +1452,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1470,7 +1470,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 2,
@@ -1497,7 +1497,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1540,7 +1540,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1558,7 +1558,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 2,
@@ -1585,7 +1585,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1619,7 +1619,7 @@ window.FIELD = {
       "Acceptable Losses": 1,
       "Baron Nashor": 2,
       "Gust": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Star-Crossed": 1,
       "Turn to Dust": 2
      },
@@ -1630,7 +1630,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1673,7 +1673,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1718,7 +1718,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Ravenbloom Conservatory",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1751,7 +1751,7 @@ window.FIELD = {
      },
      "side": {
       "Gust": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 1,
       "Singularity": 1,
       "Star-Crossed": 1,
@@ -1765,7 +1765,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1811,7 +1811,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Ravenbloom Conservatory",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1829,7 +1829,7 @@ window.FIELD = {
       "Gust": 2,
       "Hard Bargain": 2,
       "Hwei, Brooding Painter": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Moonfall": 3,
       "Ravenbloom Student": 3,
       "Ride the Wind": 3,
@@ -1854,7 +1854,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -1899,7 +1899,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Ravenbloom Conservatory",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -5039,9 +5039,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5081,9 +5081,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5111,7 +5111,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 3,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 1
+      "Zhonya's Hourglass": 1
      },
      "side": {
       "Alpha Strike": 1,
@@ -5126,9 +5126,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5153,7 +5153,7 @@ window.FIELD = {
       "Scuttle Crab": 3,
       "Tasty Faefolk": 3,
       "Vilemaw": 3,
-      "Zhonya\\'s Hourglass": 3
+      "Zhonya's Hourglass": 3
      },
      "side": {
       "Akshan, Mischievous": 3,
@@ -5167,7 +5167,7 @@ window.FIELD = {
      "battlefields": [
       "Star Spring",
       "Startipped Peak",
-      "Vilemaw\\'s Lair"
+      "Vilemaw's Lair"
      ]
     },
     {
@@ -5197,7 +5197,7 @@ window.FIELD = {
       "Scuttle Crab": 3,
       "Trinity Force": 2,
       "Wind Wall": 1,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 1,
@@ -5215,7 +5215,7 @@ window.FIELD = {
      "battlefields": [
       "Star Spring",
       "Startipped Peak",
-      "Vilemaw\\'s Lair"
+      "Vilemaw's Lair"
      ]
     },
     {
@@ -5241,7 +5241,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 1,
@@ -5257,7 +5257,7 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
       "Star Spring"
      ]
@@ -5286,7 +5286,7 @@ window.FIELD = {
       "Sabotage": 3,
       "Scuttle Crab": 3,
       "Skyward Strike": 1,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 1,
@@ -5300,9 +5300,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5342,9 +5342,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5371,7 +5371,7 @@ window.FIELD = {
       "Sabotage": 2,
       "Scuttle Crab": 3,
       "Stellacorn Herder": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 1,
@@ -5385,7 +5385,7 @@ window.FIELD = {
       "Calm Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Grove of the God-Willow",
       "Star Spring"
      ]
@@ -5429,9 +5429,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5458,7 +5458,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 3,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 2,
@@ -5472,9 +5472,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5515,9 +5515,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5545,7 +5545,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 3
+      "Zhonya's Hourglass": 3
      },
      "side": {
       "Challenge": 1,
@@ -5560,9 +5560,9 @@ window.FIELD = {
       "Calm Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5589,7 +5589,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 3,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 2,
@@ -5603,9 +5603,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5632,7 +5632,7 @@ window.FIELD = {
       "Sabotage": 2,
       "Scuttle Crab": 3,
       "Trinity Force": 2,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 2,
@@ -5646,9 +5646,9 @@ window.FIELD = {
       "Calm Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5677,7 +5677,7 @@ window.FIELD = {
       "Sabotage": 3,
       "Scuttle Crab": 2,
       "Trinity Force": 1,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 1,
@@ -5692,7 +5692,7 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
       "Star Spring"
      ]
@@ -5709,7 +5709,7 @@ window.FIELD = {
       "Catalyst of Aeons": 3,
       "Dazzling Aurora": 3,
       "Defy": 3,
-      "Desert\\'s Call": 3,
+      "Desert's Call": 3,
       "Discipline": 3,
       "Elder Dragon": 3,
       "En Garde": 3,
@@ -5718,7 +5718,7 @@ window.FIELD = {
       "Mobilize": 3,
       "Ornn, Blacksmith": 3,
       "Rengar, Trophy Hunter": 3,
-      "Zhonya\\'s Hourglass": 3
+      "Zhonya's Hourglass": 3
      },
      "side": {
       "Akshan, Mischievous": 3,
@@ -5773,9 +5773,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5803,7 +5803,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 3
+      "Zhonya's Hourglass": 3
      },
      "side": {
       "Challenge": 1,
@@ -5818,9 +5818,9 @@ window.FIELD = {
       "Calm Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5847,7 +5847,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 3,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 1,
@@ -5861,9 +5861,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5891,7 +5891,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Challenge": 1,
@@ -5906,7 +5906,7 @@ window.FIELD = {
       "Calm Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
       "Star Spring"
      ]
@@ -5935,7 +5935,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 3,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 2,
@@ -5949,9 +5949,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -5977,7 +5977,7 @@ window.FIELD = {
       "Sabotage": 2,
       "Scuttle Crab": 3,
       "Trinity Force": 2,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 2,
@@ -5991,9 +5991,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6020,7 +6020,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 3,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 2,
@@ -6034,9 +6034,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6077,9 +6077,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6121,9 +6121,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6150,7 +6150,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 3,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 1,
@@ -6164,9 +6164,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6194,7 +6194,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 1,
@@ -6212,7 +6212,7 @@ window.FIELD = {
      "battlefields": [
       "Seat of Power",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6238,7 +6238,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 2,
@@ -6252,9 +6252,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6282,7 +6282,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 1,
@@ -6298,7 +6298,7 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Grove of the God-Willow",
       "Seat of Power"
      ]
@@ -6328,7 +6328,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 1,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Alpha Strike": 1,
@@ -6341,7 +6341,7 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
       "Star Spring"
      ]
@@ -6384,9 +6384,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6412,7 +6412,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Scuttle Crab": 3,
       "Stalwart Poro": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Adaptatron": 2,
@@ -6425,9 +6425,9 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -6443,7 +6443,7 @@ window.FIELD = {
       "Charm": 2,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Blade": 1,
+      "Doran's Blade": 1,
       "En Garde": 3,
       "First Mate": 2,
       "Lonely Poro": 3,
@@ -6458,7 +6458,7 @@ window.FIELD = {
       "Ruin Runner": 2,
       "Sabotage": 2,
       "Scuttle Crab": 3,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Akshan, Mischievous": 2,
@@ -6474,7 +6474,7 @@ window.FIELD = {
       "Calm Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Fortified Position",
       "Star Spring"
      ]
@@ -12407,7 +12407,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Angler Beast": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Mindsplitter": 1,
       "Singularity": 1,
       "Sprite Fountain": 1,
@@ -12419,7 +12419,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12456,7 +12456,7 @@ window.FIELD = {
       "Angler Beast": 2,
       "Hard Bargain": 1,
       "Invert Timelines": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Sprite Fountain": 1,
       "Turn to Dust": 1
      },
@@ -12465,7 +12465,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12500,7 +12500,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Angler Beast": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Mindsplitter": 1,
       "Singularity": 1,
       "Sprite Fountain": 1,
@@ -12512,7 +12512,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12547,7 +12547,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Angler Beast": 2,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Mindsplitter": 1,
       "Sprite Fountain": 1,
       "Turn to Dust": 1
@@ -12557,7 +12557,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12593,7 +12593,7 @@ window.FIELD = {
       "Acceptable Losses": 1,
       "Angler Beast": 1,
       "Hard Bargain": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Mindsplitter": 1,
       "Singularity": 1,
       "Turn to Dust": 1,
@@ -12604,7 +12604,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12652,7 +12652,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12687,7 +12687,7 @@ window.FIELD = {
      "side": {
       "Angler Beast": 2,
       "Eclipse": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Mindsplitter": 1,
       "Sprite Fountain": 1,
       "Turn to Dust": 1
@@ -12697,7 +12697,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12732,7 +12732,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Angler Beast": 2,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Mindsplitter": 1,
       "Sprite Fountain": 1,
       "Turn to Dust": 1
@@ -12742,7 +12742,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12762,7 +12762,7 @@ window.FIELD = {
       "Fizz, Trickster": 3,
       "Frigid Touch": 1,
       "Gust": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Pack of Wonders": 2,
       "Ravenbloom Student": 3,
       "Singularity": 1,
@@ -12775,7 +12775,7 @@ window.FIELD = {
       "Wages of Pain": 3
      },
      "side": {
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Sneaky Deckhand": 3,
       "Thousand-Tailed Watcher": 1,
       "Turn to Dust": 1,
@@ -12786,7 +12786,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Rockfall Path",
       "Sigil of the Storm"
      ]
@@ -12821,7 +12821,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Angler Beast": 2,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Mindsplitter": 1,
       "Sprite Fountain": 1,
       "Turn to Dust": 1
@@ -12831,7 +12831,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12866,7 +12866,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Hard Bargain": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Sprite Fountain": 2,
       "Turn to Dust": 2
      },
@@ -12875,7 +12875,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -12910,7 +12910,7 @@ window.FIELD = {
      "side": {
       "Acceptable Losses": 1,
       "Angler Beast": 2,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Mindsplitter": 1,
       "Sprite Fountain": 1,
       "Turn to Dust": 1
@@ -12920,7 +12920,7 @@ window.FIELD = {
       "Mind Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sigil of the Storm"
      ]
@@ -14007,7 +14007,7 @@ window.FIELD = {
       "Retreat": 1,
       "Sacrifice": 3,
       "Seal of Insight": 3,
-      "Shadow\\'s Call": 3,
+      "Shadow's Call": 3,
       "Soaring Scout": 3,
       "Sprite Burst": 1,
       "Stupefy": 3,
@@ -14029,7 +14029,7 @@ window.FIELD = {
       "Order Rune": 4
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "The Papertree"
      ]
@@ -14052,7 +14052,7 @@ window.FIELD = {
       "Retreat": 1,
       "Sacrifice": 3,
       "Seal of Insight": 3,
-      "Shadow\\'s Call": 3,
+      "Shadow's Call": 3,
       "Soaring Scout": 3,
       "Sprite Burst": 1,
       "Stupefy": 3,
@@ -14074,7 +14074,7 @@ window.FIELD = {
       "Order Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "The Papertree"
      ]
@@ -15288,7 +15288,7 @@ window.FIELD = {
       "Rally the Troops": 3,
       "Safety Inspector": 1,
       "Seal of Unity": 2,
-      "Shadow\\'s Call": 3,
+      "Shadow's Call": 3,
       "Spectral Matron": 1,
       "Vanguard Captain": 3,
       "Vi, Peacekeeper": 2,
@@ -15308,9 +15308,9 @@ window.FIELD = {
       "Order Rune": 7
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -16388,7 +16388,7 @@ window.FIELD = {
       "Plundering Poro": 2,
       "Safety Inspector": 1,
       "Salvage": 1,
-      "Shadow\\'s Call": 2,
+      "Shadow's Call": 2,
       "Singularity": 1,
       "Sprite Burst": 2,
       "Sprite Fountain": 3,
@@ -16414,7 +16414,7 @@ window.FIELD = {
      "battlefields": [
       "Forbidding Waste",
       "Rockfall Path",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -16436,7 +16436,7 @@ window.FIELD = {
       "Honest Broker": 3,
       "Imperial Decree": 3,
       "Salvage": 1,
-      "Shadow\\'s Call": 2,
+      "Shadow's Call": 2,
       "Sprite Fountain": 2,
       "Stupefy": 3,
       "Thousand-Tailed Watcher": 2,
@@ -16460,7 +16460,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Forbidding Waste",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Trifarian War Camp"
      ]
     },
@@ -16484,7 +16484,7 @@ window.FIELD = {
       "Safety Inspector": 1,
       "Salvage": 1,
       "Seal of Unity": 1,
-      "Shadow\\'s Call": 1,
+      "Shadow's Call": 1,
       "Soul Harvest": 2,
       "Sprite Burst": 2,
       "Sprite Fountain": 3,
@@ -16508,7 +16508,7 @@ window.FIELD = {
      "battlefields": [
       "Frozen Fortress",
       "Rockfall Path",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -16529,7 +16529,7 @@ window.FIELD = {
       "Hidden Blade": 3,
       "Honest Broker": 3,
       "Imperial Decree": 3,
-      "Shadow\\'s Call": 2,
+      "Shadow's Call": 2,
       "Singularity": 1,
       "Sprite Fountain": 2,
       "Stupefy": 3,
@@ -16554,7 +16554,7 @@ window.FIELD = {
      "battlefields": [
       "Forbidding Waste",
       "Rockfall Path",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -16570,7 +16570,7 @@ window.FIELD = {
       "Facebreaker": 3,
       "Falling Comet": 3,
       "Hidden Blade": 3,
-      "Shadow\\'s Call": 3,
+      "Shadow's Call": 3,
       "Singularity": 3,
       "Sprite Burst": 3,
       "Sprite Fountain": 3,
@@ -16592,8 +16592,8 @@ window.FIELD = {
      },
      "battlefields": [
       "Startipped Peak",
-      "Targon\\'s Peak",
-      "Vilemaw\\'s Lair"
+      "Targon's Peak",
+      "Vilemaw's Lair"
      ]
     },
     {
@@ -18142,7 +18142,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18184,13 +18184,13 @@ window.FIELD = {
       "Deathgrip": 1,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 1,
       "Hidden Blade": 3,
       "Lonely Poro": 1,
-      "Shadow\\'s Call": 1,
+      "Shadow's Call": 1,
       "Soul Sword": 3,
       "Vi, Peacekeeper": 2
      },
@@ -18206,7 +18206,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Hall of Legends",
-      "Ornn\\'s Forge",
+      "Ornn's Forge",
       "Trifarian War Camp"
      ]
     },
@@ -18226,7 +18226,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18269,7 +18269,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18291,7 +18291,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Hall of Legends",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Trifarian War Camp"
      ]
     },
@@ -18311,7 +18311,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18333,7 +18333,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Hall of Legends",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Trifarian War Camp"
      ]
     },
@@ -18352,9 +18352,9 @@ window.FIELD = {
       "Brutalizer": 3,
       "Deathgrip": 3,
       "Defy": 3,
-      "Desert\\'s Call": 3,
+      "Desert's Call": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "Eye of the Herald": 3,
       "Guardian Angel": 1,
       "Guards!": 2,
@@ -18377,7 +18377,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Hall of Legends",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Trifarian War Camp"
      ]
     },
@@ -18397,7 +18397,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18439,7 +18439,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18480,15 +18480,15 @@ window.FIELD = {
       "Brutalizer": 3,
       "Deathgrip": 3,
       "Defy": 3,
-      "Desert\\'s Call": 1,
+      "Desert's Call": 1,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
-      "Emperor\\'s Divide": 2,
+      "Doran's Shield": 3,
+      "Emperor's Divide": 2,
       "Eye of the Herald": 3,
       "Guards!": 2,
       "Hidden Blade": 3,
       "Scuttle Crab": 1,
-      "Shadow\\'s Call": 1,
+      "Shadow's Call": 1,
       "Soul Sword": 3
      },
      "side": {
@@ -18504,7 +18504,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Hall of Legends",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Trifarian War Camp"
      ]
     },
@@ -18524,7 +18524,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18566,7 +18566,7 @@ window.FIELD = {
       "Deathgrip": 2,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -18606,7 +18606,7 @@ window.FIELD = {
       "Deathgrip": 3,
       "Defy": 3,
       "Discipline": 3,
-      "Doran\\'s Shield": 3,
+      "Doran's Shield": 3,
       "En Garde": 3,
       "Eye of the Herald": 3,
       "Guards!": 2,
@@ -19851,7 +19851,7 @@ window.FIELD = {
       "Falling Star": 3,
       "Fizz, Trickster": 2,
       "Gust": 1,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Mindsplitter": 2,
       "Noxus Hopeful": 2,
       "Piercing Light": 2,
@@ -19876,7 +19876,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Forbidding Waste",
-      "Ripper\\'s Bay",
+      "Ripper's Bay",
       "Star Spring"
      ]
     },
@@ -19942,7 +19942,7 @@ window.FIELD = {
       "Noxus Hopeful": 3,
       "Pack of Wonders": 3,
       "Pyke, Dockside Butcher": 1,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Stacked Deck": 3,
       "Star-Crossed": 2,
       "The List": 2,
@@ -19967,7 +19967,7 @@ window.FIELD = {
      "battlefields": [
       "Forbidding Waste",
       "Frozen Fortress",
-      "Ripper\\'s Bay"
+      "Ripper's Bay"
      ]
     },
     {
@@ -19989,7 +19989,7 @@ window.FIELD = {
       "Falling Star": 3,
       "Fizz, Trickster": 2,
       "Gust": 1,
-      "Kai\\'Sa, Survivor": 1,
+      "Kai'Sa, Survivor": 1,
       "Mindsplitter": 1,
       "Noxus Hopeful": 3,
       "Pack of Wonders": 2,
@@ -20017,7 +20017,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Forbidding Waste",
-      "Ripper\\'s Bay",
+      "Ripper's Bay",
       "Void Gate"
      ]
     },
@@ -20039,7 +20039,7 @@ window.FIELD = {
       "Noxus Hopeful": 3,
       "Pack of Wonders": 3,
       "Pyke, Dockside Butcher": 1,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Stacked Deck": 3,
       "Star-Crossed": 2,
       "The List": 2,
@@ -20061,7 +20061,7 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forbidding Waste",
       "Frozen Fortress"
      ]
@@ -20080,7 +20080,7 @@ window.FIELD = {
       "Falling Star": 3,
       "Ferrous Forerunner": 3,
       "Fizz, Trickster": 2,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Pyke, Dockside Butcher": 1,
       "Rengar, Pouncing": 2,
       "Stacked Deck": 3,
@@ -20095,7 +20095,7 @@ window.FIELD = {
      "side": {
       "Baron Nashor": 1,
       "Hard Bargain": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Mindsplitter": 2,
       "Star-Crossed": 1,
       "Thermo Beam": 2
@@ -20105,9 +20105,9 @@ window.FIELD = {
       "Fury Rune": 7
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forbidding Waste",
-      "Ripper\\'s Bay"
+      "Ripper's Bay"
      ]
     },
     {
@@ -21014,13 +21014,13 @@ window.FIELD = {
       "Cleave": 1,
       "Flash": 3,
       "Inferna": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Long Sword": 2,
       "Noxus Hopeful": 3,
       "Overzealous Fan": 3,
       "Rebuke": 1,
       "Rengar, Pouncing": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Stacked Deck": 3,
       "Star-Crossed": 2,
       "Switcheroo": 1,
@@ -21040,7 +21040,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Seat of Power",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -21059,10 +21059,10 @@ window.FIELD = {
       "Grim Apothecary": 1,
       "Hard Bargain": 1,
       "Inferna": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Long Sword": 3,
       "Noxus Hopeful": 3,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Rengar, Pouncing": 3,
       "Stacked Deck": 3,
       "Star-Crossed": 2,
@@ -21076,7 +21076,7 @@ window.FIELD = {
       "Against the Odds": 1,
       "Factory Recall": 1,
       "Falling Star": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Rebuke": 1,
       "Star-Crossed": 1,
       "Thermo Beam": 1
@@ -21087,7 +21087,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Seat of Power",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -21106,7 +21106,7 @@ window.FIELD = {
       "Grim Apothecary": 2,
       "Hard Bargain": 1,
       "Inferna": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Long Sword": 3,
       "Noxus Hopeful": 3,
       "Overzealous Fan": 2,
@@ -21122,7 +21122,7 @@ window.FIELD = {
       "Against the Odds": 1,
       "Factory Recall": 1,
       "Falling Star": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Rebuke": 1,
       "Star-Crossed": 1,
       "Thermo Beam": 1
@@ -21133,7 +21133,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Seat of Power",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -21152,7 +21152,7 @@ window.FIELD = {
       "Grim Apothecary": 2,
       "Hard Bargain": 1,
       "Inferna": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Long Sword": 3,
       "Noxus Hopeful": 3,
       "Overzealous Fan": 2,
@@ -21168,7 +21168,7 @@ window.FIELD = {
       "Against the Odds": 1,
       "Factory Recall": 1,
       "Falling Star": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Rebuke": 1,
       "Star-Crossed": 1,
       "Thermo Beam": 1
@@ -21179,7 +21179,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Seat of Power",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -23253,7 +23253,7 @@ window.FIELD = {
       "Guardian Angel": 2,
       "Hard Bargain": 1,
       "Irelia, Fervent": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Not So Fast": 1,
       "Pyke, Returned": 2,
       "Ride the Wind": 2,
@@ -23277,7 +23277,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23297,7 +23297,7 @@ window.FIELD = {
       "Fizz, Trickster": 1,
       "Hard Bargain": 1,
       "Irelia, Fervent": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Not So Fast": 1,
       "Rebuke": 1,
       "Ride the Wind": 2,
@@ -23312,7 +23312,7 @@ window.FIELD = {
      "side": {
       "Adaptatron": 2,
       "Gust": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Star-Crossed": 1,
       "Vex, Apathetic": 1,
       "Vex, Cheerless": 1
@@ -23324,7 +23324,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23356,7 +23356,7 @@ window.FIELD = {
      "side": {
       "Disarming Rake": 3,
       "Gust": 2,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Vex, Apathetic": 1
      },
      "runes": {
@@ -23366,7 +23366,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23396,13 +23396,13 @@ window.FIELD = {
       "Switcheroo": 1,
       "Tideturner": 3,
       "Vex, Apathetic": 2,
-      "Zhonya\\'s Hourglass": 2
+      "Zhonya's Hourglass": 2
      },
      "side": {
       "Adaptatron": 2,
       "Disarming Rake": 1,
       "Gust": 2,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Not So Fast": 1
      },
      "runes": {
@@ -23412,7 +23412,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Rockfall Path",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23434,7 +23434,7 @@ window.FIELD = {
       "Gust": 1,
       "Hard Bargain": 1,
       "Irelia, Fervent": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Not So Fast": 1,
       "Pyke, Returned": 2,
       "Rebuke": 1,
@@ -23460,7 +23460,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23482,7 +23482,7 @@ window.FIELD = {
       "Hard Bargain": 1,
       "Insightful Investigator": 2,
       "Irelia, Fervent": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Lonely Poro": 2,
       "Pyke, Returned": 2,
       "Ride the Wind": 3,
@@ -23554,7 +23554,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23589,7 +23589,7 @@ window.FIELD = {
       "Back Off": 1,
       "Edge of Night": 1,
       "Gust": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Star-Crossed": 1,
       "Vex, Apathetic": 1
      },
@@ -23600,7 +23600,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23631,7 +23631,7 @@ window.FIELD = {
       "Stellacorn Herder": 2,
       "Tideturner": 3,
       "Vex, Apathetic": 2,
-      "Zhonya\\'s Hourglass": 1
+      "Zhonya's Hourglass": 1
      },
      "side": {
       "Adaptatron": 2,
@@ -23647,7 +23647,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -23678,7 +23678,7 @@ window.FIELD = {
       "Stellacorn Herder": 2,
       "Tideturner": 3,
       "Vex, Apathetic": 2,
-      "Zhonya\\'s Hourglass": 1
+      "Zhonya's Hourglass": 1
      },
      "side": {
       "Adaptatron": 2,
@@ -23694,7 +23694,7 @@ window.FIELD = {
      "battlefields": [
       "Abandoned Hall",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -27074,7 +27074,7 @@ window.FIELD = {
       "Grim Apothecary": 3,
       "Inferna": 3,
       "Irresistible Faefolk": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Kinkou Initiate": 3,
       "Nidalee, Cat Form": 3,
       "Pit Rookie": 3,
@@ -27097,9 +27097,9 @@ window.FIELD = {
       "Fury Rune": 4
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -27118,7 +27118,7 @@ window.FIELD = {
       "Grim Apothecary": 2,
       "Inferna": 2,
       "Irresistible Faefolk": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Kinkou Initiate": 3,
       "Nidalee, Cat Form": 3,
       "Noxus Hopeful": 3,
@@ -27139,7 +27139,7 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Forbidding Waste",
       "Star Spring"
      ]
@@ -27161,7 +27161,7 @@ window.FIELD = {
       "Grim Apothecary": 3,
       "Inferna": 3,
       "Irresistible Faefolk": 3,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Kinkou Initiate": 2,
       "Nidalee, Cat Form": 3,
       "Pit Rookie": 3,
@@ -27185,9 +27185,9 @@ window.FIELD = {
       "Fury Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -27206,7 +27206,7 @@ window.FIELD = {
       "Grim Apothecary": 3,
       "Inferna": 3,
       "Irresistible Faefolk": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Nidalee, Cat Form": 3,
       "Noxus Hopeful": 3,
       "Pit Rookie": 3,
@@ -27231,9 +27231,9 @@ window.FIELD = {
       "Fury Rune": 4
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -27250,7 +27250,7 @@ window.FIELD = {
       "Grim Apothecary": 3,
       "Inferna": 3,
       "Irresistible Faefolk": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Kinkou Initiate": 2,
       "Nidalee, Cat Form": 3,
       "Noxus Hopeful": 3,
@@ -27275,9 +27275,9 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -27322,9 +27322,9 @@ window.FIELD = {
       "Fury Rune": 4
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -27342,7 +27342,7 @@ window.FIELD = {
       "Grim Apothecary": 3,
       "Inferna": 3,
       "Irresistible Faefolk": 3,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Nidalee, Cat Form": 3,
       "Noxus Hopeful": 3,
       "Punch First": 3,
@@ -27365,7 +27365,7 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Seat of Power",
       "Star Spring"
      ]
@@ -27385,7 +27385,7 @@ window.FIELD = {
       "Inferna": 3,
       "Irresistible Faefolk": 3,
       "Jhin, Murderous Artist": 3,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Kinkou Initiate": 3,
       "Nidalee, Cat Form": 3,
       "Pit Rookie": 2,
@@ -27406,9 +27406,9 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Star Spring",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -29742,7 +29742,7 @@ window.FIELD = {
       "Punch First": 2,
       "Ride the Wind": 2,
       "Sabotage": 2,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "The Harrowing": 1
@@ -29761,7 +29761,7 @@ window.FIELD = {
       "Chaos Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -29788,7 +29788,7 @@ window.FIELD = {
       "Mobilize": 3,
       "Punch First": 3,
       "Ride the Wind": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "The Harrowing": 1
@@ -29807,7 +29807,7 @@ window.FIELD = {
       "Chaos Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -29832,7 +29832,7 @@ window.FIELD = {
       "Mindsplitter": 1,
       "Mobilize": 3,
       "Sabotage": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "The Harrowing": 1,
@@ -29851,9 +29851,9 @@ window.FIELD = {
       "Chaos Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Sigil of the Storm",
-      "Vilemaw\\'s Lair"
+      "Vilemaw's Lair"
      ]
     },
     {
@@ -29878,7 +29878,7 @@ window.FIELD = {
       "Mobilize": 3,
       "Punch First": 3,
       "Ride the Wind": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "The Harrowing": 1
@@ -29896,7 +29896,7 @@ window.FIELD = {
       "Chaos Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -29923,7 +29923,7 @@ window.FIELD = {
       "Mobilize": 3,
       "Punch First": 3,
       "Ride the Wind": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "The Harrowing": 1
@@ -29941,7 +29941,7 @@ window.FIELD = {
       "Chaos Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -29969,7 +29969,7 @@ window.FIELD = {
       "Mobilize": 3,
       "Punch First": 3,
       "Ride the Wind": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "The Harrowing": 1
@@ -29988,7 +29988,7 @@ window.FIELD = {
       "Chaos Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -30013,7 +30013,7 @@ window.FIELD = {
       "Mobilize": 3,
       "Pack of Wonders": 1,
       "Sabotage": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "Treasure Trove": 3
@@ -30029,7 +30029,7 @@ window.FIELD = {
       "Chaos Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -30057,7 +30057,7 @@ window.FIELD = {
       "Mobilize": 3,
       "Punch First": 3,
       "Ride the Wind": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Sivir, Mercenary": 1,
       "Stacked Deck": 3,
       "The Harrowing": 1
@@ -30076,7 +30076,7 @@ window.FIELD = {
       "Chaos Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -31001,7 +31001,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Star Spring",
       "Windswept Hillock"
      ]
@@ -31084,7 +31084,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Star Spring",
       "Windswept Hillock"
      ]
@@ -31126,7 +31126,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Star Spring",
       "Windswept Hillock"
      ]
@@ -31168,7 +31168,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Star Spring",
       "Windswept Hillock"
      ]
@@ -31211,7 +31211,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Star Spring",
       "Windswept Hillock"
      ]
@@ -31255,7 +31255,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Star Spring",
       "Windswept Hillock"
      ]
@@ -31339,7 +31339,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Trifarian War Camp",
       "Windswept Hillock"
      ]
@@ -32945,7 +32945,7 @@ window.FIELD = {
      "side": {
       "Factory Recall": 2,
       "Gust": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Last Rites": 1,
       "Not So Fast": 1,
       "Star-Crossed": 1,
@@ -32957,7 +32957,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Grove of the God-Willow",
-      "Targon\\'s Peak",
+      "Targon's Peak",
       "The Papertree"
      ]
     },
@@ -32991,9 +32991,9 @@ window.FIELD = {
      },
      "side": {
       "Disarming Rake": 2,
-      "Emperor\\'s Divide": 1,
+      "Emperor's Divide": 1,
       "Hard Bargain": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Not So Fast": 1,
       "Rebuke": 1
      },
@@ -33065,7 +33065,7 @@ window.FIELD = {
       "Defy": 3,
       "Discipline": 2,
       "Evelynn, Entrancing": 3,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Maduli the Gatekeeper": 1,
       "Mutated Mouser": 3,
       "Not So Fast": 1,
@@ -33074,12 +33074,12 @@ window.FIELD = {
       "Rebuke": 2,
       "Rune Prison": 2,
       "Shadow": 2,
-      "Sterak\\'s Gage": 1,
+      "Sterak's Gage": 1,
       "Switcheroo": 1,
       "Tideturner": 2,
       "Vex, Apathetic": 1,
       "Vex, Mocking": 2,
-      "Zhonya\\'s Hourglass": 1
+      "Zhonya's Hourglass": 1
      },
      "side": {
       "Abandon": 2,
@@ -33159,12 +33159,12 @@ window.FIELD = {
       "Boots of Swiftness": 2,
       "Defy": 3,
       "Discipline": 3,
-      "Emperor\\'s Divide": 2,
+      "Emperor's Divide": 2,
       "Evelynn, Entrancing": 2,
       "Fizz, Trickster": 3,
       "Gust": 2,
       "Janna, Savior": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Meditation": 2,
       "Mutated Mouser": 3,
       "Overzealous Fan": 2,
@@ -33200,12 +33200,12 @@ window.FIELD = {
       "Charm": 2,
       "Defy": 2,
       "Discipline": 2,
-      "Emperor\\'s Divide": 1,
+      "Emperor's Divide": 1,
       "Evelynn, Entrancing": 1,
       "Existential Dread": 2,
       "Fizz, Trickster": 1,
       "Gust": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Mutated Mouser": 3,
       "Not So Fast": 2,
       "Overzealous Fan": 2,
@@ -33222,7 +33222,7 @@ window.FIELD = {
       "Acceptable Losses": 2,
       "Allay, Eager Admirer": 2,
       "Disarming Rake": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Vex, Cheerless": 1
      },
      "runes": {
@@ -33254,7 +33254,7 @@ window.FIELD = {
       "Fizz, Trickster": 1,
       "Gust": 2,
       "Hard Bargain": 1,
-      "Kha\\'Zix, Mutating Horror": 2,
+      "Kha'Zix, Mutating Horror": 2,
       "Mutated Mouser": 3,
       "Overzealous Fan": 2,
       "Ride the Wind": 1,
@@ -35163,7 +35163,7 @@ window.FIELD = {
      "battlefields": [
       "Bandle Tree",
       "Startipped Peak",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -35207,7 +35207,7 @@ window.FIELD = {
      "battlefields": [
       "Grove of the God-Willow",
       "Startipped Peak",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -36639,7 +36639,7 @@ window.FIELD = {
       "Flash": 1,
       "Gem Jammer": 3,
       "Hard Bargain": 1,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Pyke, Dockside Butcher": 3,
       "Pyke, Returned": 3,
       "Ride the Wind": 1,
@@ -36661,9 +36661,9 @@ window.FIELD = {
       "Fury Rune": 5
      },
      "battlefields": [
-      "Emperor\\'s Dais",
+      "Emperor's Dais",
       "Forge of the Fluft",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -36682,11 +36682,11 @@ window.FIELD = {
       "Flash": 1,
       "Gem Jammer": 2,
       "Gust": 1,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Noxus Hopeful": 3,
       "Overzealous Fan": 3,
       "Rebuke": 2,
-      "Rek\\'Sai, Breacher": 2,
+      "Rek'Sai, Breacher": 2,
       "Spinning Axe": 3,
       "Stacked Deck": 3,
       "Switcheroo": 1,
@@ -36707,7 +36707,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Rockfall Path",
-      "Targon\\'s Peak",
+      "Targon's Peak",
       "Zaun Warrens"
      ]
     },
@@ -36730,11 +36730,11 @@ window.FIELD = {
       "Gem Jammer": 1,
       "Gust": 1,
       "Hard Bargain": 1,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Noxus Hopeful": 3,
       "Overzealous Fan": 3,
       "Rebuke": 1,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Rengar, Pouncing": 1,
       "Ride the Wind": 2,
       "Spinning Axe": 3,
@@ -36759,7 +36759,7 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Targon\\'s Peak",
+      "Targon's Peak",
       "Treasure Hoard",
       "Zaun Warrens"
      ]
@@ -36780,11 +36780,11 @@ window.FIELD = {
       "Ferrous Forerunner": 2,
       "Gust": 1,
       "Hard Bargain": 1,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Noxus Hopeful": 3,
       "Overzealous Fan": 3,
       "Rebuke": 2,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Ride the Wind": 2,
       "Spinning Axe": 3,
       "Stacked Deck": 3,
@@ -36806,7 +36806,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Rockfall Path",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -36825,11 +36825,11 @@ window.FIELD = {
       "Falling Star": 2,
       "Gem Jammer": 1,
       "Gust": 2,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Noxus Hopeful": 3,
       "Overzealous Fan": 3,
       "Rebuke": 2,
-      "Rek\\'Sai, Breacher": 2,
+      "Rek'Sai, Breacher": 2,
       "Spinning Axe": 3,
       "Stacked Deck": 3,
       "Switcheroo": 1,
@@ -36850,7 +36850,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Rockfall Path",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -38144,7 +38144,7 @@ window.FIELD = {
       "Counter Strike": 3,
       "Defy": 2,
       "Discipline": 3,
-      "Doran\\'s Blade": 2,
+      "Doran's Blade": 2,
       "En Garde": 2,
       "First Mate": 3,
       "Guardian Angel": 3,
@@ -38169,9 +38169,9 @@ window.FIELD = {
       "Calm Rune": 6
      },
      "battlefields": [
-      "Ornn\\'s Forge",
+      "Ornn's Forge",
       "Sunken Temple",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -38682,7 +38682,7 @@ window.FIELD = {
       "Punch First": 1,
       "Ride the Wind": 1,
       "Sabotage": 3,
-      "Scryer\\'s Bloom": 3,
+      "Scryer's Bloom": 3,
       "Stacked Deck": 3,
       "The Harrowing": 2
      },
@@ -38700,7 +38700,7 @@ window.FIELD = {
       "Chaos Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -39419,7 +39419,7 @@ window.FIELD = {
       "Ferrous Forerunner": 3,
       "Hextech Ray": 3,
       "Inferna": 2,
-      "Kai\\'Sa, Survivor": 1,
+      "Kai'Sa, Survivor": 1,
       "Lecturing Yordle": 3,
       "Noxus Hopeful": 3,
       "Piercing Light": 1,
@@ -39450,7 +39450,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Rockfall Path",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Void Gate"
      ]
     },
@@ -39469,7 +39469,7 @@ window.FIELD = {
       "Ferrous Forerunner": 3,
       "Forecaster": 3,
       "Hextech Ray": 3,
-      "Kai\\'Sa, Survivor": 1,
+      "Kai'Sa, Survivor": 1,
       "Lecturing Yordle": 2,
       "Noxus Hopeful": 3,
       "Plundering Poro": 2,
@@ -39496,7 +39496,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Forbidding Waste",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Void Gate"
      ]
     },
@@ -39511,7 +39511,7 @@ window.FIELD = {
       "Battering Ram": 3,
       "Falling Star": 3,
       "Jhin, Meticulous Killer": 3,
-      "Kai\\'Sa, Survivor": 1,
+      "Kai'Sa, Survivor": 1,
       "Lecturing Yordle": 3,
       "Noxus Hopeful": 3,
       "Progress Day": 3,
@@ -39537,7 +39537,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Rockfall Path",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Void Gate"
      ]
     },
@@ -39556,8 +39556,8 @@ window.FIELD = {
       "Hextech Ray": 3,
       "Icathian Rain": 1,
       "Immortal Phoenix": 1,
-      "Kai\\'Sa, Evolutionary": 1,
-      "Kai\\'Sa, Survivor": 1,
+      "Kai'Sa, Evolutionary": 1,
+      "Kai'Sa, Survivor": 1,
       "Lecturing Yordle": 3,
       "Noxus Hopeful": 3,
       "Ravenbloom Student": 3,
@@ -41166,7 +41166,7 @@ window.FIELD = {
       "Mind Rune": 7
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Rockfall Path"
      ]
@@ -41209,7 +41209,7 @@ window.FIELD = {
       "Mind Rune": 11
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -43084,11 +43084,11 @@ window.FIELD = {
      "main": {
       "Blighted Battleaxe": 1,
       "Challenge": 2,
-      "Doran\\'s Blade": 2,
+      "Doran's Blade": 2,
       "First Mate": 3,
       "Inferna": 2,
       "Irresistible Faefolk": 3,
-      "Kai\\'Sa, Survivor": 3,
+      "Kai'Sa, Survivor": 3,
       "Long Sword": 3,
       "Lucian, Merciless": 1,
       "Pouty Poro": 2,
@@ -43126,14 +43126,14 @@ window.FIELD = {
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-061-florian-sieber-lucian-purifier",
      "main": {
       "Blighted Battleaxe": 2,
-      "Doran\\'s Blade": 1,
+      "Doran's Blade": 1,
       "Falling Star": 2,
       "Ferrous Forerunner": 2,
       "First Mate": 3,
       "Grim Resolve": 3,
       "Inferna": 2,
       "Irresistible Faefolk": 2,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Long Sword": 3,
       "Lucian, Merciless": 3,
       "Noxus Hopeful": 2,
@@ -43157,7 +43157,7 @@ window.FIELD = {
      "battlefields": [
       "Forbidding Waste",
       "Sunken Temple",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -43647,7 +43647,7 @@ window.FIELD = {
       "Brutalizer": 3,
       "Charm": 3,
       "Defy": 2,
-      "Desert\\'s Call": 2,
+      "Desert's Call": 2,
       "Discipline": 2,
       "Dropboarder": 2,
       "Janna, Savior": 2,
@@ -43656,10 +43656,10 @@ window.FIELD = {
       "Ornn, Forge God": 1,
       "Pit Crew": 2,
       "Poro Snax": 2,
-      "Shurelya\\'s Requiem": 1,
+      "Shurelya's Requiem": 1,
       "Sprite Fountain": 3,
       "Sprite Mother": 2,
-      "Sterak\\'s Gage": 3,
+      "Sterak's Gage": 3,
       "Stupefy": 2,
       "Thousand-Tailed Watcher": 2
      },
@@ -43675,8 +43675,8 @@ window.FIELD = {
      },
      "battlefields": [
       "Dusk Rose Lab",
-      "Ornn\\'s Forge",
-      "The Arena\\'s Greatest"
+      "Ornn's Forge",
+      "The Arena's Greatest"
      ]
     },
     {
@@ -44582,7 +44582,7 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Sigil of the Storm",
       "The Papertree"
      ]
@@ -44623,7 +44623,7 @@ window.FIELD = {
       "Fury Rune": 6
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Forgotten Monument",
       "Sigil of the Storm"
      ]
@@ -44666,7 +44666,7 @@ window.FIELD = {
       "Fury Rune": 5
      },
      "battlefields": [
-      "Aspirant\\'s Climb",
+      "Aspirant's Climb",
       "Frozen Fortress",
       "Sunken Temple"
      ]
@@ -45611,7 +45611,7 @@ window.FIELD = {
       "Chakram Dancer": 3,
       "Charm": 3,
       "Defy": 3,
-      "Desert\\'s Call": 3,
+      "Desert's Call": 3,
       "Discipline": 3,
       "Eclipse": 3,
       "En Garde": 2,
@@ -45635,7 +45635,7 @@ window.FIELD = {
      "battlefields": [
       "Dusk Rose Lab",
       "Forbidding Waste",
-      "The Arena\\'s Greatest"
+      "The Arena's Greatest"
      ]
     },
     {
@@ -49307,7 +49307,7 @@ window.FIELD = {
       "Deathgrip": 2,
       "Defy": 3,
       "Discipline": 3,
-      "Emperor\\'s Divide": 1,
+      "Emperor's Divide": 1,
       "Friendship": 3,
       "Frisky Hunter": 3,
       "Hidden Blade": 2,
@@ -49333,7 +49333,7 @@ window.FIELD = {
      "battlefields": [
       "Forbidding Waste",
       "Rockfall Path",
-      "Vilemaw\\'s Lair"
+      "Vilemaw's Lair"
      ]
     },
     {
@@ -49350,7 +49350,7 @@ window.FIELD = {
       "Defy": 3,
       "Disarming Rake": 2,
       "Discipline": 2,
-      "Emperor\\'s Divide": 2,
+      "Emperor's Divide": 2,
       "Flurry of Feathers": 3,
       "Frisky Hunter": 3,
       "Hidden Blade": 3,
@@ -49377,7 +49377,7 @@ window.FIELD = {
      "battlefields": [
       "Rockfall Path",
       "The Grand Plaza",
-      "Vilemaw\\'s Lair"
+      "Vilemaw's Lair"
      ]
     },
     {
@@ -49397,7 +49397,7 @@ window.FIELD = {
       "Defy": 3,
       "Disarming Rake": 1,
       "Discipline": 2,
-      "Emperor\\'s Divide": 2,
+      "Emperor's Divide": 2,
       "Flurry of Feathers": 1,
       "Friendship": 2,
       "Frisky Hunter": 3,
@@ -49423,7 +49423,7 @@ window.FIELD = {
      "battlefields": [
       "Rockfall Path",
       "Seat of Power",
-      "Vilemaw\\'s Lair"
+      "Vilemaw's Lair"
      ]
     },
     {
@@ -53087,7 +53087,7 @@ window.FIELD = {
       "Long Sword": 1,
       "Noxus Hopeful": 3,
       "Pyke, Dockside Butcher": 3,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Sun Disc": 1,
       "Undertitan": 3,
       "Void Rush": 3
@@ -53104,7 +53104,7 @@ window.FIELD = {
       "Order Rune": 4
      },
      "battlefields": [
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "The Candlelit Sanctum",
       "Trifarian War Camp"
      ]
@@ -53129,9 +53129,9 @@ window.FIELD = {
       "Honest Broker": 3,
       "Mischievous Marai": 1,
       "Noxus Hopeful": 3,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Seal of Rage": 2,
-      "Shadow\\'s Call": 1,
+      "Shadow's Call": 1,
       "Soaring Scout": 1,
       "Sudden Storm": 1,
       "Undertitan": 3,
@@ -53172,7 +53172,7 @@ window.FIELD = {
       "Inferna": 3,
       "Noxus Hopeful": 3,
       "Rally the Troops": 2,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Seal of Unity": 3,
       "Spectral Matron": 1,
       "Undertitan": 3,
@@ -53194,7 +53194,7 @@ window.FIELD = {
       "Order Rune": 8
      },
      "battlefields": [
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "The Candlelit Sanctum",
       "Trifarian War Camp"
      ]
@@ -53216,10 +53216,10 @@ window.FIELD = {
       "Falling Star": 3,
       "Honest Broker": 3,
       "Inferna": 3,
-      "Kai\\'Sa, Survivor": 2,
+      "Kai'Sa, Survivor": 2,
       "Legion Rearguard": 3,
       "Noxus Hopeful": 3,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Undertitan": 3,
       "Void Rush": 3
      },
@@ -53236,7 +53236,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Hall of Legends",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "The Candlelit Sanctum"
      ]
     },
@@ -53259,7 +53259,7 @@ window.FIELD = {
       "Inferna": 3,
       "Noxus Hopeful": 3,
       "Pyke, Dockside Butcher": 3,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Rengar, Pouncing": 2,
       "Undertitan": 3,
       "Vi, Peacekeeper": 2,
@@ -53278,7 +53278,7 @@ window.FIELD = {
       "Order Rune": 5
      },
      "battlefields": [
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "The Candlelit Sanctum",
       "Zaun Warrens"
      ]
@@ -53302,7 +53302,7 @@ window.FIELD = {
       "Inferna": 3,
       "Noxus Hopeful": 3,
       "Pouty Poro": 3,
-      "Rek\\'Sai, Breacher": 1,
+      "Rek'Sai, Breacher": 1,
       "Salvage": 1,
       "Undertitan": 3,
       "Vi, Peacekeeper": 2,
@@ -53322,7 +53322,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Seat of Power",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "The Candlelit Sanctum"
      ]
     },
@@ -54181,7 +54181,7 @@ window.FIELD = {
       "Gust": 1,
       "Hard Bargain": 1,
       "Irresistible Faefolk": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Lucian, Merciless": 3,
       "Mister Root": 3,
       "Punch First": 2,
@@ -54208,7 +54208,7 @@ window.FIELD = {
      },
      "battlefields": [
       "Forbidding Waste",
-      "The Arena\\'s Greatest",
+      "The Arena's Greatest",
       "Zaun Warrens"
      ]
     },
@@ -54226,7 +54226,7 @@ window.FIELD = {
       "Grim Resolve": 3,
       "Hard Bargain": 1,
       "Irresistible Faefolk": 3,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Lucian, Merciless": 3,
       "Mister Root": 2,
       "Punch First": 2,
@@ -54243,7 +54243,7 @@ window.FIELD = {
       "Acceptable Losses": 1,
       "Baron Nashor": 2,
       "Challenge": 1,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Star-Crossed": 1,
       "Unyielding Spirit": 2
      },
@@ -54254,7 +54254,7 @@ window.FIELD = {
      "battlefields": [
       "Forbidding Waste",
       "Monastery of Hirana",
-      "Targon\\'s Peak"
+      "Targon's Peak"
      ]
     },
     {
@@ -54273,7 +54273,7 @@ window.FIELD = {
       "Gust": 1,
       "Here to Help": 2,
       "Irresistible Faefolk": 2,
-      "Kha\\'Zix, Mutating Horror": 1,
+      "Kha'Zix, Mutating Horror": 1,
       "Last Rites": 1,
       "Mister Root": 2,
       "Punch First": 2,
@@ -63889,233 +63889,6 @@ window.FIELD = {
    "banned": false,
    "set": "Proving Grounds"
   },
-  "Emperor\\'s Dais": {
-   "cost": null,
-   "type": "Battlefield",
-   "might": null,
-   "color": [
-    "Colorless"
-   ],
-   "tags": [],
-   "techTags": [
-    {
-     "tag": "bounce",
-     "label": "bounce",
-     "size": null
-    }
-   ],
-   "effect": "When you conquer here, you may pay :rb_energy_1: and return a unit you control here to its owner's hand. If you do, play a 2 :rb_might: Sand Soldier unit token here.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-207.webp",
-   "price": 0.1,
-   "banned": false,
-   "set": "Spiritforged"
-  },
-  "The Arena\\'s Greatest": {
-   "cost": null,
-   "type": "Battlefield",
-   "might": null,
-   "color": [
-    "Colorless"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
-   "image": "cache/images/The_Arena_s_Greatest.webp",
-   "price": 0.45,
-   "banned": true,
-   "set": "Origins"
-  },
-  "Kai\\'Sa, Survivor": {
-   "cost": 4,
-   "type": "Unit",
-   "might": 4,
-   "color": [
-    "Fury"
-   ],
-   "tags": [
-    "Kai'Sa",
-    "The Void"
-   ],
-   "techTags": [],
-   "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\nWhen I conquer, draw 1.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-039.webp",
-   "price": null,
-   "banned": false,
-   "set": "Origins"
-  },
-  "Zhonya\\'s Hourglass": {
-   "cost": 2,
-   "type": "Gear",
-   "might": null,
-   "color": [
-    "Calm"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
-   "image": "cache/images/Zhonya_s_Hourglass.webp",
-   "price": null,
-   "banned": false,
-   "set": "Origins"
-  },
-  "Scryer\\'s Bloom": {
-   "cost": 1,
-   "type": "Gear",
-   "might": null,
-   "color": [
-    "Chaos"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "This enters exhausted.\nKill this, :rb_energy_1:, :rb_exhaust:: [Predict 2], then draw 1. Gain 1 XP.  (To Predict 2, look at the top two cards of your Main Deck. Recycle any of them and put the rest back in any order.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-136.webp",
-   "price": 0.08,
-   "banned": false,
-   "set": "Unleashed"
-  },
-  "Doran\\'s Shield": {
-   "cost": 1,
-   "type": "Gear",
-   "might": 1,
-   "color": [
-    "Calm"
-   ],
-   "tags": [
-    "Equipment"
-   ],
-   "techTags": [],
-   "effect": "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-033.webp",
-   "price": 0.08,
-   "banned": false,
-   "set": "Spiritforged"
-  },
-  "Vilemaw\\'s Lair": {
-   "cost": null,
-   "type": "Battlefield",
-   "might": null,
-   "color": [
-    "Colorless"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "Units can't move from here to base.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-295.webp",
-   "price": 0.27,
-   "banned": false,
-   "set": "Origins"
-  },
-  "Ornn\\'s Forge": {
-   "cost": null,
-   "type": "Battlefield",
-   "might": null,
-   "color": [
-    "Colorless"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "While you control this battlefield, the first friendly non-token gear played each turn costs :rb_energy_1: less.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-213.webp",
-   "price": 0.09,
-   "banned": false,
-   "set": "Spiritforged"
-  },
-  "Shadow\\'s Call": {
-   "cost": 2,
-   "type": "Spell",
-   "might": null,
-   "color": [
-    "Order"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "Choose a friendly unit without [Temporary]. Give it [Temporary]. Draw 2. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-165.webp",
-   "price": 0.37,
-   "banned": false,
-   "set": "Unleashed"
-  },
-  "Kha\\'Zix, Mutating Horror": {
-   "cost": 4,
-   "type": "Unit",
-   "might": 4,
-   "color": [
-    "Chaos"
-   ],
-   "tags": [
-    "Kha'Zix",
-    "The Void"
-   ],
-   "techTags": [],
-   "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen I attack or defend, if an enemy unit is alone here, give me +2 :rb_might: this turn and gain 2 XP.",
-   "image": "cache/images/Kha_Zix_Mutating_Horror.webp",
-   "price": null,
-   "banned": false,
-   "set": "Unleashed"
-  },
-  "Rek\\'Sai, Breacher": {
-   "cost": 3,
-   "type": "Unit",
-   "might": 3,
-   "color": [
-    "Fury"
-   ],
-   "tags": [
-    "Rek'Sai",
-    "The Void"
-   ],
-   "techTags": [],
-   "effect": "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)\n[Assault] (+1 :rb_might: while I'm an attacker.)\nFriendly units played from anywhere other than a player's hand have [Accelerate].",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-029.webp",
-   "price": 4.7,
-   "banned": false,
-   "set": "Spiritforged"
-  },
-  "Targon\\'s Peak": {
-   "cost": null,
-   "type": "Battlefield",
-   "might": null,
-   "color": [
-    "Colorless"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-   "image": "cache/images/Targon_s_Peak.webp",
-   "price": 0.22,
-   "banned": false,
-   "set": "Origins"
-  },
-  "Aspirant\\'s Climb": {
-   "cost": null,
-   "type": "Battlefield",
-   "might": null,
-   "color": [
-    "Colorless"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "Increase the points needed to win the game by 1.",
-   "image": "cache/images/Aspirant_s_Climb.webp",
-   "price": 0.22,
-   "banned": true,
-   "set": "Origins"
-  },
-  "Ripper\\'s Bay": {
-   "cost": null,
-   "type": "Battlefield",
-   "might": null,
-   "color": [
-    "Colorless"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "When a unit here is returned to a player's hand, that player may pay :rb_energy_1: to channel 1 rune exhausted.",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-214.webp",
-   "price": 0.06,
-   "banned": false,
-   "set": "Unleashed"
-  },
   "Blade of the Ruined King": {
    "cost": 3,
    "type": "Gear",
@@ -64156,21 +63929,6 @@ window.FIELD = {
    "price": null,
    "banned": false,
    "set": "Origins"
-  },
-  "Desert\\'s Call": {
-   "cost": 2,
-   "type": "Spell",
-   "might": null,
-   "color": [
-    "Calm"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)\nPlay a 2 :rb_might: Sand Soldier unit token.",
-   "image": "cache/images/Desert_s_Call.webp",
-   "price": 0.13,
-   "banned": false,
-   "set": "Spiritforged"
   },
   "Renata Glasc, Industrialist": {
    "cost": 4,
@@ -64283,21 +64041,6 @@ window.FIELD = {
    "banned": false,
    "set": "Proving Grounds"
   },
-  "Emperor\\'s Divide": {
-   "cost": 2,
-   "type": "Spell",
-   "might": null,
-   "color": [
-    "Calm"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\n[Action] (Play on your turn or in showdowns.)\nMove any number of friendly units at a battlefield to their base.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-043.webp",
-   "price": 0.3,
-   "banned": false,
-   "set": "Spiritforged"
-  },
   "Stare Down": {
    "cost": 2,
    "type": "Spell",
@@ -64384,23 +64127,6 @@ window.FIELD = {
    "banned": false,
    "set": "Unleashed"
   },
-  "Sterak\\'s Gage": {
-   "cost": 3,
-   "type": "Gear",
-   "might": 3,
-   "color": [
-    "Calm"
-   ],
-   "tags": [
-    "Equipment"
-   ],
-   "techTags": [],
-   "effect": "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)\n[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-056.webp",
-   "price": null,
-   "banned": false,
-   "set": "Spiritforged"
-  },
   "Vex, Mocking": {
    "cost": 5,
    "type": "Unit",
@@ -64426,41 +64152,6 @@ window.FIELD = {
    "banned": false,
    "set": "Unleashed"
   },
-  "Doran\\'s Blade": {
-   "cost": 2,
-   "type": "Gear",
-   "might": 2,
-   "color": [
-    "Body"
-   ],
-   "tags": [
-    "Equipment"
-   ],
-   "techTags": [],
-   "effect": "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-095.webp",
-   "price": 0.07,
-   "banned": false,
-   "set": "Spiritforged"
-  },
-  "Kai\\'Sa, Evolutionary": {
-   "cost": 6,
-   "type": "Unit",
-   "might": 6,
-   "color": [
-    "Mind"
-   ],
-   "tags": [
-    "Kai'Sa",
-    "The Void"
-   ],
-   "techTags": [],
-   "effect": "[Ganking] (I can move from battlefield to battlefield.)\nWhen I conquer, you may play a spell from your trash with Energy cost less than your points without paying its Energy cost. Then recycle it. (You must still pay its Power cost.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-112.webp",
-   "price": null,
-   "banned": false,
-   "set": "Origins"
-  },
   "Arena Kingpin": {
    "cost": 5,
    "type": "Unit",
@@ -64478,25 +64169,6 @@ window.FIELD = {
    "price": 0.05,
    "banned": false,
    "set": "Unleashed"
-  },
-  "Shurelya\\'s Requiem": {
-   "cost": 4,
-   "type": "Gear",
-   "might": 2,
-   "color": [
-    "Calm",
-    "Mind"
-   ],
-   "tags": [
-    "Ornn",
-    "Equipment"
-   ],
-   "techTags": [],
-   "effect": "[Unique] (Your deck can have only 1 card with this name.)\n[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)\nWhen you play this, ready your units.",
-   "image": "https://static.dotgg.gg/riftbound/cards/SFD-192.webp",
-   "price": null,
-   "banned": false,
-   "set": "Spiritforged"
   },
   "Dragonsoul Sage": {
    "cost": 2,

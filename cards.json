@@ -1809,57 +1809,6 @@
   "banned": false,
   "set": "Origins"
  },
- "Targon\\'s Peak": {
-  "code": "OGN-289",
-  "cost": null,
-  "type": "Battlefield",
-  "color": [
-   "Colorless"
-  ],
-  "might": null,
-  "rarity": "Uncommon",
-  "tags": [],
-  "techTags": [],
-  "effect": "When you conquer here, ready 2 runes at the end of this turn.",
-  "price": 0.22,
-  "banned": false,
-  "set": "Origins"
- },
- "Kha\\'Zix, Mutating Horror": {
-  "code": "UNL-143",
-  "cost": 4,
-  "type": "Unit",
-  "color": [
-   "Chaos"
-  ],
-  "might": 4,
-  "rarity": "Rare",
-  "tags": [
-   "Kha'Zix",
-   "The Void"
-  ],
-  "techTags": [],
-  "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen I attack or defend, if an enemy unit is alone here, give me +2 :rb_might: this turn and gain 2 XP.",
-  "price": null,
-  "banned": false,
-  "set": "Unleashed"
- },
- "The Arena\\'s Greatest": {
-  "code": "OGN-290",
-  "cost": null,
-  "type": "Battlefield",
-  "color": [
-   "Colorless"
-  ],
-  "might": null,
-  "rarity": "Uncommon",
-  "tags": [],
-  "techTags": [],
-  "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
-  "price": 0.45,
-  "banned": true,
-  "set": "Origins"
- },
  "Treasure Hunter": {
   "code": "SFD-130",
   "cost": 2,
@@ -1893,22 +1842,6 @@
   "price": 0.11,
   "banned": false,
   "set": "Unleashed"
- },
- "Zhonya\\'s Hourglass": {
-  "code": "OGN-077",
-  "cost": 2,
-  "type": "Gear",
-  "color": [
-   "Calm"
-  ],
-  "might": null,
-  "rarity": "Rare",
-  "tags": [],
-  "techTags": [],
-  "effect": "[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
-  "price": null,
-  "banned": false,
-  "set": "Origins"
  },
  "Crescent Strike": {
   "code": "UNL-072",
