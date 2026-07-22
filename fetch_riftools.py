@@ -96,6 +96,35 @@ def normalize_player(name):
     return re.sub(r"[^a-z0-9]+", "", (name or "").lower())
 
 
+# riftools' own `placement` field is inconsistent across events — sometimes
+# "#4", sometimes "#4 8-2-1" (rank + Swiss W-L-D record), sometimes just a
+# record string with no "#" — which exploded the viewer's Placement filter
+# into dozens of one-off chips. Bucket the clean integer `rank` field into
+# the SAME bracket vocabulary Mobalytics decks already use (see
+# fetch_decks.py's PLACEMENT_WEIGHTS) so filter chips stay a small, stable
+# set and riftools/Mobalytics decks weight consistently. riftools tracks far
+# deeper into the field than Mobalytics ever did, so two extra buckets
+# (Top 32 / Swiss) cover ranks Mobalytics never published anything for.
+def rank_to_placement(rank):
+    if rank is None:
+        return None, 0.5
+    if rank == 1:
+        return "1st", 3.0
+    if rank == 2:
+        return "2nd", 2.0
+    if rank == 3:
+        return "3rd", 1.75
+    if rank <= 4:
+        return "Top 4", 1.5
+    if rank <= 8:
+        return "Top 8", 1.0
+    if rank <= 16:
+        return "Top 16", 0.75
+    if rank <= 32:
+        return "Top 32", 0.5
+    return "Swiss", 0.25
+
+
 def fetch_winrates(manifest):
     entry = manifest["snapshots"]["winrates"]
     data = fetch_json(entry["url"])
@@ -245,9 +274,11 @@ def ingest_decks(conn, manifest, deck_details_index, cap):
             failed += 1
             continue
         archetype = legend_slug(it["legend_name"])
-        label = f"{it['player_name']} - {it['tournament_name']} {it.get('placement') or ''} [riftools]".strip()
+        placement, weight = rank_to_placement(it.get("rank"))
+        rank_tag = f"#{it['rank']}" if it.get("rank") is not None else ""
+        label = f"{it['player_name']} - {it['tournament_name']} {rank_tag} [riftools]".strip()
         db.upsert_deck(
-            conn, label, it.get("placement"), it["tournament_name"], 1.0, url,
+            conn, label, placement, it["tournament_name"], weight, url,
             sections, event_date=it["event_date"], archetype=archetype,
             source=SOURCE_TAG, player=it["player_name"],
         )

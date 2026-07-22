@@ -627,7 +627,7 @@ window.FIELD = {
     {
      "label": "AA Arestidios - RiftAtlas Convergence #1 #6 [riftools]",
      "player": "AA Arestidios",
-     "placement": "#6",
+     "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-006-aa-arestidios-diana-scorn-of-the-moon",
@@ -674,7 +674,7 @@ window.FIELD = {
     {
      "label": "Frisco Fahs - CCS Sunday $5,000 Riftbound Event #4 #7 [riftools]",
      "player": "Frisco Fahs",
-     "placement": "#7",
+     "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-007-frisco-fahs-diana-scorn-of-the-moon",
@@ -722,7 +722,7 @@ window.FIELD = {
     {
      "label": "RelliK - RiftAtlas Convergence #1 #7 [riftools]",
      "player": "RelliK",
-     "placement": "#7",
+     "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-007-rellik-diana-scorn-of-the-moon",
@@ -771,7 +771,7 @@ window.FIELD = {
     {
      "label": "Christian cedeno - CCS Sunday $5,000 Riftbound Event #4 #16 [riftools]",
      "player": "Christian cedeno",
-     "placement": "#16",
+     "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-016-christian-cedeno-diana-scorn-of-the-moon",
@@ -814,7 +814,7 @@ window.FIELD = {
     {
      "label": "Cody childers - CCS Sunday $5,000 Riftbound Event #4 #17 [riftools]",
      "player": "Cody childers",
-     "placement": "#17",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-017-cody-childers-diana-scorn-of-the-moon",
@@ -859,7 +859,7 @@ window.FIELD = {
     {
      "label": "Nic - CCS Sunday $5,000 Riftbound Event #4 #19 [riftools]",
      "player": "Nic",
-     "placement": "#19",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-019-nic-diana-scorn-of-the-moon",
@@ -904,7 +904,7 @@ window.FIELD = {
     {
      "label": "Diego rodriguez del valle - CCS Sunday $5,000 Riftbound Event #4 #20 [riftools]",
      "player": "Diego rodriguez del valle",
-     "placement": "#20",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-020-diego-rodriguez-del-valle-diana-scorn-of-the-moon",
@@ -949,7 +949,7 @@ window.FIELD = {
     {
      "label": "Jorge Vallazza - CCS Sunday $5,000 Riftbound Event #4 #25 [riftools]",
      "player": "Jorge Vallazza",
-     "placement": "#25",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-025-jorge-vallazza-diana-scorn-of-the-moon",
@@ -997,7 +997,7 @@ window.FIELD = {
     {
      "label": "Zared Redding - CCS Sunday $5,000 Riftbound Event #4 #32 [riftools]",
      "player": "Zared Redding",
-     "placement": "#32",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-032-zared-redding-diana-scorn-of-the-moon",
@@ -1043,7 +1043,7 @@ window.FIELD = {
     {
      "label": "Paxton Keskitalo - CCS Sunday $5,000 Riftbound Event #4 #37 [riftools]",
      "player": "Paxton Keskitalo",
-     "placement": "#37",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-037-paxton-keskitalo-diana-scorn-of-the-moon",
@@ -1091,7 +1091,7 @@ window.FIELD = {
     {
      "label": "Kenneth Kish - CCS Sunday $5,000 Riftbound Event #4 #42 [riftools]",
      "player": "Kenneth Kish",
-     "placement": "#42",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-042-kenneth-kish-diana-scorn-of-the-moon",
@@ -1137,7 +1137,7 @@ window.FIELD = {
     {
      "label": "Logan Davidson - RiftAtlas Convergence #1 #45 [riftools]",
      "player": "Logan Davidson",
-     "placement": "#45",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-045-logan-davidson-diana-scorn-of-the-moon",
@@ -1186,7 +1186,7 @@ window.FIELD = {
     {
      "label": "Roland Krenz - RiftAtlas Convergence #1 #46 [riftools]",
      "player": "Roland Krenz",
-     "placement": "#46",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-046-roland-krenz-diana-scorn-of-the-moon",
@@ -1230,7 +1230,7 @@ window.FIELD = {
     {
      "label": "Brett Holman - CCS Sunday $5,000 Riftbound Event #4 #50 [riftools]",
      "player": "Brett Holman",
-     "placement": "#50",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-050-brett-holman-diana-scorn-of-the-moon",
@@ -1274,7 +1274,7 @@ window.FIELD = {
     {
      "label": "NA_Cord_TV - RiftAtlas Convergence #1 #50 [riftools]",
      "player": "NA_Cord_TV",
-     "placement": "#50",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-050-na-cord-tv-diana-scorn-of-the-moon",
@@ -1320,7 +1320,7 @@ window.FIELD = {
     {
      "label": "Kyle emery - CCS Sunday $5,000 Riftbound Event #4 #63 [riftools]",
      "player": "Kyle emery",
-     "placement": "#63",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-063-kyle-emery-diana-scorn-of-the-moon",
@@ -1367,7 +1367,7 @@ window.FIELD = {
     {
      "label": "Alexander Alegria - RiftAtlas Convergence #1 #63 [riftools]",
      "player": "Alexander Alegria",
-     "placement": "#63",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-063-alexander-alegria-diana-scorn-of-the-moon",
@@ -1413,7 +1413,7 @@ window.FIELD = {
     {
      "label": "Cam Peavy - CCS Sunday $5,000 Riftbound Event #4 #64 [riftools]",
      "player": "Cam Peavy",
-     "placement": "#64",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-064-cam-peavy-diana-scorn-of-the-moon",
@@ -1458,7 +1458,7 @@ window.FIELD = {
     {
      "label": "Botella Thomas - RiftAtlas Convergence #1 #64 [riftools]",
      "player": "Botella Thomas",
-     "placement": "#64",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-064-botella-thomas-diana-scorn-of-the-moon",
@@ -1503,7 +1503,7 @@ window.FIELD = {
     {
      "label": "Jacob Moore - CCS Sunday $5,000 Riftbound Event #4 #71 [riftools]",
      "player": "Jacob Moore",
-     "placement": "#71",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-071-jacob-moore-diana-scorn-of-the-moon",
@@ -1546,7 +1546,7 @@ window.FIELD = {
     {
      "label": "Sam Vanvickle - CCS Sunday $5,000 Riftbound Event #4 #75 [riftools]",
      "player": "Sam Vanvickle",
-     "placement": "#75",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-075-sam-vanvickle-diana-scorn-of-the-moon",
@@ -1591,7 +1591,7 @@ window.FIELD = {
     {
      "label": "Daniel Combs - CCS Sunday $5,000 Riftbound Event #4 #76 [riftools]",
      "player": "Daniel Combs",
-     "placement": "#76",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-076-daniel-combs-diana-scorn-of-the-moon",
@@ -1636,7 +1636,7 @@ window.FIELD = {
     {
      "label": "Kevin Nieves - CCS Sunday $5,000 Riftbound Event #4 #79 [riftools]",
      "player": "Kevin Nieves",
-     "placement": "#79",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-079-kevin-nieves-diana-scorn-of-the-moon",
@@ -1679,7 +1679,7 @@ window.FIELD = {
     {
      "label": "Ethan Chavez - RiftAtlas Convergence #1 #95 [riftools]",
      "player": "Ethan Chavez",
-     "placement": "#95",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-095-ethan-chavez-diana-scorn-of-the-moon",
@@ -1724,7 +1724,7 @@ window.FIELD = {
     {
      "label": "Dylan Pack - RiftAtlas Convergence #1 #110 [riftools]",
      "player": "Dylan Pack",
-     "placement": "#110",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-110-dylan-pack-diana-scorn-of-the-moon",
@@ -1771,7 +1771,7 @@ window.FIELD = {
     {
      "label": "David Higgins - RiftAtlas Convergence #1 #120 [riftools]",
      "player": "David Higgins",
-     "placement": "#120",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-120-david-higgins-diana-scorn-of-the-moon",
@@ -1817,7 +1817,7 @@ window.FIELD = {
     {
      "label": "Facundo Conde - RiftAtlas Convergence #1 #121 [riftools]",
      "player": "Facundo Conde",
-     "placement": "#121",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-121-facundo-conde-diana-scorn-of-the-moon",
@@ -1860,7 +1860,7 @@ window.FIELD = {
     {
      "label": "Jay Hoerner - RiftAtlas Convergence #1 #123 [riftools]",
      "player": "Jay Hoerner",
-     "placement": "#123",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-123-jay-hoerner-diana-scorn-of-the-moon",
@@ -1903,9 +1903,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "CTG Alanzq - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #1 11-1-0 [riftools]",
+     "label": "CTG Alanzq - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #1 [riftools]",
      "player": "CTG Alanzq",
-     "placement": "#1 11-1-0",
+     "placement": "1st",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/234395cc-2b6a-4a21-a289-8ab1a48ffa51",
@@ -1939,9 +1939,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u795e\u5965\u7a7a\u95f4.\u795e\u5207.cookie - S3 China National Open 3 [riftools]",
+     "label": "\u795e\u5965\u7a7a\u95f4.\u795e\u5207.cookie - S3 China National Open #3 [riftools]",
      "player": "\u795e\u5965\u7a7a\u95f4.\u795e\u5207.cookie",
-     "placement": "3",
+     "placement": "3rd",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224559",
@@ -1988,9 +1988,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "MysterKotek2 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #3 8-1-2 [riftools]",
+     "label": "MysterKotek2 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #3 [riftools]",
      "player": "MysterKotek2",
-     "placement": "#3 8-1-2",
+     "placement": "3rd",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9378fdd0-6f41-4dc5-af42-d25b902ec87c",
@@ -2029,9 +2029,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u767d\u94f6\u5c71.\u8001\u6cb9\u6761.KaLioS - S3 China National Open 4 [riftools]",
+     "label": "\u767d\u94f6\u5c71.\u8001\u6cb9\u6761.KaLioS - S3 China National Open #4 [riftools]",
      "player": "\u767d\u94f6\u5c71.\u8001\u6cb9\u6761.KaLioS",
-     "placement": "4",
+     "placement": "Top 4",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225131",
@@ -2077,9 +2077,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TCG\u65b0\u4eba - S3 China National Open 16 [riftools]",
+     "label": "TCG\u65b0\u4eba - S3 China National Open #16 [riftools]",
      "player": "TCG\u65b0\u4eba",
-     "placement": "16",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224801",
@@ -2125,9 +2125,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7Pokuey - S3 China National Open 24 [riftools]",
+     "label": "LineKa\u00b7Pokuey - S3 China National Open #24 [riftools]",
      "player": "LineKa\u00b7Pokuey",
-     "placement": "24",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224831",
@@ -2175,9 +2175,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Shurit_\u65bd\u91cc\u7279 - S3 China National Open 25 [riftools]",
+     "label": "Shurit_\u65bd\u91cc\u7279 - S3 China National Open #25 [riftools]",
      "player": "Shurit_\u65bd\u91cc\u7279",
-     "placement": "25",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223987",
@@ -2221,9 +2221,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6591\u9a6c\u6f6e\u73a9\u2022CC - S3 China National Open 26 [riftools]",
+     "label": "\u6591\u9a6c\u6f6e\u73a9\u2022CC - S3 China National Open #26 [riftools]",
      "player": "\u6591\u9a6c\u6f6e\u73a9\u2022CC",
-     "placement": "26",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224527",
@@ -2271,9 +2271,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "MGC.\u79c0\u5409Hideyoshi - S3 China National Open 27 [riftools]",
+     "label": "MGC.\u79c0\u5409Hideyoshi - S3 China National Open #27 [riftools]",
      "player": "MGC.\u79c0\u5409Hideyoshi",
-     "placement": "27",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224553",
@@ -2319,9 +2319,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "YBE Chciwy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #33 6-2-0 [riftools]",
+     "label": "YBE Chciwy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #33 [riftools]",
      "player": "YBE Chciwy",
-     "placement": "#33 6-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3e3d4427-ba0f-4810-82b6-352e6bcb510d",
@@ -2360,9 +2360,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Ochman - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #34 6-2-0 [riftools]",
+     "label": "Ochman - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #34 [riftools]",
      "player": "Ochman",
-     "placement": "#34 6-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bbdc30ee-3946-4e2b-acc1-ea8ab9c0e9b2",
@@ -2402,9 +2402,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "yngGosu - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #39 5-3-0 [riftools]",
+     "label": "yngGosu - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #39 [riftools]",
      "player": "yngGosu",
-     "placement": "#39 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a5df9097-84a4-442d-aae1-98ba91e30b7c",
@@ -2440,9 +2440,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u9177\u732b.FG Ast - S3 China National Open 41 [riftools]",
+     "label": "\u9177\u732b.FG Ast - S3 China National Open #41 [riftools]",
      "player": "\u9177\u732b.FG Ast",
-     "placement": "41",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225246",
@@ -2489,9 +2489,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Shaman Magnus - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #46 5-3-0 [riftools]",
+     "label": "Shaman Magnus - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #46 [riftools]",
      "player": "Shaman Magnus",
-     "placement": "#46 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0b05f916-2a3d-4eb7-8ae8-86ba76f79294",
@@ -2528,9 +2528,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u5b88\u5984\u8005 - S3 China National Open 49 [riftools]",
+     "label": "\u5b88\u5984\u8005 - S3 China National Open #49 [riftools]",
      "player": "\u5b88\u5984\u8005",
-     "placement": "49",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222876",
@@ -2575,9 +2575,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5317\u4eac\u6cfd\u8431.\u6d41\u6d6a\u5deb\u5996.\u795e\u5207 - S3 China National Open 53 [riftools]",
+     "label": "\u5317\u4eac\u6cfd\u8431.\u6d41\u6d6a\u5deb\u5996.\u795e\u5207 - S3 China National Open #53 [riftools]",
      "player": "\u5317\u4eac\u6cfd\u8431.\u6d41\u6d6a\u5deb\u5996.\u795e\u5207",
-     "placement": "53",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224089",
@@ -2624,9 +2624,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6708\u4e0a\u5f53\u5e74\u697c - S3 China National Open 61 [riftools]",
+     "label": "\u6708\u4e0a\u5f53\u5e74\u697c - S3 China National Open #61 [riftools]",
      "player": "\u6708\u4e0a\u5f53\u5e74\u697c",
-     "placement": "61",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224480",
@@ -2670,9 +2670,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4fe1\u4ef0.sve.\u7ebf\u4ee3 - S3 China National Open 63 [riftools]",
+     "label": "\u4fe1\u4ef0.sve.\u7ebf\u4ee3 - S3 China National Open #63 [riftools]",
      "player": "\u4fe1\u4ef0.sve.\u7ebf\u4ee3",
-     "placement": "63",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222910",
@@ -2719,9 +2719,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u516c\u7235 - S3 China National Open 75 [riftools]",
+     "label": "\u516c\u7235 - S3 China National Open #75 [riftools]",
      "player": "\u516c\u7235",
-     "placement": "75",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225349",
@@ -2768,9 +2768,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b.\u6771\u839e\u718a\u8c93 - S3 China National Open 82 [riftools]",
+     "label": "\u9177\u732b.\u6771\u839e\u718a\u8c93 - S3 China National Open #82 [riftools]",
      "player": "\u9177\u732b.\u6771\u839e\u718a\u8c93",
-     "placement": "82",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223730",
@@ -2813,9 +2813,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "WarKiller13 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #89 4-3-0 [riftools]",
+     "label": "WarKiller13 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #89 [riftools]",
      "player": "WarKiller13",
-     "placement": "#89 4-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/de428a7d-6227-418d-95d0-97d36bd4bb2e",
@@ -2856,9 +2856,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Hso.Glitter - S3 China National Open 103 [riftools]",
+     "label": "Hso.Glitter - S3 China National Open #103 [riftools]",
      "player": "Hso.Glitter",
-     "placement": "103",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224247",
@@ -2903,188 +2903,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u94c1\u5934-\u5927\u8d3e - S3 China National Open 113 [riftools]",
-     "player": "\u94c1\u5934-\u5927\u8d3e",
-     "placement": "113",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223714",
-     "main": {
-      "Acceptable Losses": 2,
-      "Diana, Lunari": 1,
-      "Fizz, Trickster": 2,
-      "Flash": 1,
-      "Gust": 2,
-      "Hard Bargain": 2,
-      "Hwei, Brooding Painter": 3,
-      "Moonfall": 2,
-      "Ravenbloom Student": 3,
-      "Ride the Wind": 3,
-      "Smoke Screen": 1,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Stupefy": 3,
-      "Tideturner": 3,
-      "Traveling Merchant": 2,
-      "Vex, Apathetic": 2,
-      "Vex, Cheerless": 1,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Baron Nashor": 1,
-      "Flash": 1,
-      "Gust": 1,
-      "Last Rites": 1,
-      "Moonfall": 1,
-      "Smoke Screen": 1,
-      "Turn to Dust": 1,
-      "Vex, Cheerless": 1
-     },
-     "runes": {
-      "Chaos Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Targon's Peak",
-      "Zaun Warrens"
-     ]
-    },
-    {
-     "label": "Meph - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #124 4-4-0 [riftools]",
-     "player": "Meph",
-     "placement": "#124 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3098aa76-14ec-475b-8865-fd47b918c97d",
-     "main": {
-      "Acceptable Losses": 1,
-      "Fizz, Trickster": 2,
-      "Flash": 2,
-      "Gust": 2,
-      "Hard Bargain": 2,
-      "Hwei, Brooding Painter": 3,
-      "Moonfall": 3,
-      "Ravenbloom Student": 3,
-      "Ride the Wind": 3,
-      "Smoke Screen": 1,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Stupefy": 3,
-      "Switcheroo": 1,
-      "Tideturner": 3,
-      "Traveling Merchant": 2,
-      "Vex, Apathetic": 2,
-      "Vex, Cheerless": 1
-     },
-     "side": {
-      "Baron Nashor": 2,
-      "Kha'Zix, Mutating Horror": 2,
-      "Singularity": 1,
-      "Turn to Dust": 2,
-      "Vex, Cheerless": 1
-     },
-     "runes": {
-      "Chaos Rune": 6,
-      "Mind Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u5317\u4eac\u6cfd\u8431-rdrt - S3 China National Open 138 [riftools]",
-     "player": "\u5317\u4eac\u6cfd\u8431-rdrt",
-     "placement": "138",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224440",
-     "main": {
-      "Abandon": 1,
-      "Acceptable Losses": 2,
-      "Diana, Lunari": 1,
-      "Dr. Mundo, Expert": 1,
-      "Fizz, Trickster": 2,
-      "Flash": 1,
-      "Gust": 2,
-      "Hard Bargain": 1,
-      "Hwei, Brooding Painter": 3,
-      "Moonfall": 2,
-      "Ravenbloom Student": 3,
-      "Ride the Wind": 3,
-      "Smoke Screen": 1,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Stupefy": 3,
-      "Tideturner": 3,
-      "Traveling Merchant": 1,
-      "Vex, Apathetic": 2,
-      "Vex, Cheerless": 1,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Baron Nashor": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Last Rites": 1,
-      "Moonfall": 1,
-      "Retreat": 1,
-      "Star-Crossed": 1,
-      "Turn to Dust": 1,
-      "Vex, Cheerless": 1
-     },
-     "runes": {
-      "Chaos Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Targon's Peak",
-      "Zaun Warrens"
-     ]
-    },
-    {
-     "label": "LOP DoctorDiego - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #144 3-4-0 [riftools]",
-     "player": "LOP DoctorDiego",
-     "placement": "#144 3-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/85a669b0-3d91-4563-9854-a0e0701df8b9",
-     "main": {
-      "Acceptable Losses": 1,
-      "Eclipse": 1,
-      "Fizz, Trickster": 2,
-      "Flash": 2,
-      "Gust": 2,
-      "Hard Bargain": 2,
-      "Hwei, Brooding Painter": 3,
-      "Moonfall": 2,
-      "Ravenbloom Student": 3,
-      "Ride the Wind": 2,
-      "Smoke Screen": 1,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Stupefy": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 3,
-      "Vex, Cheerless": 2,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Baron Nashor": 2,
-      "Gust": 1,
-      "Moonfall": 1,
-      "Singularity": 1,
-      "Star-Crossed": 1,
-      "Turn to Dust": 2
-     },
-     "runes": {
-      "Chaos Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "AenElle - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #158 3-5-0 [riftools]",
+     "label": "AenElle - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #158 [riftools]",
      "player": "AenElle",
-     "placement": "#158 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9c60c665-82c6-4e76-9f34-7b9ce4347c28",
@@ -3123,57 +2944,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "TDF.\u5fd8\u4e86 - S3 China National Open 159 [riftools]",
-     "player": "TDF.\u5fd8\u4e86",
-     "placement": "159",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225391",
-     "main": {
-      "Acceptable Losses": 2,
-      "Diana, Lunari": 1,
-      "Edge of Night": 1,
-      "Fizz, Trickster": 2,
-      "Flash": 1,
-      "Gust": 2,
-      "Hard Bargain": 2,
-      "Hwei, Brooding Painter": 3,
-      "Moonfall": 2,
-      "Ravenbloom Student": 3,
-      "Ride the Wind": 3,
-      "Smoke Screen": 1,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Stupefy": 3,
-      "Tideturner": 3,
-      "Traveling Merchant": 2,
-      "Vex, Apathetic": 2,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Abandon": 1,
-      "Baron Nashor": 1,
-      "Dr. Mundo, Expert": 1,
-      "Flash": 1,
-      "Last Rites": 1,
-      "Moonfall": 1,
-      "Turn to Dust": 1,
-      "Vex, Cheerless": 1
-     },
-     "runes": {
-      "Chaos Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": [
-      "Ravenbloom Conservatory",
-      "Targon's Peak",
-      "Zaun Warrens"
-     ]
-    },
-    {
-     "label": "\u706b\u661f.\u5316\u4f5c\u8774\u8776\u98de\u821e - S3 China National Open 176 [riftools]",
+     "label": "\u706b\u661f.\u5316\u4f5c\u8774\u8776\u98de\u821e - S3 China National Open #176 [riftools]",
      "player": "\u706b\u661f.\u5316\u4f5c\u8774\u8776\u98de\u821e",
-     "placement": "176",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225163",
@@ -3217,9 +2990,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SkyRain - S3 China National Open 184 [riftools]",
+     "label": "SkyRain - S3 China National Open #184 [riftools]",
      "player": "SkyRain",
-     "placement": "184",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223064",
@@ -3264,9 +3037,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e0d\u51e1.\u938f\u91d1 - S3 China National Open 193 [riftools]",
+     "label": "\u4e0d\u51e1.\u938f\u91d1 - S3 China National Open #193 [riftools]",
      "player": "\u4e0d\u51e1.\u938f\u91d1",
-     "placement": "193",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225446",
@@ -3314,9 +3087,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "szkoda pr\u0105du - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #198 2-4-0 [riftools]",
+     "label": "szkoda pr\u0105du - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #198 [riftools]",
      "player": "szkoda pr\u0105du",
-     "placement": "#198 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/50e08c7a-9869-4f98-8f8d-eaaec7a293f3",
@@ -3355,9 +3128,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "RageMan1997 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #201 2-6-0 [riftools]",
+     "label": "RageMan1997 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #201 [riftools]",
      "player": "RageMan1997",
-     "placement": "#201 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/23dce36c-da44-436f-b081-da756a1a039a",
@@ -3397,9 +3170,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ChineseTreeMao - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #210 2-6-0 [riftools]",
+     "label": "ChineseTreeMao - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #210 [riftools]",
      "player": "ChineseTreeMao",
-     "placement": "#210 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/83d6dfba-9e0f-4a92-bcef-184ca2751b1d",
@@ -3439,9 +3212,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "3+X Puppet - S3 China National Open 217 [riftools]",
+     "label": "3+X Puppet - S3 China National Open #217 [riftools]",
      "player": "3+X Puppet",
-     "placement": "217",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224218",
@@ -3487,9 +3260,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u653e\u9010\u4e4b\u5203 - S3 China National Open 222 [riftools]",
+     "label": "\u653e\u9010\u4e4b\u5203 - S3 China National Open #222 [riftools]",
      "player": "\u653e\u9010\u4e4b\u5203",
-     "placement": "222",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223810",
@@ -3536,9 +3309,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Racuszek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #235 1-2-0 [riftools]",
+     "label": "Racuszek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #235 [riftools]",
      "player": "Racuszek",
-     "placement": "#235 1-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/89b5b901-aba0-4406-a225-a75689d3a16d",
@@ -3577,9 +3350,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "DarkPromise - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #248 0-2-0 [riftools]",
+     "label": "DarkPromise - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #248 [riftools]",
      "player": "DarkPromise",
-     "placement": "#248 0-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bfecad58-0e2a-472c-b2e8-7bf39b272c33",
@@ -3615,9 +3388,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u597d\u7684\u724c\u5e97\u00b7Maypoke - S3 China National Open 249 [riftools]",
+     "label": "\u597d\u7684\u724c\u5e97\u00b7Maypoke - S3 China National Open #249 [riftools]",
      "player": "\u597d\u7684\u724c\u5e97\u00b7Maypoke",
-     "placement": "249",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224064",
@@ -3658,9 +3431,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "good kids\u5c0f\u723d\u723d\u723d - S3 China National Open 253 [riftools]",
+     "label": "good kids\u5c0f\u723d\u723d\u723d - S3 China National Open #253 [riftools]",
      "player": "good kids\u5c0f\u723d\u723d\u723d",
-     "placement": "253",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222873",
@@ -3709,9 +3482,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Titor - S3 China National Open 260 [riftools]",
+     "label": "Titor - S3 China National Open #260 [riftools]",
      "player": "Titor",
-     "placement": "260",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224513",
@@ -3755,9 +3528,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u94c1\u5934-\u4e0d\u706d\u72c2\u96f7\u7684\u4fe1\u5f92 - S3 China National Open 272 [riftools]",
+     "label": "\u94c1\u5934-\u4e0d\u706d\u72c2\u96f7\u7684\u4fe1\u5f92 - S3 China National Open #272 [riftools]",
      "player": "\u94c1\u5934-\u4e0d\u706d\u72c2\u96f7\u7684\u4fe1\u5f92",
-     "placement": "272",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223375",
@@ -3803,9 +3576,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7\u5065\u4e00 - S3 China National Open 273 [riftools]",
+     "label": "LineKa\u00b7\u5065\u4e00 - S3 China National Open #273 [riftools]",
      "player": "LineKa\u00b7\u5065\u4e00",
-     "placement": "273",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224750",
@@ -3849,9 +3622,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u94ed - S3 China National Open 278 [riftools]",
+     "label": "\u94ed - S3 China National Open #278 [riftools]",
      "player": "\u94ed",
-     "placement": "278",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222663",
@@ -3896,9 +3669,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u706b\u661f.\u6dd8\u91d1\u5de2.yxx - S3 China National Open 283 [riftools]",
+     "label": "\u706b\u661f.\u6dd8\u91d1\u5de2.yxx - S3 China National Open #283 [riftools]",
      "player": "\u706b\u661f.\u6dd8\u91d1\u5de2.yxx",
-     "placement": "283",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225161",
@@ -3942,9 +3715,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5440\u54c8\u54c8\u7684\u65cb\u6728\u65f6\u5149 - S3 China National Open 298 [riftools]",
+     "label": "\u5440\u54c8\u54c8\u7684\u65cb\u6728\u65f6\u5149 - S3 China National Open #298 [riftools]",
      "player": "\u5440\u54c8\u54c8\u7684\u65cb\u6728\u65f6\u5149",
-     "placement": "298",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225173",
@@ -3990,9 +3763,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Hx\u3001\u5353\u5361.\u7089\u5fc3\u6eb6\u89e3 - S3 China National Open 302 [riftools]",
+     "label": "Hx\u3001\u5353\u5361.\u7089\u5fc3\u6eb6\u89e3 - S3 China National Open #302 [riftools]",
      "player": "Hx\u3001\u5353\u5361.\u7089\u5fc3\u6eb6\u89e3",
-     "placement": "302",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225267",
@@ -4037,9 +3810,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e09\u5ddd\u9e9f\u4ecb - S3 China National Open 304 [riftools]",
+     "label": "\u4e09\u5ddd\u9e9f\u4ecb - S3 China National Open #304 [riftools]",
      "player": "\u4e09\u5ddd\u9e9f\u4ecb",
-     "placement": "304",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225327",
@@ -4084,9 +3857,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ARBD-729 - S3 China National Open 309 [riftools]",
+     "label": "ARBD-729 - S3 China National Open #309 [riftools]",
      "player": "ARBD-729",
-     "placement": "309",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224736",
@@ -4133,9 +3906,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Gambit.\u53f6 - S3 China National Open 325 [riftools]",
+     "label": "Gambit.\u53f6 - S3 China National Open #325 [riftools]",
      "player": "Gambit.\u53f6",
-     "placement": "325",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224071",
@@ -4179,9 +3952,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Hso.\u767d\u9f99\u4e07\u4e08 - S3 China National Open 338 [riftools]",
+     "label": "Hso.\u767d\u9f99\u4e07\u4e08 - S3 China National Open #338 [riftools]",
      "player": "Hso.\u767d\u9f99\u4e07\u4e08",
-     "placement": "338",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224020",
@@ -4226,9 +3999,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4ea6\u6797 - S3 China National Open 354 [riftools]",
+     "label": "\u4ea6\u6797 - S3 China National Open #354 [riftools]",
      "player": "\u4ea6\u6797",
-     "placement": "354",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224011",
@@ -4272,9 +4045,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9c7c\u9c7c - S3 China National Open 365 [riftools]",
+     "label": "\u9c7c\u9c7c - S3 China National Open #365 [riftools]",
      "player": "\u9c7c\u9c7c",
-     "placement": "365",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222572",
@@ -4320,9 +4093,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9a81\u5ddd - S3 China National Open 370 [riftools]",
+     "label": "\u9a81\u5ddd - S3 China National Open #370 [riftools]",
      "player": "\u9a81\u5ddd",
-     "placement": "370",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224674",
@@ -4369,9 +4142,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5c0f\u7a9d-\u5929\u6069 - S3 China National Open 414 [riftools]",
+     "label": "\u5c0f\u7a9d-\u5929\u6069 - S3 China National Open #414 [riftools]",
      "player": "\u5c0f\u7a9d-\u5929\u6069",
-     "placement": "414",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223224",
@@ -4413,9 +4186,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "833.\u79d8\u7c4d.\u6709\u70b9\u75d2 - S3 China National Open 424 [riftools]",
+     "label": "833.\u79d8\u7c4d.\u6709\u70b9\u75d2 - S3 China National Open #424 [riftools]",
      "player": "833.\u79d8\u7c4d.\u6709\u70b9\u75d2",
-     "placement": "424",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225055",
@@ -4459,9 +4232,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u963f\u514b - S3 China National Open 494 [riftools]",
+     "label": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u963f\u514b - S3 China National Open #494 [riftools]",
      "player": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u963f\u514b",
-     "placement": "494",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224432",
@@ -4503,9 +4276,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "HBG.\u5b5c\u7136 - S3 China National Open 530 [riftools]",
+     "label": "HBG.\u5b5c\u7136 - S3 China National Open #530 [riftools]",
      "player": "HBG.\u5b5c\u7136",
-     "placement": "530",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222570",
@@ -4551,9 +4324,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u73e0\u624b\u77e5\u7531Official - S3 China National Open 554 [riftools]",
+     "label": "\u73e0\u624b\u77e5\u7531Official - S3 China National Open #554 [riftools]",
      "player": "\u73e0\u624b\u77e5\u7531Official",
-     "placement": "554",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225028",
@@ -5231,7 +5004,7 @@ window.FIELD = {
     {
      "label": "Zachary Plott - CCS Sunday $5,000 Riftbound Event #4 #1 [riftools]",
      "player": "Zachary Plott",
-     "placement": "#1",
+     "placement": "1st",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-001-zachary-plott-master-yi-wuju-bladesman",
@@ -5274,7 +5047,7 @@ window.FIELD = {
     {
      "label": "Brandon Blakeborough - CCS Sunday $5,000 Riftbound Event #4 #2 [riftools]",
      "player": "Brandon Blakeborough",
-     "placement": "#2",
+     "placement": "2nd",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-002-brandon-blakeborough-master-yi-wuju-bladesman",
@@ -5316,7 +5089,7 @@ window.FIELD = {
     {
      "label": "SevBash - RiftAtlas Convergence #1 #2 [riftools]",
      "player": "SevBash",
-     "placement": "#2",
+     "placement": "2nd",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-002-sevbash-master-yi-wuju-bladesman",
@@ -5361,7 +5134,7 @@ window.FIELD = {
     {
      "label": "Fernando Dore - RiftAtlas Convergence #1 #4 [riftools]",
      "player": "Fernando Dore",
-     "placement": "#4",
+     "placement": "Top 4",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-004-fernando-dore-master-yi-wuju-bladesman",
@@ -5400,7 +5173,7 @@ window.FIELD = {
     {
      "label": "JIMMY Y TAN - RiftAtlas Convergence #1 #12 [riftools]",
      "player": "JIMMY Y TAN",
-     "placement": "#12",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-012-jimmy-y-tan-master-yi-wuju-bladesman",
@@ -5448,7 +5221,7 @@ window.FIELD = {
     {
      "label": "Luigi Vallazza - CCS Sunday $5,000 Riftbound Event #4 #13 [riftools]",
      "player": "Luigi Vallazza",
-     "placement": "#13",
+     "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-013-luigi-vallazza-master-yi-wuju-bladesman",
@@ -5492,7 +5265,7 @@ window.FIELD = {
     {
      "label": "FF NoRoleModel - RiftAtlas Convergence #1 #16 [riftools]",
      "player": "FF NoRoleModel",
-     "placement": "#16",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-016-ff-norolemodel-master-yi-wuju-bladesman",
@@ -5535,7 +5308,7 @@ window.FIELD = {
     {
      "label": "Silang Jia - CCS Sunday $5,000 Riftbound Event #4 #18 [riftools]",
      "player": "Silang Jia",
-     "placement": "#18",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-018-silang-jia-master-yi-wuju-bladesman",
@@ -5577,7 +5350,7 @@ window.FIELD = {
     {
      "label": "mois\u00e9s santiba\u00f1ez ossio - RiftAtlas Convergence #1 #20 [riftools]",
      "player": "mois\u00e9s santiba\u00f1ez ossio",
-     "placement": "#20",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-020-mois-s-santiba-ez-ossio-master-yi-wuju-bladesman",
@@ -5620,7 +5393,7 @@ window.FIELD = {
     {
      "label": "Trevor Wenzel - RiftAtlas Convergence #1 #21 [riftools]",
      "player": "Trevor Wenzel",
-     "placement": "#21",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-021-trevor-wenzel-master-yi-wuju-bladesman",
@@ -5664,7 +5437,7 @@ window.FIELD = {
     {
      "label": "Siming Jia - CCS Sunday $5,000 Riftbound Event #4 #22 [riftools]",
      "player": "Siming Jia",
-     "placement": "#22",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-022-siming-jia-master-yi-wuju-bladesman",
@@ -5707,7 +5480,7 @@ window.FIELD = {
     {
      "label": "Orlando lucas - CCS Sunday $5,000 Riftbound Event #4 #28 [riftools]",
      "player": "Orlando lucas",
-     "placement": "#28",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-028-orlando-lucas-master-yi-wuju-bladesman",
@@ -5750,7 +5523,7 @@ window.FIELD = {
     {
      "label": "AA Romomo - RiftAtlas Convergence #1 #30 [riftools]",
      "player": "AA Romomo",
-     "placement": "#30",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-030-aa-romomo-master-yi-wuju-bladesman",
@@ -5795,7 +5568,7 @@ window.FIELD = {
     {
      "label": "Jason Seabolt - CCS Sunday $5,000 Riftbound Event #4 #33 [riftools]",
      "player": "Jason Seabolt",
-     "placement": "#33",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-033-jason-seabolt-master-yi-wuju-bladesman",
@@ -5838,7 +5611,7 @@ window.FIELD = {
     {
      "label": "Noah M Tosado - CCS Sunday $5,000 Riftbound Event #4 #35 [riftools]",
      "player": "Noah M Tosado",
-     "placement": "#35",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-035-noah-m-tosado-master-yi-wuju-bladesman",
@@ -5881,7 +5654,7 @@ window.FIELD = {
     {
      "label": "T Vang | OneOfUs - RiftAtlas Convergence #1 #39 [riftools]",
      "player": "T Vang | OneOfUs",
-     "placement": "#39",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-039-t-vang-oneofus-master-yi-wuju-bladesman",
@@ -5927,7 +5700,7 @@ window.FIELD = {
     {
      "label": "GandalfTheGosu - RiftAtlas Convergence #1 #40 [riftools]",
      "player": "GandalfTheGosu",
-     "placement": "#40",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-040-gandalfthegosu-master-yi-wuju-bladesman",
@@ -5965,7 +5738,7 @@ window.FIELD = {
     {
      "label": "Anthony Strange - CCS Sunday $5,000 Riftbound Event #4 #44 [riftools]",
      "player": "Anthony Strange",
-     "placement": "#44",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-044-anthony-strange-master-yi-wuju-bladesman",
@@ -6008,7 +5781,7 @@ window.FIELD = {
     {
      "label": "AA Kaaleb - RiftAtlas Convergence #1 #44 [riftools]",
      "player": "AA Kaaleb",
-     "placement": "#44",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-044-aa-kaaleb-master-yi-wuju-bladesman",
@@ -6053,7 +5826,7 @@ window.FIELD = {
     {
      "label": "Jaxon Miller - CCS Sunday $5,000 Riftbound Event #4 #49 [riftools]",
      "player": "Jaxon Miller",
-     "placement": "#49",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-049-jaxon-miller-master-yi-wuju-bladesman",
@@ -6096,7 +5869,7 @@ window.FIELD = {
     {
      "label": "Nicklauss McDonald - RiftAtlas Convergence #1 #51 [riftools]",
      "player": "Nicklauss McDonald",
-     "placement": "#51",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-051-nicklauss-mcdonald-master-yi-wuju-bladesman",
@@ -6141,7 +5914,7 @@ window.FIELD = {
     {
      "label": "2KCHEEZY - RiftAtlas Convergence #1 #52 [riftools]",
      "player": "2KCHEEZY",
-     "placement": "#52",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-052-2kcheezy-master-yi-wuju-bladesman",
@@ -6184,7 +5957,7 @@ window.FIELD = {
     {
      "label": "Robert J Schneider - CCS Sunday $5,000 Riftbound Event #4 #53 [riftools]",
      "player": "Robert J Schneider",
-     "placement": "#53",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-053-robert-j-schneider-master-yi-wuju-bladesman",
@@ -6226,7 +5999,7 @@ window.FIELD = {
     {
      "label": "Liz Cox - CCS Sunday $5,000 Riftbound Event #4 #57 [riftools]",
      "player": "Liz Cox",
-     "placement": "#57",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-057-liz-cox-master-yi-wuju-bladesman",
@@ -6269,7 +6042,7 @@ window.FIELD = {
     {
      "label": "Aydan Gutekunst - RiftAtlas Convergence #1 #59 [riftools]",
      "player": "Aydan Gutekunst",
-     "placement": "#59",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-059-aydan-gutekunst-master-yi-wuju-bladesman",
@@ -6312,7 +6085,7 @@ window.FIELD = {
     {
      "label": "Brandon McKamey - CCS Sunday $5,000 Riftbound Event #4 #70 [riftools]",
      "player": "Brandon McKamey",
-     "placement": "#70",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-070-brandon-mckamey-master-yi-wuju-bladesman",
@@ -6356,7 +6129,7 @@ window.FIELD = {
     {
      "label": "Juliuse Mallari - CCS Sunday $5,000 Riftbound Event #4 #81 [riftools]",
      "player": "Juliuse Mallari",
-     "placement": "#81",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-081-juliuse-mallari-master-yi-wuju-bladesman",
@@ -6399,7 +6172,7 @@ window.FIELD = {
     {
      "label": "escapedbard - RiftAtlas Convergence #1 #86 [riftools]",
      "player": "escapedbard",
-     "placement": "#86",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-086-escapedbard-master-yi-wuju-bladesman",
@@ -6445,7 +6218,7 @@ window.FIELD = {
     {
      "label": "Oscar Groves - RiftAtlas Convergence #1 #92 [riftools]",
      "player": "Oscar Groves",
-     "placement": "#92",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-092-oscar-groves-master-yi-wuju-bladesman",
@@ -6487,7 +6260,7 @@ window.FIELD = {
     {
      "label": "UbErStErBeN - RiftAtlas Convergence #1 #116 [riftools]",
      "player": "UbErStErBeN",
-     "placement": "#116",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-116-ubersterben-master-yi-wuju-bladesman",
@@ -6533,7 +6306,7 @@ window.FIELD = {
     {
      "label": "Florian Ramoner - RiftAtlas Convergence #1 #117 [riftools]",
      "player": "Florian Ramoner",
-     "placement": "#117",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-117-florian-ramoner-master-yi-wuju-bladesman",
@@ -6576,7 +6349,7 @@ window.FIELD = {
     {
      "label": "Kankrit M - RiftAtlas Convergence #1 #118 [riftools]",
      "player": "Kankrit M",
-     "placement": "#118",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-118-kankrit-m-master-yi-wuju-bladesman",
@@ -6619,7 +6392,7 @@ window.FIELD = {
     {
      "label": "ATorre - RiftAtlas Convergence #1 #119 [riftools]",
      "player": "ATorre",
-     "placement": "#119",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-119-atorre-master-yi-wuju-bladesman",
@@ -6660,7 +6433,7 @@ window.FIELD = {
     {
      "label": "Angelo Parisi - RiftAtlas Convergence #1 #128 [riftools]",
      "player": "Angelo Parisi",
-     "placement": "#128",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-128-angelo-parisi-master-yi-wuju-bladesman",
@@ -6707,9 +6480,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "clks - S3 China National Open 7 [riftools]",
+     "label": "clks - S3 China National Open #7 [riftools]",
      "player": "clks",
-     "placement": "7",
+     "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224661",
@@ -6751,9 +6524,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "MiszaVonBreslau - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #7 7-2-1 [riftools]",
+     "label": "MiszaVonBreslau - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #7 [riftools]",
      "player": "MiszaVonBreslau",
-     "placement": "#7 7-2-1",
+     "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3df29b96-e483-479c-8253-f92802966e76",
@@ -6789,9 +6562,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ARBD\u2013\u98ce\u7075QAQ.AI - S3 China National Open 8 [riftools]",
+     "label": "ARBD\u2013\u98ce\u7075QAQ.AI - S3 China National Open #8 [riftools]",
      "player": "ARBD\u2013\u98ce\u7075QAQ.AI",
-     "placement": "8",
+     "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224048",
@@ -6834,9 +6607,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Ai.\u795e\u5207.\u5e7b\u5f71 - S3 China National Open 17 [riftools]",
+     "label": "Ai.\u795e\u5207.\u5e7b\u5f71 - S3 China National Open #17 [riftools]",
      "player": "Ai.\u795e\u5207.\u5e7b\u5f71",
-     "placement": "17",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225171",
@@ -6878,9 +6651,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5361\u8336.\u7535\u89c6\u53f0\u5c38\u4f4d\u7d20\u9910 - S3 China National Open 21 [riftools]",
+     "label": "\u5361\u8336.\u7535\u89c6\u53f0\u5c38\u4f4d\u7d20\u9910 - S3 China National Open #21 [riftools]",
      "player": "\u5361\u8336.\u7535\u89c6\u53f0\u5c38\u4f4d\u7d20\u9910",
-     "placement": "21",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224646",
@@ -6923,9 +6696,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Bugu-\u8df3\u5200\u6563\u5931\u654c\u6cd5\u5e08 - S3 China National Open 22 [riftools]",
+     "label": "Bugu-\u8df3\u5200\u6563\u5931\u654c\u6cd5\u5e08 - S3 China National Open #22 [riftools]",
      "player": "Bugu-\u8df3\u5200\u6563\u5931\u654c\u6cd5\u5e08",
-     "placement": "22",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222549",
@@ -6968,9 +6741,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ARBD-Noppl - S3 China National Open 23 [riftools]",
+     "label": "ARBD-Noppl - S3 China National Open #23 [riftools]",
      "player": "ARBD-Noppl",
-     "placement": "23",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224749",
@@ -7014,9 +6787,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "oki9155 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #26 6-2-0 [riftools]",
+     "label": "oki9155 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #26 [riftools]",
      "player": "oki9155",
-     "placement": "#26 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c34dd7f7-9f5d-4a2f-9cbb-c6a771a325ee",
@@ -7052,9 +6825,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "TDF\u4e36\u9668\u77f3 - S3 China National Open 28 [riftools]",
+     "label": "TDF\u4e36\u9668\u77f3 - S3 China National Open #28 [riftools]",
      "player": "TDF\u4e36\u9668\u77f3",
-     "placement": "28",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223867",
@@ -7099,9 +6872,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "MDG\u00b7OTT - S3 China National Open 30 [riftools]",
+     "label": "MDG\u00b7OTT - S3 China National Open #30 [riftools]",
      "player": "MDG\u00b7OTT",
-     "placement": "30",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223722",
@@ -7139,9 +6912,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7075\u82b1\u796d.ECG.dmhs - S3 China National Open 35 [riftools]",
+     "label": "\u7075\u82b1\u796d.ECG.dmhs - S3 China National Open #35 [riftools]",
      "player": "\u7075\u82b1\u796d.ECG.dmhs",
-     "placement": "35",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225025",
@@ -7185,9 +6958,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Lime - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #36 5-1-2 [riftools]",
+     "label": "Lime - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #36 [riftools]",
      "player": "Lime",
-     "placement": "#36 5-1-2",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6483f0b4-2cf2-4f8e-a0d9-6e154e86b70d",
@@ -7223,9 +6996,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u840c\u58eb\u5947-Hi - S3 China National Open 37 [riftools]",
+     "label": "\u840c\u58eb\u5947-Hi - S3 China National Open #37 [riftools]",
      "player": "\u840c\u58eb\u5947-Hi",
-     "placement": "37",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224402",
@@ -7268,9 +7041,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5207.Git.Ovo - S3 China National Open 38 [riftools]",
+     "label": "\u795e\u5207.Git.Ovo - S3 China National Open #38 [riftools]",
      "player": "\u795e\u5207.Git.Ovo",
-     "placement": "38",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223760",
@@ -7311,9 +7084,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u548c\u4f60\u6709\u5173 - S3 China National Open 39 [riftools]",
+     "label": "\u548c\u4f60\u6709\u5173 - S3 China National Open #39 [riftools]",
      "player": "\u548c\u4f60\u6709\u5173",
-     "placement": "39",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224894",
@@ -7357,9 +7130,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ThiefSouls - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #42 5-3-0 [riftools]",
+     "label": "ThiefSouls - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #42 [riftools]",
      "player": "ThiefSouls",
-     "placement": "#42 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/19368977-dd85-475d-bb86-2b4264ef176a",
@@ -7398,9 +7171,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "IceScreamTFT - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #52 5-3-0 [riftools]",
+     "label": "IceScreamTFT - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #52 [riftools]",
      "player": "IceScreamTFT",
-     "placement": "#52 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/820f5d8a-bb49-4d0a-837f-2e680d86893a",
@@ -7438,9 +7211,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Joyspace.\u5428\u5428\u4e00\u62f3\u4e00\u4e2a - S3 China National Open 57 [riftools]",
+     "label": "Joyspace.\u5428\u5428\u4e00\u62f3\u4e00\u4e2a - S3 China National Open #57 [riftools]",
      "player": "Joyspace.\u5428\u5428\u4e00\u62f3\u4e00\u4e2a",
-     "placement": "57",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225400",
@@ -7482,9 +7255,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5965.\u6781\u624b\u611f.\u9ea6\u9ea6 - S3 China National Open 58 [riftools]",
+     "label": "\u795e\u5965.\u6781\u624b\u611f.\u9ea6\u9ea6 - S3 China National Open #58 [riftools]",
      "player": "\u795e\u5965.\u6781\u624b\u611f.\u9ea6\u9ea6",
-     "placement": "58",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225144",
@@ -7527,9 +7300,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TNL-\u6bdb\u8c46 - S3 China National Open 69 [riftools]",
+     "label": "TNL-\u6bdb\u8c46 - S3 China National Open #69 [riftools]",
      "player": "TNL-\u6bdb\u8c46",
-     "placement": "69",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225306",
@@ -7574,9 +7347,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9a6c\u7279 - S3 China National Open 70 [riftools]",
+     "label": "\u9a6c\u7279 - S3 China National Open #70 [riftools]",
      "player": "\u9a6c\u7279",
-     "placement": "70",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225350",
@@ -7619,9 +7392,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TDF.\u7834\u788e\u7684\u51e1 - S3 China National Open 71 [riftools]",
+     "label": "TDF.\u7834\u788e\u7684\u51e1 - S3 China National Open #71 [riftools]",
      "player": "TDF.\u7834\u788e\u7684\u51e1",
-     "placement": "71",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225089",
@@ -7660,9 +7433,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u96f7\u5343 - S3 China National Open 74 [riftools]",
+     "label": "\u96f7\u5343 - S3 China National Open #74 [riftools]",
      "player": "\u96f7\u5343",
-     "placement": "74",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223970",
@@ -7705,9 +7478,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\ud835\ude46\ud835\ude48\ud835\ude46\uff5c3+X\uff5cError - S3 China National Open 77 [riftools]",
+     "label": "\ud835\ude46\ud835\ude48\ud835\ude46\uff5c3+X\uff5cError - S3 China National Open #77 [riftools]",
      "player": "\ud835\ude46\ud835\ude48\ud835\ude46\uff5c3+X\uff5cError",
-     "placement": "77",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225158",
@@ -7749,9 +7522,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FB.\u9648\u5343\u8bed - S3 China National Open 78 [riftools]",
+     "label": "FB.\u9648\u5343\u8bed - S3 China National Open #78 [riftools]",
      "player": "FB.\u9648\u5343\u8bed",
-     "placement": "78",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225145",
@@ -7797,9 +7570,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Ai.\u900d\u9065\u6ef4\u94c1\u8019 - S3 China National Open 81 [riftools]",
+     "label": "Ai.\u900d\u9065\u6ef4\u94c1\u8019 - S3 China National Open #81 [riftools]",
      "player": "Ai.\u900d\u9065\u6ef4\u94c1\u8019",
-     "placement": "81",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224529",
@@ -7841,9 +7614,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "F\u00ean - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #88 4-4-0 [riftools]",
+     "label": "F\u00ean - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #88 [riftools]",
      "player": "F\u00ean",
-     "placement": "#88 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f87db2c5-eab8-467d-9462-27b44538738c",
@@ -7880,9 +7653,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6258\u9a6c\u6258@\u724c\u5ba2\u76df - S3 China National Open 89 [riftools]",
+     "label": "\u6258\u9a6c\u6258@\u724c\u5ba2\u76df - S3 China National Open #89 [riftools]",
      "player": "\u6258\u9a6c\u6258@\u724c\u5ba2\u76df",
-     "placement": "89",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223615",
@@ -7926,348 +7699,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5965.\u6781\u624b\u611f.\u8001\u91d1 - S3 China National Open 115 [riftools]",
-     "player": "\u795e\u5965.\u6781\u624b\u611f.\u8001\u91d1",
-     "placement": "115",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223087",
-     "main": {
-      "Challenge": 1,
-      "Charm": 3,
-      "Defy": 3,
-      "Disarming Rake": 1,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fiora, Peerless": 2,
-      "First Mate": 2,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 2,
-      "Scuttle Crab": 3,
-      "Tasty Faefolk": 1,
-      "Whiteflame Protector": 1,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Challenge": 1,
-      "Disarming Rake": 2,
-      "Not So Fast": 1,
-      "Ruin Runner": 1,
-      "Sabotage": 1,
-      "Tasty Faefolk": 1,
-      "Whiteflame Protector": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Seat of Power",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "CCB.\u79cb\u88e4 - S3 China National Open 119 [riftools]",
-     "player": "CCB.\u79cb\u88e4",
-     "placement": "119",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224689",
-     "main": {
-      "Akshan, Mischievous": 2,
-      "Back Off": 1,
-      "Challenge": 1,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fiora, Peerless": 2,
-      "First Mate": 2,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 2,
-      "Scuttle Crab": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Challenge": 1,
-      "Disarming Rake": 2,
-      "Fiora, Peerless": 1,
-      "First Mate": 1,
-      "Not So Fast": 2,
-      "Ruin Runner": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Star Spring",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "ShadowShadet - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #120 4-4-0 [riftools]",
-     "player": "ShadowShadet",
-     "placement": "#120 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/70b357d2-724a-4efa-bda7-d26a2a13b6e3",
-     "main": {
-      "Challenge": 2,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fiora, Peerless": 2,
-      "First Mate": 2,
-      "Lonely Poro": 3,
-      "Pit Rookie": 3,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 3,
-      "Scuttle Crab": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Alpha Strike": 2,
-      "Disarming Rake": 3,
-      "Fiora, Peerless": 1,
-      "Not So Fast": 1,
-      "Ruin Runner": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u6d77\u76d7\u5e15\u5947\u65af - S3 China National Open 121 [riftools]",
-     "player": "\u6d77\u76d7\u5e15\u5947\u65af",
-     "placement": "121",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225183",
-     "main": {
-      "Back Off": 1,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fiora, Peerless": 2,
-      "First Mate": 2,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 3,
-      "Primal Strength": 1,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 3,
-      "Scuttle Crab": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Alpha Strike": 2,
-      "Challenge": 2,
-      "Disarming Rake": 3,
-      "Fiora, Peerless": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Seat of Power",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "\u795e\u5965.\u6781\u624b\u611f.xlb - S3 China National Open 122 [riftools]",
-     "player": "\u795e\u5965.\u6781\u624b\u611f.xlb",
-     "placement": "122",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224388",
-     "main": {
-      "Akshan, Mischievous": 1,
-      "Challenge": 2,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "First Mate": 3,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 3,
-      "Sabotage": 2,
-      "Scuttle Crab": 3,
-      "Whiteflame Protector": 1,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Disarming Rake": 3,
-      "Fiora, Peerless": 2,
-      "Not So Fast": 1,
-      "Sabotage": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Seat of Power",
-      "Star Spring"
-     ]
-    },
-    {
-     "label": "TCC_\u5927\u65b0 - S3 China National Open 126 [riftools]",
-     "player": "TCC_\u5927\u65b0",
-     "placement": "126",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/222176",
-     "main": {
-      "Brutalizer": 2,
-      "Challenge": 1,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 1,
-      "Fiora, Peerless": 2,
-      "First Mate": 2,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 3,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 3,
-      "Scuttle Crab": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Alpha Strike": 2,
-      "Challenge": 1,
-      "Disarming Rake": 3,
-      "Fiora, Peerless": 1,
-      "Ruin Runner": 1
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Calm Rune": 6
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Seat of Power",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "sylar_857 - S3 China National Open 131 [riftools]",
-     "player": "sylar_857",
-     "placement": "131",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223655",
-     "main": {
-      "Akshan, Mischievous": 2,
-      "Back Off": 1,
-      "Brutalizer": 1,
-      "Challenge": 1,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "First Mate": 2,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 2,
-      "Scuttle Crab": 3,
-      "Zhonya's Hourglass": 3
-     },
-     "side": {
-      "Challenge": 1,
-      "Disarming Rake": 2,
-      "First Mate": 1,
-      "Not So Fast": 1,
-      "Primal Strength": 1,
-      "Ruin Runner": 1,
-      "Sabotage": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Star Spring",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "\u82e5\u53f6\u7766 - S3 China National Open 135 [riftools]",
-     "player": "\u82e5\u53f6\u7766",
-     "placement": "135",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223565",
-     "main": {
-      "Brutalizer": 1,
-      "Challenge": 3,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "First Mate": 2,
-      "Irelia, Fervent": 3,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Sabotage": 2,
-      "Scuttle Crab": 3,
-      "Zhonya's Hourglass": 3
-     },
-     "side": {},
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Star Spring",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "GenginIII - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #139 3-3-2 [riftools]",
+     "label": "GenginIII - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #139 [riftools]",
      "player": "GenginIII",
-     "placement": "#139 3-3-2",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8cb6a193-fd40-432e-825f-662bdfcdac05",
@@ -8304,53 +7738,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "YK-\u56de\u54cd - S3 China National Open 146 [riftools]",
-     "player": "YK-\u56de\u54cd",
-     "placement": "146",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224194",
-     "main": {
-      "Akshan, Mischievous": 1,
-      "Challenge": 2,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "First Mate": 3,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Pit Rookie": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 2,
-      "Scuttle Crab": 3,
-      "Tasty Faefolk": 1,
-      "Zhonya's Hourglass": 3
-     },
-     "side": {
-      "Akshan, Mischievous": 2,
-      "Fiora, Peerless": 1,
-      "Not So Fast": 2,
-      "Poppy, Paragon": 1,
-      "Vilemaw": 1,
-      "Whiteflame Protector": 1
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Calm Rune": 6
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Seat of Power",
-      "Vilemaw's Lair"
-     ]
-    },
-    {
-     "label": "\u611f\u89c9\u4e0d\u5982\u7070\u6d41\u4e3d - S3 China National Open 150 [riftools]",
+     "label": "\u611f\u89c9\u4e0d\u5982\u7070\u6d41\u4e3d - S3 China National Open #150 [riftools]",
      "player": "\u611f\u89c9\u4e0d\u5982\u7070\u6d41\u4e3d",
-     "placement": "150",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225329",
@@ -8392,57 +7782,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6697\u96ea@ECG - S3 China National Open 151 [riftools]",
-     "player": "\u6697\u96ea@ECG",
-     "placement": "151",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224302",
-     "main": {
-      "Akshan, Mischievous": 1,
-      "Challenge": 1,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "First Mate": 3,
-      "Lonely Poro": 3,
-      "Master Yi, Tempered": 1,
-      "Not So Fast": 1,
-      "Pit Rookie": 3,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 1,
-      "Scuttle Crab": 3,
-      "Vilemaw": 1,
-      "Whiteflame Protector": 1,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Akshan, Mischievous": 1,
-      "Alpha Strike": 1,
-      "Challenge": 1,
-      "Fiora, Peerless": 1,
-      "Not So Fast": 1,
-      "Sabotage": 1,
-      "Vilemaw": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Calm Rune": 6
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Seat of Power",
-      "Vilemaw's Lair"
-     ]
-    },
-    {
-     "label": "\u91d1\u5ca9-\u8f69\u6cfd\uff08\u6069\u5e08\u9493\u9c7c\u738b\uff09 - S3 China National Open 152 [riftools]",
+     "label": "\u91d1\u5ca9-\u8f69\u6cfd\uff08\u6069\u5e08\u9493\u9c7c\u738b\uff09 - S3 China National Open #152 [riftools]",
      "player": "\u91d1\u5ca9-\u8f69\u6cfd\uff08\u6069\u5e08\u9493\u9c7c\u738b\uff09",
-     "placement": "152",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224769",
@@ -8486,9 +7828,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534e\u84dd.\u5974\u96b6\u9a91\u58eb\u76d6\u5c14 - S3 China National Open 155 [riftools]",
+     "label": "\u534e\u84dd.\u5974\u96b6\u9a91\u58eb\u76d6\u5c14 - S3 China National Open #155 [riftools]",
      "player": "\u534e\u84dd.\u5974\u96b6\u9a91\u58eb\u76d6\u5c14",
-     "placement": "155",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224534",
@@ -8530,9 +7872,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ARBD-\u9b3c\u9b3c\u55b5 - S3 China National Open 157 [riftools]",
+     "label": "ARBD-\u9b3c\u9b3c\u55b5 - S3 China National Open #157 [riftools]",
      "player": "ARBD-\u9b3c\u9b3c\u55b5",
-     "placement": "157",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225140",
@@ -8573,9 +7915,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "mazur - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #160 3-4-0 [riftools]",
+     "label": "mazur - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #160 [riftools]",
      "player": "mazur",
-     "placement": "#160 3-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/eee3b596-2ba8-4307-8cb3-170b3f1501bf",
@@ -8612,9 +7954,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "M0jito1 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #164 3-3-0 [riftools]",
+     "label": "M0jito1 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #164 [riftools]",
      "player": "M0jito1",
-     "placement": "#164 3-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8e212151-483c-4838-9280-fc0b626e7730",
@@ -8653,9 +7995,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Dfl-\u9e7f\u5566\u565c\u5566\u561e - S3 China National Open 165 [riftools]",
+     "label": "Dfl-\u9e7f\u5566\u565c\u5566\u561e - S3 China National Open #165 [riftools]",
      "player": "Dfl-\u9e7f\u5566\u565c\u5566\u561e",
-     "placement": "165",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224906",
@@ -8698,9 +8040,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ARBD-Yihao.MH - S3 China National Open 167 [riftools]",
+     "label": "ARBD-Yihao.MH - S3 China National Open #167 [riftools]",
      "player": "ARBD-Yihao.MH",
-     "placement": "167",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223671",
@@ -8742,9 +8084,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "JadeKnight - S3 China National Open 169 [riftools]",
+     "label": "JadeKnight - S3 China National Open #169 [riftools]",
      "player": "JadeKnight",
-     "placement": "169",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224909",
@@ -8790,9 +8132,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Aipotu1998 - S3 China National Open 170 [riftools]",
+     "label": "Aipotu1998 - S3 China National Open #170 [riftools]",
      "player": "Aipotu1998",
-     "placement": "170",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224586",
@@ -8836,9 +8178,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Solo\u4e28\u6843\u5b50 - S3 China National Open 173 [riftools]",
+     "label": "Solo\u4e28\u6843\u5b50 - S3 China National Open #173 [riftools]",
      "player": "Solo\u4e28\u6843\u5b50",
-     "placement": "173",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224707",
@@ -8883,9 +8225,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "blachodachowka - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #173 3-5-0 [riftools]",
+     "label": "blachodachowka - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #173 [riftools]",
      "player": "blachodachowka",
-     "placement": "#173 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2a6965f9-7a6a-4a06-927e-575ef524dc7d",
@@ -8922,9 +8264,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ForGot - S3 China National Open 178 [riftools]",
+     "label": "ForGot - S3 China National Open #178 [riftools]",
      "player": "ForGot",
-     "placement": "178",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224265",
@@ -8969,9 +8311,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7qie\u00b7\u7231 - S3 China National Open 187 [riftools]",
+     "label": "LineKa\u00b7qie\u00b7\u7231 - S3 China National Open #187 [riftools]",
      "player": "LineKa\u00b7qie\u00b7\u7231",
-     "placement": "187",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224473",
@@ -9013,9 +8355,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "volanturia - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #190 2-5-1 [riftools]",
+     "label": "volanturia - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #190 [riftools]",
      "player": "volanturia",
-     "placement": "#190 2-5-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/72111d72-8d1d-4e41-8871-2738f1267793",
@@ -9055,9 +8397,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6dd8\u91d1\u5de2.Even - S3 China National Open 191 [riftools]",
+     "label": "\u6dd8\u91d1\u5de2.Even - S3 China National Open #191 [riftools]",
      "player": "\u6dd8\u91d1\u5de2.Even",
-     "placement": "191",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224790",
@@ -9098,9 +8440,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68ee\u60ca-AllenF - S3 China National Open 194 [riftools]",
+     "label": "\u68ee\u60ca-AllenF - S3 China National Open #194 [riftools]",
      "player": "\u68ee\u60ca-AllenF",
-     "placement": "194",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223842",
@@ -9144,9 +8486,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Vicer - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #194 2-5-0 [riftools]",
+     "label": "Vicer - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #194 [riftools]",
      "player": "Vicer",
-     "placement": "#194 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/90790d70-ebea-4f7f-8198-095e828e1df3",
@@ -9182,9 +8524,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "tgame\u3001\u695a\u6674 - S3 China National Open 196 [riftools]",
+     "label": "tgame\u3001\u695a\u6674 - S3 China National Open #196 [riftools]",
      "player": "tgame\u3001\u695a\u6674",
-     "placement": "196",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222730",
@@ -9228,9 +8570,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "uwu owo ajaja - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #196 2-3-0 [riftools]",
+     "label": "uwu owo ajaja - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #196 [riftools]",
      "player": "uwu owo ajaja",
-     "placement": "#196 2-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ed909d4b-543a-4e55-99f4-96b107fdf190",
@@ -9269,9 +8611,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u534e\u84dd-dh9 - S3 China National Open 198 [riftools]",
+     "label": "\u534e\u84dd-dh9 - S3 China National Open #198 [riftools]",
      "player": "\u534e\u84dd-dh9",
-     "placement": "198",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224699",
@@ -9314,9 +8656,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Navi - S3 China National Open 205 [riftools]",
+     "label": "Navi - S3 China National Open #205 [riftools]",
      "player": "Navi",
-     "placement": "205",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225282",
@@ -9358,9 +8700,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5965\u7a7a\u95f4.\u6781\u624b\u611f.\u795e\u5207.\u9017 - S3 China National Open 208 [riftools]",
+     "label": "\u795e\u5965\u7a7a\u95f4.\u6781\u624b\u611f.\u795e\u5207.\u9017 - S3 China National Open #208 [riftools]",
      "player": "\u795e\u5965\u7a7a\u95f4.\u6781\u624b\u611f.\u795e\u5207.\u9017",
-     "placement": "208",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223951",
@@ -9403,9 +8745,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9e4f\u8f1d\u4e36 - S3 China National Open 215 [riftools]",
+     "label": "\u9e4f\u8f1d\u4e36 - S3 China National Open #215 [riftools]",
      "player": "\u9e4f\u8f1d\u4e36",
-     "placement": "215",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/221025",
@@ -9451,9 +8793,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7075\u82b1\u796d.ECG.\u523a\u732c - S3 China National Open 224 [riftools]",
+     "label": "\u7075\u82b1\u796d.ECG.\u523a\u732c - S3 China National Open #224 [riftools]",
      "player": "\u7075\u82b1\u796d.ECG.\u523a\u732c",
-     "placement": "224",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224301",
@@ -9497,9 +8839,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6930\u8089 - S3 China National Open 225 [riftools]",
+     "label": "\u6930\u8089 - S3 China National Open #225 [riftools]",
      "player": "\u6930\u8089",
-     "placement": "225",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222893",
@@ -9543,9 +8885,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5317\u4eac\u6cfd\u8431-OAA - S3 China National Open 227 [riftools]",
+     "label": "\u5317\u4eac\u6cfd\u8431-OAA - S3 China National Open #227 [riftools]",
      "player": "\u5317\u4eac\u6cfd\u8431-OAA",
-     "placement": "227",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224650",
@@ -9588,9 +8930,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5915\u7167 - S3 China National Open 229 [riftools]",
+     "label": "\u5915\u7167 - S3 China National Open #229 [riftools]",
      "player": "\u5915\u7167",
-     "placement": "229",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225153",
@@ -9629,9 +8971,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5b64\u950b\u7834\u9635 - S3 China National Open 231 [riftools]",
+     "label": "\u5b64\u950b\u7834\u9635 - S3 China National Open #231 [riftools]",
      "player": "\u5b64\u950b\u7834\u9635",
-     "placement": "231",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225198",
@@ -9674,9 +9016,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "YBE Kokosek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #234 1-2-0 [riftools]",
+     "label": "YBE Kokosek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #234 [riftools]",
      "player": "YBE Kokosek",
-     "placement": "#234 1-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d0a55181-182b-44b5-a1c0-4a2040774110",
@@ -9715,9 +9057,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "KaciBuci - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #236 1-4-0 [riftools]",
+     "label": "KaciBuci - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #236 [riftools]",
      "player": "KaciBuci",
-     "placement": "#236 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/facc02ef-d16e-4705-b120-310d02cae0e7",
@@ -9753,9 +9095,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "CCB.\u8001\u7eff - S3 China National Open 245 [riftools]",
+     "label": "CCB.\u8001\u7eff - S3 China National Open #245 [riftools]",
      "player": "CCB.\u8001\u7eff",
-     "placement": "245",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225445",
@@ -9798,9 +9140,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5411\u94b1\u51b2 - S3 China National Open 247 [riftools]",
+     "label": "\u5411\u94b1\u51b2 - S3 China National Open #247 [riftools]",
      "player": "\u5411\u94b1\u51b2",
-     "placement": "247",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224708",
@@ -9843,9 +9185,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Huntersmark\u00b7\u795e\u5207\u2022\u6b6aQ - S3 China National Open 252 [riftools]",
+     "label": "Huntersmark\u00b7\u795e\u5207\u2022\u6b6aQ - S3 China National Open #252 [riftools]",
      "player": "Huntersmark\u00b7\u795e\u5207\u2022\u6b6aQ",
-     "placement": "252",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225093",
@@ -9889,9 +9231,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "3XTenTacion - S3 China National Open 254 [riftools]",
+     "label": "3XTenTacion - S3 China National Open #254 [riftools]",
      "player": "3XTenTacion",
-     "placement": "254",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222348",
@@ -9931,9 +9273,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7eef\u8863\u54cd - S3 China National Open 258 [riftools]",
+     "label": "\u7eef\u8863\u54cd - S3 China National Open #258 [riftools]",
      "player": "\u7eef\u8863\u54cd",
-     "placement": "258",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224741",
@@ -9975,9 +9317,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5b58\u6863\u70b9.\u534e\u84dd.\u6c90\u79cb.Ai - S3 China National Open 262 [riftools]",
+     "label": "\u5b58\u6863\u70b9.\u534e\u84dd.\u6c90\u79cb.Ai - S3 China National Open #262 [riftools]",
      "player": "\u5b58\u6863\u70b9.\u534e\u84dd.\u6c90\u79cb.Ai",
-     "placement": "262",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225146",
@@ -10024,9 +9366,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u8352\u8703 - S3 China National Open 277 [riftools]",
+     "label": "\u8352\u8703 - S3 China National Open #277 [riftools]",
      "player": "\u8352\u8703",
-     "placement": "277",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225201",
@@ -10068,9 +9410,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "XXT\u00b7BLANK - S3 China National Open 290 [riftools]",
+     "label": "XXT\u00b7BLANK - S3 China National Open #290 [riftools]",
      "player": "XXT\u00b7BLANK",
-     "placement": "290",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224632",
@@ -10114,9 +9456,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Mtt-i\u5f00TV\u4e36\u8001\u6768 - S3 China National Open 307 [riftools]",
+     "label": "Mtt-i\u5f00TV\u4e36\u8001\u6768 - S3 China National Open #307 [riftools]",
      "player": "Mtt-i\u5f00TV\u4e36\u8001\u6768",
-     "placement": "307",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223067",
@@ -10157,9 +9499,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5927\u6728\u4eba\u4e00\u516b - S3 China National Open 310 [riftools]",
+     "label": "\u5927\u6728\u4eba\u4e00\u516b - S3 China National Open #310 [riftools]",
      "player": "\u5927\u6728\u4eba\u4e00\u516b",
-     "placement": "310",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224285",
@@ -10201,9 +9543,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "joyspace-\u9053\u5fc3\u7834\u788e79 - S3 China National Open 312 [riftools]",
+     "label": "joyspace-\u9053\u5fc3\u7834\u788e79 - S3 China National Open #312 [riftools]",
      "player": "joyspace-\u9053\u5fc3\u7834\u788e79",
-     "placement": "312",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223577",
@@ -10249,9 +9591,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68a6\u4e4b\u661f-Monkey - S3 China National Open 317 [riftools]",
+     "label": "\u68a6\u4e4b\u661f-Monkey - S3 China National Open #317 [riftools]",
      "player": "\u68a6\u4e4b\u661f-Monkey",
-     "placement": "317",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225111",
@@ -10294,9 +9636,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5357\u98ce\u672a\u665a - S3 China National Open 322 [riftools]",
+     "label": "\u5357\u98ce\u672a\u665a - S3 China National Open #322 [riftools]",
      "player": "\u5357\u98ce\u672a\u665a",
-     "placement": "322",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224377",
@@ -10340,9 +9682,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5e06 - S3 China National Open 329 [riftools]",
+     "label": "\u5e06 - S3 China National Open #329 [riftools]",
      "player": "\u5e06",
-     "placement": "329",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224882",
@@ -10385,9 +9727,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b.CC - S3 China National Open 335 [riftools]",
+     "label": "\u9177\u732b.CC - S3 China National Open #335 [riftools]",
      "player": "\u9177\u732b.CC",
-     "placement": "335",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223620",
@@ -10433,9 +9775,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u5c0f\u6ed1\u677fpp - S3 China National Open 336 [riftools]",
+     "label": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u5c0f\u6ed1\u677fpp - S3 China National Open #336 [riftools]",
      "player": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u5c0f\u6ed1\u677fpp",
-     "placement": "336",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225114",
@@ -10476,9 +9818,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "OXYCYC - S3 China National Open 342 [riftools]",
+     "label": "OXYCYC - S3 China National Open #342 [riftools]",
      "player": "OXYCYC",
-     "placement": "342",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224702",
@@ -10523,9 +9865,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u72d7\u72d7\u54d2-\u6bd5\u6708\u4e4c - S3 China National Open 343 [riftools]",
+     "label": "\u72d7\u72d7\u54d2-\u6bd5\u6708\u4e4c - S3 China National Open #343 [riftools]",
      "player": "\u72d7\u72d7\u54d2-\u6bd5\u6708\u4e4c",
-     "placement": "343",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225129",
@@ -10569,9 +9911,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u516b\u4e2a\u91cc\u4e9a\u5c14 - S3 China National Open 344 [riftools]",
+     "label": "\u516b\u4e2a\u91cc\u4e9a\u5c14 - S3 China National Open #344 [riftools]",
      "player": "\u516b\u4e2a\u91cc\u4e9a\u5c14",
-     "placement": "344",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223657",
@@ -10612,9 +9954,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "KDX.\u514b\u70c8\u540c\u5b66 - S3 China National Open 351 [riftools]",
+     "label": "KDX.\u514b\u70c8\u540c\u5b66 - S3 China National Open #351 [riftools]",
      "player": "KDX.\u514b\u70c8\u540c\u5b66",
-     "placement": "351",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223579",
@@ -10655,9 +9997,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TDF.\u795e\u5207.emiya - S3 China National Open 356 [riftools]",
+     "label": "TDF.\u795e\u5207.emiya - S3 China National Open #356 [riftools]",
      "player": "TDF.\u795e\u5207.emiya",
-     "placement": "356",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222887",
@@ -10699,9 +10041,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TIE.Denniscc - S3 China National Open 357 [riftools]",
+     "label": "TIE.Denniscc - S3 China National Open #357 [riftools]",
      "player": "TIE.Denniscc",
-     "placement": "357",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223969",
@@ -10745,9 +10087,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "XXT.\u897f\u4f2f\u5229\u4e9a\u8001\u5251\u5723 - S3 China National Open 358 [riftools]",
+     "label": "XXT.\u897f\u4f2f\u5229\u4e9a\u8001\u5251\u5723 - S3 China National Open #358 [riftools]",
      "player": "XXT.\u897f\u4f2f\u5229\u4e9a\u8001\u5251\u5723",
-     "placement": "358",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225108",
@@ -10798,9 +10140,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u8428\u6ee1\u7267\u5e08 - S3 China National Open 359 [riftools]",
+     "label": "\u8428\u6ee1\u7267\u5e08 - S3 China National Open #359 [riftools]",
      "player": "\u8428\u6ee1\u7267\u5e08",
-     "placement": "359",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224701",
@@ -10844,9 +10186,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68a6\u4e4b\u661f.jkforone - S3 China National Open 376 [riftools]",
+     "label": "\u68a6\u4e4b\u661f.jkforone - S3 China National Open #376 [riftools]",
      "player": "\u68a6\u4e4b\u661f.jkforone",
-     "placement": "376",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222535",
@@ -10889,9 +10231,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e32\u8fc7\u4eba\uff0c\u717d\u4eba\u95aa - S3 China National Open 379 [riftools]",
+     "label": "\u4e32\u8fc7\u4eba\uff0c\u717d\u4eba\u95aa - S3 China National Open #379 [riftools]",
      "player": "\u4e32\u8fc7\u4eba\uff0c\u717d\u4eba\u95aa",
-     "placement": "379",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223885",
@@ -10932,9 +10274,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "1001.\u52a0\u6bd4 - S3 China National Open 387 [riftools]",
+     "label": "1001.\u52a0\u6bd4 - S3 China National Open #387 [riftools]",
      "player": "1001.\u52a0\u6bd4",
-     "placement": "387",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224382",
@@ -10975,9 +10317,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FG.sadknight - S3 China National Open 389 [riftools]",
+     "label": "FG.sadknight - S3 China National Open #389 [riftools]",
      "player": "FG.sadknight",
-     "placement": "389",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222914",
@@ -11019,9 +10361,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b.\u6771\u839e\u9f99\u8c93 - S3 China National Open 391 [riftools]",
+     "label": "\u9177\u732b.\u6771\u839e\u9f99\u8c93 - S3 China National Open #391 [riftools]",
      "player": "\u9177\u732b.\u6771\u839e\u9f99\u8c93",
-     "placement": "391",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224990",
@@ -11065,9 +10407,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "CCB.six - S3 China National Open 392 [riftools]",
+     "label": "CCB.six - S3 China National Open #392 [riftools]",
      "player": "CCB.six",
-     "placement": "392",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224319",
@@ -11112,9 +10454,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "stan - S3 China National Open 398 [riftools]",
+     "label": "stan - S3 China National Open #398 [riftools]",
      "player": "stan",
-     "placement": "398",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224047",
@@ -11156,9 +10498,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "123 - S3 China National Open 400 [riftools]",
+     "label": "123 - S3 China National Open #400 [riftools]",
      "player": "123",
-     "placement": "400",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224438",
@@ -11202,9 +10544,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Fake Love - S3 China National Open 403 [riftools]",
+     "label": "Fake Love - S3 China National Open #403 [riftools]",
      "player": "Fake Love",
-     "placement": "403",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222770",
@@ -11248,9 +10590,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u71c3\u70e7\u5c0f\u4f01\u9e45 - S3 China National Open 406 [riftools]",
+     "label": "\u71c3\u70e7\u5c0f\u4f01\u9e45 - S3 China National Open #406 [riftools]",
      "player": "\u71c3\u70e7\u5c0f\u4f01\u9e45",
-     "placement": "406",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222111",
@@ -11296,9 +10638,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "1001.\u84dd\u53d1\u5c0f\u961f.\u79c0\u79c0 - S3 China National Open 410 [riftools]",
+     "label": "1001.\u84dd\u53d1\u5c0f\u961f.\u79c0\u79c0 - S3 China National Open #410 [riftools]",
      "player": "1001.\u84dd\u53d1\u5c0f\u961f.\u79c0\u79c0",
-     "placement": "410",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225390",
@@ -11342,9 +10684,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Neal@\u5e1d\u9632\u58eb - S3 China National Open 413 [riftools]",
+     "label": "Neal@\u5e1d\u9632\u58eb - S3 China National Open #413 [riftools]",
      "player": "Neal@\u5e1d\u9632\u58eb",
-     "placement": "413",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225046",
@@ -11387,9 +10729,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TUB.\u8003\u62c9 - S3 China National Open 417 [riftools]",
+     "label": "TUB.\u8003\u62c9 - S3 China National Open #417 [riftools]",
      "player": "TUB.\u8003\u62c9",
-     "placement": "417",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224958",
@@ -11432,9 +10774,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "decade\uff08\u8c37\u795e\u5c0f\u5f1f\uff09 - S3 China National Open 418 [riftools]",
+     "label": "decade\uff08\u8c37\u795e\u5c0f\u5f1f\uff09 - S3 China National Open #418 [riftools]",
      "player": "decade\uff08\u8c37\u795e\u5c0f\u5f1f\uff09",
-     "placement": "418",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223537",
@@ -11472,9 +10814,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f20\u5947\u5b88\u95e8\u738b\u767d\u5f00 - S3 China National Open 419 [riftools]",
+     "label": "\u4f20\u5947\u5b88\u95e8\u738b\u767d\u5f00 - S3 China National Open #419 [riftools]",
      "player": "\u4f20\u5947\u5b88\u95e8\u738b\u767d\u5f00",
-     "placement": "419",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224075",
@@ -11519,9 +10861,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68ee\u60ca-WalkingBye - S3 China National Open 433 [riftools]",
+     "label": "\u68ee\u60ca-WalkingBye - S3 China National Open #433 [riftools]",
      "player": "\u68ee\u60ca-WalkingBye",
-     "placement": "433",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224543",
@@ -11565,9 +10907,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "CCB.\u5c0f\u79bb\u5c0f\u79bb - S3 China National Open 434 [riftools]",
+     "label": "CCB.\u5c0f\u79bb\u5c0f\u79bb - S3 China National Open #434 [riftools]",
      "player": "CCB.\u5c0f\u79bb\u5c0f\u79bb",
-     "placement": "434",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224962",
@@ -11611,9 +10953,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "XXT.\u7a7a\u6761\u5495\u54d2\u5b50 - S3 China National Open 442 [riftools]",
+     "label": "XXT.\u7a7a\u6761\u5495\u54d2\u5b50 - S3 China National Open #442 [riftools]",
      "player": "XXT.\u7a7a\u6761\u5495\u54d2\u5b50",
-     "placement": "442",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224257",
@@ -11654,9 +10996,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5143\u6c14-\u4e5d\u842c - S3 China National Open 456 [riftools]",
+     "label": "\u5143\u6c14-\u4e5d\u842c - S3 China National Open #456 [riftools]",
      "player": "\u5143\u6c14-\u4e5d\u842c",
-     "placement": "456",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225211",
@@ -11700,9 +11042,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "KGB. \u94f6\u6cb3\uff08\u6069\u5e0815841\uff09 - S3 China National Open 457 [riftools]",
+     "label": "KGB. \u94f6\u6cb3\uff08\u6069\u5e0815841\uff09 - S3 China National Open #457 [riftools]",
      "player": "KGB. \u94f6\u6cb3\uff08\u6069\u5e0815841\uff09",
-     "placement": "457",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222526",
@@ -11746,9 +11088,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "XXT.\u4e0a\u5f26\u6708 - S3 China National Open 458 [riftools]",
+     "label": "XXT.\u4e0a\u5f26\u6708 - S3 China National Open #458 [riftools]",
      "player": "XXT.\u4e0a\u5f26\u6708",
-     "placement": "458",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224952",
@@ -11792,9 +11134,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Ai.\u5343\u706b\u706b\u706b - S3 China National Open 470 [riftools]",
+     "label": "Ai.\u5343\u706b\u706b\u706b - S3 China National Open #470 [riftools]",
      "player": "Ai.\u5343\u706b\u706b\u706b",
-     "placement": "470",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224774",
@@ -11837,9 +11179,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ZS - S3 China National Open 471 [riftools]",
+     "label": "ZS - S3 China National Open #471 [riftools]",
      "player": "ZS",
-     "placement": "471",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225440",
@@ -11883,9 +11225,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "BrH.\u71c3\u9b42.\u98ce\u51b31996 - S3 China National Open 478 [riftools]",
+     "label": "BrH.\u71c3\u9b42.\u98ce\u51b31996 - S3 China National Open #478 [riftools]",
      "player": "BrH.\u71c3\u9b42.\u98ce\u51b31996",
-     "placement": "478",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224679",
@@ -11929,9 +11271,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6bd4\u6e2f\u70e7 - S3 China National Open 481 [riftools]",
+     "label": "\u6bd4\u6e2f\u70e7 - S3 China National Open #481 [riftools]",
      "player": "\u6bd4\u6e2f\u70e7",
-     "placement": "481",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225380",
@@ -11971,9 +11313,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7eef - S3 China National Open 486 [riftools]",
+     "label": "\u7eef - S3 China National Open #486 [riftools]",
      "player": "\u7eef",
-     "placement": "486",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225249",
@@ -12015,9 +11357,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5468\u7693\ud83d\udc3a - S3 China National Open 487 [riftools]",
+     "label": "\u5468\u7693\ud83d\udc3a - S3 China National Open #487 [riftools]",
      "player": "\u5468\u7693\ud83d\udc3a",
-     "placement": "487",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224746",
@@ -12062,9 +11404,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65cb\u6728\u65f6\u5149\u7684\u6674\u5149 - S3 China National Open 488 [riftools]",
+     "label": "\u65cb\u6728\u65f6\u5149\u7684\u6674\u5149 - S3 China National Open #488 [riftools]",
      "player": "\u65cb\u6728\u65f6\u5149\u7684\u6674\u5149",
-     "placement": "488",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225441",
@@ -12110,9 +11452,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u593a\u51a0\u5c31\u7ed3\u5a5a\u00b73+X - S3 China National Open 490 [riftools]",
+     "label": "\u593a\u51a0\u5c31\u7ed3\u5a5a\u00b73+X - S3 China National Open #490 [riftools]",
      "player": "\u593a\u51a0\u5c31\u7ed3\u5a5a\u00b73+X",
-     "placement": "490",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224740",
@@ -12152,9 +11494,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ARBD-\u9ed1\u864e\u963f\u798f - S3 China National Open 503 [riftools]",
+     "label": "ARBD-\u9ed1\u864e\u963f\u798f - S3 China National Open #503 [riftools]",
      "player": "ARBD-\u9ed1\u864e\u963f\u798f",
-     "placement": "503",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223731",
@@ -12197,9 +11539,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FG.\u98de\u5929\u610f\u9762 - S3 China National Open 505 [riftools]",
+     "label": "FG.\u98de\u5929\u610f\u9762 - S3 China National Open #505 [riftools]",
      "player": "FG.\u98de\u5929\u610f\u9762",
-     "placement": "505",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224984",
@@ -12241,9 +11583,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65e0\u90aa - S3 China National Open 517 [riftools]",
+     "label": "\u65e0\u90aa - S3 China National Open #517 [riftools]",
      "player": "\u65e0\u90aa",
-     "placement": "517",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223903",
@@ -12289,9 +11631,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9b44\u7f57\u82f1\u96c4 - S3 China National Open 529 [riftools]",
+     "label": "\u9b44\u7f57\u82f1\u96c4 - S3 China National Open #529 [riftools]",
      "player": "\u9b44\u7f57\u82f1\u96c4",
-     "placement": "529",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224678",
@@ -12338,9 +11680,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534e\u84dd.\u795e\u5207.\u5173\u952e - S3 China National Open 550 [riftools]",
+     "label": "\u534e\u84dd.\u795e\u5207.\u5173\u952e - S3 China National Open #550 [riftools]",
      "player": "\u534e\u84dd.\u795e\u5207.\u5173\u952e",
-     "placement": "550",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224672",
@@ -12384,9 +11726,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LEEKENS - S3 China National Open 560 [riftools]",
+     "label": "LEEKENS - S3 China National Open #560 [riftools]",
      "player": "LEEKENS",
-     "placement": "560",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224027",
@@ -12431,9 +11773,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Solo\u4e28\u8001\u968b - S3 China National Open 564 [riftools]",
+     "label": "Solo\u4e28\u8001\u968b - S3 China National Open #564 [riftools]",
      "player": "Solo\u4e28\u8001\u968b",
-     "placement": "564",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225095",
@@ -12479,9 +11821,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "X\u9b44\u7f57 - S3 China National Open 568 [riftools]",
+     "label": "X\u9b44\u7f57 - S3 China National Open #568 [riftools]",
      "player": "X\u9b44\u7f57",
-     "placement": "568",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222653",
@@ -13038,7 +12380,7 @@ window.FIELD = {
     {
      "label": "George Gebhardt - CCS Sunday $5,000 Riftbound Event #4 #9 [riftools]",
      "player": "George Gebhardt",
-     "placement": "#9",
+     "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-009-george-gebhardt-ezreal-prodigal-explorer",
@@ -13085,7 +12427,7 @@ window.FIELD = {
     {
      "label": "Paul Miller - CCS Sunday $5,000 Riftbound Event #4 #30 [riftools]",
      "player": "Paul Miller",
-     "placement": "#30",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-030-paul-miller-ezreal-prodigal-explorer",
@@ -13131,7 +12473,7 @@ window.FIELD = {
     {
      "label": "Dennis Kim - CCS Sunday $5,000 Riftbound Event #4 #48 [riftools]",
      "player": "Dennis Kim",
-     "placement": "#48",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-048-dennis-kim-ezreal-prodigal-explorer",
@@ -13178,7 +12520,7 @@ window.FIELD = {
     {
      "label": "Drowsy - CCS Sunday $5,000 Riftbound Event #4 #55 [riftools]",
      "player": "Drowsy",
-     "placement": "#55",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-055-drowsy-ezreal-prodigal-explorer",
@@ -13223,7 +12565,7 @@ window.FIELD = {
     {
      "label": "Zane Simpson - CCS Sunday $5,000 Riftbound Event #4 #58 [riftools]",
      "player": "Zane Simpson",
-     "placement": "#58",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-058-zane-simpson-ezreal-prodigal-explorer",
@@ -13270,7 +12612,7 @@ window.FIELD = {
     {
      "label": "jaime riva - RiftAtlas Convergence #1 #68 [riftools]",
      "player": "jaime riva",
-     "placement": "#68",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-068-jaime-riva-ezreal-prodigal-explorer",
@@ -13318,7 +12660,7 @@ window.FIELD = {
     {
      "label": "Timothy S Henderson - CCS Sunday $5,000 Riftbound Event #4 #72 [riftools]",
      "player": "Timothy S Henderson",
-     "placement": "#72",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-072-timothy-s-henderson-ezreal-prodigal-explorer",
@@ -13363,7 +12705,7 @@ window.FIELD = {
     {
      "label": "Nyx Stinson - RiftAtlas Convergence #1 #77 [riftools]",
      "player": "Nyx Stinson",
-     "placement": "#77",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-077-nyx-stinson-ezreal-prodigal-explorer",
@@ -13408,7 +12750,7 @@ window.FIELD = {
     {
      "label": "RenaiMan - RiftAtlas Convergence #1 #82 [riftools]",
      "player": "RenaiMan",
-     "placement": "#82",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-082-renaiman-ezreal-prodigal-explorer",
@@ -13452,7 +12794,7 @@ window.FIELD = {
     {
      "label": "PurpleCrayon - RiftAtlas Convergence #1 #89 [riftools]",
      "player": "PurpleCrayon",
-     "placement": "#89",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-089-purplecrayon-ezreal-prodigal-explorer",
@@ -13497,7 +12839,7 @@ window.FIELD = {
     {
      "label": "DonKerberos - RiftAtlas Convergence #1 #91 [riftools]",
      "player": "DonKerberos",
-     "placement": "#91",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-091-donkerberos-ezreal-prodigal-explorer",
@@ -13541,7 +12883,7 @@ window.FIELD = {
     {
      "label": "BaldRift - RiftAtlas Convergence #1 #101 [riftools]",
      "player": "BaldRift",
-     "placement": "#101",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-101-baldrift-ezreal-prodigal-explorer",
@@ -13586,7 +12928,7 @@ window.FIELD = {
     {
      "label": "Liv - RiftAtlas Convergence #1 #122 [riftools]",
      "player": "Liv",
-     "placement": "#122",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-122-liv-ezreal-prodigal-explorer",
@@ -13627,9 +12969,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "JHM.\u9706\u9706 - S3 China National Open 20 [riftools]",
+     "label": "JHM.\u9706\u9706 - S3 China National Open #20 [riftools]",
      "player": "JHM.\u9706\u9706",
-     "placement": "20",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224940",
@@ -13674,9 +13016,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "YBE Luddrox - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #28 6-2-0 [riftools]",
+     "label": "YBE Luddrox - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #28 [riftools]",
      "player": "YBE Luddrox",
-     "placement": "#28 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/73786a32-067c-4ffe-abaa-8be3e13c8230",
@@ -13716,9 +13058,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "PoW SpaghetiCode - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #29 6-2-0 [riftools]",
+     "label": "PoW SpaghetiCode - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #29 [riftools]",
      "player": "PoW SpaghetiCode",
-     "placement": "#29 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/008f1b01-c7bf-4d75-b167-b4befeaadbea",
@@ -13758,9 +13100,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "PoW kubakulp - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #43 5-3-0 [riftools]",
+     "label": "PoW kubakulp - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #43 [riftools]",
      "player": "PoW kubakulp",
-     "placement": "#43 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/98caa1c7-3a57-41ba-a4a9-2c4d3d297744",
@@ -13798,9 +13140,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Juvenis - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #82 4-3-1 [riftools]",
+     "label": "Juvenis - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #82 [riftools]",
      "player": "Juvenis",
-     "placement": "#82 4-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/526270b3-2c20-483e-ae49-3d78b1af473d",
@@ -13840,9 +13182,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "rayfok - S3 China National Open 105 [riftools]",
+     "label": "rayfok - S3 China National Open #105 [riftools]",
      "player": "rayfok",
-     "placement": "105",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225436",
@@ -13885,184 +13227,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "andy1996 - S3 China National Open 123 [riftools]",
-     "player": "andy1996",
-     "placement": "123",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223946",
-     "main": {
-      "Bellows Breath": 3,
-      "Bewitching Spirit": 3,
-      "Deadly Flourish": 3,
-      "Eclipse": 1,
-      "Ezreal, Prodigy": 1,
-      "Fizz, Trickster": 3,
-      "Gust": 2,
-      "Hard Bargain": 1,
-      "Pack of Wonders": 3,
-      "Stacked Deck": 3,
-      "Star-Crossed": 3,
-      "Stupefy": 3,
-      "The List": 2,
-      "Thousand-Tailed Watcher": 2,
-      "Treasure Trove": 2,
-      "Turn to Dust": 1,
-      "Vex, Apathetic": 2,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Angler Beast": 1,
-      "Baron Nashor": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Mindsplitter": 1,
-      "Singularity": 1,
-      "Sprite Fountain": 1,
-      "Turn to Dust": 2
-     },
-     "runes": {
-      "Chaos Rune": 6,
-      "Mind Rune": 6
-     },
-     "battlefields": [
-      "Aspirant's Climb",
-      "Frozen Fortress",
-      "Sigil of the Storm"
-     ]
-    },
-    {
-     "label": "brh.\u8d5b\u535a\u7cbe\u795e\u75c5 - S3 China National Open 142 [riftools]",
-     "player": "brh.\u8d5b\u535a\u7cbe\u795e\u75c5",
-     "placement": "142",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223511",
-     "main": {
-      "Arcane Shift": 1,
-      "Bellows Breath": 2,
-      "Bewitching Spirit": 3,
-      "Deadly Flourish": 3,
-      "Eclipse": 1,
-      "Ezreal, Prodigy": 1,
-      "Fizz, Trickster": 3,
-      "Gust": 2,
-      "Heedless Resurrection": 1,
-      "Pack of Wonders": 3,
-      "Stacked Deck": 3,
-      "Star-Crossed": 3,
-      "Stupefy": 3,
-      "The List": 2,
-      "Thousand-Tailed Watcher": 2,
-      "Treasure Trove": 2,
-      "Turn to Dust": 1,
-      "Vex, Apathetic": 2,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Acceptable Losses": 1,
-      "Gust": 1,
-      "Invert Timelines": 1,
-      "Last Rites": 1,
-      "Turn to Dust": 1,
-      "Unchecked Power": 1,
-      "Whirlwind": 2
-     },
-     "runes": {
-      "Chaos Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": [
-      "Aspirant's Climb",
-      "Frozen Fortress",
-      "Sigil of the Storm"
-     ]
-    },
-    {
-     "label": "CWL k0sior - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #145 3-4-0 [riftools]",
-     "player": "CWL k0sior",
-     "placement": "#145 3-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9186805a-2162-4d6c-a548-5fc5fcaec198",
-     "main": {
-      "Bellows Breath": 3,
-      "Bewitching Spirit": 3,
-      "Deadly Flourish": 3,
-      "Eclipse": 1,
-      "Fizz, Trickster": 3,
-      "Gust": 2,
-      "Kha'Zix, Mutating Horror": 1,
-      "Pack of Wonders": 3,
-      "Stacked Deck": 3,
-      "Star-Crossed": 3,
-      "Stupefy": 3,
-      "The List": 2,
-      "Thousand-Tailed Watcher": 2,
-      "Treasure Trove": 2,
-      "Turn to Dust": 1,
-      "Vex, Apathetic": 2,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Angler Beast": 1,
-      "Hard Bargain": 2,
-      "Kha'Zix, Mutating Horror": 1,
-      "Mindsplitter": 1,
-      "Turn to Dust": 2,
-      "Unchecked Power": 1
-     },
-     "runes": {
-      "Chaos Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Mikasa Ackermann - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #156 3-5-0 [riftools]",
-     "player": "Mikasa Ackermann",
-     "placement": "#156 3-5-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8c8ddf88-68d5-4a43-aba6-b1f54ab90c76",
-     "main": {
-      "Bellows Breath": 3,
-      "Bewitching Spirit": 3,
-      "Deadly Flourish": 3,
-      "Eclipse": 1,
-      "Fizz, Trickster": 3,
-      "Gust": 2,
-      "Pack of Wonders": 3,
-      "Sprite Fountain": 1,
-      "Stacked Deck": 3,
-      "Star-Crossed": 3,
-      "Stupefy": 3,
-      "The List": 2,
-      "Thousand-Tailed Watcher": 2,
-      "Treasure Trove": 2,
-      "Turn to Dust": 1,
-      "Vex, Apathetic": 2,
-      "Wages of Pain": 2
-     },
-     "side": {
-      "Acceptable Losses": 1,
-      "Angler Beast": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Mindsplitter": 1,
-      "Singularity": 1,
-      "Switcheroo": 1,
-      "Turn to Dust": 1,
-      "Unchecked Power": 1
-     },
-     "runes": {
-      "Chaos Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Ai.\u90aa\u795e\u9171 - S3 China National Open 166 [riftools]",
+     "label": "Ai.\u90aa\u795e\u9171 - S3 China National Open #166 [riftools]",
      "player": "Ai.\u90aa\u795e\u9171",
-     "placement": "166",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224840",
@@ -14105,9 +13272,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "WORST ZED EVER - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #187 2-3-1 [riftools]",
+     "label": "WORST ZED EVER - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #187 [riftools]",
      "player": "WORST ZED EVER",
-     "placement": "#187 2-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/cb050480-00a8-4afa-b299-85076bc3b490",
@@ -14147,9 +13314,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6b8b\u66b4\u9999\u8549\u5927\u738b - S3 China National Open 218 [riftools]",
+     "label": "\u6b8b\u66b4\u9999\u8549\u5927\u738b - S3 China National Open #218 [riftools]",
      "player": "\u6b8b\u66b4\u9999\u8549\u5927\u738b",
-     "placement": "218",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224010",
@@ -14194,9 +13361,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "cpj.\u8096\u70e8 - S3 China National Open 232 [riftools]",
+     "label": "cpj.\u8096\u70e8 - S3 China National Open #232 [riftools]",
      "player": "cpj.\u8096\u70e8",
-     "placement": "232",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224369",
@@ -14240,9 +13407,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5361\u565c\u565c-\u51cc\u6668\u5c0f - S3 China National Open 233 [riftools]",
+     "label": "\u5361\u565c\u565c-\u51cc\u6668\u5c0f - S3 China National Open #233 [riftools]",
      "player": "\u5361\u565c\u565c-\u51cc\u6668\u5c0f",
-     "placement": "233",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223968",
@@ -14289,9 +13456,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7d2b\u874e - S3 China National Open 238 [riftools]",
+     "label": "\u7d2b\u874e - S3 China National Open #238 [riftools]",
      "player": "\u7d2b\u874e",
-     "placement": "238",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224390",
@@ -14333,9 +13500,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Fate - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #255 0-3-0 [riftools]",
+     "label": "Fate - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #255 [riftools]",
      "player": "Fate",
-     "placement": "#255 0-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d2e1b3f8-e33e-47a2-b9f6-738da4e682ef",
@@ -14375,9 +13542,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Solo\u4e28TrZ - S3 China National Open 269 [riftools]",
+     "label": "Solo\u4e28TrZ - S3 China National Open #269 [riftools]",
      "player": "Solo\u4e28TrZ",
-     "placement": "269",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224999",
@@ -14423,9 +13590,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u96ea\u843d - S3 China National Open 276 [riftools]",
+     "label": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u96ea\u843d - S3 China National Open #276 [riftools]",
      "player": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u96ea\u843d",
-     "placement": "276",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/220532",
@@ -14467,9 +13634,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TDF.\u95ea\u7535\u26a1\ufe0f - S3 China National Open 385 [riftools]",
+     "label": "TDF.\u95ea\u7535\u26a1\ufe0f - S3 China National Open #385 [riftools]",
      "player": "TDF.\u95ea\u7535\u26a1\ufe0f",
-     "placement": "385",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225330",
@@ -14826,7 +13993,7 @@ window.FIELD = {
     {
      "label": "Cayce Bowen - CCS Sunday $5,000 Riftbound Event #4 #52 [riftools]",
      "player": "Cayce Bowen",
-     "placement": "#52",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-052-cayce-bowen-lux-lady-of-luminosity",
@@ -14870,7 +14037,7 @@ window.FIELD = {
     {
      "label": "collin etheridge - CCS Sunday $5,000 Riftbound Event #4 #62 [riftools]",
      "player": "collin etheridge",
-     "placement": "#62",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-062-collin-etheridge-lux-lady-of-luminosity",
@@ -14913,9 +14080,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SDG-\u51cc\u9e3e - S3 China National Open 12 [riftools]",
+     "label": "SDG-\u51cc\u9e3e - S3 China National Open #12 [riftools]",
      "player": "SDG-\u51cc\u9e3e",
-     "placement": "12",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224129",
@@ -14959,9 +14126,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "inazumi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #12 6-2-1 [riftools]",
+     "label": "inazumi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #12 [riftools]",
      "player": "inazumi",
-     "placement": "#12 6-2-1",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a67f56df-0068-4b55-a919-9a4142117940",
@@ -14999,9 +14166,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u8d64\u6728\u67ff\u5b50 - S3 China National Open 14 [riftools]",
+     "label": "\u8d64\u6728\u67ff\u5b50 - S3 China National Open #14 [riftools]",
      "player": "\u8d64\u6728\u67ff\u5b50",
-     "placement": "14",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223898",
@@ -15042,9 +14209,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "John Salt - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #21 6-2-0 [riftools]",
+     "label": "John Salt - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #21 [riftools]",
      "player": "John Salt",
-     "placement": "#21 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fa1b9cf5-fe87-45b5-bc3e-e957e3d0c3dc",
@@ -15082,9 +14249,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "LineKa\u00b7Dioniya - S3 China National Open 68 [riftools]",
+     "label": "LineKa\u00b7Dioniya - S3 China National Open #68 [riftools]",
      "player": "LineKa\u00b7Dioniya",
-     "placement": "68",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223562",
@@ -15127,9 +14294,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Step.Lun - S3 China National Open 85 [riftools]",
+     "label": "Step.Lun - S3 China National Open #85 [riftools]",
      "player": "Step.Lun",
-     "placement": "85",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225113",
@@ -15171,9 +14338,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5b9d\u5e93\u5361\u724c-\u620f\u7cbe - S3 China National Open 92 [riftools]",
+     "label": "\u5b9d\u5e93\u5361\u724c-\u620f\u7cbe - S3 China National Open #92 [riftools]",
      "player": "\u5b9d\u5e93\u5361\u724c-\u620f\u7cbe",
-     "placement": "92",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224509",
@@ -15215,9 +14382,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7Yake - S3 China National Open 97 [riftools]",
+     "label": "LineKa\u00b7Yake - S3 China National Open #97 [riftools]",
      "player": "LineKa\u00b7Yake",
-     "placement": "97",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224119",
@@ -15260,9 +14427,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u97f3\u306e\u5c0f\u8def\u594f - S3 China National Open 154 [riftools]",
+     "label": "\u97f3\u306e\u5c0f\u8def\u594f - S3 China National Open #154 [riftools]",
      "player": "\u97f3\u306e\u5c0f\u8def\u594f",
-     "placement": "154",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224286",
@@ -15306,9 +14473,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "JSTR Dropczak - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #184 3-3-0 [riftools]",
+     "label": "JSTR Dropczak - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #184 [riftools]",
      "player": "JSTR Dropczak",
-     "placement": "#184 3-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/41f4a01c-6304-42df-b9b2-2cc6442139cb",
@@ -15345,9 +14512,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "lucianxd - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #231 1-4-0 [riftools]",
+     "label": "lucianxd - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #231 [riftools]",
      "player": "lucianxd",
-     "placement": "#231 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/73362493-1c82-4c5e-b788-14ec61e79a23",
@@ -15385,9 +14552,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u5143\u6c14\u5e7b\u754c-\u51b7\u6f20\u964d\u4e34 - S3 China National Open 256 [riftools]",
+     "label": "\u5143\u6c14\u5e7b\u754c-\u51b7\u6f20\u964d\u4e34 - S3 China National Open #256 [riftools]",
      "player": "\u5143\u6c14\u5e7b\u754c-\u51b7\u6f20\u964d\u4e34",
-     "placement": "256",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224925",
@@ -15431,9 +14598,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ARBD-i\u5f00TV\u00b7\u6953\u25ce\u51f1 - S3 China National Open 274 [riftools]",
+     "label": "ARBD-i\u5f00TV\u00b7\u6953\u25ce\u51f1 - S3 China National Open #274 [riftools]",
      "player": "ARBD-i\u5f00TV\u00b7\u6953\u25ce\u51f1",
-     "placement": "274",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223697",
@@ -15476,9 +14643,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TXG\u00b7forever - S3 China National Open 285 [riftools]",
+     "label": "TXG\u00b7forever - S3 China National Open #285 [riftools]",
      "player": "TXG\u00b7forever",
-     "placement": "285",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225094",
@@ -15522,9 +14689,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7Leon - S3 China National Open 333 [riftools]",
+     "label": "LineKa\u00b7Leon - S3 China National Open #333 [riftools]",
      "player": "LineKa\u00b7Leon",
-     "placement": "333",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223414",
@@ -15567,9 +14734,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7fdf\u5e93\u91cc - S3 China National Open 349 [riftools]",
+     "label": "\u7fdf\u5e93\u91cc - S3 China National Open #349 [riftools]",
      "player": "\u7fdf\u5e93\u91cc",
-     "placement": "349",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224111",
@@ -15610,9 +14777,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7Fiki - S3 China National Open 421 [riftools]",
+     "label": "LineKa\u00b7Fiki - S3 China National Open #421 [riftools]",
      "player": "LineKa\u00b7Fiki",
-     "placement": "421",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223559",
@@ -15655,9 +14822,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "D.D. - S3 China National Open 429 [riftools]",
+     "label": "D.D. - S3 China National Open #429 [riftools]",
      "player": "D.D.",
-     "placement": "429",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223972",
@@ -15701,9 +14868,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u53ef\u6709\u53ef\u65e0 - S3 China National Open 476 [riftools]",
+     "label": "\u53ef\u6709\u53ef\u65e0 - S3 China National Open #476 [riftools]",
      "player": "\u53ef\u6709\u53ef\u65e0",
-     "placement": "476",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224805",
@@ -15747,9 +14914,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5317\u4eac\u6cfd\u8431-\u795e\u5207-www - S3 China National Open 519 [riftools]",
+     "label": "\u5317\u4eac\u6cfd\u8431-\u795e\u5207-www - S3 China National Open #519 [riftools]",
      "player": "\u5317\u4eac\u6cfd\u8431-\u795e\u5207-www",
-     "placement": "519",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224993",
@@ -16102,7 +15269,7 @@ window.FIELD = {
     {
      "label": "Josh - CCS Sunday $5,000 Riftbound Event #4 #65 [riftools]",
      "player": "Josh",
-     "placement": "#65",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-065-josh-darius-hand-of-noxus",
@@ -16147,9 +15314,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SCH Majuzi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #64 5-3-0 [riftools]",
+     "label": "SCH Majuzi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #64 [riftools]",
      "player": "SCH Majuzi",
-     "placement": "#64 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/40fdb514-5941-4031-b5a4-a00daf2c7573",
@@ -16188,9 +15355,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "the dMN - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #74 5-3-0 [riftools]",
+     "label": "the dMN - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #74 [riftools]",
      "player": "the dMN",
-     "placement": "#74 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0f21b3c5-6ade-4692-b8f3-f25c6de77335",
@@ -16227,9 +15394,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6625\u9172 - S3 China National Open 101 [riftools]",
+     "label": "\u6625\u9172 - S3 China National Open #101 [riftools]",
      "player": "\u6625\u9172",
-     "placement": "101",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225376",
@@ -16277,9 +15444,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Klumsy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #103 4-4-0 [riftools]",
+     "label": "Klumsy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #103 [riftools]",
      "player": "Klumsy",
-     "placement": "#103 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1bdf77c2-7aa4-4c2d-9b22-0d318c7e153f",
@@ -16316,9 +15483,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "rvdost - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #163 3-5-0 [riftools]",
+     "label": "rvdost - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #163 [riftools]",
      "player": "rvdost",
-     "placement": "#163 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0bb9aec5-af88-47b3-a90e-de4ac8be22f4",
@@ -16357,9 +15524,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "joyspace_\u5b87\u667a\u6ce2\u9999\u9505 - S3 China National Open 320 [riftools]",
+     "label": "joyspace_\u5b87\u667a\u6ce2\u9999\u9505 - S3 China National Open #320 [riftools]",
      "player": "joyspace_\u5b87\u667a\u6ce2\u9999\u9505",
-     "placement": "320",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225209",
@@ -16408,9 +15575,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5c0f\u7a9d-Thierry - S3 China National Open 394 [riftools]",
+     "label": "\u5c0f\u7a9d-Thierry - S3 China National Open #394 [riftools]",
      "player": "\u5c0f\u7a9d-Thierry",
-     "placement": "394",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224834",
@@ -16452,9 +15619,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7535\u6c14-Rex - S3 China National Open 480 [riftools]",
+     "label": "\u7535\u6c14-Rex - S3 China National Open #480 [riftools]",
      "player": "\u7535\u6c14-Rex",
-     "placement": "480",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225307",
@@ -17206,7 +16373,7 @@ window.FIELD = {
     {
      "label": "Alex Doan - CCS Sunday $5,000 Riftbound Event #4 #10 [riftools]",
      "player": "Alex Doan",
-     "placement": "#10",
+     "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-010-alex-doan-viktor-herald-of-the-arcane",
@@ -17253,7 +16420,7 @@ window.FIELD = {
     {
      "label": "Peng0o - RiftAtlas Convergence #1 #22 [riftools]",
      "player": "Peng0o",
-     "placement": "#22",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-022-peng0o-viktor-herald-of-the-arcane",
@@ -17300,7 +16467,7 @@ window.FIELD = {
     {
      "label": "Ge Yang - RiftAtlas Convergence #1 #34 [riftools]",
      "player": "Ge Yang",
-     "placement": "#34",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-034-ge-yang-viktor-herald-of-the-arcane",
@@ -17347,7 +16514,7 @@ window.FIELD = {
     {
      "label": "Inwha - RiftAtlas Convergence #1 #47 [riftools]",
      "player": "Inwha",
-     "placement": "#47",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-047-inwha-viktor-herald-of-the-arcane",
@@ -17393,7 +16560,7 @@ window.FIELD = {
     {
      "label": "Noobwas2bad - RiftAtlas Convergence #1 #111 [riftools]",
      "player": "Noobwas2bad",
-     "placement": "#111",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-111-noobwas2bad-viktor-herald-of-the-arcane",
@@ -17430,9 +16597,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "asd - S3 China National Open 15 [riftools]",
+     "label": "asd - S3 China National Open #15 [riftools]",
      "player": "asd",
-     "placement": "15",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223659",
@@ -17476,9 +16643,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e8c\u5341\u4e2a\u8089\u7b4b - S3 China National Open 29 [riftools]",
+     "label": "\u4e8c\u5341\u4e2a\u8089\u7b4b - S3 China National Open #29 [riftools]",
      "player": "\u4e8c\u5341\u4e2a\u8089\u7b4b",
-     "placement": "29",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223899",
@@ -17517,9 +16684,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "RanRan - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #31 6-2-0 [riftools]",
+     "label": "RanRan - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #31 [riftools]",
      "player": "RanRan",
-     "placement": "#31 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/26496aec-c0fd-4514-b0ff-eaf14ca2ce50",
@@ -17556,9 +16723,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Xiedu - S3 China National Open 56 [riftools]",
+     "label": "Xiedu - S3 China National Open #56 [riftools]",
      "player": "Xiedu",
-     "placement": "56",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225381",
@@ -17597,9 +16764,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "NotSoKruchy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #57 5-3-0 [riftools]",
+     "label": "NotSoKruchy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #57 [riftools]",
      "player": "NotSoKruchy",
-     "placement": "#57 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a07d474d-7971-41ae-87d2-6fae5ba98fdb",
@@ -17639,9 +16806,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "GENZIARA - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #69 5-3-0 [riftools]",
+     "label": "GENZIARA - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #69 [riftools]",
      "player": "GENZIARA",
-     "placement": "#69 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b3277a89-38f7-474f-b6da-0a19a087ed18",
@@ -17677,9 +16844,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Magiczny Go\u015b\u0107 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #78 5-3-0 [riftools]",
+     "label": "Magiczny Go\u015b\u0107 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #78 [riftools]",
      "player": "Magiczny Go\u015b\u0107",
-     "placement": "#78 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/58c7a7cc-d2c6-496e-a7ea-92fd0495f3b6",
@@ -17717,9 +16884,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u51ac\u6708ovo - S3 China National Open 80 [riftools]",
+     "label": "\u51ac\u6708ovo - S3 China National Open #80 [riftools]",
      "player": "\u51ac\u6708ovo",
-     "placement": "80",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222832",
@@ -17765,9 +16932,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "motyl - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #86 4-3-1 [riftools]",
+     "label": "motyl - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #86 [riftools]",
      "player": "motyl",
-     "placement": "#86 4-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6f2374d2-622a-4be4-814a-c94bd346bb09",
@@ -17807,9 +16974,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "strz ele sobie w - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #100 4-4-0 [riftools]",
+     "label": "strz ele sobie w - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #100 [riftools]",
      "player": "strz ele sobie w",
-     "placement": "#100 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/06fca18c-d5f3-42a8-af26-d0547a2aa658",
@@ -17847,9 +17014,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6811\u61d2\u00b7\u82cd\u5929\u00b7TNL - S3 China National Open 102 [riftools]",
+     "label": "\u6811\u61d2\u00b7\u82cd\u5929\u00b7TNL - S3 China National Open #102 [riftools]",
      "player": "\u6811\u61d2\u00b7\u82cd\u5929\u00b7TNL",
-     "placement": "102",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224685",
@@ -17893,9 +17060,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5f90\u5927\u738b.Alnair - S3 China National Open 108 [riftools]",
+     "label": "\u5f90\u5927\u738b.Alnair - S3 China National Open #108 [riftools]",
      "player": "\u5f90\u5927\u738b.Alnair",
-     "placement": "108",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222825",
@@ -17937,50 +17104,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "D.C\u7c89\u80a0\u90a6 - S3 China National Open 128 [riftools]",
-     "player": "D.C\u7c89\u80a0\u90a6",
-     "placement": "128",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/222963",
-     "main": {
-      "Bellows Breath": 3,
-      "Carrion Dredger": 2,
-      "Cull the Weak": 3,
-      "Deadly Flourish": 3,
-      "Diana, Lunari": 3,
-      "Facebreaker": 2,
-      "Hidden Blade": 3,
-      "Imperial Decree": 3,
-      "Safety Inspector": 2,
-      "Shadow's Call": 2,
-      "Singularity": 2,
-      "Sprite Fountain": 3,
-      "Stupefy": 3,
-      "Thousand-Tailed Watcher": 2,
-      "Viktor, Leader": 1,
-      "Wages of Pain": 3
-     },
-     "side": {
-      "Ashe, Focused": 2,
-      "Riptide Rex": 2,
-      "Salvage": 2,
-      "Xin Zhao, Vigilant": 2
-     },
-     "runes": {
-      "Mind Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": [
-      "Forbidding Waste",
-      "Ravenbloom Conservatory",
-      "Treasure Hoard"
-     ]
-    },
-    {
-     "label": "joyspace.\u5c0f\u9ea6\u65cb\u6728\u65f6\u5149 - S3 China National Open 149 [riftools]",
+     "label": "joyspace.\u5c0f\u9ea6\u65cb\u6728\u65f6\u5149 - S3 China National Open #149 [riftools]",
      "player": "joyspace.\u5c0f\u9ea6\u65cb\u6728\u65f6\u5149",
-     "placement": "149",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224757",
@@ -18021,9 +17147,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "GamesDeconstruct - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #171 3-5-0 [riftools]",
+     "label": "GamesDeconstruct - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #171 [riftools]",
      "player": "GamesDeconstruct",
-     "placement": "#171 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4f3e9dab-cd27-4ba8-8c10-b911e2b8e8e5",
@@ -18062,9 +17188,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "No.Sensai\uff08\u631a\u53cb\u767d\u6653\u7248\uff09 - S3 China National Open 186 [riftools]",
+     "label": "No.Sensai\uff08\u631a\u53cb\u767d\u6653\u7248\uff09 - S3 China National Open #186 [riftools]",
      "player": "No.Sensai\uff08\u631a\u53cb\u767d\u6653\u7248\uff09",
-     "placement": "186",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224193",
@@ -18111,9 +17237,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "przeraza17 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #233 1-5-0 [riftools]",
+     "label": "przeraza17 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #233 [riftools]",
      "player": "przeraza17",
-     "placement": "#233 1-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d3f5c08e-ef24-43a2-a0ce-e5c2ce6d8935",
@@ -18153,9 +17279,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u95ea\u7535\u5bb6|\u5949\u8f69@\u6e90\u9645\u5212 - S3 China National Open 244 [riftools]",
+     "label": "\u95ea\u7535\u5bb6|\u5949\u8f69@\u6e90\u9645\u5212 - S3 China National Open #244 [riftools]",
      "player": "\u95ea\u7535\u5bb6|\u5949\u8f69@\u6e90\u9645\u5212",
-     "placement": "244",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/221939",
@@ -18199,9 +17325,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "NGUSevenStar - S3 China National Open 279 [riftools]",
+     "label": "NGUSevenStar - S3 China National Open #279 [riftools]",
      "player": "NGUSevenStar",
-     "placement": "279",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224983",
@@ -18247,9 +17373,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TXG\u00b7\u6c5f\u6f9c - S3 China National Open 378 [riftools]",
+     "label": "TXG\u00b7\u6c5f\u6f9c - S3 China National Open #378 [riftools]",
      "player": "TXG\u00b7\u6c5f\u6f9c",
-     "placement": "378",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224228",
@@ -18290,9 +17416,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e03\u547d - S3 China National Open 407 [riftools]",
+     "label": "\u4e03\u547d - S3 China National Open #407 [riftools]",
      "player": "\u4e03\u547d",
-     "placement": "407",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224977",
@@ -18338,9 +17464,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9b44\u7f57\u55b5.\u5468\u8fdc\u5ddd - S3 China National Open 459 [riftools]",
+     "label": "\u9b44\u7f57\u55b5.\u5468\u8fdc\u5ddd - S3 China National Open #459 [riftools]",
      "player": "\u9b44\u7f57\u55b5.\u5468\u8fdc\u5ddd",
-     "placement": "459",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223739",
@@ -18382,9 +17508,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u67ab\u5e08\u5085\u4f60\u561b\u65f6\u5019\u624d\u662f\u6d25\u95e8\u7b2c\u4e00\u554a\uff1f\u00b7\u51b0\u67ab - S3 China National Open 474 [riftools]",
+     "label": "\u67ab\u5e08\u5085\u4f60\u561b\u65f6\u5019\u624d\u662f\u6d25\u95e8\u7b2c\u4e00\u554a\uff1f\u00b7\u51b0\u67ab - S3 China National Open #474 [riftools]",
      "player": "\u67ab\u5e08\u5085\u4f60\u561b\u65f6\u5019\u624d\u662f\u6d25\u95e8\u7b2c\u4e00\u554a\uff1f\u00b7\u51b0\u67ab",
-     "placement": "474",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222128",
@@ -18423,9 +17549,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b.FG JamesYi\u269c\ufe0f - S3 China National Open 479 [riftools]",
+     "label": "\u9177\u732b.FG JamesYi\u269c\ufe0f - S3 China National Open #479 [riftools]",
      "player": "\u9177\u732b.FG JamesYi\u269c\ufe0f",
-     "placement": "479",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225365",
@@ -18467,9 +17593,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "HBG-cbxpt - S3 China National Open 499 [riftools]",
+     "label": "HBG-cbxpt - S3 China National Open #499 [riftools]",
      "player": "HBG-cbxpt",
-     "placement": "499",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223939",
@@ -18517,9 +17643,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5e7b\u68a6-\u661f\u5154 - S3 China National Open 526 [riftools]",
+     "label": "\u5e7b\u68a6-\u661f\u5154 - S3 China National Open #526 [riftools]",
      "player": "\u5e7b\u68a6-\u661f\u5154",
-     "placement": "526",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224140",
@@ -18561,9 +17687,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e00\u6c19\u5316\u6c22 - S3 China National Open 535 [riftools]",
+     "label": "\u4e00\u6c19\u5316\u6c22 - S3 China National Open #535 [riftools]",
      "player": "\u4e00\u6c19\u5316\u6c22",
-     "placement": "535",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224359",
@@ -18603,9 +17729,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u95ea\u7535\u5bb6\u3001\u5a01\u5ec9 - S3 China National Open 537 [riftools]",
+     "label": "\u95ea\u7535\u5bb6\u3001\u5a01\u5ec9 - S3 China National Open #537 [riftools]",
      "player": "\u95ea\u7535\u5bb6\u3001\u5a01\u5ec9",
-     "placement": "537",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225070",
@@ -18646,9 +17772,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5e7d\u8d1d@\u5e1d\u9632\u58eb - S3 China National Open 555 [riftools]",
+     "label": "\u5e7d\u8d1d@\u5e1d\u9632\u58eb - S3 China National Open #555 [riftools]",
      "player": "\u5e7d\u8d1d@\u5e1d\u9632\u58eb",
-     "placement": "555",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224657",
@@ -19003,7 +18129,7 @@ window.FIELD = {
     {
      "label": "Axel Alvarez - CCS Sunday $5,000 Riftbound Event #4 #4 [riftools]",
      "player": "Axel Alvarez",
-     "placement": "#4",
+     "placement": "Top 4",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-004-axel-alvarez-azir-emperor-of-the-sands",
@@ -19045,7 +18171,7 @@ window.FIELD = {
     {
      "label": "Steven Thai - CCS Sunday $5,000 Riftbound Event #4 #5 [riftools]",
      "player": "Steven Thai",
-     "placement": "#5",
+     "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-005-steven-thai-azir-emperor-of-the-sands",
@@ -19087,7 +18213,7 @@ window.FIELD = {
     {
      "label": "Gotachi - RiftAtlas Convergence #1 #8 [riftools]",
      "player": "Gotachi",
-     "placement": "#8",
+     "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-008-gotachi-azir-emperor-of-the-sands",
@@ -19129,7 +18255,7 @@ window.FIELD = {
     {
      "label": "Adam Winter - RiftAtlas Convergence #1 #10 [riftools]",
      "player": "Adam Winter",
-     "placement": "#10",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-010-adam-winter-azir-emperor-of-the-sands",
@@ -19172,7 +18298,7 @@ window.FIELD = {
     {
      "label": "Anthony Bailous - CCS Sunday $5,000 Riftbound Event #4 #24 [riftools]",
      "player": "Anthony Bailous",
-     "placement": "#24",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-024-anthony-bailous-azir-emperor-of-the-sands",
@@ -19214,7 +18340,7 @@ window.FIELD = {
     {
      "label": "ChuiChuy - RiftAtlas Convergence #1 #24 [riftools]",
      "player": "ChuiChuy",
-     "placement": "#24",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-024-chuichuy-azir-emperor-of-the-sands",
@@ -19258,7 +18384,7 @@ window.FIELD = {
     {
      "label": "Emil Menzies - CCS Sunday $5,000 Riftbound Event #4 #36 [riftools]",
      "player": "Emil Menzies",
-     "placement": "#36",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-036-emil-menzies-azir-emperor-of-the-sands",
@@ -19300,7 +18426,7 @@ window.FIELD = {
     {
      "label": "Pohsivix - RiftAtlas Convergence #1 #38 [riftools]",
      "player": "Pohsivix",
-     "placement": "#38",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-038-pohsivix-azir-emperor-of-the-sands",
@@ -19342,7 +18468,7 @@ window.FIELD = {
     {
      "label": "Justice Aaron Fowler - CCS Sunday $5,000 Riftbound Event #4 #61 [riftools]",
      "player": "Justice Aaron Fowler",
-     "placement": "#61",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-061-justice-aaron-fowler-azir-emperor-of-the-sands",
@@ -19385,7 +18511,7 @@ window.FIELD = {
     {
      "label": "Marvin Reyna - CCS Sunday $5,000 Riftbound Event #4 #80 [riftools]",
      "player": "Marvin Reyna",
-     "placement": "#80",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-080-marvin-reyna-azir-emperor-of-the-sands",
@@ -19427,7 +18553,7 @@ window.FIELD = {
     {
      "label": "bryan patterson - RiftAtlas Convergence #1 #96 [riftools]",
      "player": "bryan patterson",
-     "placement": "#96",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-096-bryan-patterson-azir-emperor-of-the-sands",
@@ -19467,7 +18593,7 @@ window.FIELD = {
     {
      "label": "jesse - RiftAtlas Convergence #1 #124 [riftools]",
      "player": "jesse",
-     "placement": "#124",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-124-jesse-azir-emperor-of-the-sands",
@@ -19507,9 +18633,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "YBE piorro - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #2 10-1-1 [riftools]",
+     "label": "YBE piorro - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #2 [riftools]",
      "player": "YBE piorro",
-     "placement": "#2 10-1-1",
+     "placement": "2nd",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c1f48979-1570-4521-b8a6-a4c4fd4b1f4c",
@@ -19543,9 +18669,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "3+x.dm.tomori - S3 China National Open 36 [riftools]",
+     "label": "3+x.dm.tomori - S3 China National Open #36 [riftools]",
      "player": "3+x.dm.tomori",
-     "placement": "36",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223676",
@@ -19584,9 +18710,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ARBD-lay - S3 China National Open 43 [riftools]",
+     "label": "ARBD-lay - S3 China National Open #43 [riftools]",
      "player": "ARBD-lay",
-     "placement": "43",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224116",
@@ -19626,9 +18752,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u732b\u5c9b\u5de1\u793c.NoScarlet.\u795e\u5207 - S3 China National Open 48 [riftools]",
+     "label": "\u732b\u5c9b\u5de1\u793c.NoScarlet.\u795e\u5207 - S3 China National Open #48 [riftools]",
      "player": "\u732b\u5c9b\u5de1\u793c.NoScarlet.\u795e\u5207",
-     "placement": "48",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223800",
@@ -19674,9 +18800,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Wiedzimak - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #63 5-3-0 [riftools]",
+     "label": "Wiedzimak - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #63 [riftools]",
      "player": "Wiedzimak",
-     "placement": "#63 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a860553e-db1f-4845-b995-557590c06429",
@@ -19711,9 +18837,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "EDG.AP1566 - S3 China National Open 67 [riftools]",
+     "label": "EDG.AP1566 - S3 China National Open #67 [riftools]",
      "player": "EDG.AP1566",
-     "placement": "67",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222806",
@@ -19753,9 +18879,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LOP mengu99 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #97 4-3-0 [riftools]",
+     "label": "LOP mengu99 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #97 [riftools]",
      "player": "LOP mengu99",
-     "placement": "#97 4-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0502b784-c0fa-4498-a9e6-472014134e37",
@@ -19789,9 +18915,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Ai.Muk.\u6615\u5955 - S3 China National Open 99 [riftools]",
+     "label": "Ai.Muk.\u6615\u5955 - S3 China National Open #99 [riftools]",
      "player": "Ai.Muk.\u6615\u5955",
-     "placement": "99",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225078",
@@ -19835,86 +18961,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "III Kordi III - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #135 4-4-0 [riftools]",
-     "player": "III Kordi III",
-     "placement": "#135 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9dd04e56-6e2a-429b-8b59-7f16db9fd922",
-     "main": {
-      "Arise!": 3,
-      "B.F. Sword": 3,
-      "Back Off": 2,
-      "Brutalizer": 3,
-      "Deathgrip": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "Doran's Shield": 3,
-      "En Garde": 2,
-      "Eye of the Herald": 3,
-      "Guards!": 3,
-      "Hidden Blade": 3,
-      "Scuttle Crab": 1,
-      "Soul Sword": 3,
-      "Vi, Peacekeeper": 1
-     },
-     "side": {
-      "Ashe, Focused": 2,
-      "Charm": 2,
-      "Disarming Rake": 1,
-      "Salvage": 2,
-      "Vi, Peacekeeper": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": [
-      "Hall of Legends",
-      "Seat of Power"
-     ]
-    },
-    {
-     "label": "Trufeel - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #140 3-3-2 [riftools]",
-     "player": "Trufeel",
-     "placement": "#140 3-3-2",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1aa27be5-f5cd-497a-80f7-34be5ac00b97",
-     "main": {
-      "Arise!": 3,
-      "B.F. Sword": 3,
-      "Back Off": 2,
-      "Brutalizer": 3,
-      "Deathgrip": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "Doran's Shield": 3,
-      "En Garde": 3,
-      "Eye of the Herald": 3,
-      "Guards!": 2,
-      "Hidden Blade": 3,
-      "Scuttle Crab": 1,
-      "Soul Sword": 3,
-      "Vi, Peacekeeper": 1
-     },
-     "side": {
-      "Ashe, Focused": 2,
-      "Charm": 2,
-      "Salvage": 2,
-      "Vi, Peacekeeper": 1,
-      "Wind Wall": 1
-     },
-     "runes": {
-      "Calm Rune": 7,
-      "Order Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "lordx - S3 China National Open 148 [riftools]",
+     "label": "lordx - S3 China National Open #148 [riftools]",
      "player": "lordx",
-     "placement": "148",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224797",
@@ -19956,9 +19005,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5965.\u6781\u624b\u611f.\u70df\u96e8 - S3 China National Open 220 [riftools]",
+     "label": "\u795e\u5965.\u6781\u624b\u611f.\u70df\u96e8 - S3 China National Open #220 [riftools]",
      "player": "\u795e\u5965.\u6781\u624b\u611f.\u70df\u96e8",
-     "placement": "220",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222732",
@@ -20003,9 +19052,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u73a9\u5177\u5751X\u5361\u4e50-\u98de\u9c7c - S3 China National Open 239 [riftools]",
+     "label": "\u73a9\u5177\u5751X\u5361\u4e50-\u98de\u9c7c - S3 China National Open #239 [riftools]",
      "player": "\u73a9\u5177\u5751X\u5361\u4e50-\u98de\u9c7c",
-     "placement": "239",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223973",
@@ -20049,9 +19098,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u76ae\u5c14\u5361\u677e - S3 China National Open 251 [riftools]",
+     "label": "\u76ae\u5c14\u5361\u677e - S3 China National Open #251 [riftools]",
      "player": "\u76ae\u5c14\u5361\u677e",
-     "placement": "251",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223769",
@@ -20093,9 +19142,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7eaf\u7cb9\u771f\u7684\u597d\u96be - S3 China National Open 257 [riftools]",
+     "label": "\u7eaf\u7cb9\u771f\u7684\u597d\u96be - S3 China National Open #257 [riftools]",
      "player": "\u7eaf\u7cb9\u771f\u7684\u597d\u96be",
-     "placement": "257",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224773",
@@ -20134,9 +19183,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u58a8\u67d3.\u829c\u6e56\u9ad8\u54c9 - S3 China National Open 282 [riftools]",
+     "label": "\u58a8\u67d3.\u829c\u6e56\u9ad8\u54c9 - S3 China National Open #282 [riftools]",
      "player": "\u58a8\u67d3.\u829c\u6e56\u9ad8\u54c9",
-     "placement": "282",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224555",
@@ -20179,9 +19228,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e94\u533a\u62c9\u9762\u7c73\u7ebf - S3 China National Open 367 [riftools]",
+     "label": "\u4e94\u533a\u62c9\u9762\u7c73\u7ebf - S3 China National Open #367 [riftools]",
      "player": "\u4e94\u533a\u62c9\u9762\u7c73\u7ebf",
-     "placement": "367",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223381",
@@ -20224,9 +19273,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Talion - S3 China National Open 383 [riftools]",
+     "label": "Talion - S3 China National Open #383 [riftools]",
      "player": "Talion",
-     "placement": "383",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224692",
@@ -20265,9 +19314,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Snail - S3 China National Open 390 [riftools]",
+     "label": "Snail - S3 China National Open #390 [riftools]",
      "player": "Snail",
-     "placement": "390",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224961",
@@ -20313,9 +19362,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Nasdaq.\u6ce1\u6ce1 - S3 China National Open 412 [riftools]",
+     "label": "Nasdaq.\u6ce1\u6ce1 - S3 China National Open #412 [riftools]",
      "player": "Nasdaq.\u6ce1\u6ce1",
-     "placement": "412",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222165",
@@ -20355,9 +19404,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "GIT-\u9752\u8336\u5143\u5bb5 - S3 China National Open 436 [riftools]",
+     "label": "GIT-\u9752\u8336\u5143\u5bb5 - S3 China National Open #436 [riftools]",
      "player": "GIT-\u9752\u8336\u5143\u5bb5",
-     "placement": "436",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225236",
@@ -20399,9 +19448,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u8d5b\u9ad8 Eric - S3 China National Open 463 [riftools]",
+     "label": "\u8d5b\u9ad8 Eric - S3 China National Open #463 [riftools]",
      "player": "\u8d5b\u9ad8 Eric",
-     "placement": "463",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223751",
@@ -20443,9 +19492,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "yiga - S3 China National Open 508 [riftools]",
+     "label": "yiga - S3 China National Open #508 [riftools]",
      "player": "yiga",
-     "placement": "508",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223328",
@@ -20488,9 +19537,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9762\u5bf9\u75be\u98ce\u5427 - S3 China National Open 514 [riftools]",
+     "label": "\u9762\u5bf9\u75be\u98ce\u5427 - S3 China National Open #514 [riftools]",
      "player": "\u9762\u5bf9\u75be\u98ce\u5427",
-     "placement": "514",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223303",
@@ -20789,7 +19838,7 @@ window.FIELD = {
     {
      "label": "Giorgio Guardo - RiftAtlas Convergence #1 #13 [riftools]",
      "player": "Giorgio Guardo",
-     "placement": "#13",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-013-giorgio-guardo-pyke-bloodharbor-ripper",
@@ -20834,7 +19883,7 @@ window.FIELD = {
     {
      "label": "Christian Harrington - RiftAtlas Convergence #1 #15 [riftools]",
      "player": "Christian Harrington",
-     "placement": "#15",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-015-christian-harrington-pyke-bloodharbor-ripper",
@@ -20878,7 +19927,7 @@ window.FIELD = {
     {
      "label": "Huan Huynh - RiftAtlas Convergence #1 #29 [riftools]",
      "player": "Huan Huynh",
-     "placement": "#29",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-029-huan-huynh-pyke-bloodharbor-ripper",
@@ -20924,7 +19973,7 @@ window.FIELD = {
     {
      "label": "Tako Time - RiftAtlas Convergence #1 #33 [riftools]",
      "player": "Tako Time",
-     "placement": "#33",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-033-tako-time-pyke-bloodharbor-ripper",
@@ -20975,7 +20024,7 @@ window.FIELD = {
     {
      "label": "Ricardo Cruz - CCS Sunday $5,000 Riftbound Event #4 #59 [riftools]",
      "player": "Ricardo Cruz",
-     "placement": "#59",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-059-ricardo-cruz-pyke-bloodharbor-ripper",
@@ -21020,7 +20069,7 @@ window.FIELD = {
     {
      "label": "Brandon Pierce - CCS Sunday $5,000 Riftbound Event #4 #66 [riftools]",
      "player": "Brandon Pierce",
-     "placement": "#66",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-066-brandon-pierce-pyke-bloodharbor-ripper",
@@ -21062,9 +20111,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Fase - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #10 6-2-1 [riftools]",
+     "label": "Fase - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #10 [riftools]",
      "player": "Fase",
-     "placement": "#10 6-2-1",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/869865e2-1dae-46de-b3c1-9cfb8d3c25c0",
@@ -21104,9 +20153,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u5de6\u5de6 - S3 China National Open 88 [riftools]",
+     "label": "\u5de6\u5de6 - S3 China National Open #88 [riftools]",
      "player": "\u5de6\u5de6",
-     "placement": "88",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224120",
@@ -21151,9 +20200,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e0d\u5584\u8a00\u8f9e\u7684\u5c0f\u5f20\u540c\u5b66 - S3 China National Open 100 [riftools]",
+     "label": "\u4e0d\u5584\u8a00\u8f9e\u7684\u5c0f\u5f20\u540c\u5b66 - S3 China National Open #100 [riftools]",
      "player": "\u4e0d\u5584\u8a00\u8f9e\u7684\u5c0f\u5f20\u540c\u5b66",
-     "placement": "100",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224216",
@@ -21204,9 +20253,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "MegaM0gwai - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #137 3-2-2 [riftools]",
+     "label": "MegaM0gwai - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #137 [riftools]",
      "player": "MegaM0gwai",
-     "placement": "#137 3-2-2",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a7f11089-e973-4efe-a7a8-2961087e019e",
@@ -21246,144 +20295,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "joyspace_\u5634\u5634 - S3 China National Open 144 [riftools]",
-     "player": "joyspace_\u5634\u5634",
-     "placement": "144",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223614",
-     "main": {
-      "Bewitching Spirit": 3,
-      "Blighted Battleaxe": 2,
-      "Cleave": 2,
-      "Falling Star": 3,
-      "Ferrous Forerunner": 3,
-      "Fizz, Trickster": 2,
-      "Kai'Sa, Survivor": 2,
-      "Pyke, Dockside Butcher": 1,
-      "Rengar, Pouncing": 2,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Switcheroo": 2,
-      "Tideturner": 3,
-      "Traveling Merchant": 2,
-      "Treasure Hunter": 3,
-      "Vex, Apathetic": 2,
-      "Void Seeker": 3
-     },
-     "side": {
-      "Hard Bargain": 1,
-      "Kha'Zix, Mutating Horror": 2,
-      "Mindsplitter": 2,
-      "Star-Crossed": 1,
-      "Thermo Beam": 2
-     },
-     "runes": {
-      "Chaos Rune": 5,
-      "Fury Rune": 7
-     },
-     "battlefields": [
-      "Aspirant's Climb",
-      "Forbidding Waste",
-      "Ripper's Bay"
-     ]
-    },
-    {
-     "label": "Nihilex - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #155 3-3-0 [riftools]",
-     "player": "Nihilex",
-     "placement": "#155 3-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b0450e62-5754-4ed6-93cb-a427618b5644",
-     "main": {
-      "Acceptable Losses": 1,
-      "Bewitching Spirit": 3,
-      "Cleave": 3,
-      "Falling Star": 3,
-      "Fizz, Trickster": 2,
-      "Kha'Zix, Mutating Horror": 2,
-      "Noxus Hopeful": 3,
-      "Pack of Wonders": 3,
-      "Scryer's Bloom": 3,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "The List": 2,
-      "Traveling Merchant": 3,
-      "Treasure Trove": 3,
-      "Void Seeker": 3
-     },
-     "side": {
-      "Acceptable Losses": 1,
-      "Angler Beast": 1,
-      "Downwell": 1,
-      "Factory Recall": 1,
-      "Gust": 1,
-      "Mindsplitter": 1,
-      "Piercing Light": 1,
-      "Star-Crossed": 1
-     },
-     "runes": {
-      "Chaos Rune": 6,
-      "Fury Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "D.C\u73af\u6e38KJ - S3 China National Open 156 [riftools]",
-     "player": "D.C\u73af\u6e38KJ",
-     "placement": "156",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224254",
-     "main": {
-      "Acceptable Losses": 1,
-      "Baron Nashor": 1,
-      "Bewitching Spirit": 3,
-      "Blood Rush": 2,
-      "Death from Below": 1,
-      "Ezreal, Prodigy": 2,
-      "Falling Star": 3,
-      "Ferrous Forerunner": 1,
-      "Fizz, Trickster": 2,
-      "Hard Bargain": 2,
-      "Mindsplitter": 1,
-      "Piercing Light": 2,
-      "Pyke, Dockside Butcher": 1,
-      "Sharkling": 1,
-      "Soulgorger": 1,
-      "Stacked Deck": 1,
-      "Star-Crossed": 2,
-      "Switcheroo": 2,
-      "Tideturner": 2,
-      "Traveling Merchant": 3,
-      "Treasure Hunter": 3,
-      "Vex, Apathetic": 2,
-      "Void Seeker": 1
-     },
-     "side": {
-      "Abandon": 1,
-      "Acceptable Losses": 1,
-      "Angler Beast": 1,
-      "Blighted Battleaxe": 1,
-      "Factory Recall": 1,
-      "Ferrous Forerunner": 1,
-      "Last Rites": 1,
-      "Temptation": 1
-     },
-     "runes": {
-      "Chaos Rune": 5,
-      "Fury Rune": 7
-     },
-     "battlefields": [
-      "Forbidding Waste",
-      "Ripper's Bay",
-      "Star Spring"
-     ]
-    },
-    {
-     "label": "J1ANG410 - S3 China National Open 158 [riftools]",
+     "label": "J1ANG410 - S3 China National Open #158 [riftools]",
      "player": "J1ANG410",
-     "placement": "158",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223416",
@@ -21426,9 +20340,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "YBE MeeL0rd - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #177 3-3-0 [riftools]",
+     "label": "YBE MeeL0rd - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #177 [riftools]",
      "player": "YBE MeeL0rd",
-     "placement": "#177 3-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/342578d0-3df7-43a8-812d-72472544b1c6",
@@ -21469,9 +20383,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "XYZ.86\uff08\u795e\u5207\uff09 - S3 China National Open 192 [riftools]",
+     "label": "XYZ.86\uff08\u795e\u5207\uff09 - S3 China National Open #192 [riftools]",
      "player": "XYZ.86\uff08\u795e\u5207\uff09",
-     "placement": "192",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223953",
@@ -21521,9 +20435,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Hien - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #250 0-3-0 [riftools]",
+     "label": "Hien - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #250 [riftools]",
      "player": "Hien",
-     "placement": "#250 0-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c1f5021a-f5a3-43fb-aa41-535fe93c44c2",
@@ -21565,9 +20479,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Ai.\u8c37\u795e\u4f60\u522b\u6b7bQAQ - S3 China National Open 461 [riftools]",
+     "label": "Ai.\u8c37\u795e\u4f60\u522b\u6b7bQAQ - S3 China National Open #461 [riftools]",
      "player": "Ai.\u8c37\u795e\u4f60\u522b\u6b7bQAQ",
-     "placement": "461",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224954",
@@ -21609,9 +20523,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7fa4\u661f.\u8bd7\u9152 - S3 China National Open 464 [riftools]",
+     "label": "\u7fa4\u661f.\u8bd7\u9152 - S3 China National Open #464 [riftools]",
      "player": "\u7fa4\u661f.\u8bd7\u9152",
-     "placement": "464",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224411",
@@ -21659,9 +20573,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FSW.\u5f31\u8005\u5fc3\u6001.\u96ea\u66ae\u54d2\u54d2\u54d2 - S3 China National Open 542 [riftools]",
+     "label": "FSW.\u5f31\u8005\u5fc3\u6001.\u96ea\u66ae\u54d2\u54d2\u54d2 - S3 China National Open #542 [riftools]",
      "player": "FSW.\u5f31\u8005\u5fc3\u6001.\u96ea\u66ae\u54d2\u54d2\u54d2",
-     "placement": "542",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224723",
@@ -21709,9 +20623,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "yisecaiyu - S3 China National Open 543 [riftools]",
+     "label": "yisecaiyu - S3 China National Open #543 [riftools]",
      "player": "yisecaiyu",
-     "placement": "543",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224062",
@@ -22089,7 +21003,7 @@ window.FIELD = {
     {
      "label": "Canon Black - RiftAtlas Convergence #1 #3 [riftools]",
      "player": "Canon Black",
-     "placement": "#3",
+     "placement": "3rd",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-003-canon-black-annie-dark-child",
@@ -22133,7 +21047,7 @@ window.FIELD = {
     {
      "label": "Rishi Chaudhary - CCS Sunday $5,000 Riftbound Event #4 #6 [riftools]",
      "player": "Rishi Chaudhary",
-     "placement": "#6",
+     "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-006-rishi-chaudhary-annie-dark-child",
@@ -22180,7 +21094,7 @@ window.FIELD = {
     {
      "label": "Talia Garvey - RiftAtlas Convergence #1 #23 [riftools]",
      "player": "Talia Garvey",
-     "placement": "#23",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-023-talia-garvey-annie-dark-child",
@@ -22226,7 +21140,7 @@ window.FIELD = {
     {
      "label": "Valerie - CCS Sunday $5,000 Riftbound Event #4 #74 [riftools]",
      "player": "Valerie",
-     "placement": "#74",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-074-valerie-annie-dark-child",
@@ -22270,9 +21184,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5f6c - S3 China National Open 6 [riftools]",
+     "label": "\u5f6c - S3 China National Open #6 [riftools]",
      "player": "\u5f6c",
-     "placement": "6",
+     "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225393",
@@ -22317,9 +21231,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "YBE artes - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #25 6-2-0 [riftools]",
+     "label": "YBE artes - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #25 [riftools]",
      "player": "YBE artes",
-     "placement": "#25 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b97ce6f0-882c-4b5c-8a06-88718e947aeb",
@@ -22357,9 +21271,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "YBE Snowhisky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #32 6-2-0 [riftools]",
+     "label": "YBE Snowhisky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #32 [riftools]",
      "player": "YBE Snowhisky",
-     "placement": "#32 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7af0771d-e2f9-4b7f-9b66-d66c0c38b4c6",
@@ -22400,9 +21314,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u95ea\u7535\u5bb6^\u4e50\u4e8b^\u7cd6\u679c\u96e8 - S3 China National Open 73 [riftools]",
+     "label": "\u95ea\u7535\u5bb6^\u4e50\u4e8b^\u7cd6\u679c\u96e8 - S3 China National Open #73 [riftools]",
      "player": "\u95ea\u7535\u5bb6^\u4e50\u4e8b^\u7cd6\u679c\u96e8",
-     "placement": "73",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225090",
@@ -22445,9 +21359,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "morsownicaa - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #93 4-4-0 [riftools]",
+     "label": "morsownicaa - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #93 [riftools]",
      "player": "morsownicaa",
-     "placement": "#93 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e99bfcca-3d24-470b-907a-b899a7c112f1",
@@ -22486,91 +21400,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "JSTR Recker - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #148 3-3-0 [riftools]",
-     "player": "JSTR Recker",
-     "placement": "#148 3-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7bf8d964-e525-4ae4-a47b-d39234114a8c",
-     "main": {
-      "Cleave": 2,
-      "Ferrous Forerunner": 3,
-      "Flash": 3,
-      "Grim Apothecary": 2,
-      "Hard Bargain": 1,
-      "Inferna": 3,
-      "Kai'Sa, Survivor": 3,
-      "Long Sword": 3,
-      "Noxus Hopeful": 3,
-      "Overzealous Fan": 2,
-      "Rengar, Pouncing": 3,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Switcheroo": 1,
-      "Traveling Merchant": 3,
-      "Vex, Apathetic": 2
-     },
-     "side": {
-      "Abandon": 1,
-      "Against the Odds": 1,
-      "Factory Recall": 1,
-      "Falling Star": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Rebuke": 1,
-      "Star-Crossed": 1,
-      "Thermo Beam": 1
-     },
-     "runes": {
-      "Chaos Rune": 5,
-      "Fury Rune": 7
-     },
-     "battlefields": []
-    },
-    {
-     "label": "IV LEAF CLOVER - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #150 3-3-0 [riftools]",
-     "player": "IV LEAF CLOVER",
-     "placement": "#150 3-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9b2f4a22-6664-4525-87ae-1583a751d9d1",
-     "main": {
-      "Cleave": 2,
-      "Falling Star": 1,
-      "Ferrous Forerunner": 3,
-      "Flash": 3,
-      "Grim Apothecary": 2,
-      "Hard Bargain": 1,
-      "Inferna": 3,
-      "Kai'Sa, Survivor": 3,
-      "Long Sword": 2,
-      "Noxus Hopeful": 3,
-      "Overzealous Fan": 2,
-      "Rengar, Pouncing": 3,
-      "Stacked Deck": 3,
-      "Star-Crossed": 2,
-      "Switcheroo": 1,
-      "Traveling Merchant": 3,
-      "Vex, Apathetic": 2
-     },
-     "side": {
-      "Abandon": 1,
-      "Acceptable Losses": 2,
-      "Against the Odds": 1,
-      "Falling Star": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Rebuke": 1,
-      "Thermo Beam": 1
-     },
-     "runes": {
-      "Chaos Rune": 5,
-      "Fury Rune": 7
-     },
-     "battlefields": []
-    },
-    {
-     "label": "PaniiiczTCG - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #172 3-3-0 [riftools]",
+     "label": "PaniiiczTCG - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #172 [riftools]",
      "player": "PaniiiczTCG",
-     "placement": "#172 3-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d1ebb63f-641d-45e0-bd7f-13efd4313d44",
@@ -22609,9 +21441,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u7fbd\u8292\u4e283+x\u4e28\u4e0d\u5403\u7cd6 - S3 China National Open 179 [riftools]",
+     "label": "\u7fbd\u8292\u4e283+x\u4e28\u4e0d\u5403\u7cd6 - S3 China National Open #179 [riftools]",
      "player": "\u7fbd\u8292\u4e283+x\u4e28\u4e0d\u5403\u7cd6",
-     "placement": "179",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224351",
@@ -22660,9 +21492,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6d77\u9e25 - S3 China National Open 188 [riftools]",
+     "label": "\u6d77\u9e25 - S3 China National Open #188 [riftools]",
      "player": "\u6d77\u9e25",
-     "placement": "188",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223948",
@@ -22709,9 +21541,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "AllKnowingGoat - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #188 2-3-1 [riftools]",
+     "label": "AllKnowingGoat - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #188 [riftools]",
      "player": "AllKnowingGoat",
-     "placement": "#188 2-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/443a00c2-93bf-4038-bbd3-82758d97825e",
@@ -22750,9 +21582,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u9cd5\u9c7cBS - S3 China National Open 295 [riftools]",
+     "label": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u9cd5\u9c7cBS - S3 China National Open #295 [riftools]",
      "player": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u9cd5\u9c7cBS",
-     "placement": "295",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223406",
@@ -22794,9 +21626,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5c3c\u53e4\u62c9\u65af - S3 China National Open 472 [riftools]",
+     "label": "\u5c3c\u53e4\u62c9\u65af - S3 China National Open #472 [riftools]",
      "player": "\u5c3c\u53e4\u62c9\u65af",
-     "placement": "472",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223879",
@@ -22842,9 +21674,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "oyu - S3 China National Open 485 [riftools]",
+     "label": "oyu - S3 China National Open #485 [riftools]",
      "player": "oyu",
-     "placement": "485",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224921",
@@ -22889,9 +21721,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Rowe - S3 China National Open 548 [riftools]",
+     "label": "Rowe - S3 China National Open #548 [riftools]",
      "player": "Rowe",
-     "placement": "548",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223465",
@@ -22939,9 +21771,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Abstract - S3 China National Open 571 [riftools]",
+     "label": "Abstract - S3 China National Open #571 [riftools]",
      "player": "Abstract",
-     "placement": "571",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223843",
@@ -23208,9 +22040,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "JohnDruitt - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #94 4-4-0 [riftools]",
+     "label": "JohnDruitt - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #94 [riftools]",
      "player": "JohnDruitt",
-     "placement": "#94 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1cdc75ea-e5ed-429b-ac68-309b9b0a16a4",
@@ -23245,212 +22077,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Bakura - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #117 4-4-0 [riftools]",
-     "player": "Bakura",
-     "placement": "#117 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e0821c39-6f87-4e98-897e-d7d861deb4d7",
-     "main": {
-      "Arachnoid Horror": 2,
-      "Back Off": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "Emperor's Divide": 1,
-      "Gemhand Hunter": 3,
-      "Grim Resolve": 3,
-      "Irresistible Faefolk": 2,
-      "Master Yi, Unstoppable": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 2,
-      "Sabotage": 2,
-      "Skyward Strike": 2,
-      "Voracious Gromp": 3,
-      "Wuju Apprentice": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Disarming Rake": 3,
-      "Ruin Runner": 2,
-      "Sabotage": 1,
-      "Unyielding Spirit": 2
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "BKM.RBmint - S3 China National Open 118 [riftools]",
-     "player": "BKM.RBmint",
-     "placement": "118",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225416",
-     "main": {
-      "Alpha Strike": 1,
-      "Arachnoid Horror": 1,
-      "Back Off": 2,
-      "Charm": 2,
-      "Concentrate": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "Gemhand Hunter": 3,
-      "Grim Resolve": 3,
-      "Herald of Spring": 2,
-      "Master Yi, Tempered": 1,
-      "Master Yi, Unstoppable": 2,
-      "Mosstomper": 1,
-      "Punch First": 3,
-      "Sabotage": 1,
-      "Scuttle Crab": 2,
-      "Voracious Gromp": 2,
-      "Wuju Apprentice": 3,
-      "Zhonya's Hourglass": 3
-     },
-     "side": {
-      "Akshan, Mischievous": 2,
-      "Alpha Strike": 1,
-      "Charm": 1,
-      "Sabotage": 1,
-      "Unyielding Spirit": 2,
-      "Whiteflame Protector": 1
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Calm Rune": 6
-     },
-     "battlefields": [
-      "Gardens of Becoming",
-      "Reckoner's Arena",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "SheepyWolf - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #118 4-4-0 [riftools]",
-     "player": "SheepyWolf",
-     "placement": "#118 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bdd3a05c-0348-4c64-b277-7a3e29ca8845",
-     "main": {
-      "Arachnoid Horror": 1,
-      "Back Off": 2,
-      "Challenge": 1,
-      "Defy": 3,
-      "Discipline": 3,
-      "Emperor's Divide": 1,
-      "Gemhand Hunter": 3,
-      "Grim Resolve": 2,
-      "Irresistible Faefolk": 2,
-      "Kinkou Initiate": 2,
-      "Master Yi, Tempered": 1,
-      "Master Yi, Unstoppable": 2,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 2,
-      "Scuttle Crab": 1,
-      "Skyward Strike": 2,
-      "Voracious Gromp": 3,
-      "Wuju Apprentice": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Challenge": 1,
-      "Disarming Rake": 2,
-      "Sabotage": 3,
-      "Tianna Crownguard": 2
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "meleleta - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #131 4-4-0 [riftools]",
-     "player": "meleleta",
-     "placement": "#131 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d6e433c0-2e76-4ae2-88f0-4cabb4bf0689",
-     "main": {
-      "Catalyst of Aeons": 3,
-      "Charm": 2,
-      "Dazzling Aurora": 3,
-      "Deadbloom Predator": 2,
-      "Defy": 3,
-      "Desert's Call": 3,
-      "Discipline": 1,
-      "Disposal Order": 3,
-      "Elder Dragon": 3,
-      "Find Your Center": 3,
-      "Flurry of Blades": 3,
-      "Meditation": 1,
-      "Mobilize": 2,
-      "Not So Fast": 2,
-      "Sabotage": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Akshan, Mischievous": 2,
-      "Challenge": 2,
-      "Charm": 1,
-      "Not So Fast": 1,
-      "Unyielding Spirit": 1,
-      "Volibear, Imposing": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "xdd - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #136 4-4-0 [riftools]",
-     "player": "xdd",
-     "placement": "#136 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e8be236c-b197-49ec-87ef-62f64bb8906a",
-     "main": {
-      "Arachnoid Horror": 1,
-      "Back Off": 2,
-      "Challenge": 1,
-      "Defy": 3,
-      "Discipline": 3,
-      "Emperor's Divide": 1,
-      "Gemhand Hunter": 3,
-      "Grim Resolve": 2,
-      "Irresistible Faefolk": 2,
-      "Kinkou Initiate": 2,
-      "Master Yi, Tempered": 1,
-      "Master Yi, Unstoppable": 2,
-      "Nidalee, Cat Form": 1,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 1,
-      "Scuttle Crab": 1,
-      "Skyward Strike": 2,
-      "Voracious Gromp": 3,
-      "Wuju Apprentice": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Akshan, Mischievous": 1,
-      "Disarming Rake": 2,
-      "Sabotage": 3,
-      "Unyielding Spirit": 2
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "MrBall - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #166 3-5-0 [riftools]",
+     "label": "MrBall - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #166 [riftools]",
      "player": "MrBall",
-     "placement": "#166 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f86f8d3f-d34e-4f17-afe7-ee21479ec833",
@@ -23490,9 +22119,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Konutix - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #186 3-5-0 [riftools]",
+     "label": "Konutix - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #186 [riftools]",
      "player": "Konutix",
-     "placement": "#186 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e0abd887-5b47-4d55-bc7f-f18e6978bc1a",
@@ -23534,9 +22163,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SCH Riftbound - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #218 2-6-0 [riftools]",
+     "label": "SCH Riftbound - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #218 [riftools]",
      "player": "SCH Riftbound",
-     "placement": "#218 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/dccef986-3997-4179-9eaa-0780229afd7f",
@@ -23573,9 +22202,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ikUn - S3 China National Open 489 [riftools]",
+     "label": "ikUn - S3 China National Open #489 [riftools]",
      "player": "ikUn",
-     "placement": "489",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222625",
@@ -23621,9 +22250,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Hso.Asn.ger - S3 China National Open 501 [riftools]",
+     "label": "Hso.Asn.ger - S3 China National Open #501 [riftools]",
      "player": "Hso.Asn.ger",
-     "placement": "501",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225042",
@@ -24610,7 +23239,7 @@ window.FIELD = {
     {
      "label": "SnoopyDaFloofy - RiftAtlas Convergence #1 #9 [riftools]",
      "player": "SnoopyDaFloofy",
-     "placement": "#9",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-009-snoopydafloofy-irelia-blade-dancer",
@@ -24654,7 +23283,7 @@ window.FIELD = {
     {
      "label": "frog eryn - CCS Sunday $5,000 Riftbound Event #4 #15 [riftools]",
      "player": "frog eryn",
-     "placement": "#15",
+     "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-015-frog-eryn-irelia-blade-dancer",
@@ -24701,7 +23330,7 @@ window.FIELD = {
     {
      "label": "connoorrr - RiftAtlas Convergence #1 #25 [riftools]",
      "player": "connoorrr",
-     "placement": "#25",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-025-connoorrr-irelia-blade-dancer",
@@ -24743,7 +23372,7 @@ window.FIELD = {
     {
      "label": "Christopher - RiftAtlas Convergence #1 #43 [riftools]",
      "player": "Christopher",
-     "placement": "#43",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-043-christopher-irelia-blade-dancer",
@@ -24789,7 +23418,7 @@ window.FIELD = {
     {
      "label": "Justin Etheridge - CCS Sunday $5,000 Riftbound Event #4 #54 [riftools]",
      "player": "Justin Etheridge",
-     "placement": "#54",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-054-justin-etheridge-irelia-blade-dancer",
@@ -24837,7 +23466,7 @@ window.FIELD = {
     {
      "label": "yangpanting - RiftAtlas Convergence #1 #69 [riftools]",
      "player": "yangpanting",
-     "placement": "#69",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-069-yangpanting-irelia-blade-dancer",
@@ -24885,7 +23514,7 @@ window.FIELD = {
     {
      "label": "Patrick Garner - CCS Sunday $5,000 Riftbound Event #4 #77 [riftools]",
      "player": "Patrick Garner",
-     "placement": "#77",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-077-patrick-garner-irelia-blade-dancer",
@@ -24931,7 +23560,7 @@ window.FIELD = {
     {
      "label": "jesus riva - RiftAtlas Convergence #1 #87 [riftools]",
      "player": "jesus riva",
-     "placement": "#87",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-087-jesus-riva-irelia-blade-dancer",
@@ -24977,7 +23606,7 @@ window.FIELD = {
     {
      "label": "Zach Whitley - RiftAtlas Convergence #1 #99 [riftools]",
      "player": "Zach Whitley",
-     "placement": "#99",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-099-zach-whitley-irelia-blade-dancer",
@@ -25024,7 +23653,7 @@ window.FIELD = {
     {
      "label": "TubbyX | Gavin - RiftAtlas Convergence #1 #109 [riftools]",
      "player": "TubbyX | Gavin",
-     "placement": "#109",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-109-tubbyx-gavin-irelia-blade-dancer",
@@ -25069,9 +23698,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68a6\u4e4b\u661f-\u5495\u560e\u4e50\u8272 - S3 China National Open 1 [riftools]",
+     "label": "\u68a6\u4e4b\u661f-\u5495\u560e\u4e50\u8272 - S3 China National Open #1 [riftools]",
      "player": "\u68a6\u4e4b\u661f-\u5495\u560e\u4e50\u8272",
-     "placement": "1",
+     "placement": "1st",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225002",
@@ -25116,9 +23745,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e0d\u5403\u9999\u83dc\u7684\u4e4c\u8428\u5947 - S3 China National Open 2 [riftools]",
+     "label": "\u4e0d\u5403\u9999\u83dc\u7684\u4e4c\u8428\u5947 - S3 China National Open #2 [riftools]",
      "player": "\u4e0d\u5403\u9999\u83dc\u7684\u4e4c\u8428\u5947",
-     "placement": "2",
+     "placement": "2nd",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225058",
@@ -25164,9 +23793,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Teampsy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #4 8-2-1 [riftools]",
+     "label": "Teampsy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #4 [riftools]",
      "player": "Teampsy",
-     "placement": "#4 8-2-1",
+     "placement": "Top 4",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8d719799-580b-4250-8444-3a081d4bc533",
@@ -25205,9 +23834,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "EDG.Rico1997 - S3 China National Open 9 [riftools]",
+     "label": "EDG.Rico1997 - S3 China National Open #9 [riftools]",
      "player": "EDG.Rico1997",
-     "placement": "9",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225335",
@@ -25252,9 +23881,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FDG.\u6210\u6d77\u840c\u5948 - S3 China National Open 10 [riftools]",
+     "label": "FDG.\u6210\u6d77\u840c\u5948 - S3 China National Open #10 [riftools]",
      "player": "FDG.\u6210\u6d77\u840c\u5948",
-     "placement": "10",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224176",
@@ -25296,9 +23925,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Sharksis - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #16 6-3-0 [riftools]",
+     "label": "Sharksis - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #16 [riftools]",
      "player": "Sharksis",
-     "placement": "#16 6-3-0",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0f4cce39-cfe0-4abf-9969-3c19e396a18b",
@@ -25339,9 +23968,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "EDG.SN2008 - S3 China National Open 19 [riftools]",
+     "label": "EDG.SN2008 - S3 China National Open #19 [riftools]",
      "player": "EDG.SN2008",
-     "placement": "19",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225018",
@@ -25386,9 +24015,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7OAK - S3 China National Open 31 [riftools]",
+     "label": "LineKa\u00b7OAK - S3 China National Open #31 [riftools]",
      "player": "LineKa\u00b7OAK",
-     "placement": "31",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224061",
@@ -25434,9 +24063,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "CCB.\u6625 - S3 China National Open 42 [riftools]",
+     "label": "CCB.\u6625 - S3 China National Open #42 [riftools]",
      "player": "CCB.\u6625",
-     "placement": "42",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225057",
@@ -25482,9 +24111,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5495\u5495\u560e\u560e.\u5343\u5e74 - S3 China National Open 51 [riftools]",
+     "label": "\u5495\u5495\u560e\u560e.\u5343\u5e74 - S3 China National Open #51 [riftools]",
      "player": "\u5495\u5495\u560e\u560e.\u5343\u5e74",
-     "placement": "51",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223566",
@@ -25529,9 +24158,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5317\u4eac\u6cfd\u8431-Cui - S3 China National Open 66 [riftools]",
+     "label": "\u5317\u4eac\u6cfd\u8431-Cui - S3 China National Open #66 [riftools]",
      "player": "\u5317\u4eac\u6cfd\u8431-Cui",
-     "placement": "66",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225063",
@@ -25575,9 +24204,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f18\u6781\u5ba2-\u72fc\u53d4 - S3 China National Open 76 [riftools]",
+     "label": "\u4f18\u6781\u5ba2-\u72fc\u53d4 - S3 China National Open #76 [riftools]",
      "player": "\u4f18\u6781\u5ba2-\u72fc\u53d4",
-     "placement": "76",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224724",
@@ -25625,9 +24254,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ATW-\u6851\u4e4b\u69d0-MGC\u83dc\u72d71\u53f7 - S3 China National Open 79 [riftools]",
+     "label": "ATW-\u6851\u4e4b\u69d0-MGC\u83dc\u72d71\u53f7 - S3 China National Open #79 [riftools]",
      "player": "ATW-\u6851\u4e4b\u69d0-MGC\u83dc\u72d71\u53f7",
-     "placement": "79",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224471",
@@ -25674,9 +24303,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "y5jhk - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #83 4-3-1 [riftools]",
+     "label": "y5jhk - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #83 [riftools]",
      "player": "y5jhk",
-     "placement": "#83 4-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/452b2c1b-b2dc-4cac-bbdd-5de03276335e",
@@ -25717,9 +24346,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "felix - S3 China National Open 86 [riftools]",
+     "label": "felix - S3 China National Open #86 [riftools]",
      "player": "felix",
-     "placement": "86",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225196",
@@ -25766,9 +24395,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "DWT-\u795e\u5207-\u6770\uff08\u6069\u5e08\u4e8c\u9ebb\uff09 - S3 China National Open 90 [riftools]",
+     "label": "DWT-\u795e\u5207-\u6770\uff08\u6069\u5e08\u4e8c\u9ebb\uff09 - S3 China National Open #90 [riftools]",
      "player": "DWT-\u795e\u5207-\u6770\uff08\u6069\u5e08\u4e8c\u9ebb\uff09",
-     "placement": "90",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225177",
@@ -25816,9 +24445,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u72c2\u6d3e_KuangPi - S3 China National Open 110 [riftools]",
+     "label": "\u72c2\u6d3e_KuangPi - S3 China National Open #110 [riftools]",
      "player": "\u72c2\u6d3e_KuangPi",
-     "placement": "110",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224696",
@@ -25865,249 +24494,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65cb\u6728\u65f6\u5149\u7684\u7eff\u62d0 - S3 China National Open 114 [riftools]",
-     "player": "\u65cb\u6728\u65f6\u5149\u7684\u7eff\u62d0",
-     "placement": "114",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224770",
-     "main": {
-      "Boots of Swiftness": 3,
-      "Charm": 2,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Guardian Angel": 3,
-      "Gust": 2,
-      "Irelia, Fervent": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Not So Fast": 1,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 3,
-      "Stacked Deck": 2,
-      "Star-Crossed": 2,
-      "Stellacorn Herder": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1
-     },
-     "side": {
-      "Abandon": 1,
-      "Adaptatron": 2,
-      "Flash": 1,
-      "Pyke, Returned": 1,
-      "Star-Crossed": 1,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Aspirant's Climb",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "\u767d\u9f20 - S3 China National Open 129 [riftools]",
-     "player": "\u767d\u9f20",
-     "placement": "129",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/222905",
-     "main": {
-      "Boots of Swiftness": 2,
-      "Charm": 2,
-      "Cull": 1,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fizz, Trickster": 1,
-      "Guardian Angel": 2,
-      "Gust": 1,
-      "Irelia, Fervent": 2,
-      "Not So Fast": 1,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 3,
-      "Stacked Deck": 2,
-      "Star-Crossed": 2,
-      "Stellacorn Herder": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "side": {
-      "Adaptatron": 2,
-      "Gust": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Not So Fast": 1,
-      "Star-Crossed": 1,
-      "Vex, Apathetic": 2
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Sunken Temple",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "\u84dd - S3 China National Open 134 [riftools]",
-     "player": "\u84dd",
-     "placement": "134",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223634",
-     "main": {
-      "Adaptatron": 1,
-      "Boots of Swiftness": 2,
-      "Charm": 2,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fizz, Trickster": 1,
-      "Guardian Angel": 2,
-      "Gust": 2,
-      "Irelia, Fervent": 1,
-      "Not So Fast": 1,
-      "Pyke, Returned": 1,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 3,
-      "Stacked Deck": 2,
-      "Star-Crossed": 2,
-      "Stellacorn Herder": 3,
-      "Tideturner": 2,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "side": {
-      "Adaptatron": 1,
-      "Cull": 1,
-      "Factory Recall": 1,
-      "Hard Bargain": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Not So Fast": 1,
-      "Switcheroo": 1,
-      "Vex, Cheerless": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Sunken Temple",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "\u68a6\u4e4b\u661f.\u7c89\u6bdb\u5976\u9f99 - S3 China National Open 136 [riftools]",
-     "player": "\u68a6\u4e4b\u661f.\u7c89\u6bdb\u5976\u9f99",
-     "placement": "136",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223301",
-     "main": {
-      "Adaptatron": 1,
-      "Boots of Swiftness": 3,
-      "Charm": 2,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fizz, Trickster": 1,
-      "Guardian Angel": 2,
-      "Gust": 1,
-      "Irelia, Fervent": 1,
-      "Not So Fast": 1,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 3,
-      "Stacked Deck": 2,
-      "Star-Crossed": 2,
-      "Stellacorn Herder": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "side": {
-      "Abandon": 1,
-      "Adaptatron": 1,
-      "Gust": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Not So Fast": 1,
-      "Star-Crossed": 1,
-      "Switcheroo": 1,
-      "Vex, Apathetic": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Sunken Temple",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u5c71\u9752\u77e5 - S3 China National Open 137 [riftools]",
-     "player": "\ud835\udc72\ud835\udc6b\ud835\udc7f.\u5c71\u9752\u77e5",
-     "placement": "137",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223563",
-     "main": {
-      "Adaptatron": 1,
-      "Boots of Swiftness": 2,
-      "Charm": 2,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 3,
-      "Guardian Angel": 2,
-      "Gust": 2,
-      "Irelia, Fervent": 1,
-      "Not So Fast": 1,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 3,
-      "Stacked Deck": 2,
-      "Star-Crossed": 2,
-      "Stellacorn Herder": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "side": {
-      "Abandon": 1,
-      "Disarming Rake": 1,
-      "Gust": 1,
-      "Irelia, Fervent": 1,
-      "Not So Fast": 1,
-      "Star-Crossed": 1,
-      "Switcheroo": 1,
-      "Vex, Apathetic": 1
-     },
-     "runes": {
-      "Calm Rune": 7,
-      "Chaos Rune": 5
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Sunken Temple",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "Squidoo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #146 3-2-0 [riftools]",
+     "label": "Squidoo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #146 [riftools]",
      "player": "Squidoo",
-     "placement": "#146 3-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/81c93126-d12b-44d5-b3f5-15a838365a25",
@@ -26147,58 +24536,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "lex - S3 China National Open 147 [riftools]",
-     "player": "lex",
-     "placement": "147",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224346",
-     "main": {
-      "Adaptatron": 1,
-      "Boots of Swiftness": 3,
-      "Charm": 2,
-      "Defiant Dance": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Fizz, Trickster": 1,
-      "Guardian Angel": 2,
-      "Gust": 1,
-      "Irelia, Fervent": 1,
-      "Not So Fast": 1,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 3,
-      "Stacked Deck": 2,
-      "Star-Crossed": 2,
-      "Stellacorn Herder": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "side": {
-      "Abandon": 1,
-      "Adaptatron": 1,
-      "Gust": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Not So Fast": 1,
-      "Star-Crossed": 1,
-      "Switcheroo": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Sunken Temple",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "\u4e1a - S3 China National Open 162 [riftools]",
+     "label": "\u4e1a - S3 China National Open #162 [riftools]",
      "player": "\u4e1a",
-     "placement": "162",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225147",
@@ -26242,9 +24582,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u798f\u5ddeStep.JBG.Sa - S3 China National Open 163 [riftools]",
+     "label": "\u798f\u5ddeStep.JBG.Sa - S3 China National Open #163 [riftools]",
      "player": "\u798f\u5ddeStep.JBG.Sa",
-     "placement": "163",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225039",
@@ -26288,9 +24628,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5207.\u5e7b\u5b88.TBMX - S3 China National Open 181 [riftools]",
+     "label": "\u795e\u5207.\u5e7b\u5b88.TBMX - S3 China National Open #181 [riftools]",
      "player": "\u795e\u5207.\u5e7b\u5b88.TBMX",
-     "placement": "181",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223738",
@@ -26337,9 +24677,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f18\u6781\u5ba2-109-Yxx - S3 China National Open 201 [riftools]",
+     "label": "\u4f18\u6781\u5ba2-109-Yxx - S3 China National Open #201 [riftools]",
      "player": "\u4f18\u6781\u5ba2-109-Yxx",
-     "placement": "201",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222641",
@@ -26386,9 +24726,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5317\u4eac\u6cfd\u8431\u2014 q - S3 China National Open 213 [riftools]",
+     "label": "\u5317\u4eac\u6cfd\u8431\u2014 q - S3 China National Open #213 [riftools]",
      "player": "\u5317\u4eac\u6cfd\u8431\u2014 q",
-     "placement": "213",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225021",
@@ -26435,9 +24775,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Manchox - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #227 1-4-0 [riftools]",
+     "label": "Manchox - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #227 [riftools]",
      "player": "Manchox",
-     "placement": "#227 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6b0c498a-515e-45ee-873f-0143d0129f60",
@@ -26479,9 +24819,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u9177\u732b.\u89c1\u671b - S3 China National Open 228 [riftools]",
+     "label": "\u9177\u732b.\u89c1\u671b - S3 China National Open #228 [riftools]",
      "player": "\u9177\u732b.\u89c1\u671b",
-     "placement": "228",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223989",
@@ -26529,9 +24869,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Asty - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #232 1-4-0 [riftools]",
+     "label": "Asty - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #232 [riftools]",
      "player": "Asty",
-     "placement": "#232 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5f5b26ee-b993-4f4e-a565-f3b4ed25aaeb",
@@ -26571,9 +24911,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u7d2b\u7981\u00b7\u9ebb\u888b\u00b7Sdubby - S3 China National Open 241 [riftools]",
+     "label": "\u7d2b\u7981\u00b7\u9ebb\u888b\u00b7Sdubby - S3 China National Open #241 [riftools]",
      "player": "\u7d2b\u7981\u00b7\u9ebb\u888b\u00b7Sdubby",
-     "placement": "241",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223785",
@@ -26619,9 +24959,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "MelPetarda - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #241 1-4-0 [riftools]",
+     "label": "MelPetarda - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #241 [riftools]",
      "player": "MelPetarda",
-     "placement": "#241 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b2a1b18a-27e8-4734-a4da-e15c5e184627",
@@ -26661,9 +25001,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Olhur - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #247 0-4-0 [riftools]",
+     "label": "Olhur - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #247 [riftools]",
      "player": "Olhur",
-     "placement": "#247 0-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b689ec94-1b1a-4623-a48a-4baee9d79e86",
@@ -26703,9 +25043,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "TXG\u00b7\u590f\u5929 - S3 China National Open 261 [riftools]",
+     "label": "TXG\u00b7\u590f\u5929 - S3 China National Open #261 [riftools]",
      "player": "TXG\u00b7\u590f\u5929",
-     "placement": "261",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224528",
@@ -26749,9 +25089,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u94dc\u94a5\u5319-\u6768\u6768 - S3 China National Open 265 [riftools]",
+     "label": "\u94dc\u94a5\u5319-\u6768\u6768 - S3 China National Open #265 [riftools]",
      "player": "\u94dc\u94a5\u5319-\u6768\u6768",
-     "placement": "265",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224554",
@@ -26798,9 +25138,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5361\u8336.CAESAR K - S3 China National Open 267 [riftools]",
+     "label": "\u5361\u8336.CAESAR K - S3 China National Open #267 [riftools]",
      "player": "\u5361\u8336.CAESAR K",
-     "placement": "267",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223821",
@@ -26845,9 +25185,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7\u5c0fXO - S3 China National Open 270 [riftools]",
+     "label": "LineKa\u00b7\u5c0fXO - S3 China National Open #270 [riftools]",
      "player": "LineKa\u00b7\u5c0fXO",
-     "placement": "270",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224728",
@@ -26894,9 +25234,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5495\u5495\u560e\u560e.BKM-Vita - S3 China National Open 280 [riftools]",
+     "label": "\u5495\u5495\u560e\u560e.BKM-Vita - S3 China National Open #280 [riftools]",
      "player": "\u5495\u5495\u560e\u560e.BKM-Vita",
-     "placement": "280",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225179",
@@ -26943,9 +25283,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "lovely\u89c9 - S3 China National Open 281 [riftools]",
+     "label": "lovely\u89c9 - S3 China National Open #281 [riftools]",
      "player": "lovely\u89c9",
-     "placement": "281",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224410",
@@ -26992,9 +25332,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6f0f\u7535\u5927\u7535\u6c60 - S3 China National Open 284 [riftools]",
+     "label": "\u6f0f\u7535\u5927\u7535\u6c60 - S3 China National Open #284 [riftools]",
      "player": "\u6f0f\u7535\u5927\u7535\u6c60",
-     "placement": "284",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223865",
@@ -27040,9 +25380,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SJTU.\u5929\u75d5 - S3 China National Open 287 [riftools]",
+     "label": "SJTU.\u5929\u75d5 - S3 China National Open #287 [riftools]",
      "player": "SJTU.\u5929\u75d5",
-     "placement": "287",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224451",
@@ -27090,9 +25430,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e00\u6811 - S3 China National Open 293 [riftools]",
+     "label": "\u4e00\u6811 - S3 China National Open #293 [riftools]",
      "player": "\u4e00\u6811",
-     "placement": "293",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224794",
@@ -27139,9 +25479,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "S.T.SayDay\u535a - S3 China National Open 296 [riftools]",
+     "label": "S.T.SayDay\u535a - S3 China National Open #296 [riftools]",
      "player": "S.T.SayDay\u535a",
-     "placement": "296",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224610",
@@ -27188,9 +25528,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6728\u707f - S3 China National Open 299 [riftools]",
+     "label": "\u6728\u707f - S3 China National Open #299 [riftools]",
      "player": "\u6728\u707f",
-     "placement": "299",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224691",
@@ -27237,9 +25577,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534a\u65e5\u95f2-\u8037\u62c9\u725b - S3 China National Open 301 [riftools]",
+     "label": "\u534a\u65e5\u95f2-\u8037\u62c9\u725b - S3 China National Open #301 [riftools]",
      "player": "\u534a\u65e5\u95f2-\u8037\u62c9\u725b",
-     "placement": "301",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224682",
@@ -27286,9 +25626,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TUB.\u521d\u4e34 - S3 China National Open 306 [riftools]",
+     "label": "TUB.\u521d\u4e34 - S3 China National Open #306 [riftools]",
      "player": "TUB.\u521d\u4e34",
-     "placement": "306",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224892",
@@ -27334,9 +25674,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e09\u5c81 - S3 China National Open 311 [riftools]",
+     "label": "\u4e09\u5c81 - S3 China National Open #311 [riftools]",
      "player": "\u4e09\u5c81",
-     "placement": "311",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222652",
@@ -27383,9 +25723,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68a6\u4e4b\u661f-\u6930\u5b50-\u5495\u5495\u560e\u560e-i\u5f00tv - S3 China National Open 313 [riftools]",
+     "label": "\u68a6\u4e4b\u661f-\u6930\u5b50-\u5495\u5495\u560e\u560e-i\u5f00tv - S3 China National Open #313 [riftools]",
      "player": "\u68a6\u4e4b\u661f-\u6930\u5b50-\u5495\u5495\u560e\u560e-i\u5f00tv",
-     "placement": "313",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225208",
@@ -27430,9 +25770,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TXG\u00b7\u7cd6\u6c41\u4e00\u9996\u6c34\u9ad8\u8fdc - S3 China National Open 328 [riftools]",
+     "label": "TXG\u00b7\u7cd6\u6c41\u4e00\u9996\u6c34\u9ad8\u8fdc - S3 China National Open #328 [riftools]",
      "player": "TXG\u00b7\u7cd6\u6c41\u4e00\u9996\u6c34\u9ad8\u8fdc",
-     "placement": "328",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224536",
@@ -27476,9 +25816,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "DWT-\u795e\u5207-\u6f14\u5458\uff08\u6069\u5e08\u4e8c\u9ebb\uff09 - S3 China National Open 331 [riftools]",
+     "label": "DWT-\u795e\u5207-\u6f14\u5458\uff08\u6069\u5e08\u4e8c\u9ebb\uff09 - S3 China National Open #331 [riftools]",
      "player": "DWT-\u795e\u5207-\u6f14\u5458\uff08\u6069\u5e08\u4e8c\u9ebb\uff09",
-     "placement": "331",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224663",
@@ -27529,9 +25869,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u85cf\u5b9dzjm - S3 China National Open 340 [riftools]",
+     "label": "\u85cf\u5b9dzjm - S3 China National Open #340 [riftools]",
      "player": "\u85cf\u5b9dzjm",
-     "placement": "340",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222753",
@@ -27577,9 +25917,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "XYZ_\u7edd\u4ee3\u5c0f\u5929\u4ed9 - S3 China National Open 346 [riftools]",
+     "label": "XYZ_\u7edd\u4ee3\u5c0f\u5929\u4ed9 - S3 China National Open #346 [riftools]",
      "player": "XYZ_\u7edd\u4ee3\u5c0f\u5929\u4ed9",
-     "placement": "346",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224210",
@@ -27623,9 +25963,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6e38\u5b66\u8005\u7ea2\u8c46 - S3 China National Open 352 [riftools]",
+     "label": "\u6e38\u5b66\u8005\u7ea2\u8c46 - S3 China National Open #352 [riftools]",
      "player": "\u6e38\u5b66\u8005\u7ea2\u8c46",
-     "placement": "352",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222364",
@@ -27671,9 +26011,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e5d\u6b7b\u4e00\u751f - S3 China National Open 363 [riftools]",
+     "label": "\u4e5d\u6b7b\u4e00\u751f - S3 China National Open #363 [riftools]",
      "player": "\u4e5d\u6b7b\u4e00\u751f",
-     "placement": "363",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222220",
@@ -27721,9 +26061,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65b0\u5149\u4e00\u756a.\u611a\u8005 - S3 China National Open 371 [riftools]",
+     "label": "\u65b0\u5149\u4e00\u756a.\u611a\u8005 - S3 China National Open #371 [riftools]",
      "player": "\u65b0\u5149\u4e00\u756a.\u611a\u8005",
-     "placement": "371",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224573",
@@ -27768,9 +26108,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ox - S3 China National Open 386 [riftools]",
+     "label": "ox - S3 China National Open #386 [riftools]",
      "player": "ox",
-     "placement": "386",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225364",
@@ -27817,9 +26157,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u8fd9\u5bf9\u561b.\u8fd9\u4e0d\u5bf9\u5427\uff01 - S3 China National Open 396 [riftools]",
+     "label": "\u8fd9\u5bf9\u561b.\u8fd9\u4e0d\u5bf9\u5427\uff01 - S3 China National Open #396 [riftools]",
      "player": "\u8fd9\u5bf9\u561b.\u8fd9\u4e0d\u5bf9\u5427\uff01",
-     "placement": "396",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224293",
@@ -27868,9 +26208,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68a7\u6850 - S3 China National Open 416 [riftools]",
+     "label": "\u68a7\u6850 - S3 China National Open #416 [riftools]",
      "player": "\u68a7\u6850",
-     "placement": "416",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224006",
@@ -27917,9 +26257,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b.FG\u7ec8\u96e8 - S3 China National Open 430 [riftools]",
+     "label": "\u9177\u732b.FG\u7ec8\u96e8 - S3 China National Open #430 [riftools]",
      "player": "\u9177\u732b.FG\u7ec8\u96e8",
-     "placement": "430",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224907",
@@ -27966,9 +26306,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7075\u82b1\u796d.ECG.\u6f47\u6d12\u65f6\u5149 - S3 China National Open 444 [riftools]",
+     "label": "\u7075\u82b1\u796d.ECG.\u6f47\u6d12\u65f6\u5149 - S3 China National Open #444 [riftools]",
      "player": "\u7075\u82b1\u796d.ECG.\u6f47\u6d12\u65f6\u5149",
-     "placement": "444",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223745",
@@ -28011,9 +26351,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68a6\u4e4b\u661f-\u751c\u751c\u56fd\u738b - S3 China National Open 462 [riftools]",
+     "label": "\u68a6\u4e4b\u661f-\u751c\u751c\u56fd\u738b - S3 China National Open #462 [riftools]",
      "player": "\u68a6\u4e4b\u661f-\u751c\u751c\u56fd\u738b",
-     "placement": "462",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/221922",
@@ -28060,9 +26400,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4ee3\u4ee3 - S3 China National Open 475 [riftools]",
+     "label": "\u4ee3\u4ee3 - S3 China National Open #475 [riftools]",
      "player": "\u4ee3\u4ee3",
-     "placement": "475",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223361",
@@ -28106,9 +26446,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u843d\u6c34\u6cd5\u5e08\u6413\u4e0d\u51fa\ud83d\udd25\u7403 - S3 China National Open 495 [riftools]",
+     "label": "\u843d\u6c34\u6cd5\u5e08\u6413\u4e0d\u51fa\ud83d\udd25\u7403 - S3 China National Open #495 [riftools]",
      "player": "\u843d\u6c34\u6cd5\u5e08\u6413\u4e0d\u51fa\ud83d\udd25\u7403",
-     "placement": "495",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224771",
@@ -28154,9 +26494,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u95ea\u7535\u5bb6\u3001\u79cb\u3001\u795e\u5207\u3001\u6210\u5e74\u62c6 - S3 China National Open 502 [riftools]",
+     "label": "\u95ea\u7535\u5bb6\u3001\u79cb\u3001\u795e\u5207\u3001\u6210\u5e74\u62c6 - S3 China National Open #502 [riftools]",
      "player": "\u95ea\u7535\u5bb6\u3001\u79cb\u3001\u795e\u5207\u3001\u6210\u5e74\u62c6",
-     "placement": "502",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223391",
@@ -28203,9 +26543,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "EDG.YoungNewNew - S3 China National Open 510 [riftools]",
+     "label": "EDG.YoungNewNew - S3 China National Open #510 [riftools]",
      "player": "EDG.YoungNewNew",
-     "placement": "510",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225403",
@@ -28250,9 +26590,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "BrH.\u71c3\u9b42.\u5b99\u65af - S3 China National Open 512 [riftools]",
+     "label": "BrH.\u71c3\u9b42.\u5b99\u65af - S3 China National Open #512 [riftools]",
      "player": "BrH.\u71c3\u9b42.\u5b99\u65af",
-     "placement": "512",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224522",
@@ -28299,9 +26639,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Charon - S3 China National Open 531 [riftools]",
+     "label": "Charon - S3 China National Open #531 [riftools]",
      "player": "Charon",
-     "placement": "531",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224000",
@@ -28350,9 +26690,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "3+X END.\u660e\u6d8c - S3 China National Open 533 [riftools]",
+     "label": "3+X END.\u660e\u6d8c - S3 China National Open #533 [riftools]",
      "player": "3+X END.\u660e\u6d8c",
-     "placement": "533",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224888",
@@ -28399,9 +26739,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "tree - S3 China National Open 538 [riftools]",
+     "label": "tree - S3 China National Open #538 [riftools]",
      "player": "tree",
-     "placement": "538",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224792",
@@ -28449,9 +26789,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b zzt - S3 China National Open 540 [riftools]",
+     "label": "\u9177\u732b zzt - S3 China National Open #540 [riftools]",
      "player": "\u9177\u732b zzt",
-     "placement": "540",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224821",
@@ -28498,9 +26838,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5c0f\u795e\u4ed9 - S3 China National Open 566 [riftools]",
+     "label": "\u5c0f\u795e\u4ed9 - S3 China National Open #566 [riftools]",
      "player": "\u5c0f\u795e\u4ed9",
-     "placement": "566",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223287",
@@ -28721,7 +27061,7 @@ window.FIELD = {
     {
      "label": "AA - Matmatu - RiftAtlas Convergence #1 #1 [riftools]",
      "player": "AA - Matmatu",
-     "placement": "#1",
+     "placement": "1st",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-001-aa-matmatu-rengar-pridestalker",
@@ -28765,7 +27105,7 @@ window.FIELD = {
     {
      "label": "AA - ClaedeusFR - RiftAtlas Convergence #1 #5 [riftools]",
      "player": "AA - ClaedeusFR",
-     "placement": "#5",
+     "placement": "Top 8",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-005-aa-claedeusfr-rengar-pridestalker",
@@ -28807,7 +27147,7 @@ window.FIELD = {
     {
      "label": "Salvatore Schembri - RiftAtlas Convergence #1 #11 [riftools]",
      "player": "Salvatore Schembri",
-     "placement": "#11",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-011-salvatore-schembri-rengar-pridestalker",
@@ -28853,7 +27193,7 @@ window.FIELD = {
     {
      "label": "Alexis Plettener Nguyen - RiftAtlas Convergence #1 #14 [riftools]",
      "player": "Alexis Plettener Nguyen",
-     "placement": "#14",
+     "placement": "Top 16",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-014-alexis-plettener-nguyen-rengar-pridestalker",
@@ -28899,7 +27239,7 @@ window.FIELD = {
     {
      "label": "THR Cojoh - RiftAtlas Convergence #1 #32 [riftools]",
      "player": "THR Cojoh",
-     "placement": "#32",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-032-thr-cojoh-rengar-pridestalker",
@@ -28943,7 +27283,7 @@ window.FIELD = {
     {
      "label": "Novi - RiftAtlas Convergence #1 #48 [riftools]",
      "player": "Novi",
-     "placement": "#48",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-048-novi-rengar-pridestalker",
@@ -28990,7 +27330,7 @@ window.FIELD = {
     {
      "label": "THR Panderpen - RiftAtlas Convergence #1 #53 [riftools]",
      "player": "THR Panderpen",
-     "placement": "#53",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-053-thr-panderpen-rengar-pridestalker",
@@ -29033,7 +27373,7 @@ window.FIELD = {
     {
      "label": "Matthew R Miller - RiftAtlas Convergence #1 #57 [riftools]",
      "player": "Matthew R Miller",
-     "placement": "#57",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-057-matthew-r-miller-rengar-pridestalker",
@@ -29072,9 +27412,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Wildhero - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #18 6-2-0 [riftools]",
+     "label": "Wildhero - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #18 [riftools]",
      "player": "Wildhero",
-     "placement": "#18 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/029b5c27-b736-4ad6-a5a0-791ecf9a0ca4",
@@ -29113,9 +27453,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "DFL.\u8bfa\u4e9a - S3 China National Open 34 [riftools]",
+     "label": "DFL.\u8bfa\u4e9a - S3 China National Open #34 [riftools]",
      "player": "DFL.\u8bfa\u4e9a",
-     "placement": "34",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224979",
@@ -29160,92 +27500,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TheoPL - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #123 4-4-0 [riftools]",
-     "player": "TheoPL",
-     "placement": "#123 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/07db39c0-7fbf-4f6a-baeb-6f25a695930a",
-     "main": {
-      "Brynhir Thundersong": 1,
-      "Challenge": 2,
-      "Ferrous Forerunner": 2,
-      "First Mate": 2,
-      "Grim Apothecary": 3,
-      "Inferna": 3,
-      "Irresistible Faefolk": 3,
-      "Kai'Sa, Survivor": 3,
-      "Nidalee, Cat Form": 2,
-      "Noxus Hopeful": 3,
-      "Pit Rookie": 3,
-      "Pouty Poro": 3,
-      "Punch First": 3,
-      "Pyke, Dockside Butcher": 1,
-      "Rengar, Trophy Hunter": 1,
-      "Sabotage": 1,
-      "Thrill of the Hunt": 3
-     },
-     "side": {
-      "Brynhir Thundersong": 1,
-      "Ferrous Forerunner": 1,
-      "Repulse": 2,
-      "Sabotage": 2,
-      "Thermo Beam": 1,
-      "Unyielding Spirit": 1
-     },
-     "runes": {
-      "Body Rune": 8,
-      "Fury Rune": 4
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Song Wook Hyun - S3 China National Open 125 [riftools]",
-     "player": "Song Wook Hyun",
-     "placement": "125",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225361",
-     "main": {
-      "Brynhir Thundersong": 1,
-      "Challenge": 2,
-      "Darius, Trifarian": 1,
-      "Determined Sentry": 3,
-      "Grim Apothecary": 3,
-      "Inferna": 3,
-      "Irresistible Faefolk": 3,
-      "Kai'Sa, Survivor": 3,
-      "Kinkou Initiate": 3,
-      "Nidalee, Cat Form": 3,
-      "Pit Rookie": 3,
-      "Punch First": 3,
-      "Pyke, Dockside Butcher": 3,
-      "Rengar, Trophy Hunter": 1,
-      "Sabotage": 2,
-      "Thrill of the Hunt": 3
-     },
-     "side": {
-      "Akshan, Mischievous": 3,
-      "Brynhir Thundersong": 1,
-      "Challenge": 1,
-      "Darius, Trifarian": 1,
-      "Sabotage": 1,
-      "Unyielding Spirit": 1
-     },
-     "runes": {
-      "Body Rune": 8,
-      "Fury Rune": 4
-     },
-     "battlefields": [
-      "Emperor's Dais",
-      "Star Spring",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "urlichmtg - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #152 3-2-0 [riftools]",
+     "label": "urlichmtg - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #152 [riftools]",
      "player": "urlichmtg",
-     "placement": "#152 3-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/eb53ed27-4e94-4134-9439-02d130886806",
@@ -29280,9 +27537,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Broken - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #213 2-6-0 [riftools]",
+     "label": "Broken - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #213 [riftools]",
      "player": "Broken",
-     "placement": "#213 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e47e48cc-2262-4ba1-9238-8d5b874c13df",
@@ -29316,9 +27573,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Frygos - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #217 2-5-0 [riftools]",
+     "label": "Frygos - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #217 [riftools]",
      "player": "Frygos",
-     "placement": "#217 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e09dc948-1bb5-478b-b438-21e67bb7d3c3",
@@ -29355,9 +27612,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u8001\u6731 - S3 China National Open 242 [riftools]",
+     "label": "\u8001\u6731 - S3 China National Open #242 [riftools]",
      "player": "\u8001\u6731",
-     "placement": "242",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224872",
@@ -29393,9 +27650,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e1c\u839e\u94c1\u732b - S3 China National Open 288 [riftools]",
+     "label": "\u4e1c\u839e\u94c1\u732b - S3 China National Open #288 [riftools]",
      "player": "\u4e1c\u839e\u94c1\u732b",
-     "placement": "288",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224960",
@@ -29436,9 +27693,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "GGBone - S3 China National Open 291 [riftools]",
+     "label": "GGBone - S3 China National Open #291 [riftools]",
      "player": "GGBone",
-     "placement": "291",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222936",
@@ -29477,9 +27734,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5929\u6d25cardtime-\u5708 - S3 China National Open 334 [riftools]",
+     "label": "\u5929\u6d25cardtime-\u5708 - S3 China National Open #334 [riftools]",
      "player": "\u5929\u6d25cardtime-\u5708",
-     "placement": "334",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225165",
@@ -29518,9 +27775,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Ai.\u4e00\u9897\u5927\u51e4\u68a8 - S3 China National Open 448 [riftools]",
+     "label": "Ai.\u4e00\u9897\u5927\u51e4\u68a8 - S3 China National Open #448 [riftools]",
      "player": "Ai.\u4e00\u9897\u5927\u51e4\u68a8",
-     "placement": "448",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225122",
@@ -29564,9 +27821,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534e\u84dd-\u9707\u5200 - S3 China National Open 500 [riftools]",
+     "label": "\u534e\u84dd-\u9707\u5200 - S3 China National Open #500 [riftools]",
      "player": "\u534e\u84dd-\u9707\u5200",
-     "placement": "500",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222110",
@@ -29605,9 +27862,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Tony - S3 China National Open 541 [riftools]",
+     "label": "Tony - S3 China National Open #541 [riftools]",
      "player": "Tony",
-     "placement": "541",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224877",
@@ -29648,9 +27905,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65cb\u6728\u65f6\u5149.\u4e09\u54e5 - S3 China National Open 572 [riftools]",
+     "label": "\u65cb\u6728\u65f6\u5149.\u4e09\u54e5 - S3 China National Open #572 [riftools]",
      "player": "\u65cb\u6728\u65f6\u5149.\u4e09\u54e5",
-     "placement": "572",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224842",
@@ -30004,7 +28261,7 @@ window.FIELD = {
     {
      "label": "Jakobe Bratton - CCS Sunday $5,000 Riftbound Event #4 #39 [riftools]",
      "player": "Jakobe Bratton",
-     "placement": "#39",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-039-jakobe-bratton-sett-the-boss",
@@ -30047,7 +28304,7 @@ window.FIELD = {
     {
      "label": "Justin Gapp - RiftAtlas Convergence #1 #72 [riftools]",
      "player": "Justin Gapp",
-     "placement": "#72",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-072-justin-gapp-sett-the-boss",
@@ -30088,9 +28345,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "kuxist - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #9 7-2-0 [riftools]",
+     "label": "kuxist - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #9 [riftools]",
      "player": "kuxist",
-     "placement": "#9 7-2-0",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/cb12a816-2f09-4cfe-a880-91e3ac70d34d",
@@ -30125,9 +28382,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "The Vened - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #22 6-2-0 [riftools]",
+     "label": "The Vened - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #22 [riftools]",
      "player": "The Vened",
-     "placement": "#22 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fdae36fd-c7a5-45d1-a77f-9ddb34f6c17d",
@@ -30164,9 +28421,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ARBD-Nolan - S3 China National Open 54 [riftools]",
+     "label": "ARBD-Nolan - S3 China National Open #54 [riftools]",
      "player": "ARBD-Nolan",
-     "placement": "54",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224994",
@@ -30211,9 +28468,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SoMeineLiebe - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #55 5-3-0 [riftools]",
+     "label": "SoMeineLiebe - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #55 [riftools]",
      "player": "SoMeineLiebe",
-     "placement": "#55 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/468edca9-95c8-4812-8010-ca19681f2317",
@@ -30249,9 +28506,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6069\u5e08\u9648\u94ed.\u7075\u82b1\u796d.ECG.Asuka - S3 China National Open 60 [riftools]",
+     "label": "\u6069\u5e08\u9648\u94ed.\u7075\u82b1\u796d.ECG.Asuka - S3 China National Open #60 [riftools]",
      "player": "\u6069\u5e08\u9648\u94ed.\u7075\u82b1\u796d.ECG.Asuka",
-     "placement": "60",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222433",
@@ -30297,9 +28554,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "GasterMachiao - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #91 4-3-0 [riftools]",
+     "label": "GasterMachiao - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #91 [riftools]",
      "player": "GasterMachiao",
-     "placement": "#91 4-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/324860dd-5419-4d0e-9b21-d58481cf5cb2",
@@ -30335,9 +28592,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "JustShoot - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #169 3-5-0 [riftools]",
+     "label": "JustShoot - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #169 [riftools]",
      "player": "JustShoot",
-     "placement": "#169 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4fb88a46-9d0f-4798-b2f7-0226ab3d98e9",
@@ -30373,9 +28630,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Rasyou - S3 China National Open 190 [riftools]",
+     "label": "Rasyou - S3 China National Open #190 [riftools]",
      "player": "Rasyou",
-     "placement": "190",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223081",
@@ -30419,9 +28676,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Okkaen - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #195 2-5-0 [riftools]",
+     "label": "Okkaen - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #195 [riftools]",
      "player": "Okkaen",
-     "placement": "#195 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d07c169c-9dd5-4822-ac7b-35d8d0c8145d",
@@ -30456,9 +28713,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u5730\u6c9f-\u54df - S3 China National Open 200 [riftools]",
+     "label": "\u5730\u6c9f-\u54df - S3 China National Open #200 [riftools]",
      "player": "\u5730\u6c9f-\u54df",
-     "placement": "200",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222560",
@@ -30500,9 +28757,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "BGG.1001.\u901a\u9876.\u7f18.\u53d8\u9769 - S3 China National Open 202 [riftools]",
+     "label": "BGG.1001.\u901a\u9876.\u7f18.\u53d8\u9769 - S3 China National Open #202 [riftools]",
      "player": "BGG.1001.\u901a\u9876.\u7f18.\u53d8\u9769",
-     "placement": "202",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224597",
@@ -30544,9 +28801,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Acc.Muk.\u7ae0\u9c7c - S3 China National Open 204 [riftools]",
+     "label": "Acc.Muk.\u7ae0\u9c7c - S3 China National Open #204 [riftools]",
      "player": "Acc.Muk.\u7ae0\u9c7c",
-     "placement": "204",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224860",
@@ -30590,9 +28847,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Hros - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #205 2-3-0 [riftools]",
+     "label": "Hros - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #205 [riftools]",
      "player": "Hros",
-     "placement": "#205 2-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7039b096-ba28-428d-86cc-2f8d7fb0a64a",
@@ -30630,9 +28887,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Smajt - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #214 2-6-0 [riftools]",
+     "label": "Smajt - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #214 [riftools]",
      "player": "Smajt",
-     "placement": "#214 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c5171c79-710f-4de9-9a7c-256cd70d6ac9",
@@ -30668,9 +28925,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Ci\u0105gnik Traktor - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #226 1-4-0 [riftools]",
+     "label": "Ci\u0105gnik Traktor - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #226 [riftools]",
      "player": "Ci\u0105gnik Traktor",
-     "placement": "#226 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/60e836fa-1a23-4885-a3a0-d3e723e3d2e8",
@@ -30711,9 +28968,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "EvilOsvi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #229 1-3-0 [riftools]",
+     "label": "EvilOsvi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #229 [riftools]",
      "player": "EvilOsvi",
-     "placement": "#229 1-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6f343781-f2b1-4aab-af06-4a2a883ff6f9",
@@ -30749,9 +29006,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Bambodinho - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #237 1-5-0 [riftools]",
+     "label": "Bambodinho - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #237 [riftools]",
      "player": "Bambodinho",
-     "placement": "#237 1-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5f604454-cbc4-4cef-8b2f-19926d56bf0a",
@@ -30785,9 +29042,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u7f13\u7f13@\u724c\u5ba2\u76df - S3 China National Open 259 [riftools]",
+     "label": "\u7f13\u7f13@\u724c\u5ba2\u76df - S3 China National Open #259 [riftools]",
      "player": "\u7f13\u7f13@\u724c\u5ba2\u76df",
-     "placement": "259",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225281",
@@ -30832,9 +29089,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Dragku - S3 China National Open 300 [riftools]",
+     "label": "Dragku - S3 China National Open #300 [riftools]",
      "player": "Dragku",
-     "placement": "300",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222077",
@@ -30875,9 +29132,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "DB_bear - S3 China National Open 348 [riftools]",
+     "label": "DB_bear - S3 China National Open #348 [riftools]",
      "player": "DB_bear",
-     "placement": "348",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222530",
@@ -30921,9 +29178,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u95ea\u7535\u5bb6.\u795e\u5207.\u6210\u5e74\u62c6.\u864e - S3 China National Open 381 [riftools]",
+     "label": "\u95ea\u7535\u5bb6.\u795e\u5207.\u6210\u5e74\u62c6.\u864e - S3 China National Open #381 [riftools]",
      "player": "\u95ea\u7535\u5bb6.\u795e\u5207.\u6210\u5e74\u62c6.\u864e",
-     "placement": "381",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224300",
@@ -30971,9 +29228,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u75be\u98ce\u5439\u81ed\u811a - S3 China National Open 404 [riftools]",
+     "label": "\u75be\u98ce\u5439\u81ed\u811a - S3 China National Open #404 [riftools]",
      "player": "\u75be\u98ce\u5439\u81ed\u811a",
-     "placement": "404",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223467",
@@ -31020,9 +29277,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FSW.\u5c0f\u848b\ud83e\udda7 - S3 China National Open 411 [riftools]",
+     "label": "FSW.\u5c0f\u848b\ud83e\udda7 - S3 China National Open #411 [riftools]",
      "player": "FSW.\u5c0f\u848b\ud83e\udda7",
-     "placement": "411",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224251",
@@ -31065,9 +29322,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5361\u6bbf.Noob.\u72d7\u5934 - S3 China National Open 493 [riftools]",
+     "label": "\u5361\u6bbf.Noob.\u72d7\u5934 - S3 China National Open #493 [riftools]",
      "player": "\u5361\u6bbf.Noob.\u72d7\u5934",
-     "placement": "493",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225035",
@@ -31466,7 +29723,7 @@ window.FIELD = {
     {
      "label": "Jordan Cedeno - CCS Sunday $5,000 Riftbound Event #4 #8 [riftools]",
      "player": "Jordan Cedeno",
-     "placement": "#8",
+     "placement": "Top 8",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-008-jordan-cedeno-sivir-battle-mistress",
@@ -31512,7 +29769,7 @@ window.FIELD = {
     {
      "label": "Ethan Stringer - CCS Sunday $5,000 Riftbound Event #4 #14 [riftools]",
      "player": "Ethan Stringer",
-     "placement": "#14",
+     "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-014-ethan-stringer-sivir-battle-mistress",
@@ -31558,7 +29815,7 @@ window.FIELD = {
     {
      "label": "Vincent Lin - RiftAtlas Convergence #1 #17 [riftools]",
      "player": "Vincent Lin",
-     "placement": "#17",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-017-vincent-lin-sivir-battle-mistress",
@@ -31602,7 +29859,7 @@ window.FIELD = {
     {
      "label": "Justin Lawson - CCS Sunday $5,000 Riftbound Event #4 #29 [riftools]",
      "player": "Justin Lawson",
-     "placement": "#29",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-029-justin-lawson-sivir-battle-mistress",
@@ -31647,7 +29904,7 @@ window.FIELD = {
     {
      "label": "Kris Wheelis - CCS Sunday $5,000 Riftbound Event #4 #43 [riftools]",
      "player": "Kris Wheelis",
-     "placement": "#43",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-043-kris-wheelis-sivir-battle-mistress",
@@ -31692,7 +29949,7 @@ window.FIELD = {
     {
      "label": "Zachary Roggina - CCS Sunday $5,000 Riftbound Event #4 #51 [riftools]",
      "player": "Zachary Roggina",
-     "placement": "#51",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-051-zachary-roggina-sivir-battle-mistress",
@@ -31739,7 +29996,7 @@ window.FIELD = {
     {
      "label": "Jacob Robertson - RiftAtlas Convergence #1 #65 [riftools]",
      "player": "Jacob Robertson",
-     "placement": "#65",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-065-jacob-robertson-sivir-battle-mistress",
@@ -31780,7 +30037,7 @@ window.FIELD = {
     {
      "label": "Serena Kerrigan - RiftAtlas Convergence #1 #97 [riftools]",
      "player": "Serena Kerrigan",
-     "placement": "#97",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-097-serena-kerrigan-sivir-battle-mistress",
@@ -31825,9 +30082,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "marian cb radio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #13 6-2-1 [riftools]",
+     "label": "marian cb radio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #13 [riftools]",
      "player": "marian cb radio",
-     "placement": "#13 6-2-1",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/54db8dfd-aa7c-4f16-952f-4f125ee8fb83",
@@ -31863,9 +30120,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "traxexx - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #79 5-3-0 [riftools]",
+     "label": "traxexx - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #79 [riftools]",
      "player": "traxexx",
-     "placement": "#79 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f2c8667a-1753-4ff2-8348-b8aabe8dbcb7",
@@ -31907,9 +30164,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u4e1c\u65b9\u6708 - S3 China National Open 94 [riftools]",
+     "label": "\u4e1c\u65b9\u6708 - S3 China National Open #94 [riftools]",
      "player": "\u4e1c\u65b9\u6708",
-     "placement": "94",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222935",
@@ -31952,9 +30209,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "NIngKIng - S3 China National Open 153 [riftools]",
+     "label": "NIngKIng - S3 China National Open #153 [riftools]",
      "player": "NIngKIng",
-     "placement": "153",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224106",
@@ -31998,9 +30255,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534e\u84dd-William - S3 China National Open 164 [riftools]",
+     "label": "\u534e\u84dd-William - S3 China National Open #164 [riftools]",
      "player": "\u534e\u84dd-William",
-     "placement": "164",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224742",
@@ -32043,9 +30300,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6740\u4f60\u7684\u662f\u83e0\u841d\u5439\u96ea\u5927\u795e - S3 China National Open 168 [riftools]",
+     "label": "\u6740\u4f60\u7684\u662f\u83e0\u841d\u5439\u96ea\u5927\u795e - S3 China National Open #168 [riftools]",
      "player": "\u6740\u4f60\u7684\u662f\u83e0\u841d\u5439\u96ea\u5927\u795e",
-     "placement": "168",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224886",
@@ -32088,9 +30345,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ACE\u00b7\u5df2\u4e25\u8083\u9000\u5751\u8003\u7814 - S3 China National Open 209 [riftools]",
+     "label": "ACE\u00b7\u5df2\u4e25\u8083\u9000\u5751\u8003\u7814 - S3 China National Open #209 [riftools]",
      "player": "ACE\u00b7\u5df2\u4e25\u8083\u9000\u5751\u8003\u7814",
-     "placement": "209",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224166",
@@ -32130,9 +30387,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5965.\u6781\u624b\u611f.\u51ef - S3 China National Open 255 [riftools]",
+     "label": "\u795e\u5965.\u6781\u624b\u611f.\u51ef - S3 China National Open #255 [riftools]",
      "player": "\u795e\u5965.\u6781\u624b\u611f.\u51ef",
-     "placement": "255",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224816",
@@ -32175,9 +30432,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LH\u00b7\u8004\u8004\u7684\u800b\uff08\u6069\u5e08\u653e\u9010\u4e4b\u5203\uff09 - S3 China National Open 286 [riftools]",
+     "label": "LH\u00b7\u8004\u8004\u7684\u800b\uff08\u6069\u5e08\u653e\u9010\u4e4b\u5203\uff09 - S3 China National Open #286 [riftools]",
      "player": "LH\u00b7\u8004\u8004\u7684\u800b\uff08\u6069\u5e08\u653e\u9010\u4e4b\u5203\uff09",
-     "placement": "286",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224469",
@@ -32219,9 +30476,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u94dc\u94a5\u5319-\u6492\u65e6 - S3 China National Open 420 [riftools]",
+     "label": "\u94dc\u94a5\u5319-\u6492\u65e6 - S3 China National Open #420 [riftools]",
      "player": "\u94dc\u94a5\u5319-\u6492\u65e6",
-     "placement": "420",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224552",
@@ -32266,9 +30523,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f60\u51c6\u5907\u5bff\u53f8\u53ed - S3 China National Open 492 [riftools]",
+     "label": "\u4f60\u51c6\u5907\u5bff\u53f8\u53ed - S3 China National Open #492 [riftools]",
      "player": "\u4f60\u51c6\u5907\u5bff\u53f8\u53ed",
-     "placement": "492",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223840",
@@ -32306,9 +30563,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "DM\u00b7P9\u00b79I\u00b7\u86e4\u87c6\u9f8d-\u8239\u957f - S3 China National Open 539 [riftools]",
+     "label": "DM\u00b7P9\u00b79I\u00b7\u86e4\u87c6\u9f8d-\u8239\u957f - S3 China National Open #539 [riftools]",
      "player": "DM\u00b7P9\u00b79I\u00b7\u86e4\u87c6\u9f8d-\u8239\u957f",
-     "placement": "539",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224051",
@@ -32356,9 +30613,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "benx - S3 China National Open 556 [riftools]",
+     "label": "benx - S3 China National Open #556 [riftools]",
      "player": "benx",
-     "placement": "556",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224545",
@@ -32401,9 +30658,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6ce2\u52a8\u82df - S3 China National Open 558 [riftools]",
+     "label": "\u6ce2\u52a8\u82df - S3 China National Open #558 [riftools]",
      "player": "\u6ce2\u52a8\u82df",
-     "placement": "558",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225369",
@@ -32443,9 +30700,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "haku - S3 China National Open 561 [riftools]",
+     "label": "haku - S3 China National Open #561 [riftools]",
      "player": "haku",
-     "placement": "561",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225309",
@@ -32710,7 +30967,7 @@ window.FIELD = {
     {
      "label": "Angelo Jay-Jay Galeon - CCS Sunday $5,000 Riftbound Event #4 #11 [riftools]",
      "player": "Angelo Jay-Jay Galeon",
-     "placement": "#11",
+     "placement": "Top 16",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-011-angelo-jay-jay-galeon-leblanc-deceiver",
@@ -32752,7 +31009,7 @@ window.FIELD = {
     {
      "label": "Samson Rast - RiftAtlas Convergence #1 #18 [riftools]",
      "player": "Samson Rast",
-     "placement": "#18",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-018-samson-rast-leblanc-deceiver",
@@ -32793,7 +31050,7 @@ window.FIELD = {
     {
      "label": "Geoff Mullin - CCS Sunday $5,000 Riftbound Event #4 #23 [riftools]",
      "player": "Geoff Mullin",
-     "placement": "#23",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-023-geoff-mullin-leblanc-deceiver",
@@ -32835,7 +31092,7 @@ window.FIELD = {
     {
      "label": "David Zhang - CCS Sunday $5,000 Riftbound Event #4 #27 [riftools]",
      "player": "David Zhang",
-     "placement": "#27",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-027-david-zhang-leblanc-deceiver",
@@ -32877,7 +31134,7 @@ window.FIELD = {
     {
      "label": "TdT Low - CCS Sunday $5,000 Riftbound Event #4 #40 [riftools]",
      "player": "TdT Low",
-     "placement": "#40",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-040-tdt-low-leblanc-deceiver",
@@ -32919,7 +31176,7 @@ window.FIELD = {
     {
      "label": "TML ian - CCS Sunday $5,000 Riftbound Event #4 #41 [riftools]",
      "player": "TML ian",
-     "placement": "#41",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-041-tml-ian-leblanc-deceiver",
@@ -32962,7 +31219,7 @@ window.FIELD = {
     {
      "label": "Joseph Mathew Conway - CCS Sunday $5,000 Riftbound Event #4 #69 [riftools]",
      "player": "Joseph Mathew Conway",
-     "placement": "#69",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-069-joseph-mathew-conway-leblanc-deceiver",
@@ -33006,7 +31263,7 @@ window.FIELD = {
     {
      "label": "Garrett Doonan - RiftAtlas Convergence #1 #74 [riftools]",
      "player": "Garrett Doonan",
-     "placement": "#74",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-074-garrett-doonan-leblanc-deceiver",
@@ -33049,7 +31306,7 @@ window.FIELD = {
     {
      "label": "Miguel Perez - RiftAtlas Convergence #1 #83 [riftools]",
      "player": "Miguel Perez",
-     "placement": "#83",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-083-miguel-perez-leblanc-deceiver",
@@ -33090,7 +31347,7 @@ window.FIELD = {
     {
      "label": "Perry Hayward - RiftAtlas Convergence #1 #84 [riftools]",
      "player": "Perry Hayward",
-     "placement": "#84",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-084-perry-hayward-leblanc-deceiver",
@@ -33129,9 +31386,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "fduck - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #5 7-2-1 [riftools]",
+     "label": "fduck - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #5 [riftools]",
      "player": "fduck",
-     "placement": "#5 7-2-1",
+     "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a4c0be6f-53b7-4b63-bc21-61f08a2286d2",
@@ -33166,9 +31423,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "DRX LotharHS - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #8 7-2-1 [riftools]",
+     "label": "DRX LotharHS - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #8 [riftools]",
      "player": "DRX LotharHS",
-     "placement": "#8 7-2-1",
+     "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2fd3fb3f-9840-4362-85e5-d7fee94184db",
@@ -33203,9 +31460,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Penguin - S3 China National Open 11 [riftools]",
+     "label": "Penguin - S3 China National Open #11 [riftools]",
      "player": "Penguin",
-     "placement": "11",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222463",
@@ -33244,9 +31501,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e0d\u51e1.lerriuqs\ud83d\udc3a - S3 China National Open 13 [riftools]",
+     "label": "\u4e0d\u51e1.lerriuqs\ud83d\udc3a - S3 China National Open #13 [riftools]",
      "player": "\u4e0d\u51e1.lerriuqs\ud83d\udc3a",
-     "placement": "13",
+     "placement": "Top 16",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224617",
@@ -33289,9 +31546,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Amerasu - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #45 5-3-0 [riftools]",
+     "label": "Amerasu - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #45 [riftools]",
      "player": "Amerasu",
-     "placement": "#45 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f297d0ce-0584-448b-9cb4-998b81b76b4c",
@@ -33327,9 +31584,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "YBE arlecc - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #48 5-3-0 [riftools]",
+     "label": "YBE arlecc - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #48 [riftools]",
      "player": "YBE arlecc",
-     "placement": "#48 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6498eb82-7d43-48a4-bd18-c591671de0f0",
@@ -33365,9 +31622,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6d6a\u6d6a\u5c0f\u732a - S3 China National Open 62 [riftools]",
+     "label": "\u6d6a\u6d6a\u5c0f\u732a - S3 China National Open #62 [riftools]",
      "player": "\u6d6a\u6d6a\u5c0f\u732a",
-     "placement": "62",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224104",
@@ -33411,9 +31668,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Idol - S3 China National Open 91 [riftools]",
+     "label": "Idol - S3 China National Open #91 [riftools]",
      "player": "Idol",
-     "placement": "91",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224782",
@@ -33455,9 +31712,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5929\u5802\u5236\u9020 - S3 China National Open 93 [riftools]",
+     "label": "\u5929\u5802\u5236\u9020 - S3 China National Open #93 [riftools]",
      "player": "\u5929\u5802\u5236\u9020",
-     "placement": "93",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222688",
@@ -33493,9 +31750,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u661f\u65c5 \u7fbd\u5ddd \u6697\u73ed - S3 China National Open 104 [riftools]",
+     "label": "\u661f\u65c5 \u7fbd\u5ddd \u6697\u73ed - S3 China National Open #104 [riftools]",
      "player": "\u661f\u65c5 \u7fbd\u5ddd \u6697\u73ed",
-     "placement": "104",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224517",
@@ -33539,9 +31796,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e03\u591c\u7ea4\u51dd - S3 China National Open 106 [riftools]",
+     "label": "\u4e03\u591c\u7ea4\u51dd - S3 China National Open #106 [riftools]",
      "player": "\u4e03\u591c\u7ea4\u51dd",
-     "placement": "106",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225067",
@@ -33582,9 +31839,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6d3b\u52a8\u5047\u4eba - S3 China National Open 109 [riftools]",
+     "label": "\u6d3b\u52a8\u5047\u4eba - S3 China National Open #109 [riftools]",
      "player": "\u6d3b\u52a8\u5047\u4eba",
-     "placement": "109",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224865",
@@ -33624,9 +31881,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "faker - S3 China National Open 111 [riftools]",
+     "label": "faker - S3 China National Open #111 [riftools]",
      "player": "faker",
-     "placement": "111",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225214",
@@ -33673,9 +31930,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Qzmik - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #111 4-4-0 [riftools]",
+     "label": "Qzmik - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #111 [riftools]",
      "player": "Qzmik",
-     "placement": "#111 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4997aa5c-a8b3-43bc-9b5e-235dcead1706",
@@ -33711,209 +31968,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "DWT.\u795e\u5207.\u963f\u9f99.\u6069\u5e08\u4e8c\u9ebb - S3 China National Open 112 [riftools]",
-     "player": "DWT.\u795e\u5207.\u963f\u9f99.\u6069\u5e08\u4e8c\u9ebb",
-     "placement": "112",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225347",
-     "main": {
-      "Bellows Breath": 1,
-      "Black Rose Dignitary": 2,
-      "Cull the Weak": 3,
-      "Deathgrip": 2,
-      "Glasc Mixologist": 3,
-      "Hidden Blade": 2,
-      "Karthus, Eternal": 3,
-      "LeBlanc, Fragmented": 1,
-      "Mirror Image": 2,
-      "Plundering Poro": 1,
-      "Rift Herald": 1,
-      "Ruined Rex": 3,
-      "Sacrifice": 3,
-      "Salvage": 1,
-      "Soaring Scout": 3,
-      "Sprite Fountain": 1,
-      "Thousand-Tailed Watcher": 3,
-      "Vi, Peacekeeper": 2,
-      "Watchful Sentry": 3
-     },
-     "side": {
-      "Bellows Breath": 1,
-      "Black Rose Dignitary": 1,
-      "Deadly Flourish": 2,
-      "Harnessed Dragon": 1,
-      "Mirror Image": 1,
-      "Salvage": 2
-     },
-     "runes": {
-      "Mind Rune": 5,
-      "Order Rune": 7
-     },
-     "battlefields": [
-      "Dusk Rose Lab",
-      "Forbidding Waste",
-      "Windswept Hillock"
-     ]
-    },
-    {
-     "label": "R\u00f3\u017cniczka - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #116 4-3-0 [riftools]",
-     "player": "R\u00f3\u017cniczka",
-     "placement": "#116 4-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/37969395-efe7-4909-8634-99e8ad04c87b",
-     "main": {
-      "Carrion Dredger": 3,
-      "Cull the Weak": 3,
-      "Deathgrip": 3,
-      "Glasc Mixologist": 3,
-      "Hidden Blade": 2,
-      "Karthus, Eternal": 2,
-      "LeBlanc, Fragmented": 3,
-      "Mirror Image": 3,
-      "Ruined Rex": 3,
-      "Sacrifice": 2,
-      "Shen, Kinkou": 1,
-      "Soaring Scout": 3,
-      "Thousand-Tailed Watcher": 2,
-      "Vi, Peacekeeper": 3,
-      "Watchful Sentry": 3
-     },
-     "side": {
-      "Atakhan": 1,
-      "Bellows Breath": 1,
-      "Imperial Decree": 2,
-      "Salvage": 2,
-      "Shen, Kinkou": 1,
-      "Unchecked Power": 1
-     },
-     "runes": {
-      "Mind Rune": 5,
-      "Order Rune": 7
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u5411\u795e\u8fc8\u8fdb\u7684\u4eba - S3 China National Open 117 [riftools]",
-     "player": "\u5411\u795e\u8fc8\u8fdb\u7684\u4eba",
-     "placement": "117",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224249",
-     "main": {
-      "Black Rose Dignitary": 2,
-      "Cull the Weak": 2,
-      "Glasc Mixologist": 3,
-      "Hidden Blade": 3,
-      "Honest Broker": 2,
-      "Karthus, Eternal": 3,
-      "LeBlanc, Fragmented": 1,
-      "Mirror Image": 3,
-      "Ruined Rex": 3,
-      "Sacrifice": 3,
-      "Singularity": 2,
-      "Soaring Scout": 3,
-      "Stupefy": 1,
-      "Thousand-Tailed Watcher": 1,
-      "Vengeance": 2,
-      "Vi, Peacekeeper": 3,
-      "Watchful Sentry": 3
-     },
-     "side": {
-      "Ashe, Focused": 1,
-      "Cull the Weak": 1,
-      "Safety Inspector": 1,
-      "Salvage": 3,
-      "Sprite Fountain": 2
-     },
-     "runes": {
-      "Mind Rune": 5,
-      "Order Rune": 7
-     },
-     "battlefields": [
-      "Dusk Rose Lab",
-      "Forbidding Waste",
-      "Windswept Hillock"
-     ]
-    },
-    {
-     "label": "Kocitz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #128 4-4-0 [riftools]",
-     "player": "Kocitz",
-     "placement": "#128 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5197c091-4b66-436a-9c6d-a64eb7aaf767",
-     "main": {
-      "Baited Hook": 3,
-      "Black Rose Dignitary": 2,
-      "Galio, Indefatigable": 2,
-      "Glasc Mixologist": 3,
-      "Harnessed Dragon": 3,
-      "Hidden Blade": 2,
-      "Karthus, Eternal": 3,
-      "Mirror Image": 3,
-      "Rift Herald": 3,
-      "Ruined Rex": 3,
-      "Sacrifice": 3,
-      "Soaring Scout": 3,
-      "Thousand-Tailed Watcher": 1,
-      "Vi, Peacekeeper": 2,
-      "Watchful Sentry": 3
-     },
-     "side": {
-      "Ashe, Focused": 2,
-      "Galio, Indefatigable": 1,
-      "LeBlanc, Everywhere at Once": 1,
-      "Sprite Fountain": 2,
-      "Turn to Dust": 2
-     },
-     "runes": {
-      "Mind Rune": 4,
-      "Order Rune": 8
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Dionizos - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #147 3-3-0 [riftools]",
-     "player": "Dionizos",
-     "placement": "#147 3-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a9ab4fd0-18b4-4b9e-9c88-d8f20af07bfb",
-     "main": {
-      "Atakhan": 1,
-      "Baited Hook": 3,
-      "Black Rose Dignitary": 3,
-      "Glasc Mixologist": 3,
-      "Harnessed Dragon": 3,
-      "Hidden Blade": 2,
-      "Karthus, Eternal": 3,
-      "Mirror Image": 3,
-      "Rift Herald": 2,
-      "Ruined Rex": 3,
-      "Sacrifice": 3,
-      "Soaring Scout": 3,
-      "Thousand-Tailed Watcher": 1,
-      "Vi, Peacekeeper": 3,
-      "Watchful Sentry": 3
-     },
-     "side": {
-      "Ashe, Focused": 3,
-      "Deathgrip": 2,
-      "LeBlanc, Everywhere at Once": 1,
-      "Thousand-Tailed Watcher": 2
-     },
-     "runes": {
-      "Mind Rune": 4,
-      "Order Rune": 8
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u5b9d\u5e93\u5361\u724c-\u51ef\u745e - S3 China National Open 235 [riftools]",
+     "label": "\u5b9d\u5e93\u5361\u724c-\u51ef\u745e - S3 China National Open #235 [riftools]",
      "player": "\u5b9d\u5e93\u5361\u724c-\u51ef\u745e",
-     "placement": "235",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224181",
@@ -33958,9 +32015,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6495\u88c2\u306e\u5929\u5802 - S3 China National Open 248 [riftools]",
+     "label": "\u6495\u88c2\u306e\u5929\u5802 - S3 China National Open #248 [riftools]",
      "player": "\u6495\u88c2\u306e\u5929\u5802",
-     "placement": "248",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224433",
@@ -34004,9 +32061,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5353\u5361-\u9762\u58c1\u8005 - S3 China National Open 263 [riftools]",
+     "label": "\u5353\u5361-\u9762\u58c1\u8005 - S3 China National Open #263 [riftools]",
      "player": "\u5353\u5361-\u9762\u58c1\u8005",
-     "placement": "263",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222880",
@@ -34047,9 +32104,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "henry - S3 China National Open 275 [riftools]",
+     "label": "henry - S3 China National Open #275 [riftools]",
      "player": "henry",
-     "placement": "275",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223418",
@@ -34089,9 +32146,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TXG\u00b7\u864e\u5d16 - S3 China National Open 292 [riftools]",
+     "label": "TXG\u00b7\u864e\u5d16 - S3 China National Open #292 [riftools]",
      "player": "TXG\u00b7\u864e\u5d16",
-     "placement": "292",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224951",
@@ -34131,9 +32188,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e86\u5e73 - S3 China National Open 330 [riftools]",
+     "label": "\u4e86\u5e73 - S3 China National Open #330 [riftools]",
      "player": "\u4e86\u5e73",
-     "placement": "330",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224809",
@@ -34175,9 +32232,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534e\u84dd-\u4e22\u4e22 - S3 China National Open 345 [riftools]",
+     "label": "\u534e\u84dd-\u4e22\u4e22 - S3 China National Open #345 [riftools]",
      "player": "\u534e\u84dd-\u4e22\u4e22",
-     "placement": "345",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225109",
@@ -34222,9 +32279,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "LineKa\u00b7\u9ed1\u5929\u4f7f - S3 China National Open 355 [riftools]",
+     "label": "LineKa\u00b7\u9ed1\u5929\u4f7f - S3 China National Open #355 [riftools]",
      "player": "LineKa\u00b7\u9ed1\u5929\u4f7f",
-     "placement": "355",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223426",
@@ -34262,9 +32319,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5492\u672f - S3 China National Open 360 [riftools]",
+     "label": "\u5492\u672f - S3 China National Open #360 [riftools]",
      "player": "\u5492\u672f",
-     "placement": "360",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224714",
@@ -34309,9 +32366,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FB.\u9876\u5c16\u73a9\u5bb6.PPX - S3 China National Open 432 [riftools]",
+     "label": "FB.\u9876\u5c16\u73a9\u5bb6.PPX - S3 China National Open #432 [riftools]",
      "player": "FB.\u9876\u5c16\u73a9\u5bb6.PPX",
-     "placement": "432",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224404",
@@ -34352,9 +32409,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9633 - S3 China National Open 438 [riftools]",
+     "label": "\u9633 - S3 China National Open #438 [riftools]",
      "player": "\u9633",
-     "placement": "438",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224567",
@@ -34395,9 +32452,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u971c\u964d - S3 China National Open 452 [riftools]",
+     "label": "\u971c\u964d - S3 China National Open #452 [riftools]",
      "player": "\u971c\u964d",
-     "placement": "452",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223827",
@@ -34441,9 +32498,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ZiP. - S3 China National Open 465 [riftools]",
+     "label": "ZiP. - S3 China National Open #465 [riftools]",
      "player": "ZiP.",
-     "placement": "465",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223713",
@@ -34483,9 +32540,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u523a\u86c7 - S3 China National Open 498 [riftools]",
+     "label": "\u523a\u86c7 - S3 China National Open #498 [riftools]",
      "player": "\u523a\u86c7",
-     "placement": "498",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224647",
@@ -34530,9 +32587,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6301\u73a6 - S3 China National Open 525 [riftools]",
+     "label": "\u6301\u73a6 - S3 China National Open #525 [riftools]",
      "player": "\u6301\u73a6",
-     "placement": "525",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224863",
@@ -34574,9 +32631,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5468\u6743 - S3 China National Open 528 [riftools]",
+     "label": "\u5468\u6743 - S3 China National Open #528 [riftools]",
      "player": "\u5468\u6743",
-     "placement": "528",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225020",
@@ -34862,7 +32919,7 @@ window.FIELD = {
     {
      "label": "Noelle Ching - RiftAtlas Convergence #1 #31 [riftools]",
      "player": "Noelle Ching",
-     "placement": "#31",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-031-noelle-ching-vex-gloomist",
@@ -34907,7 +32964,7 @@ window.FIELD = {
     {
      "label": "Kayla Bailous - CCS Sunday $5,000 Riftbound Event #4 #38 [riftools]",
      "player": "Kayla Bailous",
-     "placement": "#38",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-038-kayla-bailous-vex-gloomist",
@@ -34953,7 +33010,7 @@ window.FIELD = {
     {
      "label": "Kevin Cate - CCS Sunday $5,000 Riftbound Event #4 #46 [riftools]",
      "player": "Kevin Cate",
-     "placement": "#46",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-046-kevin-cate-vex-gloomist",
@@ -34996,7 +33053,7 @@ window.FIELD = {
     {
      "label": "Tomas Osorio - RiftAtlas Convergence #1 #49 [riftools]",
      "player": "Tomas Osorio",
-     "placement": "#49",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-049-tomas-osorio-vex-gloomist",
@@ -35043,7 +33100,7 @@ window.FIELD = {
     {
      "label": "YoureDull - RiftAtlas Convergence #1 #56 [riftools]",
      "player": "YoureDull",
-     "placement": "#56",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-056-youredull-vex-gloomist",
@@ -35091,7 +33148,7 @@ window.FIELD = {
     {
      "label": "kurcz\u0119 pieczon - RiftAtlas Convergence #1 #58 [riftools]",
      "player": "kurcz\u0119 pieczon",
-     "placement": "#58",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-058-kurcz-pieczon-vex-gloomist",
@@ -35134,7 +33191,7 @@ window.FIELD = {
     {
      "label": "Ryan Heitmann - RiftAtlas Convergence #1 #70 [riftools]",
      "player": "Ryan Heitmann",
-     "placement": "#70",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-070-ryan-heitmann-vex-gloomist",
@@ -35181,7 +33238,7 @@ window.FIELD = {
     {
      "label": "David Brazee - RiftAtlas Convergence #1 #100 [riftools]",
      "player": "David Brazee",
-     "placement": "#100",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-100-david-brazee-vex-gloomist",
@@ -35228,9 +33285,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Szadok72 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #20 6-2-0 [riftools]",
+     "label": "Szadok72 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #20 [riftools]",
      "player": "Szadok72",
-     "placement": "#20 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0cd100d9-14a7-4827-a349-bd53f633139f",
@@ -35273,9 +33330,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "TinyGuy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #24 6-2-0 [riftools]",
+     "label": "TinyGuy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #24 [riftools]",
      "player": "TinyGuy",
-     "placement": "#24 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5843fb29-3dad-4e9a-ae37-d46a32f35270",
@@ -35316,9 +33373,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Niszczyciel777a - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #35 6-2-0 [riftools]",
+     "label": "Niszczyciel777a - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #35 [riftools]",
      "player": "Niszczyciel777a",
-     "placement": "#35 6-2-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0c5691bf-dbed-48b9-a74a-38af450ec521",
@@ -35360,9 +33417,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Snicky Beaky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #38 5-3-0 [riftools]",
+     "label": "Snicky Beaky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #38 [riftools]",
      "player": "Snicky Beaky",
-     "placement": "#38 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/75f44ab3-870c-494b-b036-6c73c9d815b1",
@@ -35403,9 +33460,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6ed4\u6ed4 - S3 China National Open 40 [riftools]",
+     "label": "\u6ed4\u6ed4 - S3 China National Open #40 [riftools]",
      "player": "\u6ed4\u6ed4",
-     "placement": "40",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224964",
@@ -35451,9 +33508,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e0b\u6c34\u9053\u7684\u8001\u9f20 - S3 China National Open 47 [riftools]",
+     "label": "\u4e0b\u6c34\u9053\u7684\u8001\u9f20 - S3 China National Open #47 [riftools]",
      "player": "\u4e0b\u6c34\u9053\u7684\u8001\u9f20",
-     "placement": "47",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224642",
@@ -35495,9 +33552,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Avah\u00edr - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #58 5-3-0 [riftools]",
+     "label": "Avah\u00edr - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #58 [riftools]",
      "player": "Avah\u00edr",
-     "placement": "#58 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7670bcc0-45fb-4c19-9db3-f15e435ee15e",
@@ -35534,9 +33591,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Kotwicz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #68 5-3-0 [riftools]",
+     "label": "Kotwicz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #68 [riftools]",
      "player": "Kotwicz",
-     "placement": "#68 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fd99e906-1f2c-43d5-9381-c34f70090dd1",
@@ -35576,9 +33633,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Blachu27 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #92 4-4-0 [riftools]",
+     "label": "Blachu27 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #92 [riftools]",
      "player": "Blachu27",
-     "placement": "#92 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/eed196c8-76b1-4c5d-b769-a5f9bf98230b",
@@ -35615,9 +33672,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "neverlands - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #98 4-4-0 [riftools]",
+     "label": "neverlands - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #98 [riftools]",
      "player": "neverlands",
-     "placement": "#98 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d3135069-5041-41e9-8b3f-219a8e1e1c79",
@@ -35657,98 +33714,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "BW-Tim - S3 China National Open 141 [riftools]",
-     "player": "BW-Tim",
-     "placement": "141",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/222137",
-     "main": {
-      "Abandon": 1,
-      "Back Off": 1,
-      "Boots of Swiftness": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "Edge of Night": 1,
-      "Emperor's Divide": 1,
-      "Evelynn, Entrancing": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Last Rites": 1,
-      "Mutated Mouser": 1,
-      "Overzealous Fan": 1,
-      "Rebuke": 1,
-      "Scuttle Crab": 3,
-      "Seal of Discord": 1,
-      "Sneaky Deckhand": 3,
-      "Star-Crossed": 3,
-      "Switcheroo": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Vex, Cheerless": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Allay, Eager Admirer": 2,
-      "Charm": 1,
-      "Disarming Rake": 2,
-      "Gust": 1,
-      "Not So Fast": 1,
-      "Rebuke": 1
-     },
-     "runes": {
-      "Calm Rune": 5,
-      "Chaos Rune": 7
-     },
-     "battlefields": [
-      "Fortified Position",
-      "Startipped Peak",
-      "Targon's Peak"
-     ]
-    },
-    {
-     "label": "\u68a6\u4e4b\u661f.\u534e\u84dd\u6cb3\u9053\u87f9 - S3 China National Open 143 [riftools]",
-     "player": "\u68a6\u4e4b\u661f.\u534e\u84dd\u6cb3\u9053\u87f9",
-     "placement": "143",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/222966",
-     "main": {
-      "Boots of Swiftness": 2,
-      "Charm": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "Edge of Night": 3,
-      "En Garde": 3,
-      "Evelynn, Entrancing": 3,
-      "Irelia, Fervent": 3,
-      "Last Rites": 1,
-      "Mutated Mouser": 3,
-      "Sneaky Deckhand": 3,
-      "Star-Crossed": 2,
-      "Switcheroo": 3,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Bewitching Spirit": 3,
-      "Disarming Rake": 2,
-      "Mindsplitter": 3
-     },
-     "runes": {
-      "Calm Rune": 4,
-      "Chaos Rune": 8
-     },
-     "battlefields": [
-      "Fortified Position",
-      "Startipped Peak",
-      "Trifarian War Camp"
-     ]
-    },
-    {
-     "label": "Fabio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #185 3-5-0 [riftools]",
+     "label": "Fabio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #185 [riftools]",
      "player": "Fabio",
-     "placement": "#185 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a5a2e9ce-8f59-4560-a336-fc7c27149de7",
@@ -35785,9 +33753,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Filipos122 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #197 2-3-0 [riftools]",
+     "label": "Filipos122 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #197 [riftools]",
      "player": "Filipos122",
-     "placement": "#197 2-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bed46b81-57f3-4d1d-9b62-422165d296cb",
@@ -35825,9 +33793,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "SallyRose - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #244 1-7-0 [riftools]",
+     "label": "SallyRose - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #244 [riftools]",
      "player": "SallyRose",
-     "placement": "#244 1-7-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1b806ba0-571c-44e5-beaa-93620c47a3a2",
@@ -35865,9 +33833,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u7fa4\u661f.\u5b87\u5b99 - S3 China National Open 339 [riftools]",
+     "label": "\u7fa4\u661f.\u5b87\u5b99 - S3 China National Open #339 [riftools]",
      "player": "\u7fa4\u661f.\u5b87\u5b99",
-     "placement": "339",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223941",
@@ -35907,9 +33875,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "EW. \u7d2b\u4e91\uff08\u66ff\u6000\u51fa\u5f81\uff09 - S3 China National Open 347 [riftools]",
+     "label": "EW. \u7d2b\u4e91\uff08\u66ff\u6000\u51fa\u5f81\uff09 - S3 China National Open #347 [riftools]",
      "player": "EW. \u7d2b\u4e91\uff08\u66ff\u6000\u51fa\u5f81\uff09",
-     "placement": "347",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224658",
@@ -35953,9 +33921,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e0d\u56de\u7b54\u5047\u8bbe\u6027\u95ee\u9898 - S3 China National Open 395 [riftools]",
+     "label": "\u4e0d\u56de\u7b54\u5047\u8bbe\u6027\u95ee\u9898 - S3 China National Open #395 [riftools]",
      "player": "\u4e0d\u56de\u7b54\u5047\u8bbe\u6027\u95ee\u9898",
-     "placement": "395",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224847",
@@ -36001,9 +33969,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u55b5\u4e36+Dakinglong - S3 China National Open 431 [riftools]",
+     "label": "\u795e\u55b5\u4e36+Dakinglong - S3 China National Open #431 [riftools]",
      "player": "\u795e\u55b5\u4e36+Dakinglong",
-     "placement": "431",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223743",
@@ -36053,9 +34021,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5f3a\u58ee\u7684\u5c0f\u4ed3\u8bb8 - S3 China National Open 504 [riftools]",
+     "label": "\u5f3a\u58ee\u7684\u5c0f\u4ed3\u8bb8 - S3 China National Open #504 [riftools]",
      "player": "\u5f3a\u58ee\u7684\u5c0f\u4ed3\u8bb8",
-     "placement": "504",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224836",
@@ -36098,9 +34066,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u683c\u65af - S3 China National Open 513 [riftools]",
+     "label": "\u683c\u65af - S3 China National Open #513 [riftools]",
      "player": "\u683c\u65af",
-     "placement": "513",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224937",
@@ -36144,9 +34112,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f18\u6781\u5ba2-\u5947\u8ff9\u9b54\u6cd5\u90fd\u4f1a\u6709\u7684 - S3 China National Open 520 [riftools]",
+     "label": "\u4f18\u6781\u5ba2-\u5947\u8ff9\u9b54\u6cd5\u90fd\u4f1a\u6709\u7684 - S3 China National Open #520 [riftools]",
      "player": "\u4f18\u6781\u5ba2-\u5947\u8ff9\u9b54\u6cd5\u90fd\u4f1a\u6709\u7684",
-     "placement": "520",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223901",
@@ -36193,9 +34161,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u62cd\u9ec4\u74dc\u9996\u5e2d\u5927\u5f1f\u5b50\u4e91\u5f69 - S3 China National Open 524 [riftools]",
+     "label": "\u62cd\u9ec4\u74dc\u9996\u5e2d\u5927\u5f1f\u5b50\u4e91\u5f69 - S3 China National Open #524 [riftools]",
      "player": "\u62cd\u9ec4\u74dc\u9996\u5e2d\u5927\u5f1f\u5b50\u4e91\u5f69",
-     "placement": "524",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223701",
@@ -36243,9 +34211,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "QR - S3 China National Open 553 [riftools]",
+     "label": "QR - S3 China National Open #553 [riftools]",
      "player": "QR",
-     "placement": "553",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224101",
@@ -36503,9 +34471,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Rubbjo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #41 5-3-0 [riftools]",
+     "label": "Rubbjo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #41 [riftools]",
      "player": "Rubbjo",
-     "placement": "#41 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e39ecc1b-43a9-4b0e-9877-9f51211bb63d",
@@ -36541,9 +34509,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "BombaCat - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #96 4-4-0 [riftools]",
+     "label": "BombaCat - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #96 [riftools]",
      "player": "BombaCat",
-     "placement": "#96 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0be30400-c10e-47ce-a532-63179a75b7f7",
@@ -36578,9 +34546,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "klub na klubie - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #219 2-5-0 [riftools]",
+     "label": "klub na klubie - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #219 [riftools]",
      "player": "klub na klubie",
-     "placement": "#219 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4d66d3a5-666f-408b-8206-59a8190c4d8f",
@@ -36614,9 +34582,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u8f7b\u5251\u5feb\u9a6c - S3 China National Open 303 [riftools]",
+     "label": "\u8f7b\u5251\u5feb\u9a6c - S3 China National Open #303 [riftools]",
      "player": "\u8f7b\u5251\u5feb\u9a6c",
-     "placement": "303",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/221946",
@@ -36655,9 +34623,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5f9e\u9f8d.\u4e91\u5f00\u6708\u660e - S3 China National Open 366 [riftools]",
+     "label": "\u5f9e\u9f8d.\u4e91\u5f00\u6708\u660e - S3 China National Open #366 [riftools]",
      "player": "\u5f9e\u9f8d.\u4e91\u5f00\u6708\u660e",
-     "placement": "366",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222745",
@@ -36704,9 +34672,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "GREY-\u6881\u9f99 - S3 China National Open 373 [riftools]",
+     "label": "GREY-\u6881\u9f99 - S3 China National Open #373 [riftools]",
      "player": "GREY-\u6881\u9f99",
-     "placement": "373",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222672",
@@ -36750,9 +34718,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5353\u5361-\u5766\u5c3c\u65af - S3 China National Open 382 [riftools]",
+     "label": "\u5353\u5361-\u5766\u5c3c\u65af - S3 China National Open #382 [riftools]",
      "player": "\u5353\u5361-\u5766\u5c3c\u65af",
-     "placement": "382",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223619",
@@ -36793,9 +34761,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5929\u6d25cardtime-\u5403\u85af\u7247\u7684\u866b\u5b50 - S3 China National Open 477 [riftools]",
+     "label": "\u5929\u6d25cardtime-\u5403\u85af\u7247\u7684\u866b\u5b50 - S3 China National Open #477 [riftools]",
      "player": "\u5929\u6d25cardtime-\u5403\u85af\u7247\u7684\u866b\u5b50",
-     "placement": "477",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223539",
@@ -37153,7 +35121,7 @@ window.FIELD = {
     {
      "label": "Rachel Taylor - RiftAtlas Convergence #1 #79 [riftools]",
      "player": "Rachel Taylor",
-     "placement": "#79",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-079-rachel-taylor-teemo-swift-scout",
@@ -37201,7 +35169,7 @@ window.FIELD = {
     {
      "label": "Nick skoler - RiftAtlas Convergence #1 #85 [riftools]",
      "player": "Nick skoler",
-     "placement": "#85",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-085-nick-skoler-teemo-swift-scout",
@@ -37243,9 +35211,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "M1CR01 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #53 5-3-0 [riftools]",
+     "label": "M1CR01 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #53 [riftools]",
      "player": "M1CR01",
-     "placement": "#53 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/19f29bb5-d595-452f-8630-7150abdabff0",
@@ -37289,9 +35257,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "M1LFD3STROY3R - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #104 4-4-0 [riftools]",
+     "label": "M1LFD3STROY3R - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #104 [riftools]",
      "player": "M1LFD3STROY3R",
-     "placement": "#104 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7636bcd3-d8e6-4f52-b86b-e46cb597c8b3",
@@ -37331,88 +35299,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Sneez3e - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #115 4-4-0 [riftools]",
-     "player": "Sneez3e",
-     "placement": "#115 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/15879618-0373-4b23-8fb7-afe8a2d6b04b",
-     "main": {
-      "Consult the Past": 3,
-      "Edge of Night": 1,
-      "Evelynn, Entrancing": 1,
-      "Existential Dread": 2,
-      "Guerilla Warfare": 2,
-      "Nocturne, Horrifying": 3,
-      "Singularity": 1,
-      "Sneaky Deckhand": 2,
-      "Sprite Call": 3,
-      "Sprite Fountain": 3,
-      "Stacked Deck": 3,
-      "Switcheroo": 3,
-      "Teemo, Scout": 3,
-      "Teemo, Strategist": 2,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Windsinger": 3
-     },
-     "side": {
-      "Baron Nashor": 1,
-      "Downwell": 1,
-      "Rebuke": 2,
-      "Thousand-Tailed Watcher": 1,
-      "Turn to Dust": 2,
-      "Vex, Apathetic": 1
-     },
-     "runes": {
-      "Chaos Rune": 5,
-      "Mind Rune": 7
-     },
-     "battlefields": []
-    },
-    {
-     "label": "YBE cziker - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #125 4-4-0 [riftools]",
-     "player": "YBE cziker",
-     "placement": "#125 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c88c4ec2-1e4b-488e-b736-fcccd9dd0baa",
-     "main": {
-      "Consult the Past": 3,
-      "Edge of Night": 1,
-      "Evelynn, Entrancing": 2,
-      "Existential Dread": 2,
-      "Guerilla Warfare": 2,
-      "Nocturne, Horrifying": 3,
-      "Sneaky Deckhand": 2,
-      "Sprite Call": 3,
-      "Sprite Fountain": 3,
-      "Stacked Deck": 3,
-      "Switcheroo": 3,
-      "Teemo, Scout": 3,
-      "Teemo, Strategist": 2,
-      "Tideturner": 3,
-      "Vex, Apathetic": 1,
-      "Windsinger": 3
-     },
-     "side": {
-      "Abandon": 1,
-      "Acceptable Losses": 2,
-      "Kha'Zix, Mutating Horror": 2,
-      "Rebuke": 1,
-      "Sneaky Deckhand": 1,
-      "Vex, Apathetic": 1
-     },
-     "runes": {
-      "Chaos Rune": 6,
-      "Mind Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u98ce\u6e05\u4e91\u6563 - S3 China National Open 161 [riftools]",
+     "label": "\u98ce\u6e05\u4e91\u6563 - S3 China National Open #161 [riftools]",
      "player": "\u98ce\u6e05\u4e91\u6563",
-     "placement": "161",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222934",
@@ -37455,9 +35344,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "xNooBsTheShadovv - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #167 3-5-0 [riftools]",
+     "label": "xNooBsTheShadovv - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #167 [riftools]",
      "player": "xNooBsTheShadovv",
-     "placement": "#167 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/79861e53-eb35-4f39-a42c-a97fbc918451",
@@ -37496,9 +35385,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u4e07\u5377-MeUmy\u7684\u58a8\u767d - S3 China National Open 195 [riftools]",
+     "label": "\u4e07\u5377-MeUmy\u7684\u58a8\u767d - S3 China National Open #195 [riftools]",
      "player": "\u4e07\u5377-MeUmy\u7684\u58a8\u767d",
-     "placement": "195",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/220952",
@@ -37539,9 +35428,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u51f1 - S3 China National Open 216 [riftools]",
+     "label": "\u51f1 - S3 China National Open #216 [riftools]",
      "player": "\u51f1",
-     "placement": "216",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222414",
@@ -37586,9 +35475,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SuSaBoi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #221 2-5-0 [riftools]",
+     "label": "SuSaBoi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #221 [riftools]",
      "player": "SuSaBoi",
-     "placement": "#221 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fac4b202-4ac6-4ffd-99c1-64b810524e60",
@@ -37628,9 +35517,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6211\u662f\u7b2c\u4e00\u6b21\u6765\u8fd9\u91cc\uff0c\u8bf7\u591a\u5173\u7167 - S3 China National Open 234 [riftools]",
+     "label": "\u6211\u662f\u7b2c\u4e00\u6b21\u6765\u8fd9\u91cc\uff0c\u8bf7\u591a\u5173\u7167 - S3 China National Open #234 [riftools]",
      "player": "\u6211\u662f\u7b2c\u4e00\u6b21\u6765\u8fd9\u91cc\uff0c\u8bf7\u591a\u5173\u7167",
-     "placement": "234",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224154",
@@ -37676,9 +35565,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "QueUeGaming - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #238 1-5-0 [riftools]",
+     "label": "QueUeGaming - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #238 [riftools]",
      "player": "QueUeGaming",
-     "placement": "#238 1-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ee78dd15-a299-43b6-abc3-3b34735c5ace",
@@ -37720,9 +35609,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Andrzej - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #240 1-4-0 [riftools]",
+     "label": "Andrzej - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #240 [riftools]",
      "player": "Andrzej",
-     "placement": "#240 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2d09bffc-156a-4e43-ab98-3c340d321d2a",
@@ -37758,9 +35647,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6a58\u5b50\u5c9b.\u4e5d\u601d - S3 China National Open 353 [riftools]",
+     "label": "\u6a58\u5b50\u5c9b.\u4e5d\u601d - S3 China National Open #353 [riftools]",
      "player": "\u6a58\u5b50\u5c9b.\u4e5d\u601d",
-     "placement": "353",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224859",
@@ -37805,9 +35694,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6d77\u5c9b\u5947\u5175\u5f20\u6da6\u6cfd - S3 China National Open 372 [riftools]",
+     "label": "\u6d77\u5c9b\u5947\u5175\u5f20\u6da6\u6cfd - S3 China National Open #372 [riftools]",
      "player": "\u6d77\u5c9b\u5947\u5175\u5f20\u6da6\u6cfd",
-     "placement": "372",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224038",
@@ -37848,9 +35737,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7b51\u68a6.DJTU.\u70ab\u9177\u5c0f\u8c6a - S3 China National Open 428 [riftools]",
+     "label": "\u7b51\u68a6.DJTU.\u70ab\u9177\u5c0f\u8c6a - S3 China National Open #428 [riftools]",
      "player": "\u7b51\u68a6.DJTU.\u70ab\u9177\u5c0f\u8c6a",
-     "placement": "428",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224354",
@@ -37898,9 +35787,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6ee1\u661f\u9014 - S3 China National Open 482 [riftools]",
+     "label": "\u6ee1\u661f\u9014 - S3 China National Open #482 [riftools]",
      "player": "\u6ee1\u661f\u9014",
-     "placement": "482",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223793",
@@ -37941,9 +35830,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65e0\u5b66 - S3 China National Open 534 [riftools]",
+     "label": "\u65e0\u5b66 - S3 China National Open #534 [riftools]",
      "player": "\u65e0\u5b66",
-     "placement": "534",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224135",
@@ -38734,7 +36623,7 @@ window.FIELD = {
     {
      "label": "Mello Gambit - RiftAtlas Convergence #1 #26 [riftools]",
      "player": "Mello Gambit",
-     "placement": "#26",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-026-mello-gambit-draven-glorious-executioner",
@@ -38780,7 +36669,7 @@ window.FIELD = {
     {
      "label": "spicee - RiftAtlas Convergence #1 #27 [riftools]",
      "player": "spicee",
-     "placement": "#27",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-027-spicee-draven-glorious-executioner",
@@ -38825,7 +36714,7 @@ window.FIELD = {
     {
      "label": "Emillio Pina - RiftAtlas Convergence #1 #28 [riftools]",
      "player": "Emillio Pina",
-     "placement": "#28",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-028-emillio-pina-draven-glorious-executioner",
@@ -38878,7 +36767,7 @@ window.FIELD = {
     {
      "label": "Joshua P - CCS Sunday $5,000 Riftbound Event #4 #56 [riftools]",
      "player": "Joshua P",
-     "placement": "#56",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-056-joshua-p-draven-glorious-executioner",
@@ -38924,7 +36813,7 @@ window.FIELD = {
     {
      "label": "Parker - CCS Sunday $5,000 Riftbound Event #4 #60 [riftools]",
      "player": "Parker",
-     "placement": "#60",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-060-parker-draven-glorious-executioner",
@@ -38966,9 +36855,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Batz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #17 6-2-0 [riftools]",
+     "label": "Batz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #17 [riftools]",
      "player": "Batz",
-     "placement": "#17 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/31f80c7a-d9ec-4ece-87ba-1a1024807c45",
@@ -39005,9 +36894,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Duofanell - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #19 6-2-0 [riftools]",
+     "label": "Duofanell - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #19 [riftools]",
      "player": "Duofanell",
-     "placement": "#19 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/23dd8f14-879f-43a2-8d81-28e0365c481d",
@@ -39048,9 +36937,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "DTA Fl\u00fcgel - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #51 5-3-0 [riftools]",
+     "label": "DTA Fl\u00fcgel - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #51 [riftools]",
      "player": "DTA Fl\u00fcgel",
-     "placement": "#51 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/aea17fe7-3adb-45c4-b679-d9315c32cfc4",
@@ -39090,9 +36979,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "barteklewl - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #60 5-3-0 [riftools]",
+     "label": "barteklewl - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #60 [riftools]",
      "player": "barteklewl",
-     "placement": "#60 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0bba2c49-e7af-48d9-8417-0efa4f6ce011",
@@ -39129,9 +37018,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "God is a Girl - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #67 5-3-0 [riftools]",
+     "label": "God is a Girl - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #67 [riftools]",
      "player": "God is a Girl",
-     "placement": "#67 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/23899617-9efc-4fc0-97b6-1e76b341fddd",
@@ -39172,9 +37061,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "NGNL\u00b7\u96e8\u8fb0 - S3 China National Open 95 [riftools]",
+     "label": "NGNL\u00b7\u96e8\u8fb0 - S3 China National Open #95 [riftools]",
      "player": "NGNL\u00b7\u96e8\u8fb0",
-     "placement": "95",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224298",
@@ -39225,9 +37114,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "WeaverHS - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #162 3-5-0 [riftools]",
+     "label": "WeaverHS - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #162 [riftools]",
      "player": "WeaverHS",
-     "placement": "#162 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8f99b05e-0f30-4c9a-9709-3a9b2f752f39",
@@ -39265,9 +37154,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ZL-Hasashi - S3 China National Open 175 [riftools]",
+     "label": "ZL-Hasashi - S3 China National Open #175 [riftools]",
      "player": "ZL-Hasashi",
-     "placement": "175",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224664",
@@ -39312,9 +37201,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Skipl\u00f3l - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #199 2-4-0 [riftools]",
+     "label": "Skipl\u00f3l - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #199 [riftools]",
      "player": "Skipl\u00f3l",
-     "placement": "#199 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6b86293d-44ac-449c-bc24-edefe75ce7cd",
@@ -39353,9 +37242,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "GOAT-\u70ed\u98ce\u6247 - S3 China National Open 223 [riftools]",
+     "label": "GOAT-\u70ed\u98ce\u6247 - S3 China National Open #223 [riftools]",
      "player": "GOAT-\u70ed\u98ce\u6247",
-     "placement": "223",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223441",
@@ -39402,9 +37291,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534e\u84dd-PH\uff08\u7ed9\u6211\u4e2d\u9009\u80fd\u600e\u6837\u5417\u5582\uff1f\uff09 - S3 China National Open 266 [riftools]",
+     "label": "\u534e\u84dd-PH\uff08\u7ed9\u6211\u4e2d\u9009\u80fd\u600e\u6837\u5417\u5582\uff1f\uff09 - S3 China National Open #266 [riftools]",
      "player": "\u534e\u84dd-PH\uff08\u7ed9\u6211\u4e2d\u9009\u80fd\u600e\u6837\u5417\u5582\uff1f\uff09",
-     "placement": "266",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223664",
@@ -39449,9 +37338,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Gambit-833\u4e4b\u72fc - S3 China National Open 294 [riftools]",
+     "label": "Gambit-833\u4e4b\u72fc - S3 China National Open #294 [riftools]",
      "player": "Gambit-833\u4e4b\u72fc",
-     "placement": "294",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223576",
@@ -39495,9 +37384,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Zack\u4e36D - S3 China National Open 402 [riftools]",
+     "label": "Zack\u4e36D - S3 China National Open #402 [riftools]",
      "player": "Zack\u4e36D",
-     "placement": "402",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222101",
@@ -39545,9 +37434,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6781\u89e6\u611f.\u62f3\u529b\u6597\u6280 - S3 China National Open 445 [riftools]",
+     "label": "\u6781\u89e6\u611f.\u62f3\u529b\u6597\u6280 - S3 China National Open #445 [riftools]",
      "player": "\u6781\u89e6\u611f.\u62f3\u529b\u6597\u6280",
-     "placement": "445",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224539",
@@ -39593,9 +37482,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e0e\u541b\u671f\u884c - S3 China National Open 497 [riftools]",
+     "label": "\u4e0e\u541b\u671f\u884c - S3 China National Open #497 [riftools]",
      "player": "\u4e0e\u541b\u671f\u884c",
-     "placement": "497",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222784",
@@ -40244,7 +38133,7 @@ window.FIELD = {
     {
      "label": "Kaleb Duitsman - RiftAtlas Convergence #1 #94 [riftools]",
      "player": "Kaleb Duitsman",
-     "placement": "#94",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-094-kaleb-duitsman-jax-grandmaster-at-arms",
@@ -40286,9 +38175,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Kaczor Zbawiciel - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #239 1-7-0 [riftools]",
+     "label": "Kaczor Zbawiciel - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #239 [riftools]",
      "player": "Kaczor Zbawiciel",
-     "placement": "#239 1-7-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d7e69472-58b7-4653-82e6-a41646215538",
@@ -40325,9 +38214,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u65b0\u5149\u4e00\u756a.\u51b0\u6fc0\u51cc - S3 China National Open 469 [riftools]",
+     "label": "\u65b0\u5149\u4e00\u756a.\u51b0\u6fc0\u51cc - S3 China National Open #469 [riftools]",
      "player": "\u65b0\u5149\u4e00\u756a.\u51b0\u6fc0\u51cc",
-     "placement": "469",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224986",
@@ -40372,9 +38261,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7a7a\u60f3\u7a7a\u60f3\u60f3@\u724c\u5ba2\u76df - S3 China National Open 565 [riftools]",
+     "label": "\u7a7a\u60f3\u7a7a\u60f3\u60f3@\u724c\u5ba2\u76df - S3 China National Open #565 [riftools]",
      "player": "\u7a7a\u60f3\u7a7a\u60f3\u60f3@\u724c\u5ba2\u76df",
-     "placement": "565",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225269",
@@ -40773,7 +38662,7 @@ window.FIELD = {
     {
      "label": "Ucra - RiftAtlas Convergence #1 #19 [riftools]",
      "player": "Ucra",
-     "placement": "#19",
+     "placement": "Top 32",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-019-ucra-miss-fortune-bounty-hunter",
@@ -40817,9 +38706,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Draken - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #23 6-2-0 [riftools]",
+     "label": "Draken - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #23 [riftools]",
      "player": "Draken",
-     "placement": "#23 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b45d7310-1017-47b7-a6c8-371457f3fccf",
@@ -40861,9 +38750,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Barti z Rzeszowa - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #27 6-2-0 [riftools]",
+     "label": "Barti z Rzeszowa - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #27 [riftools]",
      "player": "Barti z Rzeszowa",
-     "placement": "#27 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ac965bfd-726d-47c9-b463-bc2725f30984",
@@ -40897,9 +38786,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u767d\u9a6c - S3 China National Open 44 [riftools]",
+     "label": "\u767d\u9a6c - S3 China National Open #44 [riftools]",
      "player": "\u767d\u9a6c",
-     "placement": "44",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224225",
@@ -40939,9 +38828,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Yankim1 - S3 China National Open 45 [riftools]",
+     "label": "Yankim1 - S3 China National Open #45 [riftools]",
      "player": "Yankim1",
-     "placement": "45",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224472",
@@ -40979,9 +38868,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b.\u60a0\u95f2\u5ea6\u65e5 - S3 China National Open 72 [riftools]",
+     "label": "\u9177\u732b.\u60a0\u95f2\u5ea6\u65e5 - S3 China National Open #72 [riftools]",
      "player": "\u9177\u732b.\u60a0\u95f2\u5ea6\u65e5",
-     "placement": "72",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224602",
@@ -41026,9 +38915,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f50\u7f57 - S3 China National Open 87 [riftools]",
+     "label": "\u4f50\u7f57 - S3 China National Open #87 [riftools]",
      "player": "\u4f50\u7f57",
-     "placement": "87",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224624",
@@ -41070,9 +38959,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u674e\u54b8\u9c7c - S3 China National Open 96 [riftools]",
+     "label": "\u674e\u54b8\u9c7c - S3 China National Open #96 [riftools]",
      "player": "\u674e\u54b8\u9c7c",
-     "placement": "96",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223826",
@@ -41113,45 +39002,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "chciwy benek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #134 4-4-0 [riftools]",
-     "player": "chciwy benek",
-     "placement": "#134 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/015e648a-48b2-4766-9e62-66b96d93c38e",
-     "main": {
-      "Baron Nashor": 1,
-      "Bullet Time": 2,
-      "Catalyst of Aeons": 3,
-      "Dazzling Aurora": 3,
-      "Elder Dragon": 3,
-      "Flurry of Blades": 3,
-      "Gust": 3,
-      "Last Rites": 2,
-      "Lunar Boon": 3,
-      "Mindsplitter": 1,
-      "Mobilize": 3,
-      "Pack of Wonders": 3,
-      "Scryer's Bloom": 3,
-      "Stacked Deck": 3,
-      "Treasure Trove": 3
-     },
-     "side": {
-      "Hard Bargain": 2,
-      "Mindsplitter": 2,
-      "Sabotage": 2,
-      "Unyielding Spirit": 2
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "FSW.monkey - S3 China National Open 185 [riftools]",
+     "label": "FSW.monkey - S3 China National Open #185 [riftools]",
      "player": "FSW.monkey",
-     "placement": "185",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224476",
@@ -41193,9 +39046,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FB.\u772f\u773c\u8001\u5c4d - S3 China National Open 211 [riftools]",
+     "label": "FB.\u772f\u773c\u8001\u5c4d - S3 China National Open #211 [riftools]",
      "player": "FB.\u772f\u773c\u8001\u5c4d",
-     "placement": "211",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223521",
@@ -41239,9 +39092,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "NGF.Miner - S3 China National Open 246 [riftools]",
+     "label": "NGF.Miner - S3 China National Open #246 [riftools]",
      "player": "NGF.Miner",
-     "placement": "246",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224209",
@@ -41284,9 +39137,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Red - S3 China National Open 483 [riftools]",
+     "label": "Red - S3 China National Open #483 [riftools]",
      "player": "Red",
-     "placement": "483",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224580",
@@ -41328,9 +39181,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f18\u6781\u5ba2-\u4fe9\u67d2 - S3 China National Open 515 [riftools]",
+     "label": "\u4f18\u6781\u5ba2-\u4fe9\u67d2 - S3 China National Open #515 [riftools]",
      "player": "\u4f18\u6781\u5ba2-\u4fe9\u67d2",
-     "placement": "515",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225049",
@@ -41374,9 +39227,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u95e8\u53e3\u6c7d\u6c34 - S3 China National Open 523 [riftools]",
+     "label": "\u95e8\u53e3\u6c7d\u6c34 - S3 China National Open #523 [riftools]",
      "player": "\u95e8\u53e3\u6c7d\u6c34",
-     "placement": "523",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223370",
@@ -41417,9 +39270,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e91\u4e2d\u57ce\u2022\u963f\u826f - S3 China National Open 552 [riftools]",
+     "label": "\u4e91\u4e2d\u57ce\u2022\u963f\u826f - S3 China National Open #552 [riftools]",
      "player": "\u4e91\u4e2d\u57ce\u2022\u963f\u826f",
-     "placement": "552",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222885",
@@ -41556,7 +39409,7 @@ window.FIELD = {
     {
      "label": "| kaoe He/Him - RiftAtlas Convergence #1 #37 [riftools]",
      "player": "| kaoe He/Him",
-     "placement": "#37",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-037-kaoe-he-him-kai-sa-daughter-of-the-void",
@@ -41604,7 +39457,7 @@ window.FIELD = {
     {
      "label": "Frosty - CCS Sunday $5,000 Riftbound Event #4 #45 [riftools]",
      "player": "Frosty",
-     "placement": "#45",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-045-frosty-kai-sa-daughter-of-the-void",
@@ -41650,7 +39503,7 @@ window.FIELD = {
     {
      "label": "Better Days - RiftAtlas Convergence #1 #60 [riftools]",
      "player": "Better Days",
-     "placement": "#60",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-060-better-days-kai-sa-daughter-of-the-void",
@@ -41691,7 +39544,7 @@ window.FIELD = {
     {
      "label": "K\u00e9vin GERVAIS - RiftAtlas Convergence #1 #62 [riftools]",
      "player": "K\u00e9vin GERVAIS",
-     "placement": "#62",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-062-k-vin-gervais-kai-sa-daughter-of-the-void",
@@ -41736,9 +39589,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "hofmirr - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #11 6-2-1 [riftools]",
+     "label": "hofmirr - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #11 [riftools]",
      "player": "hofmirr",
-     "placement": "#11 6-2-1",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9d1284fd-4df1-4422-86f3-2c6d35525085",
@@ -41777,9 +39630,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "angwy janna - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #40 5-3-0 [riftools]",
+     "label": "angwy janna - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #40 [riftools]",
      "player": "angwy janna",
-     "placement": "#40 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c94923be-4ee6-4342-b897-3b86c0d67562",
@@ -41819,9 +39672,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u5361\u8336.\u5c0f\u4f18 - S3 China National Open 46 [riftools]",
+     "label": "\u5361\u8336.\u5c0f\u4f18 - S3 China National Open #46 [riftools]",
      "player": "\u5361\u8336.\u5c0f\u4f18",
-     "placement": "46",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224103",
@@ -41868,9 +39721,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Zajceq - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #106 4-4-0 [riftools]",
+     "label": "Zajceq - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #106 [riftools]",
      "player": "Zajceq",
-     "placement": "#106 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/cb4f60d0-727c-4b2c-b8ed-448ebef3cc0e",
@@ -41912,54 +39765,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "CLCS\u00b7\u5e74 - S3 China National Open 127 [riftools]",
-     "player": "CLCS\u00b7\u5e74",
-     "placement": "127",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224883",
-     "main": {
-      "Bellows Breath": 1,
-      "Blighted Battleaxe": 1,
-      "Card Sharp": 2,
-      "Falling Star": 3,
-      "Get Excited!": 1,
-      "Hextech Ray": 3,
-      "Kai'Sa, Survivor": 1,
-      "Long Sword": 1,
-      "Lotus Trap": 1,
-      "Noxus Hopeful": 2,
-      "Plundering Poro": 3,
-      "Progress Day": 3,
-      "Ravenbloom Student": 3,
-      "Rengar, Unseen": 3,
-      "Singularity": 2,
-      "Stupefy": 3,
-      "Thousand-Tailed Watcher": 3,
-      "Time Warp": 3,
-      "Turn to Dust": 1
-     },
-     "side": {
-      "Ferrous Forerunner": 2,
-      "Smite": 1,
-      "Turn to Dust": 2,
-      "Unchecked Power": 1,
-      "Undying Legion": 2
-     },
-     "runes": {
-      "Fury Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": [
-      "Frozen Fortress",
-      "Startipped Peak",
-      "Void Gate"
-     ]
-    },
-    {
-     "label": "TCC_\u7f8a\u773c\u7403 - S3 China National Open 140 [riftools]",
+     "label": "TCC_\u7f8a\u773c\u7403 - S3 China National Open #140 [riftools]",
      "player": "TCC_\u7f8a\u773c\u7403",
-     "placement": "140",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225048",
@@ -42006,52 +39814,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SmolBlueElephant - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #142 3-4-1 [riftools]",
-     "player": "SmolBlueElephant",
-     "placement": "#142 3-4-1",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/19f63e0b-cea5-4615-b60b-6c66b97277fa",
-     "main": {
-      "Bellows Breath": 1,
-      "Brynhir Thundersong": 1,
-      "Eclipse": 2,
-      "Falling Star": 3,
-      "Ferrous Forerunner": 3,
-      "Forecaster": 3,
-      "Hextech Ray": 3,
-      "Inferna": 2,
-      "Lecturing Yordle": 2,
-      "Long Sword": 1,
-      "Noxus Hopeful": 2,
-      "Piercing Light": 1,
-      "Rocket Barrage": 1,
-      "Singularity": 2,
-      "Smite": 1,
-      "Stupefy": 3,
-      "Thousand-Tailed Watcher": 3,
-      "Time Warp": 2,
-      "Watchful Sentry": 3
-     },
-     "side": {
-      "Brynhir Thundersong": 1,
-      "Chakram Dancer": 1,
-      "Progress Day": 1,
-      "Smite": 1,
-      "Thermo Beam": 2,
-      "Turn to Dust": 1,
-      "Unchecked Power": 1
-     },
-     "runes": {
-      "Fury Rune": 7,
-      "Mind Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "LOP GriVes - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #168 3-4-0 [riftools]",
+     "label": "LOP GriVes - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #168 [riftools]",
      "player": "LOP GriVes",
-     "placement": "#168 3-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f4a39898-7963-4aed-8fd8-da1b2689f40e",
@@ -42090,9 +39855,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Khaydarin - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #175 3-4-0 [riftools]",
+     "label": "Khaydarin - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #175 [riftools]",
      "player": "Khaydarin",
-     "placement": "#175 3-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/63e1406e-1650-4bcd-bbb2-3a6c06088f54",
@@ -42130,9 +39895,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "zgrzewarkagaming - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #176 3-5-0 [riftools]",
+     "label": "zgrzewarkagaming - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #176 [riftools]",
      "player": "zgrzewarkagaming",
-     "placement": "#176 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c055c061-d843-4b4e-901a-bf35b0f95837",
@@ -42172,9 +39937,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "1001.BGG.\u5927\u72f8\u5b50\uff08\u84dd\u53d1\u5c0f\u961f\u7248\uff09 - S3 China National Open 183 [riftools]",
+     "label": "1001.BGG.\u5927\u72f8\u5b50\uff08\u84dd\u53d1\u5c0f\u961f\u7248\uff09 - S3 China National Open #183 [riftools]",
      "player": "1001.BGG.\u5927\u72f8\u5b50\uff08\u84dd\u53d1\u5c0f\u961f\u7248\uff09",
-     "placement": "183",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224967",
@@ -42221,9 +39986,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u80c6\u5c0f\u9f20\u9f20 - S3 China National Open 210 [riftools]",
+     "label": "\u80c6\u5c0f\u9f20\u9f20 - S3 China National Open #210 [riftools]",
      "player": "\u80c6\u5c0f\u9f20\u9f20",
-     "placement": "210",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224196",
@@ -42269,9 +40034,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7535\u6c14-\u963f\u6492\u6258\u65af@\u5403\u9c7c - S3 China National Open 212 [riftools]",
+     "label": "\u7535\u6c14-\u963f\u6492\u6258\u65af@\u5403\u9c7c - S3 China National Open #212 [riftools]",
      "player": "\u7535\u6c14-\u963f\u6492\u6258\u65af@\u5403\u9c7c",
-     "placement": "212",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223806",
@@ -42314,9 +40079,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5143\u6c14\u5e7b\u754c \u8f66\u5a18 - S3 China National Open 214 [riftools]",
+     "label": "\u5143\u6c14\u5e7b\u754c \u8f66\u5a18 - S3 China National Open #214 [riftools]",
      "player": "\u5143\u6c14\u5e7b\u754c \u8f66\u5a18",
-     "placement": "214",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223808",
@@ -42363,9 +40128,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "jadrzwi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #222 2-4-0 [riftools]",
+     "label": "jadrzwi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #222 [riftools]",
      "player": "jadrzwi",
-     "placement": "#222 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/adae650f-be78-4b4f-8d48-05054a396bde",
@@ -42402,9 +40167,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u661f\u57df\u684c\u6e38\u00b7OB - S3 China National Open 236 [riftools]",
+     "label": "\u661f\u57df\u684c\u6e38\u00b7OB - S3 China National Open #236 [riftools]",
      "player": "\u661f\u57df\u684c\u6e38\u00b7OB",
-     "placement": "236",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223853",
@@ -42447,9 +40212,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Ai\u6674\u5929.\u6dd8\u91d1\u5de2.\u6781\u89e6\u611f - S3 China National Open 268 [riftools]",
+     "label": "Ai\u6674\u5929.\u6dd8\u91d1\u5de2.\u6781\u89e6\u611f - S3 China National Open #268 [riftools]",
      "player": "Ai\u6674\u5929.\u6dd8\u91d1\u5de2.\u6781\u89e6\u611f",
-     "placement": "268",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224328",
@@ -42494,9 +40259,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5207.\u5b89wm - S3 China National Open 308 [riftools]",
+     "label": "\u795e\u5207.\u5b89wm - S3 China National Open #308 [riftools]",
      "player": "\u795e\u5207.\u5b89wm",
-     "placement": "308",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224029",
@@ -42538,9 +40303,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7075\u82b1\u796d.ECG.\u83b1\u7279\u871c - S3 China National Open 350 [riftools]",
+     "label": "\u7075\u82b1\u796d.ECG.\u83b1\u7279\u871c - S3 China National Open #350 [riftools]",
      "player": "\u7075\u82b1\u796d.ECG.\u83b1\u7279\u871c",
-     "placement": "350",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224686",
@@ -42586,9 +40351,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u672a\u4e2d\u9009\u5fd8\u8bb0\u6362\u4e86\u54ea\u4e9b\u5907\u724c\u65e0\u5fc3\u7528\u9519\u8bef\u4fe1\u606f\u529d\u964d\u7231\u957f\u8003\u7684\u660e\u661f\u5931\u8d25\u88ab\u6302\u7f51\u4e0a - S3 China National Open 362 [riftools]",
+     "label": "\u672a\u4e2d\u9009\u5fd8\u8bb0\u6362\u4e86\u54ea\u4e9b\u5907\u724c\u65e0\u5fc3\u7528\u9519\u8bef\u4fe1\u606f\u529d\u964d\u7231\u957f\u8003\u7684\u660e\u661f\u5931\u8d25\u88ab\u6302\u7f51\u4e0a - S3 China National Open #362 [riftools]",
      "player": "\u672a\u4e2d\u9009\u5fd8\u8bb0\u6362\u4e86\u54ea\u4e9b\u5907\u724c\u65e0\u5fc3\u7528\u9519\u8bef\u4fe1\u606f\u529d\u964d\u7231\u957f\u8003\u7684\u660e\u661f\u5931\u8d25\u88ab\u6302\u7f51\u4e0a",
-     "placement": "362",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224876",
@@ -42635,9 +40400,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FSW.\u8499\u725b\u5927\u52c7\u8005\ud83e\udda5\ufe0f - S3 China National Open 374 [riftools]",
+     "label": "FSW.\u8499\u725b\u5927\u52c7\u8005\ud83e\udda5\ufe0f - S3 China National Open #374 [riftools]",
      "player": "FSW.\u8499\u725b\u5927\u52c7\u8005\ud83e\udda5\ufe0f",
-     "placement": "374",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224009",
@@ -42685,9 +40450,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Tstar.Tstar.Tstar.Tstar.Tstar.79 - S3 China National Open 399 [riftools]",
+     "label": "Tstar.Tstar.Tstar.Tstar.Tstar.79 - S3 China National Open #399 [riftools]",
      "player": "Tstar.Tstar.Tstar.Tstar.Tstar.79",
-     "placement": "399",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224168",
@@ -42731,9 +40496,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Marisa - S3 China National Open 401 [riftools]",
+     "label": "Marisa - S3 China National Open #401 [riftools]",
      "player": "Marisa",
-     "placement": "401",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223744",
@@ -42780,9 +40545,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u751c\u751c\u5708\u5927\u5e1d - S3 China National Open 409 [riftools]",
+     "label": "\u751c\u751c\u5708\u5927\u5e1d - S3 China National Open #409 [riftools]",
      "player": "\u751c\u751c\u5708\u5927\u5e1d",
-     "placement": "409",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223547",
@@ -42828,9 +40593,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e5d\u66dc-\u4e91\u6668\u98de - S3 China National Open 437 [riftools]",
+     "label": "\u4e5d\u66dc-\u4e91\u6668\u98de - S3 China National Open #437 [riftools]",
      "player": "\u4e5d\u66dc-\u4e91\u6668\u98de",
-     "placement": "437",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223971",
@@ -42878,9 +40643,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5c0f\u7a9d-\u95ea\u5149 - S3 China National Open 441 [riftools]",
+     "label": "\u5c0f\u7a9d-\u95ea\u5149 - S3 China National Open #441 [riftools]",
      "player": "\u5c0f\u7a9d-\u95ea\u5149",
-     "placement": "441",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224435",
@@ -42925,9 +40690,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ZL-\u660e\u65e5\u7684\u6674\u5929 - S3 China National Open 455 [riftools]",
+     "label": "ZL-\u660e\u65e5\u7684\u6674\u5929 - S3 China National Open #455 [riftools]",
      "player": "ZL-\u660e\u65e5\u7684\u6674\u5929",
-     "placement": "455",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224651",
@@ -42973,9 +40738,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u58a8\u67d3.\u5c11\u5e74\u55b5 - S3 China National Open 509 [riftools]",
+     "label": "\u58a8\u67d3.\u5c11\u5e74\u55b5 - S3 China National Open #509 [riftools]",
      "player": "\u58a8\u67d3.\u5c11\u5e74\u55b5",
-     "placement": "509",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224826",
@@ -43026,9 +40791,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "AI.\u767d\u5f00\u738b.\u95ea\u95ea - S3 China National Open 522 [riftools]",
+     "label": "AI.\u767d\u5f00\u738b.\u95ea\u95ea - S3 China National Open #522 [riftools]",
      "player": "AI.\u767d\u5f00\u738b.\u95ea\u95ea",
-     "placement": "522",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224566",
@@ -43071,9 +40836,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u597d\u95ee\u5b66\u5f92 - S3 China National Open 559 [riftools]",
+     "label": "\u597d\u95ee\u5b66\u5f92 - S3 China National Open #559 [riftools]",
      "player": "\u597d\u95ee\u5b66\u5f92",
-     "placement": "559",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224012",
@@ -43122,9 +40887,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f18\u6781\u5ba2-Chris - S3 China National Open 569 [riftools]",
+     "label": "\u4f18\u6781\u5ba2-Chris - S3 China National Open #569 [riftools]",
      "player": "\u4f18\u6781\u5ba2-Chris",
-     "placement": "569",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224915",
@@ -43362,7 +41127,7 @@ window.FIELD = {
     {
      "label": "Zack Burney - RiftAtlas Convergence #1 #42 [riftools]",
      "player": "Zack Burney",
-     "placement": "#42",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-042-zack-burney-jhin-virtuoso",
@@ -43409,7 +41174,7 @@ window.FIELD = {
     {
      "label": "Ben - RiftAtlas Convergence #1 #55 [riftools]",
      "player": "Ben",
-     "placement": "#55",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-055-ben-jhin-virtuoso",
@@ -43450,52 +41215,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Baron Pikari - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #121 4-4-0 [riftools]",
-     "player": "Baron Pikari",
-     "placement": "#121 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/917465e7-c7e8-446a-9315-4a816ec23987",
-     "main": {
-      "Consult the Past": 3,
-      "Curtain Call": 3,
-      "Deadly Flourish": 3,
-      "Downstage Dramatics": 1,
-      "Falling Star": 1,
-      "Frigid Touch": 2,
-      "Inferna": 1,
-      "Noxus Hopeful": 3,
-      "Orb of Regret": 1,
-      "Plundering Poro": 3,
-      "Progress Day": 1,
-      "Riptide Rex": 2,
-      "Rocket Barrage": 2,
-      "Singularity": 2,
-      "Sprite Burst": 2,
-      "Stupefy": 2,
-      "Thousand-Tailed Watcher": 2,
-      "Time Warp": 1,
-      "Unchecked Power": 1,
-      "Watchful Sentry": 3
-     },
-     "side": {
-      "Against the Odds": 1,
-      "Ferrous Forerunner": 2,
-      "Rocket Barrage": 1,
-      "Sprite Burst": 1,
-      "Thermo Beam": 2,
-      "Unchecked Power": 1
-     },
-     "runes": {
-      "Fury Rune": 5,
-      "Mind Rune": 7
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u65cb\u6728\u65f6\u5149\u00b7\u798f\u72f8 - S3 China National Open 230 [riftools]",
+     "label": "\u65cb\u6728\u65f6\u5149\u00b7\u798f\u72f8 - S3 China National Open #230 [riftools]",
      "player": "\u65cb\u6728\u65f6\u5149\u00b7\u798f\u72f8",
-     "placement": "230",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223520",
@@ -43540,9 +41262,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "NSFW.joyspace_\u795e\u5207.ChenZ1 - S3 China National Open 316 [riftools]",
+     "label": "NSFW.joyspace_\u795e\u5207.ChenZ1 - S3 China National Open #316 [riftools]",
      "player": "NSFW.joyspace_\u795e\u5207.ChenZ1",
-     "placement": "316",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224758",
@@ -43583,9 +41305,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u8d5b\u9ad8.\u5fcd\u8005\u4e0d\u6012 - S3 China National Open 326 [riftools]",
+     "label": "\u8d5b\u9ad8.\u5fcd\u8005\u4e0d\u6012 - S3 China National Open #326 [riftools]",
      "player": "\u8d5b\u9ad8.\u5fcd\u8005\u4e0d\u6012",
-     "placement": "326",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224970",
@@ -43630,9 +41352,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5c0f\u7a9d-\u67d0\u610f\u53f8 - S3 China National Open 447 [riftools]",
+     "label": "\u5c0f\u7a9d-\u67d0\u610f\u53f8 - S3 China National Open #447 [riftools]",
      "player": "\u5c0f\u7a9d-\u67d0\u610f\u53f8",
-     "placement": "447",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223984",
@@ -43678,9 +41400,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6dd8\u91d1\u5de2.\u63d0\u4e9a - S3 China National Open 484 [riftools]",
+     "label": "\u6dd8\u91d1\u5de2.\u63d0\u4e9a - S3 China National Open #484 [riftools]",
      "player": "\u6dd8\u91d1\u5de2.\u63d0\u4e9a",
-     "placement": "484",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224060",
@@ -43727,9 +41449,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5361\u6bd4\u00b7\u5174\u6b23\u541b\u83ab\u7b11 - S3 China National Open 536 [riftools]",
+     "label": "\u5361\u6bd4\u00b7\u5174\u6b23\u541b\u83ab\u7b11 - S3 China National Open #536 [riftools]",
      "player": "\u5361\u6bd4\u00b7\u5174\u6b23\u541b\u83ab\u7b11",
-     "placement": "536",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224729",
@@ -44140,7 +41862,7 @@ window.FIELD = {
     {
      "label": "Kenneth Hagood - RiftAtlas Convergence #1 #90 [riftools]",
      "player": "Kenneth Hagood",
-     "placement": "#90",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-090-kenneth-hagood-lillia-bashful-bloom",
@@ -44181,7 +41903,7 @@ window.FIELD = {
     {
      "label": "Zak Brown - RiftAtlas Convergence #1 #112 [riftools]",
      "player": "Zak Brown",
-     "placement": "#112",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-112-zak-brown-lillia-bashful-bloom",
@@ -44227,9 +41949,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9177\u732b.\u73ae - S3 China National Open 50 [riftools]",
+     "label": "\u9177\u732b.\u73ae - S3 China National Open #50 [riftools]",
      "player": "\u9177\u732b.\u73ae",
-     "placement": "50",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224001",
@@ -44272,9 +41994,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u68a6\u4e4b\u661f-\u6380\u4e91\u2601\ufe0f\u2601\ufe0f\u2601\ufe0f - S3 China National Open 65 [riftools]",
+     "label": "\u68a6\u4e4b\u661f-\u6380\u4e91\u2601\ufe0f\u2601\ufe0f\u2601\ufe0f - S3 China National Open #65 [riftools]",
      "player": "\u68a6\u4e4b\u661f-\u6380\u4e91\u2601\ufe0f\u2601\ufe0f\u2601\ufe0f",
-     "placement": "65",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222558",
@@ -44315,9 +42037,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "tomikor - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #80 5-3-0 [riftools]",
+     "label": "tomikor - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #80 [riftools]",
      "player": "tomikor",
-     "placement": "#80 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/583f562d-508d-42bb-9551-56350ea33467",
@@ -44353,9 +42075,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "MYZ - S3 China National Open 84 [riftools]",
+     "label": "MYZ - S3 China National Open #84 [riftools]",
      "player": "MYZ",
-     "placement": "84",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225439",
@@ -44397,9 +42119,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Skura - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #84 4-3-1 [riftools]",
+     "label": "Skura - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #84 [riftools]",
      "player": "Skura",
-     "placement": "#84 4-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/52e5b4bf-e779-448a-87fa-42cb54d4db5f",
@@ -44436,9 +42158,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6478\u9c7c\u7684\u9c7c\u58a8 - S3 China National Open 98 [riftools]",
+     "label": "\u6478\u9c7c\u7684\u9c7c\u58a8 - S3 China National Open #98 [riftools]",
      "player": "\u6478\u9c7c\u7684\u9c7c\u58a8",
-     "placement": "98",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222647",
@@ -44480,9 +42202,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Hausi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #102 4-4-0 [riftools]",
+     "label": "Hausi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #102 [riftools]",
      "player": "Hausi",
-     "placement": "#102 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fc2b3721-7828-4297-9e09-f961b5cc5f34",
@@ -44525,9 +42247,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "heyitslily - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #107 4-4-0 [riftools]",
+     "label": "heyitslily - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #107 [riftools]",
      "player": "heyitslily",
-     "placement": "#107 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ab220d7c-7b7c-403d-befd-8853be4db69a",
@@ -44567,9 +42289,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Gambit-\u6784\u7b51\u82e6\u624bSimon - S3 China National Open 182 [riftools]",
+     "label": "Gambit-\u6784\u7b51\u82e6\u624bSimon - S3 China National Open #182 [riftools]",
      "player": "Gambit-\u6784\u7b51\u82e6\u624bSimon",
-     "placement": "182",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223707",
@@ -44610,9 +42332,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Kerepokan - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #192 2-4-0 [riftools]",
+     "label": "Kerepokan - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #192 [riftools]",
      "player": "Kerepokan",
-     "placement": "#192 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4618551c-f86f-416c-9b6f-682ce88633af",
@@ -44652,9 +42374,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Cwelis\u0142aw - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #200 2-4-0 [riftools]",
+     "label": "Cwelis\u0142aw - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #200 [riftools]",
      "player": "Cwelis\u0142aw",
-     "placement": "#200 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b5a7e9b7-6d26-4f42-9f56-5b1c537e547d",
@@ -44692,9 +42414,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "limesuperior - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #208 2-6-0 [riftools]",
+     "label": "limesuperior - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #208 [riftools]",
      "player": "limesuperior",
-     "placement": "#208 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8023e628-1bb9-44c1-94c9-9bf34cab94bd",
@@ -44732,9 +42454,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u9e22\u79be - S3 China National Open 240 [riftools]",
+     "label": "\u9e22\u79be - S3 China National Open #240 [riftools]",
      "player": "\u9e22\u79be",
-     "placement": "240",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224764",
@@ -44780,9 +42502,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Iksa\u0142 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #242 1-4-0 [riftools]",
+     "label": "Iksa\u0142 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #242 [riftools]",
      "player": "Iksa\u0142",
-     "placement": "#242 1-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7dbfdfc4-6847-46df-a0e1-63341bd6df9d",
@@ -44818,9 +42540,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "9UhGary - S3 China National Open 369 [riftools]",
+     "label": "9UhGary - S3 China National Open #369 [riftools]",
      "player": "9UhGary",
-     "placement": "369",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223940",
@@ -44862,9 +42584,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "aBo - S3 China National Open 397 [riftools]",
+     "label": "aBo - S3 China National Open #397 [riftools]",
      "player": "aBo",
-     "placement": "397",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223285",
@@ -44906,9 +42628,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65cb\u6728\u65f6\u5149\u306e\u590f - S3 China National Open 423 [riftools]",
+     "label": "\u65cb\u6728\u65f6\u5149\u306e\u590f - S3 China National Open #423 [riftools]",
      "player": "\u65cb\u6728\u65f6\u5149\u306e\u590f",
-     "placement": "423",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225438",
@@ -44954,9 +42676,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "XXT.BING - S3 China National Open 521 [riftools]",
+     "label": "XXT.BING - S3 China National Open #521 [riftools]",
      "player": "XXT.BING",
-     "placement": "521",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223488",
@@ -44999,9 +42721,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "DreamLaden - S3 China National Open 545 [riftools]",
+     "label": "DreamLaden - S3 China National Open #545 [riftools]",
      "player": "DreamLaden",
-     "placement": "545",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224487",
@@ -45043,9 +42765,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "HBG.\u5c0f\u5468 - S3 China National Open 570 [riftools]",
+     "label": "HBG.\u5c0f\u5468 - S3 China National Open #570 [riftools]",
      "player": "HBG.\u5c0f\u5468",
-     "placement": "570",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225378",
@@ -45355,7 +43077,7 @@ window.FIELD = {
     {
      "label": "Hiemer12 - RiftAtlas Convergence #1 #54 [riftools]",
      "player": "Hiemer12",
-     "placement": "#54",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-054-hiemer12-lucian-purifier",
@@ -45398,7 +43120,7 @@ window.FIELD = {
     {
      "label": "Florian Sieber - RiftAtlas Convergence #1 #61 [riftools]",
      "player": "Florian Sieber",
-     "placement": "#61",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-061-florian-sieber-lucian-purifier",
@@ -45439,9 +43161,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Kiba TFT - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #47 5-3-0 [riftools]",
+     "label": "Kiba TFT - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #47 [riftools]",
      "player": "Kiba TFT",
-     "placement": "#47 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3171093d-e55b-42c5-9d59-97a022948e5d",
@@ -45480,9 +43202,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u9177\u732b.\u9ed1\u79d1\u6280\u6574\u6d3b - S3 China National Open 52 [riftools]",
+     "label": "\u9177\u732b.\u9ed1\u79d1\u6280\u6574\u6d3b - S3 China National Open #52 [riftools]",
      "player": "\u9177\u732b.\u9ed1\u79d1\u6280\u6574\u6d3b",
-     "placement": "52",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224201",
@@ -45522,49 +43244,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Vent - S3 China National Open 145 [riftools]",
-     "player": "Vent",
-     "placement": "145",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225043",
-     "main": {
-      "Challenge": 2,
-      "Doran's Blade": 3,
-      "Falling Star": 2,
-      "Ferrous Forerunner": 2,
-      "First Mate": 3,
-      "Irresistible Faefolk": 3,
-      "Jhin, Murderous Artist": 3,
-      "Kai'Sa, Survivor": 3,
-      "Kinkou Initiate": 2,
-      "Long Sword": 3,
-      "Lucian, Merciless": 1,
-      "Noxus Hopeful": 2,
-      "Relentless Pursuit": 3,
-      "Sabotage": 2,
-      "Skyfall of Areion": 3,
-      "Trinity Force": 3
-     },
-     "side": {
-      "Boneshiver": 2,
-      "Fiora, Peerless": 3,
-      "Ruin Runner": 3
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Fury Rune": 5
-     },
-     "battlefields": [
-      "Forbidding Waste",
-      "Forge of the Fluft",
-      "Zaun Warrens"
-     ]
-    },
-    {
-     "label": "Polar - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #165 3-5-0 [riftools]",
+     "label": "Polar - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #165 [riftools]",
      "player": "Polar",
-     "placement": "#165 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/335bcaa9-bce1-4c06-b6df-b8e35075e94f",
@@ -45601,9 +43283,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6811\u61d2.\u5bb5\u661f.\ud83d\udc3f\u677e\u9f20 - S3 China National Open 197 [riftools]",
+     "label": "\u6811\u61d2.\u5bb5\u661f.\ud83d\udc3f\u677e\u9f20 - S3 China National Open #197 [riftools]",
      "player": "\u6811\u61d2.\u5bb5\u661f.\ud83d\udc3f\u677e\u9f20",
-     "placement": "197",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224290",
@@ -45647,9 +43329,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6697\u5f71\u4e4b\u62f3 - S3 China National Open 446 [riftools]",
+     "label": "\u6697\u5f71\u4e4b\u62f3 - S3 China National Open #446 [riftools]",
      "player": "\u6697\u5f71\u4e4b\u62f3",
-     "placement": "446",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222961",
@@ -45957,7 +43639,7 @@ window.FIELD = {
     {
      "label": "Windzy - RiftAtlas Convergence #1 #71 [riftools]",
      "player": "Windzy",
-     "placement": "#71",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-071-windzy-ornn-fire-below-the-mountain",
@@ -45998,9 +43680,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "iSn3jczak - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #49 5-3-0 [riftools]",
+     "label": "iSn3jczak - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #49 [riftools]",
      "player": "iSn3jczak",
-     "placement": "#49 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8efeb92a-b42f-4a01-8d4f-502169c3d9f1",
@@ -46036,9 +43718,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "BloodDice - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #62 5-3-0 [riftools]",
+     "label": "BloodDice - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #62 [riftools]",
      "player": "BloodDice",
-     "placement": "#62 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e43664f8-37ab-47a9-87fb-009e492c3f6b",
@@ -46077,9 +43759,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Sanah - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #65 5-3-0 [riftools]",
+     "label": "Sanah - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #65 [riftools]",
      "player": "Sanah",
-     "placement": "#65 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e52769d4-2f9f-4707-974a-a6789c95ec7d",
@@ -46114,9 +43796,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "CRC Dandelion - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #76 5-3-0 [riftools]",
+     "label": "CRC Dandelion - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #76 [riftools]",
      "player": "CRC Dandelion",
-     "placement": "#76 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7a902e9f-417a-4e2b-9783-b7adc61765f3",
@@ -46158,9 +43840,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "MistycznyAlbert - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #99 4-4-0 [riftools]",
+     "label": "MistycznyAlbert - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #99 [riftools]",
      "player": "MistycznyAlbert",
-     "placement": "#99 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/abfeeb92-3071-478d-a207-65d89b32d7bf",
@@ -46196,53 +43878,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Hojaku - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #112 4-4-0 [riftools]",
-     "player": "Hojaku",
-     "placement": "#112 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c4b54214-a3dd-421a-9618-28a679a3c8a4",
-     "main": {
-      "Brutalizer": 3,
-      "Charm": 1,
-      "Defy": 2,
-      "Discipline": 3,
-      "Dropboarder": 2,
-      "Guardian Angel": 2,
-      "Janna, Savior": 2,
-      "Lonely Poro": 2,
-      "Pit Crew": 2,
-      "Poro Snax": 1,
-      "Scuttle Crab": 2,
-      "Seal of Focus": 2,
-      "Shurelya's Requiem": 1,
-      "Sprite Burst": 3,
-      "Sprite Fountain": 3,
-      "Stellacorn Herder": 2,
-      "Sterak's Gage": 1,
-      "Svellsongur": 1,
-      "Thousand-Tailed Watcher": 2,
-      "Time Warp": 2
-     },
-     "side": {
-      "Charm": 1,
-      "Disarming Rake": 2,
-      "Lonely Poro": 1,
-      "Poro Snax": 1,
-      "Sterak's Gage": 1,
-      "Svellsongur": 1,
-      "Thousand-Tailed Watcher": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Mind Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u7eb8\u4f20.\u6653\u955c - S3 China National Open 189 [riftools]",
+     "label": "\u7eb8\u4f20.\u6653\u955c - S3 China National Open #189 [riftools]",
      "player": "\u7eb8\u4f20.\u6653\u955c",
-     "placement": "189",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224373",
@@ -46286,9 +43924,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Sano - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #193 2-4-0 [riftools]",
+     "label": "Sano - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #193 [riftools]",
      "player": "Sano",
-     "placement": "#193 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/24dd6c08-27c8-4b47-b91e-a764ba443919",
@@ -46324,9 +43962,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "xRivio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #253 0-5-0 [riftools]",
+     "label": "xRivio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #253 [riftools]",
      "player": "xRivio",
-     "placement": "#253 0-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1655bdfa-953d-458c-b966-8861734f341d",
@@ -46361,9 +43999,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u52a0\u7c97\u4e2d\u62ec\u53f7 - S3 China National Open 323 [riftools]",
+     "label": "\u52a0\u7c97\u4e2d\u62ec\u53f7 - S3 China National Open #323 [riftools]",
      "player": "\u52a0\u7c97\u4e2d\u62ec\u53f7",
-     "placement": "323",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224855",
@@ -46409,9 +44047,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "C+.Jude - S3 China National Open 439 [riftools]",
+     "label": "C+.Jude - S3 China National Open #439 [riftools]",
      "player": "C+.Jude",
-     "placement": "439",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224535",
@@ -46457,9 +44095,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4e00\u53ea\u9b3c - S3 China National Open 440 [riftools]",
+     "label": "\u4e00\u53ea\u9b3c - S3 China National Open #440 [riftools]",
      "player": "\u4e00\u53ea\u9b3c",
-     "placement": "440",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224222",
@@ -46506,9 +44144,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7f8e\u7f8e - S3 China National Open 544 [riftools]",
+     "label": "\u7f8e\u7f8e - S3 China National Open #544 [riftools]",
      "player": "\u7f8e\u7f8e",
-     "placement": "544",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223875",
@@ -46554,9 +44192,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u732b\u5c9b\u5de1\u793c.\u795e\u5207.No.\u963f\u754c - S3 China National Open 549 [riftools]",
+     "label": "\u732b\u5c9b\u5de1\u793c.\u795e\u5207.No.\u963f\u754c - S3 China National Open #549 [riftools]",
      "player": "\u732b\u5c9b\u5de1\u793c.\u795e\u5207.No.\u963f\u754c",
-     "placement": "549",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222144",
@@ -46911,7 +44549,7 @@ window.FIELD = {
     {
      "label": "Joey - CCS Sunday $5,000 Riftbound Event #4 #68 [riftools]",
      "player": "Joey",
-     "placement": "#68",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-068-joey-volibear-relentless-storm",
@@ -46952,7 +44590,7 @@ window.FIELD = {
     {
      "label": "William Fortin-Auger - RiftAtlas Convergence #1 #73 [riftools]",
      "player": "William Fortin-Auger",
-     "placement": "#73",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-073-william-fortin-auger-volibear-relentless-storm",
@@ -46993,7 +44631,7 @@ window.FIELD = {
     {
      "label": "Alex | Silver - RiftAtlas Convergence #1 #80 [riftools]",
      "player": "Alex | Silver",
-     "placement": "#80",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-080-alex-silver-volibear-relentless-storm",
@@ -47034,9 +44672,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Nightdew - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #87 4-3-1 [riftools]",
+     "label": "Nightdew - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #87 [riftools]",
      "player": "Nightdew",
-     "placement": "#87 4-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/ef9ae767-066d-44c1-a5d7-e85e9d96f5cf",
@@ -47072,9 +44710,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "BloodyFOX - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #105 4-4-0 [riftools]",
+     "label": "BloodyFOX - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #105 [riftools]",
      "player": "BloodyFOX",
-     "placement": "#105 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/669305d6-15b5-4ff2-b2d0-094aa3fdbaf0",
@@ -47112,85 +44750,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Templar - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #114 4-4-0 [riftools]",
-     "player": "Templar",
-     "placement": "#114 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/65a9ae8d-4285-4d85-818e-0e03aee6d2e6",
-     "main": {
-      "Catalyst of Aeons": 3,
-      "Challenge": 2,
-      "Dazzling Aurora": 3,
-      "Deadbloom Predator": 1,
-      "Elder Dragon": 3,
-      "Falling Star": 2,
-      "Ferrous Forerunner": 3,
-      "Gentle Gemdragon": 3,
-      "Get Excited!": 1,
-      "Kadregrin the Infernal": 3,
-      "Mobilize": 3,
-      "Punch First": 1,
-      "Rengar, Trophy Hunter": 3,
-      "Sabotage": 3,
-      "Sky Splitter": 3,
-      "Stormbringer": 2
-     },
-     "side": {
-      "Challenge": 1,
-      "Punch First": 1,
-      "Repulse": 2,
-      "Thermo Beam": 2,
-      "Unyielding Spirit": 2
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Fury Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Kap\u0142an Kawy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #141 3-4-1 [riftools]",
-     "player": "Kap\u0142an Kawy",
-     "placement": "#141 3-4-1",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5da89033-e64c-4d36-9816-cc72518a0c45",
-     "main": {
-      "Catalyst of Aeons": 3,
-      "Challenge": 2,
-      "Dazzling Aurora": 3,
-      "Deadbloom Predator": 1,
-      "Elder Dragon": 3,
-      "Falling Star": 2,
-      "Ferrous Forerunner": 3,
-      "Gentle Gemdragon": 3,
-      "Get Excited!": 1,
-      "Kadregrin the Infernal": 3,
-      "Mobilize": 3,
-      "Punch First": 1,
-      "Rengar, Trophy Hunter": 3,
-      "Sabotage": 3,
-      "Sky Splitter": 3,
-      "Stormbringer": 2
-     },
-     "side": {
-      "Challenge": 1,
-      "Punch First": 1,
-      "Repulse": 2,
-      "Thermo Beam": 2,
-      "Unyielding Spirit": 2
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Fury Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "D4C - S3 China National Open 180 [riftools]",
+     "label": "D4C - S3 China National Open #180 [riftools]",
      "player": "D4C",
-     "placement": "180",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222483",
@@ -47230,9 +44792,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Savil - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #191 2-5-1 [riftools]",
+     "label": "Savil - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #191 [riftools]",
      "player": "Savil",
-     "placement": "#191 2-5-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/3036f220-182f-4763-aa03-1ec5b3292ef6",
@@ -47270,9 +44832,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "slonial - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #225 1-3-0 [riftools]",
+     "label": "slonial - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #225 [riftools]",
      "player": "slonial",
-     "placement": "#225 1-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/890f13db-e30d-4e63-b4a5-705676432869",
@@ -47308,9 +44870,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u4e00\u5305\u9f20\u6761\u7231\u73a9\u533a - S3 China National Open 314 [riftools]",
+     "label": "\u4e00\u5305\u9f20\u6761\u7231\u73a9\u533a - S3 China National Open #314 [riftools]",
      "player": "\u4e00\u5305\u9f20\u6761\u7231\u73a9\u533a",
-     "placement": "314",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224337",
@@ -47349,9 +44911,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u72c2\u50b2\u5728\u9aa8\u4e0d\u53ef\u53bb - S3 China National Open 361 [riftools]",
+     "label": "\u72c2\u50b2\u5728\u9aa8\u4e0d\u53ef\u53bb - S3 China National Open #361 [riftools]",
      "player": "\u72c2\u50b2\u5728\u9aa8\u4e0d\u53ef\u53bb",
-     "placement": "361",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225180",
@@ -47394,9 +44956,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5965\u62c9\u5e2d\u7fc1-\u963f\u4fe1 - S3 China National Open 427 [riftools]",
+     "label": "\u5965\u62c9\u5e2d\u7fc1-\u963f\u4fe1 - S3 China National Open #427 [riftools]",
      "player": "\u5965\u62c9\u5e2d\u7fc1-\u963f\u4fe1",
-     "placement": "427",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223506",
@@ -47441,9 +45003,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9b54\u738bJun - S3 China National Open 453 [riftools]",
+     "label": "\u9b54\u738bJun - S3 China National Open #453 [riftools]",
      "player": "\u9b54\u738bJun",
-     "placement": "453",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/221431",
@@ -47485,9 +45047,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "kon - S3 China National Open 496 [riftools]",
+     "label": "kon - S3 China National Open #496 [riftools]",
      "player": "kon",
-     "placement": "496",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224439",
@@ -47528,9 +45090,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "DQYT.\u8f6e\u7a7a\u5927\u738b - S3 China National Open 532 [riftools]",
+     "label": "DQYT.\u8f6e\u7a7a\u5927\u738b - S3 China National Open #532 [riftools]",
      "player": "DQYT.\u8f6e\u7a7a\u5927\u738b",
-     "placement": "532",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224364",
@@ -47573,9 +45135,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6930\u7f8a - S3 China National Open 546 [riftools]",
+     "label": "\u6930\u7f8a - S3 China National Open #546 [riftools]",
      "player": "\u6930\u7f8a",
-     "placement": "546",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223393",
@@ -47618,9 +45180,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6dd8\u91d1\u5de2.RK - S3 China National Open 562 [riftools]",
+     "label": "\u6dd8\u91d1\u5de2.RK - S3 China National Open #562 [riftools]",
      "player": "\u6dd8\u91d1\u5de2.RK",
-     "placement": "562",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225370",
@@ -47663,9 +45225,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5361\u6bd4\u5c0f\u5c4b\u00b7\u4e09\u773c\u602a - S3 China National Open 573 [riftools]",
+     "label": "\u5361\u6bd4\u5c0f\u5c4b\u00b7\u4e09\u773c\u602a - S3 China National Open #573 [riftools]",
      "player": "\u5361\u6bd4\u5c0f\u5c4b\u00b7\u4e09\u773c\u602a",
-     "placement": "573",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222359",
@@ -48040,7 +45602,7 @@ window.FIELD = {
     {
      "label": "Mari Groh - RiftAtlas Convergence #1 #76 [riftools]",
      "player": "Mari Groh",
-     "placement": "#76",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-076-mari-groh-ahri-nine-tailed-fox",
@@ -48077,9 +45639,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "WscieklyArbuz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #54 5-3-0 [riftools]",
+     "label": "WscieklyArbuz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #54 [riftools]",
      "player": "WscieklyArbuz",
-     "placement": "#54 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1c207e94-88fe-4ae6-a41b-bb8e68b664c3",
@@ -48117,9 +45679,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Eldek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #56 5-3-0 [riftools]",
+     "label": "Eldek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #56 [riftools]",
      "player": "Eldek",
-     "placement": "#56 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e4638074-fdb5-4583-b798-68bf49c12384",
@@ -48157,9 +45719,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Spuchoburger - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #61 5-3-0 [riftools]",
+     "label": "Spuchoburger - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #61 [riftools]",
      "player": "Spuchoburger",
-     "placement": "#61 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f40f86d3-7bb8-45af-a071-674d804c7ac3",
@@ -48195,9 +45757,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "PoyeBunny - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #71 5-3-0 [riftools]",
+     "label": "PoyeBunny - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #71 [riftools]",
      "player": "PoyeBunny",
-     "placement": "#71 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/fb8004a7-6e24-4eaf-af03-33bf69c3f498",
@@ -48236,9 +45798,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Card Seeker - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #81 5-3-0 [riftools]",
+     "label": "Card Seeker - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #81 [riftools]",
      "player": "Card Seeker",
-     "placement": "#81 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6d394cbc-21fd-45a4-bc76-175a17ee807c",
@@ -48274,174 +45836,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Trebuh512 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #126 4-4-0 [riftools]",
-     "player": "Trebuh512",
-     "placement": "#126 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/8fae48b4-97c9-432e-934e-54f4c8e5b9fd",
-     "main": {
-      "Allay, Eager Admirer": 2,
-      "Back Off": 2,
-      "Blue Sentinel": 3,
-      "Charm": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "Eclipse": 2,
-      "Emperor's Divide": 2,
-      "Mutated Mouser": 3,
-      "Ravenbloom Student": 3,
-      "Scuttle Crab": 1,
-      "Singularity": 1,
-      "Sona, Harmonious": 3,
-      "Sprite Fountain": 2,
-      "Stalwart Poro": 1,
-      "Stupefy": 2,
-      "Thousand-Tailed Watcher": 1,
-      "Thwonk!": 1,
-      "Vilemaw": 2
-     },
-     "side": {
-      "Allay, Eager Admirer": 1,
-      "Charm": 1,
-      "Not So Fast": 1,
-      "Singularity": 1,
-      "Sunlit Guardian": 1,
-      "Time Warp": 1,
-      "Turn to Dust": 2
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Mind Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "WhiteWolf - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #130 4-4-0 [riftools]",
-     "player": "WhiteWolf",
-     "placement": "#130 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5d501a35-6973-49d7-9a1e-4119c745969e",
-     "main": {
-      "Brutalizer": 1,
-      "Chakram Dancer": 2,
-      "Charm": 3,
-      "Defy": 3,
-      "Desert's Call": 3,
-      "Discipline": 3,
-      "Eclipse": 3,
-      "En Garde": 2,
-      "Heart of Dark Ice": 1,
-      "Plundering Poro": 3,
-      "Ravenbloom Student": 3,
-      "Sprite Burst": 3,
-      "Sprite Fountain": 3,
-      "Sprite Mother": 3,
-      "Stupefy": 3
-     },
-     "side": {
-      "Disarming Rake": 3,
-      "Heart of Dark Ice": 1,
-      "Janna, Savior": 1,
-      "Not So Fast": 1,
-      "Skyward Strike": 1,
-      "Unchecked Power": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Mind Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "MenagerCyrku - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #132 4-4-0 [riftools]",
-     "player": "MenagerCyrku",
-     "placement": "#132 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/81e407fc-1088-4293-b890-7c00865d0b4b",
-     "main": {
-      "Back Off": 2,
-      "Blitzcrank, Impassive": 1,
-      "Blue Sentinel": 3,
-      "Charm": 3,
-      "Defy": 3,
-      "Discipline": 3,
-      "Emperor's Divide": 2,
-      "En Garde": 2,
-      "Mutated Mouser": 3,
-      "Ravenbloom Student": 3,
-      "Sona, Harmonious": 3,
-      "Stalwart Poro": 3,
-      "Stupefy": 3,
-      "Thousand-Tailed Watcher": 2,
-      "Tianna Crownguard": 1,
-      "Time Warp": 2
-     },
-     "side": {
-      "Ahri, Alluring": 1,
-      "Back Off": 1,
-      "Blastcone Fae": 1,
-      "Irelia, Fervent": 3,
-      "Thousand-Tailed Watcher": 1,
-      "Tianna Crownguard": 1
-     },
-     "runes": {
-      "Calm Rune": 5,
-      "Mind Rune": 7
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u4e91\u6d77 - S3 China National Open 133 [riftools]",
-     "player": "\u4e91\u6d77",
-     "placement": "133",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224192",
-     "main": {
-      "Ahri, Alluring": 1,
-      "Charm": 2,
-      "Defy": 2,
-      "Diana, Lunari": 2,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Irelia, Fervent": 2,
-      "Lillia, Fae Fawn": 3,
-      "Plundering Poro": 3,
-      "Ravenbloom Student": 3,
-      "Singularity": 2,
-      "Smoke and Mirrors": 2,
-      "Sprite Fountain": 2,
-      "Stalwart Poro": 1,
-      "Stupefy": 3,
-      "Tasty Faefolk": 2,
-      "Thousand-Tailed Watcher": 1,
-      "Vilemaw": 2,
-      "Wages of Pain": 1,
-      "Whiteflame Protector": 1
-     },
-     "side": {
-      "Disarming Rake": 3,
-      "Sprite Burst": 3,
-      "Sprite Fountain": 1,
-      "Time Warp": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Mind Rune": 6
-     },
-     "battlefields": [
-      "Dusk Rose Lab",
-      "Grove of the God-Willow",
-      "Seat of Power"
-     ]
-    },
-    {
-     "label": "The Bitter Truth - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #157 3-5-0 [riftools]",
+     "label": "The Bitter Truth - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #157 [riftools]",
      "player": "The Bitter Truth",
-     "placement": "#157 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b9c1a2e9-c1cc-450e-be39-771b14100fe8",
@@ -48477,9 +45874,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u4e09\u6d41\u724c\u624b\u5c18\u57c3 - S3 China National Open 203 [riftools]",
+     "label": "\u4e09\u6d41\u724c\u624b\u5c18\u57c3 - S3 China National Open #203 [riftools]",
      "player": "\u4e09\u6d41\u724c\u624b\u5c18\u57c3",
-     "placement": "203",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224406",
@@ -48520,9 +45917,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Warlax - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #230 1-5-0 [riftools]",
+     "label": "Warlax - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #230 [riftools]",
      "player": "Warlax",
-     "placement": "#230 1-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/920841e8-4886-4c4b-acfd-e2dbbf040836",
@@ -48560,9 +45957,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u795e\u5207.Ai.pcq - S3 China National Open 250 [riftools]",
+     "label": "\u795e\u5207.Ai.pcq - S3 China National Open #250 [riftools]",
      "player": "\u795e\u5207.Ai.pcq",
-     "placement": "250",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224814",
@@ -48606,9 +46003,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u4f1a\u98deDE\u9762\u5305 - S3 China National Open 289 [riftools]",
+     "label": "\u4f1a\u98deDE\u9762\u5305 - S3 China National Open #289 [riftools]",
      "player": "\u4f1a\u98deDE\u9762\u5305",
-     "placement": "289",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223720",
@@ -48654,9 +46051,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Stanleny - S3 China National Open 449 [riftools]",
+     "label": "Stanleny - S3 China National Open #449 [riftools]",
      "player": "Stanleny",
-     "placement": "449",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225213",
@@ -48705,9 +46102,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "KLG-\u6797 - S3 China National Open 451 [riftools]",
+     "label": "KLG-\u6797 - S3 China National Open #451 [riftools]",
      "player": "KLG-\u6797",
-     "placement": "451",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224616",
@@ -48754,9 +46151,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5929\u6d25cardtime-\u7384\u706b\u5996\u4eba - S3 China National Open 466 [riftools]",
+     "label": "\u5929\u6d25cardtime-\u7384\u706b\u5996\u4eba - S3 China National Open #466 [riftools]",
      "player": "\u5929\u6d25cardtime-\u7384\u706b\u5996\u4eba",
-     "placement": "466",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225292",
@@ -48798,9 +46195,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u554a\u5f0e - S3 China National Open 468 [riftools]",
+     "label": "\u554a\u5f0e - S3 China National Open #468 [riftools]",
      "player": "\u554a\u5f0e",
-     "placement": "468",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224157",
@@ -48851,9 +46248,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6591\u9a6c\u6f6e\u73a9\u2b55\u6ce1\u6ce1 - S3 China National Open 506 [riftools]",
+     "label": "\u6591\u9a6c\u6f6e\u73a9\u2b55\u6ce1\u6ce1 - S3 China National Open #506 [riftools]",
      "player": "\u6591\u9a6c\u6f6e\u73a9\u2b55\u6ce1\u6ce1",
-     "placement": "506",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223670",
@@ -48897,9 +46294,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u94c1\u5934-iyo - S3 China National Open 516 [riftools]",
+     "label": "\u94c1\u5934-iyo - S3 China National Open #516 [riftools]",
      "player": "\u94c1\u5934-iyo",
-     "placement": "516",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224456",
@@ -49251,9 +46648,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "gogo\u9ad8\u624b - S3 China National Open 64 [riftools]",
+     "label": "gogo\u9ad8\u624b - S3 China National Open #64 [riftools]",
      "player": "gogo\u9ad8\u624b",
-     "placement": "64",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224417",
@@ -49296,9 +46693,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "JeJJeJ - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #66 5-3-0 [riftools]",
+     "label": "JeJJeJ - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #66 [riftools]",
      "player": "JeJJeJ",
-     "placement": "#66 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2edaf5a4-5737-42ed-bb98-b4d6d67dab3b",
@@ -49336,9 +46733,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Mauo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #70 5-3-0 [riftools]",
+     "label": "Mauo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #70 [riftools]",
      "player": "Mauo",
-     "placement": "#70 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d5e3bb86-40dd-4e34-9534-792bee5eb643",
@@ -49374,9 +46771,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "CHESTBRAH - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #101 4-4-0 [riftools]",
+     "label": "CHESTBRAH - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #101 [riftools]",
      "player": "CHESTBRAH",
-     "placement": "#101 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4b217075-b14d-4b16-859c-d79dcafb825c",
@@ -49412,9 +46809,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "PoW Kaju - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #108 4-4-0 [riftools]",
+     "label": "PoW Kaju - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #108 [riftools]",
      "player": "PoW Kaju",
-     "placement": "#108 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/4ba87e89-76d2-429f-84de-7ae1c1a7b09b",
@@ -49450,54 +46847,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u9177\u732b-Hugh - S3 China National Open 130 [riftools]",
-     "player": "\u9177\u732b-Hugh",
-     "placement": "130",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225115",
-     "main": {
-      "Akshan, Mischievous": 1,
-      "Challenge": 3,
-      "Charm": 1,
-      "Defy": 3,
-      "Discipline": 3,
-      "Doran's Blade": 1,
-      "En Garde": 3,
-      "Fiora, Peerless": 2,
-      "First Mate": 3,
-      "Irelia, Fervent": 2,
-      "Lee Sin, Centered": 1,
-      "Lonely Poro": 3,
-      "Lucian, Merciless": 1,
-      "Punch First": 3,
-      "Rengar, Trophy Hunter": 3,
-      "Sabotage": 2,
-      "Scuttle Crab": 3,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Fiora, Peerless": 1,
-      "Repulse": 2,
-      "Ruin Runner": 1,
-      "Sabotage": 1,
-      "Stellacorn Herder": 2,
-      "Unyielding Spirit": 1
-     },
-     "runes": {
-      "Body Rune": 7,
-      "Calm Rune": 5
-     },
-     "battlefields": [
-      "Abandoned Hall",
-      "Monastery of Hirana",
-      "Sunken Temple"
-     ]
-    },
-    {
-     "label": "\u4e1c\u4e1c\u83e0\u83e0\u7684\u5361\u724c\u5999\u5999\u5c4b - S3 China National Open 297 [riftools]",
+     "label": "\u4e1c\u4e1c\u83e0\u83e0\u7684\u5361\u724c\u5999\u5999\u5c4b - S3 China National Open #297 [riftools]",
      "player": "\u4e1c\u4e1c\u83e0\u83e0\u7684\u5361\u724c\u5999\u5999\u5c4b",
-     "placement": "297",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225080",
@@ -49539,9 +46891,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FSW.\u5927\u53f8\u9a6c\u7684\u80ec\ud83d\udc34 - S3 China National Open 511 [riftools]",
+     "label": "FSW.\u5927\u53f8\u9a6c\u7684\u80ec\ud83d\udc34 - S3 China National Open #511 [riftools]",
      "player": "FSW.\u5927\u53f8\u9a6c\u7684\u80ec\ud83d\udc34",
-     "placement": "511",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224715",
@@ -49901,9 +47253,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Jarzi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #110 4-4-0 [riftools]",
+     "label": "Jarzi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #110 [riftools]",
      "player": "Jarzi",
-     "placement": "#110 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5a4ccd5e-65b4-4325-a858-b5922c215c3c",
@@ -49940,89 +47292,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Miejscowy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #119 4-4-0 [riftools]",
-     "player": "Miejscowy",
-     "placement": "#119 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b08721cc-02ec-4f3b-9edb-e220a493c093",
-     "main": {
-      "Back Off": 3,
-      "Call to Glory": 3,
-      "Charm": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "Fiora, Victorious": 3,
-      "Heart of Dark Ice": 1,
-      "Heroic Charge": 1,
-      "Hidden Blade": 1,
-      "Irelia, Fervent": 1,
-      "Lonely Poro": 3,
-      "Nami, Headstrong": 2,
-      "Scuttle Crab": 2,
-      "Stalwart Poro": 3,
-      "Vex, Mocking": 1,
-      "Vi, Peacekeeper": 3,
-      "Zenith Blade": 2,
-      "Zhonya's Hourglass": 2
-     },
-     "side": {
-      "Ashe, Focused": 2,
-      "Disarming Rake": 2,
-      "Lee Sin, Ascetic": 1,
-      "Not So Fast": 2,
-      "Salvage": 1
-     },
-     "runes": {
-      "Calm Rune": 7,
-      "Order Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Prezy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #122 4-4-0 [riftools]",
-     "player": "Prezy",
-     "placement": "#122 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5eed6404-7535-4c01-bcc0-38a5de7fdb46",
-     "main": {
-      "Back Off": 3,
-      "Call to Glory": 2,
-      "Charm": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "Fiora, Victorious": 3,
-      "Guardian Angel": 1,
-      "Heart of Dark Ice": 1,
-      "Heroic Charge": 1,
-      "Hidden Blade": 1,
-      "Irelia, Fervent": 3,
-      "Lonely Poro": 3,
-      "Nami, Headstrong": 3,
-      "Scuttle Crab": 2,
-      "Stalwart Poro": 3,
-      "Vi, Peacekeeper": 3,
-      "Zenith Blade": 1,
-      "Zhonya's Hourglass": 1
-     },
-     "side": {
-      "Ashe, Focused": 2,
-      "Call to Glory": 1,
-      "Not So Fast": 1,
-      "Salvage": 3,
-      "Tactical Retreat": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u65e5\u5973\u725b\u903c - S3 China National Open 172 [riftools]",
+     "label": "\u65e5\u5973\u725b\u903c - S3 China National Open #172 [riftools]",
      "player": "\u65e5\u5973\u725b\u903c",
-     "placement": "172",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224131",
@@ -50067,9 +47339,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "GotheQ - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #178 3-5-0 [riftools]",
+     "label": "GotheQ - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #178 [riftools]",
      "player": "GotheQ",
-     "placement": "#178 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0a4be3ec-f43a-4b43-835d-2d2dbea32529",
@@ -50103,9 +47375,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "KawaPedros - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #207 2-4-0 [riftools]",
+     "label": "KawaPedros - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #207 [riftools]",
      "player": "KawaPedros",
-     "placement": "#207 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e4413784-bb30-4f62-b3a9-7b9c2d07ba24",
@@ -50141,9 +47413,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ForgeMaster2137 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #216 2-6-0 [riftools]",
+     "label": "ForgeMaster2137 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #216 [riftools]",
      "player": "ForgeMaster2137",
-     "placement": "#216 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1793e372-af01-4884-adaa-3ac8af534f91",
@@ -50179,9 +47451,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "XYZ-\u54b8\u76d0\u4e00\u52fa\u534a - S3 China National Open 221 [riftools]",
+     "label": "XYZ-\u54b8\u76d0\u4e00\u52fa\u534a - S3 China National Open #221 [riftools]",
      "player": "XYZ-\u54b8\u76d0\u4e00\u52fa\u534a",
-     "placement": "221",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224521",
@@ -50227,9 +47499,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u8d5b\u9ad8.\u767d\u677f@CN.R - S3 China National Open 321 [riftools]",
+     "label": "\u8d5b\u9ad8.\u767d\u677f@CN.R - S3 China National Open #321 [riftools]",
      "player": "\u8d5b\u9ad8.\u767d\u677f@CN.R",
-     "placement": "321",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223794",
@@ -50269,9 +47541,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7eb8\u4f20.\u7766\u5934.Ave Mujica - S3 China National Open 473 [riftools]",
+     "label": "\u7eb8\u4f20.\u7766\u5934.Ave Mujica - S3 China National Open #473 [riftools]",
      "player": "\u7eb8\u4f20.\u7766\u5934.Ave Mujica",
-     "placement": "473",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224761",
@@ -50312,9 +47584,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "jacky - S3 China National Open 547 [riftools]",
+     "label": "jacky - S3 China National Open #547 [riftools]",
      "player": "jacky",
-     "placement": "547",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223643",
@@ -50630,7 +47902,7 @@ window.FIELD = {
     {
      "label": "Brian Torres - RiftAtlas Convergence #1 #67 [riftools]",
      "player": "Brian Torres",
-     "placement": "#67",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-067-brian-torres-fiora-grand-duelist",
@@ -50669,9 +47941,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7d2b\u7981.BOT.QAQ\u7eaf\u7231\u738b - S3 China National Open 18 [riftools]",
+     "label": "\u7d2b\u7981.BOT.QAQ\u7eaf\u7231\u738b - S3 China National Open #18 [riftools]",
      "player": "\u7d2b\u7981.BOT.QAQ\u7eaf\u7231\u738b",
-     "placement": "18",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223985",
@@ -50715,9 +47987,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Karlosinio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #50 5-3-0 [riftools]",
+     "label": "Karlosinio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #50 [riftools]",
      "player": "Karlosinio",
-     "placement": "#50 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1918774b-a9d3-4dc1-87e0-f42214818d3e",
@@ -50757,9 +48029,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u5f90\u5927\u738b \u6587\u5431\u5431\u6700\u5f3a - S3 China National Open 55 [riftools]",
+     "label": "\u5f90\u5927\u738b \u6587\u5431\u5431\u6700\u5f3a - S3 China National Open #55 [riftools]",
      "player": "\u5f90\u5927\u738b \u6587\u5431\u5431\u6700\u5f3a",
-     "placement": "55",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224215",
@@ -50801,9 +48073,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ai.\u5e03\u9c81\u56feQAQ - S3 China National Open 59 [riftools]",
+     "label": "ai.\u5e03\u9c81\u56feQAQ - S3 China National Open #59 [riftools]",
      "player": "ai.\u5e03\u9c81\u56feQAQ",
-     "placement": "59",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224262",
@@ -50847,9 +48119,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "ShadowBro - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #73 5-3-0 [riftools]",
+     "label": "ShadowBro - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #73 [riftools]",
      "player": "ShadowBro",
-     "placement": "#73 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/366a3407-4321-4013-9ad7-c23286096216",
@@ -50887,9 +48159,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "HideInDrakePit - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #77 5-3-0 [riftools]",
+     "label": "HideInDrakePit - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #77 [riftools]",
      "player": "HideInDrakePit",
-     "placement": "#77 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b0204efe-95a4-4371-990e-1e34de76b22f",
@@ -50929,9 +48201,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6563\u5c18 - S3 China National Open 83 [riftools]",
+     "label": "\u6563\u5c18 - S3 China National Open #83 [riftools]",
      "player": "\u6563\u5c18",
-     "placement": "83",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223961",
@@ -50976,96 +48248,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "yuzi - S3 China National Open 120 [riftools]",
-     "player": "yuzi",
-     "placement": "120",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223775",
-     "main": {
-      "Akshan, Mischievous": 1,
-      "Baited Hook": 2,
-      "Challenge": 2,
-      "Elder Dragon": 3,
-      "Fiora, Victorious": 1,
-      "First Mate": 3,
-      "Grim Resolve": 3,
-      "Harnessed Dragon": 2,
-      "Pit Rookie": 2,
-      "Punch First": 2,
-      "Rengar, Trophy Hunter": 1,
-      "Rift Herald": 3,
-      "Riposte": 3,
-      "Sacrifice": 3,
-      "Sett, Brawler": 3,
-      "Shepherd's Heirloom": 3,
-      "Unsung Hero": 3
-     },
-     "side": {
-      "Akshan, Mischievous": 1,
-      "Ashe, Focused": 2,
-      "Divine Judgment": 1,
-      "Repulse": 2,
-      "Salvage": 2
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": [
-      "Aspirant's Climb",
-      "Rockfall Path",
-      "Trifarian War Camp"
-     ]
-    },
-    {
-     "label": "Gambit-\u8f7b\u821f\u5df2\u8fc7\u4e07\u91cd\u5c71 - S3 China National Open 132 [riftools]",
-     "player": "Gambit-\u8f7b\u821f\u5df2\u8fc7\u4e07\u91cd\u5c71",
-     "placement": "132",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/224499",
-     "main": {
-      "Catalyst of Aeons": 3,
-      "Confront": 2,
-      "Dazzling Aurora": 3,
-      "Divine Judgment": 2,
-      "Elder Dragon": 3,
-      "Fiora, Victorious": 1,
-      "Flurry of Blades": 2,
-      "Forge of the Future": 3,
-      "Gentlemen's Duel": 2,
-      "Harnessed Dragon": 3,
-      "Hidden Blade": 2,
-      "Mobilize": 3,
-      "Riposte": 2,
-      "Sabotage": 1,
-      "Shadow's Call": 2,
-      "Shepherd's Heirloom": 3,
-      "Vanguard Armory": 3
-     },
-     "side": {
-      "Imperial Decree": 1,
-      "Sabotage": 1,
-      "Sacrifice": 1,
-      "Salvage": 2,
-      "Shadow's Call": 1,
-      "The Ruination": 2
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": [
-      "Aspirant's Climb",
-      "Sigil of the Storm",
-      "Trifarian War Camp"
-     ]
-    },
-    {
-     "label": "\u9177\u732b.Leo - S3 China National Open 160 [riftools]",
+     "label": "\u9177\u732b.Leo - S3 China National Open #160 [riftools]",
      "player": "\u9177\u732b.Leo",
-     "placement": "160",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223857",
@@ -51107,9 +48292,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Polop852 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #179 3-5-0 [riftools]",
+     "label": "Polop852 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #179 [riftools]",
      "player": "Polop852",
-     "placement": "#179 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/dfc27d67-f348-40d3-8ab2-dc547dc69791",
@@ -51149,9 +48334,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "HUBERTIX - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #204 1-4-3 [riftools]",
+     "label": "HUBERTIX - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #204 [riftools]",
      "player": "HUBERTIX",
-     "placement": "#204 1-4-3",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/e24abfc8-f446-4f51-ace8-a15945dc5e4a",
@@ -51187,9 +48372,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "itsmeyeti - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #206 2-6-0 [riftools]",
+     "label": "itsmeyeti - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #206 [riftools]",
      "player": "itsmeyeti",
-     "placement": "#206 2-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/86f03505-a733-4c7a-a013-f831cbd12250",
@@ -51227,9 +48412,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u591c\u6708 - S3 China National Open 207 [riftools]",
+     "label": "\u591c\u6708 - S3 China National Open #207 [riftools]",
      "player": "\u591c\u6708",
-     "placement": "207",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223778",
@@ -51271,9 +48456,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Szacharz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #223 1-4-1 [riftools]",
+     "label": "Szacharz - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #223 [riftools]",
      "player": "Szacharz",
-     "placement": "#223 1-4-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1029b505-82b5-4407-928e-a6c2dcd4911d",
@@ -51314,9 +48499,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Noob.\u6697\u8bed\u4e0d\u52a8\uff08\u795e\u5207\uff09 - S3 China National Open 264 [riftools]",
+     "label": "Noob.\u6697\u8bed\u4e0d\u52a8\uff08\u795e\u5207\uff09 - S3 China National Open #264 [riftools]",
      "player": "Noob.\u6697\u8bed\u4e0d\u52a8\uff08\u795e\u5207\uff09",
-     "placement": "264",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223282",
@@ -51363,9 +48548,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "CCB.\u8001\u4e07 - S3 China National Open 271 [riftools]",
+     "label": "CCB.\u8001\u4e07 - S3 China National Open #271 [riftools]",
      "player": "CCB.\u8001\u4e07",
-     "placement": "271",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224813",
@@ -51405,9 +48590,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6d69\u52ab - S3 China National Open 319 [riftools]",
+     "label": "\u6d69\u52ab - S3 China National Open #319 [riftools]",
      "player": "\u6d69\u52ab",
-     "placement": "319",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222771",
@@ -51454,9 +48639,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65b0\u5149\u754c\u4e00\u756a\u8d4fwatch - S3 China National Open 324 [riftools]",
+     "label": "\u65b0\u5149\u754c\u4e00\u756a\u8d4fwatch - S3 China National Open #324 [riftools]",
      "player": "\u65b0\u5149\u754c\u4e00\u756a\u8d4fwatch",
-     "placement": "324",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223423",
@@ -51501,9 +48686,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u4e03\u661f\u541b 7\ufe0f\u20e3 - S3 China National Open 327 [riftools]",
+     "label": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u4e03\u661f\u541b 7\ufe0f\u20e3 - S3 China National Open #327 [riftools]",
      "player": "\u6f6e\u73a9\u6d3e\u00b7FSW\u00b7\u4e03\u661f\u541b 7\ufe0f\u20e3",
-     "placement": "327",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224772",
@@ -51551,9 +48736,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u534e\u84dd-\u5409\u975e\u66ff\u5c3cTNL - S3 China National Open 364 [riftools]",
+     "label": "\u534e\u84dd-\u5409\u975e\u66ff\u5c3cTNL - S3 China National Open #364 [riftools]",
      "player": "\u534e\u84dd-\u5409\u975e\u66ff\u5c3cTNL",
-     "placement": "364",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222742",
@@ -51597,9 +48782,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FE - S3 China National Open 368 [riftools]",
+     "label": "FE - S3 China National Open #368 [riftools]",
      "player": "FE",
-     "placement": "368",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223768",
@@ -51639,9 +48824,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5b9d\u5e93\u00b7FB\u00b7LSR - S3 China National Open 375 [riftools]",
+     "label": "\u5b9d\u5e93\u00b7FB\u00b7LSR - S3 China National Open #375 [riftools]",
      "player": "\u5b9d\u5e93\u00b7FB\u00b7LSR",
-     "placement": "375",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224603",
@@ -51686,9 +48871,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6708\u9b54\u591c\u5c0f - S3 China National Open 384 [riftools]",
+     "label": "\u6708\u9b54\u591c\u5c0f - S3 China National Open #384 [riftools]",
      "player": "\u6708\u9b54\u591c\u5c0f",
-     "placement": "384",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225172",
@@ -51732,9 +48917,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Gambit.\u7eaf\u7231.\u5927\u4e03QAQ - S3 China National Open 426 [riftools]",
+     "label": "Gambit.\u7eaf\u7231.\u5927\u4e03QAQ - S3 China National Open #426 [riftools]",
      "player": "Gambit.\u7eaf\u7231.\u5927\u4e03QAQ",
-     "placement": "426",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225136",
@@ -51779,9 +48964,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9b3c\u9b3c@\u5e1d\u9632\u58eb - S3 China National Open 435 [riftools]",
+     "label": "\u9b3c\u9b3c@\u5e1d\u9632\u58eb - S3 China National Open #435 [riftools]",
      "player": "\u9b3c\u9b3c@\u5e1d\u9632\u58eb",
-     "placement": "435",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224920",
@@ -51822,9 +49007,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7075\u82b1\u796d.\u4e09\u676f\u86c7 - S3 China National Open 507 [riftools]",
+     "label": "\u7075\u82b1\u796d.\u4e09\u676f\u86c7 - S3 China National Open #507 [riftools]",
      "player": "\u7075\u82b1\u796d.\u4e09\u676f\u86c7",
-     "placement": "507",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225071",
@@ -51868,9 +49053,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TXG\u00b7\u4e07\u821e\u5bd2\u5929 - S3 China National Open 557 [riftools]",
+     "label": "TXG\u00b7\u4e07\u821e\u5bd2\u5929 - S3 China National Open #557 [riftools]",
      "player": "TXG\u00b7\u4e07\u821e\u5bd2\u5929",
-     "placement": "557",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224799",
@@ -52109,7 +49294,7 @@ window.FIELD = {
     {
      "label": "not seth - RiftAtlas Convergence #1 #35 [riftools]",
      "player": "not seth",
-     "placement": "#35",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-035-not-seth-ivern-green-father",
@@ -52154,7 +49339,7 @@ window.FIELD = {
     {
      "label": "norf974 - RiftAtlas Convergence #1 #66 [riftools]",
      "player": "norf974",
-     "placement": "#66",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-066-norf974-ivern-green-father",
@@ -52198,7 +49383,7 @@ window.FIELD = {
     {
      "label": "Bryan Richter - RiftAtlas Convergence #1 #88 [riftools]",
      "player": "Bryan Richter",
-     "placement": "#88",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-088-bryan-richter-ivern-green-father",
@@ -52242,9 +49427,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "bobo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #153 3-5-0 [riftools]",
+     "label": "bobo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #153 [riftools]",
      "player": "bobo",
-     "placement": "#153 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1f0f01a8-0d87-48f8-a17a-fbe44522e3db",
@@ -52284,9 +49469,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "SantoDomingo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #170 3-5-0 [riftools]",
+     "label": "SantoDomingo - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #170 [riftools]",
      "player": "SantoDomingo",
-     "placement": "#170 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1382b153-a767-467d-b846-e926c67b781c",
@@ -52325,9 +49510,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Swishup - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #183 3-5-0 [riftools]",
+     "label": "Swishup - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #183 [riftools]",
      "player": "Swishup",
-     "placement": "#183 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2dbcab86-9df8-4776-93a9-d9303165f05a",
@@ -52368,9 +49553,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u0141adny Twardy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #243 1-6-0 [riftools]",
+     "label": "\u0141adny Twardy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #243 [riftools]",
      "player": "\u0141adny Twardy",
-     "placement": "#243 1-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/46be205a-a5d6-4b92-a98c-c951ddffbcaa",
@@ -52409,9 +49594,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Vaolrie - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #245 0-4-2 [riftools]",
+     "label": "Vaolrie - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #245 [riftools]",
      "player": "Vaolrie",
-     "placement": "#245 0-4-2",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9dcd885b-b3f7-45bf-8001-136ddd70dac3",
@@ -52448,9 +49633,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "E1egy - S3 China National Open 318 [riftools]",
+     "label": "E1egy - S3 China National Open #318 [riftools]",
      "player": "E1egy",
-     "placement": "318",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223766",
@@ -52766,9 +49951,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Melver - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #181 2-3-3 [riftools]",
+     "label": "Melver - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #181 [riftools]",
      "player": "Melver",
-     "placement": "#181 2-3-3",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/28162d1b-0053-4458-be48-a8173d97cdeb",
@@ -52811,9 +49996,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6e9c\u5218\u67f3\u516d - S3 China National Open 443 [riftools]",
+     "label": "\u6e9c\u5218\u67f3\u516d - S3 China National Open #443 [riftools]",
      "player": "\u6e9c\u5218\u67f3\u516d",
-     "placement": "443",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224825",
@@ -53161,9 +50346,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Lin - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #95 4-4-0 [riftools]",
+     "label": "Lin - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #95 [riftools]",
      "player": "Lin",
-     "placement": "#95 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/58e67af6-5e0d-4009-83bf-295ecd62ee8d",
@@ -53198,45 +50383,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Crusty - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #133 4-4-0 [riftools]",
-     "player": "Crusty",
-     "placement": "#133 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5b9817db-e2b4-4d2e-84cb-69302680c12d",
-     "main": {
-      "Blood Money": 3,
-      "Catalyst of Aeons": 3,
-      "Confront": 3,
-      "Dazzling Aurora": 3,
-      "Disposal Order": 2,
-      "Elder Dragon": 3,
-      "Flurry of Blades": 3,
-      "Forge of the Future": 3,
-      "Harnessed Dragon": 2,
-      "Mobilize": 3,
-      "Rally the Troops": 3,
-      "Sabotage": 3,
-      "Salvage": 1,
-      "The Ruination": 1,
-      "Vanguard Armory": 3
-     },
-     "side": {
-      "Divine Judgment": 2,
-      "Rengar, Trophy Hunter": 3,
-      "Salvage": 2,
-      "The Ruination": 1
-     },
-     "runes": {
-      "Body Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Stary Jo\u015b - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #161 3-5-0 [riftools]",
+     "label": "Stary Jo\u015b - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #161 [riftools]",
      "player": "Stary Jo\u015b",
-     "placement": "#161 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/bfe80c73-88df-440e-9c0d-5230bd75bbfb",
@@ -53270,9 +50419,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "nikon - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #202 2-5-0 [riftools]",
+     "label": "nikon - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #202 [riftools]",
      "player": "nikon",
-     "placement": "#202 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/45c5f7e2-4f8d-4952-b9ce-c04c2e7a1bc0",
@@ -53310,9 +50459,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u95ea\u7535\u5bb6-\u674e\u6dee\u7b11 - S3 China National Open 226 [riftools]",
+     "label": "\u95ea\u7535\u5bb6-\u674e\u6dee\u7b11 - S3 China National Open #226 [riftools]",
      "player": "\u95ea\u7535\u5bb6-\u674e\u6dee\u7b11",
-     "placement": "226",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223711",
@@ -53353,9 +50502,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5bd2\u6249\u66ae\u6653 - S3 China National Open 422 [riftools]",
+     "label": "\u5bd2\u6249\u66ae\u6653 - S3 China National Open #422 [riftools]",
      "player": "\u5bd2\u6249\u66ae\u6653",
-     "placement": "422",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224640",
@@ -53396,9 +50545,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Asura\uff5c\u5475\u5475 - S3 China National Open 527 [riftools]",
+     "label": "Asura\uff5c\u5475\u5475 - S3 China National Open #527 [riftools]",
      "player": "Asura\uff5c\u5475\u5475",
-     "placement": "527",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224467",
@@ -53757,9 +50906,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "wojtek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #59 5-3-0 [riftools]",
+     "label": "wojtek - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #59 [riftools]",
      "player": "wojtek",
-     "placement": "#59 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/be368135-dd1a-44e4-82dc-4350f9cf7a19",
@@ -53797,9 +50946,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Qzin - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #75 5-3-0 [riftools]",
+     "label": "Qzin - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #75 [riftools]",
      "player": "Qzin",
-     "placement": "#75 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/b680f160-bd0c-4756-b1f6-5574f92885a2",
@@ -53833,9 +50982,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u897f\u67da\u5361\u724c-\u51cc\u5c0f\u5929 - S3 China National Open 107 [riftools]",
+     "label": "\u897f\u67da\u5361\u724c-\u51cc\u5c0f\u5929 - S3 China National Open #107 [riftools]",
      "player": "\u897f\u67da\u5361\u724c-\u51cc\u5c0f\u5929",
-     "placement": "107",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224525",
@@ -53879,49 +51028,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "CWL Aeero - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #138 3-2-2 [riftools]",
-     "player": "CWL Aeero",
-     "placement": "#138 3-2-2",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f341e015-f522-472b-b332-fd090d34f8b0",
-     "main": {
-      "Blighted Battleaxe": 2,
-      "Edge of Night": 3,
-      "Evelynn, Entrancing": 3,
-      "Falling Star": 1,
-      "Katarina, Reckless": 1,
-      "Last Rites": 2,
-      "Long Sword": 3,
-      "Noxus Hopeful": 3,
-      "Pyke, Dockside Butcher": 2,
-      "Pyke, Returned": 3,
-      "Rengar, Unseen": 2,
-      "Seal of Rage": 3,
-      "Switcheroo": 1,
-      "Teemo, Scout": 2,
-      "Tideturner": 3,
-      "Traveling Merchant": 3,
-      "Vex, Apathetic": 2
-     },
-     "side": {
-      "Falling Star": 1,
-      "Katarina, Reckless": 1,
-      "Sneaky Deckhand": 2,
-      "Star-Crossed": 1,
-      "Super Mega Death Rocket!": 2,
-      "Vex, Apathetic": 1
-     },
-     "runes": {
-      "Chaos Rune": 4,
-      "Fury Rune": 8
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Honore - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #174 3-5-0 [riftools]",
+     "label": "Honore - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #174 [riftools]",
      "player": "Honore",
-     "placement": "#174 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/5a64228f-6758-4913-a858-fe82a5a9c07d",
@@ -53964,9 +51073,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "KillerMaxio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #180 3-5-0 [riftools]",
+     "label": "KillerMaxio - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #180 [riftools]",
      "player": "KillerMaxio",
-     "placement": "#180 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c1c1ed67-196c-4e11-bc3c-2ab0e64142a4",
@@ -54003,9 +51112,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Rellaid - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #189 2-5-1 [riftools]",
+     "label": "Rellaid - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #189 [riftools]",
      "player": "Rellaid",
-     "placement": "#189 2-5-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/46f182d5-552a-4cd1-931b-4b0982202bf7",
@@ -54046,9 +51155,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Drecki - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #211 2-4-0 [riftools]",
+     "label": "Drecki - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #211 [riftools]",
      "player": "Drecki",
-     "placement": "#211 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/93755692-8265-4f06-83b5-967ef9e82279",
@@ -54085,9 +51194,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "1001.\u51ac\u98ce - S3 China National Open 219 [riftools]",
+     "label": "1001.\u51ac\u98ce - S3 China National Open #219 [riftools]",
      "player": "1001.\u51ac\u98ce",
-     "placement": "219",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223527",
@@ -54132,9 +51241,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "SokkaQ113 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #228 1-5-0 [riftools]",
+     "label": "SokkaQ113 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #228 [riftools]",
      "player": "SokkaQ113",
-     "placement": "#228 1-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/27fc3436-507b-4528-94ff-0984fa036ff5",
@@ -54174,9 +51283,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Akinara - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #256 0-4-0 [riftools]",
+     "label": "Akinara - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #256 [riftools]",
      "player": "Akinara",
-     "placement": "#256 0-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f489ac8e-c2bc-423e-8b4f-c48aa8c13815",
@@ -54217,9 +51326,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "YK\u7262\u80e1\u4e4b\u7206\u7206\u662f\u4e16\u754c\u7b2c\u4e00\u53ef\u7231 - S3 China National Open 332 [riftools]",
+     "label": "YK\u7262\u80e1\u4e4b\u7206\u7206\u662f\u4e16\u754c\u7b2c\u4e00\u53ef\u7231 - S3 China National Open #332 [riftools]",
      "player": "YK\u7262\u80e1\u4e4b\u7206\u7206\u662f\u4e16\u754c\u7b2c\u4e00\u53ef\u7231",
-     "placement": "332",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/220595",
@@ -54266,9 +51375,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Acc.Muk\u5c0f\u9a6c - S3 China National Open 393 [riftools]",
+     "label": "Acc.Muk\u5c0f\u9a6c - S3 China National Open #393 [riftools]",
      "player": "Acc.Muk\u5c0f\u9a6c",
-     "placement": "393",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224557",
@@ -54307,9 +51416,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6591\u9a6c\u6f6e\u73a9.joyspace.\u798f\u6839 - S3 China National Open 408 [riftools]",
+     "label": "\u6591\u9a6c\u6f6e\u73a9.joyspace.\u798f\u6839 - S3 China National Open #408 [riftools]",
      "player": "\u6591\u9a6c\u6f6e\u73a9.joyspace.\u798f\u6839",
-     "placement": "408",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223595",
@@ -54359,9 +51468,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5207_\u6302\u6811\u9c81\u8fc5 - S3 China National Open 454 [riftools]",
+     "label": "\u795e\u5207_\u6302\u6811\u9c81\u8fc5 - S3 China National Open #454 [riftools]",
      "player": "\u795e\u5207_\u6302\u6811\u9c81\u8fc5",
-     "placement": "454",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224344",
@@ -54402,9 +51511,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65cb\u6728\u65f6\u5149\u7684\u8299\u8299 - S3 China National Open 551 [riftools]",
+     "label": "\u65cb\u6728\u65f6\u5149\u7684\u8299\u8299 - S3 China National Open #551 [riftools]",
      "player": "\u65cb\u6728\u65f6\u5149\u7684\u8299\u8299",
-     "placement": "551",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223551",
@@ -54772,9 +51881,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Yehaw - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #37 5-2-1 [riftools]",
+     "label": "Yehaw - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #37 [riftools]",
      "player": "Yehaw",
-     "placement": "#37 5-2-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9e878f0e-ed2e-46cf-a131-8f21eaac98e2",
@@ -54812,9 +51921,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Boky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #44 5-3-0 [riftools]",
+     "label": "Boky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #44 [riftools]",
      "player": "Boky",
-     "placement": "#44 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/af3c0ba3-96a9-4b0a-b38e-b1304e721ab3",
@@ -54855,9 +51964,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "CWL AdachuXD - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #90 4-4-0 [riftools]",
+     "label": "CWL AdachuXD - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #90 [riftools]",
      "player": "CWL AdachuXD",
-     "placement": "#90 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2f0fbf81-0827-446e-bb8e-f4c41116eb96",
@@ -54898,96 +52007,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "raki122 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #127 4-4-0 [riftools]",
-     "player": "raki122",
-     "placement": "#127 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/49ae73ed-6fb9-4820-a0d3-9cdfc62eef5d",
-     "main": {
-      "Adaptatron": 2,
-      "Boots of Swiftness": 1,
-      "Charm": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 3,
-      "Flash": 1,
-      "Guardian Angel": 2,
-      "Lonely Poro": 3,
-      "Not So Fast": 1,
-      "Rebuke": 2,
-      "Ride the Wind": 2,
-      "Star-Crossed": 2,
-      "Stellacorn Herder": 3,
-      "Switcheroo": 1,
-      "Tideturner": 3,
-      "Vex, Apathetic": 2,
-      "Vex, Cheerless": 3
-     },
-     "side": {
-      "Disarming Rake": 1,
-      "Gust": 2,
-      "Kha'Zix, Mutating Horror": 2,
-      "Mindsplitter": 1,
-      "Vilemaw": 1,
-      "Yasuo, Windrider": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Morderca Chomika - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #154 3-5-0 [riftools]",
-     "player": "Morderca Chomika",
-     "placement": "#154 3-5-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d575a33b-f639-489f-9dc0-67bc8fb9678c",
-     "main": {
-      "Abandon": 1,
-      "Adaptatron": 2,
-      "Back Off": 1,
-      "Baron Nashor": 2,
-      "Defy": 3,
-      "Discipline": 3,
-      "En Garde": 2,
-      "Find Your Center": 3,
-      "Fizz, Trickster": 1,
-      "Gust": 1,
-      "Lonely Poro": 2,
-      "Ride the Wind": 2,
-      "Scuttle Crab": 1,
-      "Stacked Deck": 3,
-      "Star-Crossed": 1,
-      "Stellacorn Herder": 2,
-      "Sterak's Gage": 1,
-      "Tideturner": 1,
-      "Treasure Hunter": 3,
-      "Vex, Apathetic": 1,
-      "Zhonya's Hourglass": 3
-     },
-     "side": {
-      "Abandon": 1,
-      "Adaptatron": 1,
-      "Charm": 1,
-      "Gust": 1,
-      "Kha'Zix, Mutating Horror": 1,
-      "Star-Crossed": 1,
-      "Vex, Apathetic": 1,
-      "Yasuo, Windrider": 1
-     },
-     "runes": {
-      "Calm Rune": 6,
-      "Chaos Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "CCB W - S3 China National Open 206 [riftools]",
+     "label": "CCB W - S3 China National Open #206 [riftools]",
      "player": "CCB W",
-     "placement": "206",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224818",
@@ -55039,9 +52061,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Barney - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #209 2-5-0 [riftools]",
+     "label": "Barney - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #209 [riftools]",
      "player": "Barney",
-     "placement": "#209 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9d71345e-7d64-4684-bd1a-162c34b65492",
@@ -55075,9 +52097,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Si\u00f3demkaSensei - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #220 2-3-0 [riftools]",
+     "label": "Si\u00f3demkaSensei - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #220 [riftools]",
      "player": "Si\u00f3demkaSensei",
-     "placement": "#220 2-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/2ba50ae6-518b-4600-9b1f-e2484e2a4d8d",
@@ -55116,9 +52138,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u67e0\u6aac\u8001\u5e08 - S3 China National Open 405 [riftools]",
+     "label": "\u67e0\u6aac\u8001\u5e08 - S3 China National Open #405 [riftools]",
      "player": "\u67e0\u6aac\u8001\u5e08",
-     "placement": "405",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224726",
@@ -55163,9 +52185,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9ed1\u5154\u4e9a\u5c14\u7f07\u5a1c - S3 China National Open 415 [riftools]",
+     "label": "\u9ed1\u5154\u4e9a\u5c14\u7f07\u5a1c - S3 China National Open #415 [riftools]",
      "player": "\u9ed1\u5154\u4e9a\u5c14\u7f07\u5a1c",
-     "placement": "415",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225102",
@@ -55208,9 +52230,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "T-Cubed.Jud - S3 China National Open 518 [riftools]",
+     "label": "T-Cubed.Jud - S3 China National Open #518 [riftools]",
      "player": "T-Cubed.Jud",
-     "placement": "518",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223070",
@@ -55522,9 +52544,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "mikfil - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #72 5-3-0 [riftools]",
+     "label": "mikfil - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #72 [riftools]",
      "player": "mikfil",
-     "placement": "#72 5-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c835adfe-8e4e-4669-8c5d-0c7019e67300",
@@ -55561,9 +52583,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Equalized - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #212 2-5-0 [riftools]",
+     "label": "Equalized - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #212 [riftools]",
      "player": "Equalized",
-     "placement": "#212 2-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a9eb783d-e100-45e5-8003-014cc5abba6b",
@@ -55601,9 +52623,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "MoAlenn - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #246 0-5-1 [riftools]",
+     "label": "MoAlenn - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #246 [riftools]",
      "player": "MoAlenn",
-     "placement": "#246 0-5-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0ae0bb1f-fb97-444f-9158-5226d09e52bc",
@@ -55648,9 +52670,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Jestekote - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #251 0-3-0 [riftools]",
+     "label": "Jestekote - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #251 [riftools]",
      "player": "Jestekote",
-     "placement": "#251 0-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/6cd757ef-c525-4a56-811b-5d292477eff2",
@@ -55688,9 +52710,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Zzzz.\u4e0d\u8db3\u4e0e\u8c0b\u4e4b\u738b - S3 China National Open 567 [riftools]",
+     "label": "Zzzz.\u4e0d\u8db3\u4e0e\u8c0b\u4e4b\u738b - S3 China National Open #567 [riftools]",
      "player": "Zzzz.\u4e0d\u8db3\u4e0e\u8c0b\u4e4b\u738b",
-     "placement": "567",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225185",
@@ -55915,9 +52937,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Rurens - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #85 4-3-1 [riftools]",
+     "label": "Rurens - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #85 [riftools]",
      "player": "Rurens",
-     "placement": "#85 4-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/62211487-c722-4965-a39e-0235bb9f3c12",
@@ -55956,124 +52978,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u7af9\u8001\u5e08 - S3 China National Open 124 [riftools]",
-     "player": "\u7af9\u8001\u5e08",
-     "placement": "124",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/223850",
-     "main": {
-      "B.F. Sword": 2,
-      "Carrion Dredger": 3,
-      "Falling Star": 2,
-      "Ferrous Forerunner": 2,
-      "Fiora, Victorious": 2,
-      "Gem Jammer": 2,
-      "Hextech Gauntlets": 3,
-      "Hidden Blade": 3,
-      "Kai'Sa, Survivor": 3,
-      "Long Sword": 2,
-      "Noxus Hopeful": 3,
-      "Rengar, Unseen": 2,
-      "Sacrifice": 2,
-      "Salvage": 2,
-      "Shadow's Call": 1,
-      "Unsung Hero": 3,
-      "Vengeance": 1,
-      "Vi, Peacekeeper": 2
-     },
-     "side": {
-      "Ashe, Focused": 3,
-      "Cull the Weak": 2,
-      "Falling Star": 1,
-      "Ferrous Forerunner": 1,
-      "Vengeance": 1
-     },
-     "runes": {
-      "Fury Rune": 7,
-      "Order Rune": 5
-     },
-     "battlefields": [
-      "Forge of the Fluft",
-      "Sunken Temple",
-      "The Arena's Greatest"
-     ]
-    },
-    {
-     "label": "Girlboss Energy - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #129 4-4-0 [riftools]",
-     "player": "Girlboss Energy",
-     "placement": "#129 4-4-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0ffbbfc7-4565-446a-bccc-39eb803a17f8",
-     "main": {
-      "Angle Shot": 2,
-      "B.F. Sword": 2,
-      "Blood Rush": 3,
-      "Cleave": 2,
-      "Falling Star": 3,
-      "Fiora, Worthy": 3,
-      "Gem Jammer": 3,
-      "Hextech Gauntlets": 3,
-      "Inferna": 3,
-      "Jhin, Murderous Artist": 3,
-      "Kai'Sa, Survivor": 3,
-      "Long Sword": 1,
-      "Noxus Hopeful": 3,
-      "Tactical Retreat": 2,
-      "Unsung Hero": 3
-     },
-     "side": {
-      "Ashe, Focused": 3,
-      "Brynhir Thundersong": 2,
-      "Salvage": 3
-     },
-     "runes": {
-      "Fury Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Papryk - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #143 3-4-1 [riftools]",
-     "player": "Papryk",
-     "placement": "#143 3-4-1",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/50c607ea-5873-4fa6-9d5d-0b6d5c99f452",
-     "main": {
-      "B.F. Sword": 3,
-      "Deathgrip": 3,
-      "Falling Star": 2,
-      "Fiora, Victorious": 2,
-      "Hextech Gauntlets": 3,
-      "Hidden Blade": 3,
-      "Honest Broker": 3,
-      "Inferna": 3,
-      "Jhin, Murderous Artist": 3,
-      "Kai'Sa, Survivor": 3,
-      "Noxus Hopeful": 3,
-      "Rek'Sai, Breacher": 3,
-      "Unsung Hero": 3,
-      "Vi, Peacekeeper": 2
-     },
-     "side": {
-      "Ashe, Focused": 1,
-      "Divine Judgment": 1,
-      "Ferrous Forerunner": 2,
-      "Salvage": 2,
-      "Tactical Retreat": 2
-     },
-     "runes": {
-      "Fury Rune": 6,
-      "Order Rune": 6
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Precel120 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #215 2-4-0 [riftools]",
+     "label": "Precel120 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #215 [riftools]",
      "player": "Precel120",
-     "placement": "#215 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1d723dc9-ac47-4ecf-9043-dedb4b736fd9",
@@ -56114,9 +53021,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Janda - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #254 0-3-0 [riftools]",
+     "label": "Janda - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #254 [riftools]",
      "player": "Janda",
-     "placement": "#254 0-3-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/61320e29-35cb-4b83-aa8e-f170951ee030",
@@ -56163,7 +53070,7 @@ window.FIELD = {
     {
      "label": "Jacob Claxton - CCS Sunday $5,000 Riftbound Event #4 #26 [riftools]",
      "player": "Jacob Claxton",
-     "placement": "#26",
+     "placement": "Top 32",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-026-jacob-claxton-rek-sai-void-burrower",
@@ -56205,7 +53112,7 @@ window.FIELD = {
     {
      "label": "mockingbeat - RiftAtlas Convergence #1 #36 [riftools]",
      "player": "mockingbeat",
-     "placement": "#36",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-036-mockingbeat-rek-sai-void-burrower",
@@ -56251,7 +53158,7 @@ window.FIELD = {
     {
      "label": "Zack Harper - RiftAtlas Convergence #1 #78 [riftools]",
      "player": "Zack Harper",
-     "placement": "#78",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-078-zack-harper-rek-sai-void-burrower",
@@ -56295,7 +53202,7 @@ window.FIELD = {
     {
      "label": "Kyle - RiftAtlas Convergence #1 #93 [riftools]",
      "player": "Kyle",
-     "placement": "#93",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-093-kyle-rek-sai-void-burrower",
@@ -56336,7 +53243,7 @@ window.FIELD = {
     {
      "label": "Adam Pierce - RiftAtlas Convergence #1 #98 [riftools]",
      "player": "Adam Pierce",
-     "placement": "#98",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-098-adam-pierce-rek-sai-void-burrower",
@@ -56379,7 +53286,7 @@ window.FIELD = {
     {
      "label": "SirElusive - RiftAtlas Convergence #1 #115 [riftools]",
      "player": "SirElusive",
-     "placement": "#115",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-115-sirelusive-rek-sai-void-burrower",
@@ -56420,9 +53327,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5495\u560e\u8001\u4f2f.ARBD - S3 China National Open 5 [riftools]",
+     "label": "\u5495\u560e\u8001\u4f2f.ARBD - S3 China National Open #5 [riftools]",
      "player": "\u5495\u560e\u8001\u4f2f.ARBD",
-     "placement": "5",
+     "placement": "Top 8",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223628",
@@ -56460,9 +53367,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "xmisterioxd - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #14 6-2-1 [riftools]",
+     "label": "xmisterioxd - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #14 [riftools]",
      "player": "xmisterioxd",
-     "placement": "#14 6-2-1",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0369ca46-19b9-4a43-9c85-becf76addbe5",
@@ -56498,9 +53405,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "PoW Kapi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #15 6-2-1 [riftools]",
+     "label": "PoW Kapi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #15 [riftools]",
      "player": "PoW Kapi",
-     "placement": "#15 6-2-1",
+     "placement": "Top 16",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/09689bdb-b2be-4a76-a285-6bd93f46f8b8",
@@ -56535,9 +53442,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Saiko - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #30 6-2-0 [riftools]",
+     "label": "Saiko - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #30 [riftools]",
      "player": "Saiko",
-     "placement": "#30 6-2-0",
+     "placement": "Top 32",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1e3a5cf5-48fd-4193-ac6b-24167e945a59",
@@ -56573,9 +53480,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u6811\u61d2.\u5bb5\u661f.\u6d41\u7b19 - S3 China National Open 32 [riftools]",
+     "label": "\u6811\u61d2.\u5bb5\u661f.\u6d41\u7b19 - S3 China National Open #32 [riftools]",
      "player": "\u6811\u61d2.\u5bb5\u661f.\u6d41\u7b19",
-     "placement": "32",
+     "placement": "Top 32",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224614",
@@ -56618,9 +53525,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "MajkelHS - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #109 4-4-0 [riftools]",
+     "label": "MajkelHS - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #109 [riftools]",
      "player": "MajkelHS",
-     "placement": "#109 4-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/76db8978-ce50-44fa-800d-ac222b4c06ee",
@@ -56654,165 +53561,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "Trapik - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #113 4-3-0 [riftools]",
-     "player": "Trapik",
-     "placement": "#113 4-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/a79991f1-d165-4f06-a978-4d1c1cbf0822",
-     "main": {
-      "Blood Rush": 3,
-      "Carrion Dredger": 3,
-      "Cull the Weak": 3,
-      "Daring Poro": 2,
-      "Faithful Manufactor": 3,
-      "Falling Star": 1,
-      "Hidden Blade": 3,
-      "Honest Broker": 3,
-      "Inferna": 3,
-      "Noxus Hopeful": 3,
-      "Pyke, Dockside Butcher": 2,
-      "Rengar, Pouncing": 2,
-      "Undertitan": 3,
-      "Vi, Peacekeeper": 2,
-      "Void Rush": 3
-     },
-     "side": {
-      "Falling Star": 1,
-      "Forge of the Future": 2,
-      "Hextech Ray": 1,
-      "Salvage": 2,
-      "Thermo Beam": 1,
-      "Vi, Destructive": 1
-     },
-     "runes": {
-      "Fury Rune": 7,
-      "Order Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "\u65cb\u6728\u65f6\u5149\u7684\u897f\u8499 - S3 China National Open 139 [riftools]",
-     "player": "\u65cb\u6728\u65f6\u5149\u7684\u897f\u8499",
-     "placement": "139",
-     "event": "S3 China National Open",
-     "date": "2026-07-18",
-     "url": "wechat://riftbound-china/cardGroup/225156",
-     "main": {
-      "Carrion Dredger": 2,
-      "Cleave": 3,
-      "Cull the Weak": 1,
-      "Grand Strategem": 2,
-      "Hidden Blade": 3,
-      "Honest Broker": 3,
-      "Inferna": 3,
-      "Mischievous Marai": 2,
-      "Noxus Hopeful": 3,
-      "Rek'Sai, Breacher": 1,
-      "Seal of Unity": 3,
-      "Spectral Matron": 2,
-      "Undertitan": 3,
-      "Vanguard Captain": 3,
-      "Vengeance": 2,
-      "Vi, Peacekeeper": 1,
-      "Void Rush": 3
-     },
-     "side": {
-      "Cull the Weak": 1,
-      "Ferrous Forerunner": 2,
-      "Salvage": 2,
-      "Shen, Kinkou": 1,
-      "Vengeance": 1,
-      "Vi, Peacekeeper": 1
-     },
-     "runes": {
-      "Fury Rune": 4,
-      "Order Rune": 8
-     },
-     "battlefields": [
-      "The Arena's Greatest",
-      "The Candlelit Sanctum",
-      "Trifarian War Camp"
-     ]
-    },
-    {
-     "label": "Son 0f The Void - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #149 3-3-0 [riftools]",
-     "player": "Son 0f The Void",
-     "placement": "#149 3-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/d9a104f5-1a41-44cf-8fbe-be640918dd53",
-     "main": {
-      "Blood Rush": 3,
-      "Carrion Dredger": 3,
-      "Cleave": 3,
-      "Cull the Weak": 3,
-      "Daring Poro": 3,
-      "Faithful Manufactor": 2,
-      "Falling Star": 3,
-      "Hextech Ray": 1,
-      "Inferna": 3,
-      "Legion Rearguard": 3,
-      "Noxus Hopeful": 3,
-      "Pouty Poro": 3,
-      "Undertitan": 3,
-      "Void Rush": 3
-     },
-     "side": {
-      "Faithful Manufactor": 1,
-      "Forge of the Future": 3,
-      "Hextech Ray": 2,
-      "Salvage": 2
-     },
-     "runes": {
-      "Fury Rune": 8,
-      "Order Rune": 4
-     },
-     "battlefields": []
-    },
-    {
-     "label": "Soltys66 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #151 3-3-0 [riftools]",
-     "player": "Soltys66",
-     "placement": "#151 3-3-0",
-     "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
-     "date": "2026-07-18",
-     "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/1c421f91-6354-43ad-b1a6-07f27e8cb373",
-     "main": {
-      "Blood Rush": 3,
-      "Carrion Dredger": 2,
-      "Cleave": 3,
-      "Cull the Weak": 3,
-      "Daring Poro": 2,
-      "Faithful Manufactor": 3,
-      "Falling Star": 3,
-      "Hidden Blade": 3,
-      "Honest Broker": 2,
-      "Inferna": 2,
-      "Noxus Hopeful": 3,
-      "Salvage": 1,
-      "Soaring Scout": 2,
-      "Undertitan": 3,
-      "Void Hatchling": 1,
-      "Void Rush": 3
-     },
-     "side": {
-      "Ferrous Forerunner": 2,
-      "Imperial Decree": 1,
-      "Long Sword": 1,
-      "Piercing Light": 1,
-      "Salvage": 2,
-      "Thermo Beam": 1
-     },
-     "runes": {
-      "Fury Rune": 7,
-      "Order Rune": 5
-     },
-     "battlefields": []
-    },
-    {
-     "label": "k4zlk - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #159 3-5-0 [riftools]",
+     "label": "k4zlk - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #159 [riftools]",
      "player": "k4zlk",
-     "placement": "#159 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/9cc72625-14a5-4e43-b30f-d7a0661550ac",
@@ -56847,9 +53598,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "OmegaZero - S3 China National Open 171 [riftools]",
+     "label": "OmegaZero - S3 China National Open #171 [riftools]",
      "player": "OmegaZero",
-     "placement": "171",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224660",
@@ -56890,9 +53641,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u6d77\u514b\u65afYK\u89c1\u624b\u9752 - S3 China National Open 177 [riftools]",
+     "label": "\u6d77\u514b\u65afYK\u89c1\u624b\u9752 - S3 China National Open #177 [riftools]",
      "player": "\u6d77\u514b\u65afYK\u89c1\u624b\u9752",
-     "placement": "177",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224803",
@@ -56931,9 +53682,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Persebius - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #182 3-5-0 [riftools]",
+     "label": "Persebius - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #182 [riftools]",
      "player": "Persebius",
-     "placement": "#182 3-5-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/c56d0f59-b3c1-4c6e-83a5-1fba8613368f",
@@ -56972,9 +53723,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u65cb\u6728\u65f6\u5149\u7684Ailink - S3 China National Open 237 [riftools]",
+     "label": "\u65cb\u6728\u65f6\u5149\u7684Ailink - S3 China National Open #237 [riftools]",
      "player": "\u65cb\u6728\u65f6\u5149\u7684Ailink",
-     "placement": "237",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224893",
@@ -57019,9 +53770,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u795e\u5207_chenpee - S3 China National Open 243 [riftools]",
+     "label": "\u795e\u5207_chenpee - S3 China National Open #243 [riftools]",
      "player": "\u795e\u5207_chenpee",
-     "placement": "243",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223672",
@@ -57065,9 +53816,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "xwc233 - S3 China National Open 315 [riftools]",
+     "label": "xwc233 - S3 China National Open #315 [riftools]",
      "player": "xwc233",
-     "placement": "315",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225387",
@@ -57108,9 +53859,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u65cb\u6728\u65f6\u5149\u7684\u98ce\u8427ol - S3 China National Open 341 [riftools]",
+     "label": "\u65cb\u6728\u65f6\u5149\u7684\u98ce\u8427ol - S3 China National Open #341 [riftools]",
      "player": "\u65cb\u6728\u65f6\u5149\u7684\u98ce\u8427ol",
-     "placement": "341",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225149",
@@ -57151,9 +53902,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Hso.\ud83c\ude50.ab3 - S3 China National Open 377 [riftools]",
+     "label": "Hso.\ud83c\ude50.ab3 - S3 China National Open #377 [riftools]",
      "player": "Hso.\ud83c\ude50.ab3",
-     "placement": "377",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224516",
@@ -57194,9 +53945,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "AiL.\u6dd8\u91d1\u5de2.\u795e\u5207 - S3 China National Open 450 [riftools]",
+     "label": "AiL.\u6dd8\u91d1\u5de2.\u795e\u5207 - S3 China National Open #450 [riftools]",
      "player": "AiL.\u6dd8\u91d1\u5de2.\u795e\u5207",
-     "placement": "450",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224162",
@@ -57236,9 +53987,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "TXG\u00b7\u90aa\u6076\u5927\u98de\u9f20 - S3 China National Open 460 [riftools]",
+     "label": "TXG\u00b7\u90aa\u6076\u5927\u98de\u9f20 - S3 China National Open #460 [riftools]",
      "player": "TXG\u00b7\u90aa\u6076\u5927\u98de\u9f20",
-     "placement": "460",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224530",
@@ -57282,9 +54033,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u5361\u6bd4.\u725b\u5bb6\u5e84.KGB.\u6768\u725b\u725b\u6211\u8f6f\u811a\u4e86.\u96e8 - S3 China National Open 467 [riftools]",
+     "label": "\u5361\u6bd4.\u725b\u5bb6\u5e84.KGB.\u6768\u725b\u725b\u6211\u8f6f\u811a\u4e86.\u96e8 - S3 China National Open #467 [riftools]",
      "player": "\u5361\u6bd4.\u725b\u5bb6\u5e84.KGB.\u6768\u725b\u725b\u6211\u8f6f\u811a\u4e86.\u96e8",
-     "placement": "467",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225050",
@@ -57325,9 +54076,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u866b\u7237 - S3 China National Open 491 [riftools]",
+     "label": "\u866b\u7237 - S3 China National Open #491 [riftools]",
      "player": "\u866b\u7237",
-     "placement": "491",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223555",
@@ -57369,9 +54120,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u738b\u6960 - S3 China National Open 563 [riftools]",
+     "label": "\u738b\u6960 - S3 China National Open #563 [riftools]",
      "player": "\u738b\u6960",
-     "placement": "563",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/222517",
@@ -57419,7 +54170,7 @@ window.FIELD = {
     {
      "label": "Quanbao Nguyen - RiftAtlas Convergence #1 #41 [riftools]",
      "player": "Quanbao Nguyen",
-     "placement": "#41",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-041-quanbao-nguyen-kha-zix-voidreaver",
@@ -57464,7 +54215,7 @@ window.FIELD = {
     {
      "label": "Steadman DeMarco - CCS Sunday $5,000 Riftbound Event #4 #47 [riftools]",
      "player": "Steadman DeMarco",
-     "placement": "#47",
+     "placement": "Swiss",
      "event": "CCS Sunday $5,000 Riftbound Event #4",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/ccs-sunday-5000-riftbound-event-4-2026-07-19/deck/rank-047-steadman-demarco-kha-zix-voidreaver",
@@ -57509,7 +54260,7 @@ window.FIELD = {
     {
      "label": "Sebastian Stone - RiftAtlas Convergence #1 #75 [riftools]",
      "player": "Sebastian Stone",
-     "placement": "#75",
+     "placement": "Swiss",
      "event": "RiftAtlas Convergence #1",
      "date": "2026-07-19",
      "url": "operator://riftools/topdeck/riftatlas-convergence-1-2026-07-19/deck/rank-075-sebastian-stone-kha-zix-voidreaver",
@@ -57554,9 +54305,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Princess Micha\u0142 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #6 7-2-1 [riftools]",
+     "label": "Princess Micha\u0142 - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #6 [riftools]",
      "player": "Princess Micha\u0142",
-     "placement": "#6 7-2-1",
+     "placement": "Top 8",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/f91c2443-980b-4360-8688-1b1a3c742660",
@@ -57593,9 +54344,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u8d64\u6708\u661f\u5bbf - S3 China National Open 33 [riftools]",
+     "label": "\u8d64\u6708\u661f\u5bbf - S3 China National Open #33 [riftools]",
      "player": "\u8d64\u6708\u661f\u5bbf",
-     "placement": "33",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225251",
@@ -57644,9 +54395,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "JHM.\u592a\u5b50 - S3 China National Open 174 [riftools]",
+     "label": "JHM.\u592a\u5b50 - S3 China National Open #174 [riftools]",
      "player": "JHM.\u592a\u5b50",
-     "placement": "174",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224649",
@@ -57689,9 +54440,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u9ad8\u957f\u606d - S3 China National Open 199 [riftools]",
+     "label": "\u9ad8\u957f\u606d - S3 China National Open #199 [riftools]",
      "player": "\u9ad8\u957f\u606d",
-     "placement": "199",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225423",
@@ -57738,9 +54489,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "Vivi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #203 2-4-0 [riftools]",
+     "label": "Vivi - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #203 [riftools]",
      "player": "Vivi",
-     "placement": "#203 2-4-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/7e898e0c-c8e5-4366-9d01-c0c629862381",
@@ -57779,9 +54530,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "ra9o - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #224 1-3-1 [riftools]",
+     "label": "ra9o - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #224 [riftools]",
      "player": "ra9o",
-     "placement": "#224 1-3-1",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/0f95182d-c25a-4d61-8313-fad6fe88a65e",
@@ -57819,9 +54570,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "LukeLucky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #252 0-6-0 [riftools]",
+     "label": "LukeLucky - Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a #252 [riftools]",
      "player": "LukeLucky",
-     "placement": "#252 0-6-0",
+     "placement": "Swiss",
      "event": "Turniej Riftbound TCG Showdown Series \u2013 \u0141\u00f3d\u017a",
      "date": "2026-07-18",
      "url": "https://locator.riftbound.uvsgames.com/events/513376/deck/de79b859-ea77-4806-8cf9-246edc33e763",
@@ -57862,9 +54613,9 @@ window.FIELD = {
      "battlefields": []
     },
     {
-     "label": "\u4fe1\u4ef0.Rui - S3 China National Open 305 [riftools]",
+     "label": "\u4fe1\u4ef0.Rui - S3 China National Open #305 [riftools]",
      "player": "\u4fe1\u4ef0.Rui",
-     "placement": "305",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/224754",
@@ -57915,9 +54666,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "YL.NO - S3 China National Open 337 [riftools]",
+     "label": "YL.NO - S3 China National Open #337 [riftools]",
      "player": "YL.NO",
-     "placement": "337",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223694",
@@ -57961,9 +54712,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "FB.\u5927\u6cfd\u5c0f\u6a59 - S3 China National Open 380 [riftools]",
+     "label": "FB.\u5927\u6cfd\u5c0f\u6a59 - S3 China National Open #380 [riftools]",
      "player": "FB.\u5927\u6cfd\u5c0f\u6a59",
-     "placement": "380",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223317",
@@ -58012,9 +54763,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "\u7eb8\u4f20.\u767d\u5b50\u6d32 - S3 China National Open 388 [riftools]",
+     "label": "\u7eb8\u4f20.\u767d\u5b50\u6d32 - S3 China National Open #388 [riftools]",
      "player": "\u7eb8\u4f20.\u767d\u5b50\u6d32",
-     "placement": "388",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/223268",
@@ -58063,9 +54814,9 @@ window.FIELD = {
      ]
     },
     {
-     "label": "DWT-\u8001\u9ed8 - S3 China National Open 425 [riftools]",
+     "label": "DWT-\u8001\u9ed8 - S3 China National Open #425 [riftools]",
      "player": "DWT-\u8001\u9ed8",
-     "placement": "425",
+     "placement": "Swiss",
      "event": "S3 China National Open",
      "date": "2026-07-18",
      "url": "wechat://riftbound-china/cardGroup/225355",
@@ -68073,60 +64824,6 @@ window.FIELD = {
    "banned": false,
    "set": "Unleashed"
   },
-  "Heroic Charge": {
-   "cost": 3,
-   "type": "Spell",
-   "might": null,
-   "color": [
-    "Order"
-   ],
-   "tags": [],
-   "techTags": [
-    {
-     "tag": "stun",
-     "label": "stun",
-     "size": null
-    }
-   ],
-   "effect": "[Action] (Play on your turn or in showdowns.)\nGive a friendly unit +1 :rb_might: this turn and [Stun] an enemy unit at its location. (A stunned unit doesn't deal combat damage this turn.)",
-   "image": "https://static.dotgg.gg/riftbound/cards/UNL-155.webp",
-   "price": 0.07,
-   "banned": false,
-   "set": "Unleashed"
-  },
-  "Lee Sin, Ascetic": {
-   "cost": 5,
-   "type": "Unit",
-   "might": 5,
-   "color": [
-    "Calm"
-   ],
-   "tags": [
-    "Lee Sin",
-    "Ionia"
-   ],
-   "techTags": [],
-   "effect": "[Shield] (+1 :rb_might: while I'm a defender.)\n:rb_exhaust:: Buff me. (I get a +1 :rb_might: buff.)\nI can have any number of buffs.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGN-078.webp",
-   "price": null,
-   "banned": false,
-   "set": "Origins"
-  },
-  "Gentlemen's Duel": {
-   "cost": 6,
-   "type": "Spell",
-   "might": null,
-   "color": [
-    "Body"
-   ],
-   "tags": [],
-   "techTags": [],
-   "effect": "[Action] (Play on your turn or in showdowns.)\nGive a friendly unit +3 :rb_might: this turn. Then choose an enemy unit. They deal damage equal to their Mights to each other.",
-   "image": "https://static.dotgg.gg/riftbound/cards/OGS-008.webp",
-   "price": 0.43,
-   "banned": false,
-   "set": "Proving Grounds"
-  },
   "Premonition": {
    "cost": 2,
    "type": "Spell",
@@ -68651,6 +65348,27 @@ window.FIELD = {
    "price": null,
    "banned": false,
    "set": "Spiritforged"
+  },
+  "Heroic Charge": {
+   "cost": 3,
+   "type": "Spell",
+   "might": null,
+   "color": [
+    "Order"
+   ],
+   "tags": [],
+   "techTags": [
+    {
+     "tag": "stun",
+     "label": "stun",
+     "size": null
+    }
+   ],
+   "effect": "[Action] (Play on your turn or in showdowns.)\nGive a friendly unit +1 :rb_might: this turn and [Stun] an enemy unit at its location. (A stunned unit doesn't deal combat damage this turn.)",
+   "image": "https://static.dotgg.gg/riftbound/cards/UNL-155.webp",
+   "price": 0.07,
+   "banned": false,
+   "set": "Unleashed"
   }
  }
 };

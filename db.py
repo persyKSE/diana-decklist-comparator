@@ -349,11 +349,12 @@ def export_decks_json(conn, path=DECKS_JSON):
     picks between (as opposed to field.json, which covers every archetype but
     only enriches images for the LEGENDS ones).
 
-    Deliberately restricted to source='mobalytics': this is the curated,
-    placement-weighted set the consensus builder/coach/optimizer are tuned
-    against. riftools.app's much larger per-deck ingestion (fetch_riftools.py)
-    only ever feeds field.json/meta.json — it must never silently reshape the
-    "yours" dataset these curated builds are computed from.
+    Includes every source (Mobalytics' curated, placement-weighted decks
+    alongside riftools.app's much larger flat-weighted per-deck ingestion —
+    see fetch_riftools.py) for LEGENDS archetypes specifically: the consensus
+    builder/coach/optimizer are meant to reflect the whole picture, tech
+    included, not just Mobalytics' top-cut slice. Every OTHER archetype only
+    ever appears in field.json (the whole-field / opponent-analysis view).
     """
     out = {}
     for archetype, info in LEGENDS.items():
@@ -362,7 +363,7 @@ def export_decks_json(conn, path=DECKS_JSON):
             "SELECT d.*, e.name AS event_name, e.date AS event_date, "
             "e.attendance AS attendance "
             "FROM decks d LEFT JOIN events e ON e.id = d.event_id "
-            "WHERE d.archetype = ? AND d.source = 'mobalytics' ORDER BY d.id", (archetype,)
+            "WHERE d.archetype = ? ORDER BY d.id", (archetype,)
         ).fetchall()
         for d in deck_rows:
             sections = {"main": [], "rune": [], "battlefield": [], "side": []}
